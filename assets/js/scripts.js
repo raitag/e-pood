@@ -2,9 +2,6 @@ $(document).ready(function() {
 
 BindSlideToggle();
 cloneRightSideMainMenu();
-
-
-  // CALL FRONTPAGE MORE
  
 // COLLAPSE TABS
 // https://github.com/okendoken/bootstrap-tabcollapse
@@ -30,6 +27,15 @@ $('#toggleParam').click(function() {
   $('.js-subpanel').collapse('toggle');
 });
 
+$(".jsShowMoreCategories").unbind("click").click(function () {
+ if ($(this).hasClass("moretext")) {
+  $(".jsShowMoreCategories span").html($(this).data("lesstext"));
+   $(this).removeClass("moretext");
+ } else {
+   $(".jsShowMoreCategories span").html($(this).data("moretext"));
+   $(this).addClass("moretext");
+ }
+});
 
 }); // end document ready
 

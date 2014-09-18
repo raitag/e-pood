@@ -102,6 +102,7 @@
 </head>
 
 <body> 
+
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
 <header>
 
@@ -623,7 +624,7 @@
   </div>
 </section>
 
-<div class="container ee-nogap"> 
+<div class="container"> 
   
   <div class="row">
 
@@ -709,7 +710,7 @@
 <section class="ee-found-tabs ee-tab-to-accordioncontent ">
   <div id="foundTab" class="tab-content tsr-section-productAndService-listing">
     <div class="tab-pane fade in active" id="productfound">
-      <div class="row product" id="content-placeholder-phones-boxes"></div> 
+      <div class="row ee-nogap" id="content-placeholder-phones-boxes"></div> 
 
       <script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
@@ -744,7 +745,7 @@
 
         {{#if client_price}}
         <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
-        {{else}} {{#if normal_price}}
+        {{else}} {{#if normal_price}} 
         <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
         {{else}}
         <p class="tsr-product-price"></p>

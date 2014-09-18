@@ -1,3 +1,15 @@
+<div class="alert full-size flyover alert-success in" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Tootega saad kaasa <span class="h3">soodustuse,</span> tee siin oma valik ja jätka ostmist. </span>
+            <!-- <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Sain aru, sulge
+            </a> -->
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
 <!doctype html>
 <html dir="ltr" lang="en">
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
@@ -316,7 +328,7 @@
                         <li class="dropdown-header has-child promotion">
                           <h6> <a href="#">Uued tooted </a></h6>
                           <ul>
-                            <li class='current'><a class='current' href="detail.html"><img src="assets/img/header/{{id}}.png" style="width: 100%;"></a></li>
+                            <li><a href="detail.html"><img src="assets/img/header/{{id}}.png" style="width: 100%;"></a></li>
                             <li>
                               <a href="#" class="hidden-xs">
                             <h3>{{name}}</h3>
@@ -1199,10 +1211,10 @@
     <div class="col-md-3   col-xs-6"><a href="#" class="ee-compare">Võrdle</a></div>
    <div class="col-md-4   col-xs-5"><a href="#" class="ee-favorite">Lemmik</a></div> --> 
 
-<section class="tsr-section-divider" style="z-index: 0;">
-  <div class="container">
+<section class="tsr-section-divider" >
+  <div class="container" data-toggle="collapse" data-target="#leasingToggle">
     <h6>
-      <a href="#leasingToggle" data-toggle="collapse">Soovid osta järelmaksuga?</a>
+      Soovid osta järelmaksuga?
     </h6>    
   </div>
 </section>
@@ -1619,7 +1631,7 @@
         </ul>
       </div>
       <figure class="tsr-product-image" style="mix-blend-mode: multiply;">
-      <a class='current' href="detail.html"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}"></a>
+      <a href="detail.html"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}"></a>
       </figure>
     
       <div class="tsr-product-content">
@@ -1630,7 +1642,7 @@
         {{#if secondflash}}
         <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <h6 class="tsr-product-header"><a class='current' href="detail.html">{{name}}</a></h6>
+        <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
       
         {{#if colors}}
           <ul class="tsr-product-colors">
@@ -1717,15 +1729,25 @@
   </div>
 </section> 
 
-<!-- <section class="tsr-section-divider hidden-print">
+<section class="tsr-section-divider hidden-print">
   <div class="container">
     <h6>
       Pildid ja videod
     </h6>    
   </div>
-</section> -->
+</section>
 
-<!-- _additional-images.html  -->
+<section class="ee-full-slider hidden-print">
+  <div class="container">
+    <div class="flexslider ee-additional-image-lg" id="js-largeimage">
+      <ul class="slides">
+          <li><img src="assets/img/products/samsung_f8500_front_silver.jpg"/></li>
+          <li><img src="assets/img/products/samsung_f8500_Right-Angle_silver.jpg"/></li>
+<!--           <li><iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li> -->
+      </ul>
+    </div>
+  </div>
+</section> 
 
 <section class="tsr-section-divider tsr-color-purple">
   <div class="container">

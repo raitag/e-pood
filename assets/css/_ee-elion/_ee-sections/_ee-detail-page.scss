@@ -1,5 +1,9 @@
 section.ee-product-detail {
   margin-bottom: 30px;
+
+  .dropdown-menu {
+    top: auto;
+  }
   .ee-comparebar.detail {
     min-height: 40px;
     margin-top: 10px;
@@ -28,9 +32,17 @@ section.ee-product-detail {
     font-weight: bold;
   }
 
-  .tsr-product-price {
-    margin-top: 20px;
+  .tsr-product-colors {
+    margin-top: 0;
+    @include media-min($screen-sm) {
+      margin-top: -20px;
+    }
+    
   }
+
+  // .tsr-product-price {
+  //   margin-top: 20px;
+  // }
 
   .ee-actions {
     margin-top: 15px;
@@ -58,7 +70,7 @@ section.ee-product-detail {
       margin-top: 20px;
       img {
       width: 100%;
-      max-width: 500px;
+      max-width: 400px;
       height: auto;
       }
     } 
@@ -88,9 +100,9 @@ section.ee-product-detail {
     }
   }
 
-  .flex-viewport .slides li img {
-    padding: 0 em(35);
-  }
+  // .flex-viewport .slides li img {
+  //   padding: 0 em(35);
+  // }
 
   .flex-control-thumbs {
     padding: 20px 0;
@@ -100,6 +112,14 @@ section.ee-product-detail {
       padding-right: 20px; 
       max-width: 160px;
     }
+  }
+}
+
+.ee-detail-intro {
+  font-size: 20px;
+  line-height: 31.5px;
+  a {
+    font-size: 15px;
   }
 }
 
@@ -181,3 +201,4 @@ section.ee-section-leasing {
 .tsr-slides .tsr-module-product {
   padding: 20px 5px 25px;
 }
+

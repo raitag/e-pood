@@ -94,9 +94,34 @@
     @include media-min($screen-sm) {
       width: 20%;
     }
-
   }
 
+  .ee-count-4 {
+    width: 50%;
+    position: relative;
+    border-top: 1px solid $lightgrey-t;
+    @include media-min($screen-sm) {
+      width: 25%;
+    }
+  }
+
+  .ee-count-3 {
+    width: 50%;
+    position: relative;
+    border-top: 1px solid $lightgrey-t;
+    @include media-min($screen-sm) {
+      width: 33.3333%;
+    }
+  }
+
+  .ee-count-2, .ee-count-1 {
+    width: 50%;
+    position: relative;
+    border-top: 1px solid $lightgrey-t;
+    @include media-min($screen-sm) {
+      width: 50%;
+    }
+  }
   // .ee-count-4 {
   //   width: 180px;
   //   min-width: 150px;

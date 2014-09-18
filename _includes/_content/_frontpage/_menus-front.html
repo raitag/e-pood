@@ -16,7 +16,7 @@
         <li><a href="{{this.path}}">{{this.name}}</a></li>  
         {{/each}}
       </ul>
-      <a data-toggle="collapse" href="#collapseMenu{{id}}" class="tsr-btn-view-all visible-xs visible-sm"><span>Näita rohkem</span></a>
+      <a data-toggle="collapse" href="#collapseMenu{{id}}" class="tsr-btn-view-all visible-xs visible-sm jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Näita rohkem</span></a>
       </div>
      
     {{/menu}}
@@ -109,8 +109,8 @@
     </div>
   </div>
 </section>
-<a data-toggle="collapse" href="#collapseMenu" class="tsr-btn-view-all hidden-sm hidden-xs"><span>Näita rohkem</span></a>
-<!-- <a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a>  -->
+
+<a data-toggle="collapse" href="#collapseMenu" class="tsr-btn-view-all hidden-sm hidden-xs jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Näita rohkem</span></a>
 
 
 

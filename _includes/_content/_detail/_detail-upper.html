@@ -14,15 +14,18 @@
   <h2>{{name}}</h2>
   <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
 
-  <h2 class="ee-detail-intro"> <small>{{{leftTrimLong description}}}... </small></h2>
-  <h2 class="ee-detail-intro"> <small class="collapse" id="readmore">{{{description}}} </small><small><a href="#readmore"  data-toggle="collapse">...Loe edasi</a></small></h2>
-  <h2 class="ee-detail-intro text-right"> </h2>
+  <p class="ee-detail-intro"> {{{leftTrimLong description}}} 
+  <span class="collapse" id="readmore">{{{description}}}</span>
+  <br>
+  <a href="#readmore"  data-toggle="collapse" class="jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Loe edasi...</span></a>
+  </p>
+
 
     <!-- @include bundle-module.html -->
   <div class="hidden-xs"> 
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+      <ul class="dropdown-menu" role="menu">
         <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
         <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
         <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
@@ -30,7 +33,7 @@
     </div>
 
     {{#if normal_price}}
-    <p class="tsr-product-price"><span>Tavahind: {{normal_price}}</span>
+    <p style=" margin-top: 20px;">Hind: <span style="text-decoration: line-through;" >{{normal_price}}</span>
     {{/if}}
     {{#if special_price}}
     <br>Sinu võit: 300 €</p>
@@ -67,16 +70,34 @@
   <div id="js-imagerotator" class="js-imagerotator img-responsive">
     <ul class="slides">
       {{#each minipics_id}}
-        <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg"></li>
+        <li data-thumb="assets/img/products/{{this}}-100.jpg"><img data-toggle="modal" data-target="#myModal" src="assets/img/products/{{this}}.jpg"></li>
       {{/each}}
     </ul>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <img class="img-responsive" src="assets/img/products/samsung_f8500_Right-Angle_silver.jpg" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="col-sm-6 col-sm-push-6 visible-xs">
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+      <ul class="dropdown-menu" role="menu">
         <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
         <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
         <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
@@ -84,7 +105,7 @@
     </div>
 
   {{#if normal_price}}
-  <p class="tsr-product-price">Tavahind: {{normal_price}}
+  <p style=" margin-top: 20px;">Hind: <span style="text-decoration: line-through;" >{{normal_price}}</span>
   {{/if}}
   {{#if special_price}}
   <br>Sinu võit: 300 €</p>

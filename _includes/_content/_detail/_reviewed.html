@@ -15,8 +15,9 @@
               <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="right" title="Elioni töötaja" data-content=" Arendusosakonna juhataja "> <i class="icon icon-support "></i></a>
               {{/if}}
               {{name}}
+              <span class="text-muted">{{date}}</span>
               </h6>
-              <p class="text-muted">{{date}}</p>
+              
 
               <p>{{{body}}}</p>
             </div>
@@ -42,9 +43,10 @@
               {{#if elion}}
               <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="right" data-title="{{name}}" data-content=" Peeter Karolin töötab Elionis infoarhitektina. "> <i class="icon icon-support "></i></a>
               {{/if}}
-              {{name}}
+              {{name}} 
+              <span class="text-muted">{{date}}</span>
               </h6>
-              <p class="text-muted">{{date}}</p>
+              
               <p>{{{body}}}</p>
             </div>
             <div class="ee-review-respond  text-right">
@@ -60,4 +62,6 @@
     </section>
   {{/reviews}}
   </script>
+  <br>
+  <!-- @include _add-review-answer.html -->
   </section>

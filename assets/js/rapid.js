@@ -33,6 +33,7 @@
 
 // DETAIL VIEW
 /* @include collapse */
+/* @include modal */
 /* @include tab */
 /* @include tooltip */
 /* @include popover */

@@ -122,3 +122,11 @@ section.ee-tab-to-accordioncontent {
     }
   }
 }
+
+.panel-group .panel {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.panel-body.no-border {
+  padding-left: 0;
+  padding-right: 0;
+}
