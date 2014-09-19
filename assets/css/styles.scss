@@ -55,6 +55,7 @@
 /* @include tsr-bootstrap/_forms.scss */
 /* @include tsr-bootstrap/_alerts.scss */
 /* @include tsr-bootstrap/_submenu.scss */
+/* @include tsr-bootstrap/_progress-steps.scss */
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO BS3
 //**********************************
@@ -281,11 +282,14 @@ display: block;
   display: block;
   width: 180px;
   height: 80px;
-  background: transparent url(elion-logo.png) center center no-repeat;
+  background: transparent url(elion-logo.png) left center no-repeat;
   background-image: -webkit-linear-gradient(transparent, transparent), url(elion-logo.svg);
-  background-image: linear-gradient(transparent, transparent), url(elion-logo.svg); 
+  background-image: linear-gradient(transparent, transparent), url(elion-logo.svg);
 }
 
+.navbar > .container .navbar-brand {
+  margin-left: 0;
+}
 
 .ee-thinline-bottom {
   margin-bottom: -1px;
@@ -488,70 +492,6 @@ footer .social-block .media .icon {
     font-size: 12px; 
     line-height: 2;
   }
-}
-
-// More practical CSS...
-// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
-
-$breakpoint-alpha: 480px; // adjust to your needs
-
-.rwd-table {
-  margin: 1em 0;
-  min-width: 300px; // adjust to your needs
-  
-  tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  th {
-    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
-  }
-  
-  td {
-    display: block; 
-    
-    &:first-child {
-      padding-top: .5em;
-    }
-    &:last-child {
-      padding-bottom: .5em;
-    }
-
-    &:before {
-      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
-      font-weight: bold;
-
-      // optional stuff to make it look nicer
-      width: 6.5em; // magic number :( adjust according to your own content
-      display: inline-block;
-      // end options
-      
-      @media (min-width: $breakpoint-alpha) {
-        display: none;
-      }
-    }
-  }
-  
-  th, td {
-    text-align: left;
-    
-    @media (min-width: $breakpoint-alpha) {
-      display: table-cell;
-      padding: .25em .5em;
-      
-      &:first-child {
-        padding-left: 0;
-      }
-      
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-
-  }
-  
-  
 }
 
 

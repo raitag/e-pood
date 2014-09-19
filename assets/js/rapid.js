@@ -41,7 +41,6 @@
 /* @include bootstrap-rating-input */
 /* @include socialcount.min */
 
-/* @include scrollto */
 /* @include ee-comparision */
 
 // APP SPECIFIC SCRIPTS

@@ -10,8 +10,8 @@ $clr-done: #00b48c ;
 $clr-active: #652d86;
 $clr-gray: #c7c2ba;
 
-
-@mixin stp-padge{
+/*
+@mixin stp-badge {
 	box-sizing: border-box;
 	vertical-align: middle;
 	text-align: center;
@@ -19,18 +19,20 @@ $clr-gray: #c7c2ba;
 	height: $number-size ;
 	width: $number-size;
 	border: $border-size solid $clr-done;
-	background-color: $clrNrBg;
+	background-color: $clr-done; // $clrNrBg;
 	line-height: $number-size - 2*$border-size;
 	border-radius: $number-size;
 	content: "\e017";
 	font-family: 'tsr-icons-all';
-	color:$clr-done;
+	color: $clrNrBg;
 }
+*/
 
-@mixin stp-padge-content($color){
+@mixin stp-badge-content($color){
 	border-color: $color;
 	content: counter(step);
-	color:$color; 
+	color:$color;
+    background-color: $clrNrBg;
 }
 
 
@@ -61,7 +63,7 @@ $clr-gray: #c7c2ba;
 				position:relative;
 
 				&:before{
-						@include stp-padge;
+						@include stp-badge;
 						float:left;
 						top:50%;
 						margin-top: -$number-size/2;
@@ -107,7 +109,7 @@ $clr-gray: #c7c2ba;
 				//colors
 				&.progress-active {	
 					&:before{
-						@include stp-padge-content($clr-active);
+						@include stp-badge-content($clr-active);
 					}
 					div{
 						color:$clr-active;
@@ -118,7 +120,7 @@ $clr-gray: #c7c2ba;
 
 					~ li{
 						&:before{
-							@include stp-padge-content($clr-gray);
+							@include stp-badge-content($clr-gray);
 						}
 						div{
 							color:$clr-gray;
@@ -150,8 +152,7 @@ $clr-gray: #c7c2ba;
 					border-collapse: collapsed;
 
 					&:after{
-						@include stp-padge
-					;
+						@include stp-badge;
 						display: block;
 						margin-bottom: -($number-size)/2 - $border-size/2 ;
 						margin-left: auto;
@@ -183,11 +184,12 @@ $clr-gray: #c7c2ba;
 			// colors
 				&.progress-active {
 					div{
+                        
 						border-color: $clr-active;
 						color:$clr-active;
 
 						&:after{
-							@include stp-padge-content ($clr-active);
+							@include stp-badge-content($clr-active);
 						}
 					}
 
@@ -196,7 +198,7 @@ $clr-gray: #c7c2ba;
 						color:$clr-gray;
 
 						&:after{
-							@include stp-padge-content ($clr-gray);
+							@include stp-badge-content($clr-gray);
 						}
 					}
 				}

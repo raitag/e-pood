@@ -5216,6 +5216,23 @@ footer {
         padding-right: 0;
         width: 100%; } }
 
+/*
+@mixin stp-badge {
+	box-sizing: border-box;
+	vertical-align: middle;
+	text-align: center;
+	counter-increment:step;
+	height: $number-size ;
+	width: $number-size;
+	border: $border-size solid $clr-done;
+	background-color: $clr-done; // $clrNrBg;
+	line-height: $number-size - 2*$border-size;
+	border-radius: $number-size;
+	content: "\e017";
+	font-family: 'tsr-icons-all';
+	color: $clrNrBg;
+}
+*/
 .progress-steps {
   width: 100%; }
   .progress-steps ol {
@@ -5241,12 +5258,12 @@ footer {
         height: 40px;
         width: 40px;
         border: 4px solid #00b48c;
-        background-color: #f6f6f6;
+        background-color: #00b48c;
         line-height: 32px;
         border-radius: 40px;
         content: "\e017";
         font-family: 'tsr-icons-all';
-        color: #00b48c;
+        color: #f6f6f6;
         float: left;
         top: 50%;
         margin-top: -20px;
@@ -5276,7 +5293,8 @@ footer {
       .progress-steps ol li.progress-active:before {
         border-color: #652d86;
         content: counter(step);
-        color: #652d86; }
+        color: #652d86;
+        background-color: #f6f6f6; }
       .progress-steps ol li.progress-active div {
         color: #652d86; }
         .progress-steps ol li.progress-active div:before {
@@ -5284,7 +5302,8 @@ footer {
       .progress-steps ol li.progress-active ~ li:before {
         border-color: #c7c2ba;
         content: counter(step);
-        color: #c7c2ba; }
+        color: #c7c2ba;
+        background-color: #f6f6f6; }
       .progress-steps ol li.progress-active ~ li div {
         color: #c7c2ba; }
         .progress-steps ol li.progress-active ~ li div:before {
@@ -5311,12 +5330,12 @@ footer {
               height: 40px;
               width: 40px;
               border: 4px solid #00b48c;
-              background-color: #f6f6f6;
+              background-color: #00b48c;
               line-height: 32px;
               border-radius: 40px;
               content: "\e017";
               font-family: 'tsr-icons-all';
-              color: #00b48c;
+              color: #f6f6f6;
               display: block;
               margin-bottom: -22px;
               margin-left: auto;
@@ -5338,14 +5357,16 @@ footer {
             .progress-steps ol li.progress-active div:after {
               border-color: #652d86;
               content: counter(step);
-              color: #652d86; }
+              color: #652d86;
+              background-color: #f6f6f6; }
           .progress-steps ol li.progress-active ~ li div {
             border-color: #c7c2ba;
             color: #c7c2ba; }
             .progress-steps ol li.progress-active ~ li div:after {
               border-color: #c7c2ba;
               content: counter(step);
-              color: #c7c2ba; }
+              color: #c7c2ba;
+              background-color: #f6f6f6; }
         .progress-steps ol[data-progress-steps='2'] li {
           width: 50%; }
         .progress-steps ol[data-progress-steps='3'] li {

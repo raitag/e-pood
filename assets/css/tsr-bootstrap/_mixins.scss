@@ -1,4 +1,4 @@
-//
+ //
 // Mixins
 // --------------------------------------------------
 
@@ -633,6 +633,24 @@
   .progress-striped & {
     @include gradient-striped();
   }
+}
+
+// progress steps & selectBox
+
+@mixin stp-badge {
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: center;
+  counter-increment:step;
+  height: $number-size ;
+  width: $number-size;
+  border: $border-size solid $clr-done;
+  background-color: $clr-done; // $clrNrBg;
+  line-height: $number-size - 2*$border-size;
+  border-radius: $number-size;
+  content: "\e017";
+  font-family: 'tsr-icons-all';
+  color: $clrNrBg;
 }
 
 // Responsive utilities

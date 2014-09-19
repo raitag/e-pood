@@ -615,232 +615,130 @@
 </nav> -->
 
 </header>
-<section class="ee-breadcrumbs hidden-xs hidden-sm">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Arvutid ja lisad</a></li>
-      <li class="active">Sülearvutid</li>
-    </ul>
-  </div>
-</section>
-<div class="row ee-filterbar">
-  <div class="navbar navbar-inverse" role="filtering">
-    <div class="container"><ul class="nav navbar-nav navbar-left">
-        <li >
-          <a href="#">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
-        </li>
-        <li class="active">
-          <a href="#" id="toggleParam">Peida detailid <span class="icon icon-arrow-up"></span></a> 
-        </li>
-        <li class="visible-xs">
-          <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-        </li>
-      </ul>
-<!-- s -->
-    </div>
-  </div>
-</div>
 
 
-
-
-
-<div class="container" > 
-  
+<div class="container"> 
+<!--   <h2>Ostukorv</h2> -->
   <section class="ee-shopping">
-    <div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-      <div class="cart">
-        <div class="cart-wrapper">
-          <div class="top">
-            <button class="btn btn-primary btn-lg pull-right">Checkout</button>
-            <h2>
-              <span class="cart-close">&times;</span>Your cart
-            </h2>
+    <div class="progress-steps">
+      <ol data-progress-steps="5">
+        <li class="progress-active">
+          <div>Ostukorvi ülevaade</div>
+        </li>
+        <li>
+          <div>Sinu andmed</div>
+        </li>
+        <li>
+          <div>Kohaletoomine</div>
+        </li>
+        <li>
+          <div>Maksmine</div>
+        </li>
+        <li class="last-child ">
+          <div>Kokkuvõte</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+    <div class="cart">
+  <div class="cart-wrapper">
+    <div class="cart-items row">
+      <div class="col-md-12 cart-item">
+        <div class="panel">
+          <div class="row">
+            <div class="col-sm-2 col-xs-4 cart-item-image">
+              <img class="img-responsive" src="https://pood.elion.ee/pictures/86352_13/100x100/1%20copy.jpg">
+            </div>
+            <div class="col-sm-8 col-xs-8">
+              <h3>
+                Headphones
+              </h3>
+              <p>
+                Brief description of the cart item. This text is condensed as neede...
+              </p>
+            </div>
+            <div class="col-sm-2 col-xs-12 text-right">
+              <div class="row">
+                <div class="col-xs-5 col-sm-12">
+                  <p class="ee-price">
+                    Hind 68.99 €
+                  </p>
+                </div>
+                <div class="col-xs-7 col-sm-12">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                        <span>-</span>
+                      </button>
+                    </span>
+                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                        <span>+</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="cart-items">
-            <div class="col-lg-12 cart-item">
-              <div class="panel">
-                <div class="row">
-                  <div class="col-sm-2 col-xs-4 cart-item-image">
-                    <img class="img-responsive" src="https://pood.elion.ee/pictures/86352_13/100x100/1%20copy.jpg">
-                  </div>
-                  <div class="col-sm-7 col-xs-8">
-                    <h3>
-                      Headphones
-                    </h3>
-                    <p>
-                      Brief description of the cart item. This text is condensed as neede...
-                    </p>
-                  </div>
-                  <div class="col-sm-3 col-xs-12 text-right">
-                    <div class="row">
-                      <div class="col-xs-5 col-sm-12">
-                        <p class="price">
-                          $68.99
-                        </p>
-                      </div>
-                      <div class="col-xs-7 col-sm-12">
-                        <div class="input-group">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                              <span>-</span>
-                            </button>
-                          </span>
-                          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                              <span>+</span>
-                            </button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+        </div>
+      </div>
+      <div class="col-md-12 cart-item">
+        <div class="well">
+          <div class="row">
+            <div class="col-sm-2 col-xs-4 cart-item-image">
+              <img class="img-responsive" src="https://pood.elion.ee/pictures/80484_12/100x100/canon_ixus_135_pink.jpg">
+            </div>
+            <div class="col-sm-8 col-xs-8">
+              <h3>
+                fotokaamera Canon IXUS 135 (roosa)
+              </h3>
+              <p>
+                Brief description of the cart item. This text is condensed as neede...
+              </p>
+            </div>
+            <div class="col-sm-2 col-xs-12 text-right">
+              <div class="row">
+                <div class="col-xs-5 col-sm-12">
+                  <p class="ee-price ee-special-price">
+                    Soodushind: 129 €
+                  </p>
+                </div>
+                <div class="col-xs-7 col-sm-12">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+                        <span>-</span>
+                      </button>
+                    </span>
+                    <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="10">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+                        <span>+</span>
+                      </button>
+                    </span>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-12 cart-item">
-              <div class="well">
-                <div class="row">
-                  <div class="col-sm-2 col-xs-4 cart-item-image">
-                    <img class="img-rounded img-responsive" src="https://pood.elion.ee/pictures/80484_12/100x100/canon_ixus_135_pink.jpg">
-                  </div>
-                  <div class="col-sm-7 col-xs-8">
-                    <h3>
-                      fotokaamera Canon IXUS 135 (roosa)
-                    </h3>
-                    <p>
-                      Brief description of the cart item. This text is condensed as neede...
-                    </p>
-                  </div>
-                  <div class="col-sm-3 col-xs-12 text-right">
-                    <div class="row">
-                      <div class="col-xs-5 col-sm-12">
-                        <p class="price">
-                          Soodushind: 129 €
-                        </p>
-                      </div>
-                      <div class="col-xs-7 col-sm-12">
-                        <div class="input-group">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                              <span class="glyphicon glyphicon-minus"></span>
-                            </button>
-                          </span>
-                          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                              <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 cart-item">
-              <div class="well">
-                <div class="row">
-                  <div class="col-sm-2 col-xs-4 cart-item-image">
-                    <img class="img-rounded img-responsive" src="http://placehold.it/100x100">
-                  </div>
-                  <div class="col-sm-7 col-xs-8">
-                    <h3>
-                      Sneakers
-                    </h3>
-                    <p>
-                      Brief description of the cart item. This text is condensed as neede...
-                    </p>
-                  </div>
-                  <div class="col-sm-3 col-xs-12 text-right">
-                    <div class="row">
-                      <div class="col-xs-5 col-sm-12">
-                        <p class="price">
-                          $115.99
-                        </p>
-                      </div>
-                      <div class="col-xs-7 col-sm-12">
-                        <input class="qty" type="text" value="1">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 cart-item">
-              <div class="well">
-                <div class="row">
-                  <div class="col-sm-2 col-xs-4 cart-item-image">
-                    <img class="img-rounded img-responsive" src="http://placehold.it/100x100">
-                  </div>
-                  <div class="col-sm-7 col-xs-8">
-                    <h3>
-                      Sunglasses
-                    </h3>
-                    <p>
-                      Brief description of the cart item. This text is condensed as neede...
-                    </p>
-                  </div>
-                  <div class="col-sm-3 col-xs-12 text-right">
-                    <div class="row">
-                      <div class="col-xs-5 col-sm-12">
-                        <p class="price">
-                          $59.99
-                        </p>
-                      </div>
-                      <div class="col-xs-7 col-sm-12">
-                        <input class="qty" type="text" value="1">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            
-            <div class="bottom">
-              <h4>
-                Ostukorv kokku
-                <div class="pull-right ee-product-price-md">
-                  <strong>269.99 €</strong>
-                </div>
-              </h4>
-              <h6>
-                Summa käibemaksuta 
-                <div class="pull-right">
-                  <strong>169.99 €</strong>
-                </div>
-              </h6>
-              <h6>
-                Käibemaks 
-                <div class="pull-right">
-                  <strong>69.99 €</strong>
-                </div>
-              </h6>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row next-steps">
+</div>
+
+</div>
+
+    <div class="container-no-gutter" >
+      <div class=" next-steps">
     <fieldset>
-      <legend>What would you like to do next?</legend>
-      <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
-      <div class="accordion" id="next-container">
-                  <div class="accordion-group">
-            <div class="accordion-heading"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#next-container" href="#coupon">Use Coupon Code</a></div>
-            <div id="coupon" class="accordion-body collapse" style="height: 0px;">
-              <div class="accordion-inner">
+      <div class="panel-group ee-accordion" id="next-container">
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#coupon">Kasuta sooduskoodi</a></div>
+            <div id="coupon" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
                 <form class="form-horizontal" action="http://merkent.com/bootstrap/index.php?route=checkout/cart" method="post" enctype="multipart/form-data">
                   <label for="next_coupon"><h5>Enter your coupon here:</h5></label>
                   <input type="text" name="coupon" value="" class="span3" id="next_coupon">
@@ -850,10 +748,10 @@
               </div>
             </div>
           </div>
-                          <div class="accordion-group">
-            <div class="accordion-heading"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#next-container" href="#voucher">Use Gift Voucher</a></div>
-            <div id="voucher" class="accordion-body collapse" style="height: 0px;">
-              <div class="accordion-inner">
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#voucher">Kasuta kinkekaarti</a></div>
+            <div id="voucher" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
                 <form class="form-horizontal" action="http://merkent.com/bootstrap/index.php?route=checkout/cart" method="post" enctype="multipart/form-data">
                   <label for="next_voucher"><h5>Enter your gift voucher code here:</h5></label>
                   <input type="text" name="voucher" value="" class="span3" id="next_voucher">
@@ -863,10 +761,10 @@
               </div>
             </div>
           </div>
-          <div class="accordion-group">
-            <div class="accordion-heading"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#next-container" href="#shipping">Estimate Shipping &amp; Taxes</a></div>
-            <div id="shipping" class="accordion-body collapse" style="height: 0px;">
-              <div class="accordion-inner">
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#shipping">Saada ostukorv </a></div>
+            <div id="shipping" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
                 <form class="form-horizontal" id="form-shipping">
                   <h5>Enter your destination to get a shipping estimate.</h5><hr>
                   <div class="control-group">
@@ -896,12 +794,74 @@
               </div>
             </div>
           </div>
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#save">Salvesta ostukorv </a></div>
+            <div id="save" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
+                <form class="form-horizontal" id="form-shipping">
+                  <h5>Enter your destination to get a shipping estimate.</h5><hr>
+                  <div class="control-group">
+                    <label class="control-label" for="country_id"><b class="required">*</b> Country:</label>
+                    <div class="controls">
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="control-group">
+                    <label class="control-label" for="postcode"><b id="postcode-required" class="required" style="display: none;">*</b> Post Code:</label>
+                    <div class="controls">
+                      <input type="text" name="postcode" value="" class="input-small" id="postcode">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <input type="button" value="Get Quotes" id="button-quote" class="btn">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
               </div>
       </fieldset>
   </div>
-</div>
-  </section>
-</div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 bottom">
+          <legend>Saad kauba kätte eeldatavalt 12.02.2015</legend>
+          <h4>
+            Ostukorv kokku
+            <div class="pull-right ee-product-price-md">
+              <strong>269.99 €</strong>
+            </div>
+          </h4>
+          <h6>
+            Summa käibemaksuta 
+            <div class="pull-right">
+              <strong>169.99 €</strong>
+            </div>
+          </h6>
+          <h6>
+            Käibemaks 
+            <div class="pull-right">
+              <strong>69.99 €</strong>
+            </div>
+          </h6>
+        </div>
+      </div>
+          <button class="btn btn-default btn-block ee-btn-buy">Jätka ostmist</button>
+    </div>
+
+
+<section class="tsr-section-divider tsr-color-purple hidden-print">
+  <div class="container">
+    <h6>
+    Teised on ostnud lisaks
+    </h6>
+  </div>
+</section>
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
