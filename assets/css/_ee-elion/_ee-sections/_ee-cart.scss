@@ -7,7 +7,6 @@
     border-bottom: 1px solid $lightgrey-t;
     }
   .cart-item {
-    
     margin-top: 20px;
     h3 {
     font-size: 1.6em;
@@ -22,8 +21,11 @@
     font-size: 1.4em;
     margin-bottom: 14px;
   }
-  .ee-accordion .panel-heading a {
-    font-size: 1.2em;
+  .ee-accordion {
+    border-top: 1px solid $lightgrey-t;
+    .panel-heading a {
+      font-size: 1.2em;
+    }
   }
 }
 // More practical CSS...

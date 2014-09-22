@@ -12344,8 +12344,10 @@ header .megamenu .search-item-image,
   .ee-shopping .ee-price {
     font-size: 1.4em;
     margin-bottom: 14px; }
-  .ee-shopping .ee-accordion .panel-heading a {
-    font-size: 1.2em; }
+  .ee-shopping .ee-accordion {
+    border-top: 1px solid #dbdbdb; }
+    .ee-shopping .ee-accordion .panel-heading a {
+      font-size: 1.2em; }
 
 .rwd-table {
   margin: 1em 0;
