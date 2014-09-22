@@ -12556,6 +12556,7 @@ header .megamenu .search-item-image,
   top: auto; }
 
 .flyover {
+  top: -250px;
   position: fixed;
   width: 100%;
   z-index: 1500;
