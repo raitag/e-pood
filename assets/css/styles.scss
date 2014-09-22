@@ -151,17 +151,6 @@
     margin: 10px;
     } 
   }
-  .col-five-on-small {
-    width: 100%;
-    position: relative;
-    float: left;
-      @include media-min($screen-sm) {
-    width: 33.33333%;
-    }
-  @include media-min($screen-md) {
-    width: 20%;
-    }
-  }
 }
 
 .panel-group .table-responsive {

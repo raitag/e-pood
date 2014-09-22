@@ -11137,6 +11137,17 @@ section.tsr-section-productAndService-listing {
   section.tsr-section-productAndService-listing .tsr-tactical-flash {
     right: 20px; }
 
+.col-five-on-small {
+  width: 100%;
+  position: relative;
+  float: left; }
+  @media (min-width: 768px) {
+    .col-five-on-small {
+      width: 33.33333%; } }
+  @media (min-width: 992px) {
+    .col-five-on-small {
+      width: 20%; } }
+
 .tsr-product-image {
   mix-blend-mode: multiply;
   position: relative;
@@ -12418,16 +12429,6 @@ header .megamenu .search-item-image,
   @media (min-width: 768px) {
     .ee-found-tabs .ee-compare {
       margin: 10px; } }
-.ee-found-tabs .col-five-on-small {
-  width: 100%;
-  position: relative;
-  float: left; }
-  @media (min-width: 768px) {
-    .ee-found-tabs .col-five-on-small {
-      width: 33.33333%; } }
-  @media (min-width: 992px) {
-    .ee-found-tabs .col-five-on-small {
-      width: 20%; } }
 
 .panel-group .table-responsive {
   margin-bottom: -1; }
@@ -12576,7 +12577,6 @@ header .megamenu .search-item-image,
   color: #FFF;
   line-height: 1;
   margin-top: -7px;
-  padding: 0 14px 3px 40px;
   position: relative;
   top: 10px;
   display: inline-block; }
