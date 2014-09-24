@@ -22,7 +22,7 @@
 
 
     <!-- @include bundle-module.html -->
-  <div class="hidden-xs"> 
+  <div class="hidden-xs "> 
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
       <ul class="dropdown-menu" role="menu">
@@ -32,21 +32,32 @@
       </ul>
     </div>
 
-    {{#if normal_price}}
-    <p style=" margin-top: 20px;">Hind: <span style="text-decoration: line-through;" >{{normal_price}}</span>
-    {{/if}}
-    {{#if special_price}}
-    <br>Sinu võit: 300 €</p>
-    <p class="tsr-product-price ee-special-price"><span>Soodushind: {{special_price}}</span></p>
-    <p>Kuumakse: 12 €</p>
-    {{/if}}
-
-    <div class="row ee-actions">
+    <div class="row">
       <div class="col-sm-6">
+        {{#if special_price}}
+        <p class="tsr-product-price ee-product-price-md"><span>Kliendihind: {{special_price}}</span></p>
+        <p>
+          Tavaind: {{normal_price}}
+          <br>
+          Sinu võit: 300 €
+        </p>
+
+        {{else }}
+        <p class="tsr-product-price ee-special-price"><span>Hind: {{normal_price}}</span></p>
+        
+        {{/if}}
+      </div>
+      <div class="col-sm-6 ee-actions">
         <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
       </div>
     </div>
-    
+
+    <div class="row ee-leasing-header">
+      <h6>Kuumakse: 84,89 €</h6>
+      <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
+    </div>
+    <!-- @include _leasing-info.html --> 
+
     <ul class="list-inline ee-linkicons">
     <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
@@ -104,14 +115,24 @@
       </ul>
     </div>
 
-  {{#if normal_price}}
-  <p style=" margin-top: 20px;">Hind: <span style="text-decoration: line-through;" >{{normal_price}}</span>
-  {{/if}}
-  {{#if special_price}}
-  <br>Sinu võit: 300 €</p>
-  <p class="tsr-product-price ee-special-price"><span>Soodushind: {{special_price}}</span></p>
-  <p>Kuumakse: 12 €</p>
-  {{/if}}
+    {{#if special_price}}
+    <p class="tsr-product-price ee-product-price-md"><span>Soodushind: {{special_price}}</span></p>
+    <p>
+      Tavaind: {{normal_price}}
+      <br>
+      Sinu võit: 300 €
+    </p>
+
+    {{else }}
+    <p class="tsr-product-price ee-special-price"><span>Hind: {{normal_price}}</span></p>
+    
+    {{/if}}
+
+        <div class="row ee-leasing-header">
+      <h6>Kuumakse: 84,89 €</h6>
+      <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
+    </div>
+    <!-- @include _leasing-info.html --> 
 
   <div class="row ee-actions">
     <div class="col-sm-6">

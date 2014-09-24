@@ -91,11 +91,26 @@ $(document).ready(function () {
   });
 
 
-  $('.js-imagerotator').flexslider({
-    animation: "slide",
-    controlNav: "thumbnails",
-    itemMargin: 40,
-    slideshow: false,
-    maxItems: 4
-  });
+	$('#js-imagerotator-carousel').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: true,
+	    slideshow: false,
+	    itemWidth: 120,
+	    asNavFor: '#js-imagerotator',
+	    directionNav: true,
+	    prevText: "",
+	    nextText: "",
+	    minItems: 3,
+      maxItems: 4,
+	});
+
+    $('#js-imagerotator').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#js-imagerotator-carousel",
+        directionNav: false,
+    });
 });

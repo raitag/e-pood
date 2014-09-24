@@ -837,7 +837,7 @@
     </div>
   </div>
 </div>
-  <div class="hidden-xs"> 
+  <div class="hidden-xs "> 
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
       <ul class="dropdown-menu" role="menu">
@@ -847,21 +847,50 @@
       </ul>
     </div>
 
-    {{#if normal_price}}
-    <p style=" margin-top: 20px;">Hind: <span style="text-decoration: line-through;" >{{normal_price}}</span>
-    {{/if}}
-    {{#if special_price}}
-    <br>Sinu võit: 300 €</p>
-    <p class="tsr-product-price ee-special-price"><span>Soodushind: {{special_price}}</span></p>
-    <p>Kuumakse: 12 €</p>
-    {{/if}}
-
-    <div class="row ee-actions">
+    <div class="row">
       <div class="col-sm-6">
+        {{#if special_price}}
+        <p class="tsr-product-price ee-product-price-md"><span>Kliendihind: {{special_price}}</span></p>
+        <p>
+          Tavaind: {{normal_price}}
+          <br>
+          Sinu võit: 300 €
+        </p>
+
+        {{else }}
+        <p class="tsr-product-price ee-special-price"><span>Hind: {{normal_price}}</span></p>
+        
+        {{/if}}
+      </div>
+      <div class="col-sm-6 ee-actions">
         <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
       </div>
     </div>
-    
+
+    <div class="row ee-leasing-header">
+      <h6>Kuumakse: 84,89 €</h6>
+      <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
+    </div>
+    <section class="row ee-panel-leasing collapse" id="leasingToggle">
+  <div class="row tsr-forms ">
+    <div class="col-md-6 ee-upper-distance">
+      <p>Periood:</p>
+        <div class="select-container"><select><option selected>48 kuud</option><option>iPhone</option><option>Samsung</option></select></div>
+      <p class="ee-upper-distance">Sissemakse:</p>
+      <div class="select-container"><select><option selected>0,00% | 0,00 €</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+
+    <div class="col-md-6 ee-upper-distance">
+      <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
+
+      <p class="ee-upper-distance">
+        <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
+      </p>
+
+      </div>
+  </div>
+</section> 
+
     <ul class="list-inline ee-linkicons">
     <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
@@ -1042,14 +1071,42 @@
       </ul>
     </div>
 
-  {{#if normal_price}}
-  <p style=" margin-top: 20px;">Hind: <span style="text-decoration: line-through;" >{{normal_price}}</span>
-  {{/if}}
-  {{#if special_price}}
-  <br>Sinu võit: 300 €</p>
-  <p class="tsr-product-price ee-special-price"><span>Soodushind: {{special_price}}</span></p>
-  <p>Kuumakse: 12 €</p>
-  {{/if}}
+    {{#if special_price}}
+    <p class="tsr-product-price ee-product-price-md"><span>Soodushind: {{special_price}}</span></p>
+    <p>
+      Tavaind: {{normal_price}}
+      <br>
+      Sinu võit: 300 €
+    </p>
+
+    {{else }}
+    <p class="tsr-product-price ee-special-price"><span>Hind: {{normal_price}}</span></p>
+    
+    {{/if}}
+
+        <div class="row ee-leasing-header">
+      <h6>Kuumakse: 84,89 €</h6>
+      <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
+    </div>
+    <section class="row ee-panel-leasing collapse" id="leasingToggle">
+  <div class="row tsr-forms ">
+    <div class="col-md-6 ee-upper-distance">
+      <p>Periood:</p>
+        <div class="select-container"><select><option selected>48 kuud</option><option>iPhone</option><option>Samsung</option></select></div>
+      <p class="ee-upper-distance">Sissemakse:</p>
+      <div class="select-container"><select><option selected>0,00% | 0,00 €</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+
+    <div class="col-md-6 ee-upper-distance">
+      <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
+
+      <p class="ee-upper-distance">
+        <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
+      </p>
+
+      </div>
+  </div>
+</section> 
 
   <div class="row ee-actions">
     <div class="col-sm-6">
@@ -1198,40 +1255,6 @@
 <!--     <div class="col-md-5  col-xs-6" ><a href="#" class="ee-comments">Arvamused (5)</a></div>
     <div class="col-md-3   col-xs-6"><a href="#" class="ee-compare">Võrdle</a></div>
    <div class="col-md-4   col-xs-5"><a href="#" class="ee-favorite">Lemmik</a></div> --> 
-
-<section class="tsr-section-divider" style="z-index: 0;">
-  <div class="container">
-    <h6>
-      <a href="#leasingToggle" data-toggle="collapse">Soovid osta järelmaksuga?</a>
-    </h6>    
-  </div>
-</section>
-
-<section class="ee-section-leasing collapse" id="leasingToggle">
-  <div class="container">
-    <div class="row tsr-forms">
-      <div class="col-md-3">
-        <p>Periood:</p>
-          <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-        
-      </div>
-      <div class="col-md-3">
-        <p>Sissemakse:</p>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        <p>Kuumakse:</p>
-        <p class="ee-product-price ee-product-price-lg"><span>84,89 €</span></p>
-      </div>
-      <div class="col-md-3">
-        <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
-      </div>
-    </div>
-    <p class="ee-upper-distance">
-      <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
-    </p>
-  </div>
-</section> 
 
 <section class="tsr-section-divider">
   <div class="container">
@@ -1763,20 +1786,11 @@
           <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
           <h6 class="tsr-product-header">{{name}}</h6>
-
-          <p class="tsr-product-price">
-          {{#if special_price}}
-          Tavahind {{normal_price}} €<br> Sinu võit 10 €
+          <p class="tsr-product-price ee-product-price-md">
+          <span>{{normal_price}} €</span>
           </p>
-          <p class="ee-special-price tsr-product-price">
-          Soodushind <span>{{special_price}} €</span>
-          </p>
-          {{else}}
-          <p class="tsr-product-price ">
-          Tavahind <span>{{normal_price}} €</span>
-          {{/if}}
-          </p>
-          <button class="ee-compare btn btn-link"> Võrdle </button>
+          <a class="ee-compare"> Võrdle </a>
+          <a class="ee-buy"> Osta </a>
         </div>
       </div>
       {{/products}}

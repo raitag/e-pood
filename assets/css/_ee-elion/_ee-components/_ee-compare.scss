@@ -33,6 +33,18 @@
     }
   }
 
+  .ee-accordion .panel-default .panel-heading a {
+    border-top: 1px solid $lightgrey-t;
+    margin-top: -1px;
+    background-color: $clay-temp;
+    font-size: 120%;
+      &:hover {
+        background-color: $lightgrey-c;
+      }
+
+    }
+
+
   .panel {
     border: none;
   }
@@ -77,49 +89,51 @@
   .compare-title {
     background: $lightgrey-c;
     border-top: 1px solid $lightgrey-t;
+    border-bottom: 1px solid $lightgrey-t;
     font-size: 110%;
     text-align: center;
     line-height: 3;
-    white-space: nowrap;
+    // white-space: nowrap;
     @include media-min($screen-sm) {
       background: none;
       text-align: left;
+      border-bottom: none;
     } 
   } 
 
   .ee-count-5 {
     width: 50%;
     position: relative;
-    border-top: 1px solid $lightgrey-t;
     @include media-min($screen-sm) {
       width: 20%;
+      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .ee-count-4 {
     width: 50%;
     position: relative;
-    border-top: 1px solid $lightgrey-t;
     @include media-min($screen-sm) {
       width: 25%;
+      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .ee-count-3 {
     width: 50%;
     position: relative;
-    border-top: 1px solid $lightgrey-t;
     @include media-min($screen-sm) {
       width: 33.3333%;
+      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .ee-count-2, .ee-count-1 {
     width: 50%;
     position: relative;
-    border-top: 1px solid $lightgrey-t;
     @include media-min($screen-sm) {
       width: 50%;
+      border-top: 1px solid $lightgrey-t;
     }
   }
   // .ee-count-4 {

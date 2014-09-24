@@ -43,9 +43,21 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 
 .tsr-section-divider.tsr-color-purple {
   z-index: 0;
+  h6 {
+    letter-spacing: 0;
+  }
 }
 
 .ee-special-price span {
   font-size: 120%;
   font-weight: bold;
 }
+
+    .ee-compare {
+    margin-right: 15px;
+    display: inline-block;
+    @include media-min($screen-sm) {
+      margin: 15px auto;
+      margin-right: 15px;
+    }  
+  }

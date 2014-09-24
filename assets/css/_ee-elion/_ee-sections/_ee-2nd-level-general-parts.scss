@@ -119,6 +119,9 @@
 }
 
 .ee-filterbar {
+  background-color: $purple-c;
+  border-top: 1px solid $purple-c;
+  border-bottom: 1px solid $purple-c;
   .navbar-nav > li > a {
     line-height: 3;
     font-size: $font-size-base;

@@ -895,20 +895,11 @@
           <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
           <h6 class="tsr-product-header">{{name}}</h6>
-
-          <p class="tsr-product-price">
-          {{#if special_price}}
-          Tavahind {{normal_price}} €<br> Sinu võit 10 €
+          <p class="tsr-product-price ee-product-price-md">
+          <span>{{normal_price}} €</span>
           </p>
-          <p class="ee-special-price tsr-product-price">
-          Soodushind <span>{{special_price}} €</span>
-          </p>
-          {{else}}
-          <p class="tsr-product-price ">
-          Tavahind <span>{{normal_price}} €</span>
-          {{/if}}
-          </p>
-          <button class="ee-compare btn btn-link"> Võrdle </button>
+          <a class="ee-compare"> Võrdle </a>
+          <a class="ee-buy"> Osta </a>
         </div>
       </div>
       {{/products}}

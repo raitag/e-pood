@@ -46,10 +46,7 @@ section.ee-product-detail {
 
   .ee-actions {
     margin-top: 15px;
-    .ee-btn-buy {
-    // margin-bottom: 15px;
-    text-align: center;
-    }
+
     p {
       margin-top: 7px;
     }
@@ -92,6 +89,9 @@ section.ee-product-detail {
   .ee-linkicons {
     margin-top: 15px;
     line-height: 2.2;
+    @include media-min($screen-md) {
+      margin-top: 0;
+    }
     li {
       margin-right: 0;
       @include media-min($screen-md) {
@@ -133,18 +133,38 @@ section.ee-product-detail {
   margin-bottom: 100px;
 }
 
-section.ee-section-leasing {
-  margin-bottom: 10px;
-  & [class*="col-"]  {
-    margin-top: 20px;
+// section.ee-section-leasing {
+//   margin-bottom: 10px;
+//   & [class*="col-"]  {
+//     margin-top: 20px;
+//   }
+//   a {
+//     margin-top: 20px;
+//     display: block;
+//   }
+//   .ee-product-price-lg {
+//     line-height: 2;
+//   }
+// }
+
+.ee-leasing-header {
+  padding: 5px 15px;
+  border: 1px solid $lightgrey-t;
+  h6 {
+    display: inline-block;
   }
   a {
-    margin-top: 20px;
-    display: block;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 19.5px;
   }
-  .ee-product-price-lg {
-    line-height: 2;
-  }
+}
+
+.ee-panel-leasing {
+  border: 1px solid $lightgrey-t;
+  border-top: none;
+  padding: 10px 15px;
 }
 
 .ee-accordion-bundled {
@@ -198,7 +218,7 @@ section.ee-section-leasing {
     }
 }
 
-.tsr-slides .tsr-module-product {
-  padding: 20px 5px 25px;
-}
+// .tsr-slides .tsr-module-product {
+//   padding: 20px 5px 25px;
+// }
 
