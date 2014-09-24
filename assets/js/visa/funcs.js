@@ -1,19 +1,21 @@
 // applay function screen onchanged
 function OnResize() {
-	this.init = function(c,t){
-        window.onresize = function() {
-			clearTimeout(t);
-			t = setTimeout(function(){
-				//c
-				for (var i = reCallFuncs.length - 1; i >= 0; i--) {
-					reCallFuncs[i].call();
-				}
-			},500);
-		};
-		return c;
+    this.init = function (c, t) {
+        var previousWidth = window.innerWidth;
+        window.onresize = function () {
+            if (window.innerWidth != previousWidth) {
+                clearTimeout(t);
+                t = setTimeout(function () {
+                    for (var i = reCallFuncs.length - 1; i >= 0; i--) {
+                        reCallFuncs[i].call();
+                    }
+                }, 500);
+            }
+            previousWidth = window.innerWidth;
+        };
+        return c;
     };
 }
-
 
 
 
