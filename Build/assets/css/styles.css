@@ -11441,8 +11441,7 @@ section.tsr-section-productlist .tsr-module-product {
       section.tsr-section-productlist .tsr-module-product .tsr-product-header {
         font-size: 145%; } }
     section.tsr-section-productlist .tsr-module-product .tsr-product-header a {
-      display: block;
-      width: 95%; }
+      display: block; }
   section.tsr-section-productlist .tsr-module-product .hidden-sm {
     vertical-align: top;
     display: inline-block !important;
