@@ -53,11 +53,11 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   font-weight: bold;
 }
 
-    .ee-compare {
+  .ee-blockview .ee-compare {
+  margin-right: 15px;
+  display: inline-block;
+  @include media-min($screen-sm) {
+    margin: 15px auto;
     margin-right: 15px;
-    display: inline-block;
-    @include media-min($screen-sm) {
-      margin: 15px auto;
-      margin-right: 15px;
-    }  
-  }
+  }  
+}

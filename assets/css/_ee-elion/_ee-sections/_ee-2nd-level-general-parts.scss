@@ -119,9 +119,6 @@
 }
 
 .ee-filterbar {
-  background-color: $purple-c;
-  border-top: 1px solid $purple-c;
-  border-bottom: 1px solid $purple-c;
   .navbar-nav > li > a {
     line-height: 3;
     font-size: $font-size-base;
@@ -140,7 +137,6 @@
     margin: 0;
     padding: 10px 0;
   }
-
   .navbar-right {
     display: none;
     @include media-min($screen-sm) {
@@ -162,6 +158,11 @@
     a {
       color: #fff;
     }
+  }
+  &.fullwidth {
+    background-color: $purple-c;
+    border-top: 1px solid $purple-c;
+    border-bottom: 1px solid $purple-c;
   }
 }
 

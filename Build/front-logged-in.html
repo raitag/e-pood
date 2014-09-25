@@ -977,7 +977,7 @@
       {{#products}}
 
       <div class="col-xs-12 col-sm-4 col-md-3">
-      <a href="/productinfo/{{id}}" class="tsr-module-product">
+      <a href="/productinfo/{{id}}" class="tsr-module-product ee-blockview">
         <figure class="tsr-product-image">
           {{#if badge.text }}
           <figure class="ee-product-badge ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
@@ -1012,7 +1012,7 @@
 
       <script id="product-slider-visited-template" type="text/x-handlebars-template">
       {{#products}}
-      <a href="javascript:void(0);" class="tsr-module-product">
+      <a href="javascript:void(0);" class="tsr-module-product ee-blockview">
         {{#if ribbon}}
           <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}

@@ -9,7 +9,7 @@
 
   {{#products}}
   <div class="col-five-on-small">
-    <div class="tsr-module-product">
+    <div class="tsr-module-product ee-blockview">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
@@ -26,7 +26,7 @@
       </figure>
     
       <div class="tsr-product-content">
-
+    
         {{#if firstflash}}
         <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
         {{/if}}
@@ -44,7 +44,7 @@
           {{else}}
           <ul class="tsr-product-colors hidden-xs"></ul>
         {{/if}}
-
+    
         {{#if special_price}}
         <p class="tsr-product-price ee-special-price">Soodushind <span>{{special_price}}</span></p>
         {{else}} {{#if normal_price}}
