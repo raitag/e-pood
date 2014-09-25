@@ -11640,8 +11640,6 @@ section.ee-tab-to-accordioncontent {
       display: block; } }
   section.ee-tab-to-accordioncontent .tsr-section-productAndService-listing {
     border-top: none; }
-  section.ee-tab-to-accordioncontent .tab-content {
-    margin: 30px auto; }
   section.ee-tab-to-accordioncontent .tab-pane {
     margin: 30px 0 10px; }
     section.ee-tab-to-accordioncontent .tab-pane.ee-similar-products {

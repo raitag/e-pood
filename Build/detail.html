@@ -1323,7 +1323,7 @@
         </script>
       </div>
     </div>
-    <div class="tab-pane fade" id="reviews">
+    <div class="tab-pane fade in active" id="reviews">
       <section class="ee-review-add">
   <div class="container tsr-forms">
     <div class="row">
@@ -1340,7 +1340,7 @@
           <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
       </div>
       <div class="col-sm-4 text-right js-slidetoggle">
-        <p>Mis on toote juures hea? Mis ei ole hea?</p>
+        <p>&nbsp;</p>
         <button class="btn btn-primary">Lisa oma arvamus</button>
       </div>
     </div>
@@ -1554,69 +1554,55 @@
   {{/reviews}}
   </script>
   <br>
-  <section class="ee-review-add js-togglable">
+  </section>
+  <section class="ee-review-answer-add">
   <div class="container tsr-forms">
     <div class="row">
-      <div class="col-xs-5">
-        <h4>Lisa uus arvamus</h4>
-        <!-- <p>Mis on toote juures hea? Mis ei ole hea?</p> -->
-      </div>
-      <div class="col-xs-7 text-right">
-        <ul class="socialcount socialcount-small" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
-  <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Soovita Facebookis" target="_blank"><span class="icon icon-facebook-inverse"></span><span class="count">Soovita</span></a></li>
-  <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Jaga Twitteris" target="_blank"><span class="icon icon-twitter-inverse"></span><span class="count">Tweet</span></a></li>
-  <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Jaga Google Plussis" target="_blank"><span class="icon icon-googleplus-inverse"></span><span class="count">+1</span></a></li>
-</ul>
+      <div class="col-xs-12">
+        <h4>Lisa oma arvamus</h4>
+        <p>Arvamuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
       </div>
     </div>
     <form action="">
       <div class="row ee-input-aside">
-        <div class="col-xs-4">
+        <div class="col-sm-4">
           <label class="sr-only" for="Nimi">Nimi</label>
           <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
           <label class="sr-only" for="E-post">E-post</label>
           <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
         </div>
-        <div class="col-xs-8">
+        <div class="col-sm-8">
           <label class="sr-only" for="E-post">Arvamus</label>
           <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
+      <div class="row ee-action-submit">
+        <div class="col-sm-4">
           <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
-        </div>
-        <div class="col-xs-4">
           <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
         </div>
-        <div class="col-xs-4  text-right">
-          <label for="rating-1">Hinda toodet <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" /></label>
-        </div>
-      </div>
-      <div class="row ee-action-submit">
-        <div class="col-xs-4">
-        <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
-
-        </div>
-        <div class="col-xs-5 ee-captcha">
+        <div class="col-sm-4 ee-captcha">
           <img src="assets/img/other/captcha.png" alt="">
-          <button class="btn btn-link"><i class="icon-synctsicon48px"></i></button>
+          <button class="btn btn-link"><i class="icon icon-sync"></i></button>
           <label class="sr-only" for="captcha">Kontrollkood</label>
           <input type="text" id="captcha" name="captcha" />
+          <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
         </div>
-        <div class="col-xs-3  text-right">
-          <button class="tsr-btn tsr-btn-purple text-right">Saada arvamus</button>
-        </div>
-        <div class="col-xs-12">
-        <p>Palume mitte kirjutada vulgraarsusi ega mõttetusi. Me loeme postitusi ja jätame endale õiguse redigeerida või kõrvaldada kohatuid kommentaare.</p>
+        <div class="col-sm-4  text-right">
+          <span>Mitu tärni annad?</span>
+          <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
+
+         <div class="ee-sendreview">
+            <button class="btn btn-link">Loobu</button>
+           <button class="btn btn-primary">Saada arvamus</button>
+         </div>
         </div>
       </div>
     </form>
   </div>
 </section>
-  </section>
     </div>
-    <div class="tab-pane fade in ee-similar-products active" id="similar-products">
+    <div class="tab-pane fade ee-similar-products" id="similar-products">
       <div class="container">
         <!-- Product boxes -->
 <div class="row ee-nogap">
@@ -1942,6 +1928,7 @@
 </footer>
 
     <script src="assets/js/vendor/jquery.js"></script> 
+    <script src="assets/js/vendor/scrollto.js"></script> 
 <!--     // <script src="assets/js/vendor/common.js"></script>  -->
 <!--     // <script src="assets/js/vendor/paintbrush.js"></script>  -->
 <!--     // <script src="assets/js/vendor/enquire.min.js"></script>  -->

@@ -663,7 +663,7 @@
   <li><a class="tsr-next js-compare-next" href="#"></a></li>
 </ul>
 <script id="compare-data-template" type="text/x-handlebars-template">
-  {{#comparision}}
+  {{#comparision}} 
   
   <div class="panel-group ee-accordion" >
 
@@ -674,7 +674,7 @@
       <div class="col-xs-12 col-sm-10 js-datawrapper">
         <div class="fixwidth">
         {{#each prod}}
-          <div class="col-xs-2 compare-value">
+          <div class="col-xs-2 compare-value jsCompareProduct">
             <a type="button" class="close" aria-hidden="true">×</a>
             <img class="img-responsive" src="{{img}}" alt="">
             <h6><a href="">{{product}}</a></h6>
@@ -869,6 +869,7 @@
 </footer>
 
     <script src="assets/js/vendor/jquery.js"></script> 
+    <script src="assets/js/vendor/scrollto.js"></script> 
 <!--     // <script src="assets/js/vendor/common.js"></script>  -->
 <!--     // <script src="assets/js/vendor/paintbrush.js"></script>  -->
 <!--     // <script src="assets/js/vendor/enquire.min.js"></script>  -->
