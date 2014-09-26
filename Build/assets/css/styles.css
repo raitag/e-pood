@@ -12258,6 +12258,14 @@ header .megamenu .search-item-image,
   margin-bottom: 15px;
   margin-top: 15px; }
 
+.container.xs-not-padded {
+  padding-left: 0;
+  padding-right: 0; }
+  @media (min-width: 768px) {
+    .container.xs-not-padded {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
 .ee-product-compare .close {
   font-size: 24px;
   margin: 10px 10px 0 0; }
@@ -12284,6 +12292,17 @@ header .megamenu .search-item-image,
 .ee-product-compare .ee-special-price, .ee-product-compare .ee-product-price-lg, .ee-product-compare .ee-product-price-md {
   font-weight: bold;
   font-size: 110%; }
+.ee-product-compare .sticky {
+  border-bottom: 4px solid #642887;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  .ee-product-compare .sticky img,
+  .ee-product-compare .sticky .ee-buy,
+  .ee-product-compare .sticky .close {
+    display: none; }
 .ee-product-compare .comparision-header {
   position: relative;
   -webkit-transition: all 0.4s ease;
@@ -12299,17 +12318,21 @@ header .megamenu .search-item-image,
     border-bottom: 4px solid #642887;
     position: fixed;
     top: 0;
-    left: auto; }
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
     .ee-product-compare .comparision-header.sticky img,
     .ee-product-compare .comparision-header.sticky .ee-buy,
     .ee-product-compare .comparision-header.sticky .close {
       display: none; }
-.ee-product-compare p.compare-value {
-  padding-top: 10px; }
+.ee-product-compare .compare-value {
+  padding-top: 10px;
+  border-right: 1px solid red; }
 .ee-product-compare .compare-title {
   background: #f6f6f6;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
+  border-right: yellow;
   font-size: 110%;
   text-align: center;
   line-height: 3; }
@@ -12320,7 +12343,8 @@ header .megamenu .search-item-image,
       border-bottom: none; } }
 .ee-product-compare .ee-count-5 {
   width: 50%;
-  position: relative; }
+  position: relative;
+  border: 1px solid green; }
   @media (min-width: 768px) {
     .ee-product-compare .ee-count-5 {
       width: 20%;
@@ -12348,11 +12372,13 @@ header .megamenu .search-item-image,
       border-top: 1px solid #dbdbdb; } }
 .ee-product-compare .js-datawrapper {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  padding-left: 0;
+  padding-right: 0; }
 .ee-product-compare .fixwidth {
   width: 300%;
   text-align: center; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .ee-product-compare .fixwidth {
       text-align: left;
       width: 100%; } }

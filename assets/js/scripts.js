@@ -23,10 +23,6 @@ $('.dropdown-menu').find('form').click(function (e) {
         e.stopPropagation();
       });
 
-$('#toggleParam').click(function() {
-  $('.js-subpanel').collapse('toggle');
-});
-
 $(".jsShowMoreCategories").unbind("click").click(function () {
  if ($(this).hasClass("moretext")) {
   $(".jsShowMoreCategories span").html($(this).data("lesstext"));

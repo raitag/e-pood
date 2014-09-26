@@ -631,7 +631,7 @@
             <a href="#">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
           </li>
           <li class="active">
-            <a href="#" id="toggleParam">Peida detailid <span class="icon icon-arrow-up"></span></a> 
+            <a href="#" id="toggleParam" class="showParameterDifferences" data-show="Peida detailid" data-hide="Näita detaile">Peida detailid <span class="icon icon-arrow-up"></span></a>  
           </li>
           <li class="visible-xs">
             <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
@@ -651,36 +651,43 @@
 
 
 
-<div class="container-no-gutter"> 
+<div class="container xs-not-padded"> 
   
   <div class="ee-product-compare">
     
 <div id="content-placeholder-compare-data" class=""></div>
 <!-- <span class="previ ee-left ee-iconbutton"></span>
 <span class="nexti ee-right ee-iconbutton"></span> -->
-<ul class="tsr-direction-nav">
-  <li><a class="tsr-prev js-compare-prev" href="#"></a></li>
-  <li><a class="tsr-next js-compare-next" href="#"></a></li>
-</ul>
+
 <script id="compare-data-template" type="text/x-handlebars-template">
   {{#comparision}} 
   
   <div class="panel-group ee-accordion" >
 
-    <div class="panel panel-default comparision-header">
-      <div class="col-xs-12 col-sm-2 compare-title">
-      
-      </div>
-      <div class="col-xs-12 col-sm-10 js-datawrapper">
-        <div class="fixwidth">
-        {{#each prod}}
-          <div class="col-xs-2 compare-value jsCompareProduct">
-            <a type="button" class="close" aria-hidden="true">×</a>
-            <img class="img-responsive" src="{{img}}" alt="">
-            <h6><a href="">{{product}}</a></h6>
-            <a href="" class="btn btn-link ee-buy">Osta</a>
+    <div class="">
+      <div class="panel panel-default">
+        <div class="comparision-header">
+        
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12 col-sm-2 compare-title">
+              // empty for replica markup
+              </div>
+            
+              <div class="col-xs-12 col-sm-10 js-datawrapper">
+                <div class="fixwidth">
+                {{#each prod}}
+                  <div class="col-xs-2 compare-value jsCompareProduct">
+                    <a type="button" class="close" aria-hidden="true">×</a>
+                    <img class="img-responsive" src="{{img}}" alt="">
+                    <h6><a href="">{{product}}</a></h6>
+                    <a href="" class="btn btn-link ee-buy">Osta</a>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
           </div>
-          {{/each}}
         </div>
       </div>
     </div>
@@ -695,8 +702,8 @@
           </a>
         </h4>
       </div>
-      {{/if}}
-    <div id="{{headingid}}" class="panel-collapse in js-subpanel">
+    {{/if}}
+    <div id="{{headingid}}" class="panel-collapse collapse in js-subpanel">
       <div class="col-xs-12">
         {{#each data}}
           <div class="row">
@@ -738,7 +745,10 @@
    </div>
   {{/comparision}}
 </script>
-
+<ul class="tsr-direction-nav">
+  <li><a class="tsr-prev js-compare-prev" href="#"></a></li>
+  <li><a class="tsr-next js-compare-next" href="#"></a></li>
+</ul>
             <!-- <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a> -->
 
 
