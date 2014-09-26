@@ -40,6 +40,7 @@ TSR - SUPPORT
 
     var headerEl   = $('.compare-value h6').not('.sticky');
 
+
     if(Modernizr.mq('only screen and (min-width: 768px)')) {
       $(headerEl , this).css('height', 'auto').setAllToMaxHeight()﻿;
     }
@@ -95,42 +96,23 @@ TSR - SUPPORT
   /////////////////////////////////////////////////////////////////////////////////////////////////////////
   tsrCompare.tsrItemWidth = function () {
     var half = $('#content-placeholder-compare-data .panel-group').width() / 2;
+    
     if (Modernizr.mq('only screen and (max-width: 768px)')) {
       if (half > 0) {
         var productcount = $(".jsCompareProduct").length;
-        $('.ee-count-' + productcount).width(half);
+        $('.ee-count-' + productcount).css('width', half);
       }
       
     }
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////  EE - width is half the window
-  ///////////////////////////////////////////////////////////////////////////////
-
-    var productcount1 = $(".jsCompareProduct").length;
-
-  // sticky header with and centered position
-  var new_width = $('#content-placeholder-compare-data .panel-group').width();
-  var hidden_width = $('.ee-count-' + productcount1).width() * productcount1;
-
-  if (Modernizr.mq('only screen and (min-width: 768px)')) {
-    $('.sticky').width(new_width);
-    console.log(new_width);
-  }
-  else {
-    $('.sticky').width(hidden_width);
-  }
-
-
-
-  };
+  }; // end functions
   /////////////////////////////////////////////////////////////////////////////////////////////////////////
   ////// Ready
   /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   $(document).on('ready', function () {
 
-    tsrCompare.tsrInit();
+    tsrCompare.tsrInit(); // call previous functions
 
     // navbar toggle
     $('#toggleParam').click(function() {

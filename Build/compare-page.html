@@ -664,27 +664,24 @@
   
   <div class="panel-group ee-accordion" >
 
-    <div class="">
-      <div class="panel panel-default">
-        <div class="comparision-header">
-        
-          <div class="col-xs-12">
-            <div class="row">
-              <div class="col-xs-12 col-sm-2 compare-title">
-              // empty for replica markup
-              </div>
-            
-              <div class="col-xs-12 col-sm-10 js-datawrapper">
-                <div class="fixwidth">
-                {{#each prod}}
-                  <div class="col-xs-2 compare-value jsCompareProduct">
-                    <a type="button" class="close" aria-hidden="true">×</a>
-                    <img class="img-responsive" src="{{img}}" alt="">
-                    <h6><a href="">{{product}}</a></h6>
-                    <a href="" class="btn btn-link ee-buy">Osta</a>
-                  </div>
-                  {{/each}}
+    <div class="panel panel-default">
+      <div class="comparision-header">
+      
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2 compare-title">
+            </div>
+          
+            <div class="col-xs-12 col-sm-10 js-datawrapper">
+              <div class="fixwidth">
+              {{#each prod}}
+                <div class="col-xs-2 compare-value jsCompareProduct">
+                  <a type="button" class="close" aria-hidden="true">×</a>
+                  <img class="img-responsive" src="{{img}}" alt="">
+                  <h6><a href="">{{product}}</a></h6>
+                  <a href="" class="btn btn-link ee-buy">Osta</a>
                 </div>
+                {{/each}}
               </div>
             </div>
           </div>

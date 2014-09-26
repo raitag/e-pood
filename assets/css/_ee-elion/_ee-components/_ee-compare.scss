@@ -9,6 +9,7 @@
     }
 }
 .ee-product-compare {
+  margin-top: 5px;
   .close {
     font-size: 24px;
     margin: 10px 10px 0 0;
@@ -50,19 +51,10 @@
     font-size: 110%;
   }
 
-  .sticky {
-      border-bottom: 4px solid $purple-c;
-      position: fixed;
-      top: 0; 
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      img,
-      .ee-buy, 
-      .close {
-        display: none;
-      }
-    }
+  img {
+    max-width: 130px;
+    margin: 10px;
+  }
 
   .comparision-header {
     position: relative;
@@ -75,6 +67,7 @@
     z-index: 5;
     padding-bottom: 10px;
     border-bottom: 1px solid $lightgrey-t;
+    overflow: auto;
     &.sticky {
       border-bottom: 4px solid $purple-c;
       position: fixed;
@@ -92,16 +85,16 @@
 
   .compare-value {
       padding-top: 10px; 
-      border-right: 1px solid red;
-      // padding-left: 0;
-      // padding-right: 0;
+      position: relative;
+      // @include media-min($screen-sm) {
+      //   border-top: 1px solid $lightgrey-t;
+      // }
   }
 
   .compare-title {
     background: $lightgrey-c;
     border-top: 1px solid $lightgrey-t;
     border-bottom: 1px solid $lightgrey-t;
-    border-right: yellow;
     font-size: 110%;
     text-align: center;
     line-height: 3;
@@ -115,46 +108,44 @@
 
   .ee-count-5 {
     width: 50%;
-    position: relative;
-    border: 1px solid green;
+    // border: 1px solid green;
     @include media-min($screen-sm) {
       width: 20%;
-      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .ee-count-4 {
     width: 50%;
-    position: relative;
     @include media-min($screen-sm) {
       width: 25%;
-      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .ee-count-3 {
     width: 50%;
-    position: relative;
     @include media-min($screen-sm) {
       width: 33.3333%;
-      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .ee-count-2, .ee-count-1 {
     width: 50%;
-    position: relative;
     @include media-min($screen-sm) {
       width: 50%;
-      border-top: 1px solid $lightgrey-t;
     }
   }
 
   .js-datawrapper {
     overflow: hidden;
     position: relative;
-          padding-left: 0;
-      padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .panel-collapse .col-xs-12 {
+    @include media-min($screen-sm) {
+      border-top: 1px solid $lightgrey-t;
+    }
   }
 
   .fixwidth {
