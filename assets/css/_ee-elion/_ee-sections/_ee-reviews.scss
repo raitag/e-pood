@@ -119,6 +119,13 @@ section.ee-reviewarea {
 .ee-review-answer-add {
   margin-bottom: 20px;
 
+  .container {
+    margin-top: 15px;
+    @include media-min($screen-sm) {
+      margin-top: 0;
+    }
+  }
+
   .tsr-forms {
     .ee-input-aside {
       textarea {

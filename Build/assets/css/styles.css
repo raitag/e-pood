@@ -11876,6 +11876,13 @@ section.ee-reviewarea {
 .ee-review-add,
 .ee-review-answer-add {
   margin-bottom: 20px; }
+  .ee-review-add .container,
+  .ee-review-answer-add .container {
+    margin-top: 15px; }
+    @media (min-width: 768px) {
+      .ee-review-add .container,
+      .ee-review-answer-add .container {
+        margin-top: 0; } }
   .ee-review-add .tsr-forms .ee-input-aside textarea,
   .ee-review-answer-add .tsr-forms .ee-input-aside textarea {
     min-height: 92px; }
@@ -12121,7 +12128,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .tsr-section-divider.tsr-color-purple {
   z-index: 0; }
   .tsr-section-divider.tsr-color-purple h6 {
-    letter-spacing: 0; }
+    letter-spacing: 0.2px; }
 
 .ee-special-price span, .ee-product-price-lg span, .ee-product-price-md span, .tsr-module-product .ee-product-price-lg span {
   font-size: 120%;
@@ -12321,7 +12328,8 @@ header .megamenu .search-item-image,
       .ee-product-compare .comparision-header.sticky .close {
         display: none; }
   .ee-product-compare .compare-value {
-    padding-top: 10px; }
+    padding-top: 10px;
+    position: relative; }
   .ee-product-compare .compare-title {
     background: #f6f6f6;
     border-top: 1px solid #dbdbdb;
@@ -12335,27 +12343,22 @@ header .megamenu .search-item-image,
         text-align: left;
         border-bottom: none; } }
   .ee-product-compare .ee-count-5 {
-    width: 50%;
-    position: relative; }
+    width: 50%; }
     @media (min-width: 768px) {
       .ee-product-compare .ee-count-5 {
         width: 20%; } }
   .ee-product-compare .ee-count-4 {
-    width: 50%;
-    position: relative; }
+    width: 50%; }
     @media (min-width: 768px) {
       .ee-product-compare .ee-count-4 {
         width: 25%; } }
   .ee-product-compare .ee-count-3 {
-    width: 50%;
-    position: relative; }
+    width: 50%; }
     @media (min-width: 768px) {
       .ee-product-compare .ee-count-3 {
-        width: 33.3333%;
-        border-top: 1px solid #dbdbdb; } }
+        width: 33.3333%; } }
   .ee-product-compare .ee-count-2, .ee-product-compare .ee-count-1 {
-    width: 50%;
-    position: relative; }
+    width: 50%; }
     @media (min-width: 768px) {
       .ee-product-compare .ee-count-2, .ee-product-compare .ee-count-1 {
         width: 50%; } }
