@@ -43,6 +43,9 @@
 
 /* @include ee-comparision */
 
+// CART
+/* @include progress */
+
 // APP SPECIFIC SCRIPTS
 /* @include scripts */
 

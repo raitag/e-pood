@@ -15,48 +15,25 @@
             </div>
           </div>
           <div class="panel panel-default">
-            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#voucher">Kasuta kinkekaarti</a></div>
-            <div id="voucher" class="panel-body collapse" style="height: 0px;">
+            <div class="panel-heading">
+              <a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#voucher">Kasuta kinkekaarti</a>
+            </div>
+            <div id="voucher" class="panel-body collapse">
               <div class="panel-inner">
-                <form class="form-horizontal" action="http://merkent.com/bootstrap/index.php?route=checkout/cart" method="post" enctype="multipart/form-data">
-                  <label for="next_voucher"><h5>Sisesta siia oma kinkekaardi kood:</h5></label>
-                  <input type="text" name="voucher" value="" class="span3" id="next_voucher">
-                  <input type="hidden" name="next" value="voucher">
-                  <input type="submit" value="Apply Voucher" class="btn">
+                <form class="form-horizontal" action="" method="post">
+                  <label for="next_voucher"><h6>Kirjuta siia kinkekaardi kood:</h6></label>
+                  <input type="text" name="voucher" value="" id="next_voucher">
+                  <input type="submit" value="Kinnita" class="btn btn-primary">
                 </form>
               </div>
             </div>
           </div>
           <div class="panel panel-default">
-            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#shipping">Saada ostukorv </a></div>
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#shipping">Saada ostukorv </a>
+            </div>
             <div id="shipping" class="panel-body collapse" style="height: 0px;">
               <div class="panel-inner">
-                <form class="form-horizontal" id="form-shipping">
-                  <h5>Enter your destination to get a shipping estimate.</h5><hr>
-                  <div class="control-group">
-                    <label class="control-label" for="country_id"><b class="required">*</b> Country:</label>
-                    <div class="controls">
-                      
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="zone_id"><b class="required">*</b> Region / State:</label>
-                    <div class="controls">
-                      
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="postcode"><b id="postcode-required" class="required" style="display: none;">*</b> Post Code:</label>
-                    <div class="controls">
-                      <input type="text" name="postcode" value="" class="input-small" id="postcode">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <div class="controls">
-                      <input type="button" value="Get Quotes" id="button-quote" class="btn">
-                    </div>
-                  </div>
-                </form>
+                <!-- @include _contact-form.html -->
               </div>
             </div>
           </div>

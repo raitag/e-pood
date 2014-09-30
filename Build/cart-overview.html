@@ -147,7 +147,7 @@
               <li><a href="found-page-list.html">Otsingutulemused list</a></li>
               <li><a href="favorite-page.html">Lemmikud (+ajax loader inline)</a></li>
               <li><a href="compare-page.html">Võrdlus</a></li>
-              <li class='current'><a class='current' href="care-page.html">Hooldusinfo</a></li>
+              <li><a href="care-page.html">Hooldusinfo</a></li>
               <li><a href="help-page.html">Abilehed</a></li>
               
             </ul>
@@ -614,247 +614,301 @@
 </nav> -->
 
 </header>
-<section class="ee-breadcrumbs hidden-xs hidden-sm">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Arvutid ja lisad</a></li>
-      <li class="active">Sülearvutid</li>
-    </ul>
-  </div>
-</section>
 
-<div class="container"> 
-  <div class="row ee-care-page">
-    <div class="col-md-3 hidden-sm hidden-xs">
-
-       <ul class="ee-sidenav">
-
-
-  <li class="firstlevel"><a href="#"><h6>Kuidas osta e-poest</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Maksetingimused </h6></a></li>
-  <li class="firstlevel"><a href="#"><h6>Elioni järelmaks</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Remont ja hooldus</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Ärikliendile </h6></a></li>
-  <li class="firstlevel"><a href="#"><h6>KKK</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Kontaktid</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>E-poe üldtingimused</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Kinkekaardi tingimused</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Objektiivide lühendid</h6></a></li>
-  <li class="firstlevel"><a href="#"><h6>Kinkepaki tingimused</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Mida teha kasutatud seadmetega?</h6> </a></li>
-
-</ul>
-
-
-
+<div class="container xs-not-padded"> 
+  <section class="ee-shopping">
+    <div class="progress-steps" data-update="progress">
+      <div class="progress-tabs">
+        <ol data-progress-steps="5">
+          <li class="progress-active">
+            <h4>Ostukorvi ülevaade</h4>
+          </li>
+          <li class="">
+            <h4>Sinu andmed</h4>
+          </li>
+          <li class="">
+            <h4>Kohaletoomine</h4>
+          </li>
+          <li class="">
+            <h4>Maksmine</h4>
+          </li>
+          <li class="last-child ">
+            <h4>Kokkuvõte</h4>
+          </li>
+        </ol>
+      </div>
+      <div class="progress-content">
+       <div class="cart">
+  <div class="cart-items row">
+    <div class="col-md-12 cart-item">
+      <div class="panel">
+        <div class="row">
+          <div class="col-sm-2 col-xs-4 cart-item-image">
+            <img class="img-responsive" src="https://pood.elion.ee/pictures/86352_13/100x100/1%20copy.jpg">
+          </div>
+          <div class="col-sm-8 col-xs-8">
+            <h3>
+              Headphones
+            </h3>
+            <p>
+              Brief description of the cart item. This text is condensed as neede...
+            </p>
+          </div>
+          <div class="col-sm-2 col-xs-12 text-right">
+            <div class="row">
+              <div class="col-xs-5 col-sm-12">
+                <p class="ee-price">
+                  Hind 68.99 €
+                </p>
+              </div>
+              <div class="col-xs-7 col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                      <span>-</span>
+                    </button>
+                  </span>
+                  <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
+                      <span>+</span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="icon icon-delete close-btn"></a>
     </div>
-
-    <div class="col-xs-12 col-md-9">
-
-      <h1>Hooldusinfo</h1>
-      
-      <p>Siin saad otsida hoolduse ja remondi jaoks vajalikku infot.</p>
-      <p>Päringu tulemusena kuvatakse kaubapõhine tootjagarantii ja pretensioonide esitamise aeg ning hooldustöö teostaja.</p>
-      <p>Sisesta otsinguväljale kauba <strong>seerianumber, tootekood või tootenimetus.</strong></p>
-      <h3>Hooldusinfo päring</h3>
-      <form class="tsr form-horizontal" role="form" action="#">
-        <div class="form-group row">
-          <div class="col-md-10 col-sm-9 col-xs-12">
-            <input type="text" class="form-control" placeholder="Seerianumber või tootekood või nimetus">
+    <div class="col-md-12 cart-item">
+      <div class="well">
+        <div class="row">
+          <div class="col-sm-2 col-xs-4 cart-item-image">
+            <img class="img-responsive" src="https://pood.elion.ee/pictures/80484_12/100x100/canon_ixus_135_pink.jpg">
           </div>
-          <div class="col-md-2 col-sm-3 col-xs-12 ">
-            <input class="btn btn-block btn-default hidden-xs" type="submit" value="Otsi">
+          <div class="col-sm-8 col-xs-8">
+            <h3>
+              fotokaamera Canon IXUS 135 (roosa)
+            </h3>
+            <p>
+              Brief description of the cart item. This text is condensed as neede...
+            </p>
           </div>
-
-        </div>
-      </form>
-      <p>
-        <strong>Kuvan esimesed 10 tulemust. Järgnevalt palun täpsusta otsingut.</strong>
-      </p>
-
-      <div class="panel-group ee-accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading imaged">
-            <a class="media collapsed" href="#1" data-toggle="collapse">
-              <img class="media-object pull-left" src="https://pood.elion.ee/pictures/85987_8/64x64/PTA128_00-RTP-global-001_highres.jpg">
-                <div class="media-body">
-                  <h5 class="media-heading">kaaned Samsung Galaxy Note 8.0'le (valge)</h5>
-                  <span class="gray-text">Tootekood: EF-BN510BWEGWW</span>
+          <div class="col-sm-2 col-xs-12 text-right">
+            <div class="row">
+              <div class="col-xs-5 col-sm-12">
+                <p class="ee-price ee-special-price">
+                  Soodushind: 129 €
+                </p>
+              </div>
+              <div class="col-xs-7 col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+                      <span>-</span>
+                    </button>
+                  </span>
+                  <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="10">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[2]">
+                      <span>+</span>
+                    </button>
+                  </span>
                 </div>
-              </a>
-            </div>
-            <div class="panel-collapse collapse" id="1">
-              <div class="panel-body">
-                <p>
-                  Vaata <a href="detail.html">tooteinfot <span class="icon icon-arrow-right"></span></a>
-                </p>
-                <dl class="dl-horizontal dl-wide-300">
-                  <dt>Pretensioonide esitamise aeg erakliendile:</dt>
-                  <dd>24 kuud</dd>
-                  <dt>Tootjagarantii ärikliendile:</dt>
-                  <dd>24 kuud</dd>
-                  <dt>Asendusseadme võimalus:</dt>
-                  <dd>Ei</dd>
-                </dl>
-              
-                <p><strong>Seade too poodi.</strong>&nbsp;
-                Endale sobivaima poe leiad&nbsp;<a href="https://www.elion.ee/kontakt/kontaktinfo;jsessionid=2Hxk5WqhivpKvImUnTiT3nCA.web_node2" target="_blank">siit</a>
-                </p>
-                <p>Seadme remont kestab kuni 14 päeva ning sõltub puudustest. Tegelik remondiaeg lepitakse kokku seadme remonti võtmisel.<br>
-                Remondi ja hoolduse kohta saad täpsemalt lugeda peatüki alt <a href="https://pood.elion.ee/remont-ja-hooldus" target="_blank">Remont ja hooldus</a></p>
               </div>
             </div>
-
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading imaged">
-            <a class="media collapsed" href="#2" data-toggle="collapse">
-              <img class="media-object pull-left" src="https://pood.elion.ee/pictures/84530_22/64x64/41899_41898_LN5400%20copy_edited-1.jpg">
-                <div class="media-body">
-                  <h5 class="media-heading">kaaned Samsung Galaxy Note 8.0'le (valge)</h5>
-                  <span class="gray-text">Tootekood: EF-BN510BWEGWW</span>
-                </div>
-              </a>
-            </div>
-            <div class="panel-collapse collapse" id="2">
-              <div class="panel-body">
-                <p>Vaata <a href="detail.html">tooteinfot <span class="icon icon-arrow-right"></span></a></p>
-                <dl class="dl-horizontal dl-wide-300">
-                  <dt>Pretensioonide esitamise aeg erakliendile:</dt>
-                  <dd>24 kuud</dd>
-                  <dt>Tootjagarantii ärikliendile:</dt>
-                  <dd>24 kuud</dd>
-                  <dt>Asendusseadme võimalus:</dt>
-                  <dd>Ei</dd>
-                </dl>
-              
-                <p>
-                  <strong>Vii seade hooldusesse.</strong> Hoolduskeskused:
-                </p>
-                
-                <h3><a href="http://www.teeninduskeskus.ee/" target="_blank">Infotech Service OÜ</a></h3>
-
-                <p>Kui asud <strong>Tallinnas</strong>, siis võta ühendust Inotech Service OÜ'ga.</p>
-                <p>Enne teleri hooldusesse saatmist kontrolli, kas kasutad seadet vastavalt kasutusjuhendile.<br>
-                Kui seade siiski ei tööta, otsi üles ostu tõendav dokument. Kui sul puudub ostu tõendav dokument, siis ei saa sa saata puudustega seadet Elioni kaudu remonti ega hooldusesse.</p>
-                <hr>
-                <div class="row">
-                
-                  <div class="col-sm-4">
-                    <div class="h6">The Name</div>
-                    <p>
-                      <strong>Aadress:</strong><br>
-                      Harjumaa, Türi 5 - Tallinna linn
-                    </p>
-
-                    <p>
-                      <strong>Kontakttelefon:</strong><br>
-                      <a href="tel: +372654 3000">654 3000</a>
-                    </p>
-
-                    <p>
-                      <strong>E-posti aadress:</strong><br>
-                      <a href="mailto:info@infotech.ee">info@infotech.ee</a>
-                    </p>
-
-                    <p>
-                      <strong>Lahtiolekuajad:</strong><br>
-                      E-R 9.00 - 18.00
-                    </p>
-
-                    <p>
-                      <strong>Lisainformatsioon:</strong><br>
-                    Telerite transpordi organiseerib Infotech Service OÜ</p>
-                    <p></p>
-                  </div>
-                  <div class="col-sm-8 ee-upper-distance">
-                    <img src="http://placehold.it/400x250&text=Kaart" alt="">
-                  </div>
-                </div>
-
-                <hr>
-                <div class="row">
-                  
-                  <div class="col-sm-4">
-                    <div class="h6">The Name</div>
-                    <p>
-                      <strong>Aadress:</strong><br>
-                      Harjumaa, Türi 5 - Tallinna linn
-                    </p>
-
-                    <p>
-                      <strong>Kontakttelefon:</strong><br>
-                      <a href="tel: +372654 3000">654 3000</a>
-                    </p>
-
-                    <p>
-                      <strong>E-posti aadress:</strong><br>
-                      <a href="mailto:info@infotech.ee">info@infotech.ee</a>
-                    </p>
-
-                    <p>
-                      <strong>Lahtiolekuajad:</strong><br>
-                      E-R 9.00 - 18.00
-                    </p>
-
-                    <p>
-                      <strong>Lisainformatsioon:</strong><br>
-                    Telerite transpordi organiseerib Infotech Service OÜ</p>
-                    <p></p>
-                  </div>
-                  <div class="col-sm-8 ee-upper-distance">
-                    <img src="http://placehold.it/400x250&text=Kaart" alt="">
-                  </div>
-                </div>
-
-                <h3><a href="http://www.teeninduskeskus.ee/" target="_blank">Infotech Service OÜ</a></h3>
-
-                <p>Kui asud <strong>Tallinnas</strong>, siis võta ühendust Inotech Service OÜ'ga.</p>
-                <p>Enne teleri hooldusesse saatmist kontrolli, kas kasutad seadet vastavalt kasutusjuhendile.<br>
-                Kui seade siiski ei tööta, otsi üles ostu tõendav dokument. Kui sul puudub ostu tõendav dokument, siis ei saa sa saata puudustega seadet Elioni kaudu remonti ega hooldusesse.</p>
-                <hr>
-                <div class="row">
-                
-                  <div class="col-sm-4">
-                    <div class="h6">The Name</div>
-                    <p>
-                      <strong>Aadress:</strong><br>
-                      Harjumaa, Türi 5 - Tallinna linn
-                    </p>
-
-                    <p>
-                      <strong>Kontakttelefon:</strong><br>
-                      <a href="tel: +372654 3000">654 3000</a>
-                    </p>
-
-                    <p>
-                      <strong>E-posti aadress:</strong><br>
-                      <a href="mailto:info@infotech.ee">info@infotech.ee</a>
-                    </p>
-
-                    <p>
-                      <strong>Lahtiolekuajad:</strong><br>
-                      E-R 9.00 - 18.00
-                    </p>
-
-                    <p>
-                      <strong>Lisainformatsioon:</strong><br>
-                    Telerite transpordi organiseerib Infotech Service OÜ</p>
-                    <p></p>
-                  </div>
-                  <div class="col-sm-8 ee-upper-distance">
-                    <img src="http://placehold.it/400x250&text=Kaart" alt="">
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="container ee-nogap">
+  <div class=" next-steps">
+    <fieldset>
+      <div class="panel-group ee-accordion" id="next-container">
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#coupon">Kasuta sooduskoodi</a></div>
+            <div id="coupon" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
+                <form class="form-horizontal" action="http://merkent.com/bootstrap/index.php?route=checkout/cart" method="post" enctype="multipart/form-data">
+                  <label for="next_coupon"><h5>Enter your coupon here:</h5></label>
+                  <input type="text" name="coupon" value="" class="span3" id="next_coupon">
+                  <input type="submit" value="Apply Coupon" class="btn">
+                  <input type="hidden" name="next" value="coupon">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#voucher">Kasuta kinkekaarti</a>
+            </div>
+            <div id="voucher" class="panel-body collapse">
+              <div class="panel-inner">
+                <form class="form-horizontal" action="" method="post">
+                  <label for="next_voucher"><h6>Kirjuta siia kinkekaardi kood:</h6></label>
+                  <input type="text" name="voucher" value="" id="next_voucher">
+                  <input type="submit" value="Kinnita" class="btn btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#shipping">Saada ostukorv </a>
+            </div>
+            <div id="shipping" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
+                <form id="contact" method="post" class="form" role="form">
+  <div class="row form-group">
+    <div class="col-sm-6 form-group">
+      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+    </div>
+    <div class="col-sm-6 form-group">
+      <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+    </div>
+  </div>
+  <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <button class="btn btn-primary pull-right" type="submit">Submit</button>
+  
+    </div>
+  </div>
+</form>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#save">Salvesta ostukorv </a></div>
+            <div id="save" class="panel-body collapse" style="height: 0px;">
+              <div class="panel-inner">
+                <form class="form-horizontal" id="form-shipping">
+                  <h5>Enter your destination to get a shipping estimate.</h5><hr>
+                  <div class="control-group">
+                    <label class="control-label" for="country_id"><b class="required">*</b> Country:</label>
+                    <div class="controls">
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="control-group">
+                    <label class="control-label" for="postcode"><b id="postcode-required" class="required" style="display: none;">*</b> Post Code:</label>
+                    <div class="controls">
+                      <input type="text" name="postcode" value="" class="input-small" id="postcode">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                      <input type="button" value="Get Quotes" id="button-quote" class="btn">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+              </div>
+      </fieldset>
+  </div>
+</div>
+
+<div class="container" style="margin-bottom: 20px;">
+  <div class="row">
+    <div class="col-xs-12 bottom">
+      <legend>Saad kauba kätte eeldatavalt 12.02.2015</legend>
+      <h4>
+        Ostukorv kokku
+        <div class="pull-right ee-product-price-md">
+          <strong>269.99 €</strong>
+        </div>
+      </h4>
+      <h6>
+        Summa käibemaksuta 
+        <div class="pull-right">
+          <strong>169.99 €</strong>
+        </div>
+      </h6>
+      <h6>
+        Käibemaks 
+        <div class="pull-right">
+          <strong>69.99 €</strong>
+        </div>
+      </h6>
+    </div>
+  </div>
+  <div class="row">
+    <button class="btn btn-link" data-action="prev">Tagasi</button> 
+    <div class="col-xs-12 col-sm-4 pull-right">
+      <button class="btn btn-default btn-block ee-btn-buy">Jätka ostmist</button>
+    </div>
+  </div>
+</div>
+       <!-- <button class="btn btn-link" data-action="prev">Tagasi</button> <button class="btn btn-default btn-block ee-btn-buy" data-action="next">Jätka ostmist</button> -->
+   </div>
+    </div>
+  </section>
+    
+</div>
+
+
+
+<section class="tsr-section-divider tsr-color-purple">
+  <div class="container">
+    <h6>
+    Teised on ostnud lisaks
+    </h6>
+  </div>
+</section>
+
+<section class="tsr-carousel-listing-div"> 
+    <div class="container ee-nogap">
+      <div class="tsr-slides" id="content-placeholder-slider-detail"></div>
+
+      <script id="slider-detail-template" type="text/x-handlebars-template">
+      {{#products}}
+      <div class="col-xs-12 col-sm-4 col-lg-3">
+        <div class="tsr-module-product ee-blockview">
+          {{#if ribbon}}
+            <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+          {{/if}}
+          <div class="ee-favorite-dropdown">
+            <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
+              <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
+              <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
+            </ul>
+          </div>
+          <figure class="tsr-product-image">
+            <img src="assets/img/products/{{id}}.jpg">
+          </figure>
+          <div class="tsr-product-content">
+            {{#if firstflash}}
+            <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
+            {{/if}}
+            {{#if secondflash}}
+            <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+            {{/if}}
+            <h6 class="tsr-product-header">{{name}}</h6>
+            <p class="tsr-product-price ee-product-price-md">
+            <span>{{normal_price}} €</span>
+            </p>
+            <a class="ee-compare"> Võrdle </a>
+            <a class="ee-buy"> Osta </a>
+          </div>
+        </div>
+      </div>
+      {{/products}}
+      </script>
+
+    </div>
+</section>
+
+<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
+
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
@@ -1086,4 +1140,6 @@ $(document).ready(function(){
   </script>
 
 </body>
-</html> 
+</html>  
+
+    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>

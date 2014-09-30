@@ -10,237 +10,257 @@ $clr-done: #00b48c ;
 $clr-active: #652d86;
 $clr-gray: #c7c2ba;
 
-/*
+
 @mixin stp-badge {
-	box-sizing: border-box;
-	vertical-align: middle;
-	text-align: center;
-	counter-increment:step;
-	height: $number-size ;
-	width: $number-size;
-	border: $border-size solid $clr-done;
-	background-color: $clr-done; // $clrNrBg;
-	line-height: $number-size - 2*$border-size;
-	border-radius: $number-size;
-	content: "\e017";
-	font-family: 'tsr-icons-all';
-	color: $clrNrBg;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: center;
+  counter-increment:step;
+  height: $number-size ;
+  width: $number-size;
+  border: $border-size solid $clr-done;
+  background-color: $clr-done; // $clrNrBg;
+  line-height: $number-size - 2*$border-size;
+  border-radius: $number-size;
+  content: "\e017";
+  font-family: 'tsr-icons-all';
+  color: $clrNrBg;
 }
-*/
+
 
 @mixin stp-badge-content($color){
-	border-color: $color;
-	content: counter(step);
-	color:$color;
-    background-color: $clrNrBg;
+  border-color: $color;
+  content: counter(step);
+  color:$color;
+  background-color: $clrNrBg;
 }
 
 
 .#{$prefix} {
-	width:100%;
-	ol{
-		counter-reset: step;
-		list-style-type: none;
-		margin: 0;
-		padding:0;
+  .progress-tabs{
+    width:100%;
 
-		li{
-			div{
-				border-style: solid;
-				border-color: $clr-done;
-				border-width: 0;
-				color: $clr-done;
-			}
-		}
-	}
+    ol{
+      counter-reset: step;
+      list-style-type: none;
+      margin: 0;
+      padding:0;
+      li{
+        border: 1px solid $clr-gray;
+        margin-top: -1px;
+        position:relative;
 
-	@media (max-width: $screen-sm){
+        &:before{
+          @include stp-badge;
+          float:left;
+          top:50%;
+          margin-top: -$number-size/2;
+          position: absolute;
+          margin-left:$mb-left-sp - ($number-size + $border-size)/2 + $border-size;
+        }
 
-		ol{
-			li{
-				border: 1px solid $clr-gray;
-				margin-top: -1px;
-				position:relative;
+        h4{
+          border-style: solid;
+          border-color: $clr-done;
+          border-width: 0;
+          color: $clr-done;
+          margin-left: $mb-left-sp;
+          padding: 15px 15px 15px 47px;
+          &:before{
+            z-index: -1;
+            content: '\00ad';
+            height: 105%;
+            background-color: $clr-done;
+            width: 4px;
+            display: inline-block;
+            height: 100%;
+            position: absolute;
+            left: $mb-left-sp;
+            top: -1px;
+          }
+        }
 
-				&:before{
-						@include stp-badge;
-						float:left;
-						top:50%;
-						margin-top: -$number-size/2;
-						position: absolute;
-						margin-left:$mb-left-sp - ($number-size + $border-size)/2 + $border-size;
-						z-index: 10;
-				}
+        //alignment
+        &:first-child{
+          h4:before{
+            height: 50%;
+            top:50%;
+          }
+        }
+        &:last-child,
+        &.last-child{
+          h4:before{
+            height: 50%;
+            bottom:50%;
+          }
+        }
 
+        //colors
+        &.progress-active {
+        border-bottom:none;
 
-				div{
-					margin-left: $mb-left-sp;
-					padding: 15px 15px 15px 47px;
+          &:before{
+            @include stp-badge-content($clr-active);
+          }
+          h4{
+            color:$clr-active;
+            margin-bottom:0;
+            &:before{
+              background-color: $clr-active;
+            }
+          }
 
-					&:before{
-						z-index: 1;
-						content: '\00ad';
-						height: 105%;
-						background-color: $clr-done;
-						width: 4px;
-						display: inline-block;
-						height: 100%;
-						position: absolute;
-						left: $mb-left-sp;
-						top: -1px;						
-					}
-				}
-				
-				//alignment
-				&:first-child{
-					div:before{
-						height: 50%;
-						top:50%;
-					}
-				}
+          ~ li{
+            &:before{
+              @include stp-badge-content($clr-gray);
+            }
+            h4{
+              color:$clr-gray;
+              &:before{
+                background-color: $clr-gray;
+              }
+            }
+          }
+        }
 
-				&:last-child{
-					div:before{
-						height: 50%;
-						bottom:50%;
-					}
-				}
+      }
 
-				//colors
-				&.progress-active {	
-					&:before{
-						@include stp-badge-content($clr-active);
-					}
-					div{
-						color:$clr-active;
-						&:before{
-							background-color: $clr-active;
-						}
-					}
-
-					~ li{
-						&:before{
-							@include stp-badge-content($clr-gray);
-						}
-						div{
-							color:$clr-gray;
-							&:before{
-								background-color: $clr-gray;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	@media (min-width: $screen-sm-min){ 
-		display: table;
-		padding-bottom: $number-size / 2;
-
-		ol{
-			display: table-row;
-			
-			li{
-				display: table-cell;
-				vertical-align: bottom;
-				text-align: center;
-
-				div{
-					border-bottom-width:$border-size;
-					vertical-align: bottom;	
-					border-collapse: collapsed;
-
-					&:after{
-						@include stp-badge;
-						display: block;
-						margin-bottom: -($number-size)/2 - $border-size/2 ;
-						margin-left: auto;
-						margin-right: auto;
-						margin-top:13px;
-					}
-				}
+      .progress-content{
+        border-style: solid;
+        border-color: $clr-gray;
+        border-width: 0 1px;
+        padding: 20px;
 
 
-			// alignment
-				&:first-child{
-					text-align: left;
-					div:after{
-						margin-left: 0;
-						margin-right: auto;
-					}
-				}
+        &:before{
+          content: '';
+          border-top: 1px solid $clr-gray;
+          width: 100%;
+          display: block;
+          position: relative;
+          top: -21px;
+        }
+      }
 
-				&.last-child{
-					text-align: right;
-
-					div:after{
-						margin-left: auto;
-						margin-right: 0;
-					}
-				}
+    }
 
 
-			// colors
-				&.progress-active {
-					div{
-                        
-						border-color: $clr-active;
-						color:$clr-active;
+    // tablet and up
+    @media (min-width: $screen-sm-min){
+      display: table;
+      ol{
+        display: table-row;
 
-						&:after{
-							@include stp-badge-content($clr-active);
-						}
-					}
+        li{
+          display: table-cell;
+          vertical-align: bottom;
+          text-align: center;
+          border:none;
+          &:before{display: none;}
+          h4{
+            border-bottom-width:$border-size;
+            vertical-align: bottom;
+            border-collapse: collapsed;
+            margin-bottom: $number-size/2 - $border-size/2;
+            margin-left:0;
+            padding: 0;
+            &:before{display: none;}
+            &:after{
+              @include stp-badge;
+              display: block;
+              margin-bottom: -($number-size)/2 - $border-size/2 ;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top:13px;
+            }
+          }
 
-					~ li div {
-						border-color: $clr-gray;
-						color:$clr-gray;
 
-						&:after{
-							@include stp-badge-content($clr-gray);
-						}
-					}
-				}
-			
-			} // end-li	
+          // alignment
+          &:first-child{
+            text-align: left;
+            h4:after{
+              margin-left: 0;
+              margin-right: auto;
+            }
+          }
+
+          &:last-child,
+          &.last-child{
+            text-align: right;
+
+            h4:after{
+              margin-left: auto;
+              margin-right: 0;
+            }
+          }
 
 
-			//Steps width calculation
-			$steps: ""
-				"[data-progress-steps='2']"
-				"[data-progress-steps='3']" 
-				"[data-progress-steps='4']"
-				"[data-progress-steps='5']"
-				"[data-progress-steps='6']"
-				"[data-progress-steps='7']"
-				"[data-progress-steps='8']"
-				"[data-progress-steps='9']";
+          // colors
+          &.progress-active {
+            h4{
+              margin-bottom: 18px;
+              border-color: $clr-active;
+              color:$clr-active;
 
-			@for $i from 2 through 9{
+              &:after{
+                @include stp-badge-content($clr-active);
+                font-family: Arial, Helvetica, sans-serif;
+              }
+            }
 
-				@if $i <= 2 {
-					$width :100%/$i;
+            ~ li h4 {
+              border-color: $clr-gray;
+              color:$clr-gray;
 
-					&#{nth($steps,$i)} li {
-						width: $width; 
-					}
-				} @else {
-					$c: (($i - 1)*2)/$i; 
-					$k :$i - 1; 
-					$width :100%/$k;
+              &:after{
+                @include stp-badge-content($clr-gray);
+                font-family: Arial, Helvetica, sans-serif;
+              }
+            }
+          }
 
-					&#{nth($steps,$i)} li {
-						width:$width - 2*($c/$i); 
-						&:first-child, &.last-child{
-							width: ($width/2) + $c;
-						}
-					}
-				} 
-				
-				
-			}
+        } // end-li
 
-		}//end-ol
-	}
+
+        //Steps width calculation
+        $steps: ""
+        "[data-progress-steps='2']"
+        "[data-progress-steps='3']"
+        "[data-progress-steps='4']"
+        "[data-progress-steps='5']"
+        "[data-progress-steps='6']"
+        "[data-progress-steps='7']"
+        "[data-progress-steps='8']"
+        "[data-progress-steps='9']";
+
+        @for $i from 2 through 9{
+
+          @if $i <= 2 {
+            $width :100%/$i;
+
+            &#{nth($steps,$i)} li {
+              width: $width;
+            }
+          } @else {
+            $c: (($i - 1)*2)/$i;
+            $k :$i - 1;
+            $width :100%/$k;
+
+            &#{nth($steps,$i)} li {
+              width:$width - 2*($c/$i);
+              &:first-child,
+              &.last-child,
+              &:last-child{
+                width: ($width/2) + $c;
+              }
+            }
+          }
+
+
+        }
+
+      }//end-ol
+    }
+  }
 }

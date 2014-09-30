@@ -1,0 +1,246 @@
+$prefix : "progress-steps";
+
+$number-size:40px;
+$border-size:4px;
+$mb-left-sp: 38px;
+
+//colors
+$clrNrBg: #f6f6f6;
+$clr-done: #00b48c ;
+$clr-active: #652d86;
+$clr-gray: #c7c2ba;
+
+/*
+@mixin stp-badge {
+	box-sizing: border-box;
+	vertical-align: middle;
+	text-align: center;
+	counter-increment:step;
+	height: $number-size ;
+	width: $number-size;
+	border: $border-size solid $clr-done;
+	background-color: $clr-done; // $clrNrBg;
+	line-height: $number-size - 2*$border-size;
+	border-radius: $number-size;
+	content: "\e017";
+	font-family: 'tsr-icons-all';
+	color: $clrNrBg;
+}
+*/
+
+@mixin stp-badge-content($color){
+	border-color: $color;
+	content: counter(step);
+	color:$color;
+    background-color: $clrNrBg;
+}
+
+
+.#{$prefix} {
+	width:100%;
+	ol{
+		counter-reset: step;
+		list-style-type: none;
+		margin: 0;
+		padding:0;
+
+		li{
+			div{
+				border-style: solid;
+				border-color: $clr-done;
+				border-width: 0;
+				color: $clr-done;
+			}
+		}
+	}
+
+	@media (max-width: $screen-sm){
+
+		ol{
+			li{
+				border: 1px solid $clr-gray;
+				margin-top: -1px;
+				position:relative;
+
+				&:before{
+						@include stp-badge;
+						float:left;
+						top:50%;
+						margin-top: -$number-size/2;
+						position: absolute;
+						margin-left:$mb-left-sp - ($number-size + $border-size)/2 + $border-size;
+						z-index: 10;
+				}
+
+
+				div{
+					margin-left: $mb-left-sp;
+					padding: 15px 15px 15px 47px;
+
+					&:before{
+						z-index: 1;
+						content: '\00ad';
+						height: 105%;
+						background-color: $clr-done;
+						width: 4px;
+						display: inline-block;
+						height: 100%;
+						position: absolute;
+						left: $mb-left-sp;
+						top: -1px;						
+					}
+				}
+				
+				//alignment
+				&:first-child{
+					div:before{
+						height: 50%;
+						top:50%;
+					}
+				}
+
+				&:last-child{
+					div:before{
+						height: 50%;
+						bottom:50%;
+					}
+				}
+
+				//colors
+				&.progress-active {	
+					&:before{
+						@include stp-badge-content($clr-active);
+					}
+					div{
+						color:$clr-active;
+						&:before{
+							background-color: $clr-active;
+						}
+					}
+
+					~ li{
+						&:before{
+							@include stp-badge-content($clr-gray);
+						}
+						div{
+							color:$clr-gray;
+							&:before{
+								background-color: $clr-gray;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min){ 
+		display: table;
+		padding-bottom: $number-size / 2;
+
+		ol{
+			display: table-row;
+			
+			li{
+				display: table-cell;
+				vertical-align: bottom;
+				text-align: center;
+
+				div{
+					border-bottom-width:$border-size;
+					vertical-align: bottom;	
+					border-collapse: collapsed;
+
+					&:after{
+						@include stp-badge;
+						display: block;
+						margin-bottom: -($number-size)/2 - $border-size/2 ;
+						margin-left: auto;
+						margin-right: auto;
+						margin-top:13px;
+					}
+				}
+
+
+			// alignment
+				&:first-child{
+					text-align: left;
+					div:after{
+						margin-left: 0;
+						margin-right: auto;
+					}
+				}
+
+				&.last-child{
+					text-align: right;
+
+					div:after{
+						margin-left: auto;
+						margin-right: 0;
+					}
+				}
+
+
+			// colors
+				&.progress-active {
+					div{
+                        
+						border-color: $clr-active;
+						color:$clr-active;
+
+						&:after{
+							@include stp-badge-content($clr-active);
+						}
+					}
+
+					~ li div {
+						border-color: $clr-gray;
+						color:$clr-gray;
+
+						&:after{
+							@include stp-badge-content($clr-gray);
+						}
+					}
+				}
+			
+			} // end-li	
+
+
+			//Steps width calculation
+			$steps: ""
+				"[data-progress-steps='2']"
+				"[data-progress-steps='3']" 
+				"[data-progress-steps='4']"
+				"[data-progress-steps='5']"
+				"[data-progress-steps='6']"
+				"[data-progress-steps='7']"
+				"[data-progress-steps='8']"
+				"[data-progress-steps='9']";
+
+			@for $i from 2 through 9{
+
+				@if $i <= 2 {
+					$width :100%/$i;
+
+					&#{nth($steps,$i)} li {
+						width: $width; 
+					}
+				} @else {
+					$c: (($i - 1)*2)/$i; 
+					$k :$i - 1; 
+					$width :100%/$k;
+
+					&#{nth($steps,$i)} li {
+						width:$width - 2*($c/$i); 
+						&:first-child, &.last-child{
+							width: ($width/2) + $c;
+						}
+					}
+				} 
+				
+				
+			}
+
+		}//end-ol
+	}
+}

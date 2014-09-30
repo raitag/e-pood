@@ -102,9 +102,11 @@
 </head>
 
 <body> 
-
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
 <header>
+
+
+
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
     <div class="container hidden-xs">
@@ -171,8 +173,36 @@
             </div>
             
         </li>
+        <li class="dropdown menu-large with-icon">
+          <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount"></span>Mul on väike profiil</a>
+          <div class="dropdown-menu">
+            <div class="container">
+              <div class="row megamenu user-droplayer with-advertising">
+                <div class="col-sm-9 ee-innerad">
+                 <a href=""> <img src="http://lorempixel.com/1000/300/">
+                   <div class="tsr-tactical-textPanel">
+                     <!--       <header>Hakkab juba looma</header> -->
+                     <span>Samsungi teleritega näed <br> uut nutiTV-d  ilma digiboksita</span>
+                   </div>
+                 </a>
+               </div>
+               <div class="col-sm-3">
+                <h3><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h3>
+                <hr>
+                <p><span class="icon icon-plus"></span> <a href="#">Välju </a></p>
+              </div>
+            </div>
+          </div>
+          <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+          </div>
+        </div>
+      </li>
 
     </ul> 
+
 
 </div>
 </nav>
@@ -406,27 +436,27 @@
 <!-- right side additional menu -->
 <ul class="nav navbar-nav navbar-right hidden-xs">
     <li class="dropdown menu-large "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Minu konto</a>
-      <div class="dropdown-menu ">
-        <div class="container">
-        <div class="row ">
-            <ul class="nav navbar-nav user-menu nav-justified">
-              <li class="active"><a href="#">Täitmisel tellimused </a></li>
-              <li><a href="#">Minu konto </a></li>
-              <li><a href="#">Tellimused </a></li>
-              <li><a href="#">Salvestatud ostukorvid </a></li>
-              <li><a href="#">Minu lemmikud </a></li>
-              <li><a href="#">Järelmaks </a></li>
-              <li><a href="#">Kontaktisikud </a></li>
-            </ul> 
-        </div>
-        </div>
-        <div class="container reset-padding">
-            <ul class="row hidden-xs list-unstyled">
-                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
-            </ul>
-        </div>
+  <div class="dropdown-menu ">
+    <div class="container">
+      <div class="row ">
+        <ul class="nav navbar-nav user-menu nav-justified">
+          <li class="active"><a href="#">Täitmisel tellimused </a></li>
+          <li><a href="#">Minu konto </a></li>
+          <li><a href="#">Tellimused </a></li>
+          <li><a href="#">Salvestatud ostukorvid </a></li>
+          <li><a href="#">Minu lemmikud </a></li>
+          <li><a href="#">Järelmaks </a></li>
+          <li><a href="#">Kontaktisikud </a></li>
+        </ul> 
       </div>
-    </li>
+    </div>
+    <div class="container reset-padding">
+      <ul class="row hidden-xs list-unstyled">
+        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+      </ul>
+    </div>
+  </div>
+</li>
     <li class="dropdown menu-large">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
         <div class="dropdown-menu">
@@ -447,8 +477,6 @@
                     </li>
                   </ul>
                 </li>
-
-
 
               <li class="dropdown-header"><h6>
                 <a href="#">Kuidas osta e-poest </a>
@@ -506,15 +534,38 @@
               
               <form class="tsr form-horizontal" role="form" action="found-page-block.html">
                 <div class="form-group row">
-                  <div class="col-md-11 col-sm-9 col-xs-12">
+                  <div class="col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
+                    <div class="headerSearchResultWrapper list-group">
+  <div id="content-placeholder-product-list"></div>
+
+  <a class="search-advanced" href="/search?what=noki">
+    Vaata kõiki
+  </a>
+</div>
+
+<script id="product-list-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <a class="list-group-item {{selected}}" href="detail.html">
+    <figure class="search-item-image">
+      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
+    </figure>
+    <span class="search-item-title">{{name}}</span>
+  </a>
+
+  {{/products}}
+</script>
+
+
+
                   </div>
                   <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default hidden-xs" type="submit" value="Otsi" />
 
                 </div>
               </form> 
-
             </div>
+            
             <div class="container reset-padding">
               <ul class="row hidden-xs list-unstyled">
                 <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>

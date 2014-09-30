@@ -102,111 +102,64 @@
 </head>
 
 <body> 
-
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
 <header>
+
+
+
+
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
   <div class="container hidden-xs">
 
     <ul class="nav navbar-nav">
-      <li><a href="#">Eraklient</a></li>
-      <li><a href="#">Äriklient</a></li>
-      <li class="active"><a href="#">E-pood</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="front-logged-in.html">RUS</a></li>
       <li class="dropdown menu-large">
-        <a href="#" class="dropdown-toggle " data-toggle="dropdown">SSO</a>
-        <div class="dropdown-menu" style="width:100%;">
-          <div class="container">
-            <div class="row megamenu">
-              <div class="col-md-12">
-                <div class="center-block">
-                  <!-- <form class="form-inline" action="index-signed-in.html" role="form">
-                    <div class="form-group">
-                      <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                      <label class="sr-only" for="exampleInputPassword2">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" data-stopPropagation="true"> Remember me
-                      </label>
-                    </div>
-                    <button type="submit" class="btn btn-default">Sign in</button>
-                  </form> -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container reset-padding">
-            <ul class="row hidden-xs list-unstyled">
-              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="dropdown menu-large">
-        <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
-        <div class="dropdown-menu">
-          <div class="container">
-            <div class="row megamenu">
-              <div class="col-sm-12"><h2 class="text-center"><span>ostukorvi sisu ja kinnitamise viide</span></h2></div>
-            </div>
-          </div>
-          <div class="container reset-padding">
-            <ul class="row hidden-xs list-unstyled">
-              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="with-icon menu-large dropdown">
-        <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount" ></span>Sisene</a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sisukord</a>
         <div class="dropdown-menu" >
-          <div class="container">
-            <div class="row megamenu user-droplayer">
-              <div class="col-sm-3">
-                <ul class="list-group promotion">
-                  <li class="dropdown-header"><h6><a href="#">Kellena soovid siseneda?</a></h6>
-                    <ul>
-                      <li><p>Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.</p></li>
-                      <li><p><input type="checkbox" data-stopPropagation="true" /> <em>Jäta minu valik meelde</em></p></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-9">
+  <div class="container">
+    <div class="row megamenu user-droplayer">
+      <div class="col-sm-3">
+        <ul class="list-group promotion">
+          <li class="dropdown-header"><h6><a href="#">Tere!</a></h6>
+            <ul>
+              <li><p>See on e-poe aktiivne proto. Koondan siia menüüsse kõik lehed, mis meil käsil või valmis - et kiiremini õige koha üles leiaks. </p>
+                <p>
+                Kui on küsimusi kirjuta mulle <a href="mailto:mare.hunt@netgroup.ee">mare.hunt@netgroup.ee</a>.</p></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-9">
 
-                <ul class="list-group">
-                  <li class="dropdown-header has-child"><h6><a href="#">Eraklient</a></h6>
-                    <ul>
-                      <li><a href="#">Ahto Pärn von Krusesten</a></li>
-                      <li><a href="#">Eesnimi Perenimi</a></li>
-                      <li><a href="#">Martinson Sandrovinkilkohv</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-header has-child"><h6><a href="#">Äriklient</a></h6>
-                    <ul>
-                      <li><a href="#">Minuesimenefirma OÜ</a></li>
-                      <li><a href="#">Minuteinefirma OÜ</a></li>
-                      <li><a href="#">Minukolmasfirma OÜ</a></li>
-                      <li><a href="#">Minuneljas OÜ</a></li>
-                      <li class="separator"><p><a href="#"><span class="icon icon-plus"></span> Registreeri uus äriklient</a></p></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-header has-child"><h6><a href="#">Minu andmed</a></h6>
-                    <ul>
-                      <hr>
-                      <li><p><span class="icon icon-minus"></span> <a href="#">Välju </a></p></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+        <ul class="list-group">
+          <li class="dropdown-header has-child"><h6><a href="#">Põhivaated</a></h6>
+            <ul>
+              <li><a href="index.html">Avaleht</a></li>
+              <li><a href="block-view-phones.html">Klotsvaade (+ajax loader)</a></li>
+              <li class='current'><a class='current' href="list-view-phones.html">Listvaade</a></li>
+              <li><a href="detail.html">Detailvaade</a></li>
+              <li><a href="front-logged-in.html">Sisseloginud klient (tuksis praegu)</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-header has-child"><h6><a href="#">Erivaated</a></h6>
+            <ul>
+              <li><a href="found-page-block.html">Otsingutulemused klots</a></li>
+              <li><a href="found-page-list.html">Otsingutulemused list</a></li>
+              <li><a href="favorite-page.html">Lemmikud (+ajax loader inline)</a></li>
+              <li><a href="compare-page.html">Võrdlus</a></li>
+              <li><a href="care-page.html">Hooldusinfo</a></li>
+              <li><a href="help-page.html">Abilehed</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown-header has-child"><h6><a href="#">Ostukorv</a></h6>
+            <ul>
+              <li><a href="cart-1.html">Esimene samm</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
 
                         <!-- <div class="col-sm-3 col-md-3">
 
@@ -241,41 +194,109 @@
                         </ul>
                       </div>
                     </div>
-                  </li>
-                  <li class="dropdown menu-large with-icon">
-                    <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount"></span>Mul on väike profiil</a>
-                    <div class="dropdown-menu">
-                      <div class="container">
-                        <div class="row megamenu user-droplayer with-advertising">
-                          <div class="col-sm-9 ee-innerad">
-                           <a href=""> <img src="http://lorempixel.com/1000/300/">
-                             <div class="tsr-tactical-textPanel">
-                               <!--       <header>Hakkab juba looma</header> -->
-                               <span>Samsungi teleritega näed <br> uut nutiTV-d  ilma digiboksita</span>
-                             </div>
-                           </a>
-                         </div>
-                         <div class="col-sm-3">
-                          <h3><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h3>
-                          <hr>
-                          <p><span class="icon icon-plus"></span> <a href="#">Välju </a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container reset-padding">
-                      <ul class="row hidden-xs list-unstyled">
-                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul> 
+      </li>
+      <li><a href="#">Äriklient</a></li>
+      <li class="active"><a href="#">E-pood</a></li>
+    </ul> 
 
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">RUS</a></li>
+      <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
+        <div class="dropdown-menu">
+          <div class="container">
+            <div class="row megamenu">
+              <div class="col-sm-12"><h2 class="text-center"><span>ostukorvi sisu ja kinnitamise viide</span></h2></div>
             </div>
-          </nav>
+          </div>
+          <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="with-icon menu-large dropdown">
+        <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount" ></span>Sisene</a>
+        <div class="dropdown-menu" >
+  <div class="container">
+    <div class="row megamenu user-droplayer">
+      <div class="col-sm-3">
+        <ul class="list-group promotion">
+          <li class="dropdown-header"><h6><a href="#">Kellena soovid siseneda?</a></h6>
+            <ul>
+              <li><p>Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.</p></li>
+              <li><p><input type="checkbox" data-stopPropagation="true" /> <em>Jäta minu valik meelde</em></p></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        <ul class="list-group">
+          <li class="dropdown-header has-child"><h6><a href="#">Eraklient</a></h6>
+            <ul>
+              <li><a href="#">Ahto Pärn von Krusesten</a></li>
+              <li><a href="#">Eesnimi Perenimi</a></li>
+              <li><a href="#">Martinson Sandrovinkilkohv</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-header has-child"><h6><a href="#">Äriklient</a></h6>
+            <ul>
+              <li><a href="#">Minuesimenefirma OÜ</a></li>
+              <li><a href="#">Minuteinefirma OÜ</a></li>
+              <li><a href="#">Minukolmasfirma OÜ</a></li>
+              <li><a href="#">Minuneljas OÜ</a></li>
+              <li class="separator"><p><a href="#"><span class="icon icon-plus"></span> Registreeri uus äriklient</a></p></li>
+            </ul>
+          </li>
+          <li class="dropdown-header has-child"><h6><a href="#">Minu andmed</a></h6>
+            <ul>
+              <hr>
+              <li><p><span class="icon icon-minus"></span> <a href="#">Välju </a></p></li>
+              <li><a href="front-logged-in.html" style="color: rgb(0, 180, 140);"><span class="icon icon-arrow-right"></span> Sisseloginud kliendi vaatesse (sisaldab adminpäist, minu konto menüüd, väikest profiilivalikut reklaamiga) </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    <!-- <div class="col-sm-3 col-md-3">
 
+      <li class="dropdown-header has-child"><h6><a href="#">Eraklient</a></h6>
+        <ul>
+          <li><a href="#">Ahto Pärn von Krusesten</a></li>
+          <li><a href="#">Eesnimi Perenimi</a></li>
+          <li><a href="#">Martinson Sandrovinkilkohv</a></li>
+        </ul>
+      </li>
+    </div> -->
+    <!-- <div class="col-sm-3">
+        <h2><a href="#">Äriklient</a></h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="#">Minuesimenefirma OÜ</a></li>
+            <li class="list-group-item"><a href="#">Minuteinefirma OÜ</a></li>
+            <li class="list-group-item"><a href="#">Minukolmasfirma OÜ</a></li>
+            <li class="list-group-item"><a href="#">Minuneljas OÜ</a></li>
+            <li class="list-group-item"><p><span class="icon icon-plus"></span> <a href="#">Registreeri uus äriklient</a></p></li>
+        </ul>
+      </div> -->
+    <!-- <div class="col-sm-3">
+        <h2 class="link"><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h2>
+        <hr>
+        <p><span class="icon icon-minus"></span> <a href="#">Välju </a></p>
+      </div> -->
+    </div>
+  </div>
+  <div class="container reset-padding">
+    <ul class="row hidden-xs list-unstyled">
+      <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+    </ul>
+  </div>
+</div>
+        </li>
+        
+    </ul> 
 
-
+  </div>
+</nav>
 
 <nav class="navbar navbar-default">
   <div class="container">
@@ -402,28 +423,7 @@
 
 <!-- right side additional menu -->
 <ul class="nav navbar-nav navbar-right hidden-xs">
-    <li class="dropdown menu-large "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Minu konto</a>
-      <div class="dropdown-menu ">
-        <div class="container">
-        <div class="row ">
-            <ul class="nav navbar-nav user-menu nav-justified">
-              <li class="active"><a href="#">Täitmisel tellimused </a></li>
-              <li><a href="#">Minu konto </a></li>
-              <li><a href="#">Tellimused </a></li>
-              <li><a href="#">Salvestatud ostukorvid </a></li>
-              <li><a href="#">Minu lemmikud </a></li>
-              <li><a href="#">Järelmaks </a></li>
-              <li><a href="#">Kontaktisikud </a></li>
-            </ul> 
-        </div>
-        </div>
-        <div class="container reset-padding">
-            <ul class="row hidden-xs list-unstyled">
-                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
-            </ul>
-        </div>
-      </div>
-    </li>
+    
     <li class="dropdown menu-large">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
         <div class="dropdown-menu">
@@ -444,8 +444,6 @@
                     </li>
                   </ul>
                 </li>
-
-
 
               <li class="dropdown-header"><h6>
                 <a href="#">Kuidas osta e-poest </a>
@@ -503,15 +501,16 @@
               
               <form class="tsr form-horizontal" role="form" action="found-page-block.html">
                 <div class="form-group row">
-                  <div class="col-md-11 col-sm-9 col-xs-12">
+                  <div class="col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
+                    
                   </div>
                   <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default hidden-xs" type="submit" value="Otsi" />
 
                 </div>
               </form> 
-
             </div>
+            
             <div class="container reset-padding">
               <ul class="row hidden-xs list-unstyled">
                 <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
