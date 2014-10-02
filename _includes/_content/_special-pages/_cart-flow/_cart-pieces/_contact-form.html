@@ -1,17 +1,18 @@
 <form id="contact" method="post" class="form" role="form">
   <div class="row form-group">
     <div class="col-sm-6 form-group">
-      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+      <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" autofocus />
     </div>
     <div class="col-sm-6 form-group">
-      <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+      <input class="form-control" id="email" name="email" placeholder="E-post" type="email" required title="Palun täida see väli" />
     </div>
   </div>
-  <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+  <textarea class="form-control" id="message" name="message" placeholder="Sõnum" rows="5"></textarea>
+  <br>
   <div class="row">
-    <div class="col-sm-12 form-group">
-      <button class="btn btn-primary pull-right" type="submit">Submit</button>
-  
+    <div class="col-xs-12 col-sm-2 col-sm-offset-10 form-group ">
+      <!-- <button class="btn btn-link" type="submit">Katkesta</button> -->
+      <button class="btn btn-primary pull-right" type="submit">Saada</button>
     </div>
   </div>
 </form>

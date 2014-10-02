@@ -1,0 +1,53 @@
+  var source   = $("#front-list-template").html();
+  var template = Handlebars.compile(source);
+
+  var data = { frontlist: [
+    {
+      caption: "Arvutid ja lisad",
+      path: "arvutid-ja-lisad.html",
+      name: "HP Pavilion 15-n051so",
+      id: "Samsung-NP915s3g",
+      ribbon: { size: "medium", text: "Soodne" },
+      badge: {color: "primary", iconized: "icon", icon: "icon-mobiletsicon48px" },
+      firstflash: { lg: "4G" },
+      normal_price: "549 €",
+      link: [ {name: "Sülearvutid", path: "arvutid-ja-lisad.html"}, {name: "Tahvelarvutid", path: "arvutid-ja-lisad.html"}, {name: "Lauaarvutid", path: "arvutid-ja-lisad.html"}, {name: "Monitor-arvutid", path: "arvutid-ja-lisad.html"}]
+    },
+    {
+      caption: "TV ja audio",
+      path: "arvutid-ja-lisad.html",
+      name: "46\" LED-teler Samsung F5300",
+      id: "Samsung-F5300-LED-tv",
+      badge: {color: "green", text: "6" },
+      special_price: "599 €",
+      ribbon: { size: "small", text: "+Kingitus" },
+      firstflash: { lg: "4G" },
+      link: [ {name: "Telerid"}, {name: "Kodukinod"}, {name: "Kõrvaklapid ja lisad"}, {name: "Mängukonsoolid"}]
+    },
+    {
+      caption: "Foto, video, GPS",
+      path: "arvutid-ja-lisad.html",
+      name: "Canon EOS 70D + objektiiv 18-55 mm IS STM",
+      id: "canon-eos-70d-18-135mm",
+      badge: {color: "red", iconized: "icon", icon: "icon-phonetsicon48px" },
+      special_price: "1299 €",
+      link: [ {name: "Peegelkaamerad"}, {name: "Hübriidkaamerad"}, {name: "Kompaktkaamerad"}, {name: "Objektiivid"}]
+    },
+    {
+      caption: "Telefonid", 
+      path: "block-view-phones.html",
+      name: "LG G2",
+      id: "LG-G2_black",
+      special_price: "459 €",
+      ribbon: { text: "Uus" },
+      firstflash: { lg: "4G" },
+      secondflash: { lg: "5G", sm: "some text"},
+      link: [ {name: "Mobiiltelefonid", path: "block-view-phones.html"} , {name: "Mobiiltelefonide lisavarustus", path: "block-view-phones.html"}, {name:"Lauatelefonid", path: "block-view-phones.html"}, {name: "Lauatelefonide lisavarustus", path: "block-view-phones.html"}]
+    }
+    ]};
+      $("#content-placeholder-frontlist").html(template(data));
+
+  
+
+
+     

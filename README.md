@@ -84,7 +84,7 @@ Välised pluginad ja kogumikud lisaks bootstrapile (javascript)
   - html-jupikesed asuvad `_includes/..`
   - Vastav scss asub `assets/css/_ee-elion/..`
   - Vastav js asub `assets/js/_ee-js/..`
-  htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab `assets/js/handlebars/*.hbs` failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna `-placeholder-`.
+  htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab `assets/data/handlebars/*.hbs` failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna `-placeholder-`.
 
 
 ### Abivahendid, suurelt jaolt eksperimentaalsed:

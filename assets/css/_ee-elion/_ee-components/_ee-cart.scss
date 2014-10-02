@@ -1,0 +1,79 @@
+.ee-shopping {
+  margin-top: 20px;
+  .progress-content {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    .close:hover {
+      color: $purple-c;
+      opacity: 1;
+    }
+  }
+  .cart-item:not(:last-of-type) {
+    border-bottom: 1px solid $lightgrey-t;
+    }
+  .cart-item {
+    margin-top: 20px;
+    h3 {
+    font-size: 1.6em;
+    margin-top: 0px;
+    }
+    .cart-item-image {
+      padding-right: 5px;
+      margin-bottom: 5px;
+      .img-responsive {
+        max-width: 135px;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .input-group,
+    .input-group span {
+      font-weight: bold;
+    }
+    .input-number input[type="text"] {
+      padding: 0;
+      text-align: center;
+    }
+    .panel {
+      margin-bottom: 8px;
+    }
+    .panel-collapse {
+      input[type="text"] {
+        margin-bottom: 15px;
+      }
+      .close {
+        margin-top: 5px;
+      }
+    }
+    // .amount {
+    //    margin-bottom: 8px;
+    //    margin-right: 10px;
+    //    font-weight: normal;
+    //    display: inline-block;
+    // }
+  }
+  .ee-price {
+    font-size: 1.4em;
+    margin-bottom: 14px;
+    font-weight: bold;
+  }
+  .ee-accordion {
+    border-top: 1px solid $lightgrey-t;
+    .panel-heading a {
+      font-size: 1.2em;
+    }
+    .panel-body {
+      padding-top: 0;
+    }
+  }
+  .tsr-forms .selectboxit-option.selectboxit-disabled .selectboxit-option-anchor {
+    color: $lightgrey-t;
+  }
+  .selectboxit-disabled {
+    background-color: $lightgrey-c;
+  }
+
+  .checks {
+    margin-top: 25px;
+  }
+}

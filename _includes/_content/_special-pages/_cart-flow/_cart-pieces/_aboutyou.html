@@ -1,0 +1,110 @@
+<div class="row tsr-forms">
+  <div class="col-sm-4">
+<!--     <h6>Olen:</h6> -->
+    <div class="select-container">
+      <select id="chooseRole">
+        <option selected>Eraklient</option>
+        <option>Äriklient</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="col-sm-4">
+<!--     <h6>Soovin maksta:</h6> -->
+    <div class="select-container">
+      <select id="choosePayment">
+        <option selected>Pangalingiga</option>
+        <option disabled>Järelmaksuga</option>
+        <option>Ettemaksuga</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <p>
+      <small class="green-text">
+        Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
+        <ul>
+          <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
+          <li>Ostusumma peab ületama 32 €.</li>
+        </ul> 
+      </small>
+    </p>
+    <small id="paymentAddon"></small>
+  </div>
+  
+
+</div>
+
+<div class="row tsr-forms">
+    <div class="col-sm-8">
+    <h4>Arveandmed:</h4>
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Nimi</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">E-post</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Telefon</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address" class="col-sm-2 control-label">Aadress</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-4 checks">
+    <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">Soovin saada e-poe pakkumisi</span></label>
+  
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tingimustega</a></span></label>
+  
+    <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tagastustingimustega</a></span></label>
+  </div>
+</div>
+
+<!-- <div class="row tsr-forms">
+    <div class="col-sm-8">
+    <p>Arveandmed:*</p>
+    <form id="about" method="post" class="form" role="form">
+      <label for="name">Nimi</label>
+      <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+      <label for="email">E-post</label>
+      <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+      <label for="phone">Telefon</label>
+      <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+      <div class="feedback error"><br><div class="errorText">Please enter a value</div></div>
+      <label for="address">Aadress</label>
+      <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+    </form>
+    <small>*Kohaletoimetamise aadress tuleb järgmises sammus.</small>
+  </div>
+  <div class="col-sm-4">
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Soovin saada e-poe pakkumisi</span></label>
+  
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tingimustega</a></span></label>
+  
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tagastustingimustega</a></span></label>
+  </div>
+</div> -->
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-8">
+<!--       <button class="btn btn-link" data-action="prev">Tagasi</button> -->
+      <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href='cart-delivery.html'">Jätka ostmist</button>
+    </div>
+  </div>

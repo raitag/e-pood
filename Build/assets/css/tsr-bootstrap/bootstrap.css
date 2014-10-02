@@ -243,8 +243,8 @@ h3,
 
 h4,
 .h4 {
-  font-size: 21px;
-  line-height: 22.5px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: -0.2px; }
 
 h5,
@@ -5218,16 +5218,16 @@ footer {
 
 .progress-steps .progress-tabs {
   width: 100%; }
-  .progress-steps .progress-tabs ol {
+  .progress-steps .progress-tabs > ol {
     counter-reset: step;
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    .progress-steps .progress-tabs ol li {
+    .progress-steps .progress-tabs > ol > li {
       border: 1px solid #c7c2ba;
       margin-top: -1px;
       position: relative; }
-      .progress-steps .progress-tabs ol li:before {
+      .progress-steps .progress-tabs > ol > li:before {
         box-sizing: border-box;
         vertical-align: middle;
         text-align: center;
@@ -5246,14 +5246,14 @@ footer {
         margin-top: -20px;
         position: absolute;
         margin-left: 20px; }
-      .progress-steps .progress-tabs ol li h4 {
+      .progress-steps .progress-tabs > ol > li h4 {
         border-style: solid;
         border-color: #00b48c;
         border-width: 0;
         color: #00b48c;
         margin-left: 38px;
         padding: 15px 15px 15px 47px; }
-        .progress-steps .progress-tabs ol li h4:before {
+        .progress-steps .progress-tabs > ol > li h4:before {
           z-index: -1;
           content: '\00ad';
           height: 105%;
@@ -5264,39 +5264,39 @@ footer {
           position: absolute;
           left: 38px;
           top: -1px; }
-      .progress-steps .progress-tabs ol li:first-child h4:before {
+      .progress-steps .progress-tabs > ol > li:first-child h4:before {
         height: 50%;
         top: 50%; }
-      .progress-steps .progress-tabs ol li:last-child h4:before, .progress-steps .progress-tabs ol li.last-child h4:before {
+      .progress-steps .progress-tabs > ol > li:last-child h4:before, .progress-steps .progress-tabs > ol > li.last-child h4:before {
         height: 50%;
         bottom: 50%; }
-      .progress-steps .progress-tabs ol li.progress-active {
+      .progress-steps .progress-tabs > ol > li.progress-active {
         border-bottom: none; }
-        .progress-steps .progress-tabs ol li.progress-active:before {
+        .progress-steps .progress-tabs > ol > li.progress-active:before {
           border-color: #652d86;
           content: counter(step);
           color: #652d86;
           background-color: #f6f6f6; }
-        .progress-steps .progress-tabs ol li.progress-active h4 {
+        .progress-steps .progress-tabs > ol > li.progress-active h4 {
           color: #652d86;
           margin-bottom: 0; }
-          .progress-steps .progress-tabs ol li.progress-active h4:before {
+          .progress-steps .progress-tabs > ol > li.progress-active h4:before {
             background-color: #652d86; }
-        .progress-steps .progress-tabs ol li.progress-active ~ li:before {
+        .progress-steps .progress-tabs > ol > li.progress-active ~ li:before {
           border-color: #c7c2ba;
           content: counter(step);
           color: #c7c2ba;
           background-color: #f6f6f6; }
-        .progress-steps .progress-tabs ol li.progress-active ~ li h4 {
+        .progress-steps .progress-tabs > ol > li.progress-active ~ li h4 {
           color: #c7c2ba; }
-          .progress-steps .progress-tabs ol li.progress-active ~ li h4:before {
+          .progress-steps .progress-tabs > ol > li.progress-active ~ li h4:before {
             background-color: #c7c2ba; }
-    .progress-steps .progress-tabs ol .progress-content {
+    .progress-steps .progress-tabs > ol .progress-content {
       border-style: solid;
       border-color: #c7c2ba;
       border-width: 0 1px;
       padding: 20px; }
-      .progress-steps .progress-tabs ol .progress-content:before {
+      .progress-steps .progress-tabs > ol .progress-content:before {
         content: '';
         border-top: 1px solid #c7c2ba;
         width: 100%;

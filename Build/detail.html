@@ -154,7 +154,9 @@
           </li>
           <li class="dropdown-header has-child"><h6><a href="#">Ostukorv</a></h6>
             <ul>
-              <li><a href="cart-1.html">Esimene samm</a></li>
+              <li><a href="cart-overview.html">1. Ülevaade</a></li>
+              <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
+              <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
             </ul>
           </li>
         </ul>
@@ -671,7 +673,8 @@
 
 {{#with products.[1]}}
 
-<div class="col-sm-6 col-sm-push-6 fixedheight">
+<div class="col-sm-6 col-sm-push-6"> 
+// fixedheight
   <h2>{{name}}</h2>
   <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
 
@@ -1940,8 +1943,8 @@
 
 <script src='assets/js/rapid.js'></script>
 <!-- General handlebars -->
-    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
-    <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
+    <script src="assets/data/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
+    <script src="assets/data/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
 
     <script>
       // 2nd level 
@@ -2036,11 +2039,11 @@ $(document).ready(function(){
 
 </body>
 </html>
-    <script src="assets/js/handlebars/hbs-product-detail.hbs"></script>
-    <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
-    <script src="assets/js/handlebars/hbs-reviews.hbs"></script>
-    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
-    <script src="assets/js/handlebars/hbs-products.hbs"></script>
+    <script src="assets/data/handlebars/hbs-product-detail.hbs"></script>
+    <script src="assets/data/handlebars/hbs-technical-table.hbs"></script>
+    <script src="assets/data/handlebars/hbs-reviews.hbs"></script>
+    <script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
+    <script src="assets/data/handlebars/hbs-products.hbs"></script>
 
     <script type="text/javascript">
     // require(['/assets/js/setup.js'], function (setup) {

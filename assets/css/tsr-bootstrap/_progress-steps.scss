@@ -40,12 +40,12 @@ $clr-gray: #c7c2ba;
   .progress-tabs{
     width:100%;
 
-    ol{
+    & > ol{
       counter-reset: step;
       list-style-type: none;
       margin: 0;
       padding:0;
-      li{
+      & > li{
         border: 1px solid $clr-gray;
         margin-top: -1px;
         position:relative;

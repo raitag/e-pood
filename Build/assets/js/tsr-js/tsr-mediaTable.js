@@ -279,7 +279,7 @@ http://www.consulenza-web.com/2012/01/mediatable-jquery-plugin/
 		}
 		
 		
-		// Mantengo la possibilitˆ di concatenare plugins.
+		// Mantengo la possibilitË† di concatenare plugins.
 		return this;
 		
 	}; // EndOf: "$.fn.mediaTable()" ###

@@ -1,0 +1,50 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+  var source   = $("#myproduct-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { products: [
+    {
+      path: "#",
+      name: "objektiiv Canon EF 85 mm F1.8 USM",
+      id: "canon",
+      badge: {color: "primary", icon: "icon-transport", description: "Transpordis, saabub 3-4 päeva jooksul" },
+    },
+    {
+      path: "#",
+      name: "40'' 3D LED-teler Samsung F6670",
+      id: "led-samsung-f6670",
+      badge: {color: "green", text: "6", description: " uut kokkusobivat toodet" },
+    },
+    {
+      path: "#",
+      name: "kõrvaklapid Philips SHP1900",
+      id: "SHP1900_10-A1P",
+      badge: {color: "green", text: "3", description: " uut arvamust" },
+    },
+    {
+      path: "#",
+      name: "fotokaamera Nikon D5300 kere",
+      id: "nikon-d5300",
+      badge: {color: "green", description: "Kehtiv garantii" },
+    },
+    {
+      path: "#",
+      name: "sülearvuti Asus N76VB",
+      id: "asus-n76vb",
+      badge: {color: "green", icon: "icon-cart", description: "Ostukorvis" },
+    },
+    {
+      path: "#",
+      name: "60'' LED-teler Samsung F6300",
+      id: "ee_UE60F6300AWXXH_005",
+      badge: {color: "gray", description: "Ostetud 04.03.2009" },
+    }
+    ]};
+
+
+  $("#content-placeholder-myproduct").html(template(data));

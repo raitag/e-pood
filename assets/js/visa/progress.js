@@ -30,7 +30,7 @@
         this.$active = this.$element.find('.progress-active');
         this.tabs.activeIndex = this.$active.index();
 
-        placeContent()
+        placeContent();
         //if one row
         function placeContent(){
             var last = tabs.find('ol li:last');
@@ -47,7 +47,7 @@
         }
 
         $(window).resize(function() {
-            placeContent()
+            placeContent();
         });
     };
 
@@ -123,12 +123,12 @@
     $(document).on('click.ts.progress.data-api', '[data-action="next"]', function(e){
         e.preventDefault();
         $(this).parents('.progress-steps').progress('next');
-    })
+    });
 
     $(document).on('click.ts.progress.data-api', '[data-action="prev"]', function(e){
         e.preventDefault();
         $(this).parents('.progress-steps').progress('prev');
-    })
+    });
 
 
 })(jQuery);

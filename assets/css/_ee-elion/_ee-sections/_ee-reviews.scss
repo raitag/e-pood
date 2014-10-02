@@ -46,6 +46,9 @@ section.ee-reviewarea {
     article {
     margin-top: -1px;
   }
+  .text-muted {
+    font-size: $font-size-base;
+  }
 }
 
 .ee-reviewed-initial {
@@ -69,9 +72,6 @@ section.ee-reviewarea {
     &:before {
       border: none;
     }
-  }
-  .text-muted {
-    font-size: $font-size-base;
   }
 }
 

@@ -1,0 +1,86 @@
+
+  var source7   = $("#reviews-detail-template").html();
+  var template7 = Handlebars.compile(source7);
+
+
+  var data = { reviews: [
+    {
+      name: "Ats",
+      date: "01.02.2014 10:23",
+      starred: "1",
+      body: ' Samsung hämab - koopia arveustusest "Another potential, and much less important, picture quality differentiator between the F6400 and F6300 is "Clear Motion Rate," a specification Samsung now uses instead of refresh rate. Yes, this rating seemingly belongs with Peak Music Power Output in the "numbers the marketing guy came up with" category, but Samsung isnt the only one doing it. When we asked Samsungs rep for clarification, she replied that the F6300 and F6400, along with every other F6000 LED model, use a 120Hz panel." Ehk ka Elion ei tohiks panna kirja kaadrisagedust, kuna see ei ole 200Hz vaid 120Hz. ',
+      answer: 
+      [
+        {
+          name: "Jelena",
+          elion: "y",
+          date: "03.02.2014 09:02",
+          body: ' Eelion kuvab telerite juures läbi erinevate pildiparandusmootorite kaudu saavutatud lõplikku kaadrisagedust, mis sellel teleril on 200Hz. '
+        },
+        {
+          name: "Katja",
+          date: "03.02.2014 09:02",
+          body: ' Elion kuvab telerite juures läbi erinevate pildiparandusmootorite kaudu saavutatud lõplikku kaadrisagedust, mis sellel teleril on 200Hz. '
+        }
+      ]
+    },
+    {
+      name: "VK",
+      date: "06.01.2014 13:08",
+      starred: "3",
+      body: ' Kui telekal on T2 digiboks sees, kas siis ikka on vaja Elioni enda digiboksi,et nuti tv vaadata ? Miks tv enda sisese boksiga ei näe,st näeb aga pilt hakib ja häält kuuleb ? ',
+      answer: 
+      [
+        {
+        name: "Jelena",
+        elion: "y",
+        date: "07.01.2014 09:36",
+        body: ' Antud mudel toetab Elioni Nuti TV. Selleks ei peab olema eraldi digiboks. Kui seda kasutades pilt hakib, siis soovitan pöörduda Elioni tehnilise toe numbrile 6069966. DVB-T2 tüüner võimaldab vaadata üle õhu levivaid kanaleid, Elion aga kasutab IPTV tehnoloogiat kanalite edastamiseks.'
+        }
+      ]
+    },
+    {
+      name: "R",
+      date: "06.01.2014 11:03",
+      body: 'Kuidas saab seda Elioni appi maha installida ? Läbi smart hubi see elioni rakendus ei ole aktivne,teised rakendused on ja saab maha installida . ',
+      answer:
+      [
+        {
+          name: "Karolin",
+          elion: "y",
+          date: "07.01.2014 09:36",
+          body: ' Seda maha installida paraku ei saagi. '
+        }
+      ]
+    },
+    {
+      name: "AR",
+      date: "05.01.2014 13:01",
+      body: ' Kuidas Smart Touch puldiga Motorola VIP1003 digiboksi ühildada? Tehes manuaali järgi (IR Extender külge, settop box valitud Motorola VIP1003) tööle ei hakka. Tänud ette!',
+      },
+      {
+        name: "aq",
+        date: "26.10.2013 17:22",
+        body: ' Tere sooviks küsida sai ostetud samsung UE40ES6710SXXH aasta tagasi kallis telekat aga polnud sees elioni nuti tv ,kas oleks võimalik kuidagi nuti tv tarkvara sellele panna ',
+        answer: 
+      [
+        {
+          name: "AR",
+          date: "05.01.2014 13:01",
+          body: '2012 aasta 6.seeria telerile ei saa elioni appi installida. 2012 saab alates 7. seriast ehk siis 7. 8. 9. kuna 6. serial pole kahetuumalist protsessorit (Dual core proccessor) 2013 aasta mudelitele saab kõigile ',
+          level: "answer"
+        },
+        {
+          name: "Karolin",
+          elion: "y",
+          date: "05.01.2014 13:01",
+          body: 'Teil tuleb see sisseehitatud nutitv app ise alla laadida. Selleks tuleb teil minna Smart Hub menüü rakendusse ja sealt appide alt leida Elion nutiTV ja alla laadida. Siis peale alla laadimist on teil see tarkvara täiesti olemas.',
+          level: "answer"
+        }
+      ]
+    }
+  ]
+}
+
+
+  $("#content-placeholder-reviews-detail").html(template7(data));

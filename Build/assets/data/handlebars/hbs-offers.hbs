@@ -1,0 +1,62 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 70) return text.substring(0,70) +"...";
+    else return text;
+  });
+  var source   = $("#offer-slider-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { offers: [
+    {
+      name: "Märtsi tootekataloog",
+      id: "Elion-kinkepakk-Soovidega",
+      description: "103 toredat toodet, mis tootejuhid on välja valinud",
+      normal_price: "4,5 €"
+    },
+    {
+      name: "Kott sülearvutiga soodsamalt",
+      id: "Elion-kinkepakk",
+      description: "Kui soovid e-poest ostetud kauba oma sõbrale või pereliikmele kingituseks saata, saame selle sinu eest eelnevalt toredasse kinkepakki panna. Üllatus on garanteeritud!",
+      normal_price: "4,5 €"
+    },
+    {
+      name: "SanDisk mälupulgad atates 6 €",
+      id: "kinkekaart-20",
+      description: "Kinkekaarti saad kasutada Elioni e-poes ja poodides kaupade eest tasumiseks.",
+      normal_price: "549 €"
+    },
+    {
+      name: "Tõelised mänguriarvutid",
+      id: "nutipult",
+      description: "Pult on eelseadistatud juhtima Motorola digiboksi.",
+      normal_price: "11 €"
+    },
+    {
+      name: "Elioni teenuste seadmed",
+      id: "kinkekaart-20",
+      description: "Kinkekaarti saad kasutada Elioni e-poes ja poodides kaupade eest tasumiseks.",
+      normal_price: "549 €"
+    },
+    {
+      name: "Soovitame ärikliendile",
+      id: "kinkekaart-20",
+      description: "Kinkekaarti saad kasutada Elioni e-poes ja poodides kaupade eest tasumiseks.",
+      normal_price: "549 €"
+    },
+    {
+      name: "Elioni kinkepakid",
+      id: "Elion-kinkepakk-Soovidega",
+      description: "Kui soovid e-poest ostetud kauba oma sõbrale või pereliikmele kingituseks saata, saame selle sinu eest eelnevalt toredasse kinkepakki panna. Üllatus on garanteeritud!",
+      normal_price: "4,5 €"
+    },
+    {
+      name: "Elioni kinkekaardid",
+      id: "kinkekaart-20",
+      description: "Kinkekaarti saad kasutada Elioni e-poes ja poodides kaupade eest tasumiseks.",
+      normal_price: "549 €"
+    }
+    ]};
+
+
+  $("#content-placeholder-offers").html(template(data));

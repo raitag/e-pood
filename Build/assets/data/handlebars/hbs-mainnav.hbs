@@ -1,0 +1,178 @@
+  var source   = $("#mainnav-template").html();
+  var template = Handlebars.compile(source);
+
+  var data = { nav: [
+    {
+      caption: "Arvutid ja lisad",
+      path: "arvutid-ja-lisad.html",
+      name: "HP Pavilion 15-n051so",
+      id: "landing-temp",
+
+      link: [ {name: "Sülearvutid", path: "arvutid-ja-lisad.html"}, 
+      {name: "Tahvelarvutid", path: "arvutid-ja-lisad.html"}, 
+      {name: "Lauaarvutid", path: "arvutid-ja-lisad.html"}, 
+      {name: "Monitor-arvutid", path: "arvutid-ja-lisad.html"},
+      {
+      name: "Uued tooted", 
+      },
+      {
+        name: "Monitorid"
+      },
+      {
+        name: "Printerid"
+      },
+      {
+        name: "Kotid",
+        sub: 
+        ["Sülearvuti kotid", "Tahvelarvuti kotid"]
+      },
+      {
+        name: "Klaviatuurid ja hiired",
+        sub: 
+        ["Hiired", "Klaviatuuri ja hiire komplektid", "Klaviatuurid", "Hiirematid"]
+      },
+            {
+        name: "Tindid ja toonerid",
+        sub: 
+        ["Tindikassetid", "Toonerid"]
+      },
+      {
+        name: "Paberid"
+      },
+
+      {
+        name: "Tarkvara"
+      },
+      {
+        name: "Veebikaamerad"
+      },
+      {
+        name: "Mälupulgad"
+      },
+      {
+        name: "Välised kõvakettad"
+      },
+      {
+        name: "Infokandjad",
+        sub: 
+        ["Mälukaardid", "CD-DVD toorikud"]
+      },
+      {
+        name: "Võrguseadmed"
+      },
+      {
+        name: "Võrgusalvestusseadmed"
+      },
+            {
+        name: "UPSid"
+      },
+      {
+        name: "Arvutite lisavarustus",
+        sub: 
+        ["Akud", "Laadijad", "Adapterid", "Kaardilugejad", "Klaviatuurikleebised", "Dokid", "Mikrofonid", "Esitluspuldid", "Arvutialused"]
+      },
+
+      {
+        name: "Tahvelarvutite lisavarustus",
+        sub: 
+        ["Ümbrised", "Ekraanikaitsekiled", "Kaablid", "Klaviatuurid", "Autohoidjad", "Laadijad", "Dokid", "Puutepliiatsid"]
+      },
+      {
+        name: "Arvutite komponendid",
+        sub: 
+        ["Sisemised kõvakettad", "Lisamälu", "DVD ja Blu-Ray seadmed"]
+      },
+      {
+      name: "Puhastuvahendid"
+      },
+      {
+      name: "Kaablid",
+      },
+      {
+      name: "Kõlarid",
+      },
+      {
+      name: "Garantiilaiendused"
+      }
+      ]
+    },
+    {
+      caption: "TV ja audio",
+      path: "arvutid-ja-lisad.html",
+      name: "46\" LED-teler Samsung F5300",
+      id: "landing-iphone",
+      badge: {color: "green", text: "6" },
+      special_price: "599 €",
+      ribbon: { size: "small", text: "+Kingitus" },
+      firstflash: { lg: "4G" },
+      link: [ 
+      {name: "Telerid"}, 
+      {name: "Kodukinod"}, 
+      {name: "Kõrvaklapid ja lisad", sub: ["Kõrvaklapid", "Kõrvaklappide lisavarustus"]}, 
+      {name: "Mängukonsoolid", sub: [ "Konsoolid", "Mängud", "Puldid ja roolid", "Konsoolide lisavarstust"] },
+      {name: "TV-lisavarustus", sub: [ "Kaamerad", "TV-seinakinnitused", "Puldid", "3D-prillid", "Adapterid", "Puhastusvahendid"]}, 
+      {name: "Digiboksid", sub: [  "Digiboksid", "Digibokside lisavarustus" ]}, 
+      {name: "Projektorid", sub: [ "Projektorid", "Projektorite lisavarustus" ]},
+      {name: "HiFi helitehnika", sub: [  "Ressiiverid", "Võimendid", "HiFi Blu-Ray mängijad", "HiFi kodukinod", "HiFi kõlarid", "Meediamängijad", "HiFi lisavarustus", "Puhastusvahendid"]},
+      {name: "DVD ja Blu-Ray mängijad"}, 
+      {name: "MP3-mängijad"}, 
+      {name: "MP3-mängijate lisavarustus"}
+
+      ]
+    },
+    {
+      caption: "Foto, video, GPS",
+      path: "arvutid-ja-lisad.html",
+      name: "Canon EOS 70D + objektiiv 18-55 mm IS STM",
+      id: "landing-iphone",
+      badge: {color: "red", iconized: "icon", icon: "icon-phonetsicon48px" },
+      special_price: "1299 €",
+      link: [ {name: "Peegelkaamerad"}, 
+      {name: "Hübriidkaamerad"}, 
+      {name: "Kompaktkaamerad"}, 
+      {name: "Objektiivid"},
+      {name: "Välklambid"}, 
+      {name: "Statiivid"}, 
+      {name: "Fotokotid", sub: ["Peegelkaamera kotid", "Kompaktkaamera kotid"]},
+      
+      {name: "Mälukaardid"}, 
+      {name: "Filtrid"}, 
+      {name: "Akud ja patareid"},
+      {name: "GPS-seadmed"},
+      {name: "GPS-lisavarustus"}, 
+      {name: "Auto videokaamerad"}, 
+      
+
+      {name: "Spordikaamerad"},
+      {name: "Spordikaamerate lisavarustus"},
+      {name: "Treeningseadmed", sub: ["Spordikellad", "Rattakompuutrid", "Treeningseadmete lisavarustus"]}, 
+      {name: "E-lugerid"}, 
+      {name: "Digitaalsed pildiraamid"}
+      ]
+    },
+    {
+      caption: "Telefonid",
+      path: "mobiilid.html",
+      name: "LG G2",
+      id: "landing-temp",
+      special_price: "459 €",
+      ribbon: { text: "Uus" },
+      firstflash: { lg: "4G" },
+      secondflash: { lg: "5G", sm: "some text"},
+      link: [ {name: "Mobiiltelefonid", path: "mobiilid.html", } , 
+      {name: "Mobiiltelefonide lisavarustus", path: "mobiilid.html", sub: [   "Kotid ja ümbrised", "Ekraanikaitsekiled", "Puhastusvahendid", "Akud", "Laadijad", "Autovarustus", "Kõrvaklapid ja peakomplektid", "Data seadmed", "Bluetooth käekellad", "Muu" ]}, 
+
+      {name:"Lauatelefonid", path: "mobiilid.html"}, 
+      {name: "Lauatelefonide lisavarustus", path: "mobiilid.html"},
+            {name: "Internetitelefonid"},
+      {name: "Internetitelefonide lisavarustus"}, 
+      {name: "Kõneajakaardid"}
+      ]
+    }
+    ]};
+      $("#content-placeholder-mainnav").html(template(data));
+
+  
+
+
+     

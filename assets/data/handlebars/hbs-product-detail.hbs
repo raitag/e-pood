@@ -1,0 +1,113 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+  Handlebars.registerHelper('leftTrimMedium', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 120) return text.substring(0,120) +"...";
+    else return text;
+  });
+  Handlebars.registerHelper('leftTrimLong', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 260) return text.substring(0,260) +"...";
+    else return text;
+  });
+
+  var source1   = $("#product-detail-template").html();
+  var template1 = Handlebars.compile(source1);
+
+  var data = { products: [
+    {
+      path: "/arvutid-ja-lisad.html",
+      name: "23,8 LED-monitor/ teler LG 23MA53D-PZ",
+      id: "238-LED-monitor-teler-LG-23MA53D-PZ",
+      intro: "MHL funktsiooni abil saate ühendada oma nutitelefoni monitoriga ja sealt suurelt ekraanilt vaadata tehtud videosid või pilte. ",
+      description: 'LG teler/monitoriga saad mängida, vaata telekanaleid ning samuti on võimalus teha toiminguid monitoriga. 23,8" LED ekraan, 14 ms reageerimisaeg, 178°/178° vaatenurk ja 1920 x 1080 piksline resolutsioon toovad Sinuni kvaliteetse pildi. Tänu sisseehitatud digi-TV tuunerile kuvab televiisor laitmatult ka digi-TV pilti, nii et võite seda kasutada nii eraldiseisva televiisorina kui ka monitorina.',
+      normal_price: "209 €",
+      badge: {color: "primary", iconized: "icon", icon: "transport-1" },
+      flashes: "y",
+      flash: {lg: '55" ', sm: "ekraan"},
+      colors: [ "hall", "must  active"],
+      firstflash: { lg: "4G" },
+      secondflash: { lg: "5G", sm: "some text"}
+    },
+    {
+      path: "/arvutid-ja-lisad.html",
+      name: 'Samsung F8500 55" 3D LED-teler',
+      id: "samsung_f8500_front_silver",
+      minipics_id: [ "samsung_f8500_front_silver", "samsung_f8500_Right-Angle_silver", "samsung_f8500_Side_silver", "samsung_f8500_Right-Angle_silver" ],
+      intro: "Selles Samsung teleris on Elioni uus nutiTV juba sees.  ",
+      description: "Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks. Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.",
+      nb: "Elioni nutiTV kasutamiseks vajab see teler ka Elioni internetiühendust. NB! Teenuse kasutamiseks on vajalik ka Thomson TG784, TG789 või Inteno DG301 ruuter.",
+      normal_price: "2999 €",
+      special_price: "2699 €",
+      badge: {color: "primary", iconized: "icon", icon: "transport-1" },
+      ribbon: { size: "small", text: "+Kingitus" },
+      flashes: "y",
+      flash: {lg: '55" ', sm: "ekraan"},
+      firstflash: { lg: "4G" },
+      secondflash: { sm: "Lõpu-müük"},
+      colors: [ "hall active", "must"],
+      campaign: ["Tasuta kaasa Elion uue nutiTV pult S3 Samsungi telerile"]
+    },
+    {
+      name: "juhtmeta hiir Logitech M325",
+      id: "logitech1",
+      badge: {color: "green", text: "6" },
+      firstflash: { lg: "Äri" },
+      intro: "Lihtne väike hiir, mida on mugav kaasas kanda. ",
+      description: 'Logitech juhtmeta optiline hiir. Optiline tehnoloogia töötamaks peaaegu igal pinnal. 2.4 GHz juhtmevaba ühendus aitab ära hoida viivitused ja vahelejätmised sujuvaks töötamiseks.',
+      colors: ["punane", "roheline", "must active", "sinine"],
+      special_price: "21 €",
+      campaign: ["Pakime tellitud kauba kingituseks ja anname kaasa head soovid."]
+    },
+    {
+      name: "sülearvuti Asus X200CA (must)",
+      id: "Asus-X200CA-sülearvuti-eest-must 1",
+      intro: "Logitech juhtmeta optiline hiir. Optiline tehnoloogia töötamaks peaaegu igal pinnal. 2.4 GHz juhtmevaba ühendus aitab ära hoida viivitused ja vahelejätmised sujuvaks töötamiseks.",
+      description: "11,6’’ ekraaniga Asuse sülearvutil on Intel Celeron 1007U protsessor, 2 GB põhimälu, 500 GB kõvaketas. Operatsioonisüsteem Microsoft Windows 8, kiired USB 3.0 liidesed ja rootsi asetusega klaviatuur.",
+      ribbon: { size: "small", text: "+Kingitus" },
+      badge: {color: "primary", iconized: "icon", icon: "osta" },
+      colors: [ "must active", "valge", "punane"],
+      normal_price: "359 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      ribbon: { size: "large", text: "Uus" },
+      normal_price: "549 €"
+    },
+    {
+      name: "Norton AntiVirus 2013 3-PC",
+      id: "99691",
+      secondflash: { lg: "", sm: "Lõpu-müük"},
+      description: "Kiire ja tõhus kaitse sinu arvutile kahjurprogrammide ja internetiohtude eest.",
+      normal_price: "17 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      ribbon: { size: "medium", text: "Soodne" },
+      colors: [ "sinine", "roheline active"],
+      normal_price: "549 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      colors: [ "hall active", "must"],
+      normal_price: "549 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      ribbon: { size: "medium", text: "Soodne" },
+      normal_price: "549 €"
+    }
+    ]};
+
+  $("#content-placeholder-detail").html(template1(data));

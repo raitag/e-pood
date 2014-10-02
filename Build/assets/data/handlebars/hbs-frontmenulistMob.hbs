@@ -1,0 +1,226 @@
+
+  var source2   = $("#front-menu-template-hidden2").html();
+  var template2 = Handlebars.compile(source2);
+
+
+  var data = { menu: [
+    {
+      caption: "Arvutid ja lisad",
+      path: "arvutid-ja-lisad.html",
+      name: "HP Pavilion 15-n051so",
+      id: "Samsung-NP915s3g",
+      ribbon: { size: "medium", text: "Soodne" },
+      badge: {color: "primary", iconized: "icon", icon: "icon-mobiletsicon48px" },
+      firstflash: { lg: "4G" },
+      normal_price: "549 €",
+      link: [ 
+      {
+        name: "Monitorid"
+      },
+      {
+        name: "Printerid"
+      },
+      {
+        name: "Kotid",
+        sub: 
+        ["Sülearvuti kotid", "Tahvelarvuti kotid"]
+      },
+      {
+        name: "Klaviatuurid ja hiired",
+        sub: 
+        ["Hiired", "Klaviatuuri ja hiire komplektid", "Klaviatuurid", "Hiirematid"]
+      },
+      {
+        name: "Tindid ja toonerid",
+        sub: 
+        ["Tindikassetid", "Toonerid"]
+      },
+      {
+        name: "Paberid"
+      },
+      {
+        name: "Tarkvara"
+      },
+      {
+        name: "Veebikaamerad"
+      },
+      {
+        name: "Mälupulgad"
+      },
+      {
+        name: "Välised kõvakettad"
+      },
+      {
+        name: "Infokandjad",
+        sub: 
+        ["Mälukaardid", "CD-DVD toorikud"]
+      },
+      {
+        name: "Võrguseadmed"
+      },
+      {
+        name: "Võrgusalvestusseadmed"
+      },
+      {
+        name: "UPSid"
+      },
+      {
+        name: "Arvutite lisavarustus",
+        sub: 
+        ["Akud", "Laadijad", "Adapterid", "Kaardilugejad", "Klaviatuurikleebised", "Dokid", "Mikrofonid", "Esitluspuldid", "Arvutialused"]
+      },
+      {
+        name: "Tahvlearvutite lisavarustus",
+        sub: 
+        ["Ümbrised", "Ekraanikaitsekiled", "Kaablid", "Klaviatuurid", "Autohoidjad", "Laadijad", "Dokid", "Puutepliiatsid"]
+      },
+      {
+        name: "Arvutite komponendid",
+        sub: 
+        ["Sisemised kõvakettad", "Lisamälu", "DVD ja Blu-Ray seadmed"]
+      },
+      {
+      name: "Puhastuvahendid"
+      },
+      {
+      name: "Kaablid",
+      },
+      {
+      name: "Kõlarid",
+      },
+      {
+      name: "Garantiilaiendused"
+      }
+      ]
+    },
+    {
+      caption: "TV ja audio",
+      path: "arvutid-ja-lisad.html",
+      name: "46\" LED-teler Samsung F5300",
+      id: "Samsung-F5300-LED-tv",
+      badge: {color: "green", text: "6" },
+      special_price: "599 €",
+      ribbon: { size: "small", text: "+Kingitus" },
+      firstflash: { lg: "4G" },
+      link: [  
+      {name: "Digiboksid"}, 
+      {name: "Projektorid"},
+      {name: "HiFi helitehnika"},
+      {name: "DVD ja Blu-Ray mängijad"}, 
+      {name: "MP3-mängijad"}, 
+      {name: "MP3-mängijate lisavarustus"}
+
+      ]
+    },
+    {
+      caption: "Foto, video, GPS",
+      path: "arvutid-ja-lisad.html",
+      name: "Canon EOS 70D + objektiiv 18-55 mm IS STM",
+      id: "canon-eos-70d-18-135mm",
+      badge: {color: "red", iconized: "icon", icon: "icon-phonetsicon48px" },
+      special_price: "1299 €",
+      link: [  
+      {name: "Statiivid"}, 
+      {name: "Fotokotid"},
+      {name: "Mälukaardid"}, 
+      {name: "Filtrid"}, 
+      {name: "Akud ja patareid"},
+      {name: "GPS-seadmed"},
+      {name: "GPS-lisavarustus"}, 
+      {name: "Auto videokaamerad"}, 
+      {name: "Spordikaamerad"}, 
+      {name: "Spordikaamerate lisavarustus"},
+      {name: "Treeningseadmed"}, 
+      {name: "E-lugerid"}, 
+      {name: "Digitaalsed pildiraamid"}
+      ]
+    },
+    {
+      caption: "Telefonid",
+      path: "block-view-phones.html",
+      name: "LG G2",
+      id: "LG-G2_black",
+      special_price: "459 €",
+      ribbon: { text: "Uus" },
+      firstflash: { lg: "4G" },
+      secondflash: { lg: "5G", sm: "some text"},
+      link: [ 
+      {name: "Internetitelefonide lisavarustus"}, 
+      {name: "Kõneajakaardid"}
+      ]
+    }
+    ]};
+      $("#content-placeholder-frontmenu-hidden2").html(template2(data));
+  
+    var source3   = $("#front-menu-template-visible3").html();
+    var template3 = Handlebars.compile(source3);
+  var data = { menu: [
+    {
+      caption: "Arvutid ja lisad",
+      path: "arvutid-ja-lisad.html",
+      name: "HP Pavilion 15-n051so",
+      id: "Samsung-NP915s3g",
+      ribbon: { size: "medium", text: "Soodne" },
+      badge: {color: "primary", iconized: "icon", icon: "icon-mobiletsicon48px" },
+      firstflash: { lg: "4G" },
+      normal_price: "549 €",
+      link: [ 
+      {name: "Sülearvutid", path: "arvutid-ja-lisad.html"}, 
+      {name: "Tahvelarvutid", path: "arvutid-ja-lisad.html"}, 
+      {name: "Lauaarvutid", path: "arvutid-ja-lisad.html"}, 
+      {name: "Monitor-arvutid", path: "arvutid-ja-lisad.html"}
+      ]
+    },
+    {
+      caption: "TV ja audio",
+      path: "arvutid-ja-lisad.html",
+      name: "46\" LED-teler Samsung F5300",
+      id: "Samsung-F5300-LED-tv",
+      badge: {color: "green", text: "6" },
+      special_price: "599 €",
+      ribbon: { size: "small", text: "+Kingitus" },
+      firstflash: { lg: "4G" },
+      link: [ 
+      {name: "Telerid"}, 
+      {name: "Kodukinod"}, 
+      {name: "Kõrvaklapid ja lisad"}, 
+      {name: "Mängukonsoolid"}
+      ]
+    },
+    {
+      caption: "Foto, video, GPS",
+      path: "arvutid-ja-lisad.html",
+      name: "Canon EOS 70D + objektiiv 18-55 mm IS STM",
+      id: "canon-eos-70d-18-135mm",
+      badge: {color: "red", iconized: "icon", icon: "icon-phonetsicon48px" },
+      special_price: "1299 €",
+      link: [ 
+      {name: "Peegelkaamerad", path: "list-view-phones.html"}, 
+      {name: "Hübriidkaamerad", path: "list-view-phones.html"}, 
+      {name: "Kompaktkaamerad", path: "list-view-phones.html"}, 
+      {name: "Objektiivid", path: "list-view-phones.html"},
+      {name: "Välklambid", path: "list-view-phones.html"}
+      ]
+    },
+    {
+      caption: "Telefonid",
+      path: "block-view-phones.html",
+      name: "LG G2",
+      id: "LG-G2_black",
+      special_price: "459 €",
+      ribbon: { text: "Uus" },
+      firstflash: { lg: "4G" },
+      secondflash: { lg: "5G", sm: "some text"},
+      link: [ 
+      {name: "Mobiiltelefonid", path: "block-view-phones.html"} , 
+      {name: "Mobiiltelefonide lisavarustus", path: "block-view-phones.html"}, 
+      {name:"Lauatelefonid", path: "block-view-phones.html"}, 
+      {name: "Lauatelefonide lisavarustus", path: "block-view-phones.html"},
+      {name: "Internetitelefonid"}
+      ]
+    }
+    ]};
+
+    $("#content-placeholder-frontmenu-visible3").html(template3(data));
+
+     

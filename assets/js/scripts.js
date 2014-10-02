@@ -51,9 +51,7 @@ function cloneRightSideMainMenu(){
     var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
 }
 
-// Plus-minus buttons
-//plugin bootstrap minus and plus
-//http://jsfiddle.net/laelitenetwork/puJ6G/
+$(function(){
 $('.btn-number').click(function(e){
     e.preventDefault();
     
@@ -125,6 +123,37 @@ $(".input-number").keydown(function (e) {
             e.preventDefault();
         }
     });
+
+  // Calls the selectBoxIt method on your HTML select box
+  $("#chooseRole").selectBoxIt({
+
+    // Sets default text to appear for the drop down
+    defaultText: "Vali roll"
+
+  });
+
+  // Calls the selectBoxIt method on your HTML select box
+  $("#choosePayment").selectBoxIt({
+
+    // Sets default text to appear for the drop down
+    defaultText: "Vali makseviis"
+
+  });
+
+  if(document.getElementById('choosePayment').value == "Pangalingiga") {
+       $('#paymentAddon').html(' ');
+  }
+  else if(document.getElementById('choosePayment').value == "Ettemaksuga") {
+       $('#paymentAddon').html('Ettemaksuga saad osta oma vaba limiidi ulatuses kui oled 18-75 aastane ELioni klient ja Eesti kodanik. <br> Sõlmides järelmaksulepingu e-poes puudub lepingutasu.');
+  }
+  else if(document.getElementById('choosePayment').value == "Järelmaksuga") {
+       $('#paymentAddon').html(' ');
+  }
+
+});
+// Plus-minus buttons
+//plugin bootstrap minus and plus
+//http://jsfiddle.net/laelitenetwork/puJ6G/
 
 
 

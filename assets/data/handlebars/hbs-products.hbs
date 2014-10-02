@@ -1,0 +1,68 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+  Handlebars.registerHelper('leftTrimMedium', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 120) return text.substring(0,120) +"...";
+    else return text;
+  });
+  Handlebars.registerHelper('leftTrimLong', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 260) return text.substring(0,260) +"...";
+    else return text;
+  });
+
+
+  var source5   = $("#fittingproducts-detail-template").html();
+  var template5 = Handlebars.compile(source5); 
+
+
+  var data = { products: [
+    {
+      name: "puhastusvahend ekraanile AM 200 ml + rätik",
+      id: "cleaner",
+      intro: "200 ml antistaatiline, geelibaasil, ei valgu ekraanilt alla.",
+      description: ' Sobib lameekraanidele, TV- ja arvuti-, sülearvuti ekraanidele, koopiamasinale, faksile, fotokaamerale, jne. Eemaldab tolmu, mustust ning rasva. Ei sisalda alkoholi. Mikrofiiberrätik kaasas.',
+      normal_price: "7,99 €",
+      no: "1"
+    },
+    {
+      name: '3D Blu-Ray DVD-mängija LG BP620',
+      id: "LG_BP620_1",
+      intro: "Nautige Blu-Ray kvaliteedis filme ja interneti sisu oma teleris SmartTV ja kiire sisseehitatud WiFi kaudu",
+      description: "Laske Blu-Ray 3D-l end üllatada ja avastage oma kodus filmide uus mõõde. Lisaks võimalik otse USB mäluseadme pealt filme vaadata.",
+      normal_price: "149 €",
+      special_price: "119 €",
+      ribbon: { size: "medium", text: "Soodne" },
+      flashes: "y",
+      secondflash: { sm: "Lõpu-müük"},
+      no: "2"
+    },
+    {
+      name: 'seinakinnitus LCD/LED-teleritele Vivanco 40"-80"',
+      id: "30665-TTL-Pic45",
+      description: 'Vivanco seinakinnitus 40"-80" LCD/LED- teleritele, mille kandevõime on kuni 50 kg. Kallutatav kuni 15 kraadi, kaugus seinast 3,2 cm.',
+      normal_price: "69 €",
+      no: "3"
+    },
+    {
+      name: "puhastusvahend ekraanile Acme 200 ml + rätik",
+      id: "acme",
+      description: "200 ml antistaatiline, geelibaasil, ei valgu ekraanilt alla. Sobib lameekraanidele, TV-ja arvuti-, sülearvuti ekraanidele. Eemaldab tolmu ja mustuse. Ei sisalda alkoholi. Mikrofiiberrätik kaasas.",
+      normal_price: "4,9 €",
+      no: "4",
+    },
+    {
+      name: 'seinakinnitus LCD/LED-teleritele Vivanco 40"-80"',
+      id: "30671-TDL-Pic",
+      description: 'Vivanco seinakinnitus 40" - 80" LCD/LED- teleritele, kandevõime kuni 50 kg. Kallutatav kuni 15 kraadi, kaugus seinast 5,4 cm - 54 cm. Pööratav 180 kraadi.',
+      normal_price: "199 €",
+      no: "5"
+    }
+    ]};
+
+
+
+  $("#content-placeholder-fittingproducts-detail").html(template5(data));

@@ -1,0 +1,320 @@
+var source   = $("#compare-data-template").html();
+var template = Handlebars.compile(source);
+
+var data = { comparision: [  
+{
+prod: [{  
+  product: "40'' 3D LED-teler Samsung H6670", 
+  img: "https://pood.elion.ee/pictures/94685_48/400x400/iPhone5S%20hall%20eest%20ja%20tagant.jpg",
+  code: "UE40H6670SLXXH",
+  pay: "0 €",
+  leasing: "48 x 24,85 €",
+  specialprice: "790 €",
+  normalprice: "849 €"
+  },
+  {
+  product: "47'' LED-teler LG LB580V", 
+  img: "https://pood.elion.ee/pictures/94685_48/400x400/iPhone5S%20hall%20eest%20ja%20tagant.jpg",
+  code: "47LB580V.AEE",
+  pay: "0 €",
+  leasing: "48 x 24,85 €",
+  specialprice: "790 €",
+  normalprice: "849 €"
+  },
+  {
+  product: "40'' 3D LED-teler Samsung H6670", 
+  img: "https://pood.elion.ee/pictures/94685_48/400x400/iPhone5S%20hall%20eest%20ja%20tagant.jpg",
+  code: "UE40H6670SLXXH",
+  pay: "0 €",
+  leasing: "48 x 20,41 €",
+  specialprice: "790 €",
+  normalprice: "849 €"
+  },
+  {
+  product: "23,8'' LED-monitor/teler LG 23MA53D-PZ", 
+  img: "https://pood.elion.ee/pictures/94685_48/400x400/iPhone5S%20hall%20eest%20ja%20tagant.jpg",
+  code: "47LB580V.AEE",
+  pay: "0 €",
+  leasing: "48 x 24,85 €",
+  specialprice: "790 €",
+  normalprice: "849 €"
+  },
+  {
+  product: "42'' LED-teler LG LN5400", 
+  img: "https://pood.elion.ee/pictures/94685_48/400x400/iPhone5S%20hall%20eest%20ja%20tagant.jpg",
+  code: "47LB580V.AEE",
+  pay: "0 €",
+  leasing: "48 x 24,85 €",
+  specialprice: "790 €",
+  normalprice: "849 €"
+  }
+  ],
+
+  param: [
+  { 
+    data: [
+      {
+      index: "Tootekood", 
+      value: "UE40H6670SLXXH", 
+      value1: "UE40H6670SLXXH", 
+      value2: "UE40H6670SLXXH", 
+      value3: "UE40H6670SLXXH",
+      value4: "UE40H6670SLXXH"
+      },
+    ]
+  },
+  {
+    data: [
+      {
+      index: "Tarneaeg", 
+      value: "25.07.2014", 
+      value1: "25.07.2014", 
+      value2: "25.07.2014", 
+      value3: "25.07.2014",
+      value4: "25.07.2014"
+      },
+    ]
+  },
+  {
+    data: [
+      {
+      index: "Sissemaks", 
+      value: "0 €", 
+      value1: "0 €",  
+      value2: "0 €",  
+      value3: "0 €", 
+      value4: "0 €", 
+      },
+    ]
+  },
+  {
+    data: [
+      {
+      index: "Järelmaks", 
+      value: "48 x 24,85 €", 
+      value1: "48 x 24,85 €",  
+      value2: "48 x 24,85 €",  
+      value3: "48 x 24,85 €", 
+      value4: "48 x 24,85 €", 
+      },
+    ]
+  },
+  { 
+    data: [
+      {
+      class: "ee-special-price",
+      index: "Soodushind", 
+      value: "790 €", 
+      value1: "-", 
+      value2: "195 €", 
+      value3: "399 €",
+      value4: "200 €"
+      },
+    ]
+  },
+    { 
+    data: [
+      {
+      index: "Hind", 
+      value: "790 €", 
+      value1: "649 €", 
+      value2: "195 €", 
+      value3: "399 €",
+      value4: "200 €"
+      },
+    ]
+  },
+    {
+  heading:  "Ekraani omadused" , 
+  headingid: "ekraaniomadused",
+    data: [
+      {
+      index: "Diagonaal", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "40''", 
+      value1: "Täisautomaatrežiim, loov automaatrežiim, programmrežiim, säriaja etteandega automaatsäri, ava Programm (P), tundlikkuse prioriteet (Sv), säriaja prioriteet (Tv)",
+      value2: "28''",
+      value3: "42''",
+      value4: "28''",
+      },
+      {
+      index: "Diagonaal", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "101,6 cm", 
+      value1: "101,6 cm",
+      value2: "101,6 cm",
+      value3: "101,6 cm",
+      value4: "101,6 cm",
+      },
+      {
+      index: "Puutetundlik", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "Lorem ipsum dolores est cogito ergo sum", 
+      value1: "-",
+      value2: "-",
+      value3: "-",
+      value4: "-",
+      },
+      {
+      index: "3D", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: "-",
+      value2: "-",
+      value3: "-",
+      value4: '<span class="icon icon-checkmark green-text"></span>', 
+      },
+      {
+      index: "Resolutsioon", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: "1920 x 1080 pikslit", 
+      value1: "1920 x 1080 pikslit",
+      value2: "1920 x 1080 pikslit",
+      value3: "1920 x 1080 pikslit",
+      value4: "1920 x 1080 pikslit", 
+      },
+      {
+      index: "Ekraani suhe", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: "16:9", 
+      value1: "16:9",
+      value2: "16:9",
+      value3: "16:9",
+      value4: "16:9", 
+      },
+      {
+      index: "Ekraani tüüp", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "LED", 
+      value1: "LED",
+      value2: "LED",
+      value3: "LED",
+      value4: "LED",
+      },
+      {
+      index: "Full HD",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '<span class="icon icon-checkmark green-text"></span>',
+      value4: '<span class="icon icon-checkmark green-text"></span>',
+      },
+      {
+      index: "HD Ready",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "-", 
+      value1: "-",
+      value2: "-",
+      value3: "-",
+      value4: "-",
+      },
+    ]
+  },
+  {
+  heading:  "Võrgu liidesed" ,
+  headingid: "tooteomadused", 
+    data: [
+      {
+      index: "LAN tugi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "USB",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '2 tk', 
+      value1: '3 tk',
+      value2: '1tk',
+      value3: '2tk',
+      value4: '2tk',
+      },
+      {
+      index: "MHL",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '-', 
+      value1: '-',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "Sisseehitatud Wifi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "Full HD",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '<span class="icon icon-checkmark green-text"></span>',
+      value4: '<span class="icon icon-checkmark green-text"></span>',
+      }
+    ]
+  },
+  {
+  heading:  "Sorgu liidesed" ,
+  headingid: "tooteomadusedd", 
+    data: [
+      {
+      index: "LAN tugi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "USB",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '2 tk', 
+      value1: '3 tk',
+      value2: '1tk',
+      value3: '2tk',
+      value4: '2tk',
+      },
+      {
+      index: "MHL",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '-', 
+      value1: '-',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "Sisseehitatud Wifi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "Full HD",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '<span class="icon icon-checkmark green-text"></span>',
+      value4: '<span class="icon icon-checkmark green-text"></span>',
+      }
+    ]
+  }
+  ]}
+  ]};
+
+
+$("#content-placeholder-compare-data").html(template(data));

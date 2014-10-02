@@ -1,0 +1,73 @@
+  var source   = $("#filter-template").html();
+  var template = Handlebars.compile(source);
+
+  var data = { parameters: [
+    {
+      caption: "Diagonaal",
+      tooltip: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      param: [ 
+        {para: "14''", amount: "2"}, 
+        {para: "15,5''", amount: "2"}, 
+        {para: "15,7", amount: "4"},
+        {para: "15,7", amount: "37"},
+        {para: "15,7", amount: "9"},
+        {para: "15,7", amount: "4"},
+        {para: "15,7", amount: "1"},
+        {para: "15,7", amount: "4"},
+        ]
+    }, 
+    {
+      caption: "Klaviatuuri asetus",
+      tooltip: "Klahvide ja nendel olevate tähemärkide füüsiline paigutus klaviatuuril, mis on riigiti erinev. SWE klaviatuur on oma asetuse poolest EST klaviatuurile kõige sarnasem, kuna mõlema asetuse puhul enamik nuppude tähemärgistustest kattuvad. Kui klaviatuuril kujutatud tähemärgid ei ole vastavuses soovitud asetusega, võiks kasutada klaviatuurikleebiseid ja klaviatuuril mittevastavad tähemärgid üle kleepida.",
+      param: [ 
+      {para: "ENG", amount: "10"}, 
+      {para: "ENG/RUS", amount: "1"}, 
+      {para: "EST", amount: "7"},
+      {para: "SWE", amount: "69"},
+      {para: "SWE/FI", amount: "11"},
+      {para: "UK", amount: "7"},
+      {para: "US", amount: "3"}
+      ]
+    },
+    {
+      caption: "Kõvaketta tüüp",
+      tooltip: "Kõvaketta tüüp HDD (hard disk drive) - kõvaketas, mis kasutab programmide ja failide hoidmiseks kiiresti pöörlevat magnetketast, kus info kirjutamise ja lugemise eest hoolitsevad magnetpead. Tänasel päeval on levinumad 350 GB, 500 GB kui ka juba 1TB kõvakettad. Kõvaketta tüüp SSD (solid state draive) – pooljuhtseade, kus failide hoidmiseks kasutatakse välkmälu kiipe. Sellised seadmed on hääletud, kuna puuduvad pöörlevad osad ning nende energiatarve on ligi 90% väiksem kui HDD ketastel. Kõvaketta tüüp SSHD (solid-state hybrid drive) - kõvaketas (HDD), millele on külge integreeritud eraldi välk-mälu tüüpi kiip, mille ülesandeks on kiiresti töödelda tihemini kasutatavaid kettaandmeid ja operatsioonisüsteemi käivitamisel ning sulgemisel kasutatavaid andmeid, muutes seeläbi kõvaketta töö kiiremaks ja efektiivsemaks.",
+      param: [ 
+      {para: "HDD", amount: "56"}, 
+      {para: "SSD", amount: "46"}, 
+      {para: "SSHD", amount: "10"}
+      ]
+    },
+    {
+      caption: "Operatsioonisüsteem",
+      tooltip: "Arvuti või tahvelarvuti tarkvara, mis juhib kõikide arvuti seadmete ning programmide ehk rakenduste omavahelist tööd. Levinud operatsioonisüsteemid on Windows 7 ja XP. Apple arvutitel on kasutusel operatsioonisüsteem Mac OS X. Samuti leidub arvuteid, mis kasutavad vabavaralist operatsiooni süsteemi Linux. Tahvelarvutite levinumad operatsioonisüsteemid on Andrid, iOS(Apple) ja Windows.",
+      param: [ 
+      {para: "Mac OS X", amount: "8"}, 
+      {para: "Microsoft Windows", amount: "100"}
+      ]
+    },
+    {
+      caption: "Protsessori seeria",
+      tooltip: "Arvuti või tahvelarvuti tarkvara, mis juhib kõikide arvuti seadmete ning programmide ehk rakenduste omavahelist tööd. Levinud operatsioonisüsteemid on Windows 7 ja XP. Apple arvutitel on kasutusel operatsioonisüsteem Mac OS X. Samuti leidub arvuteid, mis kasutavad vabavaralist operatsiooni süsteemi Linux. Tahvelarvutite levinumad operatsioonisüsteemid on Andrid, iOS(Apple) ja Windows.",
+      param: [ 
+      {para: "A10", amount: "4"}, 
+      {para: "A8", amount: "1"},
+      {para: "Atom", amount: "1"},
+      {para: "Celeron", amount: "2"},
+      {para: "Core i3", amount: "12"},
+      {para: "Core i5", amount: "1"},
+      {para: "Core i7", amount: "1"},
+      {para: "Pentium", amount: "28"}
+      ]
+    },
+    {
+      caption: "Pakkumised",
+      tooltip: "Arvuti või tahvelarvuti tarkvara, mis juhib kõikide arvuti seadmete ning programmide ehk rakenduste omavahelist tööd. Levinud operatsioonisüsteemid on Windows 7 ja XP. Apple arvutitel on kasutusel operatsioonisüsteem Mac OS X. Samuti leidub arvuteid, mis kasutavad vabavaralist operatsiooni süsteemi Linux. Tahvelarvutite levinumad operatsioonisüsteemid on Andrid, iOS(Apple) ja Windows.",
+      param: [ 
+      {para: "Lõpumüük", amount: "5"}, 
+      {para: "Uus", amount: "1"},
+      {para: "Äri", amount: "1"}
+      ]
+    },
+    ]};
+      $("#content-placeholder-filter").html(template(data));

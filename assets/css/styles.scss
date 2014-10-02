@@ -204,6 +204,14 @@
 //**********************************
 
 // mobile view, make links clickable full 
+
+h4 {
+  font-weight: 500;
+}
+
+.panel {
+  box-shadow: none;
+}
 .megamenu .list-group .dropdown-header > h6 > a {
 width: 100%;
 display: block;

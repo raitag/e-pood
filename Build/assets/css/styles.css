@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
 CORE 
 */
@@ -1618,7 +1619,7 @@ Communication Primary
   padding-bottom: 10px;
   background: #f6f6f6;
   line-height: 1;
-  font-size: 21px;
+  font-size: 18px;
   color: #333333;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
@@ -5930,7 +5931,7 @@ h3, .h3 {
   font-size: 21px; }
 
 h4, .h4 {
-  font-size: 21px; }
+  font-size: 18px; }
 
 h5, .h5 {
   font-size: 19px; }
@@ -6701,8 +6702,8 @@ h3,
 
 h4,
 .h4 {
-  font-size: 21px;
-  line-height: 22.5px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: -0.2px; }
 
 h5,
@@ -9884,16 +9885,16 @@ textarea {
 
 .progress-steps .progress-tabs {
   width: 100%; }
-  .progress-steps .progress-tabs ol {
+  .progress-steps .progress-tabs > ol {
     counter-reset: step;
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    .progress-steps .progress-tabs ol li {
+    .progress-steps .progress-tabs > ol > li {
       border: 1px solid #c7c2ba;
       margin-top: -1px;
       position: relative; }
-      .progress-steps .progress-tabs ol li:before {
+      .progress-steps .progress-tabs > ol > li:before {
         box-sizing: border-box;
         vertical-align: middle;
         text-align: center;
@@ -9912,14 +9913,14 @@ textarea {
         margin-top: -20px;
         position: absolute;
         margin-left: 20px; }
-      .progress-steps .progress-tabs ol li h4 {
+      .progress-steps .progress-tabs > ol > li h4 {
         border-style: solid;
         border-color: #00b48c;
         border-width: 0;
         color: #00b48c;
         margin-left: 38px;
         padding: 15px 15px 15px 47px; }
-        .progress-steps .progress-tabs ol li h4:before {
+        .progress-steps .progress-tabs > ol > li h4:before {
           z-index: -1;
           content: '\00ad';
           height: 105%;
@@ -9930,39 +9931,39 @@ textarea {
           position: absolute;
           left: 38px;
           top: -1px; }
-      .progress-steps .progress-tabs ol li:first-child h4:before {
+      .progress-steps .progress-tabs > ol > li:first-child h4:before {
         height: 50%;
         top: 50%; }
-      .progress-steps .progress-tabs ol li:last-child h4:before, .progress-steps .progress-tabs ol li.last-child h4:before {
+      .progress-steps .progress-tabs > ol > li:last-child h4:before, .progress-steps .progress-tabs > ol > li.last-child h4:before {
         height: 50%;
         bottom: 50%; }
-      .progress-steps .progress-tabs ol li.progress-active {
+      .progress-steps .progress-tabs > ol > li.progress-active {
         border-bottom: none; }
-        .progress-steps .progress-tabs ol li.progress-active:before {
+        .progress-steps .progress-tabs > ol > li.progress-active:before {
           border-color: #652d86;
           content: counter(step);
           color: #652d86;
           background-color: #f6f6f6; }
-        .progress-steps .progress-tabs ol li.progress-active h4 {
+        .progress-steps .progress-tabs > ol > li.progress-active h4 {
           color: #652d86;
           margin-bottom: 0; }
-          .progress-steps .progress-tabs ol li.progress-active h4:before {
+          .progress-steps .progress-tabs > ol > li.progress-active h4:before {
             background-color: #652d86; }
-        .progress-steps .progress-tabs ol li.progress-active ~ li:before {
+        .progress-steps .progress-tabs > ol > li.progress-active ~ li:before {
           border-color: #c7c2ba;
           content: counter(step);
           color: #c7c2ba;
           background-color: #f6f6f6; }
-        .progress-steps .progress-tabs ol li.progress-active ~ li h4 {
+        .progress-steps .progress-tabs > ol > li.progress-active ~ li h4 {
           color: #c7c2ba; }
-          .progress-steps .progress-tabs ol li.progress-active ~ li h4:before {
+          .progress-steps .progress-tabs > ol > li.progress-active ~ li h4:before {
             background-color: #c7c2ba; }
-    .progress-steps .progress-tabs ol .progress-content {
+    .progress-steps .progress-tabs > ol .progress-content {
       border-style: solid;
       border-color: #c7c2ba;
       border-width: 0 1px;
       padding: 20px; }
-      .progress-steps .progress-tabs ol .progress-content:before {
+      .progress-steps .progress-tabs > ol .progress-content:before {
         content: '';
         border-top: 1px solid #c7c2ba;
         width: 100%;
@@ -11840,6 +11841,8 @@ section.ee-reviewarea {
   margin-bottom: -21px; }
   section.ee-reviewarea article {
     margin-top: -1px; }
+  section.ee-reviewarea .text-muted {
+    font-size: 14px; }
 
 .ee-reviewed-initial .container {
   padding-top: 10px; }
@@ -11851,8 +11854,6 @@ section.ee-reviewarea {
     border-top-color: #dbdbdb; }
 .ee-reviewed-initial:last-of-type .container:after, .ee-reviewed-initial:last-of-type .container:before {
   border: none; }
-.ee-reviewed-initial .text-muted {
-  font-size: 14px; }
 
 .ee-reviewed-answer .container {
   padding-top: 10px; }
@@ -12385,8 +12386,12 @@ header .megamenu .search-item-image,
 
 .ee-shopping {
   margin-top: 20px; }
-  .ee-shopping .cart-items {
-    margin-bottom: 20px; }
+  .ee-shopping .progress-content {
+    margin-bottom: 20px;
+    margin-top: 30px; }
+    .ee-shopping .progress-content .close:hover {
+      color: #642887;
+      opacity: 1; }
   .ee-shopping .cart-item:not(:last-of-type) {
     border-bottom: 1px solid #dbdbdb; }
   .ee-shopping .cart-item {
@@ -12397,46 +12402,38 @@ header .megamenu .search-item-image,
     .ee-shopping .cart-item .cart-item-image {
       padding-right: 5px;
       margin-bottom: 5px; }
+      .ee-shopping .cart-item .cart-item-image .img-responsive {
+        max-width: 135px;
+        width: 100%;
+        height: auto; }
+    .ee-shopping .cart-item .input-group,
+    .ee-shopping .cart-item .input-group span {
+      font-weight: bold; }
+    .ee-shopping .cart-item .input-number input[type="text"] {
+      padding: 0;
+      text-align: center; }
+    .ee-shopping .cart-item .panel {
+      margin-bottom: 8px; }
+    .ee-shopping .cart-item .panel-collapse input[type="text"] {
+      margin-bottom: 15px; }
+    .ee-shopping .cart-item .panel-collapse .close {
+      margin-top: 5px; }
   .ee-shopping .ee-price {
     font-size: 1.4em;
-    margin-bottom: 14px; }
+    margin-bottom: 14px;
+    font-weight: bold; }
   .ee-shopping .ee-accordion {
     border-top: 1px solid #dbdbdb; }
     .ee-shopping .ee-accordion .panel-heading a {
       font-size: 1.2em; }
-
-.rwd-table {
-  margin: 1em 0;
-  min-width: 300px; }
-  .rwd-table tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd; }
-  .rwd-table th {
-    display: none; }
-  .rwd-table td {
-    display: block; }
-    .rwd-table td:first-child {
-      padding-top: .5em; }
-    .rwd-table td:last-child {
-      padding-bottom: .5em; }
-    .rwd-table td:before {
-      content: attr(data-th) ": ";
-      font-weight: bold;
-      width: 6.5em;
-      display: inline-block; }
-      @media (min-width: 480px) {
-        .rwd-table td:before {
-          display: none; } }
-  .rwd-table th, .rwd-table td {
-    text-align: left; }
-    @media (min-width: 480px) {
-      .rwd-table th, .rwd-table td {
-        display: table-cell;
-        padding: .25em .5em; }
-        .rwd-table th:first-child, .rwd-table td:first-child {
-          padding-left: 0; }
-        .rwd-table th:last-child, .rwd-table td:last-child {
-          padding-right: 0; } }
+    .ee-shopping .ee-accordion .panel-body {
+      padding-top: 0; }
+  .ee-shopping .tsr-forms .selectboxit-option.selectboxit-disabled .selectboxit-option-anchor {
+    color: #dbdbdb; }
+  .ee-shopping .selectboxit-disabled {
+    background-color: #f6f6f6; }
+  .ee-shopping .checks {
+    margin-top: 25px; }
 
 .swiffy-wrap {
   position: relative;
@@ -12455,7 +12452,7 @@ header .megamenu .search-item-image,
   height: 64px;
   width: 64px; }
 .ee-found-tabs table td.blue-text {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: bold;
   white-space: nowrap; }
 .ee-found-tabs table tbody > tr > td {
@@ -12504,6 +12501,12 @@ header .megamenu .search-item-image,
   @media (min-width: 768px) {
     .dl-horizontal.dl-wide-300 dd {
       margin-left: 320px; } }
+
+h4 {
+  font-weight: 500; }
+
+.panel {
+  box-shadow: none; }
 
 .megamenu .list-group .dropdown-header > h6 > a {
   width: 100%;
