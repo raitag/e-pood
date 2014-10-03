@@ -62,9 +62,9 @@ TSR - FORMS
 ////// TSR - Checkbox
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-tsrForms.tsrCheckbox = function () {
+tsrForms.tsrCheckbox = function ($wrapper) {
 
-  $('.tsr-forms input:checkbox').each(function () {
+  $('.tsr-forms input:checkbox', $wrapper).each(function () {
 
    var elem = $(this);
    var label = elem.parent();
@@ -115,10 +115,9 @@ tsrForms.tsrCheckbox = function () {
 ////// TSR - Radio
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    tsrForms.tsrRadio = function () {
+   tsrForms.tsrRadio = function ($wrapper) {
 
-
-	    $('.tsr-forms input:radio').each(function () {
+		$('.tsr-forms input:radio', $wrapper).each(function () {
 
 	        var elem = $(this);
 	        var label = elem.parent();
