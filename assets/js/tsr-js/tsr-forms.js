@@ -135,7 +135,10 @@ tsrForms.tsrCheckbox = function () {
 	        label.prepend('<span class="tsr-radioStyled">&nbsp;</span>');
 	        label.not('.disabled').on('mousedown',function () {
 
-	            var el = $(this);
+                    var el = $(this);
+                    
+                    if (el.is(".disabled")) return false;
+                    
 	            var radio = el.children('input');
 
 	            var radioName = radio.attr('name');
