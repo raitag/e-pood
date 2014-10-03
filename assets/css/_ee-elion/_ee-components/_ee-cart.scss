@@ -7,6 +7,9 @@
       color: $purple-c;
       opacity: 1;
     }
+    .alert .close:hover{
+      color: #fff;
+    }
   }
   .cart-item:not(:last-of-type) {
     border-bottom: 1px solid $lightgrey-t;
@@ -19,9 +22,9 @@
     }
     .cart-item-image {
       padding-right: 5px;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
       .img-responsive {
-        max-width: 135px;
+        max-width: 75px;
         width: 100%;
         height: auto;
       }
@@ -29,6 +32,8 @@
     .input-group,
     .input-group span {
       font-weight: bold;
+      max-width: 130px;
+      margin-bottom: 10px;
     }
     .input-number input[type="text"] {
       padding: 0;
@@ -74,6 +79,9 @@
   }
 
   .checks {
-    margin-top: 25px;
+    margin-top: 35px;
+    .form-group {
+    margin-top: 15px;
+    }
   }
 }

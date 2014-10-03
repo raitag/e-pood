@@ -10,7 +10,7 @@ input{
     &[type="text"],
     &[type="password"],
     &[type="search"]{
-    	background-color: #FFFFFF;
+        background-color: #FFFFFF;
         background-image: none;
         border: 1px solid #CCCCCC;
         border-radius: 4px;
@@ -23,7 +23,7 @@ input{
         transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 
         &:focus {
-        	border: 1px solid $brand-primary;
+            border: 1px solid $brand-primary;
         }
     }
 }
@@ -76,4 +76,126 @@ textarea { min-height: 120px; }
 // Success
 .has-success {
   @include form-control-validation($state-success-text, $state-success-border, lighten(adjust-hue($state-success-bg, -25), 60%));
+}
+
+/* icon */
+.left-inner-addon {
+    position: relative;
+
+    input {
+        padding-left: 30px;    
+    }
+
+    [class^="glyphicon"] {
+        position: absolute;
+        padding: 10px 12px;
+        pointer-events: none;
+    }
+}
+.right-inner-addon {
+    position: relative;
+
+    input {
+        padding-right: 30px;    
+    }
+
+    [class^="glyphicon"] {
+        position: absolute;
+        right: 0px;
+        padding: 10px 25px;
+        pointer-events: none;
+    }
+    [class^="spin"] {
+        position: absolute;
+        right: 0px;
+        padding: 0px;
+        pointer-events: none;
+    }
+}
+
+
+/*  spinner  */
+@font-face {
+    font-family: 'spinner';
+    src:url('http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.eot?-9haulc');
+    src:url('http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.eot?#iefix-9haulc') format('embedded-opentype'),
+        url('http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.woff?-9haulc') format('woff'),
+        url('http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.ttf?-9haulc') format('truetype'),
+        url('http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.svg?-9haulc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="spin-"], [class*=" spin-"] {
+    font-family: 'spinner';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.spin-spinner:before {
+    content: "\e000";
+}
+.spin-spinner-2:before {
+    content: "\e001";
+}
+.spin-spinner-3:before {
+    content: "\e002";
+}
+.spin-spinner-4:before {
+    content: "\e003";
+}
+.spin-spinner-5:before {
+    content: "\e004";
+}
+.spin-spinner-6:before {
+    content: "\e005";
+}
+.spin-spinner-7:before {
+    content: "\e006";
+}
+
+@keyframes anim-rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes anim-rotate {
+    0% {-webkit-transform: rotate(0);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes anim-rotate {
+    0% {-moz-transform: rotate(0);}
+    100% {-moz-transform: rotate(360deg);}
+}
+@-o-keyframes anim-rotate {
+    0% {-o-transform: rotate(0);}
+    100% {-o-transform: rotate(360deg);}
+}
+@keyframes anim-rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+
+
+.spinner {
+    display: inline-block;
+    font-size:15px;
+    height: 1.15em;
+    line-height: 1;
+    margin: .5em;
+    animation: anim-rotate 2s infinite linear;
+    text-shadow: 0 0 .25em rgba(255,255,255, .3);
+    position:absolute;
+}
+.spinner--steps {
+    animation: anim-rotate 1s infinite steps(8);
+}
+.spinner--steps2 {
+    animation: anim-rotate 1s infinite steps(12);
 }

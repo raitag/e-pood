@@ -617,13 +617,16 @@
 
 </header>
 
+
+
 <div class="container xs-not-padded"> 
+  <h1>Ostukorv</h1>
   <section class="ee-shopping">
     <div class="progress-steps" data-update="progress">
       <div class="progress-tabs">
         <ol data-progress-steps="5">
           <li class="progress-active" data-target="#id1">
-            <h4>Ostukorvi ülevaade</h4>
+            <h4>Ülevaade</h4>
           </li>
           <li class="" data-target="#id2">
             <h4>Arveandmed</h4>
@@ -646,7 +649,7 @@
 
     <script id="fittingproducts-detail-template" type="text/x-handlebars-template">
     {{#products}} 
-      <div class="col-md-12 cart-item">
+      <div class="col-md-10 col-md-offset-1  cart-item">
         <button type="button" class="close" data-dismiss="cartitem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <div class="row">
           <div class="col-sm-2 col-xs-4 cart-item-image">
@@ -654,7 +657,6 @@
           </div>
           <div class="col-sm-7 col-xs-8">
             <h4>{{name}}</h4>
-            <p>{{intro}}</p>
             {{#if special_price}}
             <div class="panel">
             <a data-toggle="collapse" href="#comment-{{id}}">Lisa kommentaar</a>
@@ -684,15 +686,15 @@
               
               <div class="col-xs-6 col-sm-12">
                 
-                <div class="input-group">
+                <div class="input-group pull-right">
                   <span class="input-group-btn">
-                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
+                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
                       <span>-</span>
                     </button>
                   </span>
                   <input type="text" name="quant[{{no}}]" class="form-control input-number" value="1" min="1" max="10">
                   <span class="input-group-btn">
-                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{no}}]">
+                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[{{no}}]">
                       <span>+</span>
                     </button>
                   </span>
@@ -707,13 +709,16 @@
   </div>
 </div>
 
-<div class="container">
-  <div class=" next-steps">
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class=" next-steps">
     <fieldset>
       <div class="panel-group ee-accordion" id="next-container">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#cheap">Kasuta sooduskoodi</a>
+              <a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#cheap">Kasuta sooduskoodi või kinkekaarti</a>
             </div>
             <div id="cheap" class="panel-body collapse">
               <form class="form-horizontal" action="" method="post">
@@ -723,7 +728,7 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default">
+          <!-- <div class="panel panel-default">
             <div class="panel-heading">
               <a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#voucher">Kasuta kinkekaarti</a>
             </div>
@@ -734,34 +739,17 @@
                 <input type="submit" value="Kinnita" class="btn btn-primary">
               </form>
             </div>
-          </div>
-          <div class="panel panel-default">
+          </div> -->
+          <!-- <div class="panel panel-default">
             <div class="panel-heading"><a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#send">Saada ostukorv </a>
             </div>
             <div id="send" class="panel-body collapse">
               <div class="panel-inner">
-                <form id="contact" method="post" class="form" role="form">
-  <div class="row form-group">
-    <div class="col-sm-6 form-group">
-      <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" autofocus />
-    </div>
-    <div class="col-sm-6 form-group">
-      <input class="form-control" id="email" name="email" placeholder="E-post" type="email" required title="Palun täida see väli" />
-    </div>
-  </div>
-  <textarea class="form-control" id="message" name="message" placeholder="Sõnum" rows="5"></textarea>
-  <br>
-  <div class="row">
-    <div class="col-xs-12 col-sm-2 col-sm-offset-10 form-group ">
-      <!-- <button class="btn btn-link" type="submit">Katkesta</button> -->
-      <button class="btn btn-primary pull-right" type="submit">Saada</button>
-    </div>
-  </div>
-</form>
+                @include _contact-form.html 
               </div>
             </div>
-          </div>
-          <div class="panel panel-default">
+          </div> -->
+          <!-- <div class="panel panel-default">
             <div class="panel-heading">
               <a class="collapsed" data-toggle="collapse" data-parent="#next-container" href="#save">Salvesta ostukorv</a>
             </div>
@@ -772,40 +760,51 @@
                 <input type="submit" value="Kinnita" class="btn btn-primary">
               </form>
             </div>
-          </div>
+          </div> -->
         </div>
       </fieldset>
   </div>
-</div>
+      </div>
+      
+      <div class="col-sm-6" style="margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-xs-12 bottom">
+            <legend class="text-right">Saad kauba kätte eeldatavalt 12.02.2015</legend>
+            <h4>
+              Ostukorv kokku
+              <div class="pull-right ee-product-price-md">
+                <strong>269.99 €</strong>
+              </div>
+            </h4>
+            <h6>
+              Summa käibemaksuta 
+              <div class="pull-right">
+                <strong>169.99 €</strong>
+              </div>
+            </h6>
+            <h6>
+              Käibemaks 
+              <div class="pull-right">
+                <strong>69.99 €</strong>
+              </div>
+            </h6>
+          </div>
+        </div>
+        <div class="row">
+  <hr>
 
-<div class="container" style="margin-bottom: 20px;">
-  <div class="row">
-    <div class="col-xs-12 bottom">
-      <legend>Saad kauba kätte eeldatavalt 12.02.2015</legend>
-      <h4>
-        Ostukorv kokku
-        <div class="pull-right ee-product-price-md">
-          <strong>269.99 €</strong>
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-6 text-right">
+        <button class="btn btn-link" onClick="location.href= 'detail.html' " >Tagasi</button>
+      </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-aboutyou.html' ">Jätka ostmist</button>
         </div>
-      </h4>
-      <h6>
-        Summa käibemaksuta 
-        <div class="pull-right">
-          <strong>169.99 €</strong>
-        </div>
-      </h6>
-      <h6>
-        Käibemaks 
-        <div class="pull-right">
-          <strong>69.99 €</strong>
-        </div>
-      </h6>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-8">
-<!--       <button class="btn btn-link" data-action="prev">Tagasi</button> -->
-      <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href='cart-aboutyou.html'">Jätka ostmist</button>
+</div>
+      </div>
     </div>
   </div>
 </div> 
@@ -826,7 +825,7 @@
 
 
 
-<section class="tsr-section-divider tsr-color-purple">
+<section class="tsr-section-divider">
   <div class="container">
     <h6>
     Teised on ostnud lisaks
@@ -881,27 +880,6 @@
 <!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
 
 
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
-
-    <a href="#" class="tsr-module-support icon icon-leasing">
-      <h6>Elioni järelmaks</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-transport">
-      <h6>Transport e-poes</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-help">
-      <h6>Abiinfo</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-settings">
-      <h6>Remont ja hooldus</h6>
-    </a>                  
-
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
 <footer>
     <div class="container-no-gutter">
         <div class="row">

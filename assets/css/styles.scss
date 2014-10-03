@@ -67,6 +67,7 @@
 /* @include _flexslider.css */
 /* @include _socialcount-with-icons.scss */
 /* @include _slider.scss */
+/* @include _bootstrap-editable.scss */
 
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO TSR
@@ -89,6 +90,7 @@
 /* @include _ee-mainnav.scss */
 /* @include _ee-compare.scss */
 /* @include _ee-cart.scss */
+/* @include _ee-switch.scss */
 
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
@@ -207,6 +209,12 @@
 
 h4 {
   font-weight: 500;
+}
+
+.tsr-forms .form-group.has-error .form-control  input[type='text'], 
+.tsr-forms .form-group.has-error .form-control  input[type='password'] {
+  border-color: $state-danger-text!important;
+  color: $state-danger-text!important;
 }
 
 .panel {

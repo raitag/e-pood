@@ -125,30 +125,31 @@ $(".input-number").keydown(function (e) {
     });
 
   // Calls the selectBoxIt method on your HTML select box
-  $("#chooseRole").selectBoxIt({
+  // $("#chooseRole").selectBoxIt({
+  //   defaultText: "Vali roll"
+  // });
 
-    // Sets default text to appear for the drop down
-    defaultText: "Vali roll"
+  // $("#choosePayment").selectBoxIt({
+  //   defaultText: "Vali makseviis"
+  // });
 
-  });
+  // if(document.getElementById('choosePayment').value == "Pangalingiga") {
+  //      $('#paymentAddon').html(' ');
+  // }
+  // else if(document.getElementById('choosePayment').value == "Ettemaksuga") {
+  //      $('#paymentAddon').html('Ettemaksuga saad osta oma vaba limiidi ulatuses kui oled 18-75 aastane ELioni klient ja Eesti kodanik. <br> Sõlmides järelmaksulepingu e-poes puudub lepingutasu.');
+  // }
+  // else if(document.getElementById('choosePayment').value == "Järelmaksuga") {
+  //      $('#paymentAddon').html(' ');
+  // }
 
-  // Calls the selectBoxIt method on your HTML select box
-  $("#choosePayment").selectBoxIt({
-
-    // Sets default text to appear for the drop down
-    defaultText: "Vali makseviis"
-
-  });
-
-  if(document.getElementById('choosePayment').value == "Pangalingiga") {
-       $('#paymentAddon').html(' ');
-  }
-  else if(document.getElementById('choosePayment').value == "Ettemaksuga") {
-       $('#paymentAddon').html('Ettemaksuga saad osta oma vaba limiidi ulatuses kui oled 18-75 aastane ELioni klient ja Eesti kodanik. <br> Sõlmides järelmaksulepingu e-poes puudub lepingutasu.');
-  }
-  else if(document.getElementById('choosePayment').value == "Järelmaksuga") {
-       $('#paymentAddon').html(' ');
-  }
+  $.fn.editable.defaults.mode = 'inline';
+  $(document).ready(function() {
+    $('#nimi').editable();
+    $('#epost').editable();
+    $('#telefon').editable();
+    $('#aadress').editable();
+});
 
 });
 // Plus-minus buttons

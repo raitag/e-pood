@@ -4,27 +4,27 @@
 
 $containerTopMargin:20px;
 
-$mainnavigation-bg-color:			#4E256B;
-$mainnavigation-submenu-bg-color:	#642887;
-$full-width:						100%;
-$brand-white:						#ffffff;
-$facebook-blue:						#3B5998;
-$youtube-red:						#E31B2C;
-$twitter-blue:						#2CAAE1;
-$google-plus-red:					#E74B32;
-$price-text-color:					#0083be;
+$mainnavigation-bg-color:     #4E256B;
+$mainnavigation-submenu-bg-color: #642887;
+$full-width:            100%;
+$brand-white:           #ffffff;
+$facebook-blue:           #3B5998;
+$youtube-red:           #E31B2C;
+$twitter-blue:            #2CAAE1;
+$google-plus-red:         #E74B32;
+$price-text-color:          #0083be;
 
 // screen
-$screen-xxs-max:			 480px;
+$screen-xxs-max:       480;
 
 // alert variables
 $state-primary-text: #fff ;
 $state-primary-bg: #0083BE ;
 $state-primary-border: $state-primary-bg;
 
-$alert-primary-bg: 		$state-primary-bg ;
-$alert-primary-text: 	$state-primary-text ;
-$alert-primary-border: 	$state-primary-border ;
+$alert-primary-bg:    $state-primary-bg ;
+$alert-primary-text:  $state-primary-text ;
+$alert-primary-border:  $state-primary-border ;
 
 // footer icons
 
@@ -79,14 +79,14 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          14px;
+$font-size-base:          15px;
 $font-size-large:         ceil($font-size-base * 1.25); // ~18px
 $font-size-small:         ceil($font-size-base * 0.8); // ~12px
 
 $font-size-h1:            floor($font-size-base * 2.8); // ~42px
 $font-size-h2:            floor($font-size-base * 2.15); // ~32px
 $font-size-h3:            ceil($font-size-base * 1.45); // ~22px
-$font-size-h4:            ceil($font-size-base * 1.25); // ~22px
+$font-size-h4:            ceil($font-size-base * 1.45); // ~22px
 $font-size-h5:            ceil($font-size-base * 1.3); // ~20px
 $font-size-h6:            ceil($font-size-base * 1.2); // ~18px
 
@@ -142,11 +142,11 @@ $table-bg-accent:                    #f9f9f9; // for striping
 $table-bg-hover:                     #f5f5f5;
 $table-bg-active:                    $table-bg-hover;
 
-$table-bg-success:					 $brand-success;
-$table-bg-info:					 	 $brand-info;
-$table-bg-warning:					 $brand-warning;
-$table-bg-danger:					 $brand-danger;
-$table-bg-active:					 $table-bg-active;
+$table-bg-success:           $brand-success;
+$table-bg-info:            $brand-info;
+$table-bg-warning:           $brand-warning;
+$table-bg-danger:          $brand-danger;
+$table-bg-active:          $table-bg-active;
 
 $table-border-color:                 #ddd; // table and cell border
 
@@ -631,13 +631,13 @@ $carousel-control-width:                      50px;
 $carousel-control-height:                     100px;
 $carousel-control-opacity:                    .7;
 $carousel-control-font-size:                  $font-size-h2;
-$carousel-control-radius:                  	  200px;
+$carousel-control-radius:                     200px;
 
 $carousel-indicator-active-bg:                $brand-primary;
 $carousel-indicator-border-color:             $gray-light;
 
 $carousel-caption-color:                      #fff;
-$carousel-caption-radius:                  	  30px;
+$carousel-caption-radius:                     30px;
 
 
 // Close
