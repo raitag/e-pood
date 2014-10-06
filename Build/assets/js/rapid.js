@@ -1599,9 +1599,9 @@ TSR - FORMS
 ////// TSR - Checkbox
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-tsrForms.tsrCheckbox = function () {
+tsrForms.tsrCheckbox = function ($wrapper) {
 
-  $('.tsr-forms input:checkbox').each(function () {
+ $('.tsr-forms input:checkbox', $wrapper).each(function () {
 
    var elem = $(this);
    var label = elem.parent();
@@ -1652,10 +1652,10 @@ tsrForms.tsrCheckbox = function () {
 ////// TSR - Radio
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    tsrForms.tsrRadio = function () {
+    tsrForms.tsrRadio = function ($wrapper) {
 
 
-	    $('.tsr-forms input:radio').each(function () {
+	    $('.tsr-forms input:radio', $wrapper).each(function () {
 
 	        var elem = $(this);
 	        var label = elem.parent();
@@ -1672,7 +1672,10 @@ tsrForms.tsrCheckbox = function () {
 	        label.prepend('<span class="tsr-radioStyled">&nbsp;</span>');
 	        label.not('.disabled').on('mousedown',function () {
 
-	            var el = $(this);
+                    var el = $(this);
+                    
+                    if (el.is(".disabled")) return false;
+                    
 	            var radio = el.children('input');
 
 	            var radioName = radio.attr('name');
