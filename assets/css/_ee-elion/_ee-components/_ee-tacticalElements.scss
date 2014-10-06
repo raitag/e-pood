@@ -21,12 +21,12 @@
   .tsr-tactical-flash:first-of-type,
   .tsr-tactical-flash:first-child,
    {
-    top: 50px;
+    top: 25px;
     z-index: 2;
   }
   .tsr-tactical-flash:nth-of-type(2),
   .tsr-tactical-flash:first-child + .tsr-tactical-flash {
-    top: 115px;
+    top: 75px;
     z-index: 3;
   }
 

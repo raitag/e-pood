@@ -174,15 +174,26 @@ section.ee-product-detail {
     display: inline-block;
   }
 
-  .tsr-forms label, .tsr-forms .label {
+  .disabled.disabled {
+    background-color: transparent;
+  }
+  .tsr-forms label, 
+  .tsr-forms .label {
     margin: 0;
     display: inline-block;
     // float: right;
+
+  &.disabled .tsr-checkboxStyled,
+  &.disabled .tsr-radioStyled {
+    border: 2px solid $lightgrey-t;
+  }
 
  .tsr-checkboxStyled,
  .tsr-radioStyled {
     border: 2px solid $purple-c;
   }
+
+
   .tsr-radioStyled {
     border-radius: 20px;
   }

@@ -170,12 +170,12 @@ FORMS
 
 			.tsr-checkboxStyled{
 				background:$white;
-				border:1px solid $lightgrey-t;
+				border:2px solid $lightgrey-t;
 				width:20px;
 				height:20px;
 				display:block;
 				position:relative;
-				margin-right:6px;
+
 				float:left;
 
 
@@ -219,12 +219,11 @@ FORMS
 
 
 				.tsr-checkboxStyled{
-					background:#eee;
-					border:1px solid $lightgrey-t;
+					background:$lightgrey-c;
 					&:focus,
 					&:active{
 						border:1px solid $lightgrey-t;
-						background:#eee;
+						background:$lightgrey-c;
 
 						&:before{
 							display:none;
@@ -325,7 +324,7 @@ FORMS
 				height:20px;
 				display:block;
 				position:relative;
-				margin-right:6px;
+				padding-right:6px;
 				float:left;
 				line-height:1;
 
@@ -370,7 +369,7 @@ FORMS
 				}
 
 				&:after{
-					color:#eee;
+					color:$lightgrey-c;
 				}
 
 				&.checked{

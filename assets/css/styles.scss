@@ -408,6 +408,28 @@ display: inline-block;
 // WORK IN PROGRESS PARTS
 //**********************************
 
+  .ee-flash-sm {
+    -webkit-border-radius: 1px;
+    -ms-border-radius: 1px;
+    border-radius: 1px;
+    font-size: em(16);
+    width: em(47);
+    height: em(47);
+    z-index: 1;
+    &:before {
+    width: em(47);
+    height: em(47);
+    }
+    //  .ee-small {
+    //   font-size: 11px;
+    //   padding: 2px 3px;
+    // }
+  }
+
+  .tsr-second:before {
+    background: $blue-c;
+  }
+
 .ee-flashtext-container {
 text-align: center;
 display: table-cell;

@@ -8,29 +8,11 @@ section.tsr-section-productlist  {
   .ee-flash-sm {
     position: relative;
     float: left;
-    -webkit-border-radius: 1px;
-    -ms-border-radius: 1px;
-    border-radius: 1px;
     top: 0; 
-    left: 0;
-    right: auto;
-    font-size: em(16);
-    width: em(47);
-    height: em(47);
-    margin-left: -5px;
+    margin-left: 0;
     margin-top: 0;
-    z-index: 1;
-
-
-    &:before {
-    width: em(47);
-    height: em(47);
-    }
-    //  .ee-small {
-    //   font-size: 11px;
-    //   padding: 2px 3px;
-    // }
   }
+
     .tsr-product-image {
       margin-left: 5px;
       display: inline-block;

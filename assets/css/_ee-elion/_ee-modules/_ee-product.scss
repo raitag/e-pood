@@ -3,7 +3,7 @@ section.tsr-section-productAndService-listing {
   margin-top: -1px;
 
   .tsr-tactical-flash {
-    right: 20px;
+    left: 35px;
   }
 }
 
@@ -150,13 +150,11 @@ section.tsr-section-productAndService-listing {
 
   .ee-favorite-dropdown {
     position: absolute;
-    right: em(10);
+    right: 0.2em;
     left: auto;
-    top: em(10);
+    top: 0.2em;
     z-index: 1;
-    @include media-min($screen-xs) {
-    right: em(5);
-    } 
+
     &.open {
       z-index: 4;
     }
