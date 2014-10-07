@@ -4,78 +4,63 @@ Templiitimise abivahendiks on [Handlebars](http://handlebarsjs.com/), mis arendu
 
 Stiilide failistruktuuri ülevaate annab styles.scss
 
-Välised pluginad ja kogumikud lisaks bootstrapile (javascript)
-  - Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures
-  - Froogaloop ja fitvid - Vimeo api Flexsliderile
-  - Paintbrush - piltide multiply effekt. Sõltub Common js-st.
-  - srcset - image replacement mediaqueries
-  - modernizr - rootsist
-  - enquire - rootsist, js brekapointid
+Välised javascriptipluginad ja kogumikud lisaks bootstrapile (javascript, asuvad Vendori all):
+
+  - Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures. Aeglane, plaanis vahetada BS3 slaideri vastu
+  - wurfl - image replacement mediaqueries .net
+  - [modernizr](http://modernizr.com/) - 
+  - [enquire](http://wicky.nillia.ms/enquire.js/) - rootsist, js brekapointid
   - jquery debouncing - rootsist
-  - MatchMedia - rootsist
+  - [MatchMedia](https://github.com/paulirish/matchMedia.js/) - rootsist, peaks välja võtma sest Modernizr on juba
+  - [bootstrap-rating](https://github.com/javiertoledo/bootstrap-rating-input) 
+  - [bootstrap-slider](http://www.eyecon.ro/bootstrap-slider/)
+  - [scrollto](http://flesler.blogspot.com/2007/10/jqueryscrollto.html)
+  - [socialcount](https://github.com/filamentgroup/SocialCount)
+  - [bootstrap-tabcollapse](https://github.com/flatlogic/bootstrap-tabcollapse/blob/master/bootstrap-tabcollapse.js)
+  - [selectboxit](http://gregfranko.com/jquery.selectBoxIt.js/) peidab end forms.js-s, kasutada saab aga kõiki Greg Franko meetodeid
 
 ## Sisu
 
+Hammri lehe vasak ülamenüü punkt on Sisukord. See sisaldab kõiki lehti. Siin loetlen komponendid, mida lehelt leida saab koos väliste sõltuvustega. 
 - Avaleht 
-  - Avaslaider 
-  - Tooteklotsidega avamenüü
-  - Tooteslaider
-  - Sisselogitud kasutaja - vaatamiseks vajuta "sisene" nuppu (NB! tooteslaideris on kehv ribboneid kasutada)
-- 2nd level
+  - Avaslaider (Flexslider)
+  - Kampaaniad (BS3 Collapse)
+  - Sisupuu (BS3Collapse)
+- Avaleht sisselogitud
+  - Alertid (BS3 Alerts)
+- Klotsvaade ja listvaade 2nd level
   - Vertikaalne akordionmenüü 2 tasandit, hidden on small
   - Leivapuru (BS põhjal)
-  - Tooteklotside vaade
-  - Toote listvaade (custom, TSR põhjal)
-- 3rd level 
-  - Toote detailvaade desktopile
-
-### Vaja teha veel esimese etapi raames: 
-- Päis responsive loogika (Viljar seletagu)
-- H1 kuni H6 jälgida
-- Html-css refaktoreering
-- Require js?
-- Code Blocks?
-
-### Andmesisestuses muutub kindlasti
-- Avaslaideri sisestus (lisandub tekstiväli või mitu)
-- 2nd level reklaami sisestus (pilt ja tekst eraldi)
-- Lindi ja rombi sisestus
-- Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.
-- Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg 
-- Star rating tuleb juurde
-- Värvide sisestus: standardvärvid pluss kirjud värvid käsitsi lõigatuna pildist
-
-### Sisulised küsimused, tähtsad täpsustused ja segased asjad
-- Detailvaade - Ahto teeb edasi
-- Rombide võimalikud variandid - keegi esitab
-- Lintide võimalikud variandid - keegi esitab
-- Värvivahetus listvaatesse ja detaili.
-- Lehenumbreid ei tule, infinite scroll
-- Praegu pole mobiiliversioonis on nähtav 3 tasand, probleem kui 2nd level vasak menüü pole nähtav mobiilis
-- Detailvaates läheb lint roheliseks rombiks - teha. 
-- Detailvaate suure pildi juurde jõudmine, Jaanuse mure, et suur pilt pole piisavalt suur.
-- Sotsiaalmeedia ja ratingu paigutus
+  - Filter
+  - Ajax loader
+  - Lemmiku valik (BS3 Dropdown)
+- Erilehed
+  - Võrdlus (scrollto)
+  - Lemmikud
+  - Ostingutulemus
+  - Hooldusinfo
+  - Abi
+- Detailvaade 3rd level 
+  - Transpordi akordion (BS3 Collapse)
+  - Thumbidega tootekarussell, avaneb modaaliks desktopil (Flexslider, BS3 Modal)
+  - Seonduvate toodete akordion kustom-checkide-radiotega
+  - Tabides lisainfo (BS3 Tab, bootstrap-tabcollapse)
+  - Sotsiaalmeedia (socialcount)
+  - Arvamused (BS3 Collapse)
+  - Tooteinfo tabel (BS3 Tooltip, BS3 Popover)
 
 
-### Puudu on
-- Filtrid
-- Värvide esitluse komponent, otsus, kuidas esitada kirjusid värve
+### Andmesisestuses palun järgida:
+- Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg st
 
-### Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)
-- Leivapuru
-- Vertikaalne akordionmenüü
-- Ümmargune badge ikooni või tekstiga
-- Ribbon (lisatud ribbon mobiilile)
-- Tootevärvid selektitavad
-- Elioni logo skaleeruva svg-na, fallback png
-- klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi
-- rating
-- kolmnurknoolega sektsioon 
-- tootekarusell pisipiltidega
-- piltide multiply (paintbrush js)
-- h1-h6
-- rombide paigutus järjekorral alusel, mitte fix ja minirombid
-- ikooninupud
+### Töös on
+- Ostukorv
+
+### Tulekul on
+- Filtrid külgmenüüsse (mobiilivaade?) 
+- Uus päis
+- Sisseloginud klient
+
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
   - All on BS3, siis rootsi scss, siis eesti kohendused.
@@ -93,8 +78,3 @@ Välised pluginad ja kogumikud lisaks bootstrapile (javascript)
 	- [grunt responsive-images](https://github.com/andismith/grunt-responsive-images)
 	- meediapäringute sortimiseks [grunt-combine-media-queries](https://github.com/buildingblocks/grunt-combine-media-queries)
 - meediapäringitele vastavate pildisuurste serveerimiseks [srcset-polyfill](https://github.com/borismus/srcset-polyfill)
-
-	
-### Do-not-forget
-- Kustmaalt image replacement.
-- Kõrvalda horisontaalne scrollbar

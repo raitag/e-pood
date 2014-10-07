@@ -4,97 +4,68 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <p>Stiilide failistruktuuri ülevaate annab styles.scss</p>
 
-<p>Välised pluginad ja kogumikud lisaks bootstrapile (javascript)
-  - Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures
-  - Froogaloop ja fitvid - Vimeo api Flexsliderile
-  - Paintbrush - piltide multiply effekt. Sõltub Common js-st.
-  - srcset - image replacement mediaqueries
-  - modernizr - rootsist
-  - enquire - rootsist, js brekapointid
-  - jquery debouncing - rootsist
-  - MatchMedia - rootsist</p>
+<p>Välised javascriptipluginad ja kogumikud lisaks bootstrapile (javascript, asuvad Vendori all):</p>
+
+<ul>
+  <li>Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures. Aeglane, plaanis vahetada BS3 slaideri vastu</li>
+  <li>wurfl - image replacement mediaqueries .net</li>
+  <li><a href="http://modernizr.com/">modernizr</a> - </li>
+  <li><a href="http://wicky.nillia.ms/enquire.js/">enquire</a> - rootsist, js brekapointid</li>
+  <li>jquery debouncing - rootsist</li>
+  <li><a href="https://github.com/paulirish/matchMedia.js/">MatchMedia</a> - rootsist, peaks välja võtma sest Modernizr on juba</li>
+  <li><a href="https://github.com/javiertoledo/bootstrap-rating-input">bootstrap-rating</a> </li>
+  <li><a href="http://www.eyecon.ro/bootstrap-slider/">bootstrap-slider</a></li>
+  <li><a href="http://flesler.blogspot.com/2007/10/jqueryscrollto.html">scrollto</a></li>
+  <li><a href="https://github.com/filamentgroup/SocialCount">socialcount</a></li>
+  <li><a href="https://github.com/flatlogic/bootstrap-tabcollapse/blob/master/bootstrap-tabcollapse.js">bootstrap-tabcollapse</a></li>
+  <li><a href="http://gregfranko.com/jquery.selectBoxIt.js/">selectboxit</a> peidab end forms.js-s, kasutada saab aga kõiki Greg Franko meetodeid</li>
+</ul>
 
 <h2>Sisu</h2>
 
+<p>Hammri lehe vasak ülamenüü punkt on Sisukord. See sisaldab kõiki lehti. Siin loetlen komponendid, mida lehelt leida saab koos väliste sõltuvustega. 
+- Avaleht 
+  - Avaslaider (Flexslider)
+  - Kampaaniad (BS3 Collapse)
+  - Sisupuu (BS3Collapse)
+- Avaleht sisselogitud
+  - Alertid (BS3 Alerts)
+- Klotsvaade ja listvaade 2nd level
+  - Vertikaalne akordionmenüü 2 tasandit, hidden on small
+  - Leivapuru (BS põhjal)
+  - Filter
+  - Ajax loader
+  - Lemmiku valik (BS3 Dropdown)
+- Erilehed
+  - Võrdlus (scrollto)
+  - Lemmikud
+  - Ostingutulemus
+  - Hooldusinfo
+  - Abi
+- Detailvaade 3rd level 
+  - Transpordi akordion (BS3 Collapse)
+  - Thumbidega tootekarussell, avaneb modaaliks desktopil (Flexslider, BS3 Modal)
+  - Seonduvate toodete akordion kustom-checkide-radiotega
+  - Tabides lisainfo (BS3 Tab, bootstrap-tabcollapse)
+  - Sotsiaalmeedia (socialcount)
+  - Arvamused (BS3 Collapse)
+  - Tooteinfo tabel (BS3 Tooltip, BS3 Popover)</p>
+
+<h3>Andmesisestuses palun järgida:</h3>
 <ul>
-  <li>Avaleht 
-    <ul>
-      <li>Avaslaider </li>
-      <li>Tooteklotsidega avamenüü</li>
-      <li>Tooteslaider</li>
-      <li>Sisselogitud kasutaja - vaatamiseks vajuta “sisene” nuppu (NB! tooteslaideris on kehv ribboneid kasutada)</li>
-    </ul>
-  </li>
-  <li>2nd level
-    <ul>
-      <li>Vertikaalne akordionmenüü 2 tasandit, hidden on small</li>
-      <li>Leivapuru (BS põhjal)</li>
-      <li>Tooteklotside vaade</li>
-      <li>Toote listvaade (custom, TSR põhjal)</li>
-    </ul>
-  </li>
-  <li>3rd level 
-    <ul>
-      <li>Toote detailvaade desktopile</li>
-    </ul>
-  </li>
+  <li>Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg st</li>
 </ul>
 
-<h3>Vaja teha veel esimese etapi raames:</h3>
+<h3>Töös on</h3>
 <ul>
-  <li>Päis responsive loogika (Viljar seletagu)</li>
-  <li>H1 kuni H6 jälgida</li>
-  <li>Html-css refaktoreering</li>
-  <li>Require js?</li>
-  <li>Code Blocks?</li>
+  <li>Ostukorv</li>
 </ul>
 
-<h3>Andmesisestuses muutub kindlasti</h3>
+<h3>Tulekul on</h3>
 <ul>
-  <li>Avaslaideri sisestus (lisandub tekstiväli või mitu)</li>
-  <li>2nd level reklaami sisestus (pilt ja tekst eraldi)</li>
-  <li>Lindi ja rombi sisestus</li>
-  <li>Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.</li>
-  <li>Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg </li>
-  <li>Star rating tuleb juurde</li>
-  <li>Värvide sisestus: standardvärvid pluss kirjud värvid käsitsi lõigatuna pildist</li>
-</ul>
-
-<h3>Sisulised küsimused, tähtsad täpsustused ja segased asjad</h3>
-<ul>
-  <li>Detailvaade - Ahto teeb edasi</li>
-  <li>Rombide võimalikud variandid - keegi esitab</li>
-  <li>Lintide võimalikud variandid - keegi esitab</li>
-  <li>Värvivahetus listvaatesse ja detaili.</li>
-  <li>Lehenumbreid ei tule, infinite scroll</li>
-  <li>Praegu pole mobiiliversioonis on nähtav 3 tasand, probleem kui 2nd level vasak menüü pole nähtav mobiilis</li>
-  <li>Detailvaates läheb lint roheliseks rombiks - teha. </li>
-  <li>Detailvaate suure pildi juurde jõudmine, Jaanuse mure, et suur pilt pole piisavalt suur.</li>
-  <li>Sotsiaalmeedia ja ratingu paigutus</li>
-</ul>
-
-<h3>Puudu on</h3>
-<ul>
-  <li>Filtrid</li>
-  <li>Värvide esitluse komponent, otsus, kuidas esitada kirjusid värve</li>
-</ul>
-
-<h3>Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)</h3>
-<ul>
-  <li>Leivapuru</li>
-  <li>Vertikaalne akordionmenüü</li>
-  <li>Ümmargune badge ikooni või tekstiga</li>
-  <li>Ribbon (lisatud ribbon mobiilile)</li>
-  <li>Tootevärvid selektitavad</li>
-  <li>Elioni logo skaleeruva svg-na, fallback png</li>
-  <li>klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi</li>
-  <li>rating</li>
-  <li>kolmnurknoolega sektsioon </li>
-  <li>tootekarusell pisipiltidega</li>
-  <li>piltide multiply (paintbrush js)</li>
-  <li>h1-h6</li>
-  <li>rombide paigutus järjekorral alusel, mitte fix ja minirombid</li>
-  <li>ikooninupud</li>
+  <li>Filtrid külgmenüüsse (mobiilivaade?) </li>
+  <li>Uus päis</li>
+  <li>Sisseloginud klient</li>
 </ul>
 
 <h3>Juhtnöörid koodi oma projektis kasutamiseks:</h3>
@@ -118,10 +89,4 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
     </ul>
   </li>
   <li>meediapäringitele vastavate pildisuurste serveerimiseks <a href="https://github.com/borismus/srcset-polyfill">srcset-polyfill</a></li>
-</ul>
-
-<h3>Do-not-forget</h3>
-<ul>
-  <li>Kustmaalt image replacement.</li>
-  <li>Kõrvalda horisontaalne scrollbar</li>
 </ul>

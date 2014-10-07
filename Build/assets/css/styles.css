@@ -1241,9 +1241,6 @@ CAROUSEL LISTING
     .tsr-section-carousel-listing .tsr-slides,
     .tsr-carousel-listing-div .tsr-slides {
       padding: 0 12px; }
-    .tsr-section-carousel-listing .tsr-module-product .tsr-tactical-flash,
-    .tsr-carousel-listing-div .tsr-module-product .tsr-tactical-flash {
-      right: 20px; }
     .tsr-section-carousel-listing .tsr-module-product .tsr-product-other .tsr-tactical-flash,
     .tsr-carousel-listing-div .tsr-module-product .tsr-product-other .tsr-tactical-flash {
       right: 24px; }
@@ -11927,7 +11924,8 @@ section.tsr-section-productAndService-listing {
   .tsr-product-price span {
     font-weight: bold;
     color: #0083be;
-    font-size: 120%; }
+    font-size: 120%;
+    white-space: nowrap; }
 
 .ee-special-price, .ee-product-price-lg, .ee-product-price-md, .tsr-module-product .ee-product-price-lg {
   color: #0083be;
@@ -13187,6 +13185,11 @@ header .megamenu .search-item-image,
     margin-top: 35px; }
     .ee-shopping .checks .form-group {
       margin-top: 15px; }
+  .ee-shopping .selectboxit-container .selectboxit-options {
+    max-height: 240px; }
+  .ee-shopping .ee-middle-table {
+    display: table-cell;
+    vertical-align: middle; }
 
 .onoffswitch {
   position: relative;
@@ -13212,55 +13215,64 @@ header .megamenu .search-item-image,
   -webkit-transition: margin 0.3s ease-in 0s;
   -o-transition: margin 0.3s ease-in 0s;
   transition: margin 0.3s ease-in 0s; }
-
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-  display: block;
-  float: left;
-  width: 50%;
-  height: 35px;
-  padding: 0;
-  line-height: 30px;
-  color: #fff;
-  font-weight: bold;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.onoffswitch-inner:before {
-  content: "Jah";
-  padding-left: 10px;
-  background-color: #00b48c;
-  border-bottom: 4px solid #009974;
-  color: #FFFFFF; }
-
-.onoffswitch-inner:after {
-  content: "Ei";
-  padding-right: 10px;
-  background-color: #f6f6f6;
-  border-bottom: 4px solid #dbdbdb;
-  color: #858889;
-  text-align: right; }
+  .onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 35px;
+    padding: 0;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .onoffswitch-inner:before {
+    content: "Jah";
+    padding-left: 10px;
+    background-color: #00b48c;
+    border-bottom: 4px solid #009974;
+    color: #FFFFFF; }
+  .onoffswitch-inner:after {
+    content: "Ei";
+    padding-right: 10px;
+    background-color: #f6f6f6;
+    border-bottom: 4px solid #dbdbdb;
+    color: #858889;
+    text-align: right; }
 
 .onoffswitch-switch {
   display: block;
   width: 18px;
   margin: 6px;
-  background: #FFFFFF;
+  background: #FFF;
   border-radius: 2px;
   position: absolute;
   top: 0;
   bottom: 3px;
   right: 48px;
+  content: " ";
   -moz-transition: all 0.3s ease-in 0s;
   -webkit-transition: all 0.3s ease-in 0s;
   -o-transition: all 0.3s ease-in 0s;
   transition: all 0.3s ease-in 0s; }
+  .onoffswitch-switch:before {
+    content: " ";
+    font-family: 'tsr-icons-all';
+    color: #00b48c;
+    right: 48px; }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0; }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px; }
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch:before {
+    content: "\e6f1";
+    font-family: 'tsr-icons-all';
+    color: #00b48c;
+    right: 48px;
+    padding-left: 2px; }
 
 .swiffy-wrap {
   position: relative;
@@ -13397,8 +13409,11 @@ h4 {
 .ee-thinline-bottom {
   margin-bottom: -1px; }
 
-.ee-upper-distance {
+.ee-top-10 {
   margin-top: 10px; }
+
+.ee-top-20 {
+  margin-top: 20px; }
 
 .ee-hidden-xs {
   display: none !important; }
@@ -13534,6 +13549,13 @@ footer .social-block .media .icon {
 .tsr-forms label {
   font-weight: normal;
   display: block; }
+
+label.control-label-left {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px; }
 
 .rating-input {
   display: inline-block;

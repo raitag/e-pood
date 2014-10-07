@@ -149,7 +149,7 @@
               <li><a href="found-page-block.html">Otsingutulemused klots</a></li>
               <li><a href="found-page-list.html">Otsingutulemused list</a></li>
               <li><a href="favorite-page.html">Lemmikud (+ajax loader inline)</a></li>
-              <li class='current'><a class='current' href="compare-page.html">Võrdlus</a></li>
+              <li><a href="compare-page.html">Võrdlus</a></li>
               <li><a href="care-page.html">Hooldusinfo</a></li>
               <li><a href="help-page.html">Abilehed</a></li>
               
@@ -159,7 +159,7 @@
             <ul>
               <li><a href="cart-overview.html">1. Ülevaade</a></li>
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
-              <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
+              <li class='current'><a class='current' href="cart-delivery.html">3. Kohaletoomine</a></li>
             </ul>
           </li>
         </ul>
@@ -619,164 +619,222 @@
 </nav> -->
 
 </header>
-<section class="ee-breadcrumbs hidden-xs hidden-sm">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Arvutid ja lisad</a></li>
-      <li class="active">Sülearvutid</li>
-    </ul>
-  </div>
-</section>
-<div class="ee-filterbar fullwidth">
-  <div class="container">
-    <div class="navbar navbar-inverse" role="filtering">
-      <ul class="nav navbar-nav navbar-left">
-          <li >
-            <a href="#">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
-          </li>
-          <li class="active">
-            <a href="#" id="toggleParam" class="showParameterDifferences" data-show="Peida detailid" data-hide="Näita detaile">Peida detailid <span class="icon icon-arrow-up"></span></a>  
-          </li>
-          <li class="visible-xs">
-            <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-          </li>
-        </ul>
-      <!-- s -->
-    </div>
-  </div>
-</div>
-
-
 
 
 
 <div class="container xs-not-padded"> 
-  
-  <div class="ee-product-compare">
-    
-<div id="content-placeholder-compare-data" class=""></div>
-<!-- <span class="previ ee-left ee-iconbutton"></span>
-<span class="nexti ee-right ee-iconbutton"></span> -->
-
-<script id="compare-data-template" type="text/x-handlebars-template">
-  {{#comparision}} 
-  
-  <div class="panel-group ee-accordion" >
-
-    <div class="panel panel-default">
-      <div class="comparision-header">
-      
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
-            </div>
-          
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
-              <div class="fixwidth">
-              {{#each prod}}
-                <div class="col-xs-2 compare-value jsCompareProduct">
-                  <a type="button" class="close" aria-hidden="true">×</a>
-                  <img class="img-responsive" src="{{img}}" alt="">
-                  <h6><a href="">{{product}}</a></h6>
-                  <a href="" class="btn btn-link ee-buy">Osta</a>
-                </div>
-                {{/each}}
-              </div>
-            </div>
-          </div>
+  <section class="ee-shopping">
+    <div class="progress-steps" data-update="progress">
+      <div class="progress-tabs">
+        <ol data-progress-steps="5">
+          <li class="" data-target="#id1">
+            <h4>Ostukorvi ülevaade</h4>
+          </li>
+          <li class="" data-target="#id2">
+            <h4>Arveandmed</h4>
+          </li>
+          <li class="progress-active" data-target="#id3">
+            <h4>Kohaletoomine</h4>
+          </li>
+          <li class="">
+            <h4>Maksmine</h4>
+          </li>
+          <li class="last-child " data-target="#id5">
+            <h4>Kokkuvõte</h4>
+          </li>
+        </ol>
+      </div>
+      <div class="progress-content">
+        <div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row tsr-forms">
+      <div class="col-sm-6">
+        <h4>Vali kättesaamise viis:</h4>
+        <div class="select-container">
+          <select id="chooseDelivery">
+            <option selected>Kulleriga koju/kontorisse kätte (3,50 €)</option>
+            <option>SmartPosti pakiautomaadist (Lisatasuta)</option>
+            <option>Omniva pakiautomaadist (Lisatasuta)</option>
+            <option>Tulen ise poodi järgi (Lisatasuta)</option>
+          </select>
         </div>
       </div>
-    </div>
-
-    {{#each param}}
-     <div class="panel panel-default">
-     {{#if heading}}
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" href="#{{headingid}}">
-            {{heading}}
-          </a>
-        </h4>
-      </div>
-    {{/if}}
-    <div id="{{headingid}}" class="panel-collapse collapse in js-subpanel">
-      <div class="col-xs-12">
-        {{#each data}}
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
-            {{#if description}}
-              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
-              {{else}}
-              {{index}}
-              {{/if}}
+      <div class="col-sm-5 col-md-offset-1 tsr-forms">
+        <h4>Kauba võtab vastu:</h4>
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nimi</label>
+            <div class="col-sm-10">
+              <a href="#" id="nimi" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
             </div>
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
-              <div class="fixwidth">
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value1}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value2}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value3}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value4}}}</p>
-                </div>
-              </div>
-            </div>
-
           </div>
-        {{/each}}
-         
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Telefon</label>
+            <div class="col-sm-10">
+              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-     </div>
-     {{/each}}
-     
-   </div>
-  {{/comparision}}
-</script>
-<ul class="tsr-direction-nav">
-  <li><a class="tsr-prev js-compare-prev" href="#"></a></li>
-  <li><a class="tsr-next js-compare-next" href="#"></a></li>
-</ul>
-            <!-- <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a> -->
-
-
   </div>
 </div>
 
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row tsr-forms">
+      <div class="col-sm-6">
+        <h4>Vali pood:</h4>
+        <div class="select-container">
+          <select id="chooseShop">
+            <optgroup label="Tallinn/Harjumaa">
+  <option value="165">Tallinna Lasnamäe Maksimarket</option>
+  <option value="133">Laagri Maksimarket</option>
+  <option value="161">Maardu Maxima</option>
+  <option value="104">Rotermanni Kvartali Aatrium</option>
+  <option value="156">Saku Selver</option>
+  <option value="121">Tallinna Haabersti Rimi</option>
+  <option value="126">Tallinna Järve Keskus</option>
+  <option value="160">Tallinna Kaubamaja</option>
+  <option value="146">Tallinna Kristiine Keskus</option>
+  <option value="120">Tallinna Lasnamäe Centrum (RIMI)</option>
+  <option value="103">Tallinna Lasnamäe Prisma</option>
+  <option value="164">Tallinna Magistrali Keskus</option>
+  <option value="102">Tallinna Merimetsa Selver</option>
+  <option value="138">Tallinna Mustika Keskus</option>
+  <option value="124">Tallinna Nõmme Keskus</option>
+  <option value="125">Tallinna Pirita Selver</option>
+  <option value="153">Tallinna Rocca Al Mare Keskus</option>
+  <option value="154">Tallinna Sikupilli Prisma</option>
+  <option value="141">Tallinna Smuuli Maxima</option>
+  <option value="155">Tallinna Solaris Keskus</option>
+  <option value="137">Tallinna Tondi Selver</option>
+  <option value="122">Tallinna Torupilli Selver</option>
+  <option value="139">Viimsi Keskus</option>
+  <option value="134">Keila Selver</option>
+</optgroup>
+<optgroup label="Saaremaa">
+  <option value="116">Kuressaare Saare Selver</option>
+  <option value="157">Kuressaare Kihelkonna Säästumarket</option>
+</optgroup>
+<optgroup label="Jõgevamaa">
+  <option value="111">Jõgeva Kaubahall</option>
+  <option value="123">Põltsamaa Selver</option>
+</optgroup>
+<optgroup label="Hiiumaa">
+  <option value="115">Kärdla Selver</option>
+</optgroup>
+<optgroup label="Ida-Virumaa">
+  <option value="159">Narva Kreenholmi Säästumarket</option>
+  <option value="140">Sillamäe SK-Market (Konsum)</option>
+  <option value="108">Jõhvi Tsentraal</option>
+  <option value="131">Kohtla-Järve Vironia Keskus </option>
+  <option value="109">Narva Astri Keskus</option>
+</optgroup>
+<optgroup label="Järvamaa">
+  <option value="143">Türi Säästumarket</option>
+  <option value="112">Paide Selver</option>
+</optgroup>
+<optgroup label="Pärnumaa">
+  <option value="127">Pärnu Ülejõe Selver</option>
+  <option value="142">Vändra Konsum</option>
+  <option value="130">Pärnu Keskus</option>
+  <option value="158">Pärnu Maxima XXX</option>
+  <option value="117">Pärnu Kaubamajakas</option>
+</optgroup>
+<optgroup label="Põlvamaa">
+  <option value="128">Põlva Edu Keskus</option>
+</optgroup>
+<optgroup label="Lääne-Virumaa">
+  <option value="110">Rakvere Kroonikeskus</option>
+  <option value="152">Rakvere Põhjakeskus</option>
+  <option value="147">Tapa Bussijaam</option>
+</optgroup>
+<optgroup label="Raplamaa">
+  <option value="113">Rapla Maxima</option>
+  <option value="145">Märjamaa Säästumarket</option>
+</optgroup>
+<optgroup label="Tartumaa">
+  <option value="107">Tartu Lõunakeskus</option>
+  <option value="135">Tartu Tasku moe- ja vabaajakeskus</option>
+  <option value="163">Tartu Raadi Maxima</option>
+  <option value="150">Tartu Eeden</option>
+  <option value="106">Tartu Anne Selver</option>
+  <option value="144">Elva Säästumarket</option>
+  <option value="151">Tartu Zeppelin</option>
+  <option value="136">Tartu Rebase Rimi</option>
+</optgroup>
+<optgroup label="Läänemaa">
+  <option value="114">Rannarootsi Keskus</option>
+</optgroup>
+<optgroup label="Valgamaa">
+  <option value="149">Otepää Maxima</option>
+  <option value="148">Tõrva Maxima</option>
+  <option value="118">Valga Selver</option>
+</optgroup>
+<optgroup label="Viljandimaa">
+  <option value="162">Viljandi Uku keskus</option>
+  <option value="101">Viljandi Männimäe Selver</option>
+</optgroup>
+<optgroup label="Võrumaa">
+  <option value="119">Võru Kagukeskus</option>
+</optgroup>
+          </select>
+        </div>
+      </div>
 
-    <a href="#" class="tsr-module-support icon icon-leasing">
-      <h6>Elioni järelmaks</h6>
-    </a>  
+      <!-- <div class="col-sm-8 tsr-forms">
+        <h4>Arveandmed:</h4>
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nimi</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">E-post</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Telefon</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Aadress</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+        </form>
+      </div> -->
+    </div>
+  </div>
+</div> 
+        <div class="row">
+  <hr>
 
-    <a href="#" class="tsr-module-support icon icon-transport">
-      <h6>Transport e-poes</h6>
-    </a>  
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+        <button class="btn btn-link" onClick="location.href= 'cart-overview.html' " >Tagasi</button>
+      </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-payment.html' ">Jätka ostmist</button>
+        </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+    
+</div>
 
-    <a href="#" class="tsr-module-support icon icon-help">
-      <h6>Abiinfo</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-settings">
-      <h6>Remont ja hooldus</h6>
-    </a>                  
-
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
 <footer>
     <div class="container-no-gutter">
         <div class="row">
@@ -988,4 +1046,5 @@ $(document).ready(function(){
 </body>
 </html>  
 
-<script src="assets/data/handlebars/hbs-compare.hbs"></script>
+<script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
+<script src="assets/data/handlebars/hbs-products.hbs"></script>

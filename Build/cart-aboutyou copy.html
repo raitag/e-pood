@@ -122,12 +122,9 @@
         <ul class="list-group promotion">
           <li class="dropdown-header"><h6><a href="#">Tere!</a></h6>
             <ul>
-              <li><p>See on e-poe aktiivne proto. Siit menüüst leiad kõik lehed, mis meil käsil või valmis. </p>
+              <li><p>See on e-poe aktiivne proto. Koondan siia menüüsse kõik lehed, mis meil käsil või valmis - et kiiremini õige koha üles leiaks. </p>
                 <p>
-                Kui on küsimusi kirjuta mulle <a href="mailto:mare.hunt@netgroup.ee" style="text-decoration: underline;">mare.hunt@netgroup.ee</a>.
-              </p>
-              <p>Projekti dokumentatsioon asub <a href="https://github.com/kokakoola/e-pood/blob/master/README.md" style="text-decoration: underline;">Githubis</a></p>
-            </li>
+                Kui on küsimusi kirjuta mulle <a href="mailto:mare.hunt@netgroup.ee">mare.hunt@netgroup.ee</a>.</p></li>
             </ul>
           </li>
         </ul>
@@ -149,7 +146,7 @@
               <li><a href="found-page-block.html">Otsingutulemused klots</a></li>
               <li><a href="found-page-list.html">Otsingutulemused list</a></li>
               <li><a href="favorite-page.html">Lemmikud (+ajax loader inline)</a></li>
-              <li class='current'><a class='current' href="compare-page.html">Võrdlus</a></li>
+              <li><a href="compare-page.html">Võrdlus</a></li>
               <li><a href="care-page.html">Hooldusinfo</a></li>
               <li><a href="help-page.html">Abilehed</a></li>
               
@@ -619,164 +616,215 @@
 </nav> -->
 
 </header>
-<section class="ee-breadcrumbs hidden-xs hidden-sm">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Arvutid ja lisad</a></li>
-      <li class="active">Sülearvutid</li>
-    </ul>
-  </div>
-</section>
-<div class="ee-filterbar fullwidth">
-  <div class="container">
-    <div class="navbar navbar-inverse" role="filtering">
-      <ul class="nav navbar-nav navbar-left">
-          <li >
-            <a href="#">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
-          </li>
-          <li class="active">
-            <a href="#" id="toggleParam" class="showParameterDifferences" data-show="Peida detailid" data-hide="Näita detaile">Peida detailid <span class="icon icon-arrow-up"></span></a>  
-          </li>
-          <li class="visible-xs">
-            <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-          </li>
-        </ul>
-      <!-- s -->
-    </div>
-  </div>
-</div>
-
-
 
 
 
 <div class="container xs-not-padded"> 
-  
-  <div class="ee-product-compare">
-    
-<div id="content-placeholder-compare-data" class=""></div>
-<!-- <span class="previ ee-left ee-iconbutton"></span>
-<span class="nexti ee-right ee-iconbutton"></span> -->
-
-<script id="compare-data-template" type="text/x-handlebars-template">
-  {{#comparision}} 
-  
-  <div class="panel-group ee-accordion" >
-
-    <div class="panel panel-default">
-      <div class="comparision-header">
+  <section class="ee-shopping">
+    <div class="progress-steps" data-update="progress">
+      <div class="progress-tabs">
+        <ol data-progress-steps="5">
+          <li class="" data-target="#id1">
+            <h4>Ostukorvi ülevaade</h4>
+          </li>
+          <li class="progress-active" data-target="#id2">
+            <h4>Arveandmed</h4>
+          </li>
+          <li class="" data-target="#id3">
+            <h4>Kohaletoomine</h4>
+          </li>
+          <li class="">
+            <h4>Maksmine</h4>
+          </li>
+          <li class="last-child " data-target="#id5">
+            <h4>Kokkuvõte</h4>
+          </li>
+        </ol>
+      </div>
+      <div class="progress-content">
+        <div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row tsr-forms">
+      <div class="col-sm-4">
+        <h4>Olen:</h4>
+        <div class="select-container">
+          <select id="chooseRole">
+            <option selected>Eraklient</option>
+            <option>Äriklient</option>
+          </select>
+        </div>
+      </div>
       
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
+      <div class="col-sm-4">
+        <h4>Soovin maksta:</h4>
+        <div class="select-container">
+          <select id="choosePayment">
+            <option selected>Pangalingiga</option>
+            <option disabled>Järelmaksuga</option>
+            <option>Ettemaksuga</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-sm-4">
+        <div class="alert alert-success alert-dismissable" role="alert">
+          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <small>
+            Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
+            <ul>
+              <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
+              <li>Ostusumma peab ületama 32 €.</li>
+            </ul> 
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-8 tsr-forms">
+        <h4>Arveandmed:</h4>
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nimi</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">Anton Keks</label>
             </div>
-          
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
-              <div class="fixwidth">
-              {{#each prod}}
-                <div class="col-xs-2 compare-value jsCompareProduct">
-                  <a type="button" class="close" aria-hidden="true">×</a>
-                  <img class="img-responsive" src="{{img}}" alt="">
-                  <h6><a href="">{{product}}</a></h6>
-                  <a href="" class="btn btn-link ee-buy">Osta</a>
-                </div>
-                {{/each}}
-              </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">E-post</label>
+            <div class="col-sm-10">
+              <a href="#" id="epost" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta e-posti aadress">keks@kummi.ee &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Telefon</label>
+            <div class="col-sm-10">
+              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Aadress</label>
+            <div class="col-sm-10">
+              <a href="#" id="aadress" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+
+      <!-- <div class="col-sm-8 tsr-forms">
+        <h4>Arveandmed:</h4>
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nimi</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">E-post</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Telefon</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Aadress</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+        </form>
+      </div> -->
+    <!--   <div class="col-sm-4 checks">
+        <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">Soovin saada e-poe pakkumisi</span></label>
+      
+        <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tingimustega</a></span></label>
+      
+        <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tagastustingimustega</a></span></label>
+      </div> -->
+    
+      <div class="col-sm-4 checks ">
+        <div class="form-group clearfix">
+          <span class="ee-labeltext col-sm-8 control-label">Soovin saada e-poe pakkumisi</span>
+          <div class="col-sm-4">
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch1" >
+              <label class="onoffswitch-label" for="myonoffswitch1">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <span class="ee-labeltext col-sm-8 control-label">Nõustun e-poe <a href="">tingimustega</a></span>
+          <div class="col-sm-4">
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch2" >
+              <label class="onoffswitch-label" for="myonoffswitch2">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <span class="ee-labeltext col-sm-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a></span>
+          <div class="col-sm-4">
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
+              <label class="onoffswitch-label" for="myonoffswitch3">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    {{#each param}}
-     <div class="panel panel-default">
-     {{#if heading}}
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" href="#{{headingid}}">
-            {{heading}}
-          </a>
-        </h4>
-      </div>
-    {{/if}}
-    <div id="{{headingid}}" class="panel-collapse collapse in js-subpanel">
-      <div class="col-xs-12">
-        {{#each data}}
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
-            {{#if description}}
-              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
-              {{else}}
-              {{index}}
-              {{/if}}
-            </div>
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
-              <div class="fixwidth">
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value1}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value2}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value3}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value4}}}</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        {{/each}}
-         
-      </div>
-    </div>
-     </div>
-     {{/each}}
-     
-   </div>
-  {{/comparision}}
-</script>
-<ul class="tsr-direction-nav">
-  <li><a class="tsr-prev js-compare-prev" href="#"></a></li>
-  <li><a class="tsr-next js-compare-next" href="#"></a></li>
-</ul>
-            <!-- <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a> -->
-
-
   </div>
 </div>
 
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
+<div class="row">
+  <hr>
 
-    <a href="#" class="tsr-module-support icon icon-leasing">
-      <h6>Elioni järelmaks</h6>
-    </a>  
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+        <button class="btn btn-link" onClick="location.href= 'cart-overview.html' " >Tagasi</button>
+      </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-delivery.html' ">Jätka ostmist</button>
+        </div>
+    </div>
+  </div>
+</div> 
+      </div>
 
-    <a href="#" class="tsr-module-support icon icon-transport">
-      <h6>Transport e-poes</h6>
-    </a>  
+<!--       <div class="progress-content">
+        <div id="id1" class="progress-pane">Step one CONTENT <br>  ... </div>
+        <div id="id2" class="progress-pane">Step two CONTENT <br>  ... </div>
+        <div id="id3" class="progress-pane"> Step three CONTENT <br>  ... </div>
+        <div id="id4" class="progress-pane">Step four CONTENT <br>  ... </div>
+        <div id="id5" class="progress-pane">Step five CONTENT <br>  ... </div>
+         
+        <button class="btn btn-link" data-action="prev">Tagasi</button> <button class="btn btn-default btn-block ee-btn-buy" data-action="next">Jätka ostmist</button>
+      </div> -->
+    </div>
+  </section>
+    
+</div>
 
-    <a href="#" class="tsr-module-support icon icon-help">
-      <h6>Abiinfo</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-settings">
-      <h6>Remont ja hooldus</h6>
-    </a>                  
-
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
 <footer>
     <div class="container-no-gutter">
         <div class="row">
@@ -988,4 +1036,5 @@ $(document).ready(function(){
 </body>
 </html>  
 
-<script src="assets/data/handlebars/hbs-compare.hbs"></script>
+<script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
+<script src="assets/data/handlebars/hbs-products.hbs"></script>

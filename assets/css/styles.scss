@@ -300,9 +300,14 @@ display: block;
   margin-bottom: -1px;
 }
 
-.ee-upper-distance {
+.ee-top-10 {
   margin-top: 10px;
 }
+
+.ee-top-20 {
+  margin-top: 20px;
+}
+
 .ee-hidden-xs {
   display: none !important;
     @include media-min($screen-sm) {
@@ -486,6 +491,14 @@ footer .social-block .media .icon {
     font-weight: normal;
     display: block; 
   }
+}
+
+label.control-label-left {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
 }
 
 .rating-input {
