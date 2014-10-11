@@ -13140,9 +13140,7 @@ header .megamenu .search-item-image,
       .ee-product-compare .compare-title {
         background: none;
         text-align: left;
-        border-bottom: none;
-        padding-top: 10px;
-        padding-bottom: 10px; } }
+        border-bottom: none; } }
   .ee-product-compare .ee-count-5 {
     width: 50%; }
     @media (min-width: 768px) {
