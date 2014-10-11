@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Title</title>
+<title>Ostukorv-3</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Ostukorv-3" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Title">
+<meta name="twitter:title" content="Ostukorv-3">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -160,6 +160,8 @@
               <li><a href="cart-overview.html">1. Ülevaade</a></li>
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li class='current'><a class='current' href="cart-delivery.html">3. Kohaletoomine</a></li>
+              <li><a href="cart-payment.html">4. Maksmine</a></li>
+              <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
             </ul>
           </li>
         </ul>
@@ -622,6 +624,7 @@
 
 
 
+
 <div class="container xs-not-padded"> 
   <section class="ee-shopping">
     <div class="progress-steps" data-update="progress">
@@ -648,7 +651,7 @@
         <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <h4>Vali kättesaamise viis:</h4>
         <div class="select-container">
           <select id="chooseDelivery">
@@ -659,8 +662,15 @@
           </select>
         </div>
       </div>
-      <div class="col-sm-5 col-md-offset-1 tsr-forms">
-        <h4>Kauba võtab vastu:</h4>
+      <div class="col-sm-4 ee-top-20">
+        <p class="ee-top-20">
+          <small>
+            Mingi selgitav tekst, see mis muidu lilla mummu sees käib. Muutub vastavalt sellele, mis on valitud.
+          </small>
+        </p>
+      </div>
+      <div class="col-sm-4 tsr-forms">
+        <h5>Kauba võtab vastu:</h5>
         <form id="about" method="post" class="form-horizontal" role="form">
           <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Nimi</label>
@@ -679,11 +689,11 @@
     </div>
   </div>
 </div>
-
+<hr class="hidden-xs">
 <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <h4>Vali pood:</h4>
         <div class="select-container">
           <select id="chooseShop">
@@ -782,6 +792,21 @@
           </select>
         </div>
       </div>
+      <div class="col-sm-4">
+        <h5>EMT ja Elion ühisesindus, Kärdla</h5>
+          <p>
+            <strong>Aadress:</strong><br>
+            Harjumaa, Türi 5 - Tallinna linn
+          </p>
+          <p>
+            <strong>Lahtiolekuajad:</strong><br>
+            E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud
+          </p>
+      </div>
+      <div class="col-sm-4 ee-top-10">
+          <img class="img-responsive" src="http://placehold.it/495x400&text=Kaart" alt="">
+        </div>
+
 
       <!-- <div class="col-sm-8 tsr-forms">
         <h4>Arveandmed:</h4>
@@ -816,12 +841,12 @@
   </div>
 </div> 
         <div class="row">
-  <hr>
+  <hr class="hidden-xs">
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
       <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-        <button class="btn btn-link" onClick="location.href= 'cart-overview.html' " >Tagasi</button>
+        <button class="btn btn-link" onClick="location.href= 'cart-aboutyou.html' " >Tagasi</button>
       </div>
         <div class="col-sm-4">
           <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-payment.html' ">Jätka ostmist</button>
@@ -1045,6 +1070,3 @@ $(document).ready(function(){
 
 </body>
 </html>  
-
-<script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
-<script src="assets/data/handlebars/hbs-products.hbs"></script>

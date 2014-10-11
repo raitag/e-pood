@@ -1,8 +1,18 @@
 .ee-shopping {
-  margin-top: 20px;
-  .progress-content {
+    @include media-min($screen-sm) {
+      margin-top: 20px;
+    }
+  .ee-infotext {
     margin-bottom: 20px;
     margin-top: 30px;
+  }
+
+  .progress-content {
+    @include media-min($screen-sm) {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
     .close:hover {
       color: $purple-c;
       opacity: 1;
@@ -15,18 +25,20 @@
     border-bottom: 1px solid $lightgrey-t;
     }
   .cart-item {
-    margin-top: 20px;
     h3 {
     font-size: 1.6em;
     margin-top: 0px;
     }
     .cart-item-image {
       padding-right: 5px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
       .img-responsive {
-        max-width: 75px;
         width: 100%;
         height: auto;
+        @include media-min($screen-sm) {
+          max-width: 75px;
+        }
       }
     }
     .input-group,
@@ -35,10 +47,16 @@
       max-width: 130px;
       margin-bottom: 10px;
     }
-    .input-number input[type="text"] {
-      padding: 0;
-      text-align: center;
+
+    .input-group .input-number {
+      input[type="text"], 
+      input[type="password"], 
+      input[type="search"] {
+        text-align: center;
+      }
     }
+
+
     .panel {
       margin-bottom: 8px;
     }
@@ -60,7 +78,9 @@
   .ee-price {
     font-size: 1.4em;
     margin-bottom: 14px;
-    font-weight: bold;
+    span {
+      font-weight: bold;
+    }
   }
   .ee-accordion {
     border-top: 1px solid $lightgrey-t;
@@ -80,8 +100,19 @@
 
   .checks {
     margin-top: 35px;
+    @include media-min($screen-sm) {
+      margin-top: 15px;
+    }
     .form-group {
     margin-top: 15px;
+    }
+  }
+
+  .bankbuttons { 
+    margin-bottom: 20px;
+    .btn {
+      display: inline-block; 
+      margin: 0 10px 10px 0;
     }
   }
 

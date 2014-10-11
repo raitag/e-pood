@@ -75,6 +75,30 @@
 }
 
 
+.btn-swed {
+  @include button-variant($btn-swed-color, $btn-swed-bg, $btn-swed-border);
+}
+
+.btn-seb {
+  @include button-variant($btn-seb-color, $btn-seb-bg, $btn-seb-border);
+}
+
+.btn-lhv {
+  @include button-variant($btn-lhv-color, $btn-lhv-bg, $btn-lhv-border);
+}
+
+.btn-krediidi {
+  @include button-variant($btn-krediidi-color, $btn-krediidi-bg, $btn-krediidi-border);
+}
+
+.btn-danske {
+  @include button-variant($btn-danske-color, $btn-danske-bg, $btn-danske-border);
+}
+
+.btn-nordea {
+  @include button-variant($btn-nordea-color, $btn-nordea-bg, $btn-nordea-border);
+}
+
 // Link buttons
 // -------------------------
 

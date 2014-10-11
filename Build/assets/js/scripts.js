@@ -137,6 +137,8 @@ $(".input-number").keydown(function (e) {
   //   defaultText: "Vali makseviis"
   // });
 
+  var x = document.getElementById("choosePaymentSelectBoxItOptions");
+
 // Call xeditable
   $.fn.editable.defaults.mode = 'inline';
   $(document).ready(function() {
@@ -149,6 +151,9 @@ $(".input-number").keydown(function (e) {
 });
 
 
+  if ($('#choosePaymentSelectBoxItText').data('val') === "Ettemaksuga") {
+    console.log('this');
+  }
 
 
 // counting rules for IE 8-9 as the limit is 4095

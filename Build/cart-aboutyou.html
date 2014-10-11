@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Title</title>
+<title>Ostukorv-2</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Ostukorv-2" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Title">
+<meta name="twitter:title" content="Ostukorv-2">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -103,6 +103,22 @@
 
 <body> 
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
+<div class="alert full-size alert-info" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+          Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
+            <ul>
+              <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
+              <li>Ostusumma peab ületama 32 €.</li>
+            </ul> 
+            <a class="read-more" href="#">
+                Sain aru, sulge
+            </a>
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
 <header>
 
 
@@ -160,6 +176,8 @@
               <li><a href="cart-overview.html">1. Ülevaade</a></li>
               <li class='current'><a class='current' href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
+              <li><a href="cart-payment.html">4. Maksmine</a></li>
+              <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
             </ul>
           </li>
         </ul>
@@ -622,6 +640,7 @@
 
 
 
+
 <div class="container xs-not-padded"> 
   <section class="ee-shopping">
     <div class="progress-steps" data-update="progress">
@@ -648,7 +667,8 @@
         <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms">
-      <div class="col-sm-4">
+
+      <div class="col-sm-6 col-md-4">
         <h4>Olen:</h4>
         <div class="select-container">
           <select id="chooseRole">
@@ -658,7 +678,7 @@
         </div>
       </div>
       
-      <div class="col-sm-4">
+      <div class="col-sm-6 col-md-4 ee-top-20-xs">
         <h4>Soovin maksta:</h4>
         <div class="select-container">
           <select id="choosePayment">
@@ -668,29 +688,25 @@
           </select>
         </div>
       </div>
-      
-    <p id="this">Fooo</p>
 
-      <div class="col-sm-4">
-        <div class="alert alert-success alert-dismissable" role="alert">
-          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <small>
-            Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
-            <ul>
-              <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
-              <li>Ostusumma peab ületama 32 €.</li>
-            </ul> 
-          </small>
-        </div>
-      </div>
+      <!-- <div class="col-sm-12 col-md-4 ee-infotext">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <small>
+          Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
+          <ul>
+            <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
+            <li>Ostusumma peab ületama 32 €.</li>
+          </ul> 
+        </small>
+      </div> -->
     </div>
   </div>
 </div>
 
-<div class="row">
+<div class="row ee-top-20">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
-      <div class="col-sm-8 tsr-forms">
+      <div class="col-sm-6 col-md-8 tsr-forms">
         <h4>Arveandmed:</h4>
         <form id="about" method="post" class="form-horizontal" role="form">
           <div class="form-group">
@@ -765,40 +781,46 @@
 
       <!-- WARNING! No ie8 compatible. Use regular Checks there-->
 <!--  ******************** -->
-      <div class="col-sm-4 checks ">
-        <div class="form-group clearfix">
-          <span class="ee-labeltext col-sm-8 control-label">Soovin saada e-poe pakkumisi</span>
-          <div class="col-sm-4">
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch1" >
-              <label class="onoffswitch-label" for="myonoffswitch1">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
+      <div class="col-sm-6 col-md-4 checks ">
+        <div class="row">
+          <div class="form-group">
+            <span class="ee-labeltext col-xs-8 control-label">Soovin saada e-poe pakkumisi</span>
+            <div class="col-xs-4">
+              <div class="onoffswitch pull-right">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch1" >
+                <label class="onoffswitch-label" for="myonoffswitch1">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
-        <div class="form-group clearfix">
-          <span class="ee-labeltext col-sm-8 control-label">Nõustun e-poe <a href="">tingimustega</a></span>
-          <div class="col-sm-4">
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch2" >
-              <label class="onoffswitch-label" for="myonoffswitch2">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
+        <div class="row">
+          <div class="form-group">
+            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tingimustega</a></span>
+            <div class="col-xs-4">
+              <div class="onoffswitch pull-right">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch2" >
+                <label class="onoffswitch-label" for="myonoffswitch2">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
-        <div class="form-group clearfix">
-          <span class="ee-labeltext col-sm-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a></span>
-          <div class="col-sm-4">
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
-              <label class="onoffswitch-label" for="myonoffswitch3">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
+        <div class="row">
+          <div class="form-group">
+            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a></span>
+            <div class="col-xs-4">
+              <div class="onoffswitch pull-right">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
+                <label class="onoffswitch-label" for="myonoffswitch3">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -807,7 +829,7 @@
   </div>
 </div>
         <div class="row">
-  <hr>
+  <hr class="hidden-xs">
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
@@ -1035,6 +1057,3 @@ $(document).ready(function(){
 
 </body>
 </html>  
-
-<script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
-<script src="assets/data/handlebars/hbs-products.hbs"></script>

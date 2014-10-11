@@ -1,13 +1,9 @@
 <!-- @include _header.html -->
-<div class="alert full-size alert-info" id="success1">
+<div class="alert full-size alert-success" id="success1">
     <div class="container">
         <span class="icon icon-info"></span>
         <div>
-          Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
-            <ul>
-              <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
-              <li>Ostusumma peab ületama 32 €.</li>
-            </ul> 
+            <span>Peale kauba eest tasumist (pangaülekande tegemist) välju e-panga lehelt vajutades nupule <span class="h3">Tagasi kaupmehe juurde</span>. Tellimuse ja makse kinnituseks kuvatakse Sulle tellimuse kinnitus. </span>
             <a class="read-more" href="#">
                 Sain aru, sulge
             </a>
@@ -16,9 +12,11 @@
     </div>
 </div>
 <!-- @include _mainnav.html -->
-<!-- $title Ostukorv-2 -->
-<!-- $nextstep 'cart-delivery.html' -->
-<!-- $prevstep 'cart-overview.html' -->
+<!-- $title Ostukorv-4 -->
+<!-- $nextstep 'cart-conclusion.html' -->
+<!-- $prevstep 'cart-delivery.html' -->
+
+
 
 <div class="container xs-not-padded"> 
   <section class="ee-shopping">
@@ -28,26 +26,28 @@
           <li class="" data-target="#id1">
             <h4>Ostukorvi ülevaade</h4>
           </li>
-          <li class="progress-active" data-target="#id2">
+          <li class="" data-target="#id2">
             <h4>Arveandmed</h4>
           </li>
           <li class="" data-target="#id3">
             <h4>Kohaletoomine</h4>
           </li>
-          <li class="">
+          <li class="progress-active">
             <h4>Maksmine</h4>
           </li>
-          <li class="last-child " data-target="#id5">
+          <li class="last-child" data-target="#id5">
             <h4>Kokkuvõte</h4>
           </li>
         </ol>
       </div>
       <div class="progress-content">
-        <!-- @include _aboutyou.html -->
-        <!-- @include _bottom.html -->
+        <!-- @include _overview-final.html --> 
+        <!-- @include _banklinks.html -->
       </div>
     </div>
   </section>
+    
 </div>
 
 <!-- @include _footer.html -->  
+<script src="assets/data/handlebars/hbs-products.hbs"></script>

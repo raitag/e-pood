@@ -97,12 +97,15 @@
     border-bottom: 1px solid $lightgrey-t;
     font-size: 110%;
     text-align: center;
-    line-height: 3;
+    padding-top: 10px;
+    padding-bottom: 10px;
     // white-space: nowrap;
     @include media-min($screen-sm) {
       background: none;
       text-align: left;
       border-bottom: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
     } 
   } 
 

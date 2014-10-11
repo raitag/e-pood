@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Title</title>
+<title>Ostukorv-4</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Ostukorv-4" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Title">
+<meta name="twitter:title" content="Ostukorv-4">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -103,6 +103,18 @@
 
 <body> 
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
+<div class="alert full-size alert-success" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Peale kauba eest tasumist (pangaülekande tegemist) välju e-panga lehelt vajutades nupule <span class="h3">Tagasi kaupmehe juurde</span>. Tellimuse ja makse kinnituseks kuvatakse Sulle tellimuse kinnitus. </span>
+            <a class="read-more" href="#">
+                Sain aru, sulge
+            </a>
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
 <header>
 
 
@@ -122,9 +134,12 @@
         <ul class="list-group promotion">
           <li class="dropdown-header"><h6><a href="#">Tere!</a></h6>
             <ul>
-              <li><p>See on e-poe aktiivne proto. Koondan siia menüüsse kõik lehed, mis meil käsil või valmis - et kiiremini õige koha üles leiaks. </p>
+              <li><p>See on e-poe aktiivne proto. Siit menüüst leiad kõik lehed, mis meil käsil või valmis. </p>
                 <p>
-                Kui on küsimusi kirjuta mulle <a href="mailto:mare.hunt@netgroup.ee">mare.hunt@netgroup.ee</a>.</p></li>
+                Kui on küsimusi kirjuta mulle <a href="mailto:mare.hunt@netgroup.ee" style="text-decoration: underline;">mare.hunt@netgroup.ee</a>.
+              </p>
+              <p>Projekti dokumentatsioon asub <a href="https://github.com/kokakoola/e-pood/blob/master/README.md" style="text-decoration: underline;">Githubis</a></p>
+            </li>
             </ul>
           </li>
         </ul>
@@ -157,6 +172,8 @@
               <li><a href="cart-overview.html">1. Ülevaade</a></li>
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
+              <li class='current'><a class='current' href="cart-payment.html">4. Maksmine</a></li>
+              <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
             </ul>
           </li>
         </ul>
@@ -619,6 +636,9 @@
 
 
 
+
+
+
 <div class="container xs-not-padded"> 
   <section class="ee-shopping">
     <div class="progress-steps" data-update="progress">
@@ -627,199 +647,152 @@
           <li class="" data-target="#id1">
             <h4>Ostukorvi ülevaade</h4>
           </li>
-          <li class="progress-active" data-target="#id2">
+          <li class="" data-target="#id2">
             <h4>Arveandmed</h4>
           </li>
           <li class="" data-target="#id3">
             <h4>Kohaletoomine</h4>
           </li>
-          <li class="">
+          <li class="progress-active">
             <h4>Maksmine</h4>
           </li>
-          <li class="last-child " data-target="#id5">
+          <li class="last-child" data-target="#id5">
             <h4>Kokkuvõte</h4>
           </li>
         </ol>
       </div>
       <div class="progress-content">
-        <div class="row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row tsr-forms">
-      <div class="col-sm-4">
-        <h4>Olen:</h4>
-        <div class="select-container">
-          <select id="chooseRole">
-            <option selected>Eraklient</option>
-            <option>Äriklient</option>
-          </select>
+        <div class="row cart">
+  <div class="cart-items">
+    <div id="content-placeholder-fittingproducts-detail"></div>
+
+    <div class="col-md-10 col-md-offset-1 cart-item">
+      <hr>
+      <div class="row">
+        <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
+          <span class="icon icon-transport" style="font-size: 40px; line-height: 1;"></span>
+        </div>
+
+        <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+          <h5>Kättetoimetamine</h5>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+          <div class="row">
+            <div class="col-xs-6 col-sm-7 ee-middle-table">
+              <div class="form-group">
+                <label class="col-sm-10 control-label ee-top-10" style="font-weight: normal;">Kogus: <strong>1</strong> </label>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-5 ee-middle-table">
+              <p class="tsr-product-price ee-product-price-md">Hind: 3.50 €</p>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="col-sm-4">
-        <h4>Soovin maksta:</h4>
-        <div class="select-container">
-          <select id="choosePayment">
-            <option selected>Pangalingiga</option>
-            <option disabled>Järelmaksuga</option>
-            <option>Ettemaksuga</option>
-          </select>
-        </div>
-      </div>
-    
-      <div class="col-sm-4">
-        <div class="alert alert-success alert-dismissable" role="alert">
-          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <small>
-            Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
-            <ul>
-              <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
-              <li>Ostusumma peab ületama 32 €.</li>
-            </ul> 
-          </small>
-        </div>
-      </div>
+      <hr>
     </div>
+    <script id="fittingproducts-detail-template" type="text/x-handlebars-template">
+    {{#products}} 
+      <div class="col-md-10 col-md-offset-1 cart-item">
+        <div class="row">
+          <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
+            <img class="img-responsive" src="assets/img/detail-addons/{{id}}.jpg">
+          </div>
+
+          <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+            <h5>{{name}}</h5>
+            {{#if special_price}}
+            <div class="panel">
+            <strong>See DVD mängija on Sulle, Raili :)</strong>
+            </div>
+            
+            
+            {{/if}}
+          </div>
+          <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+            <div class="row">
+              <div class="col-xs-6 col-sm-7 ee-middle-table">
+                <div class="form-group  ee-top-20">
+                  <label class="col-sm-10 control-label" style="font-weight: normal;">Kogus: <strong>1</strong> </label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-5 ee-middle-table">
+              {{#if special_price}}
+              <p>Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                
+                <p>Sinu võit: 2 €</p>
+                {{else}}
+                <p class="tsr-product-price ee-product-price-md">Hind: {{normal_price}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    {{/products}} 
+    </script>
+      
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
+<div class="row ee-top-20">
+  <div class="col-md-10 col-md-offset-1">
     <div class="row">
-      <div class="col-sm-8 tsr-forms">
-        <h4>Arveandmed:</h4>
-        <form id="about" method="post" class="form-horizontal" role="form">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nimi</label>
-            <div class="col-sm-10">
-              <label class="control-label-left">Anton Keks</label>
-            </div>
+      <div class="col-sm-6">
+        <legend>Kauba saad kätte aadressilt: </legend>
+        <h6>Endla tn 4, 10142 Tallinn, Kesklinn, Harjumaa</h6>
+        <legend>Kauba saad kätte ajavahemikul: </legend>
+        <h6>9.10.2014 17:00 - 19:00</h6>
+      </div>
+      
+      <div class="col-sm-5 col-sm-offset-1">
+
+        <h4 ="ee-top-20">
+          Ostukorv kokku
+          <div class="pull-right ee-product-price-md">
+            <strong>269.99 €</strong>
           </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">E-post</label>
-            <div class="col-sm-10">
-              <a href="#" id="epost" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta e-posti aadress">keks@kummi.ee &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-            </div>
+        </h4>
+        <h6>
+          Summa käibemaksuta 
+          <div class="pull-right">
+            <strong>169.99 €</strong>
           </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Telefon</label>
-            <div class="col-sm-10">
-              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-            </div>
+        </h6>
+        <h6>
+          Käibemaks 
+          <div class="pull-right">
+            <strong>69.99 €</strong>
           </div>
-          <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Aadress</label>
-            <div class="col-sm-10">
-              <a href="#" id="aadress" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-            </div>
-          </div>
-        </form>
+        </h6>
         
       </div>
-
-      <!-- <div class="col-sm-8 tsr-forms">
-        <h4>Arveandmed:</h4>
-        <form id="about" method="post" class="form-horizontal" role="form">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nimi</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">E-post</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Telefon</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Aadress</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-        </form>
-      </div> -->
-    <!--   <div class="col-sm-4 checks">
-        <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">Soovin saada e-poe pakkumisi</span></label>
-      
-        <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tingimustega</a></span></label>
-      
-        <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tagastustingimustega</a></span></label>
-      </div> -->
-    
-      <div class="col-sm-4 checks ">
-        <div class="form-group clearfix">
-          <span class="ee-labeltext col-sm-8 control-label">Soovin saada e-poe pakkumisi</span>
-          <div class="col-sm-4">
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch1" >
-              <label class="onoffswitch-label" for="myonoffswitch1">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group clearfix">
-          <span class="ee-labeltext col-sm-8 control-label">Nõustun e-poe <a href="">tingimustega</a></span>
-          <div class="col-sm-4">
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch2" >
-              <label class="onoffswitch-label" for="myonoffswitch2">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group clearfix">
-          <span class="ee-labeltext col-sm-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a></span>
-          <div class="col-sm-4">
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
-              <label class="onoffswitch-label" for="myonoffswitch3">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <hr>
-
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row">
-      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-        <button class="btn btn-link" onClick="location.href= 'cart-overview.html' " >Tagasi</button>
-      </div>
-        <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-delivery.html' ">Jätka ostmist</button>
-        </div>
     </div>
   </div>
 </div> 
-      </div>
+        <div class="row">
+  <hr>
 
-<!--       <div class="progress-content">
-        <div id="id1" class="progress-pane">Step one CONTENT <br>  ... </div>
-        <div id="id2" class="progress-pane">Step two CONTENT <br>  ... </div>
-        <div id="id3" class="progress-pane"> Step three CONTENT <br>  ... </div>
-        <div id="id4" class="progress-pane">Step four CONTENT <br>  ... </div>
-        <div id="id5" class="progress-pane">Step five CONTENT <br>  ... </div>
-         
-        <button class="btn btn-link" data-action="prev">Tagasi</button> <button class="btn btn-default btn-block ee-btn-buy" data-action="next">Jätka ostmist</button>
-      </div> -->
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <p>Vali siit sulle sobiv pank. Ettevaatust! Pangalingile vajutades kinnitad tellimuse koos maksekohustusega - mis iganes see siis ka parasjagu tähendab.* </p>
+    <div class="row">
+
+      
+        <div class="col-sm-12 bankbuttons text-right">
+          <button class="btn btn-link " onClick="location.href= 'cart-delivery.html' " >Tagasi</button>
+          <button class="btn btn-swed" onClick="location.href= 'cart-conclusion.html' ">Swedbank</button>
+          <button class="btn btn-seb" onClick="location.href= 'cart-conclusion.html' ">SEB</button>
+          <button class="btn btn-lhv" onClick="location.href= 'cart-conclusion.html' ">LHV pank</button>
+          <button class="btn btn-krediidi" onClick="location.href= 'cart-conclusion.html' ">Krediidipank</button>
+          <button class="btn btn-danske" onClick="location.href= 'cart-conclusion.html' ">Danske Bank</button>
+          <button class="btn btn-nordea" onClick="location.href= 'cart-conclusion.html' ">Nordea Pank</button>
+        </div>
+    </div>
+    <p><small>* Minu meelest pole viisakas kirjutada flowsse sisse arusaamatuid tekste.</small></p>
+  </div>
+</div>
+      </div>
     </div>
   </section>
     
@@ -1035,6 +1008,4 @@ $(document).ready(function(){
 
 </body>
 </html>  
-
-<script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
 <script src="assets/data/handlebars/hbs-products.hbs"></script>

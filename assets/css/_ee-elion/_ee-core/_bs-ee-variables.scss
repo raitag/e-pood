@@ -63,6 +63,15 @@ $link-click:  $purple-t !default;
 $link-disabled: #d6d6d6 !default;
 
 
+// Banks colors
+$swed-bg:  #FF6803;
+$seb-bg: #4AAA1A;
+$lhv-bg: #161616;
+$krediidi-bg: #9B0332;
+$danske-bg: #034362;
+$nordea-bg: #036AA0;
+
+
 
 // Primary
 $font-1: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -231,6 +240,30 @@ $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-seb-color:               #fff;
+$btn-seb-bg:                  $seb-bg;
+$btn-seb-border:              darken($btn-seb-bg, 5%);
+
+$btn-swed-color:               #fff;
+$btn-swed-bg:                  $swed-bg;
+$btn-swed-border:              darken($btn-swed-bg, 5%);
+
+$btn-lhv-color:               #fff;
+$btn-lhv-bg:                  $lhv-bg;
+$btn-lhv-border:              darken($btn-lhv-bg, 5%);
+
+$btn-krediidi-color:               #fff;
+$btn-krediidi-bg:                  $krediidi-bg;
+$btn-krediidi-border:              darken($btn-krediidi-bg, 5%);
+
+$btn-danske-color:               #fff;
+$btn-danske-bg:                  $danske-bg;
+$btn-danske-border:              darken($btn-danske-bg, 5%);
+
+$btn-nordea-color:               #fff;
+$btn-nordea-bg:                  $nordea-bg;
+$btn-nordea-border:              darken($btn-nordea-bg, 5%);
 
 $btn-link-disabled-color:        $gray-light !default;
 

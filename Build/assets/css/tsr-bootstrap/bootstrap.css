@@ -1883,97 +1883,6 @@ textarea {
     pointer-events: none; }
 
 /*  spinner  */
-@font-face {
-  font-family: 'spinner';
-  src: url("http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.eot?-9haulc");
-  src: url("http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.eot?#iefix-9haulc") format("embedded-opentype"), url("http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.woff?-9haulc") format("woff"), url("http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.ttf?-9haulc") format("truetype"), url("http://s3.amazonaws.com/icomoon.io/4/Loading/icomoon.svg?-9haulc#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-[class^="spin-"], [class*=" spin-"] {
-  font-family: 'spinner';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.spin-spinner:before {
-  content: "\e000"; }
-
-.spin-spinner-2:before {
-  content: "\e001"; }
-
-.spin-spinner-3:before {
-  content: "\e002"; }
-
-.spin-spinner-4:before {
-  content: "\e003"; }
-
-.spin-spinner-5:before {
-  content: "\e004"; }
-
-.spin-spinner-6:before {
-  content: "\e005"; }
-
-.spin-spinner-7:before {
-  content: "\e006"; }
-
-@keyframes anim-rotate {
-  0% {
-    transform: rotate(0); }
-
-  100% {
-    transform: rotate(360deg); } }
-
-@-webkit-keyframes anim-rotate {
-  0% {
-    -webkit-transform: rotate(0); }
-
-  100% {
-    -webkit-transform: rotate(360deg); } }
-
-@-moz-keyframes anim-rotate {
-  0% {
-    -moz-transform: rotate(0); }
-
-  100% {
-    -moz-transform: rotate(360deg); } }
-
-@-o-keyframes anim-rotate {
-  0% {
-    -o-transform: rotate(0); }
-
-  100% {
-    -o-transform: rotate(360deg); } }
-
-@keyframes anim-rotate {
-  0% {
-    transform: rotate(0); }
-
-  100% {
-    transform: rotate(360deg); } }
-
-.spinner {
-  display: inline-block;
-  font-size: 15px;
-  height: 1.15em;
-  line-height: 1;
-  margin: .5em;
-  animation: anim-rotate 2s infinite linear;
-  text-shadow: 0 0 0.25em rgba(255, 255, 255, 0.3);
-  position: absolute; }
-
-.spinner--steps {
-  animation: anim-rotate 1s infinite steps(8); }
-
-.spinner--steps2 {
-  animation: anim-rotate 1s infinite steps(12); }
-
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -5387,27 +5296,25 @@ footer {
       .progress-steps .progress-tabs > ol > li:last-child h4:before, .progress-steps .progress-tabs > ol > li.last-child h4:before {
         height: 50%;
         bottom: 50%; }
-      .progress-steps .progress-tabs > ol > li.progress-active {
-        border-bottom: none; }
-        .progress-steps .progress-tabs > ol > li.progress-active:before {
-          border-color: #652d86;
-          content: counter(step);
-          color: #652d86;
-          background-color: #f6f6f6; }
-        .progress-steps .progress-tabs > ol > li.progress-active h4 {
-          color: #652d86;
-          margin-bottom: 0; }
-          .progress-steps .progress-tabs > ol > li.progress-active h4:before {
-            background-color: #652d86; }
-        .progress-steps .progress-tabs > ol > li.progress-active ~ li:before {
-          border-color: #c7c2ba;
-          content: counter(step);
-          color: #c7c2ba;
-          background-color: #f6f6f6; }
-        .progress-steps .progress-tabs > ol > li.progress-active ~ li h4 {
-          color: #c7c2ba; }
-          .progress-steps .progress-tabs > ol > li.progress-active ~ li h4:before {
-            background-color: #c7c2ba; }
+      .progress-steps .progress-tabs > ol > li.progress-active:before {
+        border-color: #652d86;
+        content: counter(step);
+        color: #652d86;
+        background-color: #f6f6f6; }
+      .progress-steps .progress-tabs > ol > li.progress-active h4 {
+        color: #652d86;
+        margin-bottom: 0; }
+        .progress-steps .progress-tabs > ol > li.progress-active h4:before {
+          background-color: #652d86; }
+      .progress-steps .progress-tabs > ol > li.progress-active ~ li:before {
+        border-color: #c7c2ba;
+        content: counter(step);
+        color: #c7c2ba;
+        background-color: #f6f6f6; }
+      .progress-steps .progress-tabs > ol > li.progress-active ~ li h4 {
+        color: #c7c2ba; }
+        .progress-steps .progress-tabs > ol > li.progress-active ~ li h4:before {
+          background-color: #c7c2ba; }
     .progress-steps .progress-tabs > ol .progress-content {
       border-style: solid;
       border-color: #c7c2ba;

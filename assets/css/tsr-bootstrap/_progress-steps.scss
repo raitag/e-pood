@@ -97,7 +97,7 @@ $clr-gray: #c7c2ba;
 
         //colors
         &.progress-active {
-        border-bottom:none;
+        // border-bottom:none;
 
           &:before{
             @include stp-badge-content($clr-active);
