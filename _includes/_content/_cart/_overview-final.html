@@ -1,6 +1,6 @@
 <div class="row cart">
   <div class="cart-items">
-    <div id="content-placeholder-fittingproducts-detail"></div>
+    <div id="content-placeholder-cart"></div>
 
     <div class="col-md-10 col-md-offset-1 cart-item">
       <hr>
@@ -16,7 +16,7 @@
           <div class="row">
             <div class="col-xs-6 col-sm-7 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 control-label ee-top-10" style="font-weight: normal;">Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 control-label ee-top-10" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-6 col-sm-5 ee-middle-table">
@@ -27,18 +27,19 @@
       </div>
       <hr>
     </div>
-    <script id="fittingproducts-detail-template" type="text/x-handlebars-template">
+
+    <script id="cart-template" type="text/x-handlebars-template">
     {{#products}} 
       <div class="col-md-10 col-md-offset-1 cart-item">
         <div class="row">
           <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
-            <img class="img-responsive" src="assets/img/detail-addons/{{id}}.jpg">
+            <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
           </div>
 
           <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
             <h5>{{name}}</h5>
             {{#if special_price}}
-            <div class="panel">
+            <div class="panel"> 
             <strong>See DVD mängija on Sulle, Raili :)</strong>
             </div>
             
@@ -72,4 +73,3 @@
   </div>
 </div>
 
-<!-- @include _overview-final-bottom.html -->

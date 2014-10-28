@@ -72,6 +72,8 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    
+    
 <!--<![endif]-->
 
 
@@ -211,12 +213,95 @@
       <li><a href="#">RUS</a></li>
       <li class="dropdown menu-large">
         <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu cart-dropdown">
           <div class="container">
-            <div class="row megamenu">
-              <div class="col-sm-12"><h2 class="text-center"><span>ostukorvi sisu ja kinnitamise viide</span></h2></div>
+  <div class="row megamenu">
+    <div class="col-sm-9">
+      <h2><span>Sul on ostukorvis 3 asja</span></h2>
+      <div class="row cart">
+  <div class="cart-items">
+    <div id="content-placeholder-cart-dropdown"></div>
+
+    <div class="col-md-10 col-md-offset-1 cart-item">
+      <hr>
+      <div class="row">
+        <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
+          <span class="icon icon-transport" style="font-size: 40px; line-height: 1;"></span>
+        </div>
+
+        <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+          <h5>Kättetoimetamine</h5>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+          <div class="row">
+            <div class="col-xs-6 col-sm-7 ee-middle-table">
+              <div class="form-group">
+                <label class="col-sm-10 control-label ee-top-10" >Kogus: <strong>1</strong> </label>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-5 ee-middle-table">
+              <p class="tsr-product-price ee-product-price-md">Hind: 3.50 €</p>
             </div>
           </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <script id="cart-dropdown-template" type="text/x-handlebars-template">
+    {{#products}} 
+      <div class="col-md-10 col-md-offset-1 cart-item">
+        <div class="row">
+          <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
+            <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+          </div>
+
+          <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+            <h5>{{name}}</h5>
+            {{#if special_price}}
+            <div class="panel"> 
+            <strong>See DVD mängija on Sulle, Raili :)</strong>
+            </div>
+            
+            
+            {{/if}}
+          </div>
+          <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+            <div class="row">
+              <div class="col-xs-6 col-sm-7 ee-middle-table">
+                <div class="form-group  ee-top-20">
+                  <label class="col-sm-10 control-label" style="font-weight: normal;">Kogus: <strong>1</strong> </label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-5 ee-middle-table">
+              {{#if special_price}}
+              <p>Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                
+                <p>Sinu võit: 2 €</p>
+                {{else}}
+                <p class="tsr-product-price ee-product-price-md">Hind: {{normal_price}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    {{/products}} 
+    </script>
+      
+  </div>
+</div>
+
+
+    </div>
+      <div class="col-sm-3">
+        <button class="btn btn-primary btn-block">Saada ostukorv</button><br>
+        <button class="btn btn-primary btn-block">Salvesta ostukorv</button><br>
+        <button class="btn btn-default ee-btn-buy btn-block">Jätka ostmist</button>
+    </div>
+  </div>
+</div>
           <div class="container reset-padding">
             <ul class="row hidden-xs list-unstyled">
               <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
@@ -1022,18 +1107,15 @@
 
     <script src="assets/js/vendor/jquery.js"></script> 
     <script src="assets/js/vendor/scrollto.js"></script> 
-<!--     // <script src="assets/js/vendor/common.js"></script>  -->
-<!--     // <script src="assets/js/vendor/paintbrush.js"></script>  -->
-<!--     // <script src="assets/js/vendor/enquire.min.js"></script>  -->
     <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
-<!--     // <script src="assets/js/vendor/matchMedia.js"></script> 
-    // <script src="assets/js/vendor/matchMedia.addListener .js"></script>  -->
+    <script src='assets/js/rapid.js'></script>
+    
 
 
-<script src='assets/js/rapid.js'></script>
 <!-- General handlebars -->
     <script src="assets/data/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
     <script src="assets/data/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
+    <script src="assets/data/handlebars/hbs-cart.hbs"></script> <!-- FOR CART -->
 
     <script>
       // 2nd level 
