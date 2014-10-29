@@ -177,7 +177,7 @@ width: 100%;
   }
 }
 
-.navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown {
+  .navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown {
   background-color: $lightgrey-c;
   .container {
     background-color: $lightgrey-c;
@@ -189,8 +189,54 @@ width: 100%;
     color: $purple-c;
   }
 
-.tsr-forms input[type='text'], 
-.tsr-forms input[type='password'] {
-  margin-bottom: 0;
+
 }
+
+
+.arrow_box {
+  margin-top: 20px;
+  margin-bottom: -1px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  background: #fff;
+  border: 1px solid $lightgrey-t;
 }
+.arrow_box:after, .arrow_box:before {
+  bottom: 100%;
+  left: 40%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #fff;
+  border-width: 15px;
+  margin-left: -15px;
+}
+.arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: $lightgrey-t;
+  border-width: 16px;
+  margin-left: -16px;
+}
+
+// http://bioneos.com/blog/faux-full-width-sections-css
+.wrapping-layers {
+  overflow-x: hidden;
+  background-color: $lightgrey-c;
+}
+
+.ee-fullwidth {
+    @extend %section-bordered-white;
+    margin-left: -1000px;
+    margin-right: -1000px;
+    padding-left: 1000px;
+    padding-right: 1000px;
+}
+

@@ -719,31 +719,32 @@
 
 
 
-<div class="container xs-not-padded"> 
-  <h1>Ostukorv</h1>
-  <section class="ee-shopping">
-    <div class="progress-steps" data-update="progress">
-      <div class="progress-tabs">
-        <ol data-progress-steps="5">
-          <li class="progress-active" data-target="#id1">
-            <h4>Ülevaade</h4>
-          </li>
-          <li class="" data-target="#id2">
-            <h4>Arveandmed</h4>
-          </li>
-          <li class="" data-target="#id3">
-            <h4>Kohaletoomine</h4>
-          </li>
-          <li class="">
-            <h4>Maksmine</h4>
-          </li>
-          <li class="last-child " data-target="#id5">
-            <h4>Kokkuvõte</h4>
-          </li>
-        </ol>
-      </div>
-      <div class="progress-content">
-        <div class="row cart">
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <h1>Ostukorv</h1>
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="progress-active" data-target="#id1">
+              <h4>Ülevaade</h4>
+            </li>
+            <li class="" data-target="#id2">
+              <h4>Arveandmed</h4>
+            </li>
+            <li class="" data-target="#id3">
+              <h4>Kohaletoomine</h4>
+            </li>
+            <li class="">
+              <h4>Maksmine</h4>
+            </li>
+            <li class="last-child " data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content">
+          <div class="row cart">
   <div class="cart-items">
     
       <div class="col-md-10 col-md-offset-1 cart-item-th hidden-xs">
@@ -857,8 +858,6 @@
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
     <div class="row">
-
-      
       <div class="col-sm-5 col-sm-offset-7">
         <h4 ="ee-top-20">
           Ostukorv kokku
@@ -887,13 +886,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-8">
-
-        <button class="btn btn-primary"  data-toggle="collapse" data-target="#addProduct">Lisa toode ostukorvi</button>
-        <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Müük veebist - BETA</button>
-        <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Lisa kommentaar</button>
-      </div>
-      <div class="col-sm-4 ">
+      <div class="col-sm-4 col-sm-offset-8">
         <h6 class="text-right">Kasuta sooduskoodi või kinkekaarti: </h6>
         <form class="form-horizontal" action="" method="post">
           <div class="input-group">
@@ -906,7 +899,7 @@
       </div>
 
     </div>
-    <div id="addProduct" class="panel-collapse collapse in">
+    <!-- <div id="addProduct" class="panel-collapse collapse in">
       <div class="row">
       <div class="col-xs-11">
         <form class="form-horizontal" action="" method="post">
@@ -920,119 +913,153 @@
       </div>
       <button type="button" class="close" data-dismiss="cartitem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       </div>
-    </div>
-
-    <div id="addNewProduct" class="panel-collapse collapse in">
-      <div class="row">
-      <div class="col-xs-11 tsr-forms">
-        <h4>Toote <strong>66666666</strong> hinnakirja lisamine</h4>
-        <form class="form-horizontal" action="" method="post" id="">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Tootekood</label>
-            <div class="col-sm-10">
-              <label class="control-label-left">666666</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Toote nimetus*</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Hind*</label>
-            <div class="col-sm-4">
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <div class="input-group-addon">€</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Kaubagrupp*</label>
-            <div class="col-sm-10">
-              <div class="select-container">
-                <select id="choosePayment">
-                  <option selected>Miski kaubagrupp</option>
-                  <option>Järelmaksuga</option>
-                  <option>Ettemaksuga</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Tootja*</label>
-            <div class="col-sm-10">
-              <div class="select-container">
-                <select id="choosePayment">
-                  <option selected>Miski tootja</option>
-                  <option>Järelmaksuga</option>
-                  <option>Ettemaksuga</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Garantii erakliendile*</label>
-            <div class="col-sm-4">
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <div class="input-group-addon">kuud</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Garantii ärikliendile*</label>
-            <div class="col-sm-4">
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <div class="input-group-addon">kuud</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Tootjagarantii*</label>
-            <div class="col-sm-4">
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <div class="input-group-addon">kuud</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Toote kommentaar</label>
-            <div class="col-sm-10">
-              <textarea name="" id="" cols="30" rows="5"></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Lattu saabumise kuupäev</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control datepicker" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Tarnekoht*</label>
-            <div class="col-sm-10">
-              <div class="select-container">
-                <select id="choosePayment">
-                  <option selected>Miski firma</option>
-                  <option>Järelmaksuga</option>
-                  <option>Ettemaksuga</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <button class="btn btn-primary"  data-toggle="collapse" data-target="#addProduct">Lisa toode ostukorvi</button>
-        </form>
-      </div>
-      <button type="button" class="close" data-dismiss="cartitem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      </div>
-    </div>
-    
+    </div> -->
   </div>
 </div> 
-        <div class="row">
+          <div class="row">
+  <hr class="hidden-xs">
+  <div class="col-sm-12 col-md-10 col-md-offset-1 text-right">
+    <button class="btn btn-primary"  data-toggle="collapse" data-target="#addProduct">Lisa toode ostukorvi</button>
+    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Saada ostukorv kliendile</button>
+    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Saada pakkumine</button>
+    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Tarni kaup kliendile</button>
+    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Müük veebist - BETA</button>
+  </div>
+</div>
+          <div id="addProduct" class="panel-collapse collapse ee-fullwidth arrow_box">
+  <div class="row tsr-forms">
+    <div class="col-md-10 col-md-offset-1">
+      <button type="button" class="close" data-target="#addProduct"  data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4>Otsi tootekoodi abil</h4>
+      <input type="text" class="form-control" name="product" value="" id="next_product" placeholder="Tootekood">
+      <div class="row">
+        <div class="col-sm-2 text-right col-sm-offset-6 ee-top-20">
+          <button class="btn btn-link" onClick=" " >Katkesta</button>
+        </div>
+        <div class="col-sm-4 ee-top-20">
+          <button class="btn btn-primary btn-block pull-right" data-toggle="collapse" data-target="#addNewProduct">Lisa toode ostukorvi</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+          <div id="addNewProduct" class="panel-collapse collapse ee-fullwidth arrow_box">
+  <div class="row tsr-forms">
+    <div class="col-md-10 col-md-offset-1">
+      <button type="button" class="close" data-target="#addNewProduct"  data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4>Toodet koodiga <strong>66666666</strong> ei leitud, lisa see hinnakirja</h4>
+      <form class="form-horizontal" action="" method="post" id="">
+        <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Tootekood</label>
+          <div class="col-sm-10">
+            <label class="control-label-left">666666</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Toote nimetus*</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Hind*</label>
+          <div class="col-sm-4">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">€</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Kaubagrupp*</label>
+          <div class="col-sm-10">
+            <div class="select-container">
+              <select id="choosePayment">
+                <option selected>Miski kaubagrupp</option>
+                <option>Järelmaksuga</option>
+                <option>Ettemaksuga</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Tootja*</label>
+          <div class="col-sm-10">
+            <div class="select-container">
+              <select id="choosePayment">
+                <option selected>Miski tootja</option>
+                <option>Järelmaksuga</option>
+                <option>Ettemaksuga</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Garantii erakliendile*</label>
+          <div class="col-sm-4">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">kuud</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Garantii ärikliendile*</label>
+          <div class="col-sm-4">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">kuud</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Tootjagarantii*</label>
+          <div class="col-sm-4">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">kuud</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Toote kommentaar</label>
+          <div class="col-sm-10">
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Lattu saabumise kuupäev</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control datepicker" value="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Tarnekoht*</label>
+          <div class="col-sm-10">
+            <div class="select-container">
+              <select id="choosePayment">
+                <option selected>Miski firma</option>
+                <option>Järelmaksuga</option>
+                <option>Ettemaksuga</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+      <hr class="hidden-xs">
+      <div class="row">
+        <div class="col-sm-2 text-right col-sm-offset-6 ee-top-20">
+          <button class="btn btn-link" onClick=" " >Katkesta</button>
+        </div>
+        <div class="col-sm-4 ee-top-20">
+          <button class="btn btn-primary btn-block pull-right" data-toggle="collapse" data-target="#addNewProduct">Lisa toode ostukorvi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="row">
   <hr class="hidden-xs">
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -1049,20 +1076,23 @@
     </div>
   </div>
 </div>
-      </div>
-<!--       <div class="progress-content">
-        <div id="id1" class="progress-pane">Step one CONTENT <br>  ... </div>
-        <div id="id2" class="progress-pane">Step two CONTENT <br>  ... </div>
-        <div id="id3" class="progress-pane"> Step three CONTENT <br>  ... </div>
-        <div id="id4" class="progress-pane">Step four CONTENT <br>  ... </div>
-        <div id="id5" class="progress-pane">Step five CONTENT <br>  ... </div>
          
-        <button class="btn btn-link" data-action="prev">Tagasi</button> <button class="btn btn-default btn-block ee-btn-buy" data-action="next">Jätka ostmist</button>
-      </div> -->
-    </div>
-  </section>
-    
-</div>
+  
+        </div>
+  <!--       <div class="progress-content">
+          <div id="id1" class="progress-pane">Step one CONTENT <br>  ... </div>
+          <div id="id2" class="progress-pane">Step two CONTENT <br>  ... </div>
+          <div id="id3" class="progress-pane"> Step three CONTENT <br>  ... </div>
+          <div id="id4" class="progress-pane">Step four CONTENT <br>  ... </div>
+          <div id="id5" class="progress-pane">Step five CONTENT <br>  ... </div>
+           
+          <button class="btn btn-link" data-action="prev">Tagasi</button> <button class="btn btn-default btn-block ee-btn-buy" data-action="next">Jätka ostmist</button>
+        </div> -->
+      </div>
+    </section>
+      
+  </div>
+</section>
 
 <footer>
     <div class="container-no-gutter">
