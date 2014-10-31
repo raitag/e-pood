@@ -1,14 +1,6 @@
 <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="alert alert-danger fade in" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      <h4><span class="icon icon-alert"></span> Oh pagan! </h4>
-      <p>Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
-        <ul>
-          <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
-          <li>Ostusumma peab ületama 32 €.</li>
-        </ul> </p>
-      </div>
+     <!-- @include alert-inline -->
     <div class="row tsr-forms ee-top-20">
 
       <div class="col-sm-6 col-md-4">
@@ -34,7 +26,7 @@
 
       <div class="col-sm-12 col-md-4 ee-top-20">
 
-        <div class="panel panel-info">
+        <div class="panel panel-info" id="paymentInfo">
           <div class="panel-body">
             <small>
               Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
@@ -141,7 +133,7 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tingimustega</a></span>
+            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tingimustega</a>*</span>
             <div class="col-xs-4">
               <div class="onoffswitch pull-right">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch2" >
@@ -155,7 +147,7 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a></span>
+            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a>*</span>
             <div class="col-xs-4">
               <div class="onoffswitch pull-right">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>

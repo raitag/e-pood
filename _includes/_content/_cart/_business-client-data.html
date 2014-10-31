@@ -1,0 +1,206 @@
+<!-- Otsi klienti -->
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-8">
+        <h4>Otsi klienti:</h4>
+        <form id="about" method="post" class="form-horizontal tsr-forms" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Eesnimi</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="name" name="name" type="text"  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Pere- või firmanimi</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="email" name="email"  type="text"  />
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Kliendinumber</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone"  type="text"  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Isiku- või registrikood</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="adress" name="adress"  type="text"  />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-2">
+              <button class="btn btn-primary btn-block" onClick="location.href= ">Otsi klienti</button>
+            </div>
+            <div class="col-sm-5">
+              <button class="btn btn-primary btn-block" onClick="location.href= ">Eemalda klient tellimuselt</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <h4>Dokumendikontroll:</h4>
+        <a href="">Juhiloa kehtivuse päring</a><br><br>
+        <a href="">Isikut tõendava dokumendi kehtivuse päring</a>
+      </div>
+    </div>
+
+<!-- @include alert-inline -->
+
+
+    <div class="row tsr-forms ee-top-20">
+      <div class="col-sm-6 col-md-4">
+        <h4>On:</h4>
+        <div class="select-container">
+          <select id="chooseRole">
+            <option selected>Eraklient</option>
+            <option disabled>Äriklient</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="col-sm-6 col-md-4 ee-top-20-xs">
+        <h4>Soovib maksta:</h4>
+        <div class="select-container">
+          <select id="choosePayment">
+            <option>Kassas</option>
+            <option>Arvega, maksetähtaeg 14 päeva</option>
+            <option>Arvega, maksetähtaeg 7 päeva</option>
+            <option selected>Kapitalirendiga</option>
+            <option>Kasutusrendileping</option>
+            <option>Järgmise arvega</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 ee-top-20">
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <small>
+              Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h4>Arveandmed:</h4>
+    <div class="row">
+      <div class="col-md-8 tsr-forms">
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Firma nimi</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">Net Group OÜ</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Registrikood</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">Viitenumber</label>
+            <div class="col-sm-10">
+              <div class="select-container">
+                <select id="companyAddress">
+                  <option selected>Kopli tn paparapparaa, viitenumber 277433276</option>
+                  <option disabled>Äriklient</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">Kontaktisik</label>
+            <div class="col-sm-10">
+              <div class="select-container">
+                <select id="companyAddress">
+                  <option selected>Priit Kongo</option>
+                  <option disabled>Keegi Teine</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Volitus</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">B-kaart</label>
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Kontakttelefon</label>
+            <div class="col-sm-10">
+              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">E-post</label>
+            <div class="col-sm-10">
+              <a href="#" id="aadress" data-type="typeaheadjs" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">info@netgroup.ee &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Tellimuse viide</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone"  type="text" placeholder="Max 18 tähte" />
+            </div>
+          </div>
+        </form>
+        
+      </div>
+
+      <!-- WARNING! No ie8 compatible. Use regular Checks there-->
+<!--  ******************** -->
+
+      <div class="col-md-4">
+        <div class="row form-horizontal tsr-forms">
+          <div class="form-group">
+            <label for="name" class="ee-labeltext col-sm-6 control-label">Vaba kaubalimiit</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">10 000,00 €</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Liisingutingimused</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">Liisingutingimused pole nõutud</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Kliendi jooksev võlg</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

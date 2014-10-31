@@ -168,6 +168,9 @@
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
+              <hr>
+              <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
+              <li><a href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
             </ul>
           </li>
         </ul>
@@ -717,17 +720,14 @@
 
 
 
-
-
 <section class="wrapping-layers">
   <div class="container xs-not-padded"> 
-    <h1>Ostukorv</h1>
     <section class="ee-shopping">
       <div class="progress-steps" data-update="progress">
         <div class="progress-tabs">
           <ol data-progress-steps="5">
             <li class="progress-active" data-target="#id1">
-              <h4>Ülevaade</h4>
+              <h4>Ostukorv</h4>
             </li>
             <li class="" data-target="#id2">
               <h4>Arveandmed</h4>
@@ -786,9 +786,7 @@
               <small class="gray-text visible-xs"> Tootekood: {{tootekood}}</small>
             </p>
             {{#if special_price}}
-            <div class="panel">
             <a data-toggle="collapse"  href="#comment-{{id}}">Lisa märkus</a>
-            </div>
             <div id="comment-{{id}}" class="panel-collapse collapse js-flexrow">
               <div class="row">
               <div class="col-xs-11">
@@ -810,7 +808,7 @@
           </div>
 
           <div class="col-xs-12 col-sm-4">
-            <div class="row" style="margin-bottom: 20px;">
+            <div class="row">
               <div class="col-xs-6 visible-xs text-right">
               <label class="ee-top-10">Kogus:  </label>
               </div>
@@ -916,149 +914,6 @@
     </div> -->
   </div>
 </div> 
-          <div class="row">
-  <hr class="hidden-xs">
-  <div class="col-sm-12 col-md-10 col-md-offset-1 text-right">
-    <button class="btn btn-primary"  data-toggle="collapse" data-target="#addProduct">Lisa toode ostukorvi</button>
-    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Saada ostukorv kliendile</button>
-    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Saada pakkumine</button>
-    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Tarni kaup kliendile</button>
-    <button class="btn btn-primary" onClick="location.href= 'cart-aboutyou.html' ">Müük veebist - BETA</button>
-  </div>
-</div>
-          <div id="addProduct" class="panel-collapse collapse ee-fullwidth arrow_box">
-  <div class="row tsr-forms">
-    <div class="col-md-10 col-md-offset-1">
-      <button type="button" class="close" data-target="#addProduct"  data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <h4>Otsi tootekoodi abil</h4>
-      <input type="text" class="form-control" name="product" value="" id="next_product" placeholder="Tootekood">
-      <div class="row">
-        <div class="col-sm-2 text-right col-sm-offset-6 ee-top-20">
-          <button class="btn btn-link" onClick=" " >Katkesta</button>
-        </div>
-        <div class="col-sm-4 ee-top-20">
-          <button class="btn btn-primary btn-block pull-right" data-toggle="collapse" data-target="#addNewProduct">Lisa toode ostukorvi</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-          <div id="addNewProduct" class="panel-collapse collapse ee-fullwidth arrow_box">
-  <div class="row tsr-forms">
-    <div class="col-md-10 col-md-offset-1">
-      <button type="button" class="close" data-target="#addNewProduct"  data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <h4>Toodet koodiga <strong>66666666</strong> ei leitud, lisa see hinnakirja</h4>
-      <form class="form-horizontal" action="" method="post" id="">
-        <div class="form-group">
-          <label for="name" class="col-sm-2 control-label">Tootekood</label>
-          <div class="col-sm-10">
-            <label class="control-label-left">666666</label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Toote nimetus*</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Hind*</label>
-          <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">€</div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Kaubagrupp*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski kaubagrupp</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tootja*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski tootja</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Garantii erakliendile*</label>
-          <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Garantii ärikliendile*</label>
-          <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tootjagarantii*</label>
-          <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Toote kommentaar</label>
-          <div class="col-sm-10">
-            <textarea name="" id="" cols="30" rows="5"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Lattu saabumise kuupäev</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control datepicker" value="">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tarnekoht*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski firma</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </form>
-      <hr class="hidden-xs">
-      <div class="row">
-        <div class="col-sm-2 text-right col-sm-offset-6 ee-top-20">
-          <button class="btn btn-link" onClick=" " >Katkesta</button>
-        </div>
-        <div class="col-sm-4 ee-top-20">
-          <button class="btn btn-primary btn-block pull-right" data-toggle="collapse" data-target="#addNewProduct">Lisa toode ostukorvi</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
           <div class="row">
   <hr class="hidden-xs">
 
@@ -1303,8 +1158,6 @@ $(function(){
   //   defaultText: "Vali makseviis"
   // });
 
-  // var x = document.getElementById("choosePaymentSelectBoxItOptions");
-
   // Adjusting height of the row oncklick
   if(Modernizr.mq('only screen and (min-width: 768px)')) {
     $('.js-flexrow').on('show.bs.collapse', function () {
@@ -1315,20 +1168,28 @@ $(function(){
     })
   }
 
-  // Call calendar and timepicker
+  // Call calendar and timepicker in general
+  // ----------------------------
     $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime();
+    $('.timepicker').pickatime({editable: true});
 
 });
 
 // Call xeditable
+//-------------------
 $.fn.editable.defaults.mode = 'inline';
 $(document).ready(function() {
+  $('#nimi').editable();
   $('#epost').editable();
   $('#telefon').editable();
+  $('#mobiil').editable();
+  $('#tarneaadress').editable();
+  $('#nimi-shop').editable();
+  $('#telefon-shop').editable();
+
   $('#aadress').editable({
     mode: 'inline',
-    showbuttons: false,
+    showbuttons: true,
     url: '/post',
     pk: 1,
     title: 'Enter an Italian city',
@@ -1339,12 +1200,69 @@ $(document).ready(function() {
 });
 
 
-  // if ($('#choosePaymentSelectBoxItText').data('val') === "Ettemaksuga") {
-  //   console.log('this');
-  // }
+// Aboutme-page select behavior
+//--------------------------------
+
+var paymentSelectBox = $("#choosePayment");
+paymentSelectBox.on("change", function() {
+
+  if ($(this).val() == "Ettemaksuga") {
+    $('#paymentInfo > div > small').text('Ettemaksuga tekst');
+  }
+
+});
+
+// Devlivery-page select behavior
+//--------------------------------
+$('#deliveryWhereCourier').hide();
+$('#deliveryWhereItella').hide();
+$('#deliveryInfoCourier').hide();
+$('#deliveryInfoItella').hide();
+
+var deliverySelectBox = $("#chooseDelivery");
+deliverySelectBox.on("change", function() {
+
+  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
+    $('#deliveryWhereItella').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+    $('#deliveryWhereItella').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereCourier').show();
+    $('#deliveryInfoCourier').show();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+    $('#deliveryWhereItella').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else {
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryWhereItella').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereShop').show();
+    $('#deliveryInfoShop').show();
+  }
+});
 
 
-//ajax emulation. Type "err" to see error message
+
+
+
+
+// ajax emulation for proto
+// ------------------
 $.mockjax({
     url: '/post',
     responseTime: 400,
@@ -1358,7 +1276,57 @@ $.mockjax({
     }
 });
 
+// Extend pickadate v3 to get “from” and “to” time functionality with a length duration display
+// -------------------------------------
+// http://codepen.io/amsul/pen/IhCxf
+var from_$input = $('#input_from').pickatime({
+  clear: ' ',
+  format: 'HH:i',
+  min: [8, 0],
+  max: [18, 0],
+  editable: true
+}),
 
+from_picker = from_$input.pickatime('picker')
+
+var to_$input = $('#input_to').pickatime({
+        clear: ' ',
+        format: 'HH:i',
+        min: [8, 0],
+        max: [18, 0],
+        editable: true,
+        formatLabel: function( timeObject ) {
+            var minObject = this.get( 'min' ),
+                hours = timeObject.hour - minObject.hour,
+                mins = ( timeObject.mins - minObject.mins ) / 60,
+                pluralize = function( number, word ) {
+                    return number + ' ' + ( number === 1 ? word : word + 's' )
+                }
+            return '<b>H</b>:i <sm!all>(' + pluralize( hours + mins, '!hour' ) + ')</sm!all>'
+        }
+    }),
+    to_picker = to_$input.pickatime('picker')
+
+
+// Check if there’s a “from” or “to” time to start with.
+if ( from_picker.get('value') ) {
+  to_picker.set('min', from_picker.get('select'))
+}
+if ( to_picker.get('value') ) {
+  from_picker.set('max', to_picker.get('select') )
+}
+
+// When something is selected, update the “from” and “to” limits.
+from_picker.on('set', function(event) {
+  if ( event.select ) {
+    to_picker.set('min', from_picker.get('select'))
+  }
+})
+to_picker.on('set', function(event) {
+  if ( event.select ) {
+    from_picker.set('max', to_picker.get('select'))
+  }
+})
 
 </script>
 

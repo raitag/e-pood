@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Title</title>
+<title>Ostukorv-2</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Ostukorv-2" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Title">
+<meta name="twitter:title" content="Ostukorv-2">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -72,7 +72,10 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
+    <link rel="stylesheet" href="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/css/bootstrap-editable.css">
+<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.css">
+<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.date.css">
+<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.time.css">
     
 <!--<![endif]-->
 
@@ -151,7 +154,7 @@
               <li><a href="found-page-block.html">Otsingutulemused klots</a></li>
               <li><a href="found-page-list.html">Otsingutulemused list</a></li>
               <li><a href="favorite-page.html">Lemmikud (+ajax loader inline)</a></li>
-              <li class='current'><a class='current' href="compare-page.html">Võrdlus</a></li>
+              <li><a href="compare-page.html">Võrdlus</a></li>
               <li><a href="care-page.html">Hooldusinfo</a></li>
               <li><a href="help-page.html">Abilehed</a></li>
               
@@ -166,7 +169,7 @@
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
               <hr>
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
-              <li><a href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
+              <li class='current'><a class='current' href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
             </ul>
           </li>
         </ul>
@@ -709,164 +712,271 @@
 </nav> -->
 
 </header>
-<section class="ee-breadcrumbs hidden-xs hidden-sm">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Arvutid ja lisad</a></li>
-      <li class="active">Sülearvutid</li>
-    </ul>
-  </div>
-</section>
-<div class="ee-filterbar fullwidth">
-  <div class="container">
-    <div class="navbar navbar-inverse" role="filtering">
-      <ul class="nav navbar-nav navbar-left">
-          <li >
-            <a href="#">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
-          </li>
-          <li class="active">
-            <a href="#" id="toggleParam" class="showParameterDifferences" data-show="Peida detailid" data-hide="Näita detaile">Peida detailid <span class="icon icon-arrow-up"></span></a>  
-          </li>
-          <li class="visible-xs">
-            <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-          </li>
-        </ul>
-      <!-- s -->
+
+
+
+
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="" data-target="#id1">
+              <h4>Ostukorv</h4>
+            </li>
+            <li class="progress-active" data-target="#id2">
+              <h4>Arveandmed</h4>
+            </li>
+            <li class="" data-target="#id3">
+              <h4>Kohaletoomine</h4>
+            </li>
+            <li class="">
+              <h4>Maksmine</h4>
+            </li>
+            <li class="last-child " data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content"> 
+          <!-- Otsi klienti -->
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-8">
+        <h4>Otsi klienti:</h4>
+        <form id="about" method="post" class="form-horizontal tsr-forms" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Eesnimi</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="name" name="name" type="text"  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Pere- või firmanimi</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="email" name="email"  type="text"  />
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Kliendinumber</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone"  type="text"  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Isiku- või registrikood</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="adress" name="adress"  type="text"  />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-2">
+              <button class="btn btn-primary btn-block" onClick="location.href= ">Otsi klienti</button>
+            </div>
+            <div class="col-sm-5">
+              <button class="btn btn-primary btn-block" onClick="location.href= ">Eemalda klient tellimuselt</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <h4>Dokumendikontroll:</h4>
+        <a href="">Juhiloa kehtivuse päring</a><br><br>
+        <a href="">Isikut tõendava dokumendi kehtivuse päring</a>
+      </div>
     </div>
-  </div>
+
+<div class="alert alert-danger alert-inline fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <h4><span class="icon icon-alert"></span> Oh pagan! </h4>
+  <p>Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
+    <ul>
+      <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
+      <li>Ostusumma peab ületama 32 €.</li>
+    </ul> 
+  </p>
 </div>
 
 
-
-
-
-<div class="container xs-not-padded"> 
-  
-  <div class="ee-product-compare">
-    
-<div id="content-placeholder-compare-data" class=""></div>
-<!-- <span class="previ ee-left ee-iconbutton"></span>
-<span class="nexti ee-right ee-iconbutton"></span> -->
-
-<script id="compare-data-template" type="text/x-handlebars-template">
-  {{#comparision}} 
-  
-  <div class="panel-group ee-accordion" >
-
-    <div class="panel panel-default">
-      <div class="comparision-header">
+    <div class="row tsr-forms ee-top-20">
+      <div class="col-sm-6 col-md-4">
+        <h4>On:</h4>
+        <div class="select-container">
+          <select id="chooseRole">
+            <option selected>Eraklient</option>
+            <option disabled>Äriklient</option>
+          </select>
+        </div>
+      </div>
       
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
-            </div>
-          
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
-              <div class="fixwidth">
-              {{#each prod}}
-                <div class="col-xs-2 compare-value jsCompareProduct">
-                  <a type="button" class="close" aria-hidden="true">×</a>
-                  <img class="img-responsive" src="{{img}}" alt="">
-                  <h6><a href="">{{product}}</a></h6>
-                  <a href="" class="btn btn-link ee-buy">Osta</a>
-                </div>
-                {{/each}}
-              </div>
-            </div>
+      <div class="col-sm-6 col-md-4 ee-top-20-xs">
+        <h4>Soovib maksta:</h4>
+        <div class="select-container">
+          <select id="choosePayment">
+            <option>Kassas</option>
+            <option>Arvega, maksetähtaeg 14 päeva</option>
+            <option>Arvega, maksetähtaeg 7 päeva</option>
+            <option selected>Kapitalirendiga</option>
+            <option>Kasutusrendileping</option>
+            <option>Järgmise arvega</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 ee-top-20">
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <small>
+              Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
+            </small>
           </div>
         </div>
       </div>
     </div>
 
-    {{#each param}}
-     <div class="panel panel-default">
-     {{#if heading}}
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" href="#{{headingid}}">
-            {{heading}}
-          </a>
-        </h4>
-      </div>
-    {{/if}}
-    <div id="{{headingid}}" class="panel-collapse collapse in js-subpanel">
-      <div class="col-xs-12">
-        {{#each data}}
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
-            {{#if description}}
-              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
-              {{else}}
-              {{index}}
-              {{/if}}
+
+    <h4>Arveandmed:</h4>
+    <div class="row">
+      <div class="col-md-8 tsr-forms">
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Firma nimi</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">Net Group OÜ</label>
             </div>
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
-              <div class="fixwidth">
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value1}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value2}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value3}}}</p>
-                </div>
-                <div class=" col-xs-2 js-scrollable">
-                  <p class="{{class}} compare-value">{{{value4}}}</p>
-                </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Registrikood</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">Viitenumber</label>
+            <div class="col-sm-10">
+              <div class="select-container">
+                <select id="companyAddress">
+                  <option selected>Kopli tn paparapparaa, viitenumber 277433276</option>
+                  <option disabled>Äriklient</option>
+                </select>
               </div>
             </div>
-
           </div>
-        {{/each}}
-         
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">Kontaktisik</label>
+            <div class="col-sm-10">
+              <div class="select-container">
+                <select id="companyAddress">
+                  <option selected>Priit Kongo</option>
+                  <option disabled>Keegi Teine</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Volitus</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">B-kaart</label>
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Kontakttelefon</label>
+            <div class="col-sm-10">
+              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">E-post</label>
+            <div class="col-sm-10">
+              <a href="#" id="aadress" data-type="typeaheadjs" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">info@netgroup.ee &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Tellimuse viide</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone"  type="text" placeholder="Max 18 tähte" />
+            </div>
+          </div>
+        </form>
+        
+      </div>
+
+      <!-- WARNING! No ie8 compatible. Use regular Checks there-->
+<!--  ******************** -->
+
+      <div class="col-md-4">
+        <div class="row form-horizontal tsr-forms">
+          <div class="form-group">
+            <label for="name" class="ee-labeltext col-sm-6 control-label">Vaba kaubalimiit</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">10 000,00 €</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Liisingutingimused</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">Liisingutingimused pole nõutud</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-6 control-label">Kliendi jooksev võlg</label>
+            <div class="col-sm-6">
+              <label class="control-label-left">69696969</label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-     </div>
-     {{/each}}
-     
-   </div>
-  {{/comparision}}
-</script>
-<ul class="tsr-direction-nav">
-  <li><a class="tsr-prev js-compare-prev" href="#"></a></li>
-  <li><a class="tsr-next js-compare-next" href="#"></a></li>
-</ul>
-            <!-- <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a> -->
-
-
   </div>
 </div>
+          <div class="row">
+  <hr class="hidden-xs">
 
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
-
-    <a href="#" class="tsr-module-support icon icon-leasing">
-      <h6>Elioni järelmaks</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-transport">
-      <h6>Transport e-poes</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-help">
-      <h6>Abiinfo</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-settings">
-      <h6>Remont ja hooldus</h6>
-    </a>                  
-
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-sm-6">
+        <h6 class="ee-top-10">Praegu tellides saad kauba kätte alates <strong>12.02.2015</strong></h6>
+      </div>
+      <div class="col-sm-2 text-right ee-top-10">
+        <button class="btn btn-link" onClick="location.href= 'cart-overview-service.html' " >Tagasi</button>
+      </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-delivery.html' ">Jätka ostmist</button>
+        </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
 <footer>
     <div class="container-no-gutter">
         <div class="row">
@@ -973,7 +1083,280 @@
     <script src="assets/js/vendor/scrollto.js"></script> 
     <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
     <script src='assets/js/rapid.js'></script>
-    
+    <script src="assets/js/visa/progress.js"></script>  
+<script src="http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js"></script> 
+<script src="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/js/bootstrap-editable.js"></script>  
+ 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/inputs-ext/typeaheadjs/typeaheadjs.js"></script>  
+<script src="http://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>  
+<!-- Pickadate -->
+<script src="http://amsul.ca/pickadate.js/lib/picker.js"></script>  
+<script src="http://amsul.ca/pickadate.js/lib/picker.date.js"></script>
+<script src="http://amsul.ca/pickadate.js/lib/translations/et_EE.js"></script> 
+<script src="http://amsul.ca/pickadate.js/lib/picker.time.js"></script> 
+<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script> 
+
+<script>
+
+// Plus-minus buttons
+//plugin bootstrap minus and plus
+//http://jsfiddle.net/laelitenetwork/puJ6G/
+
+$(function(){
+  
+  $('.btn-number').click(function(e){
+      e.preventDefault();
+      
+      fieldName = $(this).attr('data-field');
+      type      = $(this).attr('data-type');
+      var input = $("input[name='"+fieldName+"']");
+      var currentVal = parseInt(input.val());
+      if (!isNaN(currentVal)) {
+          if(type == 'minus') {
+              
+              if(currentVal > input.attr('min')) {
+                  input.val(currentVal - 1).change();
+              } 
+              if(parseInt(input.val()) == input.attr('min')) {
+                  $(this).attr('disabled', true);
+              }
+
+          } else if(type == 'plus') {
+
+              if(currentVal < input.attr('max')) {
+                  input.val(currentVal + 1).change();
+              }
+              if(parseInt(input.val()) == input.attr('max')) {
+                  $(this).attr('disabled', true);
+              }
+
+          }
+      } else {
+          input.val(0);
+      }
+  });
+  $('.input-number').focusin(function(){
+     $(this).data('oldValue', $(this).val());
+  });
+  $('.input-number').change(function() {
+      
+      minValue =  parseInt($(this).attr('min'));
+      maxValue =  parseInt($(this).attr('max'));
+      valueCurrent = parseInt($(this).val());
+      
+      name = $(this).attr('name');
+      if(valueCurrent >= minValue) {
+          $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+      } else {
+          alert('Sorry, the minimum value was reached');
+          $(this).val($(this).data('oldValue'));
+      }
+      if(valueCurrent <= maxValue) {
+          $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+      } else {
+          alert('Sorry, the maximum value was reached');
+          $(this).val($(this).data('oldValue'));
+      }
+      
+      
+  });
+  $(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+// End Plusminus
+
+    // Calls the selectBoxIt method on your HTML select box
+  // $("#chooseRole").selectBoxIt({
+  //   defaultText: "Vali roll"
+  // });
+
+  // $("#choosePayment").selectBoxIt({
+  //   defaultText: "Vali makseviis"
+  // });
+
+  // Adjusting height of the row oncklick
+  if(Modernizr.mq('only screen and (min-width: 768px)')) {
+    $('.js-flexrow').on('show.bs.collapse', function () {
+      $(this).parent().parent().css('height', '150px');
+    })
+    $('.js-flexrow').on('hidden.bs.collapse', function () {
+      $(this).parent().parent().css('height', '100px');
+    })
+  }
+
+  // Call calendar and timepicker in general
+  // ----------------------------
+    $('.datepicker').pickadate({editable: true});
+    $('.timepicker').pickatime({editable: true});
+
+});
+
+// Call xeditable
+//-------------------
+$.fn.editable.defaults.mode = 'inline';
+$(document).ready(function() {
+  $('#nimi').editable();
+  $('#epost').editable();
+  $('#telefon').editable();
+  $('#mobiil').editable();
+  $('#tarneaadress').editable();
+  $('#nimi-shop').editable();
+  $('#telefon-shop').editable();
+
+  $('#aadress').editable({
+    mode: 'inline',
+    showbuttons: true,
+    url: '/post',
+    pk: 1,
+    title: 'Enter an Italian city',
+    typeahead: {
+        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+    }
+  });
+});
+
+
+// Aboutme-page select behavior
+//--------------------------------
+
+var paymentSelectBox = $("#choosePayment");
+paymentSelectBox.on("change", function() {
+
+  if ($(this).val() == "Ettemaksuga") {
+    $('#paymentInfo > div > small').text('Ettemaksuga tekst');
+  }
+
+});
+
+// Devlivery-page select behavior
+//--------------------------------
+$('#deliveryWhereCourier').hide();
+$('#deliveryWhereItella').hide();
+$('#deliveryInfoCourier').hide();
+$('#deliveryInfoItella').hide();
+
+var deliverySelectBox = $("#chooseDelivery");
+deliverySelectBox.on("change", function() {
+
+  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
+    $('#deliveryWhereItella').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+    $('#deliveryWhereItella').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereCourier').show();
+    $('#deliveryInfoCourier').show();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+    $('#deliveryWhereItella').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else {
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryWhereItella').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereShop').show();
+    $('#deliveryInfoShop').show();
+  }
+});
+
+
+
+
+
+
+// ajax emulation for proto
+// ------------------
+$.mockjax({
+    url: '/post',
+    responseTime: 400,
+    response: function (settings) {
+        if (settings.data.value == 'err') {
+            this.status = 500;
+            this.responseText = 'Validation error!';
+        } else {
+            this.responseText = '';
+        }
+    }
+});
+
+// Extend pickadate v3 to get “from” and “to” time functionality with a length duration display
+// -------------------------------------
+// http://codepen.io/amsul/pen/IhCxf
+var from_$input = $('#input_from').pickatime({
+  clear: ' ',
+  format: 'HH:i',
+  min: [8, 0],
+  max: [18, 0],
+  editable: true
+}),
+
+from_picker = from_$input.pickatime('picker')
+
+var to_$input = $('#input_to').pickatime({
+        clear: ' ',
+        format: 'HH:i',
+        min: [8, 0],
+        max: [18, 0],
+        editable: true,
+        formatLabel: function( timeObject ) {
+            var minObject = this.get( 'min' ),
+                hours = timeObject.hour - minObject.hour,
+                mins = ( timeObject.mins - minObject.mins ) / 60,
+                pluralize = function( number, word ) {
+                    return number + ' ' + ( number === 1 ? word : word + 's' )
+                }
+            return '<b>H</b>:i <sm!all>(' + pluralize( hours + mins, '!hour' ) + ')</sm!all>'
+        }
+    }),
+    to_picker = to_$input.pickatime('picker')
+
+
+// Check if there’s a “from” or “to” time to start with.
+if ( from_picker.get('value') ) {
+  to_picker.set('min', from_picker.get('select'))
+}
+if ( to_picker.get('value') ) {
+  from_picker.set('max', to_picker.get('select') )
+}
+
+// When something is selected, update the “from” and “to” limits.
+from_picker.on('set', function(event) {
+  if ( event.select ) {
+    to_picker.set('min', from_picker.get('select'))
+  }
+})
+to_picker.on('set', function(event) {
+  if ( event.select ) {
+    from_picker.set('max', to_picker.get('select'))
+  }
+})
+
+</script>
 
 
 <!-- General handlebars -->
@@ -1074,5 +1457,3 @@ $(document).ready(function(){
 
 </body>
 </html>  
-
-<script src="assets/data/handlebars/hbs-compare.hbs"></script>

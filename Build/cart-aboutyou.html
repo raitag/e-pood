@@ -183,6 +183,9 @@
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
+              <hr>
+              <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
+              <li><a href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
             </ul>
           </li>
         </ul>
@@ -729,40 +732,42 @@
 
 
 
-<div class="container xs-not-padded"> 
-  <section class="ee-shopping">
-    <div class="progress-steps" data-update="progress">
-      <div class="progress-tabs">
-        <ol data-progress-steps="5">
-          <li class="" data-target="#id1">
-            <h4>Ostukorvi ülevaade</h4>
-          </li>
-          <li class="progress-active" data-target="#id2">
-            <h4>Arveandmed</h4>
-          </li>
-          <li class="" data-target="#id3">
-            <h4>Kohaletoomine</h4>
-          </li>
-          <li class="">
-            <h4>Maksmine</h4>
-          </li>
-          <li class="last-child " data-target="#id5">
-            <h4>Kokkuvõte</h4>
-          </li>
-        </ol>
-      </div>
-      <div class="progress-content">
-        <div class="row">
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="" data-target="#id1">
+              <h4>Ostukorv</h4>
+            </li>
+            <li class="progress-active" data-target="#id2">
+              <h4>Arveandmed</h4>
+            </li>
+            <li class="" data-target="#id3">
+              <h4>Kohaletoomine</h4>
+            </li>
+            <li class="">
+              <h4>Maksmine</h4>
+            </li>
+            <li class="last-child " data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content"> 
+          <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="alert alert-danger fade in" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      <h4><span class="icon icon-alert"></span> Oh pagan! </h4>
-      <p>Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
-        <ul>
-          <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
-          <li>Ostusumma peab ületama 32 €.</li>
-        </ul> </p>
-      </div>
+     <div class="alert alert-danger alert-inline fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <h4><span class="icon icon-alert"></span> Oh pagan! </h4>
+  <p>Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
+    <ul>
+      <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
+      <li>Ostusumma peab ületama 32 €.</li>
+    </ul> 
+  </p>
+</div>
     <div class="row tsr-forms ee-top-20">
 
       <div class="col-sm-6 col-md-4">
@@ -788,7 +793,7 @@
 
       <div class="col-sm-12 col-md-4 ee-top-20">
 
-        <div class="panel panel-info">
+        <div class="panel panel-info" id="paymentInfo">
           <div class="panel-body">
             <small>
               Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
@@ -895,7 +900,7 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tingimustega</a></span>
+            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tingimustega</a>*</span>
             <div class="col-xs-4">
               <div class="onoffswitch pull-right">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch2" >
@@ -909,7 +914,7 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a></span>
+            <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a>*</span>
             <div class="col-xs-4">
               <div class="onoffswitch pull-right">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
@@ -925,7 +930,7 @@
     </div>
   </div>
 </div>
-        <div class="row">
+          <div class="row">
   <hr class="hidden-xs">
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -942,11 +947,11 @@
     </div>
   </div>
 </div>
+        </div>
       </div>
-    </div>
-  </section>
-</div>
-
+    </section>
+  </div>
+</section>
 <footer>
     <div class="container-no-gutter">
         <div class="row">
@@ -1156,8 +1161,6 @@ $(function(){
   //   defaultText: "Vali makseviis"
   // });
 
-  // var x = document.getElementById("choosePaymentSelectBoxItOptions");
-
   // Adjusting height of the row oncklick
   if(Modernizr.mq('only screen and (min-width: 768px)')) {
     $('.js-flexrow').on('show.bs.collapse', function () {
@@ -1168,20 +1171,28 @@ $(function(){
     })
   }
 
-  // Call calendar and timepicker
+  // Call calendar and timepicker in general
+  // ----------------------------
     $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime();
+    $('.timepicker').pickatime({editable: true});
 
 });
 
 // Call xeditable
+//-------------------
 $.fn.editable.defaults.mode = 'inline';
 $(document).ready(function() {
+  $('#nimi').editable();
   $('#epost').editable();
   $('#telefon').editable();
+  $('#mobiil').editable();
+  $('#tarneaadress').editable();
+  $('#nimi-shop').editable();
+  $('#telefon-shop').editable();
+
   $('#aadress').editable({
     mode: 'inline',
-    showbuttons: false,
+    showbuttons: true,
     url: '/post',
     pk: 1,
     title: 'Enter an Italian city',
@@ -1192,12 +1203,69 @@ $(document).ready(function() {
 });
 
 
-  // if ($('#choosePaymentSelectBoxItText').data('val') === "Ettemaksuga") {
-  //   console.log('this');
-  // }
+// Aboutme-page select behavior
+//--------------------------------
+
+var paymentSelectBox = $("#choosePayment");
+paymentSelectBox.on("change", function() {
+
+  if ($(this).val() == "Ettemaksuga") {
+    $('#paymentInfo > div > small').text('Ettemaksuga tekst');
+  }
+
+});
+
+// Devlivery-page select behavior
+//--------------------------------
+$('#deliveryWhereCourier').hide();
+$('#deliveryWhereItella').hide();
+$('#deliveryInfoCourier').hide();
+$('#deliveryInfoItella').hide();
+
+var deliverySelectBox = $("#chooseDelivery");
+deliverySelectBox.on("change", function() {
+
+  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
+    $('#deliveryWhereItella').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+    $('#deliveryWhereItella').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereCourier').show();
+    $('#deliveryInfoCourier').show();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+    $('#deliveryWhereItella').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else {
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryWhereItella').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereShop').show();
+    $('#deliveryInfoShop').show();
+  }
+});
 
 
-//ajax emulation. Type "err" to see error message
+
+
+
+
+// ajax emulation for proto
+// ------------------
 $.mockjax({
     url: '/post',
     responseTime: 400,
@@ -1211,7 +1279,57 @@ $.mockjax({
     }
 });
 
+// Extend pickadate v3 to get “from” and “to” time functionality with a length duration display
+// -------------------------------------
+// http://codepen.io/amsul/pen/IhCxf
+var from_$input = $('#input_from').pickatime({
+  clear: ' ',
+  format: 'HH:i',
+  min: [8, 0],
+  max: [18, 0],
+  editable: true
+}),
 
+from_picker = from_$input.pickatime('picker')
+
+var to_$input = $('#input_to').pickatime({
+        clear: ' ',
+        format: 'HH:i',
+        min: [8, 0],
+        max: [18, 0],
+        editable: true,
+        formatLabel: function( timeObject ) {
+            var minObject = this.get( 'min' ),
+                hours = timeObject.hour - minObject.hour,
+                mins = ( timeObject.mins - minObject.mins ) / 60,
+                pluralize = function( number, word ) {
+                    return number + ' ' + ( number === 1 ? word : word + 's' )
+                }
+            return '<b>H</b>:i <sm!all>(' + pluralize( hours + mins, '!hour' ) + ')</sm!all>'
+        }
+    }),
+    to_picker = to_$input.pickatime('picker')
+
+
+// Check if there’s a “from” or “to” time to start with.
+if ( from_picker.get('value') ) {
+  to_picker.set('min', from_picker.get('select'))
+}
+if ( to_picker.get('value') ) {
+  from_picker.set('max', to_picker.get('select') )
+}
+
+// When something is selected, update the “from” and “to” limits.
+from_picker.on('set', function(event) {
+  if ( event.select ) {
+    to_picker.set('min', from_picker.get('select'))
+  }
+})
+to_picker.on('set', function(event) {
+  if ( event.select ) {
+    from_picker.set('max', to_picker.get('select'))
+  }
+})
 
 </script>
 

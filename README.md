@@ -56,6 +56,17 @@ Hammri lehe vasak ülamenüü punkt on Sisukord. See sisaldab kõiki lehti. Siin
 ### Töös on
 - Ostukorv
 
+## Ostukorv
+Ainult ostukorvile vajalik javascript on failis _js-cart.html ja lisandunud css failis _css-cart.html
+- [typeahead.js](http://twitter.github.io/typeahead.js/) autocomplete jaoks
+- varasemast SelectBoxIt ilusate selectide jaoks. NB! Ei mängi kokku x-editable pluginaga (töötab Select2-ga)
+- [x-Editable](http://vitalets.github.io/x-editable/index.html) vormide inline muutmiseks
+- kalendri ja kella jaoks ilus [pickadate.js](http://amsul.ca/pickadate.js/). Tuleb veel lilla teema teha, lessi failid selle jaoks olemas.
+
+
+[on-off switch](http://proto.io/freebies/onoff/) on puhas css. Ei pruugi IE8-ga töötada, st ei tööta, Operaga ka, aga all on checkbox mis peaks töötama. Kontrollida tingimata!
+IE8 issue on veel, et ostukorvis peaks keskele joondumine katki minema, see on okei ja nii plaanitud, ei muuda kasutatavust. 
+
 ### Tulekul on
 - Filtrid külgmenüüsse (mobiilivaade?) 
 - Uus päis
