@@ -20,6 +20,8 @@
   <a href="#readmore"  data-toggle="collapse" class="jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Loe edasi...</span></a>
   </p>
 
+
+    <!-- @include bundle-module.html -->
   <div class="hidden-xs "> 
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
@@ -38,8 +40,6 @@
           Tavaind: {{normal_price}}
           <br>
           Sinu võit: 300 €
-          <br>
-          <strong>Kaup kätte 14 päeva jooksul</strong>
         </p>
 
         {{else }}
@@ -59,7 +59,7 @@
     <!-- @include _leasing-info.html --> 
 
     <ul class="list-inline ee-linkicons">
-      <li><a href="#transport-{{id}}" class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}"> Vaata saadavust </a></li>
+    <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
      <li><a href="#" class="ee-favorite">Lemmik</a></li>
    </ul>
@@ -121,8 +121,6 @@
       Tavaind: {{normal_price}}
       <br>
       Sinu võit: 300 €
-      <br>
-     <strong> Kaup kätte 14 päeva jooksul</strong>
     </p>
 
     {{else }}
@@ -140,10 +138,9 @@
     <div class="col-sm-6">
       <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
       <ul class="list-inline ee-linkicons">
-      <li><a href="#transport-{{id}}" data-toggle="collapse" data-target="#transport-{{id}}" class="ee-available">  Vaata saadavust </a></li>
+      <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
      <li><a href="#" class="ee-favorite">Lemmik</a></li>
-      
    </ul>
       
     </div>

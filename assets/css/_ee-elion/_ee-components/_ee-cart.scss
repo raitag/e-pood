@@ -120,9 +120,9 @@ width: 100%;
       margin-bottom: 8px;
     }
     .panel-collapse {
-      input[type="text"] {
-        margin-bottom: 15px;
-      }
+      // input[type="text"] {
+      //   margin-bottom: 15px;
+      // }
       .close {
         margin-top: 5px;
       }
@@ -133,6 +133,9 @@ width: 100%;
     //    font-weight: normal;
     //    display: inline-block;
     // }
+    &.transport {
+      margin-top: -15px;
+    }
   }
     p.ee-product-price-md {
       margin: 0;
@@ -225,6 +228,14 @@ width: 100%;
   margin-left: -16px;
 }
 
+.edit-price {
+  margin-top: -16px;
+  &.arrow_box:after, 
+  &.arrow_box:before {
+    left: 66%;
+  }
+}
+
 // http://bioneos.com/blog/faux-full-width-sections-css
 .wrapping-layers {
   overflow-x: hidden;
@@ -232,14 +243,43 @@ width: 100%;
 }
 
 .ee-fullwidth {
-    @extend %section-bordered-white;
+    
     margin-left: -1000px;
     margin-right: -1000px;
     padding-left: 1000px;
     padding-right: 1000px;
+    &.arrow_box {
+      @extend %section-bordered-white;
+    }
 }
 
 .alert-inline {
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.dl-horizontal.wide dt {
+  width: 240px;
+}
+
+.dl-horizontal.wide dd {
+  margin-left: 260px;
+}
+
+.external:after {
+  color: $purple-c;
+font-family: 'tsr-icons-all';
+content: "\e668";
+vertical-align: baseline;
+font-size: 0.8em;
+padding-left: 5px;
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+  border-bottom: 1px dashed $purple-c !important; 
+}
+
+.close.edit {
+  font-size: 18px;
+  line-height: 1.3;
 }

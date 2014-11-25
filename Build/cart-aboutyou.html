@@ -76,6 +76,7 @@
 <link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.css">
 <link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.date.css">
 <link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.time.css">
+
     
 <!--<![endif]-->
 
@@ -162,6 +163,7 @@
               <li><a href="block-view-phones.html">Klotsvaade (+ajax loader)</a></li>
               <li><a href="list-view-phones.html">Listvaade</a></li>
               <li><a href="detail.html">Detailvaade</a></li>
+              <li><a href="detail-bundles.html">Detailvaade lisatoodetega</a></li>
               <li><a href="front-logged-in.html">Sisseloginud klient (tuksis praegu)</a></li>
             </ul>
           </li>
@@ -758,24 +760,14 @@
         <div class="progress-content"> 
           <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-     <div class="alert alert-danger alert-inline fade in" role="alert">
-  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-  <h4><span class="icon icon-alert"></span> Oh pagan! </h4>
-  <p>Sa ei saa hetkel järelmaksulepingut sõlmida, sest: 
-    <ul>
-      <li>Kinkekaarte ei saa järelmaksuga osta. Kui soovid järelmaksu kasutada, eemalda kinkekaart ostukorvist.</li>
-      <li>Ostusumma peab ületama 32 €.</li>
-    </ul> 
-  </p>
-</div>
     <div class="row tsr-forms ee-top-20">
 
       <div class="col-sm-6 col-md-4">
-        <h4>Olen:</h4>
+        <h4>Muuda vaadet:</h4>
         <div class="select-container">
           <select id="chooseRole">
-            <option selected>Eraklient</option>
-            <option>Äriklient</option>
+            <option selected>Fänsi</option>
+            <option>Lihtne</option>
           </select>
         </div>
       </div>
@@ -785,7 +777,7 @@
         <div class="select-container">
           <select id="choosePayment">
             <option selected>Pangalingiga</option>
-            <option disabled>Järelmaksuga</option>
+            <option>Järelmaksuga</option>
             <option>Ettemaksuga</option>
           </select>
         </div>
@@ -793,10 +785,33 @@
 
       <div class="col-sm-12 col-md-4 ee-top-20">
 
-        <div class="panel panel-info" id="paymentInfo">
+        <div class="panel panel-primary" id="paymentInfoPangalink">
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Pangalingiga
+          </div>
           <div class="panel-body">
             <small>
               Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
+            </small>
+          </div>
+        </div>
+        <div class="panel panel-warning" id="paymentInfoJarelmaks">
+          <div class="panel-heading" style="color: #fff;">
+            <span class="icon icon-alert"></span>  Järelmaksuga
+          </div>
+          <div class="panel-body">
+            <small>
+              Sry, sa ei saa mingil põhjusel ettmaksu valida
+            </small>
+          </div>
+        </div>
+        <div class="panel panel-primary" id="paymentInfoEttemaks">
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Ettemaksuga
+          </div>
+          <div class="panel-body">
+            <small>
+              Siin on ettemaksu selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
             </small>
           </div>
         </div>
@@ -807,7 +822,50 @@
 
 <div class="row ee-top-20">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row">
+    <div class="row" id="regularChecks">
+  <!-- Not logged in, normal inputs -->
+  <!--       ******************** -->
+  <div class="col-sm-8 tsr-forms">
+    <h4>Arveandmed:</h4>
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Nimi*</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">E-post*</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group ">
+        <label for="phone" class="col-sm-2 control-label">Telefon*</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address" class="col-sm-2 control-label">Aadress* <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+        <div class="col-sm-10">
+          <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Regular checks -->
+  <!--  ******************** -->
+  <div class="col-sm-4 checks tsr-forms" >
+    <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">&nbsp; &nbsp;Soovin saada e-poe pakkumisi</span></label>
+  
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tingimustega</a>*</span></label>
+  
+    <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tagastustingimustega</a>*</span></label>
+  </div>
+</div>
+    <div class="row" id="fancyChecks">
       <div class="col-sm-6 col-md-8 tsr-forms">
         <h4>Arveandmed:</h4>
         <form id="about" method="post" class="form-horizontal" role="form">
@@ -830,60 +888,19 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Aadress*</label>
+            <label for="address" class="col-sm-2 control-label">Aadress*<a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Aadress"><i class="icon icon-help"></i></a></label>
             <div class="col-sm-10">
-              <a href="#" id="aadress" data-type="typeaheadjs" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+              <a href="#" id="aadress" data-type="typeaheadjs" data-inputclass="editable" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
             </div>
           </div>
+          <!-- <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Tarneaadress on sama, mis arveaadress</span></label> -->
         </form>
         
       </div>
 
-      <!-- Not logged in, normal inputs -->
-<!--       ******************** -->
-      <!-- <div class="col-sm-8 tsr-forms">
-        <h4>Arveandmed:</h4>
-        <form id="about" method="post" class="form-horizontal" role="form">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nimi*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">E-post*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Telefon*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Aadress*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-        </form>
-      </div> -->
-
-      <!-- Regular checks -->
-<!--  ******************** -->
-    <!--   <div class="col-sm-4 checks">
-        <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">Soovin saada e-poe pakkumisi</span></label>
-      
-        <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tingimustega</a></span></label>
-      
-        <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tagastustingimustega</a></span></label>
-      </div> -->
-
       <!-- WARNING! No ie8 compatible. Use regular Checks there-->
 <!--  ******************** -->
-      <div class="col-sm-6 col-md-4 checks ">
+      <div class="col-sm-6 col-md-4 checks" >
         <div class="row">
           <div class="form-group">
             <span class="ee-labeltext col-xs-8 control-label">Soovin saada e-poe pakkumisi</span>
@@ -917,7 +934,7 @@
             <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a>*</span>
             <div class="col-xs-4">
               <div class="onoffswitch pull-right">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3">
                 <label class="onoffswitch-label" for="myonoffswitch3">
                   <span class="onoffswitch-inner"></span>
                   <span class="onoffswitch-switch"></span>
@@ -936,13 +953,15 @@
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
       <div class="col-sm-6">
-        <h6 class="ee-top-10">Praegu tellides saad kauba kätte alates <strong>12.02.2015</strong></h6>
+        <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
+        <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
       </div>
       <div class="col-sm-2 text-right ee-top-10">
         <button class="btn btn-link" onClick="location.href= 'cart-overview.html' " >Tagasi</button>
       </div>
         <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-delivery.html' ">Jätka ostmist</button>
+          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-delivery.html' " >Jätka ostmist</button>
+          <!-- for disabled add class disabled -->
         </div>
     </div>
   </div>
@@ -1058,7 +1077,11 @@
     <script src="assets/js/vendor/scrollto.js"></script> 
     <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
     <script src='assets/js/rapid.js'></script>
-    <script src="assets/js/visa/progress.js"></script>  
+    <!-- <script src="http://builds.emberjs.com/handlebars-1.0.0-rc.4.js"></script>
+<script src="http://builds.emberjs.com/ember-latest-stable.js"></script>
+<script src="http://builds.emberjs.com/ember-data-latest.js"></script> -->
+
+<script src="assets/js/visa/progress.js"></script>  
 <script src="http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js"></script> 
 <script src="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/js/bootstrap-editable.js"></script>  
  
@@ -1176,6 +1199,8 @@ $(function(){
     $('.datepicker').pickadate({editable: true});
     $('.timepicker').pickatime({editable: true});
 
+
+
 });
 
 // Call xeditable
@@ -1189,6 +1214,7 @@ $(document).ready(function() {
   $('#tarneaadress').editable();
   $('#nimi-shop').editable();
   $('#telefon-shop').editable();
+  $('#courierDate').editable();
 
   $('#aadress').editable({
     mode: 'inline',
@@ -1202,15 +1228,40 @@ $(document).ready(function() {
   });
 });
 
+$(".datepicker").editable({
+    tpl: "<input type='text' class='form-control'></input>",
+    format: "yyyy-mm-dd hh:ii" 
+});
+
+$(".timepicker").editable({
+    tpl: "<input type='text' class='form-control'></input>",
+    format: "yyyy-mm-dd hh:ii" 
+});
+
 
 // Aboutme-page select behavior
 //--------------------------------
+
+$('#paymentInfoEttemaks').hide();
+$('#paymentInfoJarelmaks').hide();
 
 var paymentSelectBox = $("#choosePayment");
 paymentSelectBox.on("change", function() {
 
   if ($(this).val() == "Ettemaksuga") {
-    $('#paymentInfo > div > small').text('Ettemaksuga tekst');
+    $('#paymentInfoEttemaks').show();
+    $('#paymentInfoPangalink').hide();
+    $('#paymentInfoJarelmaks').hide();
+  }
+  else if ($(this).val() == "Järelmaksuga") {
+    $('#paymentInfoEttemaks').hide();
+    $('#paymentInfoPangalink').hide();
+    $('#paymentInfoJarelmaks').show();
+  }
+  else {
+    $('#paymentInfoEttemaks').hide();
+    $('#paymentInfoPangalink').show();
+    $('#paymentInfoJarelmaks').hide();
   }
 
 });
@@ -1218,7 +1269,7 @@ paymentSelectBox.on("change", function() {
 // Devlivery-page select behavior
 //--------------------------------
 $('#deliveryWhereCourier').hide();
-$('#deliveryWhereItella').hide();
+$('#deliveryWhereOmniva').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
@@ -1226,7 +1277,7 @@ var deliverySelectBox = $("#chooseDelivery");
 deliverySelectBox.on("change", function() {
 
   if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereItella').show();
+    $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
     $('#deliveryInfoCourier').hide();
@@ -1234,7 +1285,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryInfoShop').hide();
   } 
   else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
-    $('#deliveryWhereItella').hide();
+    $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereCourier').show();
     $('#deliveryInfoCourier').show();
@@ -1242,7 +1293,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryInfoShop').hide();
   } 
   else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereItella').show();
+    $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
     $('#deliveryInfoCourier').hide();
@@ -1251,7 +1302,7 @@ deliverySelectBox.on("change", function() {
   } 
   else {
     $('#deliveryWhereCourier').hide();
-    $('#deliveryWhereItella').hide();
+    $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoCourier').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereShop').show();
@@ -1259,8 +1310,21 @@ deliverySelectBox.on("change", function() {
   }
 });
 
+// aboutyou-page select behavior
+//--------------------------------
+$('#regularChecks').hide();
 
-
+var roleSelectBox = $("#chooseRole");
+roleSelectBox.on("change", function() {
+  if ($(this).val() == "Fänsi") {
+    $('#fancyChecks').show();
+    $('#regularChecks').hide();
+  } 
+  else {
+    $('#fancyChecks').hide();
+    $('#regularChecks').show();
+  }
+});
 
 
 
@@ -1331,7 +1395,32 @@ to_picker.on('set', function(event) {
   }
 })
 
+
+
+// http://jsbin.com/uzekop/1/edit?html,js,output
+//EMBER APP TEMPLATE
+// App = Ember.Application.create();
+
+// App.ApplicationRoute = Ember.Route.extend({
+//   model: function(){
+//       return [
+//           {name: 'Kris', template: 'kris'},
+//           {name: 'Luke', template: 'luke'},
+//           {name: 'Alex', template: 'alex'}
+//       ];
+//   }
+// });
+
+// App.EmbeddedView = Ember.View.extend({
+//   templateName: Ember.computed.alias('controller.selected'),
+//   templateNameDidChange: function() {
+//     this.rerender();
+//   }.observes('templateName')
+// });
+
 </script>
+
+
 
 
 <!-- General handlebars -->

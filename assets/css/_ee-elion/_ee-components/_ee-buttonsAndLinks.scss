@@ -119,7 +119,7 @@ text-align: left;
 %format-icon {
   // font-family: 'elion-ikoonid';
   font-family: 'tsr-icons-all';
-  font-size: em(24);
+  font-size: em(22);
   padding-right: 5px;
   display: inline-block;
   vertical-align: middle;
@@ -270,6 +270,17 @@ text-align: left;
   &:before {
   @extend %format-icon;
   content: "\e6d4";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
+}
+
+.ee-available {
+  &:before {
+  @extend %format-icon;
+  content: "\e708";
+  font-size: em(20);
   }
   &:hover:before {
     color: $purple-h;

@@ -1,3 +1,7 @@
+<!-- <script src="http://builds.emberjs.com/handlebars-1.0.0-rc.4.js"></script>
+<script src="http://builds.emberjs.com/ember-latest-stable.js"></script>
+<script src="http://builds.emberjs.com/ember-data-latest.js"></script> -->
+
 <script src="assets/js/visa/progress.js"></script>  
 <script src="http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js"></script> 
 <script src="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/js/bootstrap-editable.js"></script>  
@@ -116,6 +120,8 @@ $(function(){
     $('.datepicker').pickadate({editable: true});
     $('.timepicker').pickatime({editable: true});
 
+
+
 });
 
 // Call xeditable
@@ -129,6 +135,7 @@ $(document).ready(function() {
   $('#tarneaadress').editable();
   $('#nimi-shop').editable();
   $('#telefon-shop').editable();
+  $('#courierDate').editable();
 
   $('#aadress').editable({
     mode: 'inline',
@@ -142,15 +149,40 @@ $(document).ready(function() {
   });
 });
 
+$(".datepicker").editable({
+    tpl: "<input type='text' class='form-control'></input>",
+    format: "yyyy-mm-dd hh:ii" 
+});
+
+$(".timepicker").editable({
+    tpl: "<input type='text' class='form-control'></input>",
+    format: "yyyy-mm-dd hh:ii" 
+});
+
 
 // Aboutme-page select behavior
 //--------------------------------
+
+$('#paymentInfoEttemaks').hide();
+$('#paymentInfoJarelmaks').hide();
 
 var paymentSelectBox = $("#choosePayment");
 paymentSelectBox.on("change", function() {
 
   if ($(this).val() == "Ettemaksuga") {
-    $('#paymentInfo > div > small').text('Ettemaksuga tekst');
+    $('#paymentInfoEttemaks').show();
+    $('#paymentInfoPangalink').hide();
+    $('#paymentInfoJarelmaks').hide();
+  }
+  else if ($(this).val() == "Järelmaksuga") {
+    $('#paymentInfoEttemaks').hide();
+    $('#paymentInfoPangalink').hide();
+    $('#paymentInfoJarelmaks').show();
+  }
+  else {
+    $('#paymentInfoEttemaks').hide();
+    $('#paymentInfoPangalink').show();
+    $('#paymentInfoJarelmaks').hide();
   }
 
 });
@@ -158,7 +190,7 @@ paymentSelectBox.on("change", function() {
 // Devlivery-page select behavior
 //--------------------------------
 $('#deliveryWhereCourier').hide();
-$('#deliveryWhereItella').hide();
+$('#deliveryWhereOmniva').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
@@ -166,7 +198,7 @@ var deliverySelectBox = $("#chooseDelivery");
 deliverySelectBox.on("change", function() {
 
   if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereItella').show();
+    $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
     $('#deliveryInfoCourier').hide();
@@ -174,7 +206,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryInfoShop').hide();
   } 
   else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
-    $('#deliveryWhereItella').hide();
+    $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereCourier').show();
     $('#deliveryInfoCourier').show();
@@ -182,7 +214,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryInfoShop').hide();
   } 
   else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereItella').show();
+    $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
     $('#deliveryInfoCourier').hide();
@@ -191,7 +223,7 @@ deliverySelectBox.on("change", function() {
   } 
   else {
     $('#deliveryWhereCourier').hide();
-    $('#deliveryWhereItella').hide();
+    $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoCourier').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereShop').show();
@@ -199,8 +231,21 @@ deliverySelectBox.on("change", function() {
   }
 });
 
+// aboutyou-page select behavior
+//--------------------------------
+$('#regularChecks').hide();
 
-
+var roleSelectBox = $("#chooseRole");
+roleSelectBox.on("change", function() {
+  if ($(this).val() == "Fänsi") {
+    $('#fancyChecks').show();
+    $('#regularChecks').hide();
+  } 
+  else {
+    $('#fancyChecks').hide();
+    $('#regularChecks').show();
+  }
+});
 
 
 
@@ -271,4 +316,28 @@ to_picker.on('set', function(event) {
   }
 })
 
+
+
+// http://jsbin.com/uzekop/1/edit?html,js,output
+//EMBER APP TEMPLATE
+// App = Ember.Application.create();
+
+// App.ApplicationRoute = Ember.Route.extend({
+//   model: function(){
+//       return [
+//           {name: 'Kris', template: 'kris'},
+//           {name: 'Luke', template: 'luke'},
+//           {name: 'Alex', template: 'alex'}
+//       ];
+//   }
+// });
+
+// App.EmbeddedView = Ember.View.extend({
+//   templateName: Ember.computed.alias('controller.selected'),
+//   templateNameDidChange: function() {
+//     this.rerender();
+//   }.observes('templateName')
+// });
+
 </script>
+

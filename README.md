@@ -18,6 +18,7 @@ Välised javascriptipluginad ja kogumikud lisaks bootstrapile (javascript, asuva
   - [socialcount](https://github.com/filamentgroup/SocialCount)
   - [bootstrap-tabcollapse](https://github.com/flatlogic/bootstrap-tabcollapse/blob/master/bootstrap-tabcollapse.js)
   - [selectboxit](http://gregfranko.com/jquery.selectBoxIt.js/) peidab end forms.js-s, kasutada saab aga kõiki Greg Franko meetodeid
+  - [lazyload](http://www.appelsiini.net/projects/lazyload) et pilte laetaks alles tarvidusel
 
 ## Sisu
 

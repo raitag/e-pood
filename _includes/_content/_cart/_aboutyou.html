@@ -1,14 +1,13 @@
 <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-     <!-- @include alert-inline -->
     <div class="row tsr-forms ee-top-20">
 
       <div class="col-sm-6 col-md-4">
-        <h4>Olen:</h4>
+        <h4>Muuda vaadet:</h4>
         <div class="select-container">
           <select id="chooseRole">
-            <option selected>Eraklient</option>
-            <option>Äriklient</option>
+            <option selected>Fänsi</option>
+            <option>Lihtne</option>
           </select>
         </div>
       </div>
@@ -18,7 +17,7 @@
         <div class="select-container">
           <select id="choosePayment">
             <option selected>Pangalingiga</option>
-            <option disabled>Järelmaksuga</option>
+            <option>Järelmaksuga</option>
             <option>Ettemaksuga</option>
           </select>
         </div>
@@ -26,10 +25,33 @@
 
       <div class="col-sm-12 col-md-4 ee-top-20">
 
-        <div class="panel panel-info" id="paymentInfo">
+        <div class="panel panel-primary" id="paymentInfoPangalink">
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Pangalingiga
+          </div>
           <div class="panel-body">
             <small>
               Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
+            </small>
+          </div>
+        </div>
+        <div class="panel panel-warning" id="paymentInfoJarelmaks">
+          <div class="panel-heading" style="color: #fff;">
+            <span class="icon icon-alert"></span>  Järelmaksuga
+          </div>
+          <div class="panel-body">
+            <small>
+              Sry, sa ei saa mingil põhjusel ettmaksu valida
+            </small>
+          </div>
+        </div>
+        <div class="panel panel-primary" id="paymentInfoEttemaks">
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Ettemaksuga
+          </div>
+          <div class="panel-body">
+            <small>
+              Siin on ettemaksu selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
             </small>
           </div>
         </div>
@@ -40,7 +62,50 @@
 
 <div class="row ee-top-20">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row">
+    <div class="row" id="regularChecks">
+  <!-- Not logged in, normal inputs -->
+  <!--       ******************** -->
+  <div class="col-sm-8 tsr-forms">
+    <h4>Arveandmed:</h4>
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Nimi*</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">E-post*</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group ">
+        <label for="phone" class="col-sm-2 control-label">Telefon*</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address" class="col-sm-2 control-label">Aadress* <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+        <div class="col-sm-10">
+          <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Regular checks -->
+  <!--  ******************** -->
+  <div class="col-sm-4 checks tsr-forms" >
+    <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">&nbsp; &nbsp;Soovin saada e-poe pakkumisi</span></label>
+  
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tingimustega</a>*</span></label>
+  
+    <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tagastustingimustega</a>*</span></label>
+  </div>
+</div>
+    <div class="row" id="fancyChecks">
       <div class="col-sm-6 col-md-8 tsr-forms">
         <h4>Arveandmed:</h4>
         <form id="about" method="post" class="form-horizontal" role="form">
@@ -63,60 +128,19 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Aadress*</label>
+            <label for="address" class="col-sm-2 control-label">Aadress*<a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Aadress"><i class="icon icon-help"></i></a></label>
             <div class="col-sm-10">
-              <a href="#" id="aadress" data-type="typeaheadjs" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+              <a href="#" id="aadress" data-type="typeaheadjs" data-inputclass="editable" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
             </div>
           </div>
+          <!-- <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Tarneaadress on sama, mis arveaadress</span></label> -->
         </form>
         
       </div>
 
-      <!-- Not logged in, normal inputs -->
-<!--       ******************** -->
-      <!-- <div class="col-sm-8 tsr-forms">
-        <h4>Arveandmed:</h4>
-        <form id="about" method="post" class="form-horizontal" role="form">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nimi*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">E-post*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Telefon*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Aadress*</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
-            </div>
-          </div>
-        </form>
-      </div> -->
-
-      <!-- Regular checks -->
-<!--  ******************** -->
-    <!--   <div class="col-sm-4 checks">
-        <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">Soovin saada e-poe pakkumisi</span></label>
-      
-        <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tingimustega</a></span></label>
-      
-        <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Nõustun e-poe <a href="">tagastustingimustega</a></span></label>
-      </div> -->
-
       <!-- WARNING! No ie8 compatible. Use regular Checks there-->
 <!--  ******************** -->
-      <div class="col-sm-6 col-md-4 checks ">
+      <div class="col-sm-6 col-md-4 checks" >
         <div class="row">
           <div class="form-group">
             <span class="ee-labeltext col-xs-8 control-label">Soovin saada e-poe pakkumisi</span>
@@ -150,7 +174,7 @@
             <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tagastustingimustega</a>*</span>
             <div class="col-xs-4">
               <div class="onoffswitch pull-right">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3" checked>
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch3">
                 <label class="onoffswitch-label" for="myonoffswitch3">
                   <span class="onoffswitch-inner"></span>
                   <span class="onoffswitch-switch"></span>
