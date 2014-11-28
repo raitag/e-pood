@@ -763,11 +763,11 @@
     <div class="row tsr-forms ee-top-20">
 
       <div class="col-sm-6 col-md-4">
-        <h4>Muuda vaadet:</h4>
+        <h4>Olen:</h4>
         <div class="select-container">
           <select id="chooseRole">
-            <option selected>Fänsi</option>
-            <option>Lihtne</option>
+            <option selected>Eraisik</option>
+            <option>Ettevõtte esindaja</option>
           </select>
         </div>
       </div>
@@ -801,7 +801,7 @@
           </div>
           <div class="panel-body">
             <small>
-              Sry, sa ei saa mingil põhjusel ettmaksu valida
+              Sry, sa ei saa mingil põhjusel ettmaksu valida. Pöördu teenindaja poole <a href="#" ><u>siin</u></a>, et asja lahendada.
             </small>
           </div>
         </div>
@@ -822,50 +822,41 @@
 
 <div class="row ee-top-20">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row" id="regularChecks">
-  <!-- Not logged in, normal inputs -->
+      <!-- Not logged in, normal inputs -->
   <!--       ******************** -->
-  <div class="col-sm-8 tsr-forms">
-    <h4>Arveandmed:</h4>
-    <form id="about" method="post" class="form-horizontal" role="form">
-      <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Nimi*</label>
-        <div class="col-sm-10">
-          <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
-        </div>
+    <!-- <div class="row" >
+
+      <div class="col-sm-8 tsr-forms">
+        <h4>Arveandmed:</h4>
+        <form id="about" method="post" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nimi*</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="name" name="name" placeholder="Nimi" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">E-post*</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="phone" class="col-sm-2 control-label">Telefon*</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Aadress* <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+            <div class="col-sm-10">
+              <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">E-post*</label>
-        <div class="col-sm-10">
-          <input class="form-control" id="email" name="email" placeholder="E-post" type="text" required title="Palun täida see väli" />
-        </div>
-      </div>
-      <div class="form-group ">
-        <label for="phone" class="col-sm-2 control-label">Telefon*</label>
-        <div class="col-sm-10">
-          <input class="form-control" id="phone" name="phone" placeholder="Telefon" type="text" required title="Palun täida see väli" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="address" class="col-sm-2 control-label">Aadress* <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
-        <div class="col-sm-10">
-          <input class="form-control" id="adress" name="adress" placeholder="Aadress" type="text" required title="Palun täida see väli" />
-        </div>
-      </div>
-    </form>
-  </div>
-  
-  <!-- Regular checks -->
-  <!--  ******************** -->
-  <div class="col-sm-4 checks tsr-forms" >
-    <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">&nbsp; &nbsp;Soovin saada e-poe pakkumisi</span></label>
-  
-    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tingimustega</a>*</span></label>
-  
-    <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tagastustingimustega</a>*</span></label>
-  </div>
-</div>
-    <div class="row" id="fancyChecks">
+    </div> -->
+    <div class="row">
       <div class="col-sm-6 col-md-8 tsr-forms">
         <h4>Arveandmed:</h4>
         <form id="about" method="post" class="form-horizontal" role="form">
@@ -897,24 +888,20 @@
         </form>
         
       </div>
+  <!-- Regular checks -->
+  <!--  ******************** -->
+  <br>
+  <div class="col-sm-6 col-md-4 checks tsr-forms hidden-xs" >
+    <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tingimustega</a>*</span></label>
+  
+    <label for="check-3"><input type="checkbox" id="check-3" /> <span class="ee-labeltext"> &nbsp;&nbsp; Nõustun e-poe <a href="">tagastustingimustega</a>*</span></label>
 
+    <label for="check-1"><input type="checkbox" id="check-1" /> <span class="ee-labeltext">&nbsp; &nbsp;Soovin saada e-poe pakkumisi</span></label>
+  </div>
       <!-- WARNING! No ie8 compatible. Use regular Checks there-->
 <!--  ******************** -->
-      <div class="col-sm-6 col-md-4 checks" >
-        <div class="row">
-          <div class="form-group">
-            <span class="ee-labeltext col-xs-8 control-label">Soovin saada e-poe pakkumisi</span>
-            <div class="col-xs-4">
-              <div class="onoffswitch pull-right">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch1" >
-                <label class="onoffswitch-label" for="myonoffswitch1">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-sm-6 col-md-4 checks visible-xs" >
+        
         <div class="row">
           <div class="form-group">
             <span class="ee-labeltext col-xs-8 control-label">Nõustun e-poe <a href="">tingimustega</a>*</span>
@@ -943,6 +930,20 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="form-group">
+            <span class="ee-labeltext col-xs-8 control-label">Soovin saada e-poe pakkumisi</span>
+            <div class="col-xs-4">
+              <div class="onoffswitch pull-right">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox form-control" id="myonoffswitch1" >
+                <label class="onoffswitch-label" for="myonoffswitch1">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -952,11 +953,11 @@
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
-      <div class="col-sm-6">
+<!--       <div class="col-sm-6">
         <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
         <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
-      </div>
-      <div class="col-sm-2 text-right ee-top-10">
+      </div> -->
+      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
         <button class="btn btn-link" onClick="location.href= 'cart-overview.html' " >Tagasi</button>
       </div>
         <div class="col-sm-4">
@@ -1269,22 +1270,14 @@ paymentSelectBox.on("change", function() {
 // Devlivery-page select behavior
 //--------------------------------
 $('#deliveryWhereCourier').hide();
-$('#deliveryWhereOmniva').hide();
+$('#deliveryWhereShop').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
 var deliverySelectBox = $("#chooseDelivery");
 deliverySelectBox.on("change", function() {
 
-  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereOmniva').show();
-    $('#deliveryInfoItella').show();
-    $('#deliveryWhereCourier').hide();
-    $('#deliveryInfoCourier').hide();
-    $('#deliveryWhereShop').hide();
-    $('#deliveryInfoShop').hide();
-  } 
-  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+  if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
     $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereCourier').show();
@@ -1292,7 +1285,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryWhereShop').hide();
     $('#deliveryInfoShop').hide();
   } 
-  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+  else if ($(this).val() == "Pakiautomaadist (tasuta)") {
     $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
@@ -1312,17 +1305,21 @@ deliverySelectBox.on("change", function() {
 
 // aboutyou-page select behavior
 //--------------------------------
-$('#regularChecks').hide();
+$('#itellaLogo').hide();
 
-var roleSelectBox = $("#chooseRole");
+var roleSelectBox = $("#chooseSpot");
 roleSelectBox.on("change", function() {
-  if ($(this).val() == "Fänsi") {
-    $('#fancyChecks').show();
-    $('#regularChecks').hide();
+  if ($(this).val().indexOf("Itella")> -1 ) {
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
+  } 
+  else  if ($(this).val().indexOf("Omniva")> -1 ) {
+    $('#itellaLogo').hide();
+    $('#omnivaLogo').show();
   } 
   else {
-    $('#fancyChecks').hide();
-    $('#regularChecks').show();
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
   }
 });
 

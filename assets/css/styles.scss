@@ -500,7 +500,6 @@ vertical-align: middle;
  }
 
 
-
 footer .social-block .media .icon {
   line-height: 26px;
   text-align: center;
@@ -520,6 +519,39 @@ footer .social-block .media .icon {
   label {
     font-weight: normal;
     display: block; 
+  }
+}
+
+.selectboxit-option-icon-container {
+  width: 50px;
+  overflow: auto;
+  height: 100%;
+  display: inline-block;
+  padding-left: 10px;
+  float: right;
+}
+
+.selectboxit-option-icon-url {
+  width: 40px;
+  height: 24px;
+  background-size: 53px 50px;
+  background-repeat: no-repeat;
+  background-position: 0 -2px;
+  float: left;
+  &:hover  {
+    background-position: left;
+  }
+}
+
+.selectboxit-btn {
+  .selectboxit-option-icon-container {
+    display: none;
+  }
+}
+
+.selectboxit-focus {
+  .selectboxit-option-icon-url {
+    background-position: 0 -29px;
   }
 }
 

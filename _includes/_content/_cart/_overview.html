@@ -2,8 +2,11 @@
   <div class="cart-items">
       <div>
 
-        <div class="col-md-10 col-md-offset-1 cart-item-th hidden-xs">
-          <div class="row">
+        <div id="content-placeholder-cart"></div> 
+            <script id="cart-template" type="text/x-handlebars-template">
+            
+        <div class="col-md-10 col-md-offset-1 cart-item">
+        <div class="row cart-item-th hidden-xs">
             <div class="col-sm-6">
               Toode
             </div>
@@ -19,11 +22,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="content-placeholder-cart"></div> 
-            <script id="cart-template" type="text/x-handlebars-template">
-            {{#products}} 
-        <div class="col-md-10 col-md-offset-1 cart-item">
+          {{#products}} 
           <div class="row">
         
             <div class="col-xs-3 col-sm-1 cart-item-image">
@@ -79,9 +78,10 @@
               </div>
             </div>
           </div>
+          {{/products}} 
         </div>
         
-            {{/products}} 
+            
             </script>
       </div>
   </div>

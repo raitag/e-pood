@@ -1,34 +1,40 @@
 <div class="row tsr-forms" id="deliveryWhereOmniva">
-  <div class="col-sm-4">
-    <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
-    <form id="about" method="post" class="form-horizontal" role="form">
-    <div class="form-group">
-      <label for="name" class="col-sm-6 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
-  
-      <div class="col-sm-6">
-        <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-      </div>
-    <h4>Kättesaamise piirkond:</h4>
-    <div class="select-container">
-      <select id="chooseShop">
-        <!-- @include omniva-city -->
-      </select>
-    </div>
-    <h4>Vali automaat:</h4>
-    <div class="select-container">
-      <select id="chooseShop">
-        <!-- @include omniva-jarvamaa -->
-      </select>
-    </div>
+  <div class="col-sm-8">
 
-    </div>
-  </form>
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <h4>Vali linn:</h4>
+      <div class="select-container">
+        <select id="chooseCity">
+          <!-- @include omniva-city -->
+        </select>
+      </div>
+      <div id="pointOmniva">
+        <h4 class="ee-top-20">Vali asukoht:</h4>
+        <div class="select-container">
+          <select id="chooseSpot">
+            <!-- @include omniva-tallinn -->
+          </select>
+        </div>
+      </div>
+      <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
+      <div class="form-group ">
+        <label for="name" class="col-sm-4 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+        <div class="col-sm-8">
+          <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+    </form>
+    <img class="img-responsive ee-top-20" src="http://placehold.it/800x400&text=Kaart" alt="">
   </div>
+  
   <div class="col-sm-4">
-    <h5>Tallinna Kristiine Keskus</h5>
+    <h4 class="ee-top-20">Saad paki kätte:</h4>
+    <img src="assets/img/branding/omniva-lg.svg" alt="" class="pull-right" id="omnivaLogo">
+    <img src="assets/img/branding/itella-lg.svg" alt="" class="pull-right" id="itellaLogo">
+    <h5 class="ee-top-10">Tallinna Kristiine Keskus</h5>
     <p>
       <strong>Aadress:</strong><br>
-      Harjumaa, Türi 5 - Tallinna linn
+      Harjumaa, Endla tänav 45, Kristiine linnaosa
     </p>
     <p>
       <strong>Lahtiolekuajad:</strong><br>
@@ -38,8 +44,19 @@
       <strong>Lisainformatsioon:</strong><br>
       Prisma Peremarketi sissepääsu vastas, eskalaatori taga.
     </p>
+    <div class="panel panel-primary" id="deliveryInfoShop">
+      <div class="panel-heading">
+        <span class="icon icon-info"></span>  Pane tähele!
+      </div>
+      <div class="panel-body">
+        <small>
+          Pakile saad järele minna alates <strong> 27.11 kell 11:00</strong>
+          <br>
+          <i>Teavitus paki jõudmisest automaati saadetakse SMSiga</i>
+        </small>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-4 ee-top-10">
-    <img class="img-responsive" src="http://placehold.it/495x400&text=Kaart" alt="">
-  </div>
+
+  
 </div>

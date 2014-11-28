@@ -801,36 +801,7 @@
 
     <div id="content-placeholder-cart"></div>
 
-    <div class="col-md-10 col-md-offset-1 cart-item transport">
-      <div class="row">
-        <div class="col-xs-3 col-sm-1">
-          <span class="icon icon-transport" style="font-size: 40px; line-height: 1;"></span>
-        </div>
-
-        <div class="col-xs-7 col-sm-5"> 
-          <h5>Kättetoimetamine</h5>
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-          <div class="row form-horizontal">
-            <div class="col-xs-6 col-sm-8 text-right">
-                <div class="form-group">
-                  <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
-                  <div class="col-sm-10">
-                    <label class="control-label-left">1</label>
-                  </div>
-                </div>
-              </div>
-            <div class="col-xs-6 visible-xs text-right">
-              <label class="ee-top-10">Hind:  </label>
-              </div>
-              <div class="col-xs-6 col-sm-4 text-right">
-              <p class="ee-product-price-md">3.50 €</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <script id="cart-template" type="text/x-handlebars-template">
     {{#products}} 
@@ -885,41 +856,144 @@
 </div>
 
  
-            <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <div class="row">
-
-      
-      <div class="col-sm-5 col-sm-offset-7">
-        <h4 ="ee-top-20">
+            <div class="col-md-10 col-md-offset-1">
+  <div class="row">
+    <div class="panel panel-default cart-overview-heading clearfix">
+      <div class="col-sm-3">
+        <h6>Sul on ostukorvis <strong>3</strong> asja </h6>
+      </div>
+      <div class="col-sm-4">
+        <a class="btn btn-primary btn-block" data-toggle="collapse" href="#cart-overview" aria-expanded="true" aria-controls="cart-overview">
+          Näita, millised, ma ei mäleta
+        </a>
+      </div>
+      <div class="col-sm-5">
+        <h4>
           Ostukorv kokku
           <div class="pull-right ee-product-price-md">
             <strong>269.99 €</strong>
           </div>
         </h4>
-        <h6>
-          Summa käibemaksuta 
-          <div class="pull-right">
-            <strong>169.99 €</strong>
-          </div>
-        </h6>
-        <h6>
-          Käibemaks 
-          <div class="pull-right">
-            <strong>69.99 €</strong>
-          </div>
-        </h6>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-8">
-        <h6 class="text-right">Kas siia tuleb kinkekaardi märkus? </h6>
-        
-      </div>
+  </div>
 
+  <div class="row cart collapse" id="cart-overview">
+  <div class="cart-items">
+
+    <div id="content-placeholder-cart"></div>
+
+
+    <script id="cart-template" type="text/x-handlebars-template">
+    
+      <div class="col-sm-12 cart-item">
+        <div class="row cart-item-th hidden-xs">
+          <div class="col-sm-6">
+            Toode
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-7 text-right">
+                Kogus
+              </div>
+              <div class="col-sm-5 text-right">
+                Hind
+              </div>
+            </div>
+          </div>
+        </div>
+        {{#products}} 
+        <div class="row">
+
+          <div class="col-xs-3 col-sm-1 cart-item-image">
+            <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+          </div>
+
+          <div class="col-xs-7 col-sm-5">
+            <h6>{{name}}</h6>
+
+            {{#if special_price}}
+            <div class="panel"> 
+            <strong>See DVD mängija on Sulle, Raili :)</strong>
+            </div>
+            {{/if}}
+          </div>
+
+
+          <div class="col-xs-12 col-sm-6">
+            <div class="row form-horizontal">
+              <div class="col-xs-6 col-sm-8 text-right">
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
+                  <div class="col-sm-10">
+                    <label class="control-label-left">1</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 visible-xs text-right">
+              <label class="ee-top-10">Hind:  </label>
+              </div>
+              <div class="col-xs-6 col-sm-4 text-right">
+              {{#if special_price}}
+              <p class="ee-product-price-md">{{special_price}}</p>
+              {{else}}
+              <p class="ee-product-price-md">{{normal_price}}</p>
+              {{/if}}
+              </div>
+              
+              
+          </div>
+        </div>
+      </div>
+      {{/products}} 
     </div>
     
+    </script>
+      
   </div>
+</div>
+
+ 
+
+  <div class="row">
+    <div class="col-sm-5 col-sm-offset-7">
+      <h6> Kättetoimetamine
+        <div class="pull-right ee-product-price-md">
+          <strong>3.50 €</strong>
+        </div>
+      </h6>
+
+
+      <h4>
+        Kokku tasuda
+        <div class="pull-right ee-product-price-md">
+          <strong>272.99 €</strong>
+        </div>
+      </h4>
+
+      <h6>
+        Summa käibemaksuta 
+        <div class="pull-right">
+          <strong>169.99 €</strong>
+        </div>
+      </h6>
+      <h6>
+        Käibemaks 
+        <div class="pull-right">
+          <strong>69.99 €</strong>
+        </div>
+      </h6>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-8">
+      <h6 class="text-right">Kas siia tuleb kinkekaardi märkus? </h6>
+      
+    </div>
+
+  </div>
+  
 </div>
             <div class="row">
   <hr>

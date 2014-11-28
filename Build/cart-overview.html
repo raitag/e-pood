@@ -750,8 +750,11 @@
   <div class="cart-items">
       <div>
 
-        <div class="col-md-10 col-md-offset-1 cart-item-th hidden-xs">
-          <div class="row">
+        <div id="content-placeholder-cart"></div> 
+            <script id="cart-template" type="text/x-handlebars-template">
+            
+        <div class="col-md-10 col-md-offset-1 cart-item">
+        <div class="row cart-item-th hidden-xs">
             <div class="col-sm-6">
               Toode
             </div>
@@ -767,11 +770,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="content-placeholder-cart"></div> 
-            <script id="cart-template" type="text/x-handlebars-template">
-            {{#products}} 
-        <div class="col-md-10 col-md-offset-1 cart-item">
+          {{#products}} 
           <div class="row">
         
             <div class="col-xs-3 col-sm-1 cart-item-image">
@@ -839,9 +838,10 @@
               </div>
             </div>
           </div>
+          {{/products}} 
         </div>
         
-            {{/products}} 
+            
             </script>
       </div>
   </div>
@@ -907,11 +907,11 @@
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
-      <div class="col-sm-6">
+<!--       <div class="col-sm-6">
         <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
         <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
-      </div>
-      <div class="col-sm-2 text-right ee-top-10">
+      </div> -->
+      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
         <button class="btn btn-link" onClick="location.href= 'detail.html' " >Tagasi</button>
       </div>
         <div class="col-sm-4">
@@ -1237,22 +1237,14 @@ paymentSelectBox.on("change", function() {
 // Devlivery-page select behavior
 //--------------------------------
 $('#deliveryWhereCourier').hide();
-$('#deliveryWhereOmniva').hide();
+$('#deliveryWhereShop').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
 var deliverySelectBox = $("#chooseDelivery");
 deliverySelectBox.on("change", function() {
 
-  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereOmniva').show();
-    $('#deliveryInfoItella').show();
-    $('#deliveryWhereCourier').hide();
-    $('#deliveryInfoCourier').hide();
-    $('#deliveryWhereShop').hide();
-    $('#deliveryInfoShop').hide();
-  } 
-  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+  if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
     $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereCourier').show();
@@ -1260,7 +1252,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryWhereShop').hide();
     $('#deliveryInfoShop').hide();
   } 
-  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+  else if ($(this).val() == "Pakiautomaadist (tasuta)") {
     $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
@@ -1280,17 +1272,21 @@ deliverySelectBox.on("change", function() {
 
 // aboutyou-page select behavior
 //--------------------------------
-$('#regularChecks').hide();
+$('#itellaLogo').hide();
 
-var roleSelectBox = $("#chooseRole");
+var roleSelectBox = $("#chooseSpot");
 roleSelectBox.on("change", function() {
-  if ($(this).val() == "Fänsi") {
-    $('#fancyChecks').show();
-    $('#regularChecks').hide();
+  if ($(this).val().indexOf("Itella")> -1 ) {
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
+  } 
+  else  if ($(this).val().indexOf("Omniva")> -1 ) {
+    $('#itellaLogo').hide();
+    $('#omnivaLogo').show();
   } 
   else {
-    $('#fancyChecks').hide();
-    $('#regularChecks').show();
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
   }
 });
 

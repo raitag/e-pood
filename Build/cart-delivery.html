@@ -721,31 +721,30 @@
 
 
 
-<section class="wrapping-layers">
-  <div class="container xs-not-padded"> 
-    <section class="ee-shopping">
-      <div class="progress-steps" data-update="progress">
-        <div class="progress-tabs">
-          <ol data-progress-steps="5">
-            <li class="" data-target="#id1">
-              <h4>Ostukorv</h4>
-            </li>
-            <li class="" data-target="#id2">
-              <h4>Arveandmed</h4>
-            </li>
-            <li class="progress-active" data-target="#id3">
-              <h4>Kohaletoomine</h4>
-            </li>
-            <li class="">
-              <h4>Maksmine</h4>
-            </li>
-            <li class="last-child " data-target="#id5">
-              <h4>Kokkuvõte</h4>
-            </li>
-          </ol>
-        </div>
-        <div class="progress-content">
-          <div class="row">
+<div class="container xs-not-padded"> 
+  <section class="ee-shopping">
+    <div class="progress-steps" data-update="progress">
+      <div class="progress-tabs">
+        <ol data-progress-steps="5">
+          <li class="" data-target="#id1">
+            <h4>Ostukorv</h4>
+          </li>
+          <li class="" data-target="#id2">
+            <h4>Arveandmed</h4>
+          </li>
+          <li class="progress-active" data-target="#id3">
+            <h4>Kohaletoomine</h4>
+          </li>
+          <li class="">
+            <h4>Maksmine</h4>
+          </li>
+          <li class="last-child " data-target="#id5">
+            <h4>Kokkuvõte</h4>
+          </li>
+        </ol>
+      </div>
+      <div class="progress-content">
+        <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms">
       <div class="col-sm-6 col-md-8">
@@ -753,9 +752,8 @@
         <div class="select-container">
           <select id="chooseDelivery">
             <option>Kulleriga koju/kontorisse kätte (3,50 €)</option>
-            <option>SmartPosti pakiautomaadist (Lisatasuta)</option>
-            <option>Omniva pakiautomaadist (Lisatasuta)</option>
-            <option selected>Tulen ise poodi järgi (Lisatasuta)</option>
+            <option >Pakiautomaadist (tasuta)</option>
+            <option>Tulen ise poodi järgi (tasuta)</option>
           </select>
         </div>
       </div>
@@ -767,13 +765,13 @@
           </div>
           <div class="panel-body">
             <small>
-              Kaup kätte <strong>täna, 07.11</strong> Meeldiv teenindus ja asjatundlikud nõuanded pealekauba :)
+              Kaup kätte <strong>täna, 07.11</strong>
             </small>
           </div>
         </div>
         <div class="panel panel-primary" id="deliveryInfoItella" >
           <div class="panel-heading">
-            <span class="icon icon-info"></span>  Smartposti automaadist
+            <span class="icon icon-info"></span>  Pakiautomaadist
           </div>
           <div class="panel-body">
             <small>
@@ -781,20 +779,14 @@
             </small>
           </div>
         </div>
-        <!-- <div class="panel panel-primary" id="deliveryInfoOmniva" >
-          <div class="panel-body">
-            <small>
-              Omniva on kiire ja mugav pakiteenus nii saajale kui saatjale. Unikaalsed välitingimustes pakiautomaadid asuvad kaubanduskeskuste juures ja neile saab ligi nii autoga, jalgsi kui ühistranspordiga. Omniva pakiautomaadid on avatud ööpäevaringselt, nii saate valida just teile sobiva aja paki vastuvõtmiseks või saatmiseks.
-            </small>
-          </div>
-        </div> -->
         <div class="panel panel-primary" id="deliveryInfoCourier">
           <div class="panel-heading">
             <span class="icon icon-info"></span>  Kulleriga
           </div>
           <div class="panel-body">
             <small>
-              Kaup kätte <strong>täna, 07.11</strong>. Kui Sa ei saa sobival ajal kodus olla saad paki tellida ka oma töökohta.
+              Kaup kätte <strong>täna, 07.11</strong>. <br>
+              <strong>NB! </strong>Kui Sa ei saa sobival ajal kodus olla saad paki tellida ka oma töökohta.
             </small>
           </div>
         </div>
@@ -884,24 +876,18 @@
   </div>
 </div>
     <div class="row tsr-forms" id="deliveryWhereOmniva">
-  <div class="col-sm-4">
-    <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
+  <div class="col-sm-8">
+
     <form id="about" method="post" class="form-horizontal" role="form">
-    <div class="form-group">
-      <label for="name" class="col-sm-6 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
-  
-      <div class="col-sm-6">
-        <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-      </div>
-    <h4>Kättesaamise piirkond:</h4>
-    <div class="select-container">
-      <select id="chooseShop">
-        <option value="165">Tallinn/Harjumaa</option>
-<option value="133">Saaremaa</option>
-<option value="161">Jõgevamaa</option>
-<option value="104">Hiiumaa</option>
-<option value="156">Saku Selver</option>
-<option value="121">Ida-Virumaa</option>
+      <h4>Vali linn:</h4>
+      <div class="select-container">
+        <select id="chooseCity">
+          <option value="165">Tallinn</option>
+<option value="133">Viimsi</option>
+<option value="161">Keila</option>
+<option value="104">Peetri</option>
+<option value="156">Maardu</option>
+<option value="121">Rakvere</option>
 <option value="126">Järvamaa</option>
 <option value="160">Pärnumaa</option>
 <option value="146">Põlvamaa</option>
@@ -912,25 +898,55 @@
 <option value="138">Valgamaa</option>
 <option value="124">Viljandimaa</option>
 <option value="125">Võrumaa</option>
-      </select>
-    </div>
-    <h4>Vali automaat:</h4>
-    <div class="select-container">
-      <select id="chooseShop">
-          <option value="143">Türi Säästumarket</option>
-  <option value="112">Paide Selver</option>
-
-      </select>
-    </div>
-
-    </div>
-  </form>
+        </select>
+      </div>
+      <div id="pointOmniva">
+        <h4 class="ee-top-20">Vali asukoht:</h4>
+        <div class="select-container">
+          <select id="chooseSpot">
+              <option   data-iconurl="assets/img/branding/omniva-sprite.svg" selected> Kristiine Keskuse Omniva</option> 
+  <option  data-iconurl="assets/img/branding/itella-sprite.svg">Kristiine Keskuse Smartpost</option> 
+  <option  data-iconurl="assets/img/branding/omniva-sprite.svg">Rotermanni Kvartali Aatriumi Omniva</option>
+  <option  data-iconurl="assets/img/branding/itella-sprite.svg"> Haabersti Rimi Itella</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Järve Keskus</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Kaubamaja</option>
+  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Kristiine Keskus</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Lasnamäe Centrum (RIMI)</option>
+  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Lasnamäe Prisma</option>
+  <option value="164"> Magistrali Keskus</option>
+  <option value="102"> Merimetsa Selver</option>
+  <option value="138"> Mustika Keskus</option>
+  <option value="124"> Nõmme Keskus</option>
+  <option value="125"> Pirita Selver</option>
+  <option value="153"> Rocca Al Mare Keskus</option>
+  <option value="154"> Sikupilli Prisma</option>
+  <option value="141"> Smuuli Maxima</option>
+  <option value="155"> Solaris Keskus</option>
+  <option value="137"> Tondi Selver</option>
+  <option value="122"> Torupilli Selver</option>
+<option value="187"> Ülemiste Keskus</option><option value="104">Rotermanni Kvartali Aatrium</option><option value="121"> Haabersti Rimi</option><option value="126"> Järve Keskus</option><option value="185"> Kadaka Selver</option><option value="160"> Kaubamaja</option><option value="146"> Kristiine Keskus</option><option value="175"> Läänemere Selver</option><option value="120"> Lasnamäe Centrum (RIMI)</option><option value="103"> Lasnamäe Prisma</option><option value="164"> Magistrali Keskus</option><option value="102"> Merimetsa Selver</option><option value="138"> Mustika Prisma</option><option value="124"> Nõmme Keskus</option><option value="125"> Pirita Selver</option><option value="153"> Rocca Al Mare Keskus</option><option value="154"> Sikupilli Prisma</option><option value="141"> Smuuli Maxima</option><option value="155"> Solaris Keskus</option><option value="137"> Tondi Selver</option><option value="122"> Torupilli Selver</option>
+          </select>
+        </div>
+      </div>
+      <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
+      <div class="form-group ">
+        <label for="name" class="col-sm-4 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+        <div class="col-sm-8">
+          <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+    </form>
+    <img class="img-responsive ee-top-20" src="http://placehold.it/800x400&text=Kaart" alt="">
   </div>
+  
   <div class="col-sm-4">
-    <h5>Tallinna Kristiine Keskus</h5>
+    <h4 class="ee-top-20">Saad paki kätte:</h4>
+    <img src="assets/img/branding/omniva-lg.svg" alt="" class="pull-right" id="omnivaLogo">
+    <img src="assets/img/branding/itella-lg.svg" alt="" class="pull-right" id="itellaLogo">
+    <h5 class="ee-top-10">Tallinna Kristiine Keskus</h5>
     <p>
       <strong>Aadress:</strong><br>
-      Harjumaa, Türi 5 - Tallinna linn
+      Harjumaa, Endla tänav 45, Kristiine linnaosa
     </p>
     <p>
       <strong>Lahtiolekuajad:</strong><br>
@@ -940,13 +956,24 @@
       <strong>Lisainformatsioon:</strong><br>
       Prisma Peremarketi sissepääsu vastas, eskalaatori taga.
     </p>
+    <div class="panel panel-primary" id="deliveryInfoShop">
+      <div class="panel-heading">
+        <span class="icon icon-info"></span>  Pane tähele!
+      </div>
+      <div class="panel-body">
+        <small>
+          Pakile saad järele minna alates <strong> 27.11 kell 11:00</strong>
+          <br>
+          <i>Teavitus paki jõudmisest automaati saadetakse SMSiga</i>
+        </small>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-4 ee-top-10">
-    <img class="img-responsive" src="http://placehold.it/495x400&text=Kaart" alt="">
-  </div>
+
+  
 </div>
     <div class="row tsr-forms" id="deliveryWhereShop">
-  <div class="col-sm-4">
+  <div class="col-sm-8">
     <h4>Vali pood:</h4>
     <div class="select-container">
       <select id="chooseShop">
@@ -1068,25 +1095,37 @@
     </p>
     <p>
       <strong>Lahtiolekuajad:</strong><br>
-      E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud
+      E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud 
     </p>
+    <div class="panel panel-primary" id="deliveryInfoShop">
+      <div class="panel-heading">
+        <span class="icon icon-info"></span>  Pane tähele!
+      </div>
+      <div class="panel-body">
+        <small>
+          <dl>
+            <dd>- Valides kauba Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque minima facere earum quae ipsa et, quia amet repellat quis, quas praesentium corporis! Minus dignissimos reprehenderit voluptates atque pariatur natus, obcaecati!</dd>
+            <dd>- Tellimuse täitmise aja teatab teenindaja 1 tööpäeva jooksul alates makse laekumisest</dd>
+          </dl>
+
+        </small>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-4 ee-top-10">
-    <img class="img-responsive" src="http://placehold.it/495x400&text=Kaart" alt="">
-  </div>
+  <img class="img-responsive" src="http://placehold.it/495x400&text=Kaart" alt="">
 </div>
   </div>
 </div> 
-          <div class="row">
+        <div class="row">
   <hr class="hidden-xs">
 
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row">
-      <div class="col-sm-6">
+<!--       <div class="col-sm-6">
         <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
         <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
-      </div>
-      <div class="col-sm-2 text-right ee-top-10">
+      </div> -->
+      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
         <button class="btn btn-link" onClick="location.href= 'cart-aboutyou.html' " >Tagasi</button>
       </div>
         <div class="col-sm-4">
@@ -1096,12 +1135,11 @@
     </div>
   </div>
 </div>
-        </div>
       </div>
-    </section>
-      
-  </div>
-</section>
+    </div>
+  </section>
+    
+</div>
 
 <footer>
     <div class="container-no-gutter">
@@ -1401,22 +1439,14 @@ paymentSelectBox.on("change", function() {
 // Devlivery-page select behavior
 //--------------------------------
 $('#deliveryWhereCourier').hide();
-$('#deliveryWhereOmniva').hide();
+$('#deliveryWhereShop').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
 var deliverySelectBox = $("#chooseDelivery");
 deliverySelectBox.on("change", function() {
 
-  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereOmniva').show();
-    $('#deliveryInfoItella').show();
-    $('#deliveryWhereCourier').hide();
-    $('#deliveryInfoCourier').hide();
-    $('#deliveryWhereShop').hide();
-    $('#deliveryInfoShop').hide();
-  } 
-  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+  if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
     $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereCourier').show();
@@ -1424,7 +1454,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryWhereShop').hide();
     $('#deliveryInfoShop').hide();
   } 
-  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+  else if ($(this).val() == "Pakiautomaadist (tasuta)") {
     $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
@@ -1444,17 +1474,21 @@ deliverySelectBox.on("change", function() {
 
 // aboutyou-page select behavior
 //--------------------------------
-$('#regularChecks').hide();
+$('#itellaLogo').hide();
 
-var roleSelectBox = $("#chooseRole");
+var roleSelectBox = $("#chooseSpot");
 roleSelectBox.on("change", function() {
-  if ($(this).val() == "Fänsi") {
-    $('#fancyChecks').show();
-    $('#regularChecks').hide();
+  if ($(this).val().indexOf("Itella")> -1 ) {
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
+  } 
+  else  if ($(this).val().indexOf("Omniva")> -1 ) {
+    $('#itellaLogo').hide();
+    $('#omnivaLogo').show();
   } 
   else {
-    $('#fancyChecks').hide();
-    $('#regularChecks').show();
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
   }
 });
 

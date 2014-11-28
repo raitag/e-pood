@@ -190,22 +190,14 @@ paymentSelectBox.on("change", function() {
 // Devlivery-page select behavior
 //--------------------------------
 $('#deliveryWhereCourier').hide();
-$('#deliveryWhereOmniva').hide();
+$('#deliveryWhereShop').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
 var deliverySelectBox = $("#chooseDelivery");
 deliverySelectBox.on("change", function() {
 
-  if ($(this).val() == "SmartPosti pakiautomaadist (Lisatasuta)") {
-    $('#deliveryWhereOmniva').show();
-    $('#deliveryInfoItella').show();
-    $('#deliveryWhereCourier').hide();
-    $('#deliveryInfoCourier').hide();
-    $('#deliveryWhereShop').hide();
-    $('#deliveryInfoShop').hide();
-  } 
-  else if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+  if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
     $('#deliveryWhereOmniva').hide();
     $('#deliveryInfoItella').hide();
     $('#deliveryWhereCourier').show();
@@ -213,7 +205,7 @@ deliverySelectBox.on("change", function() {
     $('#deliveryWhereShop').hide();
     $('#deliveryInfoShop').hide();
   } 
-  else if ($(this).val() == "Omniva pakiautomaadist (Lisatasuta)") {
+  else if ($(this).val() == "Pakiautomaadist (tasuta)") {
     $('#deliveryWhereOmniva').show();
     $('#deliveryInfoItella').show();
     $('#deliveryWhereCourier').hide();
@@ -233,17 +225,21 @@ deliverySelectBox.on("change", function() {
 
 // aboutyou-page select behavior
 //--------------------------------
-$('#regularChecks').hide();
+$('#itellaLogo').hide();
 
-var roleSelectBox = $("#chooseRole");
+var roleSelectBox = $("#chooseSpot");
 roleSelectBox.on("change", function() {
-  if ($(this).val() == "Fänsi") {
-    $('#fancyChecks').show();
-    $('#regularChecks').hide();
+  if ($(this).val().indexOf("Itella")> -1 ) {
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
+  } 
+  else  if ($(this).val().indexOf("Omniva")> -1 ) {
+    $('#itellaLogo').hide();
+    $('#omnivaLogo').show();
   } 
   else {
-    $('#fancyChecks').hide();
-    $('#regularChecks').show();
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
   }
 });
 

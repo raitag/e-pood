@@ -82,12 +82,15 @@ width: 100%;
         -ms-transform: translateY(0);
         transform: translateY(0);
         @include media-min($screen-sm) {
-            position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
         }
+      }
+      &.cart-item-th {
+        height: auto;
       }
     }
     .cart-item-image {
@@ -236,6 +239,10 @@ width: 100%;
   }
 }
 
+.cart-overview-heading.panel-default {
+  padding-top: 5px;
+}
+
 // http://bioneos.com/blog/faux-full-width-sections-css
 .wrapping-layers {
   overflow-x: hidden;
@@ -282,4 +289,8 @@ padding-left: 5px;
 .close.edit {
   font-size: 18px;
   line-height: 1.3;
+}
+
+.tsr-forms .selectboxit-options {
+  width: 100% !important;
 }
