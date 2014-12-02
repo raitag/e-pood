@@ -1,7 +1,7 @@
 <!-- $pagejs empty -->
 <!-- $pagecss css-cart -->
 <!-- @include _header.html -->
-<div class="alert full-size alert-success" id="success1">
+<!-- <div class="alert full-size alert-success" id="success1">
     <div class="container">
         <span class="icon icon-info"></span>
         <div>
@@ -9,7 +9,7 @@
         </div>
         <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
     </div>
-</div>
+</div> -->
 <!-- @include _mainnav.html -->
 <!-- $title Ostukorv-5 -->
 <!-- $nextstep 'index.html' -->
@@ -39,36 +39,55 @@
             </li>
           </ol>
         </div>
-        <div class="progress-content">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <h2>Maksja</h2>
-              <div class="row">
-                <div class="col-sm-6">
-                  <address>
-                    Teele Puusemp <br> 
-                    Pärnu mnt 31 <br>
-                    Tallinn, Kesklinn, 10119
-                  </address>
-                </div>
-                <div class="col-sm-5 col-sm-offset-1 text-right">
-                  <dl class="dl-horizontal">
-                    <dt>Tellimus:</dt>
-                    <dd>2692981</dd>
-                    <dt>Kuupäev:</dt>
-                    <dd>08.10.2014</dd>
-                    <dt>Viitenumber:</dt>
-                    <dd>4543673568</dd>
-                  </dl>
-            
-                </div>
+        <div class="progress-content clearfix">
+          <div class="col-md-10 col-md-offset-1">
+            <h4>Täname ostu eest! Allpool näed oma tellimuse kokkuvõtet.</h4>
+            <hr>
+            <div class="row">
+              <div class="col-md-4">
+                <p>
+                  <span>Maksja:</span><br>
+                  <strong>Teele Puusemp</strong>
+                </p>
+              <p>
+                <span>Maksja aadress:</span><br>
+                <strong>Pärnu mnt 31 Tallinn, Kesklinn, 10119</strong>
+              </p>
               </div>
-            
-              <h2>Tellimuse summa</h2>
+              <div class="col-md-5">
+                <p>
+                  <span>Kättetoimetamise viis:</span><br>
+                  <strong>Kulleriga koju/kontorisse kätte</strong>
+                </p>
+                <p>
+                  <span>Kättetoimetamise aadress:</span><br>
+                  <strong>Endla tn 4, 10142 Tallinn, Kesklinn, Harjumaa</strong>
+                </p>
+                <p>
+                  <span>Kättetoimetamise ajavahemik:</span><br>
+                  <strong>9.10.2014 17:00 - 19:00</strong>
+                </p>
+              </div>
+              <div class="col-md-3 text-right">
+                <p>
+                  <span>Tellimus:</span>
+                  <strong>2692981</strong>
+                </p>
+                <p>
+                  <span>Kuupäev:</span>
+                  <strong>08.10.2014</strong>
+                </p>
+                <p>
+                  <span>Viitenumber:</span>
+                  <strong>4543673568</strong>
+                </p>
+          
+              </div>
             </div>
+          
           </div>
-            <!-- @include _overview-final.html --> 
-            <!-- @include _overview-payment.html -->
+
+            <!-- @include _overview-conclusion.html -->
             <!-- @include _conclusion-bottom.html --> 
 
 

@@ -176,6 +176,7 @@
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
+              <li><a href="cart-leasing.html">4. Liising</a></li>
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
               <hr>
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
@@ -777,7 +778,7 @@
 
 <script id="product-detail-template" type="text/x-handlebars-template">
 
-{{#with products.[1]}}
+{{#with products.[0]}}
 
 <div class="col-sm-6 col-sm-push-6"> 
   <h2>{{name}}</h2>
@@ -791,7 +792,7 @@
 
 
     <div class="panel-group ee-accordion-bundled" id="bundles">
-  <div class="panel">
+  <!-- <div class="panel">
     <a data-toggle="collapse" data-parent="#bundles" href="#bundleOne">
       Tasuta kaasa Elion uue nutiTV pult S3 Samsungi telerile
     </a>
@@ -801,7 +802,7 @@
       <div class="panel-body no-border">
        <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/92974_33/200x200/pult_esikylg_01_1--1_300dpi%20copy.jpg" style="width: 64px; height: 64px;">
+            <img class="media-object" alt="64x64" src="https://pood.elion.ee/pictures/92977_43/400x400/239356_1_1(1).jpg" style="width: 64px; height: 64px;">
           </a>
           <div class="media-body">
             <label for="check-1"><input type="checkbox"  id="check-1" name="defaultCheck" checked disabled></label>
@@ -814,8 +815,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <hr>
+  </div> -->
+  <!-- <hr>
   <div class="panel">
     <a data-toggle="collapse" data-parent="#bundles" href="#bundleTwo">
       Tasuta kaasa fotokaamerakott Fujifilm SC-XF1
@@ -824,7 +825,7 @@
       <div class="panel-body no-border">
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/75451_8/400x400/fujifilm-vutlar-sc-xf1-pruun-44337%20copy.jpg" style="width: 64px; height: 64px;">
+            <img class="media-object" alt="64x64" src="https://pood.elion.ee/pictures/75451_12/400x400/fujifilm-vutlar-sc-xf1-pruun-44337%20copy.jpg" style="width: 64px; height: 64px;">
           </a>
           <div class="media-body">
             <label for="radio-1"><input type="radio"  id="radio-1" name="defaultRadio" disabled checked></label>
@@ -836,7 +837,7 @@
         </div>
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/75439_7/200x200/fujifilm-vutlar-sc-xf1-must-44334%20copy.jpg" style="width: 64px; height: 64px;">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/75439_11/400x400/fujifilm-vutlar-sc-xf1-must-44334%20copy.jpg" style="width: 64px; height: 64px;">
           </a>
           <div class="media-body">
             <label for="radio-2"><input type="radio"  id="radio-2" name="defaultRadio" disabled> </label>
@@ -862,7 +863,7 @@
       <div class="panel-body no-border">
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/90103_14/200x200/Arvutikaitse%20copy.jpg" style="width: 64px; height: 64px;">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/90103_21/400x400/Arvutikaitse%20copy.jpg" style="width: 64px; height: 64px;">
           </a>
           <div class="media-body">
             <label for="radio-5"><input type="checkbox"  id="radio-5" name="defaultRadio" checked> </label>
@@ -880,16 +881,16 @@
       </div>
     </div>
   </div>
-  <hr>
+  <hr> -->
   <div class="panel">
     <a data-toggle="collapse" data-parent="#bundles" href="#bundleFour">
       Pakime tellitud kauba kingituseks ja anname kaasa head soovid.
     </a>
-    <div id="bundleFour" class="panel-collapse collapse tsr-forms">
+    <div id="bundleFour" class="panel-collapse collapse in tsr-forms">
       <div class="panel-body no-border">
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/97731_10/200x200/Elion%20kinkepakk.jpg" style="width: 64px; height: 64px;">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/97731_16/64x64/Elion%20kinkepakk.jpg" style="width: 64px; height: 64px;">
           </a>
           <div class="media-body">
             <label for="radio-6"><input type="checkbox"  id="radio-6" name="defaultRadio"> </label>
@@ -903,7 +904,7 @@
         </div>
         <div class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/97728_9/200x200/Elion%20kinkepakk%20Soovidega.jpg" style="width: 64px; height: 64px;">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/97728_16/64x64/Elion%20kinkepakk%20Soovidega.jpg" style="width: 64px; height: 64px;">
           </a>
 
           <div class="media-body">
@@ -920,7 +921,7 @@
     </div>
   </div>
   <hr>
-  <div class="panel">
+  <!-- <div class="panel">
     <a data-toggle="collapse" data-parent="#bundles" href="#bundleFive">
       See toode on saadaval ka sooduskomplektina:
     </a>
@@ -944,7 +945,7 @@
         
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
   <div class="hidden-xs "> 
     <div class="tsr-product-colors">
@@ -977,8 +978,12 @@
     </div>
 
     <div class="row ee-leasing-header">
-      <h6>Kuumakse: 48 x 84,89 €</h6>
+      <h6>Järelmaksu kuumakse: 48 x 10,98 €</h6>
       <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
+    </div>
+    <div class="row ee-leasing-header" style="border: none;">
+      <h6>Osta koos teenusega: 21,44 €/kuus</h6>
+      <a class="pull-right" href="#otherToggle" data-toggle="collapse">Tutvu komplektiga</a>
     </div>
     <section class="row ee-panel-leasing collapse" id="leasingToggle">
   <div class="row tsr-forms ">
@@ -1194,7 +1199,7 @@
     {{/if}}
 
         <div class="row ee-leasing-header">
-      <h6>Kuumakse: 48 x 84,89 €</h6>
+      <h6>Järelmaksu kuumakse: 48 x 10,98 €</h6>
       <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
     </div>
     <section class="row ee-panel-leasing collapse" id="leasingToggle">
@@ -1405,16 +1410,17 @@
   <div class="container padding-reset">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="TabsResponsive">
-      <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
+      <li><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
       <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
       <li><a href="#reviews" data-toggle="tab">Arvamused <span>(5)</span></a></li>
       <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted <span>(5)</span></a></li>
+      <li class="active"><a href="#offers" data-toggle="tab">Pakkumised <span>(1)</span></a></li>
     </ul>
   </div>
 </section>
 <section class="ee-tab-to-accordioncontent ">
   <div class="tab-content">
-    <div class="tab-pane fade in" id="general-info">
+    <div class="tab-pane fade" id="general-info">
       <div class="container ee-top-10">
         <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
         <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
@@ -1460,7 +1466,7 @@
         </script>
       </div>
     </div>
-    <div class="tab-pane fade in active" id="reviews">
+    <div class="tab-pane fade" id="reviews">
       <section class="ee-review-add">
   <div class="container tsr-forms">
     <div class="row">
@@ -1812,8 +1818,7 @@
 
 
       </div>
-    </div>
-    <div class="tab-pane cheap" id="non-free-campaigns">
+    </div><div class="tab-pane cheap" id="non-free-campaigns">
   <div class="container">
     <h3>
       See toode saadaval ka järgmistes sooduskomplektides
@@ -1860,6 +1865,72 @@
         </div>
       </div>
     </div>
+    <div class="tab-pane fade in active" id="offers">
+  <div class="container ee-top-10">
+    <div class="row ee-nogap">
+      <section class="tsr-section-productAndService-listing">
+        <div class="col-five-on-small">
+          <div class="tsr-module-product ee-blockview" style="height: 295px;">
+            <figure class="tsr-product-image">
+              <a href="/productInfo/29/mobiiltelefon-sony-xperia-z3-(must)/1288-1948" class="jsRememberMe">
+        
+                <img src="assets/img/offers/emtspoty.png" data-original="https://pood.elion.ee/pictures/120649_19/300x300xt/Mobiiltelefon%20Sony%20Xperia%20Z3%20must%20eest.jpg" id="120649" class="original jsListProductImage" alt="mobiiltelefon Sony Xperia Z3 (must)" style="display: inline;">
+        
+              </a>
+            </figure>
+            <div class="tsr-product-content">
+        
+              <div class="tsr-product-header" style="height: 61px;">
+                <h6>
+                  <a href="/productInfo/29/mobiiltelefon-sony-xperia-z3-(must)/1288-1948" class="jsRememberMe three-dot-text-grid-truncated">
+                    Kingiks aastajagu muusikat
+                  </a>
+                </h6>
+
+              </div>
+                <p>
+                  Uue telefoni ja EMT Internetiga kingime Sulle Spotify Premium'i aastaks hinnaga 0 €/kuus. 
+                </p>
+        
+              <!-- <p class="tsr-product-price ee-product-price-md" style="height: 28px;"><span>&nbsp;649 €</span></p> -->
+        
+            </div>
+          </div>
+        </div>
+        <div class="col-five-on-small" >
+          <div class="tsr-module-product ee-blockview" style="height: 295px;">
+            <figure class="tsr-product-image">
+              <a href="/productInfo/29/mobiiltelefon-sony-xperia-z3-(must)/1288-1948" class="jsRememberMe">
+        
+                <img src="assets/img/offers/Elion-kinkepakk-Soovidega.jpg" data-original="https://pood.elion.ee/productInfo/29/mobiiltelefon-sony-xperia-m2-aqua-(pronks)/1288-4595" id="120649" class="original jsListProductImage" alt="mobiiltelefon Sony Xperia Z3 (must)" style="display: inline;">
+        
+              </a>
+            </figure>
+            <div class="tsr-product-content">
+        
+              <div class="tsr-product-header" style="height: 61px;">
+                <h6>
+                  <a href="/productInfo/29/mobiiltelefon-sony-xperia-z3-(must)/1288-1948" style="margin-left: 15px;">
+                    Tore jõulupakkumine
+                  </a>
+                </h6>
+
+              </div>
+                <p>
+                  Mingi muu pakkumine. 
+                </p>
+        
+              <!-- <p class="tsr-product-price ee-product-price-md" style="height: 28px;"><span>&nbsp;649 €</span></p> -->
+        
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
   </div>
 </section> 
 

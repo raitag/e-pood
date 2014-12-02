@@ -2,16 +2,17 @@
   <div class="container padding-reset">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="TabsResponsive">
-      <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
+      <li><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
       <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
       <li><a href="#reviews" data-toggle="tab">Arvamused <span>(5)</span></a></li>
       <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted <span>(5)</span></a></li>
+      <li class="active"><a href="#offers" data-toggle="tab">Pakkumised <span>(1)</span></a></li>
     </ul>
   </div>
 </section>
 <section class="ee-tab-to-accordioncontent ">
   <div class="tab-content">
-    <div class="tab-pane fade in" id="general-info">
+    <div class="tab-pane fade" id="general-info">
       <div class="container ee-top-10">
         <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
         <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
@@ -57,7 +58,7 @@
         </script>
       </div>
     </div>
-    <div class="tab-pane fade in active" id="reviews">
+    <div class="tab-pane fade" id="reviews">
       <!-- @include _add-review.html -->
       <section class="tsr-section-divider tsr-color-purple">
         <div class="container">
@@ -72,7 +73,7 @@
       <div class="container">
         <!-- @include _product-boxes-detail.html -->
       </div>
-    </div>
-    <!-- @include _cheap.html -->
+    </div><!-- @include _cheap.html -->
+    <!-- @include tab-offers.html -->
   </div>
 </section>

@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Title</title>
+<title>Ostukorv-4</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Ostukorv-4" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Title">
+<meta name="twitter:title" content="Ostukorv-4">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -154,7 +154,7 @@
               <li><a href="favorite-page.html">Lemmikud (+ajax loader inline)</a></li>
               <li><a href="compare-page.html">Võrdlus</a></li>
               <li><a href="care-page.html">Hooldusinfo</a></li>
-              <li class='current'><a class='current' href="help-page.html">Abilehed</a></li>
+              <li><a href="help-page.html">Abilehed</a></li>
               
             </ul>
           </li>
@@ -164,7 +164,7 @@
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
-              <li><a href="cart-leasing.html">4. Liising</a></li>
+              <li class='current'><a class='current' href="cart-leasing.html">4. Liising</a></li>
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
               <hr>
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
@@ -711,190 +711,252 @@
 </nav> -->
 
 </header>
-<section class="ee-breadcrumbs hidden-xs hidden-sm">
-  <div class="container">
-    <ul class="breadcrumb">
-      <li><a href="#">Arvutid ja lisad</a></li>
-      <li class="active">Sülearvutid</li>
-    </ul>
-  </div>
-</section>
 
-<div class="container"> 
+
+
+
+
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="" data-target="#id1">
+              <h4>Ostukorv</h4>
+            </li>
+            <li class="" data-target="#id2">
+              <h4>Arveandmed</h4>
+            </li>
+            <li class="" data-target="#id3">
+              <h4>Kohaletoomine</h4>
+            </li>
+            <li class="progress-active">
+              <h4>Maksmine</h4>
+            </li>
+            <li class="last-child" data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content clearfix">
+          <div class="col-md-10 col-md-offset-1">
   <div class="row">
-    <div class="col-md-3 hidden-sm hidden-xs">
-
-       <ul class="ee-sidenav">
-
-
-  <li class="firstlevel"><a href="#"><h6>Kuidas osta e-poest</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Maksetingimused </h6></a></li>
-  <li class="firstlevel"><a href="#"><h6>Elioni järelmaks</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Remont ja hooldus</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Ärikliendile </h6></a></li>
-  <li class="firstlevel"><a href="#"><h6>KKK</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Kontaktid</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>E-poe üldtingimused</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Kinkekaardi tingimused</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Objektiivide lühendid</h6></a></li>
-  <li class="firstlevel"><a href="#"><h6>Kinkepaki tingimused</h6> </a></li>
-  <li class="firstlevel"><a href="#"><h6>Mida teha kasutatud seadmetega?</h6> </a></li>
-
-</ul>
-
-
-
+    <div class="panel panel-default cart-overview-heading clearfix">
+      <div class="col-sm-3">
+        <h6>Sul on ostukorvis <strong>3</strong> asja </h6>
+      </div>
+      <div class="col-sm-4">
+        <a class="btn btn-primary btn-block" data-toggle="collapse" href="#cart-overview" aria-expanded="true" aria-controls="cart-overview">
+          Näita, millised, ma ei mäleta
+        </a>
+      </div>
+      <div class="col-sm-5">
+        <h4>
+          Ostukorv kokku
+          <div class="pull-right ee-product-price-md">
+            <strong>269.99 €</strong>
+          </div>
+        </h4>
+      </div>
     </div>
+  </div>
 
-    <div class="col-xs-12 col-md-9">
+  <div class="row cart collapse" id="cart-overview">
+  <div class="cart-items">
 
-      <h1>Kuidas osta e-poest?</h1>
-      <h3>E-poe kasutajaks registreerumine</h3>
-      <p>E-poodi saad siseneda järgmiste identifitseerimisvahendite abil:</p>
-      <p><img height="150" width="319" src="https://pood.elion.ee/upload/identifiseerimisvahendid1.jpg" alt="pangalingid"></p>
-      
-      <h3>Mida saan teha sisseloginud kliendina?</h3>
-      <ul>
-        <li>Lihtsalt ja kiiresti liikuda e-poe ja e-teeninduse keskkondade vahel;</li>
-        <li>Vaadata infot varasemate tellimuste kohta;</li>
-        <li>Muuta oma (kontakt)andmeid;</li>
-        <li>Sooritada mugavalt e-poest uusi oste.</li>
-      </ul>
-      <h3>Seadmete valimine ja tootevõrdlus</h3>
-      <p>E-poes on võimalik tooteid kauba valimisel otsida ja sorteerida, filtreerida ning võrrelda.</p>
-      <h3>Toodete otsimine</h3>
-      <p>Kui soovid leida kindlat kaupa, sisesta otsinguaknasse märksõna ja vajuta “Otsi”. Otsingusõna peab olema vähemalt 3 tähemärki.</p>
-      <p>Soovitusi otsinguks:</p>
-      <ul>
-        <li>Kui otsing ei anna tulemust, veendu, et kirjutasid otsingusõna õigesti.</li>
-        <li>Kui tead otsitava toote täpset mudelinime, sisesta see otsingusse. Kui otsing tulemusi ei anna, kuid tead kindlalt, et e-poes on toode olemas, võib olla, et oled teinud vea mudelinimes kokku-lahku kirjutamisel või sidekriipsude kasutamisel. Sel juhul sisesta otsingusse tootja nimi või tootegrupp.</li>
-        <li>Kui otsid konkreetset tootegruppi (näiteks laserprinterid), sisesta otsingusse märksõna ainsuses – laserprinter. Mitmuses ei pruugi otsing tulemusi anda.</li>
-      </ul>
-      <h3>Kaupade sirvimine ja sorteerimine</h3>
-      <p>Sul on võimalik tutvuda kõigi e-poes olevate kaupadega toodete, tootegruppide ning tootjate kaupa.</p> 
-      <p>Tooted on jagatud nelja suuremasse gruppi </p>
-      <ul>
-        <li>Arvutid ja lisad,</li> 
-        <li>TV ja audio,</li> 
-        <li>Foto, video ja GPS ning</li>
-        <li>Telefonid.</li>
-      </ul>
-      <p>Kui oled leidnud huvitava tootegrupi (näiteks sülearvutid), ava nimekiri.</p> <p>Toodetega saad tutvuda kahes vaates – Pildid (siin näed suurimaid pilte) ja Nimekiri (sisaldab enim infot).</p>
-      <p>Edasi on võimalik tooteid veel erinevate näitajate järgi filtreerida. Olenevalt kaubast saad tulemusi filtreerida erinevate tehniliste näitajate kaudu või hinna järgi.</p>
-      <p>Tulemusi saad ka sorteerida tähestikulises järjekorras, hinna ja toote uudsuse järgi.</p>
-      <h3>Kaupade võrdlemine</h3>
-      E-poes on sul võimalik võrrelda korraga kuni viit toodet .<br>Kaupade võrdlemiseks mine tootele ning vajuta nuppu<strong> „Võrdle</strong>“. <br>Seejärel leia järgmised tooted ning vajuta ka nende juures vastavat nuppu.
-      <p>Iga toote lisamisel tekib e-poe päisesse sinise kirjaga tekstiriba, mis teavitab toote võrdlusesse lisamisest. Sellel ribal klikkides pääsed võrdlustabelit vaatama.</p>
-      <p>Kui soovid minna tootevõrdluse vaatesse hiljem, kliki ülemise menüüriba all olevale lingile <strong>„Tootevõrdlus“</strong>.</p>
-      <p>Tootevõrdluses näed sinna lisatud tooteid võrdlustabelina. Kui soovin tutvuda peamiste erinevustega, vajuta nupule <strong>„Too esile erinevused“</strong>.</p>
+    <div id="content-placeholder-cart"></div>
 
-      <h3>Kauba lisamine ostukorvi</h3>
-      <p>Kui leidsid sobiva kauba, vajuta nupule<strong> “Lisa ostukorvi“</strong>. <br>Seejärel saad jätkata teiste toodete valimist või alustada ostukorvis ostu vormistamist.</p>
-      <p>Hiljem on sul võimalik ostukorvi lisatud toodete vaatamiseks klikkida lehe parempoolses ülemises nurgas lingil „Ostukorv“.</p>
-      <h3>Ostukorvi ülevaade</h3>
-      <ol>
-        <li>Lisa ostukorvi soovitud kaubad.</li>
-        <li>Vaata ostukorv üle ja veendu, et seal on õiged tooted ning nende kogused.</li><li>Ostu sooritamiseks vajuta „Asun tellimust vormistama“.</li>
-      </ol>
-      <h3>Maksja andmed</h3>
-      <ul>
-        <li>Sisesta oma andmed ning vali tasumisviis.</li>
-        <li>Kaupade eest saad maksta pangalingi kaudu, järelmaksu lepinguga või ettemaksuarve alusel. Loe täpsemalt erinevatest makseviisidest.</li>
-        <li>Tutvu kindlasti e-poe kasutustingimustega ja märgi, et oled nendega tutvunud.</li>
-      </ul>
-      <h3>Kohaletoimetamine</h3>
-      <p>Vali sobiv kauba kättetoimetamise viis:</p>
-      <ul>
-        <li>kohaletoomine (kauba toob Sulle kuller);</li>
-        <li>tulen ise poodi järgi;</li>
-        <li>SmartPost pakiautomaat;</li>
-        <li>Post24 pakiautomaat.</li>
-      </ul>
-      <h3>Maksmine</h3>
-      <p>Siin saad veelkord tutvuda kauba ja selle hinnaga ning valida makseviisi. Kui tasud kauba eest pangalingiga, vali pank, kust soovid ülekande teha.<br>Kui oled internetipangas makse sooritanud, vajuta kindlasti nuppu <strong>„Tagasi kaupmehe juurde”.</strong></p>
-      <p>Järelmaksu lepingu sõlmimiseks tuleb siseneda Elioni e-teenindusse.</p>
-      <h3>Tellimuse täitmine ja tarneinfo jälgimine</h3>
-      <p>Kui oled ostu sooritanud, tuleb e-postkasti teade, et tellimuse esitamine õnnestus. Sul on võimalik tellimuse kinnitus ka välja printida. Kui sa e-posti teel teadet ei saa, helista lisainfo saamiseks telefonil <strong>650 7030</strong>.</p>
-      <p>E-posti teel anname teada ka sellest, kui kaup on teele saadetud või kui see on jõudnud Elioni poodi. <br>Kaubad toimetab Sinuni meie koostööpartnerist kullerfirmaga. Kullerteenust saab tellida ainult Eesti piires.</p>
-      <h3>Kauba tagastamine</h3>
-      <p>Juhul kui Sinu poolt tellitud toode ei tööta või on transpordi käigus vigastada saanud, pöördu lähimasse Elioni poodi. Tarbijal on õigus 14 päeva jooksul alates kauba kättetoimetamise päevast kaup tagastada ja saada tasutud raha tagasi (v.a. transpordikulu), samuti taganeda järelmaksulepingust (kui kaup on ostetud järelmaksuga).</p>
-      <p>Tagastamisel paki kaup originaalpakendisse ja lisa sellele kaasasolnud ostuarve. <br>Ostuarve on üldjuhul kaubaga kaasas, kui seda polnud või oled arve kaotanud, saad selle koopia Elioni poest.</p>
-      <p>Kui Sul tekib seoses kauba kättesaamise või tagastamisega küsimusi, helista telefonil <strong>650 7030</strong>.</p>
-      <h3>Eritellimused</h3>
-      <p>Elionist saab tellida ka tooteid, mis ei ole tootevalikus. Seda saab teha igas Elion poes ettemaksu tasumisel. Ettemakstav summa peab olema vähemalt <strong>50%</strong> toodete koos käibemaksuga müügihinnast.</p>
 
-      <p>Elioni e-poes saab kaupade eest tasuda:</p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>
-              Eraklient
-            </th>
-            <th>
-              Äriklient
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Pangalingiga
-            </td>
-            <td>
-              Pangalingiga
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Ettemaksu alusel
-            </td>
-            <td>
-              Ettemaksu alusel
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Järelmaksu leping
-            </td>
-            <td>
-              Elioni liisingu leping
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p> </p>
-            </td>
-            <td>
-              Järgmise Elioni arvega
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <script id="cart-template" type="text/x-handlebars-template">
+    
+      <div class="col-sm-12 cart-item">
+        <div class="row cart-item-th hidden-xs">
+          <div class="col-sm-6">
+            Toode
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-7 text-right">
+                Kogus
+              </div>
+              <div class="col-sm-5 text-right">
+                Hind
+              </div>
+            </div>
+          </div>
+        </div>
+        {{#products}} 
+        <div class="row">
+
+          <div class="col-xs-3 col-sm-1 cart-item-image">
+            <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+          </div>
+
+          <div class="col-xs-7 col-sm-5">
+            <h6>{{name}}</h6>
+
+            {{#if special_price}}
+            <strong>See DVD mängija on Sulle, Raili :)</strong>
+            {{/if}}
+          </div>
+
+
+          <div class="col-xs-12 col-sm-6">
+            <div class="row form-horizontal">
+              <div class="col-xs-6 col-sm-8 text-right">
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
+                  <div class="col-sm-10">
+                    <label class="control-label-left">1</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 visible-xs text-right">
+              <label class="ee-top-10">Hind:  </label>
+              </div>
+              <div class="col-xs-6 col-sm-4 text-right">
+              {{#if special_price}}
+              <p class="ee-product-price-md">{{special_price}}</p>
+              {{else}}
+              <p class="ee-product-price-md">{{normal_price}}</p>
+              {{/if}}
+              </div>
+              
+               
+          </div>
+        </div>
+      </div>
+      {{/products}} 
+
+      <div class="row">
+
+  <div class="col-xs-7 col-xs-offset-3 col-sm-5 col-sm-offset-1"> 
+    <h5>Kinkekaart 8-16373236</h5>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <div class="row form-horizontal">
+      <div class="col-xs-6 col-sm-8 text-right">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">1</label>
+            </div>
+          </div>
+        </div>
+      <div class="col-xs-6 visible-xs text-right">
+        <label class="ee-top-10">Hind:  </label>
+        </div>
+        <div class="col-xs-6 col-sm-4 text-right">
+        <p class="ee-product-price-md">-20 €</p>
+      </div>
     </div>
   </div>
 </div>
+      
+    </div>
+    
+    </script>
+      
+  </div>
+</div> 
 
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
+  <div class="row tsr-forms">
+    <div class="col-sm-5 col-sm-offset-7">
+      <h6> Kättetoimetamine
+        <div class="pull-right ee-product-price-md">
+          <strong>3.50 €</strong>
+        </div>
+      </h6>
 
-    <a href="#" class="tsr-module-support icon icon-leasing">
-      <h6>Elioni järelmaks</h6>
-    </a>  
 
-    <a href="#" class="tsr-module-support icon icon-transport">
-      <h6>Transport e-poes</h6>
-    </a>  
+      <h4>
+        Kokku tasuda
+        <div class="pull-right ee-product-price-md">
+          <strong>272.99 €</strong>
+        </div>
+      </h4>
 
-    <a href="#" class="tsr-module-support icon icon-help">
-      <h6>Abiinfo</h6>
-    </a>  
+      <form action="" class="form-horizontal"> 
+        <div class="form-group">
+          <h6>
+            Periood
+            <div class="col-sm-6 col-md-6 pull-right">
+                <div class="select-container">
+                  <select id="chooseMonths">
+                    <option selected>48 kuud</option>
+                    <option>9 kuud</option>
+                  </select>
+                </div>
+              </div>
+          </h6>
+        </div>
 
-    <a href="#" class="tsr-module-support icon icon-settings">
-      <h6>Remont ja hooldus</h6>
-    </a>                  
+        <div class="form-group">
+          <h6>
+            Sissemakse
+            <div class="col-sm-6 col-md-6 pull-right">
+                <div class="select-container">
+                  <select id="chooseMonths">
+                    <option selected>10%</option>
+                    <option>50%</option>
+                  </select>
+                </div>
+              </div>
+          </h6>
+        </div>
 
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
+        <div class="form-group">
+          <h6>
+            Sissemakse
+            <div class="pull-right">
+              <a href="#" id="" data-type="text" data-pk="1" data-title="" class="datepicker">90,25 € &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
+          </h6>
+        </div>
+      </form>
+
+
+      <h6>
+        Summa käibemaksuta 
+        <div class="pull-right">
+          <strong>169.99 €</strong>
+        </div>
+      </h6>
+      <h6>
+        Käibemaks 
+        <div class="pull-right">
+          <strong>69.99 €</strong>
+        </div>
+      </h6>
+    </div>
+  </div>
+</div>
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+  
+  <div class="row">
+    <hr class="hidden-xs">
+<!--       <div class="col-sm-6">
+      <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
+      <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
+    </div> -->
+    <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+      <button class="btn btn-link" onClick="location.href= 'cart-delivery.html' " >Tagasi</button>
+    </div>
+      <div class="col-sm-4">
+        <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-conclusion.html' " >Jätka ostmist</button>
+        <!-- for disabled add class disabled -->
+      </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+      
+  </div>
+</section>
+
 <footer>
     <div class="container-no-gutter">
         <div class="row">
@@ -1101,4 +1163,4 @@ $(document).ready(function(){
   </script>
 
 </body>
-</html> 
+</html>  

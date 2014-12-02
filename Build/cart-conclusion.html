@@ -109,7 +109,7 @@
 
 <body> 
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
-<div class="alert full-size alert-success" id="success1">
+<!-- <div class="alert full-size alert-success" id="success1">
     <div class="container">
         <span class="icon icon-info"></span>
         <div>
@@ -117,7 +117,7 @@
         </div>
         <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
     </div>
-</div>
+</div> -->
 <header>
 
 
@@ -177,6 +177,7 @@
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
+              <li><a href="cart-leasing.html">4. Liising</a></li>
               <li class='current'><a class='current' href="cart-conclusion.html">5. Kokkuvõte</a></li>
               <hr>
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
@@ -751,116 +752,59 @@
             </li>
           </ol>
         </div>
-        <div class="progress-content">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <h2>Maksja</h2>
-              <div class="row">
-                <div class="col-sm-6">
-                  <address>
-                    Teele Puusemp <br> 
-                    Pärnu mnt 31 <br>
-                    Tallinn, Kesklinn, 10119
-                  </address>
-                </div>
-                <div class="col-sm-5 col-sm-offset-1 text-right">
-                  <dl class="dl-horizontal">
-                    <dt>Tellimus:</dt>
-                    <dd>2692981</dd>
-                    <dt>Kuupäev:</dt>
-                    <dd>08.10.2014</dd>
-                    <dt>Viitenumber:</dt>
-                    <dd>4543673568</dd>
-                  </dl>
-            
-                </div>
+        <div class="progress-content clearfix">
+          <div class="col-md-10 col-md-offset-1">
+            <h4>Täname ostu eest! Allpool näed oma tellimuse kokkuvõtet.</h4>
+            <hr>
+            <div class="row">
+              <div class="col-md-4">
+                <p>
+                  <span>Maksja:</span><br>
+                  <strong>Teele Puusemp</strong>
+                </p>
+              <p>
+                <span>Maksja aadress:</span><br>
+                <strong>Pärnu mnt 31 Tallinn, Kesklinn, 10119</strong>
+              </p>
               </div>
-            
-              <h2>Tellimuse summa</h2>
-            </div>
-          </div>
-            <div class="row cart">
-  <div class="cart-items">
-    <div class="col-md-10 col-md-offset-1 cart-item-th hidden-xs">
-      <div class="row">
-        <div class="col-sm-6">
-          Toode
-        </div>
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-7 text-right">
-              Kogus
-            </div>
-            <div class="col-sm-5 text-right">
-              Hind
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="content-placeholder-cart"></div>
-
-    
-
-    <script id="cart-template" type="text/x-handlebars-template">
-    {{#products}} 
-      <div class="col-md-10 col-md-offset-1 cart-item">
-        <div class="row">
-
-          <div class="col-xs-3 col-sm-1 cart-item-image">
-            <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
-          </div>
-
-          <div class="col-xs-7 col-sm-5">
-            <h6>{{name}}</h6>
-
-            {{#if special_price}}
-            <div class="panel"> 
-            <strong>See DVD mängija on Sulle, Raili :)</strong>
-            </div>
-            {{/if}}
-          </div>
-
-
-          <div class="col-xs-12 col-sm-6">
-            <div class="row form-horizontal">
-              <div class="col-xs-6 col-sm-8 text-right">
-                <div class="form-group">
-                  <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
-                  <div class="col-sm-10">
-                    <label class="control-label-left">1</label>
-                  </div>
-                </div>
+              <div class="col-md-5">
+                <p>
+                  <span>Kättetoimetamise viis:</span><br>
+                  <strong>Kulleriga koju/kontorisse kätte</strong>
+                </p>
+                <p>
+                  <span>Kättetoimetamise aadress:</span><br>
+                  <strong>Endla tn 4, 10142 Tallinn, Kesklinn, Harjumaa</strong>
+                </p>
+                <p>
+                  <span>Kättetoimetamise ajavahemik:</span><br>
+                  <strong>9.10.2014 17:00 - 19:00</strong>
+                </p>
               </div>
-              <div class="col-xs-6 visible-xs text-right">
-              <label class="ee-top-10">Hind:  </label>
+              <div class="col-md-3 text-right">
+                <p>
+                  <span>Tellimus:</span>
+                  <strong>2692981</strong>
+                </p>
+                <p>
+                  <span>Kuupäev:</span>
+                  <strong>08.10.2014</strong>
+                </p>
+                <p>
+                  <span>Viitenumber:</span>
+                  <strong>4543673568</strong>
+                </p>
+          
               </div>
-              <div class="col-xs-6 col-sm-4 text-right">
-              {{#if special_price}}
-              <p class="ee-product-price-md">{{special_price}}</p>
-              {{else}}
-              <p class="ee-product-price-md">{{normal_price}}</p>
-              {{/if}}
-              </div>
-              
-              
+            </div>
+          
           </div>
-        </div>
-      </div>
-    </div>
-    {{/products}} 
-    </script>
-      
-  </div>
-</div>
 
- 
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 ee-top-10">
   <div class="row">
     <div class="panel panel-default cart-overview-heading clearfix">
       <div class="col-sm-3">
-        <h6>Sul on ostukorvis <strong>3</strong> asja </h6>
+        <h6>Oled ostnud <strong>3</strong> asja ja transpordi kulleriga</h6>
       </div>
       <div class="col-sm-4">
         <a class="btn btn-primary btn-block" data-toggle="collapse" href="#cart-overview" aria-expanded="true" aria-controls="cart-overview">
@@ -871,7 +815,7 @@
         <h4>
           Ostukorv kokku
           <div class="pull-right ee-product-price-md">
-            <strong>269.99 €</strong>
+            <strong>272.99 €</strong>
           </div>
         </h4>
       </div>
@@ -913,9 +857,7 @@
             <h6>{{name}}</h6>
 
             {{#if special_price}}
-            <div class="panel"> 
             <strong>See DVD mängija on Sulle, Raili :)</strong>
-            </div>
             {{/if}}
           </div>
 
@@ -946,30 +888,75 @@
         </div>
       </div>
       {{/products}} 
+      <div class="row">
+
+  <div class="col-xs-7 col-xs-offset-3 col-sm-5 col-sm-offset-1"> 
+    <h5>Kinkekaart 8-16373236</h5>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <div class="row form-horizontal">
+      <div class="col-xs-6 col-sm-8 text-right">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">1</label>
+            </div>
+          </div>
+        </div>
+      <div class="col-xs-6 visible-xs text-right">
+        <label class="ee-top-10">Hind:  </label>
+        </div>
+        <div class="col-xs-6 col-sm-4 text-right">
+        <p class="ee-product-price-md">-20 €</p>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="row">
+  <div class="col-xs-3 col-sm-1">
+    <span class="icon icon-transport" style="font-size: 40px; line-height: 1;"></span>
+  </div>
+
+  <div class="col-xs-7 col-sm-5"> 
+    <h5>Kättetoimetamine</h5>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <div class="row form-horizontal">
+      <div class="col-xs-6 col-sm-8 text-right">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label visible-xs">Kogus</label>
+            <div class="col-sm-10">
+              <label class="control-label-left">1</label>
+            </div>
+          </div>
+        </div>
+      <div class="col-xs-6 visible-xs text-right">
+        <label class="ee-top-10">Hind:  </label>
+        </div>
+        <div class="col-xs-6 col-sm-4 text-right">
+        <p class="ee-product-price-md">3.50 €</p>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
     
     </script>
       
   </div>
-</div>
-
- 
+</div> 
 
   <div class="row">
     <div class="col-sm-5 col-sm-offset-7">
-      <h6> Kättetoimetamine
-        <div class="pull-right ee-product-price-md">
-          <strong>3.50 €</strong>
-        </div>
-      </h6>
-
-
-      <h4>
+<!--         <h4>
         Kokku tasuda
         <div class="pull-right ee-product-price-md">
           <strong>272.99 €</strong>
         </div>
-      </h4>
+      </h4> -->
 
       <h6>
         Summa käibemaksuta 
@@ -986,36 +973,16 @@
     </div>
 
   </div>
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-8">
-      <h6 class="text-right">Kas siia tuleb kinkekaardi märkus? </h6>
-      
-    </div>
-
-  </div>
-  
 </div>
-            <div class="row">
-  <hr>
-
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row">
-        <div class="col-sm-7">
-          <dl class="dl-horizontal wide">
-            <dt>Kauba saad kätte aadressilt:</dt>
-            <dd>Endla tn 4, 10142 Tallinn, Kesklinn, Harjumaa</dd>
-            <dt>Kauba saad kätte ajavahemikul:</dt>
-            <dd>9.10.2014 17:00 - 19:00</dd>
-          </dl>
-          <!-- <strong>Tänan! Oled edukalt ostu sooritanud, ostu detailid on saadetud su e-posti aadressile. Mis sa edasi soovid teha? </strong> -->
-        </div>
-        <div class="col-sm-5 text-right" style="margin-top: 30px">
-          <button class="btn btn-link" onClick="location.href= 'cart-payment.html'  "><span class="icon icon-print"></span>  Prindi arve</button> 
-          <button class="btn btn-primary " onClick="location.href= 'cart-payment.html' " >Jälgi paki teekonda</button>
-        </div>
-    </div>
-  </div>
-</div>  
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+   <hr>
+   <div class="row">
+       <div class="col-sm-5 col-sm-offset-7 text-right">
+         <button class="btn btn-link" onClick="location.href= 'cart-payment.html'  "><span class="icon icon-print"></span>  Prindi arve</button> 
+         <button class="btn btn-primary " onClick="location.href= 'cart-payment.html' " >Jälgi paki teekonda</button>
+       </div>
+   </div>
+ </div>  
 
 
         </div>

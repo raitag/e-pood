@@ -8,7 +8,7 @@
 
 <script id="product-detail-template" type="text/x-handlebars-template">
 
-{{#with products.[1]}}
+{{#with products.[0]}}
 
 <div class="col-sm-6 col-sm-push-6"> 
   <h2>{{name}}</h2>
@@ -21,7 +21,7 @@
   </p>
 
 
-    <!-- @include bundle-module.html -->
+    <!-- @include bundle-module-short.html -->
   <div class="hidden-xs "> 
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
@@ -53,8 +53,12 @@
     </div>
 
     <div class="row ee-leasing-header">
-      <h6>Kuumakse: 48 x 84,89 €</h6>
+      <h6>Järelmaksu kuumakse: 48 x 10,98 €</h6>
       <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
+    </div>
+    <div class="row ee-leasing-header" style="border: none;">
+      <h6>Osta koos teenusega: 21,44 €/kuus</h6>
+      <a class="pull-right" href="#otherToggle" data-toggle="collapse">Tutvu komplektiga</a>
     </div>
     <!-- @include _leasing-info.html --> 
 
@@ -129,7 +133,7 @@
     {{/if}}
 
         <div class="row ee-leasing-header">
-      <h6>Kuumakse: 48 x 84,89 €</h6>
+      <h6>Järelmaksu kuumakse: 48 x 10,98 €</h6>
       <a class="pull-right" href="#leasingToggle" data-toggle="collapse">Muuda</a>
     </div>
     <!-- @include _leasing-info.html --> 

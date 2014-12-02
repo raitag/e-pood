@@ -35,6 +35,7 @@ width: 100%;
   }
 
   .progress-content {
+    margin-bottom: 10px;
     @include media-min($screen-sm) {
       margin-bottom: 30px;
       margin-top: 40px;
@@ -240,7 +241,18 @@ width: 100%;
 }
 
 .cart-overview-heading.panel-default {
-  padding-top: 5px;
+  @extend %parent-of-vertical-align;
+  height: auto;
+  @include media-min($screen-sm) {
+  height: 90px;
+  }
+  >div {
+    @extend %vertical-align;
+  }
+  h6 {
+    margin-top: 25px;
+    padding-bottom: 5px;
+  }
 }
 
 // http://bioneos.com/blog/faux-full-width-sections-css

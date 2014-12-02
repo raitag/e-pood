@@ -168,6 +168,7 @@
               <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
               <li class='current'><a class='current' href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
+              <li><a href="cart-leasing.html">4. Liising</a></li>
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
               <hr>
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
@@ -743,7 +744,7 @@
           </li>
         </ol>
       </div>
-      <div class="progress-content">
+      <div class="progress-content clearfix">
         <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms">
@@ -800,38 +801,6 @@
     <div class="row tsr-forms" id="deliveryWhereCourier">
   <div class="col-sm-6 col-md-8">
     <h4>Kaubad tuua aadressile:</h4>
-<!--     <div class="select-container">
-      <select id="chooseAddress">
-        <option selected>Arveaadressile</option>
-        <option>Teisele aadressile</option>
-      </select>
-    </div>
-        <form action="" class="form-horizontal">
-      <div class="form-group">
-        <label for="name" class="col-sm-6 col-md-3 control-label">Tänav, korter</label>
-        <div class="col-sm-6 col-md-9">
-          <label class="control-label-left">Endla 4</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="name" class="col-sm-6 col-md-3 control-label">Linn/vald</label>
-        <div class="col-sm-6 col-md-9">
-          <label class="control-label-left">Tallinn, Kesklinn</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="name" class="col-sm-6 col-md-3 control-label">Maakond</label>
-        <div class="col-sm-6 col-md-9">
-          <label class="control-label-left">Harjumaa</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="name" class="col-sm-6 col-md-3 control-label">Sihtnumber</label>
-        <div class="col-sm-6 col-md-9">
-          <label class="control-label-left">10142</label>
-        </div>
-      </div>
-    </form> -->
     <form action="" class="form-horizontal">
       <div class="form-group">
         <label for="name" class="col-sm-6 col-md-2 control-label">Aadress</label>
@@ -840,8 +809,8 @@
         </div>
       </div>
     </form>
-   <h4>Sobiv aeg kaupade toomiseks on:</h4>
-   <form action="" class="form-horizontal">
+   <h4 class="ee-top-20">Sobiv aeg kaupade toomiseks on:</h4>
+   <form action="" class="form-horizontal"> 
       <div class="form-group">
           <label for="email" class="col-sm-6 col-md-2 control-label">Kuupäev</label>
           <div class="col-sm-6 col-md-10">
@@ -850,8 +819,13 @@
         </div>
       <div class="form-group">
         <label for="email" class="col-sm-6 col-md-2 control-label">Kell</label>
-          <div class="col-sm-6 col-md-10">
-            <a href="#" id="courierTime" data-type="text" data-pk="1" data-title="" class="timepicker">8.00-18.00 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+          <div class="col-sm-6 col-md-6">
+            <div class="select-container">
+              <select id="chooseTime">
+                <option selected>8.00-18.00</option>
+                <option>14.00-16.00</option>
+              </select>
+            </div>
           </div>
       </div>
     
@@ -908,11 +882,11 @@
   <option  data-iconurl="assets/img/branding/itella-sprite.svg">Kristiine Keskuse Smartpost</option> 
   <option  data-iconurl="assets/img/branding/omniva-sprite.svg">Rotermanni Kvartali Aatriumi Omniva</option>
   <option  data-iconurl="assets/img/branding/itella-sprite.svg"> Haabersti Rimi Itella</option>
-  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Järve Keskus</option>
-  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Kaubamaja</option>
-  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Kristiine Keskus</option>
-  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Lasnamäe Centrum (RIMI)</option>
-  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Lasnamäe Prisma</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Järve Keskus Omniva</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Kaubamaja Omniva</option>
+  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Kristiine Keskus Itella</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Lasnamäe Centrum (RIMI) Omniva</option>
+  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Lasnamäe Prisma Itella</option>
   <option value="164"> Magistrali Keskus</option>
   <option value="102"> Merimetsa Selver</option>
   <option value="138"> Mustika Keskus</option>
@@ -1086,6 +1060,7 @@
         </div>
       </div>
     </form>
+      <img class="img-responsive" src="http://placehold.it/800x400&text=Kaart" alt="">
   </div>
   <div class="col-sm-4">
     <h5>EMT ja Elion ühisesindus, Kärdla</h5>
@@ -1112,27 +1087,25 @@
       </div>
     </div>
   </div>
-  <img class="img-responsive" src="http://placehold.it/495x400&text=Kaart" alt="">
+
 </div>
   </div>
 </div> 
-        <div class="row">
-  <hr class="hidden-xs">
-
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+  
+  <div class="row">
+    <hr class="hidden-xs">
 <!--       <div class="col-sm-6">
-        <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
-        <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
-      </div> -->
-      <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-        <button class="btn btn-link" onClick="location.href= 'cart-aboutyou.html' " >Tagasi</button>
-      </div>
-        <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-payment.html' " >Jätka ostmist</button>
-          <!-- for disabled add class disabled -->
-        </div>
+      <h6 class="ee-top-10"><span class="icon icon-transport lead" ></span>  &nbsp; &nbsp;Kaup kätte <strong>täna, 07.11</strong></h6>
+      <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
+    </div> -->
+    <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+      <button class="btn btn-link" onClick="location.href= 'cart-aboutyou.html' " >Tagasi</button>
     </div>
+      <div class="col-sm-4">
+        <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-payment.html' " >Jätka ostmist</button>
+        <!-- for disabled add class disabled -->
+      </div>
   </div>
 </div>
       </div>
@@ -1438,8 +1411,8 @@ paymentSelectBox.on("change", function() {
 
 // Devlivery-page select behavior
 //--------------------------------
-$('#deliveryWhereCourier').hide();
 $('#deliveryWhereShop').hide();
+$('#deliveryWhereOmniva').hide();
 $('#deliveryInfoCourier').hide();
 $('#deliveryInfoItella').hide();
 
