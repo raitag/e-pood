@@ -47,11 +47,7 @@
 
       <div class="visible-xs">
         <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
-        <div class="ee-linkicons">
-          <div class="col-sm-4"><a href="#transport-{{id}}" class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}"> Vaata saadavust </a></div>
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
-        </div>
+
       </div>
 
 
@@ -62,16 +58,21 @@
         
 
 
-<!-- @include _transport-module.html --> 
+
 
 
         <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
 
-        <div class="row ee-linkicons hidden-xs">
-          <div class="col-sm-4"><a class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Vaata saadavust </a></div> 
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
-        </div>
+    <ul class="list-inline ee-linkicons">
+      <li><a href="#transport-{{id}}" class="ee-transport js-linkicon" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
+      <li><a href="#available-{{id}}" class="ee-available js-linkicon" data-toggle="collapse" data-target="#available-{{id}}"> Müügil ka esindustes </a></li>
+     <li><a href="#" class="ee-compare">Võrdle</a></li>
+     <li><a href="#" class="ee-favorite">Lemmik</a></li>
+     <li><a href="#" class="ee-comments"> Arvamused (5)</a></li>
+   </ul>
+   <!-- @include _transport-module.html --> 
+  <!-- @include _available-module.html --> 
+
 
         <div class="row ee-actions">
         {{#if flashes}}
@@ -109,9 +110,7 @@
         <div class="col-sm-4 col-sm-offset-4 col-xs-12 text-right" ><a href="#" class="btn btn-block btn-default ee-btn-buy"> Lisa ostukorvi </a></div>
 
       </div>
-      <div class="col-sm-8">
-        <p class="text-right"><strong>Kaup kätte 14 päeva jooksul</strong></p>
-      </div>
+
 
         <p>
           {{#if campaign}}
@@ -142,4 +141,18 @@
       // </ul>
 -->
 
+<!--         <div class="row ee-linkicons hidden-xs">
+          <div class="col-sm-4"><a class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Vaata saadavust </a></div> 
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
+        </div> -->
 
+<!--         <div class="ee-linkicons">
+          <div class="col-sm-4"><a href="#transport-{{id}}" class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}"> Vaata saadavust </a></div>
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
+        </div> -->
+
+<!--       <div class="col-sm-8">
+        <p class="text-right"><strong>Kaup kätte 14 päeva jooksul</strong></p>
+      </div> -->

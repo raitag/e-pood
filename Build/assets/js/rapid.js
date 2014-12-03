@@ -7049,6 +7049,15 @@ function cloneRightSideMainMenu(){
     var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
 }
 
+function collapseInOneForDetail(){
+  $('.js-linkicon a').on('click',function(e){
+    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+  });
+}
+
 
 // counting rules for IE 8-9 as the limit is 4095
 // function countCSSRules() {

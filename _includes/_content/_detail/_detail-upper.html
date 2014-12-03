@@ -39,7 +39,6 @@
           <br>
           Sinu võit: 300 €
           <br>
-          <strong>Kaup kätte 14 päeva jooksul</strong>
         </p>
 
         {{else }}
@@ -59,11 +58,13 @@
     <!-- @include _leasing-info.html --> 
 
     <ul class="list-inline ee-linkicons">
-      <li><a href="#transport-{{id}}" class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}"> Vaata saadavust </a></li>
+      <li><a href="#transport-{{id}}" class="ee-transport js-linkicon" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
+      <li><a href="#available-{{id}}" class="ee-available js-linkicon" data-toggle="collapse" data-target="#available-{{id}}"> Müügil ka esindustes </a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
      <li><a href="#" class="ee-favorite">Lemmik</a></li>
    </ul>
    <!-- @include _transport-module.html --> 
+   <!-- @include _available-module.html --> 
   </div>
    
 </div>
@@ -121,8 +122,6 @@
       Tavaind: {{normal_price}}
       <br>
       Sinu võit: 300 €
-      <br>
-     <strong> Kaup kätte 14 päeva jooksul</strong>
     </p>
 
     {{else }}
@@ -140,14 +139,14 @@
     <div class="col-sm-6">
       <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
       <ul class="list-inline ee-linkicons">
-      <li><a href="#transport-{{id}}" data-toggle="collapse" data-target="#transport-{{id}}" class="ee-available">  Vaata saadavust </a></li>
-     <li><a href="#" class="ee-compare">Võrdle</a></li>
-     <li><a href="#" class="ee-favorite">Lemmik</a></li>
-      
-   </ul>
-      
+        <li><a href="#transport-{{id}}" class="ee-transport js-linkicon" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
+        <li><a href="#available-{{id}}" class="ee-available js-linkicon" data-toggle="collapse" data-target="#available-{{id}}"> Müügil ka esindustes </a></li>
+       <li><a href="#" class="ee-compare">Võrdle</a></li>
+       <li><a href="#" class="ee-favorite">Lemmik</a></li>
+     </ul>
     </div>
-    <!-- @include _transport-module.html --> 
+   <!-- @include _transport-module.html --> 
+   <!-- @include _available-module.html --> 
     
   </div>
   

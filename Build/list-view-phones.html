@@ -943,11 +943,7 @@
 
       <div class="visible-xs">
         <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
-        <div class="ee-linkicons">
-          <div class="col-sm-4"><a href="#transport-{{id}}" class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}"> Vaata saadavust </a></div>
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
-        </div>
+
       </div>
 
 
@@ -958,7 +954,19 @@
         
 
 
-<div class="panel collapse ee-transportaccordion" id="transport-{{id}}" data-parent="#{{id}}">
+
+
+
+        <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
+
+    <ul class="list-inline ee-linkicons">
+      <li><a href="#transport-{{id}}" class="ee-transport js-linkicon" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
+      <li><a href="#available-{{id}}" class="ee-available js-linkicon" data-toggle="collapse" data-target="#available-{{id}}"> Müügil ka esindustes </a></li>
+     <li><a href="#" class="ee-compare">Võrdle</a></li>
+     <li><a href="#" class="ee-favorite">Lemmik</a></li>
+     <li><a href="#" class="ee-comments"> Arvamused (5)</a></li>
+   </ul>
+   <div class="panel collapse ee-transportaccordion" id="transport-{{id}}">
   <div class="panel-body">
     <h3>E-poest tellides </h3>
     <p> saad kauba kätte juba <strong>homme, 14.04.2014</strong> (kehtib kojutellimusele Tallinna piires).  </p>
@@ -967,11 +975,14 @@
           
       </p>
 
-      <p>Võid ka ostule ise poodi järele minna. <br>
-        Ostes e-poest saad kindel olla, et sinu soovitud toodet pole vahepeal ära ostetud. <br>Saadavust esindustes on viimati värskendatud 13.04.2014 kell 18:13:10 <br>
+  </div>
+</div> 
+  <div class="panel collapse ee-transportaccordion" id="available-{{id}}">
+  <div class="panel-body">
+      <p>Saadavust esindustes on viimati värskendatud 13.04.2014 kell 18:13:10 <br>
     </p>
     <h3>Tallinn</h3>
-  </div>
+
 
   <div class="panel-group ee-accordion" id="{{id}}">
     <div class="panel panel-default">
@@ -1080,17 +1091,9 @@
       </tr>
     </tbody>
   </table>
-
+  </div>
 </div> 
 
-
-        <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
-
-        <div class="row ee-linkicons hidden-xs">
-          <div class="col-sm-4"><a class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Vaata saadavust </a></div> 
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
-        </div>
 
         <div class="row ee-actions">
         {{#if flashes}}
@@ -1128,9 +1131,7 @@
         <div class="col-sm-4 col-sm-offset-4 col-xs-12 text-right" ><a href="#" class="btn btn-block btn-default ee-btn-buy"> Lisa ostukorvi </a></div>
 
       </div>
-      <div class="col-sm-8">
-        <p class="text-right"><strong>Kaup kätte 14 päeva jooksul</strong></p>
-      </div>
+
 
         <p>
           {{#if campaign}}
@@ -1159,7 +1160,23 @@
       //   {{/each}}
       //   {{/if}}
       // </ul>
---> 
+-->
+
+<!--         <div class="row ee-linkicons hidden-xs">
+          <div class="col-sm-4"><a class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Vaata saadavust </a></div> 
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
+        </div> -->
+
+<!--         <div class="ee-linkicons">
+          <div class="col-sm-4"><a href="#transport-{{id}}" class="ee-available" data-toggle="collapse" data-target="#transport-{{id}}"> Vaata saadavust </a></div>
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-4"><a href="#" class="ee-compare"> Võrdle </a></div>
+        </div> -->
+
+<!--       <div class="col-sm-8">
+        <p class="text-right"><strong>Kaup kätte 14 päeva jooksul</strong></p>
+      </div> --> 
 
     </div>
   </div>
