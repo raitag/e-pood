@@ -279,7 +279,7 @@ text-align: left;
 .ee-available {
   &:before {
   @extend %format-icon;
-  content: "\e708";
+  content: "\e641";
   font-size: em(20);
   }
   &:hover:before {

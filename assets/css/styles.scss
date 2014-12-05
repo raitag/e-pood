@@ -37,6 +37,7 @@
 /* @include _type.scss */
 /* @include _utilities.scss */
 /* @include _modals.scss */
+/* @include _wells.scss */
 
 
 // VILJAR SALU
@@ -598,3 +599,13 @@ label.control-label-left {
 }
 
 
+.error-well {
+  border: 2px solid $orange-c;
+  background: #fff;
+  color: $orange-t;
+  .icon {
+    color: $orange-c;
+    font-size: 120%;
+    padding-right: 7px;
+  }
+}

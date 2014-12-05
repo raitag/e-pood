@@ -161,6 +161,12 @@ FORMS
 
 //////// Input Checkbox
 
+// has-error 
+&.has-error .control-label .tsr-checkboxStyled {
+	border-color: $orange-c;
+	background: lighten($orange-c, 35%);
+}
+
 	.tsr-checkbox{
 			cursor:pointer;
 
