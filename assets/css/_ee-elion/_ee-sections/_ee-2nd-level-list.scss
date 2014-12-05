@@ -1,6 +1,5 @@
 section.tsr-section-productlist  {
 
-
   .tsr-module-product {
     text-align: left;
     padding: em(15) em(5) em(20) em(5);
@@ -59,6 +58,7 @@ section.tsr-section-productlist  {
     }
     .ee-linkicons  {
       font-size: 90%;
+      line-height: 1.6;
       margin: em(20) 0 em(25);
       @include media-min($screen-sm) {
       margin: em(20) 0 em(15);
