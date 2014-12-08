@@ -1,4 +1,12 @@
 // http://proto.io/freebies/onoff/
+.has-error .onoffswitch-inner:after {
+    content: "Ei";
+    padding-right: 10px;
+    background-color: $orange-c;
+    border-bottom: 4px solid $orange-t;
+    color: #fff;
+    text-align: right;
+}
 .onoffswitch {
     position: relative; 
     width: 80px;

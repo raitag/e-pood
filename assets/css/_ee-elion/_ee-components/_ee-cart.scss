@@ -21,6 +21,14 @@ width: 100%;
   }
 }
 
+.panel-collapse .close {
+    margin-top: 5px;
+}
+
+.progress-content .close {
+  margin-top: 5px;
+}
+
 .ee-vertical-middle {
   @extend %vertical-align;
   }
@@ -41,13 +49,11 @@ width: 100%;
       margin-top: 40px;
     }
 
-    .close { 
-      margin-top: 5px;
-      &:hover {
+    .close:hover {
           color: $purple-c;
           opacity: 1;
         }
-      }
+    
     .alert .close:hover{
       color: #fff;
     }
@@ -123,20 +129,7 @@ width: 100%;
       display: block;
       margin-bottom: 8px;
     }
-    .panel-collapse {
-      // input[type="text"] {
-      //   margin-bottom: 15px;
-      // }
-      .close {
-        margin-top: 5px;
-      }
-    }
-    // .amount {
-    //    margin-bottom: 8px;
-    //    margin-right: 10px;
-    //    font-weight: normal;
-    //    display: inline-block;
-    // }
+
     &.transport {
       margin-top: -15px;
     }
@@ -200,7 +193,6 @@ width: 100%;
 
 
 .arrow_box {
-  margin-top: 20px;
   margin-bottom: -1px;
   padding-top: 30px;
   padding-bottom: 20px;
@@ -305,4 +297,27 @@ padding-left: 5px;
 
 .tsr-forms .selectboxit-options {
   width: 100% !important;
+}
+
+.productCartWrapper {
+  background: #fff; 
+  border: 1px solid $lightgrey-t; 
+  height: 600px; 
+  overflow-y: scroll; 
+  margin-left: -15px;
+  margin-right: -15px;
+  @include media-min($screen-sm) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  > div {
+    width: 900px;
+  }
+  table, table.shedule {
+    table-layout: auto !important;
+  }
+  table.parties2 {
+    table-layout: auto;
+  }
 }

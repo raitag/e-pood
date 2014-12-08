@@ -38,7 +38,27 @@ FORMS
 // - - RWD
 //
 
+// has-error 
+.has-error .tsr-forms .control-label .tsr-checkboxStyled,
+.has-error .tsr-forms  .control-label-left .tsr-checkboxStyled
+ {
+	border-color: $orange-c;
+	background: lighten($orange-c, 35%);
+}
 
+.has-error .tsr-forms .form-control:focus,
+.has-error .tsr-forms input[type='text']:focus,
+.has-error .tsr-forms input[type='text']:active {
+	border-color: $orange-c;
+	border: 2px solid $orange-c;
+}
+
+.has-error .tsr-forms {
+.input-group input[type="text"], .input-group input[type="password"], .input-group input[type="search"] {
+	background: lighten($orange-c, 35%);
+	border: 2px solid $orange-c;
+	}
+}
 
 .tsr-forms{
 
@@ -161,11 +181,7 @@ FORMS
 
 //////// Input Checkbox
 
-// has-error 
-&.has-error .control-label .tsr-checkboxStyled {
-	border-color: $orange-c;
-	background: lighten($orange-c, 35%);
-}
+
 
 	.tsr-checkbox{
 			cursor:pointer;

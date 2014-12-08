@@ -301,6 +301,7 @@ display: block;
   margin-bottom: -1px;
 }
 
+
 .ee-top-10 {
   margin-top: 10px;
 }
@@ -566,6 +567,13 @@ label.control-label-left {
   padding-top: 7px;
 }
 
+.has-error .control-label-left {
+  color: $orange-c;
+}
+
+.has-error .input-group-addon {
+  border-color: $orange-c;
+}
 .rating-input {
   display: inline-block;
   margin-left: 20px;
@@ -598,16 +606,43 @@ label.control-label-left {
   }
 }
 
-
-.error-well {
-  border: 2px solid $orange-c;
-  background: #fff;
-  color: $orange-t;
+.well {
+    background: #fff;
+    border-style: solid;
+    border-width: 2px;
   .icon {
-    color: $orange-c;
     font-size: 120%;
-    padding-right: 7px;
+    padding-right: 10px;
+    display: table-cell;
+    vertical-align: top;
   }
+    p {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+.info-well {
+  border-color: $blue-c;
+  color: $blue-t;
+
+}
+
+.primary-well {
+  border-color: $purple-c;
+  color: $purple-t;
+}
+.error-well {
+  border-color: $orange-c;
+  color: $orange-t;
+
+
+  // .close {
+  //   margin-top: 0;
+  // }
+}
+
+.panel {
+  border-width: 2px;
 }
 
 .ee-linkicons.list-inline > li {
