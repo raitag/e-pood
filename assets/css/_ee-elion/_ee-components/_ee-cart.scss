@@ -49,13 +49,24 @@ width: 100%;
       margin-top: 40px;
     }
 
-    .close:hover {
-          color: $purple-c;
-          opacity: 1;
-        }
+    .close {
+      &:hover {
+        color: $purple-c;
+        opacity: 1;
+      }
+      &.edit,
+      &.move {
+        margin-top: 0;
+        float: none;
+      }
+    }
     
     .alert .close:hover{
       color: #fff;
+    }
+
+    .second-table {
+      margin: 40px 0;
     }
   }
   .cart-item-th {
@@ -109,6 +120,10 @@ width: 100%;
         max-width: 65px;
         min-width: 55px;
       }
+    }
+    .display-inline {
+      display: inline-block;
+      margin-bottom: 0;
     }
     .input-group,
     .input-group span {
@@ -229,6 +244,17 @@ width: 100%;
   &.arrow_box:after, 
   &.arrow_box:before {
     left: 66%;
+  }
+}
+
+.add-serial {
+  margin-top: -16px;
+  &.arrow_box:after, 
+  &.arrow_box:before {
+    left: 61%;
+    @include media-max($screen-md-max) {
+      left: 60%;
+    }
   }
 }
 

@@ -13259,8 +13259,13 @@ header .megamenu .search-item-image,
   .ee-shopping .progress-content .close:hover {
     color: #642887;
     opacity: 1; }
+  .ee-shopping .progress-content .close.edit, .ee-shopping .progress-content .close.move {
+    margin-top: 0;
+    float: none; }
   .ee-shopping .progress-content .alert .close:hover {
     color: #fff; }
+  .ee-shopping .progress-content .second-table {
+    margin: 40px 0; }
 .ee-shopping .cart-item-th {
   font-weight: bold;
   font-size: 90%;
@@ -13298,6 +13303,9 @@ header .megamenu .search-item-image,
     height: auto;
     max-width: 65px;
     min-width: 55px; }
+.ee-shopping .cart-item .display-inline {
+  display: inline-block;
+  margin-bottom: 0; }
 .ee-shopping .cart-item .input-group,
 .ee-shopping .cart-item .input-group span {
   font-weight: bold;
@@ -13385,6 +13393,14 @@ header .megamenu .search-item-image,
   margin-top: -16px; }
   .edit-price.arrow_box:after, .edit-price.arrow_box:before {
     left: 66%; }
+
+.add-serial {
+  margin-top: -16px; }
+  .add-serial.arrow_box:after, .add-serial.arrow_box:before {
+    left: 61%; }
+    @media (max-width: 1199px) {
+      .add-serial.arrow_box:after, .add-serial.arrow_box:before {
+        left: 60%; } }
 
 .cart-overview-heading.panel-default {
   height: auto; }
@@ -13666,9 +13682,9 @@ h4 {
   display: block;
   width: 180px;
   height: 80px;
-  background: transparent url(../img/branding/elion-logo.png) left center no-repeat;
-   background-image: -webkit-linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
-   background-image: linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg); }
+  background: transparent url(elion-logo.png) left center no-repeat;
+   background-image: -webkit-linear-gradient(transparent, transparent), url(elion-logo.svg);
+   background-image: linear-gradient(transparent, transparent), url(elion-logo.svg); }
 
 .navbar > .container .navbar-brand {
   margin-left: 0; }

@@ -1,0 +1,46 @@
+var source1   = $("#cart-template-delivery-service").html();
+var template1 = Handlebars.compile(source1); 
+
+var source2   = $("#cart-template-delivery-service-later").html();
+var template2 = Handlebars.compile(source2); 
+
+var data = { 
+  products: [
+    {
+      name: "mobiiltelefon Nokia Lumia 925 (must)",
+      tootekood: "A00014381",
+      id: "Lumia-925-must",
+      normal_price: "349 €",
+      serials: [
+        {
+          number: "M91229EGA345"
+        },
+        {
+          number: "M91229EGE908"
+        }
+      ]
+    },
+    {
+      name: 'käekell Samsung Gear2 Neo (oranž)',
+      tootekood: "SM-R3810ZOASEB",
+      id: "SamsungGear2",
+      normal_price: "149 €",
+      special_price: "119 €",
+      serials: [
+        {
+          number: "M91229E1234"
+        }
+      ]
+    },
+    {
+      name: 'tahvelarvuti Lenovo Yoga 10.1 16 GB 3G + WiFi',
+      tootekood: "59388156",
+      id: "Lenovo-Yoga",
+      normal_price: "299 €",
+      special_price: "259 €"
+    }
+  ]
+};
+
+$("#content-placeholder-cart-delivery-service").html(template1(data));
+$("#content-placeholder-cart-delivery-service-later").html(template2(data));

@@ -1,0 +1,211 @@
+<div class="row cart">
+  <div class="cart-items">
+      <div>
+        <div class="col-xs-11 col-md-offset-1">
+          <h4>Annan järgnevad kaubad esinduses kliendile</h4>
+        </div>
+        <div class="col-md-10 col-md-offset-1 cart-item-th hidden-xs">
+          <div class="row">
+            <div class="col-xs-9 col-sm-5">
+              Toode
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="row">
+                <div class="col-xs-6 col-sm-4 text-center">
+                  Kätte antav kogus
+                </div>
+                <div class="col-xs-5 col-sm-5 text-center">
+                  <div class="row">
+                    <div class="col-sm-10 text-right">
+                      Seerianumber
+                    </div>
+                    <div class="col-sm-2">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="col-sm-3 text-center">
+                  Ei anna kohe kliendile
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-placeholder-cart-delivery-service"></div> 
+        <script id="cart-template-delivery-service" type="text/x-handlebars-template">
+        {{#products}} 
+        <div class="col-md-10 col-md-offset-1 cart-item">
+          <div class="row">
+        
+            <div class="col-xs-3 col-sm-1 cart-item-image">
+              <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+            </div>
+        
+            <div class="col-xs-7 col-sm-4">
+              <h6>{{name}}</h6>
+            </div>
+        
+            <div class="col-xs-2 visible-xs">
+              <button type="button" class="close" data-dismiss="cartitem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+        
+        
+            <div class="col-xs-12 col-sm-7">
+              <div class="row">
+
+                {{!-- kogus --}}
+                <div class="col-xs-6 visible-xs text-right">
+                  <label class="ee-top-10">Kogus:  </label>
+                </div>
+                <div class="col-xs-6 col-sm-4 text-center">
+                  <div class="form-group display-inline">
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
+                          <span>-</span>
+                        </button>
+                      </span>
+                      <input type="text" name="quant[{{no}}]" class="form-control input-number ee-default" value="2" min="1" max="10">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[{{no}}]">
+                          <span>+</span>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {{!-- seerianumbrid --}}
+                <div class="col-xs-6 visible-xs text-right">
+                  <label class="ee-top-10">Seerianumber:  </label>
+                </div>
+                <div class="col-xs-6 col-sm-5 hidden-xs text-right">
+                  <div class="row">
+                    <div class="col-sm-10">
+                    {{#serials}}
+                      <span>{{number}}</span>
+                    {{/serials}}
+                    </div>
+                    <div class="col-sm-2">
+                    {{#if serials}}
+                      <button type="button" class="close edit" data-toggle="collapse" data-target="#{{id}}">
+                        <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span><span class="sr-only">Edit</span>
+                      </button>
+                    {{else}}
+                      <button type="button" class="close edit" data-toggle="collapse" data-target="#{{id}}">
+                        <span aria-hidden="true" class="icon icon-plus"></span><span class="sr-only">Edit</span>
+                      </button>
+                    {{/if}}
+                    </div>
+                  </div>
+                </div>
+
+                {{!-- ei anna kohe kliendile --}}
+                <div class="col-xs-6 col-sm-3 hidden-xs text-center">
+                  <button type="button" class="close move">
+                    <span aria-hidden="true" class="icon icon-arrow-down"></span><span class="sr-only">Move</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- @include _layer-add-serial.html -->
+        </div>
+        
+        {{/products}} 
+        <div class="clearfix"></div>
+        </script>
+      </div>
+
+      <div class="second-table">
+        <div class="col-xs-11 col-md-offset-1">
+          <h4>Järgnevaid kaupu ei anna kohe kliendile</h4>
+        </div>
+        <div class="col-md-10 col-md-offset-1 cart-item-th hidden-xs">
+          <div class="row">
+            <div class="col-xs-9 col-sm-5">
+              Toode
+            </div>
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="row">
+                <div class="col-xs-6 col-sm-4 text-center">
+                  Kogus
+                </div>
+                <div class="col-xs-5 col-sm-5 text-right">
+                  <div class="row">
+                    <div class="col-sm-10">Seerianumber</div>
+                    <div class="col-sm-2">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="col-sm-3 text-center">
+                  Annan kohe kliendile
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-placeholder-cart-delivery-service-later"></div> 
+        <script id="cart-template-delivery-service-later" type="text/x-handlebars-template">
+        {{#products}} 
+        <div class="col-md-10 col-md-offset-1 cart-item">
+          <div class="row">
+        
+            <div class="col-xs-3 col-sm-1 cart-item-image">
+              <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+            </div>
+        
+            <div class="col-xs-7 col-sm-4">
+              <h6>{{name}}</h6>
+            </div>
+        
+            <div class="col-xs-2 visible-xs">
+              <button type="button" class="close" data-dismiss="cartitem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+        
+        
+            <div class="col-xs-12 col-sm-7">
+              <div class="row">
+
+                {{!-- kogus --}}
+                <div class="col-xs-6 visible-xs text-right">
+                  <label class="ee-top-10">Kogus:  </label>
+                </div>
+                <div class="col-xs-6 col-sm-4 text-center">
+                  <p>2</p>
+                </div>
+
+                {{!-- seerianumbrid --}}
+                <div class="col-xs-6 visible-xs text-right">
+                  <label class="ee-top-10">Seerianumbrid:  </label>
+                </div>
+                <div class="col-xs-6 col-sm-5 text-right">
+                  <div class="row">
+                    <div class="col-sm-10">
+                      {{#serials}}
+                        <span>{{number}}</span>
+                      {{/serials}}
+                    </div>
+                    <div class="col-sm-2">&nbsp;</div>
+                  </div>
+                </div>
+
+                {{!-- ei anna kohe kliendile --}}
+                <div class="col-xs-1 col-sm-3 hidden-xs text-center">
+                  <button type="button" class="close move">
+                    <span aria-hidden="true" class="icon icon-arrow-up"></span><span class="sr-only">Add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- @include _layer-add-serial.html -->
+        </div>
+        
+        {{/products}} 
+        <div class="clearfix"></div>
+        </script>
+      </div>
+  </div>
+</div>
+
+<!-- @include delivery -->
