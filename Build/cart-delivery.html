@@ -176,6 +176,7 @@
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
               <li><a href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
               <li><a href="cart-delivery-service.html">3. Teenindaja kohaletoomine</a></li>
+              <li><a href="cart-send-offer.html">4. Teenindaja pakkumise saatmine</a></li>
             </ul>
           </li>
         </ul>
@@ -725,30 +726,31 @@
 
 
 
-<div class="container xs-not-padded"> 
-  <section class="ee-shopping">
-    <div class="progress-steps" data-update="progress">
-      <div class="progress-tabs">
-        <ol data-progress-steps="5">
-          <li class="" data-target="#id1">
-            <h4>Ostukorv</h4>
-          </li>
-          <li class="" data-target="#id2">
-            <h4>Arveandmed</h4>
-          </li>
-          <li class="progress-active" data-target="#id3">
-            <h4>Kohaletoomine</h4>
-          </li>
-          <li class="">
-            <h4>Maksmine</h4>
-          </li>
-          <li class="last-child " data-target="#id5">
-            <h4>Kokkuvõte</h4>
-          </li>
-        </ol>
-      </div>
-      <div class="progress-content clearfix">
-        <div class="row">
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="" data-target="#id1">
+              <h4>Ostukorv</h4>
+            </li>
+            <li class="" data-target="#id2">
+              <h4>Arveandmed</h4>
+            </li>
+            <li class="progress-active" data-target="#id3">
+              <h4>Kohaletoomine</h4>
+            </li>
+            <li class="">
+              <h4>Maksmine</h4>
+            </li>
+            <li class="last-child " data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content clearfix">
+          <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms">
       <div class="col-sm-6 col-md-8">
@@ -1094,7 +1096,7 @@
 </div>
   </div>
 </div> 
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
   
   <div class="row">
     <hr class="hidden-xs">
@@ -1111,11 +1113,12 @@
       </div>
   </div>
 </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
     
-</div>
+  </div>
+</section>
 
 <footer>
     <div class="container-no-gutter">
@@ -1238,7 +1241,10 @@
 <script src="http://amsul.ca/pickadate.js/lib/picker.date.js"></script>
 <script src="http://amsul.ca/pickadate.js/lib/translations/et_EE.js"></script> 
 <script src="http://amsul.ca/pickadate.js/lib/picker.time.js"></script> 
-<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script> 
+<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script>
+
+<!-- Summernote --> 
+<script src="assets/js/vendor/summernote.min.js"></script> 
 
 <script>
 
@@ -1345,7 +1351,16 @@ $(function(){
     $('.datepicker').pickadate({editable: true});
     $('.timepicker').pickatime({editable: true});
 
-
+    // Initialize Summernote Editor
+    $('.summernote').summernote({
+      airPopover: [
+    ['color', ['color']],
+    ['font', ['bold', 'underline', 'clear']],
+    ['para', ['ul', 'paragraph']],
+    ['table', ['table']],
+    ['insert', ['link', 'picture']]
+  ]
+    });
 
 });
 

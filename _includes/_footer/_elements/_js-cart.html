@@ -13,7 +13,10 @@
 <script src="http://amsul.ca/pickadate.js/lib/picker.date.js"></script>
 <script src="http://amsul.ca/pickadate.js/lib/translations/et_EE.js"></script> 
 <script src="http://amsul.ca/pickadate.js/lib/picker.time.js"></script> 
-<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script> 
+<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script>
+
+<!-- Summernote --> 
+<script src="assets/js/vendor/summernote.min.js"></script> 
 
 <script>
 
@@ -120,7 +123,16 @@ $(function(){
     $('.datepicker').pickadate({editable: true});
     $('.timepicker').pickatime({editable: true});
 
-
+    // Initialize Summernote Editor
+    $('.summernote').summernote({
+      airPopover: [
+    ['color', ['color']],
+    ['font', ['bold', 'underline', 'clear']],
+    ['para', ['ul', 'paragraph']],
+    ['table', ['table']],
+    ['insert', ['link', 'picture']]
+  ]
+    });
 
 });
 

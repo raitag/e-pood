@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Ostukorv-2</title>
+<title>Ostukorv-4</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Ostukorv-2" />
+<meta property="og:title" content="Ostukorv-4" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Ostukorv-2">
+<meta name="twitter:title" content="Ostukorv-4">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -174,9 +174,9 @@
               <li><a href="cart-conclusion.html">5. Kokkuvõte</a></li>
               <hr>
               <li><a href="cart-overview-service.html">1. Teenindaja ülevaade </a></li>
-              <li class='current'><a class='current' href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
+              <li><a href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
               <li><a href="cart-delivery-service.html">3. Teenindaja kohaletoomine</a></li>
-              <li><a href="cart-send-offer.html">4. Teenindaja pakkumise saatmine</a></li>
+              <li class='current'><a class='current' href="cart-send-offer.html">4. Teenindaja pakkumise saatmine</a></li>
             </ul>
           </li>
         </ul>
@@ -723,6 +723,9 @@
 
 
 
+
+
+
 <section class="wrapping-layers">
   <div class="container xs-not-padded"> 
     <section class="ee-shopping">
@@ -732,236 +735,67 @@
             <li class="" data-target="#id1">
               <h4>Ostukorv</h4>
             </li>
-            <li class="progress-active" data-target="#id2">
+            <li class="" data-target="#id2">
               <h4>Arveandmed</h4>
             </li>
-            <li class="" data-target="#id3">
+            <li data-target="#id3">
               <h4>Kohaletoomine</h4>
             </li>
-            <li class="">
-              <h4>Maksmine</h4>
+            <li class="progress-active">
+              <h4>Pakkumise saatmine</h4>
             </li>
             <li class="last-child " data-target="#id5">
               <h4>Kokkuvõte</h4>
             </li>
           </ol>
         </div>
-        <div class="progress-content clearfix"> 
-          <!-- Otsi klienti -->
-<div class="row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row">
-      <div class="col-sm-8">
-        <h4>Otsi klienti:</h4>
-        <form id="about" method="post" class="form-horizontal tsr-forms" role="form">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Eesnimi</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="name" name="name" type="text"  />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Pere- või firmanimi</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="email" name="email"  type="text"  />
-            </div>
-          </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Kliendinumber</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="phone" name="phone"  type="text"  />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Isiku- või registrikood</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="adress" name="adress"  type="text"  />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-5 col-sm-offset-2">
-              <button class="btn btn-primary btn-block" onClick="location.href= ">Otsi klienti</button>
-            </div>
-            <div class="col-sm-5">
-              <button class="btn btn-primary btn-block" onClick="location.href= ">Eemalda klient tellimuselt</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-4">
-        <h4>Dokumendikontroll:</h4>
-        <a href="" class="external">Juhiloa kehtivuse päring</a><br><br>
-        <a href="" class="external">Isikut tõendava dokumendi kehtivuse päring</a>
-      </div>
-    </div>
-
-    <div class="well error-well ee-top-20">
-      <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only">Close</span>
-      </button>
-      <span class="icon icon-alert"></span><p>Mingi määratlemata sorti jama. Midagi ei saa teha</p>
-    </div>
-
-
-    <div class="row tsr-forms ee-top-20">
-      <div class="col-sm-6 col-md-4">
-        <h4>On:</h4>
-        <div class="select-container">
-          <select id="chooseRole">
-            <option selected>Eraklient</option>
-            <option disabled>Äriklient</option>
-          </select>
-        </div>
-      </div>
-      
-      <div class="col-sm-6 col-md-4 ee-top-20-xs">
-        <h4>Soovib maksta:</h4>
-        <div class="select-container">
-          <select id="choosePayment">
-            <option>Kassas</option>
-            <option>Arvega, maksetähtaeg 14 päeva</option>
-            <option>Arvega, maksetähtaeg 7 päeva</option>
-            <option selected>Kapitalirendiga</option>
-            <option>Kasutusrendileping</option>
-            <option>Järgmise arvega</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-4 ee-top-20">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Kapitalirendiga
-          </div>
-          <div class="panel-body">
-            <small>
-              Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
-            </small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <h4>Arveandmed:</h4>
-    <div class="row">
-      <div class="col-md-8 tsr-forms">
-        <form id="about" method="post" class="form-horizontal" role="form">
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Firma nimi</label>
-            <div class="col-sm-10">
-              <label class="control-label-left">Net Group OÜ</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Registrikood</label>
-            <div class="col-sm-10">
-              <label class="control-label-left">69696969</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">Viitenumber</label>
-            <div class="col-sm-10">
-              <div class="select-container">
-                <select id="companyAddress">
-                  <option selected>Kopli tn paparapparaa, viitenumber 277433276 </option>
-                  <option disabled>Äriklient</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">Kontaktisik</label>
-            <div class="col-sm-10">
-              <div class="select-container">
-                <select id="companyAddress">
-                  <option selected>Priit Kongo</option>
-                  <option disabled>Keegi Teine</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Volitus</label>
-            <div class="col-sm-10">
-              <label class="control-label-left">B-kaart</label>
-            </div>
-          </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Kontakttelefon</label>
-            <div class="col-sm-10">
-              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">E-post</label>
-            <div class="col-sm-10">
-              <a href="#" id="aadress" data-type="typeaheadjs" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">info@netgroup.ee &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-            </div>
-          </div>
-          <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Tellimuse viide</label>
-            <div class="col-sm-10">
-              <input class="form-control" id="phone" name="phone"  type="text" placeholder="Max 18 tähte" />
-            </div>
-          </div>
-        </form>
-        
-      </div>
-
-      <!-- WARNING! No ie8 compatible. Use regular Checks there-->
-<!--  ******************** -->
-
-      <div class="col-md-4">
-        <div class="row form-horizontal tsr-forms">
-          <div class="form-group">
-            <label for="name" class="ee-labeltext col-sm-6 control-label">Vaba kaubalimiit</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">10 000,00 €</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">69696969</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">69696969</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">69696969</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">69696969</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Liisingutingimused</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">Liisingutingimused pole nõutud</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Kliendi jooksev võlg</label>
-            <div class="col-sm-6">
-              <label class="control-label-left">69696969</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="progress-content clearfix">
+          <div class="row cart">
+	<div class="col-sm-12 col-md-10 col-md-offset-1 tsr-forms">
+		<form action="" class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Saatja e-posti aadress:</label>
+				<div class="col-sm-6">
+					<ul class="list-unstyled">
+						<li><label class=""><input type="radio" name="radio">Teele.Puusemp@netgroup.ee</label></li>
+						<li><label><input type="radio" name="radio">kaup@elion.ee</label></li>
+						<li><label><input type="radio" name="radio">ariklient@elion.ee</label></li>
+						<li><label><input type="radio" name="radio">epood@elion.ee</label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="receiver">Saaja e-posti aadress:</label>
+				<div class="col-sm-6">
+					<input type="text" id="receiver" value="teelepuusemp@gmail.com">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="heading">Pealkiri:</label>
+				<div class="col-sm-6">
+					<input type="text" id="heading" value="Elioni e-poe pakkumine">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="heading">Pakkumine kehtib:</label>
+				<div class="col-sm-2">
+					<input type="text" id="heading" value="10">
+				</div>
+				<div class="col-sm-1">
+					<label class="control-label-left" for="heading">päeva</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="message-content">Sõnumi sisu:</label>
+				<div class="col-sm-10">
+					<div class="summernote">
+						<div align="center" style="font-family: arial;background: #e7e8e9" mce_style="font-family: arial; background: #e7e8e9;">   <table border="0" cellpadding="0" cellspacing="0" style="font-family: arial;background: #fff" mce_style="font-family: arial; background: #fff;" width="600" class="mceItemTable">    <tbody>     <tr>      <td height="85" valign="bottom">       <a href="http://www.elion.ee" mce_href="http://www.elion.ee" target="_blank"><img alt="Elion" border="0" height="85" src="https://pood.elion.ee/gfx/ekiri/ekiri_header_01.png" mce_src="https://pood.elion.ee/gfx/ekiri/ekiri_header_01.png" style="font-family: arial;display: block" mce_style="font-family: arial; display: block;" width="600"> </a></td>     </tr>     <tr>      <td style="font-family: arial;padding-bottom: 35px; margin: 0px 35px 0px 0px; padding-left: 35px; width: 600px; padding-right: 35px; font-family: arial; padding-top: 10px">       <p style="font-family: arial;padding-bottom: 0px; line-height: 24px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #652d85; font-size: 14px; padding-top: 0px" mce_style="font-family: arial; line-height: 24px; margin-top: 20px; color: #652d85; font-size: 14px; padding: 0px;">        <strong>Tere</strong></p>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 13px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 13px; padding: 0px;">       Teile on saadetud Elioni e-poe pakkumine nr: 4004046</p>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 13px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 13px; padding: 0px;">        <strong>Pakkumust saate vaadata ja kinnitada epoe keskkonnas vajutades järgnevale lingile:</strong></p>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 13px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 13px; padding: 0px;">        <a href="https://pood-arendus.elion.ee/store/RestoreOrder.ashx?oid=9a394bfd-47ae-4fac-9616-c6acf131061a" mce_href="https://pood-arendus.elion.ee/store/RestoreOrder.ashx?oid=9a394bfd-47ae-4fac-9616-c6acf131061a" style="font-family: arial;color: #652c85" mce_style="font-family: arial; color: #652c85;">Tutvun pakkumusega epoes</a></p>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 11px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 11px; padding: 0px;">        NB! Pakkumine kehtib 5 päeva või kuni kaupa jätkub.</p>       <br>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 13px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 13px; padding: 0px;">        Heade soovidega,</p>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 13px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 13px; padding: 0px;">        Elioni e-pood<br><a href="mailto:e-pood@elion.ee" mce_href="mailto:e-pood@elion.ee" style="color: #652c85" mce_style="color: #652c85;">e-pood@elion.ee</a><br>        Tel. 650 7030</p>       <p style="font-family: arial;padding-bottom: 0px; line-height: 17px; margin-top: 20px; padding-left: 0px; padding-right: 0px; color: #6f6e6f; font-size: 11px; padding-top: 0px" mce_style="font-family: arial; line-height: 17px; margin-top: 20px; color: #6f6e6f; font-size: 11px; padding: 0px;">        E-poe klienditeenindus töötab: E-N: 09.00-17.00. R: 09.00-15.00.<br>        Pärast tööpäeva lõppu ning nädalavahetustel saabunud kirjadele vastame järgmisel tööpäeval.</p>      </td>     </tr>     <tr>      <td height="15" valign="top">       <img border="0" height="15" src="https://pood.elion.ee/gfx/ekiri/ekiri_footer_01.png" mce_src="https://pood.elion.ee/gfx/ekiri/ekiri_footer_01.png" style="font-family: arial;display: block" mce_style="font-family: arial; display: block;" width="600"></td>     </tr>    </tbody>   </table>  </div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div> 
           <div class="col-sm-12 col-md-10 col-md-offset-1">
   
   <div class="row">
@@ -971,10 +805,10 @@
       <p style="margin-left: 40px;">(Tallinnas, Pärnus ja Tartus.)</p>
     </div> -->
     <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-      <button class="btn btn-link" onClick="location.href= 'cart-overview-service.html' " >Tagasi</button>
+      <button class="btn btn-link" onClick="location.href= 'cart-delivery-service.html' " >Tagasi</button>
     </div>
       <div class="col-sm-4">
-        <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-delivery-service.html' " >Jätka ostmist</button>
+        <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-conclusion.html' " >Jätka ostmist</button>
         <!-- for disabled add class disabled -->
       </div>
   </div>
@@ -982,8 +816,10 @@
         </div>
       </div>
     </section>
+    
   </div>
 </section>
+
 <footer>
     <div class="container-no-gutter">
         <div class="row">

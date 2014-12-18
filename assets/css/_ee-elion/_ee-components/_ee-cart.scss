@@ -162,8 +162,23 @@ width: 100%;
       padding-top: 0;
     }
   }
-  .tsr-forms .selectboxit-option.selectboxit-disabled .selectboxit-option-anchor {
-    color: $lightgrey-t;
+  .tsr-forms {
+    .selectboxit-option.selectboxit-disabled .selectboxit-option-anchor {
+      color: $lightgrey-t;
+    }
+
+    ul {
+      >li {
+        label {
+          font-weight: bold;
+        }
+        &:first-child {
+          label {
+            margin-top: 7px;
+          }
+        }
+      }
+    }
   }
   .selectboxit-disabled {
     background-color: $lightgrey-c;
@@ -189,6 +204,10 @@ width: 100%;
 
   .selectboxit-container .selectboxit-options {
     max-height: 240px;
+  }
+
+  .tsr-radioStyled {
+    margin-right: 10px;
   }
 }
 
