@@ -4,3 +4,5 @@ node_modules
 .hammer-ignore
 *.rb
 *.json
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,25 @@
+<section class="tsr-carousel-listing-div ee-section-technician-details"> 
+    <div class="container ee-nogap">
+      <div class="tsr-slides ee-slides-technician" id="content-placeholder-slider-technician-detail"></div>
+
+      <script id="slider-detail-technician-template" type="text/x-handlebars-template">
+      {{#products}}
+      <div class="col-xs-12 col-sm-4 col-lg-3">
+        <div class="tsr-module-product ee-blockview ee-module-text-only">
+          <figure class="tsr-product-image">
+            <img src="assets/img/products/{{id}}.jpg">
+          </figure>
+          <div class="tsr-product-content">
+            <h6 class="tsr-product-header">{{name}}</h6>
+            <p class="tsr-product-price">
+              Kulukandja: <span>{{kulukandja}}</span>
+            </p>
+            <a class="btn btn-default ee-btn-buy"> Lisa ostukorvi </a>
+          </div>
+        </div>
+      </div>
+      {{/products}}
+      </script>
+
+    </div>
+</section>

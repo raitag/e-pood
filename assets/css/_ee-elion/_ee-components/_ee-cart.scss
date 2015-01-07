@@ -13,16 +13,16 @@
 }
 
 .tt-dropdown-menu {
-background-color: $lightgrey-c;
-padding: 10px;
-width: 100%;
+  background-color: $lightgrey-c;
+  padding: 10px;
+  width: 100%;
   .tt-dataset-* {
-  border-bottom: 1px solid $lightgrey-t;
+    border-bottom: 1px solid $lightgrey-t;
   }
 }
 
 .panel-collapse .close {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .progress-content .close {
@@ -31,12 +31,12 @@ width: 100%;
 
 .ee-vertical-middle {
   @extend %vertical-align;
-  }
+}
 
 .ee-shopping {
-    @include media-min($screen-sm) {
-      margin-top: 20px;
-    }
+  @include media-min($screen-sm) {
+    margin-top: 20px;
+  }
   .ee-infotext {
     margin-bottom: 20px;
     margin-top: 30px;
@@ -84,13 +84,13 @@ width: 100%;
 
   .cart-item {
     & > .row {
-    border-bottom: 1px solid $lightgrey-t;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    mix-blend-mode: multiply;
+      border-bottom: 1px solid $lightgrey-t;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      mix-blend-mode: multiply;
       @extend %parent-of-vertical-align;
       height: auto;
-        @include media-min($screen-sm) {
+      @include media-min($screen-sm) {
         height: 90px;
       }
       & > div {
@@ -149,10 +149,10 @@ width: 100%;
       margin-top: -15px;
     }
   }
-    p.ee-product-price-md {
-      margin: 0;
-      margin-top: 5px;
-    }
+  p.ee-product-price-md {
+    margin: 0;
+    margin-top: 5px;
+  }
   .ee-accordion {
     border-top: 1px solid $lightgrey-t;
     .panel-heading a {
@@ -190,7 +190,7 @@ width: 100%;
       margin-top: 15px;
     }
     .form-group {
-    margin-top: 15px;
+      margin-top: 15px;
     }
   }
 
@@ -211,7 +211,7 @@ width: 100%;
   }
 }
 
-  .navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown {
+.navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown {
   background-color: $lightgrey-c;
   .container {
     background-color: $lightgrey-c;
@@ -281,7 +281,7 @@ width: 100%;
   @extend %parent-of-vertical-align;
   height: auto;
   @include media-min($screen-sm) {
-  height: 90px;
+    height: 90px;
   }
   >div {
     @extend %vertical-align;
@@ -299,14 +299,14 @@ width: 100%;
 }
 
 .ee-fullwidth {
-    
-    margin-left: -1000px;
-    margin-right: -1000px;
-    padding-left: 1000px;
-    padding-right: 1000px;
-    &.arrow_box {
-      @extend %section-bordered-white;
-    }
+
+  margin-left: -1000px;
+  margin-right: -1000px;
+  padding-left: 1000px;
+  padding-right: 1000px;
+  &.arrow_box {
+    @extend %section-bordered-white;
+  }
 }
 
 .alert-inline {
@@ -324,11 +324,11 @@ width: 100%;
 
 .external:after {
   color: $purple-c;
-font-family: 'tsr-icons-all';
-content: "\e668";
-vertical-align: baseline;
-font-size: 0.8em;
-padding-left: 5px;
+  font-family: 'tsr-icons-all';
+  content: "\e668";
+  vertical-align: baseline;
+  font-size: 0.8em;
+  padding-left: 5px;
 }
 
 .editable-click, a.editable-click, a.editable-click:hover {
@@ -365,4 +365,76 @@ padding-left: 5px;
   table.parties2 {
     table-layout: auto;
   }
+}
+.ee-section-technician-cart {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .ee-in-cart {
+    .tsr-product-content {
+      .tsr-product-header,
+      .tsr-product-price {
+        color: #777;
+        span {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+.ee-module-header-only {
+  cursor: pointer;
+  .tsr-product-content {
+    width: auto;
+    h6 {
+      font-size: 22px;
+      line-height: 1.256;
+      height: 300px;
+    }
+  }
+}
+.ee-module-text-only {
+  .tsr-product-content {
+    width: auto;
+    h6 {
+      font-size: 22px;
+      line-height: 1.256;
+      height: 145px;
+    }
+    .tsr-product-price {
+      margin: 30px 0;
+      span {
+        color: #333;
+      }
+    }
+  }
+  .btn {
+    margin-bottom: 20px;
+    &.ee-btn-remove {
+      font-size: 1.06667em;
+      font-weight: 500;
+      padding: 12px;
+      line-height: 1.52857;
+      &:before {
+        font-family: "tsr-icons-all";
+        content: "\e6f0";
+        font-size: 100%;
+        margin-right: 5px;
+      }
+    }
+    &.ee-btn-added {
+      font-size: 1.06667em;
+      font-weight: 500;
+      padding: 12px;
+      line-height: 1.52857;
+      &:before {
+        font-family: "tsr-icons-all";
+        content: "\e017";
+        font-size: 100%;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.ee-slides-technician {
+  height: auto;
 }

@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Title</title>
+<title>Kliendi pakkumuse kinnitamine</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -26,7 +26,7 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Kliendi pakkumuse kinnitamine" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -44,7 +44,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Title">
+<meta name="twitter:title" content="Kliendi pakkumuse kinnitamine">
 <meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
@@ -72,7 +72,11 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
+    <link rel="stylesheet" href="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/css/bootstrap-editable.css">
+<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.css">
+<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.date.css">
+<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.time.css">
+
     
 <!--<![endif]-->
 
@@ -140,7 +144,7 @@
         <ul class="list-group">
           <li class="dropdown-header has-child"><h6><a href="#">Põhivaated</a></h6>
             <ul>
-              <li class='current'><a class='current' href="index.html">Avaleht</a></li>
+              <li><a href="index.html">Avaleht</a></li>
               <li><a href="block-view-phones.html">Klotsvaade (+ajax loader)</a></li>
               <li><a href="list-view-phones.html">Listvaade</a></li>
               <li><a href="detail.html">Detailvaade</a></li>
@@ -174,7 +178,7 @@
               <li><a href="cart-business-client-service.html">2. Teenindaja kliendiandmed</a></li>
               <li><a href="cart-delivery-service.html">3. Teenindaja kohaletoomine</a></li>
               <li><a href="cart-send-offer.html">4. Teenindaja pakkumise saatmine</a></li>
-              <li><a href="client-offer-overview.html">1. Kliendi pakkumuse kinntamine</a></li>
+              <li class='current'><a class='current' href="client-offer-overview.html">1. Kliendi pakkumuse kinntamine</a></li>
               <hr>
               <li><a href="cart-technician.html">1. Tehniku ostukorv</a></li>
               <li><a href="cart-technician-products.html">2. Tehniku toodete valik</a></li>
@@ -411,7 +415,7 @@
     <!-- menu for small screen -->
     <div class="navbar-header">
 
-      <a class="current navbar-brand"  href="index.html"></a> 
+      <a class="navbar-brand"  href="index.html"></a> 
 
       <div class="pull-right">
         <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
@@ -722,300 +726,641 @@
 
 </header>
 
-<!-- <section class="tsr-section-communictaion-primary" id="ad">
-  <div class="swiffy-wrap">
-    <iframe src="https://pood.elion.ee//picturesInternal/809/html5/index-et.html#pood.elion.ee" 
-          border="0"
-          scrolling="no"
-          allowtransparency="true"
-          width="100%"
-          height="100%"
-          style="border:0;"
-    >
-    </iframe>
-  </div>
-</section> -->
 
-<section class="tsr-section-communictaion-primary">
-  <div class="tsr-slides">
+
+
+
+
+
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="progress-active" data-target="#id1">
+              <h4>Pakkumuse kinnitamine</h4>
+            </li>
+            <li class="" data-target="#id2">
+              <h4>Lepingu kinnitamine</h4>
+            </li>
+            <li class="last-child " data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content clearfix">
+
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <h4>Pakkumuse info</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Kliendi andmed</h5>
+                  <p>
+                    <span>Maksja:</span><br>
+                    <strong>Teele Puusemp</strong>
+                  </p>
+                  <p>
+                    <span>Maksja aadress:</span><br>
+                    <strong>Pärnu mnt 31 Tallinn, Kesklinn, 10119</strong>
+                  </p>
+                  <p>
+                    <span>Kontaktisik:</span><br>
+                    <strong>Teele Puusemp</strong>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <h5>Kättesaamise info</h5>
+                  <p>
+                    <span>Tarneaadress:</span><br>
+                    <strong>Pärnu mnt 31 Tallinn, Kesklinn, 10119</strong>
+                  </p>
+                  <p>
+                    <span>Kauba vastuvõtja:</span><br>
+                    <strong>Teele Puusemp</strong>
+                  </p>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <h4>Järelmaksu summa ja järelmaksu limiit</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-sm-8 col-md-7">
+                      <span>Järelmaksu limiit kokku:</span>
+                      <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content="Järelmaksu võtmine on mitte kunagi hea mõte" data-original-title="Järelmaksu limiit"><i class="icon icon-help"></i></a>
+                    </div>
+                    <div class="col-sm-4 col-md-5">
+                      <p><strong>1600.00 €</strong></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-sm-8 col-md-7">
+                      <span>Vaba järelmaksulimiit pärast pakkumuse aktsepteerimist:</span>
+                      <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content="Järelmaksu võtmine on mitte kunagi hea mõte" data-original-title="Järelmaksu limiit"><i class="icon icon-help"></i></a>
+                    </div>
+                    <div class="col-sm-4 col-md-5">
+                      <p><strong>1234.50 €</strong></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-sm-8 col-md-7">
+                      <span>Järelmaksulimiidi kasutatud osa pärast pakkumuse aktsepteerimist:</span>
+                      <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content="Järelmaksu võtmine on mitte kunagi hea mõte" data-original-title="Järelmaksu limiit"><i class="icon icon-help"></i></a>
+                    </div>
+                    <div class="col-sm-4 col-md-5">
+                      <p><strong>302.00 €</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <h4>Pakkumine kehtib veel 10 päev(a)</h4>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <h4>Järelmaksu pakkumuse sisu</h4>
+              <p>Elioni järelmaksuga saavad kaupu osta ainult Elioni erakliendid vaba krediidilimiidi ulatuses. E-poes on järelmaksu sõlmimine lepingutasuta. Järelmaksu perioodi saab valida kuni 4 aastaks (6 kuud / 12 kuud / 18 kuud / 24 kuud / 30 kuud / 36 kuud / 42 kuud / 48 kuud). Järelmaksu tasumine toimub graafiku alusel, st kogu perioodi jooksul on üks fikseeritud kuumakse)</p>
+
+              <div class="cart ee-top-20">
+  <div class="cart-items">
+      <div>
+
+        <div id="content-placeholder-cart"></div> 
+            <script id="cart-template" type="text/x-handlebars-template">
+            
+        <div class="cart-item">
+        <div class="row cart-item-th hidden-xs">
+            <div class="col-sm-6">
+              Toode
+            </div>
+
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="col-sm-7 text-right">
+                  Kogus
+                </div>
+                <div class=" col-sm-5 text-right">
+                  Hind
+                </div>
+              </div>
+            </div>
+          </div>
+          {{#products}} 
+          <div class="row">
+        
+            <div class="col-xs-3 col-sm-1 cart-item-image">
+              <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+            </div>
+        
+            <div class="col-xs-7 col-sm-5">
+              <h6>{{name}}</h6>
+            </div>
+        
+            <div class="col-xs-2 visible-xs">
+              <button type="button" class="close" data-dismiss="cartitem"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+        
+        
+            <div class="col-xs-12 col-sm-6">
+              <div class="row">
+                <div class="col-xs-6 visible-xs text-right">
+                <label class="ee-top-10">Kogus:  </label>
+                </div>
+                <div class="col-xs-6 col-sm-8 text-right">
+                  <div class="form-group">
+                    <div class="col-sm-10">
+                      <label class="control-label-left">1</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 visible-xs text-right">
+                <label class="ee-top-10">Hind:  </label>
+                </div>
+                <div class="col-xs-6 col-sm-4 text-right">
+                {{#if special_price}}
+                  <p class="ee-product-price-md">{{special_price}}</p>
+                  {{else}}
+                  <p class="ee-product-price-md">{{normal_price}}</p>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/products}} 
+        </div>
+        
+            
+            </script>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-5 col-sm-offset-7">
+    <h4 class="ee-top-20">
+      Ostukorv kokku
+      <div class="pull-right ee-product-price-md">
+        <strong>269.99 €</strong>
+      </div>
+    </h4>
+    <h6>
+      Sissemakse
+      <div class="pull-right">
+        <strong>0.00 €</strong>
+      </div>
+    </h6>
+    <h6>
+      Periood
+      <div class="pull-right">
+        <strong>48 kuud</strong>
+      </div>
+    </h6>
+    <h6>
+      Lepingutasu
+      <div class="pull-right">
+        <strong>49.99 €</strong>
+      </div>
+    </h6>
+    <h6>
+      Kuumakse
+      <div class="pull-right">
+        <strong>9.40 €</strong>
+      </div>
+    </h6>
+    <h6>
+      Maksimaalne lubatud kuumakse
+      <div class="pull-right">
+        <strong>429.99 €</strong>
+      </div>
+    </h6>
+  </div>
+</div>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row tsr-forms">
+      <div class="col-sm-6 col-md-8">
+        <h4>Vali kättesaamise viis:</h4>
+        <div class="select-container">
+          <select id="chooseDelivery">
+            <option>Kulleriga koju/kontorisse kätte (3,50 €)</option>
+            <option >Pakiautomaadist (tasuta)</option>
+            <option>Tulen ise poodi järgi (tasuta)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 ee-top-20">
+        <div class="panel panel-primary" id="deliveryInfoShop">
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Poest
+          </div>
+          <div class="panel-body">
+            <small>
+              Kaup kätte <strong>täna, 07.11</strong>
+            </small>
+          </div>
+        </div>
+        <div class="panel panel-primary" id="deliveryInfoItella" >
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Pakiautomaadist
+          </div>
+          <div class="panel-body">
+            <small>
+              Kaup kätte <strong>täna, 07.11</strong>
+            </small>
+          </div>
+        </div>
+        <div class="panel panel-primary" id="deliveryInfoCourier">
+          <div class="panel-heading">
+            <span class="icon icon-info"></span>  Kulleriga
+          </div>
+          <div class="panel-body">
+            <small>
+              Kaup kätte <strong>täna, 07.11</strong>. <br>
+              <strong>NB! </strong>Kui Sa ei saa sobival ajal kodus olla saad paki tellida ka oma töökohta.
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row tsr-forms" id="deliveryWhereCourier">
+  <div class="col-sm-6 col-md-8">
+    <h4>Kaubad tuua aadressile:</h4>
+    <form action="" class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-sm-6 col-md-2 control-label">Aadress</label>
+        <div class="col-sm-6 col-md-10">
+          <a href="#" id="tarneaadress" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Endla 4 Tallinn Kesklinn Harjumaa 10142 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+    </form>
+   <h4 class="ee-top-20">Sobiv aeg kaupade toomiseks on:</h4>
+   <form action="" class="form-horizontal"> 
+      <div class="form-group">
+          <label for="email" class="col-sm-6 col-md-2 control-label">Kuupäev</label>
+          <div class="col-sm-6 col-md-10">
+            <a href="#" id="courierDate" data-type="text" data-pk="1" data-title="" class="datepicker">14.02.2014 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+          </div>
+        </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-6 col-md-2 control-label">Kell</label>
+          <div class="col-sm-6 col-md-6">
+            <div class="select-container">
+              <select id="chooseTime">
+                <option selected>8.00-18.00</option>
+                <option>14.00-16.00</option>
+              </select>
+            </div>
+          </div>
+      </div>
+    
+    </form>
+  </div>
+  <div class="col-sm-6 col-md-4" id="deliveryWhoShop">
+    <h4>Kauba võtab vastu:</h4>
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Nimi</label>
+        <div class="col-sm-10">
+          <a href="#" id="nimi" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+      <div class="form-group ">
+        <label for="phone" class="col-sm-2 control-label">Telefon</label>
+        <div class="col-sm-10">
+          <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+    <div class="row tsr-forms" id="deliveryWhereOmniva">
+  <div class="col-sm-8">
+
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <h4>Vali linn:</h4>
+      <div class="select-container">
+        <select id="chooseCity">
+          <option value="165">Tallinn</option>
+<option value="133">Viimsi</option>
+<option value="161">Keila</option>
+<option value="104">Peetri</option>
+<option value="156">Maardu</option>
+<option value="121">Rakvere</option>
+<option value="126">Järvamaa</option>
+<option value="160">Pärnumaa</option>
+<option value="146">Põlvamaa</option>
+<option value="120">Lääne-Virumaa</option>
+<option value="103">Raplamaa</option>
+<option value="164">Tartumaa</option>
+<option value="102">Läänemaa</option>
+<option value="138">Valgamaa</option>
+<option value="124">Viljandimaa</option>
+<option value="125">Võrumaa</option>
+        </select>
+      </div>
+      <div id="pointOmniva">
+        <h4 class="ee-top-20">Vali asukoht:</h4>
+        <div class="select-container">
+          <select id="chooseSpot">
+              <option   data-iconurl="assets/img/branding/omniva-sprite.svg" selected> Kristiine Keskuse Omniva</option> 
+  <option  data-iconurl="assets/img/branding/itella-sprite.svg">Kristiine Keskuse Smartpost</option> 
+  <option  data-iconurl="assets/img/branding/omniva-sprite.svg">Rotermanni Kvartali Aatriumi Omniva</option>
+  <option  data-iconurl="assets/img/branding/itella-sprite.svg"> Haabersti Rimi Itella</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Järve Keskus Omniva</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Kaubamaja Omniva</option>
+  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Kristiine Keskus Itella</option>
+  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Lasnamäe Centrum (RIMI) Omniva</option>
+  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Lasnamäe Prisma Itella</option>
+  <option value="164"> Magistrali Keskus</option>
+  <option value="102"> Merimetsa Selver</option>
+  <option value="138"> Mustika Keskus</option>
+  <option value="124"> Nõmme Keskus</option>
+  <option value="125"> Pirita Selver</option>
+  <option value="153"> Rocca Al Mare Keskus</option>
+  <option value="154"> Sikupilli Prisma</option>
+  <option value="141"> Smuuli Maxima</option>
+  <option value="155"> Solaris Keskus</option>
+  <option value="137"> Tondi Selver</option>
+  <option value="122"> Torupilli Selver</option>
+<option value="187"> Ülemiste Keskus</option><option value="104">Rotermanni Kvartali Aatrium</option><option value="121"> Haabersti Rimi</option><option value="126"> Järve Keskus</option><option value="185"> Kadaka Selver</option><option value="160"> Kaubamaja</option><option value="146"> Kristiine Keskus</option><option value="175"> Läänemere Selver</option><option value="120"> Lasnamäe Centrum (RIMI)</option><option value="103"> Lasnamäe Prisma</option><option value="164"> Magistrali Keskus</option><option value="102"> Merimetsa Selver</option><option value="138"> Mustika Prisma</option><option value="124"> Nõmme Keskus</option><option value="125"> Pirita Selver</option><option value="153"> Rocca Al Mare Keskus</option><option value="154"> Sikupilli Prisma</option><option value="141"> Smuuli Maxima</option><option value="155"> Solaris Keskus</option><option value="137"> Tondi Selver</option><option value="122"> Torupilli Selver</option>
+          </select>
+        </div>
+      </div>
+      <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
+      <div class="form-group ">
+        <label for="name" class="col-sm-4 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+        <div class="col-sm-8">
+          <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+    </form>
+    <img class="img-responsive ee-top-20" src="http://placehold.it/800x400&text=Kaart" alt="">
+  </div>
   
-    <a href="https://pood.elion.ee/productInfo/24/sulearvuti-lenovo-ideapad-g50-70/59417974?utm_source=elion&utm_medium=banner&utm_term=est&utm_content=html&utm_campaign=epood_sygiskampaania_2014_08" style="background-image: url(assets/img/primary-banner/bg-slide-1-pro.jpg); ">  <!-- srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w" -->
-      <div class="tsr-tactical-container tsr-slide-1 ">
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Kliendihind
-          </header>
-          599 €
-        </figure>
+  <div class="col-sm-4">
+    <h4 class="ee-top-20">Saad paki kätte:</h4>
+    <img src="assets/img/branding/omniva-lg.svg" alt="" class="pull-right" id="omnivaLogo">
+    <img src="assets/img/branding/itella-lg.svg" alt="" class="pull-right" id="itellaLogo">
+    <h5 class="ee-top-10">Tallinna Kristiine Keskus</h5>
+    <p>
+      <strong>Aadress:</strong><br>
+      Harjumaa, Endla tänav 45, Kristiine linnaosa
+    </p>
+    <p>
+      <strong>Lahtiolekuajad:</strong><br>
+      E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud
+    </p>
+    <p>
+      <strong>Lisainformatsioon:</strong><br>
+      Prisma Peremarketi sissepääsu vastas, eskalaatori taga.
+    </p>
+    <div class="panel panel-primary" id="deliveryInfoShop">
+      <div class="panel-heading">
+        <span class="icon icon-info"></span>  Pane tähele!
       </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Meie kliendid võidavad hinnas</header>
-          <span class="small visible-xs visible-sm">Lenovo G50-70 kliendihind <strong>599 €</strong> <br> <button class="btn btn-link">Vaata kohe!</button> </span>
-          <span class="hidden-sm"></span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-2.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="row tsr-tactical-textPanel">
-          <header>Tegemist veel on.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-3.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-4.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-  </div>
-
-</section>
-
-
-
-
-<!-- for small screen, hidden on large -->
-<section class="ee-frontlinks">
-  <div class="ee-product-list-front container visible-xs visible-sm" >
-    <div  id="content-placeholder-frontmenu-visible3"></div>
-    
-    <script id="front-menu-template-visible3" type="text/x-handlebars-template">
-    
-    {{#menu}}
-    
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
-      <ul class="nav nav-pills nav-stacked ">
-        {{#each link }}
-    
-        <li><a href="{{this.path}}">{{this.name}}</a></li>  
-        {{/each}}
-      </ul>
-      <a data-toggle="collapse" href="#collapseMenu{{id}}" class="tsr-btn-view-all visible-xs visible-sm jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Näita rohkem</span></a>
-      </div>
-     
-    {{/menu}}
-    
-    </script>
-    <div  id="content-placeholder-frontmenu-hidden2" ></div>
-    
-    <script id="front-menu-template-hidden2" type="text/x-handlebars-template">
-    
-    {{#menu}}
-    
-    <div class="col-xs-12 col-sm-6 col-md-3 collapse" id="collapseMenu{{id}}">
-      <ul class="nav nav-pills nav-stacked ">
-        {{#each link }}
-    
-        <li><a href="{{this.path}}">{{this.name}}</a></li>  
-        {{/each}}
-      </ul>
-      </div>
-     
-    {{/menu}}
-    
-    </script>
-  </div>
-</section>
-
-<section class="tsr-section-promotion tsr-count-4"> 
-  <div class="container">
-    <div id="content-placeholder-offers-visible"></div>
-    <script id="offer-slider-template-visible" type="text/x-handlebars-template">
-    {{#offers}}
-
-    <a href="detail.html" class="tsr-module-promotion">
-      <figure>
-        {{#if ribbon}}
-        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
-        {{/if}}
-        {{#if firstflash}}
-        <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
-        {{/if}}
-        {{#if secondflash}}
-        <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-        {{/if}}
-        <figure class="tsr-promotion-image">
-          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
-        </figure>
-      </figure>
-      <div class="tsr-product-content">
-
-        <h6 class="tsr-product-header">{{name}}</h6>
-        <p class="tsr-product-desc"> {{{description}}} </p>
-      </div>
-    </a>
-    {{/offers}}
-    </script>
-
-    <div id="content-placeholder-offers" class="collapse"></div>
-    <script id="offer-slider-template" type="text/x-handlebars-template">
-    {{#offers}}
-
-    <a href="detail.html" class="tsr-module-promotion">
-      <figure>
-        {{#if ribbon}}
-        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
-        {{/if}}
-        {{#if firstflash}}
-        <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
-        {{/if}}
-        {{#if secondflash}}
-        <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-        {{/if}}
-        <figure class="tsr-promotion-image">
-          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
-        </figure>
-      </figure>
-      <div class="tsr-product-content">
-
-        <h6 class="tsr-product-header">{{name}}</h6>
-        <p class="tsr-product-desc"> {{{description}}} </p>
-      </div>
-    </a>
-    {{/offers}}
-    </script>
-  </div>
-</section>
-<a data-toggle="collapse" href="#content-placeholder-offers" class="tsr-btn-view-all jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Näita rohkem</span></a>
-
-<!-- <figure class="tsr-tactical-flash">
-        <div class="flashText-flash-normal ee-flashtext-container">
-          <div class="ee-big">72 $</div>
-          <div class="ee-small">Nii kiire</div>
-        </div>
-      </figure> --> 
-
-<!-- for large screen, hidden on small -->
-<section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
-  <div class="container">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Arvutid ja lisad</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>TV ja audio</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Foto, video, GPS</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Telefonid</h6>
+      <div class="panel-body">
+        <small>
+          Pakile saad järele minna alates <strong> 27.11 kell 11:00</strong>
+          <br>
+          <i>Teavitus paki jõudmisest automaati saadetakse SMSiga</i>
+        </small>
       </div>
     </div>
   </div>
-</section>
-<section class="ee-frontlinks">
-  <div class="ee-product-list-front container  hidden-xs hidden-sm">
-    <div class="row">
-      <div  id="content-placeholder-frontmenu-visible"></div>
 
-        <script id="front-menu-template-visible" type="text/x-handlebars-template">
+  
+</div>
+    <div class="row tsr-forms" id="deliveryWhereShop">
+  <div class="col-sm-8">
+    <h4>Vali pood:</h4>
+    <div class="select-container">
+      <select id="chooseShop">
+        <optgroup label="Tallinn/Harjumaa">
+  <option value="165">Tallinna Lasnamäe Maksimarket</option>
+  <option value="133">Laagri Maksimarket</option>
+  <option value="161">Maardu Maxima</option>
+  <option value="104">Rotermanni Kvartali Aatrium</option>
+  <option value="156">Saku Selver</option>
+  <option value="121">Tallinna Haabersti Rimi</option>
+  <option value="126">Tallinna Järve Keskus</option>
+  <option value="160">Tallinna Kaubamaja</option>
+  <option value="146">Tallinna Kristiine Keskus</option>
+  <option value="120">Tallinna Lasnamäe Centrum (RIMI)</option>
+  <option value="103">Tallinna Lasnamäe Prisma</option>
+  <option value="164">Tallinna Magistrali Keskus</option>
+  <option value="102">Tallinna Merimetsa Selver</option>
+  <option value="138">Tallinna Mustika Keskus</option>
+  <option value="124">Tallinna Nõmme Keskus</option>
+  <option value="125">Tallinna Pirita Selver</option>
+  <option value="153">Tallinna Rocca Al Mare Keskus</option>
+  <option value="154">Tallinna Sikupilli Prisma</option>
+  <option value="141">Tallinna Smuuli Maxima</option>
+  <option value="155">Tallinna Solaris Keskus</option>
+  <option value="137">Tallinna Tondi Selver</option>
+  <option value="122">Tallinna Torupilli Selver</option>
+  <option value="139">Viimsi Keskus</option>
+  <option value="134">Keila Selver</option>
+</optgroup>
+<optgroup label="Saaremaa">
+  <option value="116">Kuressaare Saare Selver</option>
+  <option value="157">Kuressaare Kihelkonna Säästumarket</option>
+</optgroup>
+<optgroup label="Jõgevamaa">
+  <option value="111">Jõgeva Kaubahall</option>
+  <option value="123">Põltsamaa Selver</option>
+</optgroup>
+<optgroup label="Hiiumaa">
+  <option value="115">Kärdla Selver</option>
+</optgroup>
+<optgroup label="Ida-Virumaa">
+  <option value="159">Narva Kreenholmi Säästumarket</option>
+  <option value="140">Sillamäe SK-Market (Konsum)</option>
+  <option value="108">Jõhvi Tsentraal</option>
+  <option value="131">Kohtla-Järve Vironia Keskus </option>
+  <option value="109">Narva Astri Keskus</option>
+</optgroup>
+<optgroup label="Järvamaa">
+  <option value="143">Türi Säästumarket</option>
+  <option value="112">Paide Selver</option>
+</optgroup>
+<optgroup label="Pärnumaa">
+  <option value="127">Pärnu Ülejõe Selver</option>
+  <option value="142">Vändra Konsum</option>
+  <option value="130">Pärnu Keskus</option>
+  <option value="158">Pärnu Maxima XXX</option>
+  <option value="117">Pärnu Kaubamajakas</option>
+</optgroup>
+<optgroup label="Põlvamaa">
+  <option value="128">Põlva Edu Keskus</option>
+</optgroup>
+<optgroup label="Lääne-Virumaa">
+  <option value="110">Rakvere Kroonikeskus</option>
+  <option value="152">Rakvere Põhjakeskus</option>
+  <option value="147">Tapa Bussijaam</option>
+</optgroup>
+<optgroup label="Raplamaa">
+  <option value="113">Rapla Maxima</option>
+  <option value="145">Märjamaa Säästumarket</option>
+</optgroup>
+<optgroup label="Tartumaa">
+  <option value="107">Tartu Lõunakeskus</option>
+  <option value="135">Tartu Tasku moe- ja vabaajakeskus</option>
+  <option value="163">Tartu Raadi Maxima</option>
+  <option value="150">Tartu Eeden</option>
+  <option value="106">Tartu Anne Selver</option>
+  <option value="144">Elva Säästumarket</option>
+  <option value="151">Tartu Zeppelin</option>
+  <option value="136">Tartu Rebase Rimi</option>
+</optgroup>
+<optgroup label="Läänemaa">
+  <option value="114">Rannarootsi Keskus</option>
+</optgroup>
+<optgroup label="Valgamaa">
+  <option value="149">Otepää Maxima</option>
+  <option value="148">Tõrva Maxima</option>
+  <option value="118">Valga Selver</option>
+</optgroup>
+<optgroup label="Viljandimaa">
+  <option value="162">Viljandi Uku keskus</option>
+  <option value="101">Viljandi Männimäe Selver</option>
+</optgroup>
+<optgroup label="Võrumaa">
+  <option value="119">Võru Kagukeskus</option>
+</optgroup>
+      </select>
+    </div>
+    <h4 class="ee-top-20">Kauba võtab vastu:</h4>
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Nimi</label>
+        <div class="col-sm-10">
+          <a href="#" id="nimi-shop" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+      <div class="form-group ">
+        <label for="phone" class="col-sm-2 control-label">Telefon</label>
+        <div class="col-sm-10">
+          <a href="#" id="telefon-shop" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+      </div>
+    </form>
+      <img class="img-responsive" src="http://placehold.it/800x400&text=Kaart" alt="">
+  </div>
+  <div class="col-sm-4">
+    <h5>EMT ja Elion ühisesindus, Kärdla</h5>
+    <p>
+      <strong>Aadress:</strong><br>
+      Harjumaa, Türi 5 - Tallinna linn
+    </p>
+    <p>
+      <strong>Lahtiolekuajad:</strong><br>
+      E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud 
+    </p>
+    <div class="panel panel-primary" id="deliveryInfoShop">
+      <div class="panel-heading">
+        <span class="icon icon-info"></span>  Pane tähele!
+      </div>
+      <div class="panel-body">
+        <small>
+          <dl>
+            <dd>- Valides kauba Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque minima facere earum quae ipsa et, quia amet repellat quis, quas praesentium corporis! Minus dignissimos reprehenderit voluptates atque pariatur natus, obcaecati!</dd>
+            <dd>- Tellimuse täitmise aja teatab teenindaja 1 tööpäeva jooksul alates makse laekumisest</dd>
+          </dl>
 
-        {{#menu}}
+        </small>
+      </div>
+    </div>
+  </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <ul class="nav nav-pills nav-stacked">
-            {{#each link }}
+</div>
+  </div>
+</div>  
 
-            <li><a href="{{this.path}}">{{this.name}}</a></li>  
-            {{/each}}
-          </ul>
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <hr>
+              <h4>Lisainformatsioon</h4>
+              <div class="col-md-8 tsr-form">
+                <form action="" class="form-horizontal">
+                  <div class="form-group ">
+                    <label for="phone" class="col-sm-2 control-label">Tellimuse viide</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" id="phone" name="phone" type="text" placeholder="Max 20 tähte">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="clearfix"></div>
+              <hr>
+            </div>
+          </div>  
+
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <p>Pakkumuses toodud kauba eest tasumise aluseks on Elioni poolt kliendile esitatav arve, mis kuulub tasumisele kooskõlas arvel tooduga, sellel kindlaks määratud maksetähtajaks.</p>
+              <p>Pakkumuses toodud tarneaja pikenemist kuni 14 kalendripäeva ei loeta oluliseks lepingu rikkumiseks ning see ei anna kliendile õigust lepingust taganemiseks ega muude õiguskaitsevahendite kasutamiseks.</p>
+              <p>Pakkumuse kinnitamisega:</p>
+              <ul>
+                <li>annab Klient pakkumusele tagasivõetamatu nõustumuse, millega loetakse AS Eesti Telekom (edaspidi: Elion) ja Kliendi vahel sõlmituks müügitehing, mille alusel kohustub Elion andma Kliendile üle pakkumuses nimetatud kauba ning Klient kohustub tasuma Elionile täies ulatuses pakkumuses nimetatud kauba maksumuse ja kauba vastu võtma.</li>
+                <li>kinnitab Klient, et ta on tutvunud pakkumuses toodud tingimustega ning pooltevahelisi suhteid reguleeriva Kliendilepingu ja AS Eesti Telekom Üldtingimuste sisuga ja kohustub neis sisalduvaid tingimusi täitma.</li>
+                <li>kinnitab Klient, et ta on teadlik ning nõustub sellega, et pakkumuses toodud kauba maksumuse mittenõuetekohase tasumise ja/või kauba vastuvõtmisest keeldumise või sellest kõrvale hoidumise korral on tegemist Kliendi poolse olulise lepingu rikkumisega ja ta on Elioni nõudmisel kohustatud tasuma Elionile leppetrahvi summas, mis on võrdne pakkumuses toodud kauba maksumusega ning hüvitama Elionile kõik leppetrahvi ületavad lepingu rikkumisega kaasnevad kahjud.</li>
+              </ul>
+            </div>
+          </div>      
+
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+
+            <div class="row">
+              <hr class="hidden-xs">
+              <div class="col-sm-4 ee-top-10">
+                <button class="btn btn-link" onClick="location.href= 'cart-send-offer.html' " >Tühistan pakkumuse</button>
+              </div>
+              <div class="col-sm-2 col-sm-offset-2 text-right ee-top-10">
+                <button class="btn btn-link" onClick="location.href= 'cart-send-offer.html' " >Tagasi</button>
+              </div>
+              <div class="col-sm-4">
+                <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= 'cart-send-offer.html' " >Jätka ostmist</button>
+              </div>
+            </div>
           </div>
+        </div>
 
-        {{/menu}}
 
-        </script>
+      </div>
     </div>
+  </section>
 
-    <div class="row collapse" id="collapseMenu">
-      <div  id="content-placeholder-frontmenu-hidden"></div>
-
-        <script id="front-menu-template-hidden" type="text/x-handlebars-template">
-
-        {{#menu}}
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <ul class="nav nav-pills nav-stacked">
-            {{#each link }}
-
-            <li><a href="{{this.path}}">{{this.name}}</a></li>  
-            {{/each}}
-          </ul>
-          </div>
-
-        {{/menu}}
-
-        </script>
-    </div>
-  </div>
+</div>
 </section>
-
-<a data-toggle="collapse" href="#collapseMenu" class="tsr-btn-view-all hidden-sm hidden-xs jsShowMoreCategories moretext" data-moretext="Näita rohkem" data-lesstext="Näita vähem"><span>Näita rohkem</span></a> 
-
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
-
-    <a href="#" class="tsr-module-support icon icon-leasing">
-      <h6>Elioni järelmaks</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-transport">
-      <h6>Transport e-poes</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-help">
-      <h6>Abiinfo</h6>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon icon-settings">
-      <h6>Remont ja hooldus</h6>
-    </a>                  
-
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
 
 <footer>
     <div class="container-no-gutter">
@@ -1123,7 +1468,358 @@
     <script src="assets/js/vendor/scrollto.js"></script> 
     <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
     <script src='assets/js/rapid.js'></script>
-    
+    <!-- <script src="http://builds.emberjs.com/handlebars-1.0.0-rc.4.js"></script>
+<script src="http://builds.emberjs.com/ember-latest-stable.js"></script>
+<script src="http://builds.emberjs.com/ember-data-latest.js"></script> -->
+
+<script src="assets/js/visa/progress.js"></script>  
+<script src="http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js"></script> 
+<script src="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/js/bootstrap-editable.js"></script>  
+ 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/inputs-ext/typeaheadjs/typeaheadjs.js"></script>  
+<script src="http://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>  
+<!-- Pickadate -->
+<script src="http://amsul.ca/pickadate.js/lib/picker.js"></script>  
+<script src="http://amsul.ca/pickadate.js/lib/picker.date.js"></script>
+<script src="http://amsul.ca/pickadate.js/lib/translations/et_EE.js"></script> 
+<script src="http://amsul.ca/pickadate.js/lib/picker.time.js"></script> 
+<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script>
+
+<!-- Summernote --> 
+<script src="assets/js/vendor/summernote.min.js"></script> 
+
+<script>
+
+// Plus-minus buttons
+//plugin bootstrap minus and plus
+//http://jsfiddle.net/laelitenetwork/puJ6G/
+
+$(function(){
+  
+  $('.btn-number').click(function(e){
+      e.preventDefault();
+      
+      fieldName = $(this).attr('data-field');
+      type      = $(this).attr('data-type');
+      var input = $("input[name='"+fieldName+"']");
+      var currentVal = parseInt(input.val());
+      if (!isNaN(currentVal)) {
+          if(type == 'minus') {
+              
+              if(currentVal > input.attr('min')) {
+                  input.val(currentVal - 1).change();
+              } 
+              if(parseInt(input.val()) == input.attr('min')) {
+                  $(this).attr('disabled', true);
+              }
+
+          } else if(type == 'plus') {
+
+              if(currentVal < input.attr('max')) {
+                  input.val(currentVal + 1).change();
+              }
+              if(parseInt(input.val()) == input.attr('max')) {
+                  $(this).attr('disabled', true);
+              }
+
+          }
+      } else {
+          input.val(0);
+      }
+  });
+  $('.input-number').focusin(function(){
+     $(this).data('oldValue', $(this).val());
+  });
+  $('.input-number').change(function() {
+      
+      minValue =  parseInt($(this).attr('min'));
+      maxValue =  parseInt($(this).attr('max'));
+      valueCurrent = parseInt($(this).val());
+      
+      name = $(this).attr('name');
+      if(valueCurrent >= minValue) {
+          $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+      } else {
+          alert('Sorry, the minimum value was reached');
+          $(this).val($(this).data('oldValue'));
+      }
+      if(valueCurrent <= maxValue) {
+          $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+      } else {
+          alert('Sorry, the maximum value was reached');
+          $(this).val($(this).data('oldValue'));
+      }
+      
+      
+  });
+  $(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+// End Plusminus
+
+    // Calls the selectBoxIt method on your HTML select box
+  // $("#chooseRole").selectBoxIt({
+  //   defaultText: "Vali roll"
+  // });
+
+  // $("#choosePayment").selectBoxIt({
+  //   defaultText: "Vali makseviis"
+  // });
+
+  // Adjusting height of the row oncklick
+  if(Modernizr.mq('only screen and (min-width: 768px)')) {
+    $('.js-flexrow').on('show.bs.collapse', function () {
+      $(this).parent().parent().css('height', '150px');
+    })
+    $('.js-flexrow').on('hidden.bs.collapse', function () {
+      $(this).parent().parent().css('height', '100px');
+    })
+  }
+
+  // Call calendar and timepicker in general
+  // ----------------------------
+    $('.datepicker').pickadate({editable: true});
+    $('.timepicker').pickatime({editable: true});
+
+    // Initialize Summernote Editor
+    $('.summernote').summernote({
+      airPopover: [
+    ['color', ['color']],
+    ['font', ['bold', 'underline', 'clear']],
+    ['para', ['ul', 'paragraph']],
+    ['table', ['table']],
+    ['insert', ['link', 'picture']]
+  ]
+    });
+
+});
+
+// Call xeditable
+//-------------------
+$.fn.editable.defaults.mode = 'inline';
+$(document).ready(function() {
+  $('#nimi').editable();
+  $('#epost').editable();
+  $('#telefon').editable();
+  $('#mobiil').editable();
+  $('#tarneaadress').editable();
+  $('#nimi-shop').editable();
+  $('#telefon-shop').editable();
+  $('#courierDate').editable();
+
+  $('#aadress').editable({
+    mode: 'inline',
+    showbuttons: true,
+    url: '/post',
+    pk: 1,
+    title: 'Enter an Italian city',
+    typeahead: {
+        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+    }
+  });
+});
+
+$(".datepicker").editable({
+    tpl: "<input type='text' class='form-control'></input>",
+    format: "yyyy-mm-dd hh:ii" 
+});
+
+$(".timepicker").editable({
+    tpl: "<input type='text' class='form-control'></input>",
+    format: "yyyy-mm-dd hh:ii" 
+});
+
+
+// Aboutme-page select behavior
+//--------------------------------
+
+$('#paymentInfoEttemaks').hide();
+$('#paymentInfoJarelmaks').hide();
+
+var paymentSelectBox = $("#choosePayment");
+paymentSelectBox.on("change", function() {
+
+  if ($(this).val() == "Ettemaksuga") {
+    $('#paymentInfoEttemaks').show();
+    $('#paymentInfoPangalink').hide();
+    $('#paymentInfoJarelmaks').hide();
+  }
+  else if ($(this).val() == "Järelmaksuga") {
+    $('#paymentInfoEttemaks').hide();
+    $('#paymentInfoPangalink').hide();
+    $('#paymentInfoJarelmaks').show();
+  }
+  else {
+    $('#paymentInfoEttemaks').hide();
+    $('#paymentInfoPangalink').show();
+    $('#paymentInfoJarelmaks').hide();
+  }
+
+});
+
+// Devlivery-page select behavior
+//--------------------------------
+$('#deliveryWhereShop').hide();
+$('#deliveryWhereOmniva').hide();
+$('#deliveryInfoCourier').hide();
+$('#deliveryInfoItella').hide();
+
+var deliverySelectBox = $("#chooseDelivery");
+deliverySelectBox.on("change", function() {
+
+  if ($(this).val() == "Kulleriga koju/kontorisse kätte (3,50 €)") {
+    $('#deliveryWhereOmniva').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereCourier').show();
+    $('#deliveryInfoCourier').show();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else if ($(this).val() == "Pakiautomaadist (tasuta)") {
+    $('#deliveryWhereOmniva').show();
+    $('#deliveryInfoItella').show();
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryWhereShop').hide();
+    $('#deliveryInfoShop').hide();
+  } 
+  else {
+    $('#deliveryWhereCourier').hide();
+    $('#deliveryWhereOmniva').hide();
+    $('#deliveryInfoCourier').hide();
+    $('#deliveryInfoItella').hide();
+    $('#deliveryWhereShop').show();
+    $('#deliveryInfoShop').show();
+  }
+});
+
+// aboutyou-page select behavior
+//--------------------------------
+$('#itellaLogo').hide();
+
+var roleSelectBox = $("#chooseSpot");
+roleSelectBox.on("change", function() {
+  if ($(this).val().indexOf("Itella")> -1 ) {
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
+  } 
+  else  if ($(this).val().indexOf("Omniva")> -1 ) {
+    $('#itellaLogo').hide();
+    $('#omnivaLogo').show();
+  } 
+  else {
+    $('#itellaLogo').show();
+    $('#omnivaLogo').hide();
+  }
+});
+
+
+
+// ajax emulation for proto
+// ------------------
+$.mockjax({
+    url: '/post',
+    responseTime: 400,
+    response: function (settings) {
+        if (settings.data.value == 'err') {
+            this.status = 500;
+            this.responseText = 'Validation error!';
+        } else {
+            this.responseText = '';
+        }
+    }
+});
+
+// Extend pickadate v3 to get “from” and “to” time functionality with a length duration display
+// -------------------------------------
+// http://codepen.io/amsul/pen/IhCxf
+var from_$input = $('#input_from').pickatime({
+  clear: ' ',
+  format: 'HH:i',
+  min: [8, 0],
+  max: [18, 0],
+  editable: true
+}),
+
+from_picker = from_$input.pickatime('picker')
+
+var to_$input = $('#input_to').pickatime({
+        clear: ' ',
+        format: 'HH:i',
+        min: [8, 0],
+        max: [18, 0],
+        editable: true,
+        formatLabel: function( timeObject ) {
+            var minObject = this.get( 'min' ),
+                hours = timeObject.hour - minObject.hour,
+                mins = ( timeObject.mins - minObject.mins ) / 60,
+                pluralize = function( number, word ) {
+                    return number + ' ' + ( number === 1 ? word : word + 's' )
+                }
+            return '<b>H</b>:i <sm!all>(' + pluralize( hours + mins, '!hour' ) + ')</sm!all>'
+        }
+    }),
+    to_picker = to_$input.pickatime('picker')
+
+
+// Check if there’s a “from” or “to” time to start with.
+if ( from_picker.get('value') ) {
+  to_picker.set('min', from_picker.get('select'))
+}
+if ( to_picker.get('value') ) {
+  from_picker.set('max', to_picker.get('select') )
+}
+
+// When something is selected, update the “from” and “to” limits.
+from_picker.on('set', function(event) {
+  if ( event.select ) {
+    to_picker.set('min', from_picker.get('select'))
+  }
+})
+to_picker.on('set', function(event) {
+  if ( event.select ) {
+    from_picker.set('max', to_picker.get('select'))
+  }
+})
+
+
+
+// http://jsbin.com/uzekop/1/edit?html,js,output
+//EMBER APP TEMPLATE
+// App = Ember.Application.create();
+
+// App.ApplicationRoute = Ember.Route.extend({
+//   model: function(){
+//       return [
+//           {name: 'Kris', template: 'kris'},
+//           {name: 'Luke', template: 'luke'},
+//           {name: 'Alex', template: 'alex'}
+//       ];
+//   }
+// });
+
+// App.EmbeddedView = Ember.View.extend({
+//   templateName: Ember.computed.alias('controller.selected'),
+//   templateNameDidChange: function() {
+//     this.rerender();
+//   }.observes('templateName')
+// });
+
+</script>
+
+
 
 
 <!-- General handlebars -->
@@ -1224,14 +1920,4 @@ $(document).ready(function(){
   </script>
 
 </body>
-</html>
-
-<script src="assets/data/handlebars/hbs-frontmenulistMob.hbs"></script>
-<script src="assets/data/handlebars/hbs-frontmenulist.hbs"></script>
-<script src="assets/data/handlebars/hbs-offers-mixed.hbs"></script>
-
-<script type="text/javascript">
-// require(['/assets/js/setup.js'], function (setup) {
-//   require(['front']);
-// });
-</script>
+</html>  

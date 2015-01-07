@@ -1,0 +1,53 @@
+
+<!-- @include _header.html -->
+
+<!-- @include _mainnav.html -->
+<!-- $title Tehniku Ostukorv-3 ülevaade -->
+<!-- $pagejs js-cart -->
+<!-- $pagecss css-cart -->
+
+<!-- $nextstep 'cart-aboutyou.html' -->
+<!-- $prevstep 'cart-technician-products.html' -->
+
+<section class="wrapping-layers">
+  <div class="container xs-not-padded"> 
+    <section class="ee-shopping">
+      <div class="progress-steps" data-update="progress">
+        <div class="progress-tabs">
+          <ol data-progress-steps="5">
+            <li class="progress-active" data-target="#id1">
+              <h4>Ostukorv</h4>
+            </li>
+            <li class="" data-target="#id2">
+              <h4>Kliendi andmed</h4>
+            </li>
+            <li class="" data-target="#id3">
+              <h4>Seerianumbrid</h4>
+            </li>
+            <li class="">
+              <h4>Üleandmise akt</h4>
+            </li>
+            <li class="last-child " data-target="#id5">
+              <h4>Kokkuvõte</h4>
+            </li>
+          </ol>
+        </div>
+        <div class="progress-content clearfix">
+          <!-- @include _overview-technician.html --> 
+          <!-- @include _bottom.html -->
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+ <section class="tsr-section-divider tsr-color-purple">
+      <div class="container">
+        <h6>
+          Põhilised tooted
+        </h6>    
+      </div>
+    </section>
+    <!-- @include _product-slider-technician-detail.html -->
+
+<!-- @include _footer.html -->  
+<script src="assets/data/handlebars/hbs-slider-technician-detail.hbs"></script>
