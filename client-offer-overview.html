@@ -122,11 +122,50 @@
             </div>
           </div>
 
-          <!-- @include _delivery.html -->  
-
           <div class="row">
             <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <div class="row tsr-forms" id="deliveryWhereCourier">
+                <div class="col-sm-6 col-md-6">
+                  <h4>Soovin kaubad kätte saada</h4>
+                  <form action="" class="form-horizontal"> 
+                    <div class="form-group">
+                      <label for="email" class="col-sm-6 col-md-2 control-label">Kuupäev</label>
+                      <div class="col-sm-6 col-md-10">
+                        <a href="#" id="courierDate" data-type="text" data-pk="1" data-title="" class="datepicker">14.02.2014 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="col-sm-6 col-md-2 control-label">Kell</label>
+                      <div class="col-sm-6 col-md-6">
+                        <div class="select-container">
+                          <select id="chooseTime">
+                            <option selected>8.00-14.00</option>
+                            <option>14.00-16.00</option>
+                            <option>16.00-18.00</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <h4>Lisainformatsioon</h4>
+                  <form action="" class="form-horizontal">
+                    <div class="form-group ">
+                      <label for="phone" class="col-sm-6 col-md-2 control-label">Tellimuse viide</label>
+                      <div class="col-sm-6 col-md-10">
+                        <input class="form-control" id="phone" name="phone" type="text" placeholder="Max 20 tähte">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
               <hr>
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
               <h4>Lisainformatsioon</h4>
               <div class="col-md-8 tsr-form">
                 <form action="" class="form-horizontal">
@@ -141,7 +180,7 @@
               <div class="clearfix"></div>
               <hr>
             </div>
-          </div>  
+          </div>  --> 
 
           <div class="row">
             <div class="col-sm-12 col-md-10 col-md-offset-1">

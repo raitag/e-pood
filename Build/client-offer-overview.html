@@ -959,355 +959,49 @@
           </div>
 
           <div class="row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row tsr-forms">
-      <div class="col-sm-6 col-md-8">
-        <h4>Vali kättesaamise viis:</h4>
-        <div class="select-container">
-          <select id="chooseDelivery">
-            <option>Kulleriga koju/kontorisse kätte (3,50 €)</option>
-            <option >Pakiautomaadist (tasuta)</option>
-            <option>Tulen ise poodi järgi (tasuta)</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 ee-top-20">
-        <div class="panel panel-primary" id="deliveryInfoShop">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Poest
-          </div>
-          <div class="panel-body">
-            <small>
-              Kaup kätte <strong>täna, 07.11</strong>
-            </small>
-          </div>
-        </div>
-        <div class="panel panel-primary" id="deliveryInfoItella" >
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Pakiautomaadist
-          </div>
-          <div class="panel-body">
-            <small>
-              Kaup kätte <strong>täna, 07.11</strong>
-            </small>
-          </div>
-        </div>
-        <div class="panel panel-primary" id="deliveryInfoCourier">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Kulleriga
-          </div>
-          <div class="panel-body">
-            <small>
-              Kaup kätte <strong>täna, 07.11</strong>. <br>
-              <strong>NB! </strong>Kui Sa ei saa sobival ajal kodus olla saad paki tellida ka oma töökohta.
-            </small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <div class="row tsr-forms" id="deliveryWhereCourier">
-  <div class="col-sm-6 col-md-8">
-    <h4>Kaubad tuua aadressile:</h4>
-    <form action="" class="form-horizontal">
-      <div class="form-group">
-        <label for="name" class="col-sm-6 col-md-2 control-label">Aadress</label>
-        <div class="col-sm-6 col-md-10">
-          <a href="#" id="tarneaadress" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Endla 4 Tallinn Kesklinn Harjumaa 10142 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
-      </div>
-    </form>
-   <h4 class="ee-top-20">Sobiv aeg kaupade toomiseks on:</h4>
-   <form action="" class="form-horizontal"> 
-      <div class="form-group">
-          <label for="email" class="col-sm-6 col-md-2 control-label">Kuupäev</label>
-          <div class="col-sm-6 col-md-10">
-            <a href="#" id="courierDate" data-type="text" data-pk="1" data-title="" class="datepicker">14.02.2014 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-          </div>
-        </div>
-      <div class="form-group">
-        <label for="email" class="col-sm-6 col-md-2 control-label">Kell</label>
-          <div class="col-sm-6 col-md-6">
-            <div class="select-container">
-              <select id="chooseTime">
-                <option selected>8.00-18.00</option>
-                <option>14.00-16.00</option>
-              </select>
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <div class="row tsr-forms" id="deliveryWhereCourier">
+                <div class="col-sm-6 col-md-6">
+                  <h4>Soovin kaubad kätte saada</h4>
+                  <form action="" class="form-horizontal"> 
+                    <div class="form-group">
+                      <label for="email" class="col-sm-6 col-md-2 control-label">Kuupäev</label>
+                      <div class="col-sm-6 col-md-10">
+                        <a href="#" id="courierDate" data-type="text" data-pk="1" data-title="" class="datepicker">14.02.2014 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="col-sm-6 col-md-2 control-label">Kell</label>
+                      <div class="col-sm-6 col-md-6">
+                        <div class="select-container">
+                          <select id="chooseTime">
+                            <option selected>8.00-14.00</option>
+                            <option>14.00-16.00</option>
+                            <option>16.00-18.00</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <h4>Lisainformatsioon</h4>
+                  <form action="" class="form-horizontal">
+                    <div class="form-group ">
+                      <label for="phone" class="col-sm-6 col-md-2 control-label">Tellimuse viide</label>
+                      <div class="col-sm-6 col-md-10">
+                        <input class="form-control" id="phone" name="phone" type="text" placeholder="Max 20 tähte">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr>
             </div>
           </div>
-      </div>
-    
-    </form>
-  </div>
-  <div class="col-sm-6 col-md-4" id="deliveryWhoShop">
-    <h4>Kauba võtab vastu:</h4>
-    <form id="about" method="post" class="form-horizontal" role="form">
-      <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Nimi</label>
-        <div class="col-sm-10">
-          <a href="#" id="nimi" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
-      </div>
-      <div class="form-group ">
-        <label for="phone" class="col-sm-2 control-label">Telefon</label>
-        <div class="col-sm-10">
-          <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-    <div class="row tsr-forms" id="deliveryWhereOmniva">
-  <div class="col-sm-8">
 
-    <form id="about" method="post" class="form-horizontal" role="form">
-      <h4>Vali linn:</h4>
-      <div class="select-container">
-        <select id="chooseCity">
-          <option value="165">Tallinn</option>
-<option value="133">Viimsi</option>
-<option value="161">Keila</option>
-<option value="104">Peetri</option>
-<option value="156">Maardu</option>
-<option value="121">Rakvere</option>
-<option value="126">Järvamaa</option>
-<option value="160">Pärnumaa</option>
-<option value="146">Põlvamaa</option>
-<option value="120">Lääne-Virumaa</option>
-<option value="103">Raplamaa</option>
-<option value="164">Tartumaa</option>
-<option value="102">Läänemaa</option>
-<option value="138">Valgamaa</option>
-<option value="124">Viljandimaa</option>
-<option value="125">Võrumaa</option>
-        </select>
-      </div>
-      <div id="pointOmniva">
-        <h4 class="ee-top-20">Vali asukoht:</h4>
-        <div class="select-container">
-          <select id="chooseSpot">
-              <option   data-iconurl="assets/img/branding/omniva-sprite.svg" selected> Kristiine Keskuse Omniva</option> 
-  <option  data-iconurl="assets/img/branding/itella-sprite.svg">Kristiine Keskuse Smartpost</option> 
-  <option  data-iconurl="assets/img/branding/omniva-sprite.svg">Rotermanni Kvartali Aatriumi Omniva</option>
-  <option  data-iconurl="assets/img/branding/itella-sprite.svg"> Haabersti Rimi Itella</option>
-  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Järve Keskus Omniva</option>
-  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Kaubamaja Omniva</option>
-  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Kristiine Keskus Itella</option>
-  <option data-iconurl="assets/img/branding/omniva-sprite.svg"> Lasnamäe Centrum (RIMI) Omniva</option>
-  <option data-iconurl="assets/img/branding/itella-sprite.svg"> Lasnamäe Prisma Itella</option>
-  <option value="164"> Magistrali Keskus</option>
-  <option value="102"> Merimetsa Selver</option>
-  <option value="138"> Mustika Keskus</option>
-  <option value="124"> Nõmme Keskus</option>
-  <option value="125"> Pirita Selver</option>
-  <option value="153"> Rocca Al Mare Keskus</option>
-  <option value="154"> Sikupilli Prisma</option>
-  <option value="141"> Smuuli Maxima</option>
-  <option value="155"> Solaris Keskus</option>
-  <option value="137"> Tondi Selver</option>
-  <option value="122"> Torupilli Selver</option>
-<option value="187"> Ülemiste Keskus</option><option value="104">Rotermanni Kvartali Aatrium</option><option value="121"> Haabersti Rimi</option><option value="126"> Järve Keskus</option><option value="185"> Kadaka Selver</option><option value="160"> Kaubamaja</option><option value="146"> Kristiine Keskus</option><option value="175"> Läänemere Selver</option><option value="120"> Lasnamäe Centrum (RIMI)</option><option value="103"> Lasnamäe Prisma</option><option value="164"> Magistrali Keskus</option><option value="102"> Merimetsa Selver</option><option value="138"> Mustika Prisma</option><option value="124"> Nõmme Keskus</option><option value="125"> Pirita Selver</option><option value="153"> Rocca Al Mare Keskus</option><option value="154"> Sikupilli Prisma</option><option value="141"> Smuuli Maxima</option><option value="155"> Solaris Keskus</option><option value="137"> Tondi Selver</option><option value="122"> Torupilli Selver</option>
-          </select>
-        </div>
-      </div>
-      <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
-      <div class="form-group ">
-        <label for="name" class="col-sm-4 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
-        <div class="col-sm-8">
-          <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
-      </div>
-    </form>
-    <img class="img-responsive ee-top-20" src="http://placehold.it/800x400&text=Kaart" alt="">
-  </div>
-  
-  <div class="col-sm-4">
-    <h4 class="ee-top-20">Saad paki kätte:</h4>
-    <img src="assets/img/branding/omniva-lg.svg" alt="" class="pull-right" id="omnivaLogo">
-    <img src="assets/img/branding/itella-lg.svg" alt="" class="pull-right" id="itellaLogo">
-    <h5 class="ee-top-10">Tallinna Kristiine Keskus</h5>
-    <p>
-      <strong>Aadress:</strong><br>
-      Harjumaa, Endla tänav 45, Kristiine linnaosa
-    </p>
-    <p>
-      <strong>Lahtiolekuajad:</strong><br>
-      E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud
-    </p>
-    <p>
-      <strong>Lisainformatsioon:</strong><br>
-      Prisma Peremarketi sissepääsu vastas, eskalaatori taga.
-    </p>
-    <div class="panel panel-primary" id="deliveryInfoShop">
-      <div class="panel-heading">
-        <span class="icon icon-info"></span>  Pane tähele!
-      </div>
-      <div class="panel-body">
-        <small>
-          Pakile saad järele minna alates <strong> 27.11 kell 11:00</strong>
-          <br>
-          <i>Teavitus paki jõudmisest automaati saadetakse SMSiga</i>
-        </small>
-      </div>
-    </div>
-  </div>
-
-  
-</div>
-    <div class="row tsr-forms" id="deliveryWhereShop">
-  <div class="col-sm-8">
-    <h4>Vali pood:</h4>
-    <div class="select-container">
-      <select id="chooseShop">
-        <optgroup label="Tallinn/Harjumaa">
-  <option value="165">Tallinna Lasnamäe Maksimarket</option>
-  <option value="133">Laagri Maksimarket</option>
-  <option value="161">Maardu Maxima</option>
-  <option value="104">Rotermanni Kvartali Aatrium</option>
-  <option value="156">Saku Selver</option>
-  <option value="121">Tallinna Haabersti Rimi</option>
-  <option value="126">Tallinna Järve Keskus</option>
-  <option value="160">Tallinna Kaubamaja</option>
-  <option value="146">Tallinna Kristiine Keskus</option>
-  <option value="120">Tallinna Lasnamäe Centrum (RIMI)</option>
-  <option value="103">Tallinna Lasnamäe Prisma</option>
-  <option value="164">Tallinna Magistrali Keskus</option>
-  <option value="102">Tallinna Merimetsa Selver</option>
-  <option value="138">Tallinna Mustika Keskus</option>
-  <option value="124">Tallinna Nõmme Keskus</option>
-  <option value="125">Tallinna Pirita Selver</option>
-  <option value="153">Tallinna Rocca Al Mare Keskus</option>
-  <option value="154">Tallinna Sikupilli Prisma</option>
-  <option value="141">Tallinna Smuuli Maxima</option>
-  <option value="155">Tallinna Solaris Keskus</option>
-  <option value="137">Tallinna Tondi Selver</option>
-  <option value="122">Tallinna Torupilli Selver</option>
-  <option value="139">Viimsi Keskus</option>
-  <option value="134">Keila Selver</option>
-</optgroup>
-<optgroup label="Saaremaa">
-  <option value="116">Kuressaare Saare Selver</option>
-  <option value="157">Kuressaare Kihelkonna Säästumarket</option>
-</optgroup>
-<optgroup label="Jõgevamaa">
-  <option value="111">Jõgeva Kaubahall</option>
-  <option value="123">Põltsamaa Selver</option>
-</optgroup>
-<optgroup label="Hiiumaa">
-  <option value="115">Kärdla Selver</option>
-</optgroup>
-<optgroup label="Ida-Virumaa">
-  <option value="159">Narva Kreenholmi Säästumarket</option>
-  <option value="140">Sillamäe SK-Market (Konsum)</option>
-  <option value="108">Jõhvi Tsentraal</option>
-  <option value="131">Kohtla-Järve Vironia Keskus </option>
-  <option value="109">Narva Astri Keskus</option>
-</optgroup>
-<optgroup label="Järvamaa">
-  <option value="143">Türi Säästumarket</option>
-  <option value="112">Paide Selver</option>
-</optgroup>
-<optgroup label="Pärnumaa">
-  <option value="127">Pärnu Ülejõe Selver</option>
-  <option value="142">Vändra Konsum</option>
-  <option value="130">Pärnu Keskus</option>
-  <option value="158">Pärnu Maxima XXX</option>
-  <option value="117">Pärnu Kaubamajakas</option>
-</optgroup>
-<optgroup label="Põlvamaa">
-  <option value="128">Põlva Edu Keskus</option>
-</optgroup>
-<optgroup label="Lääne-Virumaa">
-  <option value="110">Rakvere Kroonikeskus</option>
-  <option value="152">Rakvere Põhjakeskus</option>
-  <option value="147">Tapa Bussijaam</option>
-</optgroup>
-<optgroup label="Raplamaa">
-  <option value="113">Rapla Maxima</option>
-  <option value="145">Märjamaa Säästumarket</option>
-</optgroup>
-<optgroup label="Tartumaa">
-  <option value="107">Tartu Lõunakeskus</option>
-  <option value="135">Tartu Tasku moe- ja vabaajakeskus</option>
-  <option value="163">Tartu Raadi Maxima</option>
-  <option value="150">Tartu Eeden</option>
-  <option value="106">Tartu Anne Selver</option>
-  <option value="144">Elva Säästumarket</option>
-  <option value="151">Tartu Zeppelin</option>
-  <option value="136">Tartu Rebase Rimi</option>
-</optgroup>
-<optgroup label="Läänemaa">
-  <option value="114">Rannarootsi Keskus</option>
-</optgroup>
-<optgroup label="Valgamaa">
-  <option value="149">Otepää Maxima</option>
-  <option value="148">Tõrva Maxima</option>
-  <option value="118">Valga Selver</option>
-</optgroup>
-<optgroup label="Viljandimaa">
-  <option value="162">Viljandi Uku keskus</option>
-  <option value="101">Viljandi Männimäe Selver</option>
-</optgroup>
-<optgroup label="Võrumaa">
-  <option value="119">Võru Kagukeskus</option>
-</optgroup>
-      </select>
-    </div>
-    <h4 class="ee-top-20">Kauba võtab vastu:</h4>
-    <form id="about" method="post" class="form-horizontal" role="form">
-      <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Nimi</label>
-        <div class="col-sm-10">
-          <a href="#" id="nimi-shop" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
-      </div>
-      <div class="form-group ">
-        <label for="phone" class="col-sm-2 control-label">Telefon</label>
-        <div class="col-sm-10">
-          <a href="#" id="telefon-shop" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
-      </div>
-    </form>
-      <img class="img-responsive" src="http://placehold.it/800x400&text=Kaart" alt="">
-  </div>
-  <div class="col-sm-4">
-    <h5>EMT ja Elion ühisesindus, Kärdla</h5>
-    <p>
-      <strong>Aadress:</strong><br>
-      Harjumaa, Türi 5 - Tallinna linn
-    </p>
-    <p>
-      <strong>Lahtiolekuajad:</strong><br>
-      E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud 
-    </p>
-    <div class="panel panel-primary" id="deliveryInfoShop">
-      <div class="panel-heading">
-        <span class="icon icon-info"></span>  Pane tähele!
-      </div>
-      <div class="panel-body">
-        <small>
-          <dl>
-            <dd>- Valides kauba Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque minima facere earum quae ipsa et, quia amet repellat quis, quas praesentium corporis! Minus dignissimos reprehenderit voluptates atque pariatur natus, obcaecati!</dd>
-            <dd>- Tellimuse täitmise aja teatab teenindaja 1 tööpäeva jooksul alates makse laekumisest</dd>
-          </dl>
-
-        </small>
-      </div>
-    </div>
-  </div>
-
-</div>
-  </div>
-</div>  
-
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-sm-12 col-md-10 col-md-offset-1">
-              <hr>
               <h4>Lisainformatsioon</h4>
               <div class="col-md-8 tsr-form">
                 <form action="" class="form-horizontal">
@@ -1322,7 +1016,7 @@
               <div class="clearfix"></div>
               <hr>
             </div>
-          </div>  
+          </div>  --> 
 
           <div class="row">
             <div class="col-sm-12 col-md-10 col-md-offset-1">
