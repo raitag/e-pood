@@ -303,7 +303,6 @@ display: block;
   margin-bottom: -1px;
 }
 
-
 .ee-top-10 {
   margin-top: 10px;
 }
@@ -323,6 +322,40 @@ display: block;
   margin-top: 20px;
   @include media-min($screen-sm) {
     margin-top: 0;
+  }
+}
+
+.ee-top-0-xs {
+  @include media-max($screen-sm) {
+    margin-top: 0 !important;
+  }
+}
+
+.ee-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.ee-bottom-10-xs {
+  margin-bottom: 10px;
+  @include media-min($screen-sm) {
+    margin-bottom: 0px;
+  }
+}
+
+.ee-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.ee-bottom-20-xs {
+  margin-bottom: 20px;
+  @include media-min($screen-sm) {
+    margin-bottom: 0px;
+  }
+}
+
+.ee-bottom-0-xs {
+  @include media-max($screen-sm) {
+    margin-bottom: 0 !important;
   }
 }
 

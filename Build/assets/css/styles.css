@@ -21293,6 +21293,10 @@ header .megamenu .search-item-image,
   .ee-shopping .bankbuttons .btn {
     display: inline-block;
     margin: 0 10px 10px 0; }
+    @media (max-width: 768px) {
+      .ee-shopping .bankbuttons .btn {
+        display: block;
+        width: 100%; } }
 .ee-shopping .selectboxit-container .selectboxit-options {
   max-height: 240px; }
 .ee-shopping .tsr-radioStyled {
@@ -21713,6 +21717,32 @@ h4 {
   @media (min-width: 768px) {
     .ee-top-20-xs {
       margin-top: 0; } }
+
+@media (max-width: 768px) {
+  .ee-top-0-xs {
+    margin-top: 0 !important; } }
+
+.ee-bottom-10 {
+  margin-bottom: 10px; }
+
+.ee-bottom-10-xs {
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    .ee-bottom-10-xs {
+      margin-bottom: 0px; } }
+
+.ee-bottom-20 {
+  margin-bottom: 20px; }
+
+.ee-bottom-20-xs {
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .ee-bottom-20-xs {
+      margin-bottom: 0px; } }
+
+@media (max-width: 768px) {
+  .ee-bottom-0-xs {
+    margin-bottom: 0 !important; } }
 
 .input-group input[type="text"],
 .input-group input[type="password"],
