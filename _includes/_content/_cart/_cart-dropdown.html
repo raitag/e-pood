@@ -1,13 +1,102 @@
-<div class="container">
+<div class="container step js-overview-cart">
   <div class="row megamenu">
-    <div class="col-sm-9">
+    <div class="col-md-9 col-sm-12">
       <h3><span>Sul on ostukorvis 3 asja</span></h3>
       <!-- @include _overview-dropdown.html -->
     </div>
-      <div class="col-sm-3">
-        <button class="btn btn-primary btn-block">Saada ostukorv</button><br>
-        <button class="btn btn-primary btn-block">Salvesta ostukorv</button><br>
-        <button class="btn btn-default ee-btn-buy btn-block">Jätka ostmist</button>
+    <div class="col-sm-12 col-md-3 ee-top-20 ee-bottom-20" style="margin-top:20px;margin-bottom:20px;">
+      <div class="row hidden-xs">
+        <div class="col-md-12 col-sm-5 pull-right">
+          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+        </div>
+      </div>
+      <div class="row hidden-xs">
+        <div class="col-md-12 col-sm-5 pull-right ee-top-20 ee-top-0-xs">
+          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
+        </div>
+      </div>
+      <div class="row visible-xs">
+        <div class="col-xs-6">
+          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+        </div>
+        <div class="col-xs-6">
+          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-5 col-xs-12 pull-right ee-top-20 ee-top-0-xs">
+          <button class="btn btn-default btn-block ee-btn-buy" onClick="location.href='cart-overview.html'">Jätka ostmist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container step js-send-cart" style="display:none;">
+  <div class="row megamenu">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Ostukorvi e-postiga saatmine</h3>
+      <form action="" class="form-horizontal">
+        <div class="row tsr-forms">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
+              <div class="col-sm-9">
+                <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver-name">Saaja nimi:</label>
+              <div class="col-sm-9">
+                <input type="text" id="receiver-name" placeholder="E-posti aadress" value="Teele Puusemp">
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver">Sõnumi sisu:</label>
+              <div class="col-sm-9">
+                <textarea name="" id="" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+      <div class="row ee-bottom-20">
+        <hr class="hidden-xs">
+        <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container step js-save-cart" style="display:none;">
+  <div class="row megamenu">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Ostukorvi salvestamine</h3>
+      <form action="" class="form-horizontal tsr-forms">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
+          <div class="col-sm-9 col-md-6">
+            <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+          </div>
+        </div>
+      </form>
+      <div class="row ee-bottom-20">
+        <hr class="hidden-xs">
+        <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

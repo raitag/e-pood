@@ -3,43 +3,69 @@
     <div id="content-placeholder-cart-dropdown"></div>
 
     <div class="col-md-10 col-md-offset-1 cart-item">
-      <hr>
       <div class="row">
-        <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
-          <span class="icon icon-transport" style="font-size: 40px; line-height: 1;"></span>
+        <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+          <span class="icon icon-transport"></span>
         </div>
 
-        <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+        <div class="col-xs-10 col-sm-6 ee-middle-table">
           <h5>Kättetoimetamine</h5>
         </div>
         <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
           <div class="row">
-            <div class="col-xs-6 col-sm-7 ee-middle-table">
+            <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 control-label ee-top-10" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-5 ee-middle-table">
+            <div class="col-xs-7 col-sm-7 ee-middle-table">
               <p class="tsr-product-price ee-product-price-md">Hind: 3.50 €</p>
             </div>
           </div>
         </div>
       </div>
-      <hr>
+      <hr class="visible-xs">
+    </div>
+    
+    <div class="col-md-10 col-md-offset-1 cart-item">
+      <div class="row">
+        <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+          <img class="img-responsive" src="assets/img/cart/Lenovo-Yoga.jpg">
+        </div>
+
+        <div class="col-xs-10 col-sm-6 ee-middle-table">
+          <h5>fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+          <div class="row">
+            <div class="col-xs-5 col-sm-5 ee-middle-table">
+              <div class="form-group">
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+              </div>
+            </div>
+            <div class="col-xs-7 col-sm-7 ee-middle-table">
+              <p class="ee-top-10 ee-top-0-xs">Tavahind: 1399 €</p>
+              <p class="tsr-product-price ee-product-price-md">Soodushind: 929 €</p>
+              <p>Sinu võit: 470 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="visible-xs">
     </div>
 
     <script id="cart-dropdown-template" type="text/x-handlebars-template">
     {{#products}} 
       <div class="col-md-10 col-md-offset-1 cart-item">
         <div class="row">
-          <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
+          <div class="col-xs-3 col-sm-1 cart-item-image ee-middle-table ee-top-10">
             <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
           </div>
 
-          <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+          <div class="col-xs-9 col-sm-6 ee-middle-table">
             <h5>{{name}}</h5>
             {{#if special_price}}
-            <div class="panel"> 
+            <div> 
             <strong>See DVD mängija on Sulle, Raili :)</strong>
             </div>
             
@@ -48,14 +74,14 @@
           </div>
           <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
             <div class="row">
-              <div class="col-xs-6 col-sm-7 ee-middle-table">
-                <div class="form-group  ee-top-20">
-                  <label class="col-sm-10 control-label" style="font-weight: normal;">Kogus: <strong>1</strong> </label>
+              <div class="col-xs-6 col-sm-5 ee-middle-table">
+                <div class="form-group">
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
-              <div class="col-xs-6 col-sm-5 ee-middle-table">
+              <div class="col-xs-6 col-sm-7 ee-middle-table">
               {{#if special_price}}
-              <p>Tavahind: 42 €</p>
+                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
                 <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
                 
                 <p>Sinu võit: 2 €</p>

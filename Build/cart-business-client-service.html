@@ -72,10 +72,10 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/css/bootstrap-editable.css">
-<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.css">
-<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.date.css">
-<link rel="stylesheet" href="http://amsul.ca/pickadate.js/lib/themes/classic.time.css">
+    <!-- <link rel="stylesheet" href="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/css/bootstrap-editable.css"> -->
+<!-- <link rel="stylesheet" href="assets/css/_ee-elion/vendor/pickadate-classic.css">
+<link rel="stylesheet" href="assets/css/_ee-elion/vendor/pickadate-classic.date.css">
+<link rel="stylesheet" href="assets/css/_ee-elion/vendor/pickadate-classic.time.css"> -->
 
     
 <!--<![endif]-->
@@ -231,52 +231,78 @@
       <li class="dropdown menu-large">
         <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
         <div class="dropdown-menu cart-dropdown">
-          <div class="container">
+          <div class="container step js-overview-cart">
   <div class="row megamenu">
-    <div class="col-sm-9">
+    <div class="col-md-9 col-sm-12">
       <h3><span>Sul on ostukorvis 3 asja</span></h3>
       <div class="row cart">
   <div class="cart-items">
     <div id="content-placeholder-cart-dropdown"></div>
 
     <div class="col-md-10 col-md-offset-1 cart-item">
-      <hr>
       <div class="row">
-        <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
-          <span class="icon icon-transport" style="font-size: 40px; line-height: 1;"></span>
+        <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+          <span class="icon icon-transport"></span>
         </div>
 
-        <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+        <div class="col-xs-10 col-sm-6 ee-middle-table">
           <h5>Kättetoimetamine</h5>
         </div>
         <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
           <div class="row">
-            <div class="col-xs-6 col-sm-7 ee-middle-table">
+            <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 control-label ee-top-10" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-5 ee-middle-table">
+            <div class="col-xs-7 col-sm-7 ee-middle-table">
               <p class="tsr-product-price ee-product-price-md">Hind: 3.50 €</p>
             </div>
           </div>
         </div>
       </div>
-      <hr>
+      <hr class="visible-xs">
+    </div>
+    
+    <div class="col-md-10 col-md-offset-1 cart-item">
+      <div class="row">
+        <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+          <img class="img-responsive" src="assets/img/cart/Lenovo-Yoga.jpg">
+        </div>
+
+        <div class="col-xs-10 col-sm-6 ee-middle-table">
+          <h5>fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+          <div class="row">
+            <div class="col-xs-5 col-sm-5 ee-middle-table">
+              <div class="form-group">
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+              </div>
+            </div>
+            <div class="col-xs-7 col-sm-7 ee-middle-table">
+              <p class="ee-top-10 ee-top-0-xs">Tavahind: 1399 €</p>
+              <p class="tsr-product-price ee-product-price-md">Soodushind: 929 €</p>
+              <p>Sinu võit: 470 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="visible-xs">
     </div>
 
     <script id="cart-dropdown-template" type="text/x-handlebars-template">
     {{#products}} 
       <div class="col-md-10 col-md-offset-1 cart-item">
         <div class="row">
-          <div class="col-xs-3 col-sm-2 cart-item-image ee-middle-table">
+          <div class="col-xs-3 col-sm-1 cart-item-image ee-middle-table ee-top-10">
             <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
           </div>
 
-          <div class="col-xs-9 col-sm-5 ee-middle-table ee-top-20">
+          <div class="col-xs-9 col-sm-6 ee-middle-table">
             <h5>{{name}}</h5>
             {{#if special_price}}
-            <div class="panel"> 
+            <div> 
             <strong>See DVD mängija on Sulle, Raili :)</strong>
             </div>
             
@@ -285,14 +311,14 @@
           </div>
           <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
             <div class="row">
-              <div class="col-xs-6 col-sm-7 ee-middle-table">
-                <div class="form-group  ee-top-20">
-                  <label class="col-sm-10 control-label" style="font-weight: normal;">Kogus: <strong>1</strong> </label>
+              <div class="col-xs-6 col-sm-5 ee-middle-table">
+                <div class="form-group">
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
-              <div class="col-xs-6 col-sm-5 ee-middle-table">
+              <div class="col-xs-6 col-sm-7 ee-middle-table">
               {{#if special_price}}
-              <p>Tavahind: 42 €</p>
+                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
                 <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
                 
                 <p>Sinu võit: 2 €</p>
@@ -312,10 +338,99 @@
 
 
     </div>
-      <div class="col-sm-3">
-        <button class="btn btn-primary btn-block">Saada ostukorv</button><br>
-        <button class="btn btn-primary btn-block">Salvesta ostukorv</button><br>
-        <button class="btn btn-default ee-btn-buy btn-block">Jätka ostmist</button>
+    <div class="col-sm-12 col-md-3 ee-top-20 ee-bottom-20" style="margin-top:20px;margin-bottom:20px;">
+      <div class="row hidden-xs">
+        <div class="col-md-12 col-sm-5 pull-right">
+          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+        </div>
+      </div>
+      <div class="row hidden-xs">
+        <div class="col-md-12 col-sm-5 pull-right ee-top-20 ee-top-0-xs">
+          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
+        </div>
+      </div>
+      <div class="row visible-xs">
+        <div class="col-xs-6">
+          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+        </div>
+        <div class="col-xs-6">
+          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-5 col-xs-12 pull-right ee-top-20 ee-top-0-xs">
+          <button class="btn btn-default btn-block ee-btn-buy" onClick="location.href='cart-overview.html'">Jätka ostmist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container step js-send-cart" style="display:none;">
+  <div class="row megamenu">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Ostukorvi e-postiga saatmine</h3>
+      <form action="" class="form-horizontal">
+        <div class="row tsr-forms">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
+              <div class="col-sm-9">
+                <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver-name">Saaja nimi:</label>
+              <div class="col-sm-9">
+                <input type="text" id="receiver-name" placeholder="E-posti aadress" value="Teele Puusemp">
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver">Sõnumi sisu:</label>
+              <div class="col-sm-9">
+                <textarea name="" id="" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+      <div class="row ee-bottom-20">
+        <hr class="hidden-xs">
+        <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container step js-save-cart" style="display:none;">
+  <div class="row megamenu">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Ostukorvi salvestamine</h3>
+      <form action="" class="form-horizontal tsr-forms">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
+          <div class="col-sm-9 col-md-6">
+            <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+          </div>
+        </div>
+      </form>
+      <div class="row ee-bottom-20">
+        <hr class="hidden-xs">
+        <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -635,7 +750,209 @@
 
               <div class="row megamenu">
                 <div class="col-md-12">
-                  basket is empty
+                  <div class="container step js-overview-cart">
+  <div class="row megamenu">
+    <div class="col-md-9 col-sm-12">
+      <h3><span>Sul on ostukorvis 3 asja</span></h3>
+      <div class="row cart">
+  <div class="cart-items">
+    <div id="content-placeholder-cart-dropdown"></div>
+
+    <div class="col-md-10 col-md-offset-1 cart-item">
+      <div class="row">
+        <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+          <span class="icon icon-transport"></span>
+        </div>
+
+        <div class="col-xs-10 col-sm-6 ee-middle-table">
+          <h5>Kättetoimetamine</h5>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+          <div class="row">
+            <div class="col-xs-5 col-sm-5 ee-middle-table">
+              <div class="form-group">
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+              </div>
+            </div>
+            <div class="col-xs-7 col-sm-7 ee-middle-table">
+              <p class="tsr-product-price ee-product-price-md">Hind: 3.50 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="visible-xs">
+    </div>
+    
+    <div class="col-md-10 col-md-offset-1 cart-item">
+      <div class="row">
+        <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+          <img class="img-responsive" src="assets/img/cart/Lenovo-Yoga.jpg">
+        </div>
+
+        <div class="col-xs-10 col-sm-6 ee-middle-table">
+          <h5>fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+          <div class="row">
+            <div class="col-xs-5 col-sm-5 ee-middle-table">
+              <div class="form-group">
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+              </div>
+            </div>
+            <div class="col-xs-7 col-sm-7 ee-middle-table">
+              <p class="ee-top-10 ee-top-0-xs">Tavahind: 1399 €</p>
+              <p class="tsr-product-price ee-product-price-md">Soodushind: 929 €</p>
+              <p>Sinu võit: 470 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="visible-xs">
+    </div>
+
+    <script id="cart-dropdown-template" type="text/x-handlebars-template">
+    {{#products}} 
+      <div class="col-md-10 col-md-offset-1 cart-item">
+        <div class="row">
+          <div class="col-xs-3 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+            <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
+          </div>
+
+          <div class="col-xs-9 col-sm-6 ee-middle-table">
+            <h5>{{name}}</h5>
+            {{#if special_price}}
+            <div> 
+            <strong>See DVD mängija on Sulle, Raili :)</strong>
+            </div>
+            
+            
+            {{/if}}
+          </div>
+          <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+            <div class="row">
+              <div class="col-xs-6 col-sm-5 ee-middle-table">
+                <div class="form-group">
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-7 ee-middle-table">
+              {{#if special_price}}
+                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                
+                <p>Sinu võit: 2 €</p>
+                {{else}}
+                <p class="tsr-product-price ee-product-price-md">Hind: {{normal_price}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    {{/products}} 
+    </script>
+      
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-sm-12 col-md-3 ee-top-20 ee-bottom-20" style="margin-top:20px;margin-bottom:20px;">
+      <div class="row hidden-xs">
+        <div class="col-md-12 col-sm-5 pull-right">
+          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+        </div>
+      </div>
+      <div class="row hidden-xs">
+        <div class="col-md-12 col-sm-5 pull-right ee-top-20 ee-top-0-xs">
+          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
+        </div>
+      </div>
+      <div class="row visible-xs">
+        <div class="col-xs-6">
+          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+        </div>
+        <div class="col-xs-6">
+          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-5 col-xs-12 pull-right ee-top-20 ee-top-0-xs">
+          <button class="btn btn-default btn-block ee-btn-buy" onClick="location.href='cart-overview.html'">Jätka ostmist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container step js-send-cart" style="display:none;">
+  <div class="row megamenu">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Ostukorvi e-postiga saatmine</h3>
+      <form action="" class="form-horizontal">
+        <div class="row tsr-forms">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
+              <div class="col-sm-9">
+                <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver-name">Saaja nimi:</label>
+              <div class="col-sm-9">
+                <input type="text" id="receiver-name" placeholder="E-posti aadress" value="Teele Puusemp">
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="receiver">Sõnumi sisu:</label>
+              <div class="col-sm-9">
+                <textarea name="" id="" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+      <div class="row ee-bottom-20">
+        <hr class="hidden-xs">
+        <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container step js-save-cart" style="display:none;">
+  <div class="row megamenu">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Ostukorvi salvestamine</h3>
+      <form action="" class="form-horizontal tsr-forms">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
+          <div class="col-sm-9 col-md-6">
+            <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+          </div>
+        </div>
+      </form>
+      <div class="row ee-bottom-20">
+        <hr class="hidden-xs">
+        <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
                 </div>
               </div>
 
@@ -760,31 +1077,31 @@
         <h4>Otsi klienti:</h4>
         <form id="about" method="post" class="form-horizontal tsr-forms" role="form">
           <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Eesnimi</label>
-            <div class="col-sm-10">
+            <label for="name" class="col-sm-3 control-label">Eesnimi</label>
+            <div class="col-sm-9">
               <input class="form-control" id="name" name="name" type="text"  />
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Pere- või firmanimi</label>
-            <div class="col-sm-10">
+            <label for="email" class="col-sm-3 control-label">Pere- või firmanimi</label>
+            <div class="col-sm-9">
               <input class="form-control" id="email" name="email"  type="text"  />
             </div>
           </div>
           <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Kliendinumber</label>
-            <div class="col-sm-10">
+            <label for="phone" class="col-sm-3 control-label">Kliendinumber</label>
+            <div class="col-sm-9">
               <input class="form-control" id="phone" name="phone"  type="text"  />
             </div>
           </div>
           <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Isiku- või registrikood</label>
-            <div class="col-sm-10">
+            <label for="address" class="col-sm-3 control-label">Isiku- või registrikood</label>
+            <div class="col-sm-9">
               <input class="form-control" id="adress" name="adress"  type="text"  />
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-5 col-sm-offset-2">
+            <div class="col-sm-4 col-sm-offset-3 col-md-5 col-md-offset-2">
               <button class="btn btn-primary btn-block" onClick="location.href= ">Otsi klienti</button>
             </div>
             <div class="col-sm-5">
@@ -854,20 +1171,20 @@
       <div class="col-md-8 tsr-forms">
         <form id="about" method="post" class="form-horizontal" role="form">
           <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Firma nimi</label>
-            <div class="col-sm-10">
+            <label for="name" class="col-sm-3 control-label">Firma nimi</label>
+            <div class="col-sm-9">
               <label class="control-label-left">Net Group OÜ</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Registrikood</label>
-            <div class="col-sm-10">
+            <label for="name" class="col-sm-3 control-label">Registrikood</label>
+            <div class="col-sm-9">
               <label class="control-label-left">69696969</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="" class="col-sm-2 control-label">Viitenumber</label>
-            <div class="col-sm-10">
+            <label for="" class="col-sm-3 control-label">Viitenumber</label>
+            <div class="col-sm-9">
               <div class="select-container">
                 <select id="companyAddress">
                   <option selected>Kopli tn paparapparaa, viitenumber 277433276 </option>
@@ -877,8 +1194,8 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="" class="col-sm-2 control-label">Kontaktisik</label>
-            <div class="col-sm-10">
+            <label for="" class="col-sm-3 control-label">Kontaktisik</label>
+            <div class="col-sm-9">
               <div class="select-container">
                 <select id="companyAddress">
                   <option selected>Priit Kongo</option>
@@ -888,26 +1205,26 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Volitus</label>
-            <div class="col-sm-10">
+            <label for="name" class="col-sm-3 control-label">Volitus</label>
+            <div class="col-sm-9">
               <label class="control-label-left">B-kaart</label>
             </div>
           </div>
           <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Kontakttelefon</label>
-            <div class="col-sm-10">
+            <label for="phone" class="col-sm-3 control-label">Kontakttelefon</label>
+            <div class="col-sm-9">
               <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">E-post</label>
-            <div class="col-sm-10">
+            <label for="email" class="col-sm-3 control-label">E-post</label>
+            <div class="col-sm-9">
               <a href="#" id="aadress" data-type="typeaheadjs" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">info@netgroup.ee &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
             </div>
           </div>
           <div class="form-group ">
-            <label for="phone" class="col-sm-2 control-label">Tellimuse viide</label>
-            <div class="col-sm-10">
+            <label for="phone" class="col-sm-3 control-label">Tellimuse viide</label>
+            <div class="col-sm-9">
               <input class="form-control" id="phone" name="phone"  type="text" placeholder="Max 18 tähte" />
             </div>
           </div>
@@ -921,43 +1238,43 @@
       <div class="col-md-4">
         <div class="row form-horizontal tsr-forms">
           <div class="form-group">
-            <label for="name" class="ee-labeltext col-sm-6 control-label">Vaba kaubalimiit</label>
+            <label for="name" class="ee-labeltext col-sm-3 col-md-6 control-label">Vaba kaubalimiit</label>
             <div class="col-sm-6">
               <label class="control-label-left">10 000,00 €</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <label for="name" class="col-sm-3 col-md-6 control-label">Registrikood</label>
             <div class="col-sm-6">
               <label class="control-label-left">69696969</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <label for="name" class="col-sm-3 col-md-6 control-label">Registrikood</label>
             <div class="col-sm-6">
               <label class="control-label-left">69696969</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <label for="name" class="col-sm-3 col-md-6 control-label">Registrikood</label>
             <div class="col-sm-6">
               <label class="control-label-left">69696969</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Registrikood</label>
+            <label for="name" class="col-sm-3 col-md-6 control-label">Registrikood</label>
             <div class="col-sm-6">
               <label class="control-label-left">69696969</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Liisingutingimused</label>
+            <label for="name" class="col-sm-3 col-md-6 control-label">Liisingutingimused</label>
             <div class="col-sm-6">
               <label class="control-label-left">Liisingutingimused pole nõutud</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="name" class="col-sm-6 control-label">Kliendi jooksev võlg</label>
+            <label for="name" class="col-sm-3 col-md-6 control-label">Kliendi jooksev võlg</label>
             <div class="col-sm-6">
               <label class="control-label-left">69696969</label>
             </div>
@@ -1101,16 +1418,16 @@
 
 <script src="assets/js/visa/progress.js"></script>  
 <script src="http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js"></script> 
-<script src="http://vitalets.github.io/x-editable/assets/x-editable/bootstrap-editable/js/bootstrap-editable.js"></script>  
+<script src="assets/js/bootstrap-editable.js"></script>  
  
 <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/inputs-ext/typeaheadjs/typeaheadjs.js"></script>  
 <script src="http://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>  
 <!-- Pickadate -->
-<script src="http://amsul.ca/pickadate.js/lib/picker.js"></script>  
-<script src="http://amsul.ca/pickadate.js/lib/picker.date.js"></script>
-<script src="http://amsul.ca/pickadate.js/lib/translations/et_EE.js"></script> 
-<script src="http://amsul.ca/pickadate.js/lib/picker.time.js"></script> 
-<script src="http://amsul.ca/pickadate.js/lib/legacy.js"></script>
+<script src="assets/js/vendor/pickadate-picker.js"></script>
+<script src="assets/js/vendor/pickadate-picker.date.js"></script>
+<script src="assets/js/vendor/pickadate-et_EE.js"></script> 
+<script src="assets/js/vendor/pickadate-picker.time.js"></script> 
+<script src="assets/js/vendor/pickadate-legacy.js"></script>
 
 <!-- Summernote --> 
 <script src="assets/js/vendor/summernote.min.js"></script> 

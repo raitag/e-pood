@@ -168,12 +168,11 @@
             &:after {
               @include setIconFonts();
               position: relative;
-              top: 7px;
-              margin-right:0px;
+              top: 33%;
+              margin-right: 14px;
               font-size: $font-size-base;
               content: "\e668";
               float: right;
-              right: -5px;
             }
           }
         }

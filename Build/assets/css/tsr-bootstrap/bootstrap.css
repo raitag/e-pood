@@ -2728,12 +2728,11 @@ input[type="button"].btn-block {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             position: relative;
-            top: 7px;
-            margin-right: 0px;
+            top: 33%;
+            margin-right: 14px;
             font-size: 15px;
             content: "\e668";
-            float: right;
-            right: -5px; } }
+            float: right; } }
     .megamenu .list-group .dropdown-header.has-child {
       padding-left: 0;
       padding-right: 0;

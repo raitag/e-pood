@@ -7043,7 +7043,7 @@ function BindSlideToggle() {
 
 function cloneRightSideMainMenu(){
     $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
-    $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
+    $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone(true,true) );
     $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
     
     var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
@@ -7057,6 +7057,12 @@ function collapseInOneForDetail(){
       }
   });
 }
+
+$('.btn-js-action').click(function(e) {
+  e.preventDefault();
+  var step = $(this).data('view');
+  $('.'+step).show().siblings('div.step').hide();
+});
 
 
 // counting rules for IE 8-9 as the limit is 4095

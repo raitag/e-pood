@@ -71,6 +71,9 @@
 /* @include _bootstrap-editable.scss */
 /* @include _summernote.scss */
 /* @include _font-awesome.scss */
+/* @include _pickadate-classic.scss */
+/* @include _pickadate-classic.date.scss */
+/* @include _pickadate-classic.time.scss */
 
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO TSR
@@ -289,7 +292,7 @@ display: block;
 .navbar-default .navbar-brand {
   display: block;
   width: 180px;
-  height: 80px;
+  height: 70px;
   background: transparent url(elion-logo.png) left center no-repeat;
   background-image: -webkit-linear-gradient(transparent, transparent), url(elion-logo.svg);
   background-image: linear-gradient(transparent, transparent), url(elion-logo.svg);
@@ -326,7 +329,7 @@ display: block;
 }
 
 .ee-top-0-xs {
-  @include media-max($screen-sm) {
+  @include media-max($screen-xs-max) {
     margin-top: 0 !important;
   }
 }
@@ -354,8 +357,14 @@ display: block;
 }
 
 .ee-bottom-0-xs {
-  @include media-max($screen-sm) {
+  @include media-max($screen-xs-max) {
     margin-bottom: 0 !important;
+  }
+}
+
+.ee-text-left-sm {
+  @include media-max($screen-sm-max) {
+    text-align: left !important;
   }
 }
 
