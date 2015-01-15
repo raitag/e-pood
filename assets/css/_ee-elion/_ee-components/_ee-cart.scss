@@ -221,6 +221,13 @@
 
   .selectboxit-container .selectboxit-options {
     max-height: 240px;
+    min-width: 100% !important;
+    .selectboxit-option {
+      width: 100%;
+      .selectboxit-option-anchor {
+        width: 100%;
+      }
+    }
   }
 
   .tsr-radioStyled {
@@ -311,7 +318,7 @@
 
 // http://bioneos.com/blog/faux-full-width-sections-css
 .wrapping-layers {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: $lightgrey-c;
 }
 
@@ -350,6 +357,26 @@
 
 .editable-click, a.editable-click, a.editable-click:hover {
   border-bottom: 1px dashed $purple-c !important; 
+}
+
+.editable-click {
+ &:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\270f";
+  font-size: 1em;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  color: $purple-c;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  }
+  &:hover:after {
+    color: $purple-h;
+  }
 }
 
 .close.edit {
@@ -399,7 +426,6 @@
   }
 }
 .ee-module-header-only {
-  cursor: pointer;
   .tsr-product-content {
     width: auto;
     h6 {
@@ -407,6 +433,9 @@
       line-height: 1.256;
       height: 300px;
     }
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 .ee-module-text-only {

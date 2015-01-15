@@ -12,18 +12,22 @@
   margin-top: 5px;
   .close {
     font-size: 24px;
-    margin: 10px 10px 0 0;
+    // margin: 10px 10px 0 0;
+    position: absolute;
+    right: 15px;
+    top: 0;
   }
 
   .img-responsive { 
     margin: 0 auto;
-    max-width: 135px;
+    max-width: 130px;
+    height: 130px;
   }
 
   .tsr-direction-nav a  {
   top: 50%;
   position: fixed;
-    @include media-min($screen-md) {
+    @include media-min($screen-sm) {
       display: none;
     }
   }
@@ -71,10 +75,11 @@
     &.sticky {
       border-bottom: 4px solid $purple-c;
       position: fixed;
-      top: 0; 
-      left: 0;
-      right: 0;
-      margin: 0 auto;
+      top: 0;
+      margin: 0 auto 0 -15px;
+      @include media-max($screen-xs-max) {
+        margin: 0 auto;
+      }
       img,
       .ee-buy, 
       .close {
@@ -86,6 +91,7 @@
   .compare-value {
       padding-top: 10px; 
       position: relative;
+      text-align: center;
       // @include media-min($screen-sm) {
       //   border-top: 1px solid $lightgrey-t;
       // }
@@ -100,7 +106,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     // white-space: nowrap;
-    @include media-min($screen-sm) {
+    @include media-min($screen-md) {
       background: none;
       text-align: left;
       border-bottom: none;
@@ -158,6 +164,15 @@
     } 
   }
 
+}
+
+.navbar-inverse .navbar-nav > li {
+  > a.showParameterDifferences,
+  > a.jsHideParameters {
+    &:focus {
+      background-color: transparent;
+    }
+  }
 }
 
 // end Compare

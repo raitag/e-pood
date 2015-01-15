@@ -161,7 +161,7 @@
           <li class="dropdown-header has-child"><h6><a href="#">Ostukorv</a></h6>
             <ul>
               <li><a href="cart-overview.html">1. Ülevaade</a></li>
-              <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
+              <li><a href="cart-aboutyou.html">2. Arve andmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
               <li><a href="cart-leasing-survey.html">4a. Liising-ankeet</a></li>
@@ -248,7 +248,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -273,7 +273,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -309,13 +309,13 @@
             <div class="row">
               <div class="col-xs-6 col-sm-5 ee-middle-table">
                 <div class="form-group">
-                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
               <div class="col-xs-6 col-sm-7 ee-middle-table">
               {{#if special_price}}
-                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
-                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                <p class="ee-top-10 ee-top-0-xs ee-bottom-0">Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md ee-top-0">Soodushind: <span>{{special_price}}</span></p>
                 
                 <p>Sinu võit: 2 €</p>
                 {{else}}
@@ -767,7 +767,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -792,7 +792,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -828,13 +828,13 @@
             <div class="row">
               <div class="col-xs-6 col-sm-5 ee-middle-table">
                 <div class="form-group">
-                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
               <div class="col-xs-6 col-sm-7 ee-middle-table">
               {{#if special_price}}
-                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
-                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                <p class="ee-top-10 ee-top-0-xs ee-bottom-0">Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md ee-top-0">Soodushind: <span>{{special_price}}</span></p>
                 
                 <p>Sinu võit: 2 €</p>
                 {{else}}
@@ -1053,7 +1053,10 @@
   <div class="container">
     <div class="ee-comparebar detail">
   <ul class="list-inline navbar-right">
-    <li><span><a href="compare-page.html">Tootevõrdlus</a></span></li>
+    <li><span>
+      <a class="hidden-xs ee-compare" href="compare-page.html">Tootevõrdlus:</a>
+      <a class="visible-xs" href="compare-page.html"><i class="icon icon-compare"></i></a>
+    </span></li>
     <li>
       <figure>
         <img src="http://lorempixel.com/30/30/">

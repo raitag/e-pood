@@ -28,7 +28,7 @@
     margin-right: 10px;
     width: 65%;
     min-width: 375px;
-    @include media-min($screen-sm) {
+    @include media-max($screen-xs-max) {
     margin-right: 0;
     width: auto;
     }
@@ -53,6 +53,11 @@
   span {
     display: inline-block;
     line-height: 0.5;
+    a {
+      &.visible-xs {
+        font-size: 1.46667em;
+      }
+    }
   }
   figure {
     -webkit-border-radius: 4px;

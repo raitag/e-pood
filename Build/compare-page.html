@@ -161,7 +161,7 @@
           <li class="dropdown-header has-child"><h6><a href="#">Ostukorv</a></h6>
             <ul>
               <li><a href="cart-overview.html">1. Ülevaade</a></li>
-              <li><a href="cart-aboutyou.html">2. Arveandmed</a></li>
+              <li><a href="cart-aboutyou.html">2. Arve andmed</a></li>
               <li><a href="cart-delivery.html">3. Kohaletoomine</a></li>
               <li><a href="cart-payment.html">4. Maksmine</a></li>
               <li><a href="cart-leasing-survey.html">4a. Liising-ankeet</a></li>
@@ -248,7 +248,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -273,7 +273,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -309,13 +309,13 @@
             <div class="row">
               <div class="col-xs-6 col-sm-5 ee-middle-table">
                 <div class="form-group">
-                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
               <div class="col-xs-6 col-sm-7 ee-middle-table">
               {{#if special_price}}
-                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
-                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                <p class="ee-top-10 ee-top-0-xs ee-bottom-0">Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md ee-top-0">Soodushind: <span>{{special_price}}</span></p>
                 
                 <p>Sinu võit: 2 €</p>
                 {{else}}
@@ -767,7 +767,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -792,7 +792,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs" >Kogus: <strong>1</strong> </label>
+                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -828,13 +828,13 @@
             <div class="row">
               <div class="col-xs-6 col-sm-5 ee-middle-table">
                 <div class="form-group">
-                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs">Kogus: <strong>1</strong> </label>
+                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
               <div class="col-xs-6 col-sm-7 ee-middle-table">
               {{#if special_price}}
-                <p class="ee-top-10 ee-top-0-xs">Tavahind: 42 €</p>
-                <p class="tsr-product-price ee-product-price-md">Soodushind: <span>{{special_price}}</span></p>
+                <p class="ee-top-10 ee-top-0-xs ee-bottom-0">Tavahind: 42 €</p>
+                <p class="tsr-product-price ee-product-price-md ee-top-0">Soodushind: <span>{{special_price}}</span></p>
                 
                 <p>Sinu võit: 2 €</p>
                 {{else}}
@@ -1050,10 +1050,10 @@
     <div class="navbar navbar-inverse" role="filtering">
       <ul class="nav navbar-nav navbar-left">
           <li >
-            <a href="#">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
+            <a href="#" class="showParameterDifferences">Näita erinevusi <span class="icon icon-arrow-down"></span></a>
           </li>
-          <li class="active">
-            <a href="#" id="toggleParam" class="showParameterDifferences" data-show="Peida detailid" data-hide="Näita detaile">Peida detailid <span class="icon icon-arrow-up"></span></a>  
+          <li>
+            <a href="#" id="toggleParam" class="jsHideParameters" data-show="Peida detailid" data-hide="Näita detaile">Peida detailid <span class="icon icon-arrow-up"></span></a>  
           </li>
           <li class="visible-xs">
             <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
@@ -1091,10 +1091,10 @@
       
         <div class="col-xs-12">
           <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
+            <div class="col-xs-12 col-sm-12 col-md-2">
             </div>
           
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
+            <div class="col-xs-12 col-sm-12 col-md-10 js-datawrapper">
               <div class="fixwidth">
               {{#each prod}}
                 <div class="col-xs-2 compare-value jsCompareProduct">
@@ -1126,28 +1126,28 @@
       <div class="col-xs-12">
         {{#each data}}
           <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
+            <div class="col-xs-12 col-sm-12 col-md-2 compare-title">
             {{#if description}}
               <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
               {{else}}
               {{index}}
               {{/if}}
             </div>
-            <div class="col-xs-12 col-sm-10 js-datawrapper">
+            <div class="col-xs-12 col-sm-12 col-md-10 js-datawrapper">
               <div class="fixwidth">
-                <div class=" col-xs-2 js-scrollable">
+                <div class=" col-xs-2 col-sm-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value}}}</p>
                 </div>
-                <div class=" col-xs-2 js-scrollable">
+                <div class=" col-xs-2 col-sm-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value1}}}</p>
                 </div>
-                <div class=" col-xs-2 js-scrollable">
+                <div class=" col-xs-2 col-sm-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value2}}}</p>
                 </div>
-                <div class=" col-xs-2 js-scrollable">
+                <div class=" col-xs-2 col-sm-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value3}}}</p>
                 </div>
-                <div class=" col-xs-2 js-scrollable">
+                <div class=" col-xs-2 col-sm-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value4}}}</p>
                 </div>
               </div>

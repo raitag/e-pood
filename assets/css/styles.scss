@@ -310,6 +310,10 @@ display: block;
   margin-top: 10px;
 }
 
+.ee-top-0 {
+  margin-top: 0 !important;
+}
+
 .ee-top-10-xs {
   margin-top: 10px;
   @include media-min($screen-sm) {
@@ -332,6 +336,10 @@ display: block;
   @include media-max($screen-xs-max) {
     margin-top: 0 !important;
   }
+}
+
+.ee-bottom-0 {
+  margin-bottom: 0 !important;
 }
 
 .ee-bottom-10 {
