@@ -97,6 +97,7 @@
 /* @include _ee-compare.scss */
 /* @include _ee-cart.scss */
 /* @include _ee-switch.scss */
+/* @include _ee-inputs.scss */
 
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
@@ -700,4 +701,15 @@ label.control-label-left {
 .ee-linkicons.list-inline > li {
   padding-left: 0;
   padding-right: 10px;
+}
+
+.ee-truncate {
+  display: block;
+  @include text-overflow();
+}
+
+.tsr-checkbox {
+  .control-label-left {
+    padding-left: 30px;
+  }
 }

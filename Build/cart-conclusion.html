@@ -117,8 +117,8 @@
         </div>
         <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
     </div>
-</div> -->
-<header>
+  </div> -->
+  <header>
 
 
 
@@ -245,10 +245,10 @@
     <div class="col-md-9 col-sm-12">
       <h3><span>Sul on ostukorvis 3 asja</span></h3>
       <div class="row cart">
-  <div class="cart-items">
+  <div class="cart-items col-sm-12">
     <div id="content-placeholder-cart-dropdown"></div>
 
-    <div class="col-md-10 col-md-offset-1 cart-item">
+    <div class="col-md-12 cart-item">
       <div class="row">
         <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
           <span class="icon icon-transport"></span>
@@ -261,7 +261,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
+                <label class="control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -273,26 +273,24 @@
       <hr class="visible-xs">
     </div>
     
-    <div class="col-md-10 col-md-offset-1 cart-item">
+    <div class="col-md-12 cart-item">
       <div class="row">
         <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
           <img class="img-responsive" src="assets/img/cart/Lenovo-Yoga.jpg">
         </div>
 
         <div class="col-xs-10 col-sm-6 ee-middle-table">
-          <h5>fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
+          <h5 class="ee-truncate">fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
         </div>
         <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
+                <label class="control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
-              <p class="ee-top-10 ee-top-0-xs">Tavahind: 1399 €</p>
-              <p class="tsr-product-price ee-product-price-md">Soodushind: 929 €</p>
-              <p>Sinu võit: 470 €</p>
+              <p class="tsr-product-price ee-product-price-md">Hind: 929 €</p>
             </div>
           </div>
         </div>
@@ -302,38 +300,24 @@
 
     <script id="cart-dropdown-template" type="text/x-handlebars-template">
     {{#products}} 
-      <div class="col-md-10 col-md-offset-1 cart-item">
+      <div class="col-md-12 cart-item">
         <div class="row">
           <div class="col-xs-3 col-sm-1 cart-item-image ee-middle-table ee-top-10">
             <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
           </div>
 
           <div class="col-xs-9 col-sm-6 ee-middle-table">
-            <h5>{{name}}</h5>
-            {{#if special_price}}
-            <div> 
-            <strong>See DVD mängija on Sulle, Raili :)</strong>
-            </div>
-            
-            
-            {{/if}}
+            <h5 class="ee-truncate">{{name}}</h5>
           </div>
           <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
             <div class="row">
               <div class="col-xs-6 col-sm-5 ee-middle-table">
                 <div class="form-group">
-                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
+                  <label class="control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
               <div class="col-xs-6 col-sm-7 ee-middle-table">
-              {{#if special_price}}
-                <p class="ee-top-10 ee-top-0-xs ee-bottom-0">Tavahind: 42 €</p>
-                <p class="tsr-product-price ee-product-price-md ee-top-0">Soodushind: <span>{{special_price}}</span></p>
-                
-                <p>Sinu võit: 2 €</p>
-                {{else}}
                 <p class="tsr-product-price ee-product-price-md">Hind: {{normal_price}}</p>
-                {{/if}}
               </div>
             </div>
           </div>
@@ -347,26 +331,26 @@
 
 
     </div>
-    <div class="col-sm-12 col-md-3 ee-top-20 ee-bottom-20" style="margin-top:20px;margin-bottom:20px;">
-      <div class="row hidden-xs">
+    <div class="col-sm-12 col-md-3 ee-bottom-20">
+      <div class="row hidden-xs ee-top-20">
         <div class="col-md-12 col-sm-5 pull-right">
-          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+          <button class="btn btn-primary btn-block js-btn-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
         </div>
       </div>
       <div class="row hidden-xs">
         <div class="col-md-12 col-sm-5 pull-right ee-top-20 ee-top-0-xs">
-          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
+          <button class="btn btn-primary btn-block js-btn-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
         </div>
       </div>
       <div class="row visible-xs">
         <div class="col-xs-6">
-          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+          <button class="btn btn-link btn-block js-btn-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
         </div>
         <div class="col-xs-6">
-          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
+          <button class="btn btn-link btn-block js-btn-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
         </div>
       </div>
-      <div class="row">
+      <div class="row ee-bottom-20">
         <div class="col-md-12 col-sm-5 col-xs-12 pull-right ee-top-20 ee-top-0-xs">
           <button class="btn btn-default btn-block ee-btn-buy" onClick="location.href='cart-overview.html'">Jätka ostmist</button>
         </div>
@@ -380,39 +364,22 @@
     <div class="col-md-10 col-md-offset-1">
       <h3>Ostukorvi e-postiga saatmine</h3>
       <form action="" class="form-horizontal">
-        <div class="row tsr-forms">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
-              <div class="col-sm-9">
-                <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-3 control-label" for="receiver-name">Saaja nimi:</label>
-              <div class="col-sm-9">
-                <input type="text" id="receiver-name" placeholder="E-posti aadress" value="Teele Puusemp">
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="col-sm-3 control-label" for="receiver">Sõnumi sisu:</label>
-              <div class="col-sm-9">
-                <textarea name="" id="" class="form-control"></textarea>
-              </div>
+        <div class="tsr-forms">
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
+            <div class="col-sm-9 col-md-6">
+              <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
             </div>
           </div>
         </div>
-        
       </form>
+      <hr class="hidden-xs">
       <div class="row ee-bottom-20">
-        <hr class="hidden-xs">
         <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+          <button class="btn btn-link btn-block js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
         </div>
         <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
+          <button class="btn btn-default btn-block ee-btn-buy pull-right js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
         </div>
       </div>
     </div>
@@ -423,21 +390,23 @@
   <div class="row megamenu">
     <div class="col-md-10 col-md-offset-1">
       <h3>Ostukorvi salvestamine</h3>
-      <form action="" class="form-horizontal tsr-forms">
-        <div class="form-group">
-          <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
-          <div class="col-sm-9 col-md-6">
-            <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+      <form action="" class="form-horizontal">
+        <div class="tsr-forms">
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
+            <div class="col-sm-9 col-md-6">
+              <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+            </div>
           </div>
         </div>
       </form>
+      <hr class="hidden-xs">
       <div class="row ee-bottom-20">
-        <hr class="hidden-xs">
         <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+          <button class="btn btn-link btn-block js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
         </div>
         <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
+          <button class="btn btn-default btn-block ee-btn-buy pull-right js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
         </div>
       </div>
     </div>
@@ -764,10 +733,10 @@
     <div class="col-md-9 col-sm-12">
       <h3><span>Sul on ostukorvis 3 asja</span></h3>
       <div class="row cart">
-  <div class="cart-items">
+  <div class="cart-items col-sm-12">
     <div id="content-placeholder-cart-dropdown"></div>
 
-    <div class="col-md-10 col-md-offset-1 cart-item">
+    <div class="col-md-12 cart-item">
       <div class="row">
         <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
           <span class="icon icon-transport"></span>
@@ -780,7 +749,7 @@
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
+                <label class="control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
@@ -792,26 +761,24 @@
       <hr class="visible-xs">
     </div>
     
-    <div class="col-md-10 col-md-offset-1 cart-item">
+    <div class="col-md-12 cart-item">
       <div class="row">
         <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
           <img class="img-responsive" src="assets/img/cart/Lenovo-Yoga.jpg">
         </div>
 
         <div class="col-xs-10 col-sm-6 ee-middle-table">
-          <h5>fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
+          <h5 class="ee-truncate">fotokaamera Pentax K-5 II + objektiiv 18-135 mm WR Kit</h5>
         </div>
         <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
           <div class="row">
             <div class="col-xs-5 col-sm-5 ee-middle-table">
               <div class="form-group">
-                <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
+                <label class="control-label ee-top-10 ee-top-0-xs text-center" >Kogus: <strong>1</strong> </label>
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 ee-middle-table">
-              <p class="ee-top-10 ee-top-0-xs">Tavahind: 1399 €</p>
-              <p class="tsr-product-price ee-product-price-md">Soodushind: 929 €</p>
-              <p>Sinu võit: 470 €</p>
+              <p class="tsr-product-price ee-product-price-md">Hind: 929 €</p>
             </div>
           </div>
         </div>
@@ -821,38 +788,24 @@
 
     <script id="cart-dropdown-template" type="text/x-handlebars-template">
     {{#products}} 
-      <div class="col-md-10 col-md-offset-1 cart-item">
+      <div class="col-md-12 cart-item">
         <div class="row">
           <div class="col-xs-3 col-sm-1 cart-item-image ee-middle-table ee-top-10">
             <img class="img-responsive" src="assets/img/cart/{{id}}.jpg">
           </div>
 
           <div class="col-xs-9 col-sm-6 ee-middle-table">
-            <h5>{{name}}</h5>
-            {{#if special_price}}
-            <div> 
-            <strong>See DVD mängija on Sulle, Raili :)</strong>
-            </div>
-            
-            
-            {{/if}}
+            <h5 class="ee-truncate">{{name}}</h5>
           </div>
           <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
             <div class="row">
               <div class="col-xs-6 col-sm-5 ee-middle-table">
                 <div class="form-group">
-                  <label class="col-sm-10 col-xs-12 control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
+                  <label class="control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
                 </div>
               </div>
               <div class="col-xs-6 col-sm-7 ee-middle-table">
-              {{#if special_price}}
-                <p class="ee-top-10 ee-top-0-xs ee-bottom-0">Tavahind: 42 €</p>
-                <p class="tsr-product-price ee-product-price-md ee-top-0">Soodushind: <span>{{special_price}}</span></p>
-                
-                <p>Sinu võit: 2 €</p>
-                {{else}}
                 <p class="tsr-product-price ee-product-price-md">Hind: {{normal_price}}</p>
-                {{/if}}
               </div>
             </div>
           </div>
@@ -866,26 +819,26 @@
 
 
     </div>
-    <div class="col-sm-12 col-md-3 ee-top-20 ee-bottom-20" style="margin-top:20px;margin-bottom:20px;">
-      <div class="row hidden-xs">
+    <div class="col-sm-12 col-md-3 ee-bottom-20">
+      <div class="row hidden-xs ee-top-20">
         <div class="col-md-12 col-sm-5 pull-right">
-          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+          <button class="btn btn-primary btn-block js-btn-action" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
         </div>
       </div>
       <div class="row hidden-xs">
         <div class="col-md-12 col-sm-5 pull-right ee-top-20 ee-top-0-xs">
-          <button class="btn btn-primary btn-block btn-js-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
+          <button class="btn btn-primary btn-block js-btn-action" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button>   
         </div>
       </div>
       <div class="row visible-xs">
         <div class="col-xs-6">
-          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
+          <button class="btn btn-link btn-block js-btn-action visible-xs" data-stopPropagation="true" data-view="js-send-cart"><span class="icon icon-email"></span> Saada</button>
         </div>
         <div class="col-xs-6">
-          <button class="btn btn-link btn-block btn-js-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
+          <button class="btn btn-link btn-block js-btn-action visible-xs" data-stopPropagation="true" data-view="js-save-cart"><span class="icon icon-save"></span> Salvesta</button> 
         </div>
       </div>
-      <div class="row">
+      <div class="row ee-bottom-20">
         <div class="col-md-12 col-sm-5 col-xs-12 pull-right ee-top-20 ee-top-0-xs">
           <button class="btn btn-default btn-block ee-btn-buy" onClick="location.href='cart-overview.html'">Jätka ostmist</button>
         </div>
@@ -899,39 +852,22 @@
     <div class="col-md-10 col-md-offset-1">
       <h3>Ostukorvi e-postiga saatmine</h3>
       <form action="" class="form-horizontal">
-        <div class="row tsr-forms">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
-              <div class="col-sm-9">
-                <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-3 control-label" for="receiver-name">Saaja nimi:</label>
-              <div class="col-sm-9">
-                <input type="text" id="receiver-name" placeholder="E-posti aadress" value="Teele Puusemp">
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="col-sm-3 control-label" for="receiver">Sõnumi sisu:</label>
-              <div class="col-sm-9">
-                <textarea name="" id="" class="form-control"></textarea>
-              </div>
+        <div class="tsr-forms">
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
+            <div class="col-sm-9 col-md-6">
+              <input type="text" id="receiver" placeholder="E-posti aadress" value="teelepuusemp@gmail.com">
             </div>
           </div>
         </div>
-        
       </form>
+      <hr class="hidden-xs">
       <div class="row ee-bottom-20">
-        <hr class="hidden-xs">
         <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+          <button class="btn btn-link btn-block js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
         </div>
         <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
+          <button class="btn btn-default btn-block ee-btn-buy pull-right js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Saada</button>
         </div>
       </div>
     </div>
@@ -942,21 +878,23 @@
   <div class="row megamenu">
     <div class="col-md-10 col-md-offset-1">
       <h3>Ostukorvi salvestamine</h3>
-      <form action="" class="form-horizontal tsr-forms">
-        <div class="form-group">
-          <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
-          <div class="col-sm-9 col-md-6">
-            <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+      <form action="" class="form-horizontal">
+        <div class="tsr-forms">
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
+            <div class="col-sm-9 col-md-6">
+              <input type="text" id="receiver-name" placeholder="Ostukorvi nimi" value="Teele ostukorv">
+            </div>
           </div>
         </div>
       </form>
+      <hr class="hidden-xs">
       <div class="row ee-bottom-20">
-        <hr class="hidden-xs">
         <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
-          <button class="btn btn-link btn-block btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
+          <button class="btn btn-link btn-block js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Tagasi</button>
         </div>
         <div class="col-sm-4">
-          <button class="btn btn-default btn-block ee-btn-buy pull-right btn-js-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
+          <button class="btn btn-default btn-block ee-btn-buy pull-right js-btn-action" data-stopPropagation="true" data-view="js-overview-cart">Salvesta</button>
         </div>
       </div>
     </div>
@@ -1050,82 +988,39 @@
 </nav> -->
 
 </header>
+  
+  
+  
 
 
-
-
-
-<section class="wrapping-layers">
-  <div class="container xs-not-padded"> 
-    <section class="ee-shopping">
-      <div class="progress-steps" data-update="progress">
-        <div class="progress-tabs">
-          <ol data-progress-steps="5">
-            <li class="" data-target="#id1">
-              <h4>Ostukorv</h4>
-            </li>
-            <li class="" data-target="#id2">
-              <h4>Arve andmed</h4>
-            </li>
-            <li class="" data-target="#id3">
-              <h4>Kohaletoomine</h4>
-            </li>
-            <li class="">
-              <h4>Maksmine</h4>
-            </li>
-            <li class="last-child progress-active" data-target="#id5">
-              <h4>Kokkuvõte</h4>
-            </li>
-          </ol>
-        </div>
-        <div class="progress-content clearfix">
-          <div class="col-md-10 col-md-offset-1">
-            <h4 class="ee-top-20-xs">Täname ostu eest! Allpool näed oma tellimuse kokkuvõtet.</h4>
-            <hr>
-            <div class="row">
-              <div class="col-md-4">
-                <p>
-                  <span>Maksja:</span><br>
-                  <strong>Teele Puusemp</strong>
-                </p>
-              <p>
-                <span>Maksja aadress:</span><br>
-                <strong>Pärnu mnt 31 Tallinn, Kesklinn, 10119</strong>
-              </p>
-              </div>
-              <div class="col-md-5">
-                <p>
-                  <span>Kättetoimetamise viis:</span><br>
-                  <strong>Kulleriga koju/kontorisse kätte</strong>
-                </p>
-                <p>
-                  <span>Kättetoimetamise aadress:</span><br>
-                  <strong>Endla tn 4, 10142 Tallinn, Kesklinn, Harjumaa</strong>
-                </p>
-                <p>
-                  <span>Kättetoimetamise ajavahemik:</span><br>
-                  <strong>9.10.2014 17:00 - 19:00</strong>
-                </p>
-              </div>
-              <div class="col-md-3 text-right">
-                <p>
-                  <span>Tellimus:</span>
-                  <strong>2692981</strong>
-                </p>
-                <p>
-                  <span>Kuupäev:</span>
-                  <strong>08.10.2014</strong>
-                </p>
-                <p>
-                  <span>Viitenumber:</span>
-                  <strong>4543673568</strong>
-                </p>
-          
-              </div>
-            </div>
-          
+  <section class="wrapping-layers">
+    <div class="container xs-not-padded"> 
+      <section class="ee-shopping">
+        <div class="progress-steps" data-update="progress">
+          <div class="progress-tabs">
+            <ol data-progress-steps="5">
+              <li class="" data-target="#id1">
+                <h4>Ostukorv</h4>
+              </li>
+              <li class="" data-target="#id2">
+                <h4>Arve andmed</h4>
+              </li>
+              <li class="" data-target="#id3">
+                <h4>Kohaletoomine</h4>
+              </li>
+              <li class="">
+                <h4>Maksmine</h4>
+              </li>
+              <li class="last-child progress-active" data-target="#id5">
+                <h4>Kokkuvõte</h4>
+              </li>
+            </ol>
           </div>
-
+          <div class="progress-content clearfix">
+            <div class="col-md-10 col-md-offset-1">
+              <h4 class="ee-top-20-xs">Täname ostu eest! Allpool näed oma tellimuse kokkuvõtet.</h4>
+              <hr>
+            </div>
             <div class="col-xs-12 col-md-10 col-md-offset-1 ee-top-10">
   <div class="row">
     <div class="panel panel-default cart-overview-heading clearfix">
@@ -1133,8 +1028,8 @@
         <h6>Oled ostnud <strong>3</strong> asja ja transpordi kulleriga</h6>
       </div>
       <div class="col-sm-4">
-        <a class="btn btn-primary btn-block" data-toggle="collapse" href="#cart-overview" aria-expanded="true" aria-controls="cart-overview">
-          Näita, millised, ma ei mäleta
+        <a class="btn btn-link btn-lg btn-block" data-toggle="collapse" href="#cart-overview" aria-expanded="true" aria-controls="cart-overview">
+          <i class="icon icon-arrow-down"></i>
         </a>
       </div>
       <div class="col-sm-5">
@@ -1300,6 +1195,53 @@
 
   </div>
 </div>
+            <div class="col-md-10 col-md-offset-1">
+              <hr>
+              <div class="row">
+                <div class="col-md-4">
+                  <p>
+                    <span>Maksja:</span><br>
+                    <strong>Teele Puusemp</strong>
+                  </p>
+                  <p>
+                    <span>Maksja aadress:</span><br>
+                    <strong>Pärnu mnt 31 Tallinn, Kesklinn, 10119</strong>
+                  </p>
+                </div>
+                <div class="col-md-5">
+                  <p>
+                    <span>Kättetoimetamise viis:</span><br>
+                    <strong>Kulleriga koju/kontorisse kätte</strong>
+                  </p>
+                  <p>
+                    <span>Kättetoimetamise aadress:</span><br>
+                    <strong>Endla tn 4, 10142 Tallinn, Kesklinn, Harjumaa</strong>
+                  </p>
+                  <p>
+                    <span>Kättetoimetamise ajavahemik:</span><br>
+                    <strong>9.10.2014 17:00 - 19:00</strong>
+                  </p>
+                </div>
+                <div class="col-md-3 text-right">
+                  <p>
+                    <span>Tellimus:</span>
+                    <strong>2692981</strong>
+                  </p>
+                  <p>
+                    <span>Kuupäev:</span>
+                    <strong>08.10.2014</strong>
+                  </p>
+                  <p>
+                    <span>Viitenumber:</span>
+                    <strong>4543673568</strong>
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+
+            
             <div class="clearfix"></div>
             <div class="col-sm-12 col-md-10 col-md-offset-1">
    <hr>
@@ -1312,14 +1254,14 @@
  </div>  
 
 
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
       
-  </div>
-</section>
+    </div>
+  </section>
 
-<footer>
+  <footer>
     <div class="container-no-gutter">
         <div class="row">
             <div class="col-sm-3 col-md-3">
@@ -1449,6 +1391,8 @@ $(document).ready(function(){
     }
     e.preventDefault();
   });
+
+  
 
   // 2nd level folDer
   // function handleClick()

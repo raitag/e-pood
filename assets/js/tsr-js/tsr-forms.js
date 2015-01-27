@@ -68,6 +68,7 @@ tsrForms.tsrCheckbox = function ($wrapper) {
 
    var elem = $(this);
    var label = elem.parent();
+   var elem_id = elem.attr('id');
 
    if (elem.is(':checked')) {
     label.addClass('checked');
@@ -78,8 +79,8 @@ tsrForms.tsrCheckbox = function ($wrapper) {
    }
 
    label.addClass('tsr-checkbox');
-    if (!label.has("span.tsr-checkboxStyled").length) {
-        label.prepend('<span class="tsr-checkboxStyled icon icon-thick">&nbsp;</span>');
+    if (!label.has("label.tsr-checkboxStyled").length) {
+        label.prepend('<label class="tsr-checkboxStyled icon icon-thick" for="' +elem_id+ '">&nbsp;</label>');
        }
 
 

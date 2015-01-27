@@ -37,7 +37,13 @@
               <div id="comment-{{id}}" class="panel-collapse collapse js-flexrow ee-bottom-20">
                 <div class="row">
                 <div class="col-xs-11">
-                  <input type="text" class="form-control" name="comment" value="" id="comment" autofocus />
+                  
+                  <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-5" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+                      <span class="input__label-content input__label-content--hoshi">Kommentaar</span>
+                    </label>
+                  </span>
                 </div>
                 <button type="button" class="close" data-toggle="collapse" href="#comment-{{id}}"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 </div>
@@ -86,5 +92,3 @@
       </div>
   </div>
 </div>
-
-<!-- @include _overview-bottom-service.html -->

@@ -1605,6 +1605,7 @@ tsrForms.tsrCheckbox = function ($wrapper) {
 
    var elem = $(this);
    var label = elem.parent();
+   var elem_id = elem.attr('id');
 
    if (elem.is(':checked')) {
     label.addClass('checked');
@@ -1615,8 +1616,8 @@ tsrForms.tsrCheckbox = function ($wrapper) {
    }
 
    label.addClass('tsr-checkbox');
-    if (!label.has("span.tsr-checkboxStyled").length) {
-        label.prepend('<span class="tsr-checkboxStyled icon icon-thick">&nbsp;</span>');
+    if (!label.has("label.tsr-checkboxStyled").length) {
+        label.prepend('<label class="tsr-checkboxStyled icon icon-thick" for="' +elem_id+ '">&nbsp;</label>');
        }
 
 
@@ -6998,12 +6999,12 @@ TSR - SUPPORT
 // APP SPECIFIC SCRIPTS
 $(document).ready(function() {
 
-BindSlideToggle();
-cloneRightSideMainMenu();
- 
+  BindSlideToggle();
+  cloneRightSideMainMenu();
+
 // COLLAPSE TABS
 // https://github.com/okendoken/bootstrap-tabcollapse
-  $('#TabsResponsive').tabCollapse();
+$('#TabsResponsive').tabCollapse();
 
   // FILTER COLOR CHANGE
   $('#content-placeholder-filter > div > ul > li > a').click(function(e){
@@ -7017,15 +7018,15 @@ cloneRightSideMainMenu();
     e.preventDefault();
   });
 
-$('.dropdown-menu').find('form').click(function (e) {
-        e.stopPropagation();
-      });
+  $('.dropdown-menu').find('form').click(function (e) {
+    e.stopPropagation();
+  });
 
-$(".jsShowMoreCategories").unbind("click").click(function () {
- if ($(this).hasClass("moretext")) {
-  $(".jsShowMoreCategories span").html($(this).data("lesstext"));
-   $(this).removeClass("moretext");
- } else {
+  $(".jsShowMoreCategories").unbind("click").click(function () {
+   if ($(this).hasClass("moretext")) {
+    $(".jsShowMoreCategories span").html($(this).data("lesstext"));
+    $(this).removeClass("moretext");
+  } else {
    $(".jsShowMoreCategories span").html($(this).data("moretext"));
    $(this).addClass("moretext");
  }
@@ -7035,33 +7036,45 @@ $(".jsShowMoreCategories").unbind("click").click(function () {
 
 function BindSlideToggle() {
  $('.js-slidetoggle').click(function (e) {
-  $(this).parents().next('.js-togglable').slideToggle('slow');
-  e.preventDefault();
+    $(this).parents().next('.js-togglable').slideToggle('slow');
+    e.preventDefault();
  });
 }
 
 
 function cloneRightSideMainMenu(){
-    $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
-    $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone(true,true) );
-    $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
-    
-    var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
+  $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
+  $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone(true,true) );
+  $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+
+  var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
 }
 
 function collapseInOneForDetail(){
   $('.js-linkicon a').on('click',function(e){
     if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-        e.preventDefault();
-        e.stopPropagation();
-      }
+      e.preventDefault();
+      e.stopPropagation();
+    }
   });
 }
 
-$('.btn-js-action').click(function(e) {
+$('.js-btn-action').click(function(e) {
   e.preventDefault();
   var step = $(this).data('view');
   $('.'+step).show().siblings('div.step').hide();
+});
+
+// INPUT JS
+$('input[type="text"]').focus(function() {
+  var input_id = $(this).attr('id');
+  $('label[for="'+input_id+'"]').addClass('active');
+});
+$('input[type="text"]').blur(function() {
+ if ($(this).val() == '') { 
+    var input_id = $(this).attr('id');
+    $('label[for="'+input_id+'"]').removeClass('active');
+ }
 });
 
 

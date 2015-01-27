@@ -120,7 +120,8 @@ FORMS
       height: 20px;
       display: block;
       position: relative;
-      float: left; }
+      float: left;
+      margin: 7px 0 0; }
       .tsr-forms .tsr-checkbox .tsr-checkboxStyled:before {
         display: none; }
     .tsr-forms .tsr-checkbox:focus .tsr-checkboxStyled, .tsr-forms .tsr-checkbox:active .tsr-checkboxStyled {
@@ -133,7 +134,7 @@ FORMS
       position: absolute;
       top: 22%;
       left: 50%;
-      margin: -5px 0 0 -6px;
+      margin: -8px 0 0 -6px;
       color: #642887;
       font-size: 16px;
       display: block; }
@@ -22130,6 +22131,118 @@ header .megamenu .search-item-image,
     right: 48px;
     padding-left: 2px; }
 
+.ee-input {
+  position: relative;
+  margin-top: 1.5rem; }
+  .ee-input label {
+    color: grey;
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: text;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out; }
+  .ee-input label.active {
+    font-size: 0.875rem;
+    font-weight: normal;
+    -webkit-transform: translateY(-130%);
+    -moz-transform: translateY(-130%);
+    -ms-transform: translateY(-130%);
+    -o-transform: translateY(-130%);
+    transform: translateY(-130%); }
+  .ee-input input[type=text]:focus + label,
+  .ee-input input[type=password]:focus + label,
+  .ee-input input[type=email]:focus + label,
+  .ee-input input[type=date]:focus + label,
+  .ee-input input[type=tel]:focus + label,
+  .ee-input input[type=number]:focus + label,
+  .ee-input textarea:focus.materialize-textarea + label {
+    color: #652d86; }
+  .ee-input input[type=text].valid,
+  .ee-input input[type=password].valid,
+  .ee-input input[type=email].valid,
+  .ee-input input[type=date].valid,
+  .ee-input input[type=tel].valid,
+  .ee-input input[type=number].valid,
+  .ee-input textarea.materialize-textarea.valid {
+    border-bottom: 1px solid color("green", "base");
+    -webkit-box-shadow: 0 1px 0 0 color("green", "base");
+    box-shadow: 0 1px 0 0 color("green", "base"); }
+  .ee-input input[type=text].invalid,
+  .ee-input input[type=password].invalid,
+  .ee-input input[type=email].invalid,
+  .ee-input input[type=date].invalid,
+  .ee-input input[type=tel].invalid,
+  .ee-input input[type=number].invalid,
+  .ee-input textarea.materialize-textarea.invalid {
+    border-bottom: 1px solid color("red", "base");
+    -webkit-box-shadow: 0 1px 0 0 color("red", "base");
+    box-shadow: 0 1px 0 0 color("red", "base"); }
+  .ee-input .prefix {
+    position: absolute;
+    width: 3rem;
+    font-size: 2rem;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+    .ee-input .prefix.active {
+      color: #652d86; }
+  .ee-input .prefix ~ input,
+  .ee-input .prefix ~ textarea {
+    margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem); }
+  .ee-input .prefix ~ textarea {
+    padding-top: .8rem; }
+  .ee-input .prefix ~ label {
+    margin-left: 3rem; }
+  .ee-input textarea {
+    width: 100%;
+    height: 3rem;
+    background-color: transparent; }
+  .ee-input input[type=text],
+  .ee-input input[type=password],
+  .ee-input input[type=email],
+  .ee-input input[type=date],
+  .ee-input input[type=tel],
+  .ee-input input[type=number],
+  .ee-input textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .ee-input input[type=text]:focus,
+  .ee-input input[type=password]:focus,
+  .ee-input input[type=email]:focus,
+  .ee-input input[type=date]:focus,
+  .ee-input input[type=tel]:focus,
+  .ee-input input[type=number]:focus,
+  .ee-input textarea:focus.materialize-textarea {
+    border: 0;
+    border-bottom: 1px solid #652d86;
+    -webkit-box-shadow: 0 1px 0 0 #652d86;
+    box-shadow: 0 1px 0 0 #652d86; }
+  .ee-input textarea.materialize-textarea {
+    overflow-y: hidden;
+    /* prevents scroll bar flash */
+    padding: 1.6rem 0;
+    /* prevents text jump on Enter keypress */
+    resize: none; }
+
 .swiffy-wrap {
   position: relative;
   width: 100%;
@@ -22562,3 +22675,12 @@ label.control-label-left {
 .ee-linkicons.list-inline > li {
   padding-left: 0;
   padding-right: 10px; }
+
+.ee-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.tsr-checkbox .control-label-left {
+  padding-left: 30px; }

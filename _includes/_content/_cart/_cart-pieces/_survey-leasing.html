@@ -1,80 +1,102 @@
 <div class="col-sm-12 col-md-10 col-md-offset-1  ee-top-20 ">
-  <form id="about" method="post" class="form-horizontal has-error" role="form">
-        <div class="well info-well">
+  <form id="about" method="post" class="form-horizontal" role="form">
+    <div class="well info-well">
       <span class="icon icon-info"></span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit debitis enim impedit in voluptate, similique tempore. Ipsa nobis, ducimus consequuntur?<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae consequatur vitae, reiciendis voluptatum, quo molestiae. Iste, ex, blanditiis. Delectus vero, culpa libero id impedit debitis ea autem voluptatibus amet fuga?</p>
     </div>
-  <div class="row tsr-forms">
-    <div class="col-sm-6">
-      <h4>Sissetulekud</h4>
-       
-        <div class="form-group row">
-          <label for="name" class="col-md-4 col-sm-12 control-label ee-text-left-sm">Peamised sissetulekuallikad</label>
-       
-          <div class="col-md-8 col-sm-12 checks  tsr-forms" >
-            <label class="control-label-left " for="check-2"><input type="checkbox" id="check-2" /> &nbsp; &nbsp;Palk</label>
+    <div class="row">
+      <div class="col-sm-6 col-md-8 tsr-forms">
+
+        <h4>Keskmine netosissetulek kuus:</h4>
+        <div class="select-container">
+          <select id="">
+            <option selected>0-300 €</option>
+            <option>0-300 €</option>
+            <option>0-300 €</option>
+          </select>
+        </div>
+
+        <h4 class="ee-top-20">Igakuised kohustused:</h4>
+        <div class="form-group">
+          <label for="discount" class="col-sm-4 control-label">Laenud</label>
+          <div class="col-sm-8">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">€/kuus</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="discount" class="col-sm-4 control-label">Järelmaksud</label>
+          <div class="col-sm-8">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">€/kuus</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="discount" class="col-sm-4 control-label">Liisingud</label>
+          <div class="col-sm-8">
+            <div class="input-group">
+              <input class="form-control" type="text">
+              <div class="input-group-addon">€/kuus</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="discount" class="col-sm-6 control-label"><strong>Kohustused kokku</strong></label>
+          <div class="col-sm-6">
+            <label class="control-label" ><strong>0 €/kuus</strong></label>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6 col-md-4 tsr-forms">
+
+        <h4>Sissetulekud:</h4>
+        <label for="name" class="control-label-left ee-text-left-sm">Peamised sissetulekuallikad:</label>
+
+
+          <span>
+            <label class="control-label-left " for="check-2">Palk</label>
+            <input type="checkbox" id="check-2" />
+          </span>
           
-            <label class="control-label-left "  for="check-3"><input type="checkbox" id="check-3" /> &nbsp; &nbsp;Vanemahüvitis</label>
+          <span>
+            <label class="control-label-left "  for="check-3">Vanemahüvitis</label>
+            <input type="checkbox" id="check-3" />
+          </span>
 
-            <label class="control-label-left"  for="check-4"><input type="checkbox" id="check-4" /> &nbsp; &nbsp;Pension</label>
-            <label class="control-label-left"  for="check-5"><input type="checkbox" id="check-5" /> &nbsp; &nbsp;Sotsiaaltoetus/alimendid</label>
-            <label class="control-label-left"  for="check-6"><input type="checkbox" id="check-6" /> &nbsp; &nbsp;Ettevõtlustulu</label>
-            <label class="control-label-left"  for="check-7"><input type="checkbox" id="check-7" /> &nbsp; &nbsp;Sissetulek puudub</label>
-          </div>
-        </div>
-      
-      <h4 class="ee-top-20">Keskmine netosissetulek kuus:</h4>
-      <div class="select-container">
-        <select id="">
-          <option selected>0-300 €</option>
-          <option>0-300 €</option>
-          <option>0-300 €</option>
-        </select>
+          <span>
+            <label class="control-label-left"  for="check-4">Pension</label>
+            <input type="checkbox" id="check-4" />
+          </span>
+          <span>
+            <label class="control-label-left"  for="check-5">Sotsiaaltoetus/alimendid</label>
+            <input type="checkbox" id="check-5" />
+          </span>
+
+          <span>
+            <label class="control-label-left"  for="check-6">Ettevõtlustulu</label>
+            <input type="checkbox" id="check-6" />
+          </span>
+
+          <span>
+            <label class="control-label-left"  for="check-7">Sissetulek puudub</label>
+            <input type="checkbox" id="check-7" />
+          </span>
+        
+        
       </div>
 
-    </div>
-
-    <div class="col-sm-6 ee-top-20-xs">
-
-      <h4>Igakuised kohustused:</h4>
-      <div class="form-group">
-        <label for="discount" class="col-sm-4 control-label">Laenud</label>
-        <div class="col-sm-8">
-          <div class="input-group">
-            <input class="form-control" type="text">
-            <div class="input-group-addon">€/kuus</div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="discount" class="col-sm-4 control-label">Järelmaksud</label>
-        <div class="col-sm-8">
-          <div class="input-group">
-            <input class="form-control" type="text">
-            <div class="input-group-addon">€/kuus</div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="discount" class="col-sm-4 control-label">Liisingud</label>
-        <div class="col-sm-8">
-          <div class="input-group">
-            <input class="form-control" type="text">
-            <div class="input-group-addon">€/kuus</div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="discount" class="col-sm-6 control-label"><strong>Kohustused kokku</strong></label>
-        <div class="col-sm-6">
-          <label class="control-label" ><strong>0 €/kuus</strong></label>
-          
-        </div>
-      </div>
-    </div>
-
-      <div class="col-xs-12 ee-top-20">
-        <label class="control-label-left" for="check-8"><input type="checkbox" id="check-8" /> &nbsp;&nbsp; Kinnitan taotluses esitatud andmete õigsust ning olen teadlik et AS Eesti Telekom:
-        </label>
+      <div class="col-xs-12 ee-top-20 tsr-forms">
+        <span>
+          <label class="control-label-left" for="check-8">Kinnitan taotluses esitatud andmete õigsust ning olen teadlik et AS Eesti Telekom:
+          </label>
+          <input type="checkbox" id="check-8" />
+        </span>
         <ul>
           <li>Teeb  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis debitis natus, laudantium illum perferendis neque quia id adipisci veritatis praesentium quis omnis nihil alias architecto. Inventore amet enim laudantium ipsa.</li>
           <li>
