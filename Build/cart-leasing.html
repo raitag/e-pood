@@ -1176,31 +1176,30 @@
     <div class="col-sm-7 ">
       <form action="" class="form-horizontal"> 
         <div class="form-group">
-          <label for="" class="col-sm-6 col-md-3 control-label">Periood</label>
+          <label for="periood" class="col-sm-6 col-md-3 control-label">Periood</label>
           <div class="col-sm-6 col-md-4">
-            <div class="select-container">
-              <select>
-                <option selected>48 kuud</option>
-                <option>9 kuud</option>
-              </select>
-            </div>
+            <select id="periood">
+              <option value="">Periood</option>
+              <option selected>48 kuud</option>
+              <option>9 kuud</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
           <label for="" class="col-sm-6 col-md-3 control-label">Sissemakse</label>
           <div class="col-sm-6 col-md-4">
-            <div class="select-container">
-              <select>
-                <option selected>10%</option>
-                <option>20%</option>
-              </select>
-            </div>
+            <select>
+              <option value="">Sissemakse</option>
+              <option selected>10%</option>
+              <option>20%</option>
+            </select>
           </div>
           <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-0">
             
-            <h6>
-              <a href="#" id="nimi" data-type="text" data-pk="1" data-inputclass="input-short" data-title="Sisesta sissemakse">20,00 €</a>
-            </h6>
+            <div class="ee-input">
+              <input type="text" id="sissemakse">
+              <label for="sissemakse">Sissemakse</label>
+            </div>
           </div>
         </div>
         <!-- <div class="form-group">
@@ -1241,15 +1240,14 @@
         </div>
       </h4> -->
 
-      <div class="panel panel-primary" id="paymentInfoPangalink">
-        <div class="panel-heading">
-          <span class="icon icon-info"></span>  Liising
-        </div>
-        <div class="panel-body">
+      <div class="well info-well" id="paymentInfoPangalink">
+        <span class="icon icon-info"></span>
+        <p>Liising</p>
+        <p>
           <small>
             Kuidas kasutaja saab aru, et tegemist on järelmaksu /kapitalirendi / kasutusrendi seadistusega.
           </small>
-        </div>
+        </p>
       </div>
 
 
@@ -1521,8 +1519,8 @@ $(function(){
 
   // Call calendar and timepicker in general
   // ----------------------------
-    $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime({editable: true});
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
 
     // Initialize Summernote Editor
     $('.summernote').summernote({
@@ -1539,38 +1537,38 @@ $(function(){
 
 // Call xeditable
 //-------------------
-$.fn.editable.defaults.mode = 'inline';
-$(document).ready(function() {
-  $('#nimi').editable();
-  $('#epost').editable();
-  $('#telefon').editable();
-  $('#mobiil').editable();
-  $('#tarneaadress').editable();
-  $('#nimi-shop').editable();
-  $('#telefon-shop').editable();
-  $('#courierDate').editable();
+// $.fn.editable.defaults.mode = 'inline';
+// $(document).ready(function() {
+//   $('#nimi').editable();
+//   $('#epost').editable();
+//   $('#telefon').editable();
+//   $('#mobiil').editable();
+//   $('#tarneaadress').editable();
+//   $('#nimi-shop').editable();
+//   $('#telefon-shop').editable();
+//   $('#courierDate').editable();
 
-  $('#aadress').editable({
-    mode: 'inline',
-    showbuttons: true,
-    url: '/post',
-    pk: 1,
-    title: 'Enter an Italian city',
-    typeahead: {
-        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
-    }
-  });
-});
+  // $('#aadress').editable({
+  //   mode: 'inline',
+  //   showbuttons: true,
+  //   url: '/post',
+  //   pk: 1,
+  //   title: 'Enter an Italian city',
+  //   typeahead: {
+  //       local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+  //   }
+  // });
+// });
 
-$(".datepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".datepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
-$(".timepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".timepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
 
 // Aboutme-page select behavior

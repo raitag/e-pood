@@ -109,7 +109,16 @@
 
 <body> 
   <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
-
+<div class="alert full-size alert-info" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Elioni kliendile on paljud tooted soodsamad - </span>
+            <a href="#">logi e-poodi sisse</a>.
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
 <header>
 
 
@@ -1012,6 +1021,14 @@
         </div>
         <div class="progress-content clearfix">
           <div class="row cart">
+  <div class="well error-well ee-top-20 col-md-10 col-md-offset-1">
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">×</span>
+      <span class="sr-only">Close</span>
+    </button>
+    <span class="icon icon-alert"></span><p class="col-xs-10 col-sm-11">Vabandame, toodet juhtmeta telefon Philips D12002B/212 on saadaval vähem, kui Teie poolt soovitud kogus. Ostukorvi lisati 11 tükki.</p>
+    <div class="clearfix"></div>
+  </div>
   <div class="cart-items">
       <div>
 
@@ -1051,12 +1068,11 @@
                 <div class="row">
                 <div class="col-xs-11">
                   
-                  <span class="input input--hoshi">
-                    <input class="input__field input__field--hoshi" type="text" id="input-5" />
-                    <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                      <span class="input__label-content input__label-content--hoshi">Kommentaar</span>
-                    </label>
-                  </span>
+                  <div class="form-group">
+                      <div class="ee-input">
+                        <input type="text" name="cheap" value="" id="comment" placeholder="Kommentaar">
+                      </div>
+                  </div>
                 </div>
                 <button type="button" class="close" data-toggle="collapse" href="#comment-{{id}}"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 </div>
@@ -1081,13 +1097,15 @@
                     <div class="input-group pull-right">
   <span class="input-group-btn">
     <button type="button" class="btn btn-link btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
-      <span>-</span>
+      <span class="icon icon-minus"></span>
     </button>
   </span>
-  <input type="text" name="quant[{{no}}]" class="form-control input-number ee-default" value="1" min="1" max="10">
+  <div class="ee-input">
+    <input type="text" name="quant[{{no}}]" class="input-number ee-default" value="1" min="1" max="10">
+  </div>
   <span class="input-group-btn">
     <button type="button" class="btn btn-link btn-number" data-type="plus" data-field="quant[{{no}}]">
-      <span>+</span>
+      <span class="icon icon-plus"></span>
     </button>
   </span>
 </div> 
@@ -1150,14 +1168,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4 col-sm-offset-8">
-        <h6 class="text-right">Kasuta sooduskoodi või kinkekaarti: </h6>
+      <div class="col-sm-6 col-sm-offset-6">
         <form class="form-horizontal" action="" method="post">
-          <div class="input-group">
-            <input type="text" class="form-control" name="cheap" value="" id="next_voucher" >
-            <span class="input-group-btn">
-              <input type="submit" value="Sisesta" class="btn btn-primary">
-            </span>
+          <div class="form-group">
+            <div class="col-sm-9">
+              <div class="ee-input">
+                <input type="text" name="cheap" value="" id="next_voucher">
+                <label for="next_voucher">Kasuta sooduskoodi või kinkekaarti</label>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <input type="submit" value="Sisesta" class="btn btn-primary btn-block ee-top-10">
+            </div>
           </div>
         </form>
       </div>
@@ -1431,8 +1453,8 @@ $(function(){
 
   // Call calendar and timepicker in general
   // ----------------------------
-    $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime({editable: true});
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
 
     // Initialize Summernote Editor
     $('.summernote').summernote({
@@ -1449,38 +1471,38 @@ $(function(){
 
 // Call xeditable
 //-------------------
-$.fn.editable.defaults.mode = 'inline';
-$(document).ready(function() {
-  $('#nimi').editable();
-  $('#epost').editable();
-  $('#telefon').editable();
-  $('#mobiil').editable();
-  $('#tarneaadress').editable();
-  $('#nimi-shop').editable();
-  $('#telefon-shop').editable();
-  $('#courierDate').editable();
+// $.fn.editable.defaults.mode = 'inline';
+// $(document).ready(function() {
+//   $('#nimi').editable();
+//   $('#epost').editable();
+//   $('#telefon').editable();
+//   $('#mobiil').editable();
+//   $('#tarneaadress').editable();
+//   $('#nimi-shop').editable();
+//   $('#telefon-shop').editable();
+//   $('#courierDate').editable();
 
-  $('#aadress').editable({
-    mode: 'inline',
-    showbuttons: true,
-    url: '/post',
-    pk: 1,
-    title: 'Enter an Italian city',
-    typeahead: {
-        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
-    }
-  });
-});
+  // $('#aadress').editable({
+  //   mode: 'inline',
+  //   showbuttons: true,
+  //   url: '/post',
+  //   pk: 1,
+  //   title: 'Enter an Italian city',
+  //   typeahead: {
+  //       local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+  //   }
+  // });
+// });
 
-$(".datepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".datepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
-$(".timepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".timepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
 
 // Aboutme-page select behavior

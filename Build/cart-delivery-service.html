@@ -1072,14 +1072,16 @@
                   <div class="form-group display-inline">
                     <div class="input-group">
                       <span class="input-group-btn">
-                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
-                          <span>-</span>
+                        <button type="button" class="btn btn-link btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
+                          <span class="icon icon-minus"></span>
                         </button>
                       </span>
-                      <input type="text" name="quant[{{no}}]" class="form-control input-number ee-default" value="2" min="1" max="10">
+                      <div class="ee-input">  
+                        <input type="text" name="quant[{{no}}]" class="input-number ee-default" value="2" min="1" max="10">
+                      </div>
                       <span class="input-group-btn">
-                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[{{no}}]">
-                          <span>+</span>
+                        <button type="button" class="btn btn-link btn-number" data-type="plus" data-field="quant[{{no}}]">
+                          <span class="icon icon-plus"></span>
                         </button>
                       </span>
                     </div>
@@ -1320,36 +1322,33 @@
       </div>
 
       <div class="col-sm-6 col-md-4 ee-top-20">
-        <div class="panel panel-primary" id="deliveryInfoShop">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Poest
-          </div>
-          <div class="panel-body">
+        <div class="well info-well" id="deliveryInfoShop">
+          <span class="icon icon-info"></span>
+          <p>Poest</p>
+          <p>
             <small>
               Kaup kätte <strong>täna, 07.11</strong>
             </small>
-          </div>
+          </p>
         </div>
-        <div class="panel panel-primary" id="deliveryInfoItella" >
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Pakiautomaadist
-          </div>
-          <div class="panel-body">
+        <div class="well info-well" id="deliveryInfoItella" >
+          <span class="icon icon-info"></span>
+          <p>Pakiautomaadist</p>
+          <p>
             <small>
               Kaup kätte <strong>täna, 07.11</strong>
             </small>
-          </div>
+          </p>
         </div>
-        <div class="panel panel-primary" id="deliveryInfoCourier">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Kulleriga
-          </div>
-          <div class="panel-body">
+        <div class="well info-well" id="deliveryInfoCourier">
+          <span class="icon icon-info"></span>
+          <p>Kulleriga</p>
+          <p>
             <small>
               Kaup kätte <strong>täna, 07.11</strong>. <br>
               <strong>NB! </strong>Kui Sa ei saa sobival ajal kodus olla saad paki tellida ka oma töökohta.
             </small>
-          </div>
+          </p>
         </div>
       </div>
     </div>
@@ -1363,29 +1362,31 @@
     <h4>Kaubad tuua aadressile:</h4>
     <form action="" class="form-horizontal">
       <div class="form-group">
-        <label for="name" class="col-sm-3 control-label">Aadress</label>
-        <div class="col-sm-9">
-          <a href="#" id="tarneaadress" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Endla 4 Tallinn Kesklinn Harjumaa 10142</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="address-2" value="Endla 4 Tallinn Kesklinn Harjumaa 10142">
+            <label for="address-2">Aadress</label>
+          </div>
         </div>
       </div>
     </form>
     <h4 class="ee-top-20">Sobiv aeg kaupade toomiseks on:</h4>
     <form action="" class="form-horizontal"> 
       <div class="form-group">
-        <label for="email" class="col-sm-3 control-label">Kuupäev</label>
-        <div class="col-sm-9">
-          <a href="#" id="courierDate" data-type="text" data-pk="1" data-title="" class="datepicker">14.02.2014</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="courierDate" class="datepicker">
+            <label for="courierDate">Kuupäev</label>
+          </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="email" class="col-sm-3 control-label">Kell</label>
-        <div class="col-sm-9">
-          <div class="select-container">
-            <select id="chooseTime">
-              <option selected>8.00-18.00</option>
-              <option>14.00-16.00</option>
-            </select>
-          </div>
+        <div class="col-sm-12">
+          <select>
+            <option value="">Kell</option>
+            <option selected>8.00-18.00</option>
+            <option>14.00-16.00</option>
+          </select>
         </div>
       </div>
 
@@ -1393,15 +1394,19 @@
     <h4>Kauba võtab vastu:</h4>
     <form id="about" method="post" class="form-horizontal" role="form">
       <div class="form-group">
-        <label for="name" class="col-sm-3 control-label">Nimi</label>
-        <div class="col-sm-9">
-          <a href="#" id="nimi" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="nimi-1" value="Anton Keks">
+            <label for="nimi-1">Nimi</label>
+          </div>
         </div>
       </div>
       <div class="form-group ">
-        <label for="phone" class="col-sm-3 control-label">Telefon</label>
-        <div class="col-sm-9">
-          <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="phone-3" value="54243222">
+            <label for="phone-3">Telefon</label>
+          </div>
         </div>
       </div>
     </form>
@@ -1488,17 +1493,16 @@
       <strong>Lisainformatsioon:</strong><br>
       Prisma Peremarketi sissepääsu vastas, eskalaatori taga.
     </p>
-    <div class="panel panel-primary" id="deliveryInfoShop">
-      <div class="panel-heading">
-        <span class="icon icon-info"></span>  Pane tähele!
-      </div>
-      <div class="panel-body">
+    <div class="well info-well" id="deliveryInfoShop">
+      <span class="icon icon-info"></span>
+      <p>Pane tähele!</p>
+      <p>
         <small>
           Pakile saad järele minna alates <strong> 27.11 kell 11:00</strong>
           <br>
           <i>Teavitus paki jõudmisest automaati saadetakse SMSiga</i>
         </small>
-      </div>
+      </p>
     </div>
   </div>
 
@@ -1903,8 +1907,8 @@ $(function(){
 
   // Call calendar and timepicker in general
   // ----------------------------
-    $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime({editable: true});
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
 
     // Initialize Summernote Editor
     $('.summernote').summernote({
@@ -1921,38 +1925,38 @@ $(function(){
 
 // Call xeditable
 //-------------------
-$.fn.editable.defaults.mode = 'inline';
-$(document).ready(function() {
-  $('#nimi').editable();
-  $('#epost').editable();
-  $('#telefon').editable();
-  $('#mobiil').editable();
-  $('#tarneaadress').editable();
-  $('#nimi-shop').editable();
-  $('#telefon-shop').editable();
-  $('#courierDate').editable();
+// $.fn.editable.defaults.mode = 'inline';
+// $(document).ready(function() {
+//   $('#nimi').editable();
+//   $('#epost').editable();
+//   $('#telefon').editable();
+//   $('#mobiil').editable();
+//   $('#tarneaadress').editable();
+//   $('#nimi-shop').editable();
+//   $('#telefon-shop').editable();
+//   $('#courierDate').editable();
 
-  $('#aadress').editable({
-    mode: 'inline',
-    showbuttons: true,
-    url: '/post',
-    pk: 1,
-    title: 'Enter an Italian city',
-    typeahead: {
-        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
-    }
-  });
-});
+  // $('#aadress').editable({
+  //   mode: 'inline',
+  //   showbuttons: true,
+  //   url: '/post',
+  //   pk: 1,
+  //   title: 'Enter an Italian city',
+  //   typeahead: {
+  //       local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+  //   }
+  // });
+// });
 
-$(".datepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".datepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
-$(".timepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".timepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
 
 // Aboutme-page select behavior

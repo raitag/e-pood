@@ -60,22 +60,11 @@ function collapseInOneForDetail(){
   });
 }
 
+// change cart dropdown layers
 $('.js-btn-action').click(function(e) {
   e.preventDefault();
   var step = $(this).data('view');
   $('.'+step).show().siblings('div.step').hide();
-});
-
-// INPUT JS
-$('input[type="text"]').focus(function() {
-  var input_id = $(this).attr('id');
-  $('label[for="'+input_id+'"]').addClass('active');
-});
-$('input[type="text"]').blur(function() {
- if ($(this).val() == '') { 
-    var input_id = $(this).attr('id');
-    $('label[for="'+input_id+'"]').removeClass('active');
- }
 });
 
 

@@ -1264,8 +1264,8 @@ $(function(){
 
   // Call calendar and timepicker in general
   // ----------------------------
-    $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime({editable: true});
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
 
     // Initialize Summernote Editor
     $('.summernote').summernote({
@@ -1282,38 +1282,38 @@ $(function(){
 
 // Call xeditable
 //-------------------
-$.fn.editable.defaults.mode = 'inline';
-$(document).ready(function() {
-  $('#nimi').editable();
-  $('#epost').editable();
-  $('#telefon').editable();
-  $('#mobiil').editable();
-  $('#tarneaadress').editable();
-  $('#nimi-shop').editable();
-  $('#telefon-shop').editable();
-  $('#courierDate').editable();
+// $.fn.editable.defaults.mode = 'inline';
+// $(document).ready(function() {
+//   $('#nimi').editable();
+//   $('#epost').editable();
+//   $('#telefon').editable();
+//   $('#mobiil').editable();
+//   $('#tarneaadress').editable();
+//   $('#nimi-shop').editable();
+//   $('#telefon-shop').editable();
+//   $('#courierDate').editable();
 
-  $('#aadress').editable({
-    mode: 'inline',
-    showbuttons: true,
-    url: '/post',
-    pk: 1,
-    title: 'Enter an Italian city',
-    typeahead: {
-        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
-    }
-  });
-});
+  // $('#aadress').editable({
+  //   mode: 'inline',
+  //   showbuttons: true,
+  //   url: '/post',
+  //   pk: 1,
+  //   title: 'Enter an Italian city',
+  //   typeahead: {
+  //       local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+  //   }
+  // });
+// });
 
-$(".datepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".datepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
-$(".timepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".timepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
 
 // Aboutme-page select behavior

@@ -1,27 +1,43 @@
-$border-color: grey !default;
+$border-color: #888888 !default;
 $highlight-color: $brand-primary; 
 $gutter-width: 1.5rem !default;
-$label-font-size: .875rem;
+$label-font-size: .8125rem;
 
 .ee-input {
   position: relative;
-  margin-top: 1.5rem;
+  margin-top: 0;
+
+  &.ee-input-has-label {
+    margin-top: .9rem;
+    input::-webkit-input-placeholder {
+      opacity: 0;
+      transition: opacity 0.4s;
+      -webkit-transition: opacity 0.4s; 
+    }
+    input:focus::-webkit-input-placeholder {
+      opacity: 1;
+    }
+  }
 
   label {
     color: $border-color;
     position: absolute;
     top: 0.4rem;
-    // left: $gutter-width / 2;
     left: 0;
-    font-size: 1rem;
+    font-size: $font-size-base;
     font-weight: normal;
     cursor: text;
+    margin: 0;
     @include transition(.2s ease-out);
   }
   label.active {
     font-size: $label-font-size;
     font-weight: normal;
     @include transform(translateY(-130%));
+  }
+
+  span {
+    font-size: $label-font-size; 
   }
 
   input[type=text]:focus + label,
@@ -34,47 +50,6 @@ $label-font-size: .875rem;
     color: $highlight-color;
   }
 
-  input[type=text].valid,
-  input[type=password].valid,
-  input[type=email].valid,
-  input[type=date].valid,
-  input[type=tel].valid,
-  input[type=number].valid,
-  textarea.materialize-textarea.valid {
-    border-bottom: 1px solid color("green", "base");
-    @include box-shadow(0 1px 0 0 color("green", "base"));
-  }
-
-  input[type=text].invalid,
-  input[type=password].invalid,
-  input[type=email].invalid,
-  input[type=date].invalid,
-  input[type=tel].invalid,
-  input[type=number].invalid,
-  textarea.materialize-textarea.invalid {
-    border-bottom: 1px solid color("red", "base");
-    @include box-shadow(0 1px 0 0 color("red", "base"));
-  }
-
-  // Prefix Icons
-  .prefix {
-    position: absolute;
-    width: 3rem;
-    font-size: 2rem;
-    @include transition(color .2s);
-
-    &.active { color: $highlight-color; }
-  }
-  .prefix ~ input,
-  .prefix ~ textarea {
-    margin-left: 3rem;
-    width: 92%;
-    width: calc(100% - 3rem);
-  }
-  .prefix ~ textarea { padding-top: .8rem; }
-  .prefix ~ label { margin-left: 3rem; }
-
-  // Default textarea
   textarea {
     width: 100%;
     height: 3rem;
@@ -91,12 +66,13 @@ $label-font-size: .875rem;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $border-color;
+    color: #333;
     outline: none;
-    height: 2rem;
+    height: 2.1rem;
     width: 100%;
-
-    font-size: 1rem;
-    margin: 0 0 15px 0;
+    text-indent: 0;
+    font-size: $font-size-base;
+    margin: 0;
     padding: 0;
     border-radius: 0;
     @include box-shadow(none);
@@ -110,7 +86,14 @@ $label-font-size: .875rem;
   input[type=date]:focus,
   input[type=tel]:focus,
   input[type=number]:focus,
-  textarea:focus.materialize-textarea {
+  textarea:focus.materialize-textarea,
+  input[type=text]:active,
+  input[type=password]:active,
+  input[type=email]:active,
+  input[type=date]:active,
+  input[type=tel]:active,
+  input[type=number]:active,
+  textarea:active.materialize-textarea {
     border: 0;
     border-bottom: 1px solid $highlight-color;
     @include box-shadow(0 1px 0 0 $highlight-color);
@@ -118,8 +101,113 @@ $label-font-size: .875rem;
 
   textarea.materialize-textarea {
     overflow-y: hidden; /* prevents scroll bar flash */
-    padding: 1.6rem 0; /* prevents text jump on Enter keypress */
+    padding: .5em 0; /* prevents text jump on Enter keypress */
     resize: none;
   }
 
+  input[type="text"][disabled],
+  input[type="password"][disabled],
+  input[type="search"][disabled],
+  input[type="text"][disabled] + label,
+  input[type="password"][disabled] + label,
+  input[type="search"][disabled] + label {
+    color: #bbb;
+    border-color: #bbb;
+    background-color: transparent;
+  }
+
+  &.has-error {
+    label {
+      color: $orange-c;
+    }
+    span {
+      color: $orange-c;
+    }
+    input[type=text]:focus + label,
+    input[type=password]:focus + label,
+    input[type=email]:focus + label,
+    input[type=date]:focus + label,
+    input[type=tel]:focus + label,
+    input[type=number]:focus + label,
+    textarea:focus.materialize-textarea + label {
+      color: $orange-c;
+    }
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=date],
+    input[type=tel],
+    input[type=number],
+    textarea.materialize-textarea {
+      border-color: $orange-c;
+    }
+    input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=email]:focus,
+    input[type=date]:focus,
+    input[type=tel]:focus,
+    input[type=number]:focus,
+    textarea:focus.materialize-textarea {
+      border-color: $orange-c;
+      @include box-shadow(0 1px 0 0 $orange-c);
+    }
+  }
+
+  &.success {
+    label {
+      color: $brand-success;
+    }
+    span {
+      color: $brand-success;
+    }
+    input[type=text]:focus + label,
+    input[type=password]:focus + label,
+    input[type=email]:focus + label,
+    input[type=date]:focus + label,
+    input[type=tel]:focus + label,
+    input[type=number]:focus + label,
+    textarea:focus.materialize-textarea + label {
+      color: $brand-success;
+    }
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=date],
+    input[type=tel],
+    input[type=number],
+    textarea.materialize-textarea {
+      border-color: $brand-success;
+    }
+    input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=email]:focus,
+    input[type=date]:focus,
+    input[type=tel]:focus,
+    input[type=number]:focus,
+    textarea:focus.materialize-textarea {
+      border-color: $brand-success;
+      @include box-shadow(0 1px 0 0 $brand-success);
+    }
+  }
+
+}
+
+.input-group {
+  &.ee-input-group-has-label {
+    margin-top: .9rem;
+  }
+  .ee-input {
+    display: table-cell;
+    input[type="text"],
+    input[type="password"],
+    input[type="search"] {
+      height: 36px;
+      font-weight: bold;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="search"]:focus {
+      height: 35px;
+    }
+  }
 }

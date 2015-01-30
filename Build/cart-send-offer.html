@@ -1016,12 +1016,18 @@
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Saatja e-posti aadress:</label>
 				<div class="col-sm-6">
-					<ul class="list-unstyled">
+					<select name="" id="">
+						<option value="">Teele.Puusemp@netgroup.ee</option>
+						<option value="">kaup@elion.ee</option>
+						<option value="">ariklient@elion.ee</option>
+						<option value="">epood@elion.ee</option>
+					</select>
+					<!-- <ul class="list-unstyled">
 						<li><label class=""><input type="radio" name="radio">Teele.Puusemp@netgroup.ee</label></li>
 						<li><label><input type="radio" name="radio">kaup@elion.ee</label></li>
 						<li><label><input type="radio" name="radio">ariklient@elion.ee</label></li>
 						<li><label><input type="radio" name="radio">epood@elion.ee</label></li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 			<div class="form-group">
@@ -1310,8 +1316,8 @@ $(function(){
 
   // Call calendar and timepicker in general
   // ----------------------------
-    $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime({editable: true});
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
 
     // Initialize Summernote Editor
     $('.summernote').summernote({
@@ -1328,38 +1334,38 @@ $(function(){
 
 // Call xeditable
 //-------------------
-$.fn.editable.defaults.mode = 'inline';
-$(document).ready(function() {
-  $('#nimi').editable();
-  $('#epost').editable();
-  $('#telefon').editable();
-  $('#mobiil').editable();
-  $('#tarneaadress').editable();
-  $('#nimi-shop').editable();
-  $('#telefon-shop').editable();
-  $('#courierDate').editable();
+// $.fn.editable.defaults.mode = 'inline';
+// $(document).ready(function() {
+//   $('#nimi').editable();
+//   $('#epost').editable();
+//   $('#telefon').editable();
+//   $('#mobiil').editable();
+//   $('#tarneaadress').editable();
+//   $('#nimi-shop').editable();
+//   $('#telefon-shop').editable();
+//   $('#courierDate').editable();
 
-  $('#aadress').editable({
-    mode: 'inline',
-    showbuttons: true,
-    url: '/post',
-    pk: 1,
-    title: 'Enter an Italian city',
-    typeahead: {
-        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
-    }
-  });
-});
+  // $('#aadress').editable({
+  //   mode: 'inline',
+  //   showbuttons: true,
+  //   url: '/post',
+  //   pk: 1,
+  //   title: 'Enter an Italian city',
+  //   typeahead: {
+  //       local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+  //   }
+  // });
+// });
 
-$(".datepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".datepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
-$(".timepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".timepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
 
 // Aboutme-page select behavior

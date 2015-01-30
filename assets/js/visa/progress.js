@@ -38,41 +38,19 @@
             try {
                 if(that.$active.offset().top == last.offset().top && that.$active.offset().top == first.offset().top ){
                     tabs.after(content);
-                    console.log('triggered-if');
                 }else{
                     that.$active.after(content);
-                    console.log('triggered-else');
                 }
             }catch(e){
                 tabs.after(content);
-                console.log('triggered-catch');
             }
         }
 
-        $(window).smartresize(function(){
-          console.log('resize');
-          placeContent();
-        });
-
-        // $(window).resize(function() {
-        //     placeContent();
-        // });
-        // $(window).bind('resize', function(e)
-        // {
-        //     window.resizeEvt;
-        //     var width = window.width;
-        //     $(window).resize(function()
-        //     {
-        //         clearTimeout(window.resizeEvt);
-        //         window.resizeEvt = setTimeout(function()
-        //         {
-        //             if(width !== window.width) {
-        //                 placeContent();
-        //             }
-        //             console.log('wtf');
-        //         }, 250);
-        //     });
-        // });
+        if(!jQuery.browser.mobile){
+            $(window).resize(function() {
+                placeContent();
+            });
+        }
     };
 
     Progress.prototype.next = function(){
@@ -156,33 +134,3 @@
 
 
 })(jQuery);
-
-(function($,sr){
-
-  // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-  var debounce = function (func, threshold, execAsap) {
-      var timeout;
-
-      return function debounced () {
-          var obj = this, args = arguments;
-          function delayed () {
-              if (!execAsap)
-                  func.apply(obj, args);
-              timeout = null;
-          };
-
-          if (timeout)
-              clearTimeout(timeout);
-          else if (execAsap)
-              func.apply(obj, args);
-
-          timeout = setTimeout(delayed, threshold || 100);
-      };
-  }
-  // smartresize 
-  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-
-})(jQuery,'smartresize');
-
-// usage:

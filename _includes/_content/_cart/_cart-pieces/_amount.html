@@ -1,13 +1,15 @@
 <div class="input-group pull-right">
   <span class="input-group-btn">
     <button type="button" class="btn btn-link btn-number" disabled="disabled" data-type="minus" data-field="quant[{{no}}]">
-      <span>-</span>
+      <span class="icon icon-minus"></span>
     </button>
   </span>
-  <input type="text" name="quant[{{no}}]" class="form-control input-number ee-default" value="1" min="1" max="10">
+  <div class="ee-input">
+    <input type="text" name="quant[{{no}}]" class="input-number ee-default" value="1" min="1" max="10">
+  </div>
   <span class="input-group-btn">
     <button type="button" class="btn btn-link btn-number" data-type="plus" data-field="quant[{{no}}]">
-      <span>+</span>
+      <span class="icon icon-plus"></span>
     </button>
   </span>
 </div>

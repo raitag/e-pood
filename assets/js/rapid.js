@@ -3,6 +3,7 @@
 /* @include jquery.debouncing */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */
+/* @include jquery-detect-mobile */
 
 // SLIDER STUFF
 /* @include jquery.flexslider */
@@ -42,6 +43,9 @@
 /* @include socialcount.min */
 
 /* @include ee-comparision */
+/* @include velocity.min */
+/* @include ee-inputs */
+/* @include ee-select */
 
 // APP SPECIFIC SCRIPTS
 /* @include scripts */

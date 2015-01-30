@@ -1026,7 +1026,11 @@
           <div class="row">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <div class="row tsr-forms ee-top-20 ee-top-0-xs">
-
+      <div class="well error-well ee-top-20" id="paymentInfoJarelmaks">
+        <span class="icon icon-alert"></span>
+        <p class="col-xs-10 col-sm-11">Sry, sa ei saa mingil põhjusel ettmaksu valida. Pöördu teenindaja poole <a href="#" ><u>siin</u></a>, et asja lahendada.</p>
+        <div class="clearfix"></div>
+      </div>
       <div class="col-sm-6 col-md-4">
         <h4>Olen:</h4>
         <div class="select-container">
@@ -1050,19 +1054,15 @@
 
       <div class="col-sm-12 col-md-4 ee-top-20">
 
-        <div class="panel panel-primary" id="paymentInfoPangalink">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Pangalingiga
-          </div>
-          <div class="panel-body">
+        <div class="well info-well" id="paymentInfoPangalink">
+          <span class="icon icon-info"></span>
+          <p>Pangalingiga</p>
+          <p>
             <small>
               Siin on pangalingi selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
             </small>
-          </div>
+          </p>
         </div>
-          <div class="well error-well ee-top-20" id="paymentInfoJarelmaks">
-            <span class="icon icon-alert"></span><p>Sry, sa ei saa mingil põhjusel ettmaksu valida. Pöördu teenindaja poole <a href="#" ><u>siin</u></a>, et asja lahendada.</p>
-          </div>
         <!-- <div class="panel panel-warning" id="paymentInfoJarelmaks">
           <div class="panel-heading" style="color: #fff;">
             <span class="icon icon-alert"></span>  Järelmaksuga
@@ -1073,15 +1073,14 @@
             </small>
           </div>
         </div> -->
-        <div class="panel panel-primary" id="paymentInfoEttemaks">
-          <div class="panel-heading">
-            <span class="icon icon-info"></span>  Ettemaksuga
-          </div>
-          <div class="panel-body">
+        <div class="well info-well" id="paymentInfoEttemaks">
+          <span class="icon icon-info"></span>
+          <p>Ettemaksuga</p>
+          <p>
             <small>
               Siin on ettemaksu selgitustekst, see mis meil küsimärgi all praegu. Muudub vastavalt sellele, mis valitud.
             </small>
-          </div>
+          </p>
         </div>
       </div>
     </div>
@@ -1129,27 +1128,35 @@
         <h4>Arve andmed:</h4>
         <form id="about" method="post" class="form-horizontal" role="form">
           <div class="form-group">
-            <label for="name" class="col-sm-3 control-label">Nimi*</label>
-            <div class="col-sm-9">
-              <label class="control-label-left">Anton Keks</label>
+            <div class="col-sm-12">
+              <div class="ee-input">
+                <input type="text" id="name-1" value="Anton Keks">
+                <label for="name-1">Nimi*</label>
+              </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">E-post*</label>
-            <div class="col-sm-9">
-              <a href="#" id="epost" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta e-posti aadress">keks@kummi.ee</a>
+            <div class="col-sm-12">
+              <div class="ee-input">
+                <input type="text" id="email-1">
+                <label for="email-1">E-post*</label>
+              </div>
             </div>
           </div>
           <div class="form-group ">
-            <label for="phone" class="col-sm-3 control-label">Telefon*</label>
-            <div class="col-sm-9">
-              <a href="#" id="telefon" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666</a>
+            <div class="col-sm-12">
+              <div class="ee-input">
+                <input type="text" id="phone-1">
+                <label for="phone-1">Telefon*</label>
+              </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="address" class="col-sm-3 control-label">Aadress*<a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Aadress"><i class="icon icon-help"></i></a></label>
-            <div class="col-sm-9">
-              <a href="#" id="aadress" data-type="typeaheadjs" data-inputclass="editable" data-pk="1" data-url="/post" data-title="Sisesta arveaadress">Suur-Karja 4-8 Tallinn</a>
+            <div class="col-sm-12">
+              <div class="ee-input">
+                <input type="text" id="address-1">
+                <label for="address-1">Aadress*<a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Kauba võid tellida ka mõnele muule aadressile ja teise isiku nimele - seda saad täpsustada ülejärgmises sammus " data-original-title="Aadress"><i class="icon icon-help"></i></a></label>
+              </div>
             </div>
           </div>
           <!-- <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext"> &nbsp;&nbsp; Tarneaadress on sama, mis arveaadress</span></label> -->
@@ -1477,8 +1484,8 @@ $(function(){
 
   // Call calendar and timepicker in general
   // ----------------------------
-    $('.datepicker').pickadate({editable: true});
-    $('.timepicker').pickatime({editable: true});
+    $('.datepicker').pickadate();
+    $('.timepicker').pickatime();
 
     // Initialize Summernote Editor
     $('.summernote').summernote({
@@ -1495,38 +1502,38 @@ $(function(){
 
 // Call xeditable
 //-------------------
-$.fn.editable.defaults.mode = 'inline';
-$(document).ready(function() {
-  $('#nimi').editable();
-  $('#epost').editable();
-  $('#telefon').editable();
-  $('#mobiil').editable();
-  $('#tarneaadress').editable();
-  $('#nimi-shop').editable();
-  $('#telefon-shop').editable();
-  $('#courierDate').editable();
+// $.fn.editable.defaults.mode = 'inline';
+// $(document).ready(function() {
+//   $('#nimi').editable();
+//   $('#epost').editable();
+//   $('#telefon').editable();
+//   $('#mobiil').editable();
+//   $('#tarneaadress').editable();
+//   $('#nimi-shop').editable();
+//   $('#telefon-shop').editable();
+//   $('#courierDate').editable();
 
-  $('#aadress').editable({
-    mode: 'inline',
-    showbuttons: true,
-    url: '/post',
-    pk: 1,
-    title: 'Enter an Italian city',
-    typeahead: {
-        local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
-    }
-  });
-});
+  // $('#aadress').editable({
+  //   mode: 'inline',
+  //   showbuttons: true,
+  //   url: '/post',
+  //   pk: 1,
+  //   title: 'Enter an Italian city',
+  //   typeahead: {
+  //       local: ['Väike-Konnakotka tänav 46-17 Lääne Virumaa Kohtla-Järve', 'Milan', 'Venice', 'Florence']
+  //   }
+  // });
+// });
 
-$(".datepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".datepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
-$(".timepicker").editable({
-    tpl: "<input type='text' class='form-control'></input>",
-    format: "yyyy-mm-dd hh:ii" 
-});
+// $(".timepicker").editable({
+//     tpl: "<input type='text' class='form-control'></input>",
+//     format: "yyyy-mm-dd hh:ii" 
+// });
 
 
 // Aboutme-page select behavior
