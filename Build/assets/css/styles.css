@@ -22543,10 +22543,10 @@ h4 {
 .navbar-default .navbar-brand {
   display: block;
   width: 180px;
-  height: 70px;
-  background: transparent url(elion-logo.png) left center no-repeat;
-   background-image: -webkit-linear-gradient(transparent, transparent), url(elion-logo.svg);
-   background-image: linear-gradient(transparent, transparent), url(elion-logo.svg); }
+  height: 80px;
+  background: transparent url(../img/branding/elion-logo.png) left center no-repeat;
+   background-image: -webkit-linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
+   background-image: linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg); }
 
 .navbar > .container .navbar-brand {
   margin-left: 0; }
