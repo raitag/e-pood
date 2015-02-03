@@ -723,3 +723,20 @@ label.control-label-left {
     padding-left: 30px;
   }
 }
+
+#additional-products-modal {
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-body {
+    padding: 0 15px;
+    .ee-buy {
+      margin: 15px 0;
+      display: block;
+    }
+  }
+  .modal-footer {
+    border-color: $lightgrey-t;
+    margin-top: 20px;
+  }
+}

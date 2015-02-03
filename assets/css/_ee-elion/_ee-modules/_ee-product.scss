@@ -98,7 +98,7 @@ section.tsr-section-productAndService-listing {
 // PRODUCT BOXES
 // *******************
 // rule to handle product boxes layout
-.container.ee-nogap, .container .ee-nogap {
+.container.ee-nogap, .container .ee-nogap, .ee-nogap {
   padding-right: 0;
   padding-left: 0;
   & [class*="col-"] {

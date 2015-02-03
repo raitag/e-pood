@@ -549,3 +549,17 @@
 .input-group-addon:last-child {
   border-left: 1px solid #dbdbdb;
 }
+
+.btn-hidden-overview,
+.btn-hidden-overview:active,
+.btn-hidden-overview:focus {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #dbdbdb;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -15px;
+}

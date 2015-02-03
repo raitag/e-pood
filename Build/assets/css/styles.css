@@ -20484,10 +20484,10 @@ section.tsr-section-productAndService-listing {
       font-size: 115%;
       line-height: 115%; }
 
-.container.ee-nogap, .container .ee-nogap {
+.container.ee-nogap, .container .ee-nogap, .ee-nogap {
   padding-right: 0;
   padding-left: 0; }
-  .container.ee-nogap [class*="col-"], .container .ee-nogap [class*="col-"] {
+  .container.ee-nogap [class*="col-"], .container .ee-nogap [class*="col-"], .ee-nogap [class*="col-"] {
     margin: 0 -1px 0 0;
     padding: 0; }
 
@@ -22055,6 +22055,19 @@ header .megamenu .search-item-image,
 .input-group-addon:last-child {
   border-left: 1px solid #dbdbdb; }
 
+.btn-hidden-overview,
+.btn-hidden-overview:active,
+.btn-hidden-overview:focus {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #dbdbdb;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -15px; }
+
 .has-error .onoffswitch-inner:after {
   content: "Ei";
   padding-right: 10px;
@@ -22838,3 +22851,14 @@ label.control-label-left {
 
 .tsr-checkbox .control-label-left {
   padding-left: 30px; }
+
+#additional-products-modal .modal-header {
+  border-bottom: none; }
+#additional-products-modal .modal-body {
+  padding: 0 15px; }
+  #additional-products-modal .modal-body .ee-buy {
+    margin: 15px 0;
+    display: block; }
+#additional-products-modal .modal-footer {
+  border-color: #dbdbdb;
+  margin-top: 20px; }

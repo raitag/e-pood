@@ -1240,7 +1240,7 @@
         {{/if}}
       </div>
       <div class="col-sm-6 ee-actions">
-        <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
+        <button class="btn btn-default btn-block ee-btn-buy" data-toggle="modal" data-target="#additional-products-modal">Lisa ostukorvi</button>
       </div>
     </div>
 
@@ -1378,7 +1378,7 @@
 
   <div class="row ee-actions">
     <div class="col-sm-6">
-      <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
+      <button class="btn btn-default btn-block ee-btn-buy" data-toggle="modal" data-target="#additional-products-modal">Lisa ostukorvi</button>
       <ul class="list-inline ee-linkicons">
       <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
@@ -1406,6 +1406,74 @@
 
 {{/with}}
 </script>
+
+
+<div class="modal fade" id="additional-products-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Eeldustooted</h4>
+        <h6>NB! Selle tootega soovitame kaasa osta järgmiseid tooteid</h6>
+      </div>
+      <div class="modal-body">
+        <section>
+          <div class="tsr-section-productAndService-listing">
+            
+              <div class="row ee-nogap" id="content-placeholder-phones-boxes"></div> 
+
+              <script id="product-phones-boxes-template" type="text/x-handlebars-template">
+
+                {{#phones}}
+                <div class="col-sm-4">
+                  <div class="tsr-module-product ee-blockview">
+                    {{#if ribbon}}
+                      <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">{{ribbon.text}}</span></span></span></figure>
+                    {{/if}}
+
+                    <figure class="tsr-product-image">
+                      <a href="detail.html">
+                        <img src="assets/img/phones/{{id}}.jpg" id="img{{id}}">
+                      </a>
+                    </figure>
+                    <div class="tsr-product-content">
+                      {{#if firstflash}}
+                      <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+                      {{/if}}
+                      {{#if secondflash}}
+                      <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+                      {{/if}}
+                      <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
+
+                      {{#if client_price}}
+                      <p class="tsr-product-price ee-product-price-md">Kliendihind <span>{{client_price}}</span></p>
+                      {{else}} {{#if normal_price}} 
+                      <p class="tsr-product-price ee-product-price-md">Tavahind <span>{{normal_price}}</span></p>
+                      {{else}}
+                      <p class="tsr-product-price"></p>
+                        {{/if}}
+                      {{/if}}
+                      <a href="#" class="ee-buy"> Lisa ostukorvi </a>
+                    </div>
+                  </div>
+                </div>
+
+                {{/phones}}
+              </script>
+      
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 pull-right">
+            <button type="button" class="btn btn-default ee-btn-buy btn-block" onclick="location.href='cart-overview.html'">Suundu ostukorvi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--     <div class="col-md-5  col-xs-6" ><a href="#" class="ee-comments">Arvamused (5)</a></div>
     <div class="col-md-3   col-xs-6"><a href="#" class="ee-compare">Võrdle</a></div>
@@ -2299,6 +2367,7 @@ $(document).ready(function(){
     <script src="assets/data/handlebars/hbs-reviews.hbs"></script>
     <script src="assets/data/handlebars/hbs-slider-detail.hbs"></script>
     <script src="assets/data/handlebars/hbs-products.hbs"></script>
+    <script src="assets/data/handlebars/hbs-phones-boxes.hbs"></script>
 
     <script type="text/javascript">
     // require(['/assets/js/setup.js'], function (setup) {
