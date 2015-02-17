@@ -22608,6 +22608,9 @@ h4 {
   .ee-text-left-sm {
     text-align: left !important; } }
 
+.ee-inline-block {
+  display: inline-block; }
+
 .ee-hidden-xs {
   display: none !important; }
   @media (min-width: 768px) {
@@ -22862,3 +22865,7 @@ label.control-label-left {
 #additional-products-modal .modal-footer {
   border-color: #dbdbdb;
   margin-top: 20px; }
+
+.ee-overview-prices h4,
+.ee-overview-prices h6 {
+  margin-bottom: 0; }
