@@ -129,32 +129,34 @@
                   <h4>Soovin kaubad kätte saada</h4>
                   <form action="" class="form-horizontal"> 
                     <div class="form-group">
-                      <label for="email" class="col-sm-6 col-md-2 control-label">Kuupäev</label>
-                      <div class="col-sm-6 col-md-10">
-                        <a href="#" id="courierDate" data-type="text" data-pk="1" data-title="" class="datepicker">14.02.2014 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
+                      <div class="col-sm-12">
+                        <div class="ee-input">
+                          <input type="text" class="datepicker" id="datepicker-1" value="14.02.2015">
+                          <label for="datepicker-1">Kuupäev</label>
+                        </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="email" class="col-sm-6 col-md-2 control-label">Kell</label>
-                      <div class="col-sm-6 col-md-6">
-                        <div class="select-container">
-                          <select id="chooseTime">
-                            <option selected>8.00-14.00</option>
-                            <option>14.00-16.00</option>
-                            <option>16.00-18.00</option>
-                          </select>
-                        </div>
+                      <div class="col-sm-12">
+                        <label class="ee-select-label">Kell</label>
+                        <select>
+                          <option selected>8.00-14.00</option>
+                          <option>14.00-16.00</option>
+                          <option>16.00-18.00</option>
+                        </select>
                       </div>
                     </div>
                   </form>
                 </div>
-                <div class="col-sm-6 col-md-6 ee-top-20-xs">
+                <div class="col-sm-6 col-md-6">
                   <h4>Lisainformatsioon</h4>
                   <form action="" class="form-horizontal">
                     <div class="form-group ">
-                      <label for="phone" class="col-sm-6 col-md-2 control-label">Tellimuse viide</label>
-                      <div class="col-sm-6 col-md-10">
-                        <input class="form-control" id="phone" name="phone" type="text" placeholder="Max 20 tähte">
+                      <div class="col-sm-12">
+                        <div class="ee-input">
+                          <label for="phone">Tellimuse viide</label>
+                          <input id="phone" name="phone" type="text" placeholder="Max 20 tähte">
+                        </div>
                       </div>
                     </div>
                   </form>
@@ -195,18 +197,20 @@
             </div>
           </div>      
 
-          <div class="col-sm-12 col-md-10 col-md-offset-1">
-
-            <div class="row">
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
               <hr class="hidden-xs">
-              <div class="col-sm-4 ee-top-10">
-                <button class="btn btn-link btn-block" onClick="location.href= <!-- $nextstep --> " >Tühistan pakkumuse</button>
-              </div>
-              <div class="col-sm-2 col-sm-offset-2 text-right ee-top-10">
-                <button class="btn btn-link btn-block" onClick="location.href= <!-- $prevstep --> " >Tagasi</button>
-              </div>
-              <div class="col-sm-4">
-                <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= <!-- $nextstep --> " >Jätka ostmist</button>
+              <div class="row">
+                
+                <div class="col-sm-3 ee-top-10">
+                  <button class="btn btn-link btn-block" onClick="location.href= <!-- $nextstep --> " >Tühistan pakkumuse</button>
+                </div>
+                <div class="col-sm-2 col-sm-offset-3 text-right ee-top-10">
+                  <button class="btn btn-link btn-block" onClick="location.href= <!-- $prevstep --> " >Tagasi</button>
+                </div>
+                <div class="col-sm-4">
+                  <button class="btn btn-default btn-block ee-btn-buy pull-right" onClick="location.href= <!-- $nextstep --> " >Jätka ostmist</button>
+                </div>
               </div>
             </div>
           </div>

@@ -3,24 +3,22 @@
 
     <form id="about" method="post" class="form-horizontal" role="form">
       <h4>Vali linn:</h4>
-      <div class="select-container">
-        <select id="chooseCity">
-          <!-- @include omniva-city -->
-        </select>
-      </div>
+      <select>
+        <!-- @include omniva-city -->
+      </select>
       <div id="pointOmniva">
         <h4 class="ee-top-20">Vali asukoht:</h4>
-        <div class="select-container">
-          <select id="chooseSpot">
-            <!-- @include omniva-tallinn -->
-          </select>
-        </div>
+        <select>
+          <!-- @include omniva-tallinn -->
+        </select>
       </div>
       <h4 class="ee-top-20">Sõnum paki saabumisest saata:</h4>
       <div class="form-group ">
-        <label for="name" class="col-sm-4 control-label">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
-        <div class="col-sm-8">
-          <a href="#" id="mobiil" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta mobiilinumber">693537453</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="mobile-nr" placeholder="Sisesta mobiilinumber">
+            <label for="mobile-nr">Mobiilinumbrile <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" title="" data-content=" Mobiiltelefoni number on vajalik, kuna sellele saadetakse teavitus paki jõudmisest valitud automaati. Palun kontrolli sisestatud numbri korrektsust. " data-original-title="Mobiilinumber"><i class="icon icon-help"></i></a></label>
+          </div>
         </div>
       </div>
     </form>

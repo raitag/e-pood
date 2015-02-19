@@ -1,4 +1,11 @@
 // select
+label {
+  &.ee-select-label {
+    font-size: $label-font-size;
+    color: $border-color;
+    margin: 0;
+  }
+}
 .select-wrapper {
   span.select-dropdown {
     position: relative;

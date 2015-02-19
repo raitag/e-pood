@@ -1047,14 +1047,15 @@
               <h6>{{name}}</h6>
 
               {{#if special_price}}
-              <a data-toggle="collapse"  href="#comment-{{id}}">Lisa kommentaar</a>
-              <div id="comment-{{id}}" class="panel-collapse collapse js-flexrow ee-bottom-20">
-                <div class="row">
+              
+              <div class="row">
                 <div class="col-xs-11">
-                  <input type="text" class="form-control" name="comment" value="" id="comment" autofocus />
+                  <div class="ee-input">
+                    <input type="text" name="comment" value="" id="comment-{{id}}" />
+                    <label for="comment-{{id}}">Kommentaar</label>
+                  </div>
                 </div>
-                <button type="button" class="close" data-toggle="collapse" href="#comment-{{id}}"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                </div>
+                <button type="button" class="close" href="#comment-{{id}}"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
               </div>
               
               {{/if}}
@@ -1114,20 +1115,18 @@
   <div class="row tsr-forms">
     <form action="" class="form-horizontal">
       <div class="col-sm-6">
-        <div class="select-container">
-          <select id="selectDiscount">
+          <select>
             <option selected>Soodustus (max 120 €)</option>
             <option>Uus hind (min 280 €)</option>
           </select>
-        </div>
       </div>
       <div class="col-sm-5 col-sm-offset-1">
         <div class="form-group">
             <div class="col-sm-9">
               <div class="ee-input">
-                <!-- input ei tööta kuna kõigil sama id-->
-                <input type="text" id="soodustus-2" placeholder="€">
-                <label for="soodustus-2">Soodustus</label>
+                <!-- NOTICE: input ei tööta handlebarsi pärast-->
+                <input type="text" id="soodustus-{{id}}" placeholder="€">
+                <label for="soodustus-{{id}}">Soodustus</label>
               </div>
             </div>
           </div>
@@ -1186,26 +1185,40 @@
 </div> 
           <div class="row">
   <div class="col-md-10 col-md-offset-1">
-    <div class="row">
-      <div class="col-sm-5 col-sm-offset-7">
-        <h4 ="ee-top-20">
-          Ostukorv kokku
-          <div class="pull-right ee-product-price-md">
-            <strong>269.99 €</strong>
+    <div class="row ee-overview-prices">      
+      <div class="col-sm-6 col-sm-offset-6">
+        <div class="row">
+          <div class="col-xs-7">
+            <h4>Ostukorv kokku</h4>
           </div>
-        </h4>
-        <h6>
-          Summa käibemaksuta 
-          <div class="pull-right">
-            <strong>169.99 €</strong>
+          <div class="col-xs-5">
+            <h4 class="pull-right">
+              <strong class="ee-product-price-md">2169.99 €</strong>
+            </h4>
           </div>
-        </h6>
-        <h6>
-          Käibemaks 
-          <div class="pull-right">
-            <strong>69.99 €</strong>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-7">
+            <h6>Summa käibemaksuta</h6>    
           </div>
-        </h6>
+          <div class="col-xs-5">
+            <h6 class="pull-right">
+              <strong>1069.99 €</strong>
+            </h6>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-7">
+            <h6>Käibemaks</h6>
+          </div>
+          <div class="col-xs-5">
+            <h6 class="pull-right">
+              <strong>69.99 €</strong>
+            </h6>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -1279,99 +1292,98 @@
       <h4>Toodet koodiga <strong>66666666</strong> ei leitud, lisa see hinnakirja</h4>
       <form class="form-horizontal" action="" method="post" id="">
         <div class="form-group">
-          <label for="name" class="col-sm-2 control-label">Tootekood</label>
-          <div class="col-sm-10">
-            <label class="control-label-left">666666</label>
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <input type="text" id="code-5">
+              <label for="code-5">Tootekood</label>
+            </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Toote nimetus*</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control">
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <input type="text" id="name-5">
+              <label for="name-5">Toote nimetus*</label>
+            </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Hind*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">€</div>
+            <div class="ee-input">
+              <input type="text" id="price-5" placeholder="€">
+              <label for="price-5">Hind*</label>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Kaubagrupp*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski kaubagrupp</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
+          
+          <div class="col-sm-8">
+            <label class="ee-select-label">Kaubagrupp*</label>
+            <select>
+              <option selected>Miski kaubagrupp</option>
+              <option>Järelmaksuga</option>
+              <option>Ettemaksuga</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tootja*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski tootja</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
+          <div class="col-sm-8">
+            <label class="ee-select-label">Tootja*</label>
+            <select>
+              <option selected>Miski tootja</option>
+              <option>Järelmaksuga</option>
+              <option>Ettemaksuga</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Garantii erakliendile*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
+            <div class="ee-input">
+              <label for="garantii-5">Garantii erakliendile*</label>
+              <input id="garantii-5" type="text" placeholder="kuud">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Garantii ärikliendile*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
+            <div class="ee-input">
+              <label for="garantii-6">Garantii ärikliendile*</label>
+              <input id="garantii-6" type="text" placeholder="kuud">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tootjagarantii*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
+            <div class="ee-input">
+              <label for="garantii-7">Tootjagarantii*</label>
+              <input id="garantii-7" type="text" placeholder="kuud">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Toote kommentaar</label>
-          <div class="col-sm-10">
-            <textarea name="" id="" cols="30" rows="5"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Lattu saabumise kuupäev</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control datepicker" value="">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tarnekoht*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski firma</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <label for="comment-5">Toote kommentaar</label>
+              <textarea name="" id="comment-5" class="ee-textarea" cols="30" rows="5"></textarea>
             </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <label for="arrival-5">Lattu saabumise kuupäev</label>
+              <input type="text" id="arrival-5" class="datepicker" value="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            <label class="ee-select-label">Tarnekoht*</label>
+            <select>
+              <option selected>Miski firma</option>
+              <option>Järelmaksuga</option>
+              <option>Ettemaksuga</option>
+            </select>
           </div>
         </div>
       </form>

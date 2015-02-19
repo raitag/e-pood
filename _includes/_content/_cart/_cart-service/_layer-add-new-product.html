@@ -5,99 +5,98 @@
       <h4>Toodet koodiga <strong>66666666</strong> ei leitud, lisa see hinnakirja</h4>
       <form class="form-horizontal" action="" method="post" id="">
         <div class="form-group">
-          <label for="name" class="col-sm-2 control-label">Tootekood</label>
-          <div class="col-sm-10">
-            <label class="control-label-left">666666</label>
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <input type="text" id="code-5">
+              <label for="code-5">Tootekood</label>
+            </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Toote nimetus*</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control">
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <input type="text" id="name-5">
+              <label for="name-5">Toote nimetus*</label>
+            </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Hind*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">€</div>
+            <div class="ee-input">
+              <input type="text" id="price-5" placeholder="€">
+              <label for="price-5">Hind*</label>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Kaubagrupp*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski kaubagrupp</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
+          
+          <div class="col-sm-8">
+            <label class="ee-select-label">Kaubagrupp*</label>
+            <select>
+              <option selected>Miski kaubagrupp</option>
+              <option>Järelmaksuga</option>
+              <option>Ettemaksuga</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tootja*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski tootja</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
-            </div>
+          <div class="col-sm-8">
+            <label class="ee-select-label">Tootja*</label>
+            <select>
+              <option selected>Miski tootja</option>
+              <option>Järelmaksuga</option>
+              <option>Ettemaksuga</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Garantii erakliendile*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
+            <div class="ee-input">
+              <label for="garantii-5">Garantii erakliendile*</label>
+              <input id="garantii-5" type="text" placeholder="kuud">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Garantii ärikliendile*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
+            <div class="ee-input">
+              <label for="garantii-6">Garantii ärikliendile*</label>
+              <input id="garantii-6" type="text" placeholder="kuud">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tootjagarantii*</label>
           <div class="col-sm-4">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">kuud</div>
+            <div class="ee-input">
+              <label for="garantii-7">Tootjagarantii*</label>
+              <input id="garantii-7" type="text" placeholder="kuud">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Toote kommentaar</label>
-          <div class="col-sm-10">
-            <textarea name="" id="" cols="30" rows="5"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Lattu saabumise kuupäev</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control datepicker" value="">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-2 control-label">Tarnekoht*</label>
-          <div class="col-sm-10">
-            <div class="select-container">
-              <select id="choosePayment">
-                <option selected>Miski firma</option>
-                <option>Järelmaksuga</option>
-                <option>Ettemaksuga</option>
-              </select>
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <label for="comment-5">Toote kommentaar</label>
+              <textarea name="" id="comment-5" class="ee-textarea" cols="30" rows="5"></textarea>
             </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            <div class="ee-input">
+              <label for="arrival-5">Lattu saabumise kuupäev</label>
+              <input type="text" id="arrival-5" class="datepicker" value="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            <label class="ee-select-label">Tarnekoht*</label>
+            <select>
+              <option selected>Miski firma</option>
+              <option>Järelmaksuga</option>
+              <option>Ettemaksuga</option>
+            </select>
           </div>
         </div>
       </form>

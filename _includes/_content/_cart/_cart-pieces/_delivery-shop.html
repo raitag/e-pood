@@ -1,23 +1,27 @@
 <div class="row tsr-forms" id="deliveryWhereShop">
   <div class="col-sm-8">
-    <h4>Vali pood:</h4>
-    <div class="select-container">
-      <select id="chooseShop">
+    <form id="about" method="post" class="form-horizontal" role="form">
+      <h4>Vali pood:</h4>
+      
+      <select>
         <!-- @include itella -->
       </select>
-    </div>
-    <h4 class="ee-top-20">Kauba võtab vastu:</h4>
-    <form id="about" method="post" class="form-horizontal" role="form">
+      <h4 class="ee-top-20">Kauba võtab vastu:</h4>
+    
       <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Nimi</label>
-        <div class="col-sm-10">
-          <a href="#" id="nimi-shop" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Anton Keks</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="name-3">
+            <label for="name-3">Nimi</label>  
+          </div>
         </div>
       </div>
       <div class="form-group ">
-        <label for="phone" class="col-sm-2 control-label">Telefon</label>
-        <div class="col-sm-10">
-          <a href="#" id="telefon-shop" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta kontakttelefon">666 6666</a>
+        <div class="col-sm-12">
+          <div class="ee-input">
+            <input type="text" id="phone-4">
+            <label for="phone-4">Telefon</label>  
+          </div>
         </div>
       </div>
     </form>
@@ -33,19 +37,16 @@
       <strong>Lahtiolekuajad:</strong><br>
       E-R 9.00 - 18.00, L: 10.00-16.00, P: suletud 
     </p>
-    <div class="panel panel-primary" id="deliveryInfoShop">
-      <div class="panel-heading">
-        <span class="icon icon-info"></span>  Pane tähele!
-      </div>
-      <div class="panel-body">
-        <small>
-          <dl>
-            <dd>- Valides kauba Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque minima facere earum quae ipsa et, quia amet repellat quis, quas praesentium corporis! Minus dignissimos reprehenderit voluptates atque pariatur natus, obcaecati!</dd>
-            <dd>- Tellimuse täitmise aja teatab teenindaja 1 tööpäeva jooksul alates makse laekumisest</dd>
-          </dl>
-
-        </small>
-      </div>
+    <div class="well info-well" id="deliveryInfoShop">
+      <span class="icon icon-info"></span>
+      <p>Pane tähele!</p>
+      
+      <small>
+        <dl>
+          <dd>- Valides kauba Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque minima facere earum quae ipsa et, quia amet repellat quis, quas praesentium corporis! Minus dignissimos reprehenderit voluptates atque pariatur natus, obcaecati!</dd>
+          <dd>- Tellimuse täitmise aja teatab teenindaja 1 tööpäeva jooksul alates makse laekumisest</dd>
+        </dl>
+      </small>
     </div>
   </div>
 

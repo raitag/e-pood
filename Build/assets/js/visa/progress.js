@@ -46,11 +46,14 @@
             }
         }
 
-        if(!jQuery.browser.mobile){
+        var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        if(!jQuery.browser.mobile && !isAndroid && !isiDevice){
             $(window).resize(function() {
                 placeContent();
             });
         }
+        
     };
 
     Progress.prototype.next = function(){

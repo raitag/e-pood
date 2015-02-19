@@ -1003,7 +1003,8 @@
         </ol>
       </div>
       <div class="progress-content clearfix">
-        <div class="col-sm-12 col-md-10 col-md-offset-1  ee-top-20 ">
+        <div class="row">
+<div class="col-sm-12 col-md-10 col-md-offset-1  ee-top-20 ">
   <form id="about" method="post" class="form-horizontal" role="form">
     <div class="well info-well">
       <span class="icon icon-info"></span><p class="col-xs-10 col-sm-11">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit debitis enim impedit in voluptate, similique tempore. Ipsa nobis, ducimus consequuntur?<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae consequatur vitae, reiciendis voluptatum, quo molestiae. Iste, ex, blanditiis. Delectus vero, culpa libero id impedit debitis ea autem voluptatibus amet fuga?</p>
@@ -1011,41 +1012,37 @@
     </div>
     <div class="row">
       <div class="col-sm-6 col-md-8 tsr-forms">
+        <form action="" class="form-horizontal">
 
-        <h4>Keskmine netosissetulek kuus:</h4>
-        <div class="select-container">
+          <h4>Keskmine netosissetulek kuus:</h4>
           <select id="">
             <option selected>0-300 €</option>
             <option>0-300 €</option>
             <option>0-300 €</option>
           </select>
-        </div>
 
         <h4 class="ee-top-20">Igakuised kohustused:</h4>
         <div class="form-group">
-          <label for="discount" class="col-sm-4 control-label">Laenud</label>
-          <div class="col-sm-8">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">€/kuus</div>
+          <div class="col-sm-12">
+            <div class="ee-input">
+              <input type="text" placeholder="€/kuus" id="loan-3">
+              <label for="loan-3">Laenud</label>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="discount" class="col-sm-4 control-label">Järelmaksud</label>
-          <div class="col-sm-8">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">€/kuus</div>
+          <div class="col-sm-12">
+            <div class="ee-input">
+              <input type="text" placeholder="€/kuus" id="discount-3">
+              <label for="discount-3">Järelmaksud</label>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="discount" class="col-sm-4 control-label">Liisingud</label>
-          <div class="col-sm-8">
-            <div class="input-group">
-              <input class="form-control" type="text">
-              <div class="input-group-addon">€/kuus</div>
+          <div class="col-sm-12">
+            <div class="ee-input">
+              <input type="text"  placeholder="€/kuus" id="liising-3">
+              <label for="liising-3">Liisingud</label>
             </div>
           </div>
         </div>
@@ -1056,7 +1053,7 @@
 
           </div>
         </div>
-
+        </form>
       </div>
 
       <div class="col-sm-6 col-md-4 tsr-forms">
@@ -1112,6 +1109,7 @@
       </div>
     </div>
   </form>
+</div>
 </div>
 
         <div class="row">

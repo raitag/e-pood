@@ -25,9 +25,16 @@
   margin-top: 5px;
 }
 
-.progress-content .close {
-  margin-top: 5px;
-}
+.progress-content {
+  .close {
+    margin-top: 5px;
+  }
+  .modal {
+    .close {
+      margin-top: 2px;
+    }
+  }
+} 
 
 .ee-vertical-middle {
   @extend %vertical-align;
@@ -104,7 +111,7 @@
       @extend %parent-of-vertical-align;
       height: auto;
       @include media-min($screen-sm) {
-        height: 90px;
+        height: 110px;
       }
       & > div {
         position: static;
@@ -141,7 +148,7 @@
     .input-group,
     .input-group span {
       font-weight: bold;
-      max-width: 110px;
+      width: 110px;
       margin-bottom: 10px;
     }
 
@@ -307,6 +314,7 @@
 .cart-overview-heading.panel-default {
   @extend %parent-of-vertical-align;
   height: auto;
+  margin-bottom: 0;
   @include media-min($screen-sm) {
     height: 90px;
   }

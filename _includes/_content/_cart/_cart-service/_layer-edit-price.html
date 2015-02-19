@@ -4,20 +4,18 @@
   <div class="row tsr-forms">
     <form action="" class="form-horizontal">
       <div class="col-sm-6">
-        <div class="select-container">
-          <select id="selectDiscount">
+          <select>
             <option selected>Soodustus (max 120 €)</option>
             <option>Uus hind (min 280 €)</option>
           </select>
-        </div>
       </div>
       <div class="col-sm-5 col-sm-offset-1">
         <div class="form-group">
             <div class="col-sm-9">
               <div class="ee-input">
-                <!-- input ei tööta kuna kõigil sama id-->
-                <input type="text" id="soodustus-2" placeholder="€">
-                <label for="soodustus-2">Soodustus</label>
+                <!-- NOTICE: input ei tööta handlebarsi pärast-->
+                <input type="text" id="soodustus-{{id}}" placeholder="€">
+                <label for="soodustus-{{id}}">Soodustus</label>
               </div>
             </div>
           </div>

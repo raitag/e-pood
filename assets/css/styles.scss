@@ -334,6 +334,10 @@ display: block;
   }
 }
 
+.ee-top-30 {
+  margin-top: 30px;
+}
+
 .ee-top-0-xs {
   @include media-max($screen-xs-max) {
     margin-top: 0 !important;
@@ -474,6 +478,11 @@ outline: none !important;
 .alert {
   a:not(.close-btn) {
     text-decoration: underline;
+  }
+  div>span {
+    @include media-max($screen-xs-max) {
+      display: block;
+    }
   }
 }
 .alert .container > div .read-more {
@@ -687,7 +696,6 @@ label.control-label-left {
 .info-well {
   border-color: $blue-c;
   color: $blue-t;
-
 }
 
 .primary-well {
@@ -702,10 +710,9 @@ label.control-label-left {
     margin-top: 0;
   }
 
-
-  // .close {
-  //   margin-top: 0;
-  // }
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .panel {
@@ -746,8 +753,17 @@ label.control-label-left {
 }
 
 .ee-overview-prices {
+  margin-bottom: 10px;
   h4,
   h6 {
     margin-bottom: 0;
+  }
+  @include media-max($screen-xs-max) {
+    .col-xs-5 {
+      padding-left: 0;
+    }
+    .col-xs-7 {
+      padding-right: 0;
+    }
   }
 }
