@@ -22190,9 +22190,7 @@ header .megamenu .search-item-image,
       transition: opacity 0.4s; }
     .ee-input.ee-input-has-label [placeholder]:-ms-input-placeholder {
       /* IE 10+ */
-      opacity: 0;
-      line-height: normal;
-      vertical-align: top; }
+      color: #f6f6f6; }
     .ee-input.ee-input-has-label [placeholder]:focus::-webkit-input-placeholder {
       opacity: 1; }
     .ee-input.ee-input-has-label [placeholder]:focus:-moz-placeholder {
@@ -22201,10 +22199,9 @@ header .megamenu .search-item-image,
     .ee-input.ee-input-has-label [placeholder]:focus::-moz-placeholder {
       /* FF 19+ */
       opacity: 1; }
-    .ee-input.ee-input-has-label input:focus:-ms-input-placeholder {
+    .ee-input.ee-input-has-label [placeholder]:focus:-ms-input-placeholder {
       /* IE 10+ */
-      opacity: 1;
-      line-height: normal; }
+      color: #333; }
   .ee-input label {
     color: #888888;
     position: absolute;
@@ -22383,46 +22380,45 @@ label.ee-select-label {
   color: #888888;
   margin: 0; }
 
-.select-wrapper span.select-dropdown {
-  position: relative;
-  cursor: pointer;
-  color: #333;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #888888;
-  outline: none;
-  height: 3rem;
-  line-height: 3.5rem;
-  width: 100%;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
-  display: block;
+.select-wrapper {
   position: relative; }
-  .select-wrapper span.select-dropdown:after {
+  .select-wrapper input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    color: #333333;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #888888;
+    outline: none;
+    height: 3rem;
+    line-height: 3.5rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: none;
+    border-radius: 0;
+    text-indent: 0; }
+    .select-wrapper input.select-dropdown:active, .select-wrapper input.select-dropdown:focus {
+      border: none;
+      border-bottom: 1px solid; }
+    .select-wrapper input.select-dropdown.disabled, .select-wrapper input.select-dropdown[disabled] {
+      color: #bbb;
+      background-color: transparent;
+      border-color: #bbb; }
+      .select-wrapper input.select-dropdown.disabled:active, .select-wrapper input.select-dropdown.disabled:focus, .select-wrapper input.select-dropdown[disabled]:active, .select-wrapper input.select-dropdown[disabled]:focus {
+        border: none;
+        border-bottom: 1px solid; }
+    .select-wrapper input.select-dropdown.has-error {
+      color: #ff6319;
+      border-color: #ff6319; }
+      .select-wrapper input.select-dropdown.has-error + .icon {
+        color: #ff6319; }
+  .select-wrapper .icon {
     position: absolute;
     right: 0;
-    font-size: 23px;
-    font-family: 'tsr-icons-all';
-    font-size: 1.1em;
-    padding-right: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transition: color 0.3s ease-in-out;
-    -moz-transition: color 0.3s ease-in-out;
-    -o-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out;
-    content: "\e669"; }
-  .select-wrapper span.select-dropdown.disabled {
-    color: #bbb;
-    background-color: transparent;
-    border-color: #bbb; }
-  .select-wrapper span.select-dropdown.has-error {
-    color: #ff6319;
-    border-color: #ff6319; }
-  .select-wrapper span.select-dropdown.success {
-    color: #00b48c;
-    border-color: #00b48c; }
+    top: 35%; }
 
 select {
   display: none; }
@@ -22432,6 +22428,22 @@ select.browser-default {
 
 select:disabled {
   color: #bbb; }
+
+.select-wrapper input.select-dropdown:disabled {
+  color: #bbb;
+  border-bottom: 1px solid #bbb; }
+
+.select-wrapper i {
+  color: #bbb; }
+
+.select-dropdown li.disabled {
+  color: #999999;
+  background-color: transparent;
+  border-color: transparent; }
+  .select-dropdown li.disabled.active {
+    color: #999999;
+    background-color: transparent;
+    border-color: transparent; }
 
 .dropdown-content {
   display: none;
@@ -22451,17 +22463,17 @@ select:disabled {
   padding: 0; }
   .dropdown-content li {
     cursor: pointer;
-    color: #333; }
+    color: #333333; }
     .dropdown-content li:hover {
       background-color: rgba(0, 0, 0, 0.06); }
     .dropdown-content li > a, .dropdown-content li > span {
       display: block;
       padding: 1em; }
-    .dropdown-content li.disabled {
+    .dropdown-content li.disabled, .dropdown-content li[disabled] {
       color: #999999;
       background-color: transparent;
       border-color: transparent; }
-      .dropdown-content li.disabled:hover {
+      .dropdown-content li.disabled:hover, .dropdown-content li[disabled]:hover {
         cursor: default;
         background-color: transparent;
         border-color: transparent; }

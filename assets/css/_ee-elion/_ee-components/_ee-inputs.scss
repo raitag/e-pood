@@ -29,9 +29,7 @@ $label-font-size: .8125rem;
     }
     [placeholder]:-ms-input-placeholder {
       /* IE 10+ */
-      opacity: 0;
-      line-height: normal;
-      vertical-align: top;
+      color: $lightgrey-c;
     }
 
     [placeholder]:focus::-webkit-input-placeholder {
@@ -45,10 +43,9 @@ $label-font-size: .8125rem;
       /* FF 19+ */
       opacity: 1;
     }
-    input:focus:-ms-input-placeholder {
+    [placeholder]:focus:-ms-input-placeholder {
       /* IE 10+ */
-      opacity: 1;
-      line-height: normal;
+      color: #333;
     }
   }
 
