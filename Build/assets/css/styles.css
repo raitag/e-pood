@@ -21881,6 +21881,14 @@ header .megamenu .search-item-image,
       .add-serial.arrow_box:after, .add-serial.arrow_box:before {
         left: 60%; } }
 
+.find-client {
+  margin-top: 16px; }
+  .find-client.arrow_box:after, .find-client.arrow_box:before {
+    left: 42%; }
+    @media (max-width: 767px) {
+      .find-client.arrow_box:after, .find-client.arrow_box:before {
+        left: 50%; } }
+
 .cart-overview-heading.panel-default {
   height: auto;
   margin-bottom: 0; }

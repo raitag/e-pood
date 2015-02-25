@@ -311,6 +311,17 @@
   }
 }
 
+.find-client {
+  margin-top: 16px;
+  &.arrow_box:after, 
+  &.arrow_box:before {
+    left: 42%;
+    @include media-max($screen-xs-max) {
+      left: 50%;
+    }
+  }
+}
+
 .cart-overview-heading.panel-default {
   @extend %parent-of-vertical-align;
   height: auto;

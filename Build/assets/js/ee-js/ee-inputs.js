@@ -1,9 +1,19 @@
 // INPUT JS
-$(function () {  
-  initInput(inputs);  
-});
+$(document).ready(function () {
+  var inputs = $('.ee-input input, .ee-input textarea');
+  initInput(inputs);
 
-var inputs = $('.ee-input input, .ee-input textarea'); 
+  inputs.focus(function () {
+    var input_id = $(this).attr('id');
+    $('label[for="' + input_id + '"]').addClass('active');
+  });
+  inputs.blur(function () {
+    if ($(this).val() == '') {
+      var input_id = $(this).attr('id');
+      $('label[for="' + input_id + '"]').removeClass('active');
+    }
+  });
+});
 
 function initInput (inputs) {
   inputs.each(function() {
@@ -14,14 +24,3 @@ function initInput (inputs) {
   });
   $('.ee-input:has(label)').addClass('ee-input-has-label');
 }
-
-inputs.focus(function() {
-  var input_id = $(this).attr('id');
-  $('label[for="'+input_id+'"]').addClass('active');
-});
-inputs.blur(function() {
-  if ($(this).val() == '') { 
-    var input_id = $(this).attr('id');
-    $('label[for="'+input_id+'"]').removeClass('active');
-  }
-});
