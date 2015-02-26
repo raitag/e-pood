@@ -30,7 +30,7 @@ $(function () {
           if( $(this).data('iconurl') === undefined) {
             options.append($('<li class="' + (($(this).is(':disabled')) ? 'disabled' : '') + '"><span>' + $(this).html() + '</span></li>'));
           } else {
-            options.append($('<li class="' + (($(this).is(':disabled')) ? 'disabled' : '') + '"><span>' + $(this).html() + '</span><img src="' + $(this).data('iconurl') + '" alt="" /></li>'));
+            options.append($('<li class="' + (($(this).is(':disabled')) ? 'disabled' : '') + '"><span>' + $(this).html() + '<figure><img src="' + $(this).data('iconurl') + '" alt="" /></figure></span></li>'));
           }
         });
 

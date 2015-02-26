@@ -116,15 +116,16 @@ select:disabled {
     }
 
     & > span {
-      display: inline-block;
-      padding: 1em;
-    }
-    & > img {
-      float: right;
-      margin-top: 7px;
-      margin-right: 1em;
-      max-height: 35px;
-      max-width: 35px;
+      display: block;
+      padding: 10px;
+      line-height: 2;
+      figure {
+        float: right;
+        > img {
+          max-height: 30px;
+          max-width: 30px;
+        }
+      }
     }
     &.disabled,
     &[disabled] {

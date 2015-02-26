@@ -22467,14 +22467,14 @@ select:disabled {
     .dropdown-content li:hover {
       background-color: rgba(0, 0, 0, 0.06); }
     .dropdown-content li > span {
-      display: inline-block;
-      padding: 1em; }
-    .dropdown-content li > img {
-      float: right;
-      margin-top: 7px;
-      margin-right: 1em;
-      max-height: 35px;
-      max-width: 35px; }
+      display: block;
+      padding: 10px;
+      line-height: 2; }
+      .dropdown-content li > span figure {
+        float: right; }
+        .dropdown-content li > span figure > img {
+          max-height: 30px;
+          max-width: 30px; }
     .dropdown-content li.disabled, .dropdown-content li[disabled] {
       color: #999999;
       background-color: transparent;
