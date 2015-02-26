@@ -7062,7 +7062,11 @@ $(function () {
         // Create Dropdown structure
         selectOptions.each(function () {
           // Add disabled attr if disabled
-          options.append($('<li class="' + (($(this).is(':disabled')) ? 'disabled' : '') + '"><span>' + $(this).html() + '</span></li>'));
+          if( $(this).data('iconurl') === undefined) {
+            options.append($('<li class="' + (($(this).is(':disabled')) ? 'disabled' : '') + '"><span>' + $(this).html() + '</span></li>'));
+          } else {
+            options.append($('<li class="' + (($(this).is(':disabled')) ? 'disabled' : '') + '"><span>' + $(this).html() + '</span><img src="' + $(this).data('iconurl') + '" alt="" /></li>'));
+          }
         });
 
 
@@ -7084,7 +7088,7 @@ $(function () {
         // Wrap Elements
         $select.wrap(wrapper);
         // Add Select Display Element
-        var $newSelect = $('<input type="text" class="select-dropdown ' + $select.attr('class') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
+        var $newSelect = $('<input type="text" class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
                          + ' data-activates="select-options-' + uniqueID +'" value="'+ label.html() +'"/><i class="icon icon-arrow-down">');
         $select.before($newSelect);
         $('body').append(options);

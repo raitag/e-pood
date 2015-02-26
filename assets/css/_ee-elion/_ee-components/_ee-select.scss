@@ -115,10 +115,16 @@ select:disabled {
       background-color: rgba(0,0,0, .06);
     }
 
-    & > a,
     & > span {
-      display: block;
+      display: inline-block;
       padding: 1em;
+    }
+    & > img {
+      float: right;
+      margin-top: 7px;
+      margin-right: 1em;
+      max-height: 35px;
+      max-width: 35px;
     }
     &.disabled,
     &[disabled] {

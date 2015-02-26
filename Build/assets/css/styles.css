@@ -22466,9 +22466,15 @@ select:disabled {
     color: #333333; }
     .dropdown-content li:hover {
       background-color: rgba(0, 0, 0, 0.06); }
-    .dropdown-content li > a, .dropdown-content li > span {
-      display: block;
+    .dropdown-content li > span {
+      display: inline-block;
       padding: 1em; }
+    .dropdown-content li > img {
+      float: right;
+      margin-top: 7px;
+      margin-right: 1em;
+      max-height: 35px;
+      max-width: 35px; }
     .dropdown-content li.disabled, .dropdown-content li[disabled] {
       color: #999999;
       background-color: transparent;
