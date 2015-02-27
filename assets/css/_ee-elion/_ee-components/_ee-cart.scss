@@ -326,6 +326,8 @@
   @extend %parent-of-vertical-align;
   height: auto;
   margin-bottom: 0;
+  cursor: pointer;
+  margin-bottom: 30px;
   @include media-min($screen-sm) {
     height: 90px;
   }
@@ -333,7 +335,7 @@
     @extend %vertical-align;
   }
   h6 {
-    margin-top: 25px;
+    margin-top: 15px;
     padding-bottom: 5px;
   }
 }

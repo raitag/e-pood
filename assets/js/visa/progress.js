@@ -1,4 +1,4 @@
-(function ($) {
+$(document).ready(function () {
     //Class definition
     var Progress = function(element, options){
         this.options =
@@ -136,4 +136,4 @@
     });
 
 
-})(jQuery);
+});

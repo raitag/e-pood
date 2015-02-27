@@ -1,5 +1,8 @@
-// INPUT JS
 $(document).ready(function () {
+  BindInputsLabels(); //nii saame epoe poolel seda välja kutsuda ajax puhul
+});
+
+function BindInputsLabels() {
   var inputs = $('.ee-input input, .ee-input textarea');
   initInput(inputs);
 
@@ -13,7 +16,7 @@ $(document).ready(function () {
       $('label[for="' + input_id + '"]').removeClass('active');
     }
   });
-});
+}
 
 function initInput (inputs) {
   inputs.each(function() {

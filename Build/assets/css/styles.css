@@ -21891,12 +21891,14 @@ header .megamenu .search-item-image,
 
 .cart-overview-heading.panel-default {
   height: auto;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  cursor: pointer;
+  margin-bottom: 30px; }
   @media (min-width: 768px) {
     .cart-overview-heading.panel-default {
       height: 90px; } }
   .cart-overview-heading.panel-default h6 {
-    margin-top: 25px;
+    margin-top: 15px;
     padding-bottom: 5px; }
 
 .wrapping-layers {
