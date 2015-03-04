@@ -149,79 +149,31 @@ $label-font-size: .8125rem;
     background-color: transparent;
   }
 
-  &.has-error {
-    label {
-      color: $orange-c;
-    }
-    span {
-      color: $orange-c;
-      float: right;
-    }
-    input[type=text]:focus + label,
-    input[type=password]:focus + label,
-    input[type=email]:focus + label,
-    input[type=date]:focus + label,
-    input[type=tel]:focus + label,
-    input[type=number]:focus + label,
-    textarea:focus.ee-textarea + label {
-      color: $orange-c;
-    }
-    input[type=text],
-    input[type=password],
-    input[type=email],
-    input[type=date],
-    input[type=tel],
-    input[type=number],
-    textarea.ee-textarea {
+  input,
+  textarea.ee-textarea {
+    &.input-validation-error {
       border-color: $orange-c;
-    }
-    input[type=text]:focus,
-    input[type=password]:focus,
-    input[type=email]:focus,
-    input[type=date]:focus,
-    input[type=tel]:focus,
-    input[type=number]:focus,
-    textarea:focus.ee-textarea {
-      border-color: $orange-c;
-      @include box-shadow(0 1px 0 0 $orange-c);
-    }
-  }
-
-  &.success {
-    label {
-      color: $brand-success;
-    }
-    span {
-      color: $brand-success;
-      float: right;
-    }
-    input[type=text]:focus + label,
-    input[type=password]:focus + label,
-    input[type=email]:focus + label,
-    input[type=date]:focus + label,
-    input[type=tel]:focus + label,
-    input[type=number]:focus + label,
-    textarea:focus.ee-textarea + label {
-      color: $brand-success;
-    }
-    input[type=text],
-    input[type=password],
-    input[type=email],
-    input[type=date],
-    input[type=tel],
-    input[type=number],
-    textarea.ee-textarea {
-      border-color: $brand-success;
-    }
-    input[type=text]:focus,
-    input[type=password]:focus,
-    input[type=email]:focus,
-    input[type=date]:focus,
-    input[type=tel]:focus,
-    input[type=number]:focus,
-    textarea:focus.ee-textarea {
-      border-color: $brand-success;
-      @include box-shadow(0 1px 0 0 $brand-success);
+      + label {
+        color: $orange-c;
+        + span {
+          color: $orange-c;
+        }
+      }
+      &:focus + label {
+        color: $orange-c;
+      }
+      + span {
+        color: $orange-c;
+        float: right;
+        + label {
+          color: $orange-c;
+        }
+      }
+      
+      &:focus {
+        border-color: $orange-c;
+        @include box-shadow(0 1px 0 0 $orange-c);
+      }
     }
   }
 
@@ -234,15 +186,11 @@ $label-font-size: .8125rem;
   .ee-input {
     display: table-cell;
     width: 100%;
-    input[type="text"],
-    input[type="password"],
-    input[type="search"] {
+    input {
       height: 36px;
       font-weight: bold;
     }
-    input[type="text"]:focus,
-    input[type="password"]:focus,
-    input[type="search"]:focus {
+    input:focus {
       height: 35px;
     }
   }

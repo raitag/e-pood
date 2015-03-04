@@ -44,7 +44,7 @@ label {
         border-bottom: 1px solid;
       }
     }
-    &.has-error {
+    &.input-validation-error {
       color: $orange-c;
       border-color: $orange-c;
       + .icon {

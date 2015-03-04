@@ -23,6 +23,7 @@
 /* @include visa/header */
 /* @include visa/footer */
 /* @include visa/alert */
+/* @include visa/progress */
 
 // 2nd LEVEL
 /* @include bootstrap-slider */
@@ -46,6 +47,14 @@
 /* @include velocity.min */
 /* @include ee-inputs */
 /* @include ee-select */
+/* @include summernote.min */
+
+// DATEPICKER
+/* @include pickadate-picker */
+/* @include pickadate-picker.date */
+/* @include pickadate-et_EE */
+/* @include pickadate-picker.time */
+/* @include pickadate-legacy */
 
 // APP SPECIFIC SCRIPTS
 /* @include scripts */
