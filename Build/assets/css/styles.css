@@ -21894,6 +21894,9 @@ header .megamenu .search-item-image,
   margin-bottom: 0;
   cursor: pointer;
   margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .cart-overview-heading.panel-default {
+      padding: 20px 0 0; } }
   @media (min-width: 768px) {
     .cart-overview-heading.panel-default {
       height: 90px; } }
@@ -22081,6 +22084,10 @@ header .megamenu .search-item-image,
   bottom: -30px;
   left: 50%;
   margin-left: -15px; }
+
+.small-header {
+  font-size: 9px;
+  white-space: nowrap; }
 
 .has-error .onoffswitch-inner:after {
   content: "Ei";

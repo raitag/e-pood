@@ -328,6 +328,9 @@
   margin-bottom: 0;
   cursor: pointer;
   margin-bottom: 30px;
+  @include media-max($screen-xs-max) {
+    padding: 20px 0 0;
+  }
   @include media-min($screen-sm) {
     height: 90px;
   }
@@ -583,4 +586,9 @@
   bottom: -30px;
   left: 50%;
   margin-left: -15px;
+}
+
+.small-header {
+  font-size: 9px;
+  white-space: nowrap;
 }
