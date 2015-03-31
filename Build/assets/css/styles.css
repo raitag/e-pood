@@ -1135,13 +1135,13 @@ CAROUSEL LISTING
     font-family: "tsr-icons-all";
     font-size: 25px;
     display: inline-block;
-    content: '\e66a';
+    content: '\e669';
     padding: 0 6px;
     position: relative;
     z-index: 20; }
   .tsr-section-carousel-listing .tsr-direction-nav a.tsr-next:before,
   .tsr-carousel-listing-div .tsr-direction-nav a.tsr-next:before {
-    content: '\e668'; }
+    content: '\e66a'; }
   .tsr-section-carousel-listing .tsr-control-nav,
   .tsr-carousel-listing-div .tsr-control-nav {
     width: 100%;
@@ -7090,7 +7090,7 @@ var, .price {
 .icon-service-tv:before {
   content: "\e68b"; }
 
-.icon-service-home-control:before {
+.icon-service-home-controll:before {
   content: "\e70b"; }
 
 .icon-service-internet:before {
@@ -7348,14 +7348,14 @@ var, .price {
 .icon-minus-circle:before {
   content: "\e678"; }
 
-.icon-arrow-down-circle:before {
-  content: "\e671"; }
-
 .icon-arrow-up-circle:before {
-  content: "\e673"; }
+  content: "\e690"; }
+
+.icon-arrow-down-circle:before {
+  content: "\e691"; }
 
 .icon-arrow-left-circle:before {
-  content: "\e675"; }
+  content: "\e692"; }
 
 .icon-arrow-right-circle:before {
   content: "\e670"; }
@@ -8621,10 +8621,10 @@ body {
   min-width: 320px;
   letter-spacing: 0px;
   line-height: 1.42857;
-  margin-bottom: 286px; }
+  margin-bottom: 246px; }
   @media (max-width: 991px) {
     body {
-      margin-bottom: 336px; } }
+      margin-bottom: 296px; } }
   @media (max-width: 767px) {
     body {
       margin-bottom: 0; } }
@@ -8812,7 +8812,6 @@ header {
 
 footer {
   padding: 10px 0;
-  margin-top: 40px;
   background-color: #dbdbdb;
   font-size: 14px; }
   @media (min-width: 768px) {
@@ -8839,13 +8838,19 @@ footer {
         text-decoration: none;
         box-shadow: none; }
       footer .footer-section > a .icon {
-        color: #dbdbdb; }
+        color: #999; }
     footer .footer-section h6 {
       font-size: 14px;
       font-weight: 600;
       margin: 0; }
     footer .footer-section ul {
       margin-bottom: 0; }
+    footer .footer-section ul.list-inline li a:hover {
+      text-decoration: none; }
+      footer .footer-section ul.list-inline li a:hover span {
+        text-decoration: underline; }
+      footer .footer-section ul.list-inline li a:hover .icon {
+        text-decoration: none; }
     footer .footer-section li {
       margin-top: 7px;
       padding: 0; }
@@ -21156,7 +21161,7 @@ header .megamenu .search-item-image,
 .external:after {
   color: #642887;
   font-family: 'tsr-icons-all';
-  content: "\e668";
+  content: "\e66a";
   vertical-align: baseline;
   font-size: 0.8em;
   padding-left: 5px; }

@@ -8,9 +8,9 @@ body {
   min-width: 320px;
   letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;
-  margin-bottom: 286px;
+  margin-bottom: 246px;
   @media (max-width: $screen-sm-max) {
-    margin-bottom: 336px;
+    margin-bottom: 296px;
   }
   @media (max-width: $screen-xs-max) {
     margin-bottom: 0;
