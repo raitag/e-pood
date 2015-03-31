@@ -16,6 +16,7 @@
 /* @include button */
 /* @include dropdown */
 /* @include modal */
+/* @include ee-hero */
 
 // ELION HEADQUARTER
 /* @include visa/funcs */

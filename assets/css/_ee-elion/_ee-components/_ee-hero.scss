@@ -1,0 +1,153 @@
+//
+// Hero Banner
+// --------------------------------------------------
+
+.hero-banner  {
+  position: relative;
+}
+
+// Wrapper for the slide container and indicators
+.hero-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: $brand-primary;
+
+  > .item {
+    display: none;
+    position: relative;
+    height: 300px;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      @include img-responsive;
+      line-height: 1;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    // WebKit CSS3 transforms for supported devices
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      // @include transition-transform(0.8s ease-in-out);
+      @include transition(.5s ease-in-out);
+      @include backface-visibility(hidden);
+      @include perspective(1000);
+
+      &.next,
+      &.active.right {
+        left: 0;
+        opacity: 0;
+      }
+      &.prev,
+      &.active.left {
+        left: 0;
+        opacity: 0;
+      }
+      &.next.left,
+      &.prev.right,
+      &.active {
+        left: 0;
+        opaciy: 1;
+      }
+    }
+  }
+
+
+
+  > .active,
+  > .next,
+  > .prev { display: block; }
+
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+    opacity: 0;
+  }
+  > .active.right {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+// Indicators
+.hero-indicators {
+  z-index: 1;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  height: 50px;
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 4px solid $purple-h;
+  position: relative;
+  // -webkit-transform-style: preserve-3d;
+  // -moz-transform-style: preserve-3d;
+  // transform-style: preserve-3d;
+  .arrow {
+    display: inline-block;
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 9px solid $brand-primary;
+    left: 50%;
+    top: 0;
+    margin-left: -8px;
+  }
+
+  li {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 12px 20px;
+    font-weight: 500;
+    color: #999;
+    font-size: 14px;
+    @include transition(color 0.3s ease-out);
+    // @include vertical-align-center;
+
+    // IE8-9 hack for event handling
+    //
+    // Internet Explorer 8-9 does not support clicks on elements without a set
+    // `background-color`. We cannot use `filter` since that's not viewed as a
+    // background color by the browser. Thus, a hack is needed.
+    //
+    // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
+    // set alpha transparency for the best results possible.
+    background-color: $body-bg \9; // IE8
+    background-color: rgba(246, 246, 246,0); // IE9
+    &:hover {
+      color: $link-hover-color;
+    }
+    &.active {
+      color: $link-color;
+    }
+  }
+}

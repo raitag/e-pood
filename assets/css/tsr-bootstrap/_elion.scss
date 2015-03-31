@@ -1,10 +1,20 @@
 //
 // elion custom styles
 // --------------------------------------------------
+html {
+  position: relative;
+}
 body {
   min-width: 320px;
   letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;
+  margin-bottom: 286px;
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 336px;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 0;
+  }
 }
 header{display: block; margin-bottom: -1px;}
 section.content { padding: 0;
