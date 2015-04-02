@@ -1,34 +1,139 @@
-<nav class="topnav navbar navbar-inverse" role="navigation">
-  <div class="container hidden-xs">
-
-    <ul class="nav navbar-nav">
-      <li class="dropdown menu-large">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sisukord</a>
-        <!-- @include _sisukord.html -->
-      </li>
-      <li><a href="#">Äriklient</a></li>
-      <li class="active"><a href="#">E-pood</a></li>
-    </ul> 
-
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">RUS</a></li>
-      <li class="dropdown menu-large">
-        <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
-        <div class="dropdown-menu cart-dropdown">
-          <!-- @include _cart-dropdown.html -->
-          <div class="container reset-padding">
-            <ul class="row hidden-xs list-unstyled">
-              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+<nav class="navbar navbar-inverse menu__top" role="navigation">
+        <h1 class="sr-only">Top menu</h1>
+        <div class="container">
+            <!-- see tuleb paremaks muuta, mobiili vaade peab collapsima need menyy lingid-->
+            <ul class="nav navbar-nav pull-left visible-xs">
+                <li>
+                    <a class="navbar-brand" href="index.html">
+                        <span class="icon icon-elion-logo"></span>
+                    </a>
+                </li>
             </ul>
-          </div>
-        </div>
-      </li>
-      <li class="with-icon menu-large dropdown">
-        <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount" ></span>Sisene</a>
-        <!-- @include _profile-large.html -->
-        </li>
-        
-    </ul> 
+            <ul class="nav navbar-nav hidden-xs">
+                <li>
+                    <a class="navbar-brand" href="index.html">
+                        <span class="icon icon-elion-logo"></span>
+                    </a>
+                </li>
+                <li><a href="#">Eraklient</a></li>
+                <li><a href="#">&Auml;riklient</a></li>
+                <li class="active"><a href="index.html">E-pood</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right sidemenuWrapper">
+                <li class="dropdown select-language">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">EST <span class="icon icon-arrow-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">ENG</a></li>
+                        <li><a href="#">RUS</a></li>
+                    </ul>
+                </li>
+                <li class="hidden-xs sidemenu">
+                    <a href="#" id="ostukorvLabel" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">
+                        <span class="icon icon-buy"></span>
+                    </a>
+                    <div class="sidemenu-menu right" role="menu" aria-labelledby="ostukorvLabel">
+                        <div>
+                            <h3>Basket menu</h3>
+                            <p>Ostukorv on hetkel tyhi. Siia saad lisada endale meelepraseid tooteid ja teenuseid.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="hidden-xs sidemenu">
+                    <a href="#" id="sisenenLabel" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">
+                        <span class="icon icon-myaccount"></span><span>Sisene</span>
+                    </a>
+                    <div class="sidemenu-menu right" role="menu" aria-labelledby="sisenenLabel">
+                        <div>
+                            <ul>
+                                <li class="sidemenu">
+                                    <a href="#" id="sisenennewLabel" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">Mobile-ID</a>
+                                    <div class="sidemenu-menu right" role="menu" aria-labelledby="sisenennewLabel">
+                                        <div>
+                                            <h3>Mobile-ID</h3>
+                                            <form>
+                                            <ul>
+                                                <li><button class="btn btn-white">Swedbank</button></li>
+                                                <li><button class="btn btn-white">SEB</button></li>
+                                                <li><button class="btn btn-white">Nordea</button></li>
+                                                <li><button class="btn btn-white">DanskeBank</button></li>
+                                                <li><button class="btn btn-white">Krediidipank</button></li>
+                                                <li><button class="btn btn-white">LHV</button></li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Remembeer me
+                                                        </label>
+                                                        <span class="icon icon-help pull-right"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            </form>
+                                            <!--<ul>
+                                                <li>
+                                                    <input value="" placeholder="Enter your phone number" />
+                                                </li>
+                                                <li>
+                                                    <button class="btn btn-block">Sisene</button>
+                                                </li>
+                                            </ul>-->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sidemenu">
+                                    <a href="#" id="lnk2newLabel" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">next link open submenu</a>
+                                    <div class="sidemenu-menu right" role="menu" aria-labelledby="lnk2newLabel">
+                                        <div>
+                                            <h3>test sisu next level sdfsadfsdaf</h3>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">test</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link</a></li>
+                                <li><a href="#!">Link END</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
-  </div>
-</nav>
+            <ul class="nav navbar-nav visible-xs navbar-right first-child">
+                <li class="dropdown select-environment">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient <span class="icon icon-arrow-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">&Auml;riklient</a></li>
+                        <li><a href="#">E-pood</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="searchbox-responsive navbar-form form-inline navbar-right hidden-xs" role="search" autocomplete="on">
+            <div class="form-group">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control" placeholder="Sisesta otsingusõna" name="searh" id="search">
+            </div>
+            <button type="button" class="btn btn-search"><span class="icon icon-search"></span></button>
+        </form>
+      </div>
+    </nav>

@@ -38,7 +38,7 @@
       word-wrap:break-word;
       padding-right: 15px;
       &:after {
-        content: "\e668";
+        content: "\e66a";
         font-family: 'tsr-icons-all';
         font-size: em(18);
         position: absolute;
@@ -70,7 +70,7 @@
     h6 {
     color: #fff;
       &:after {
-        content: "\e668";
+        content: "\e66a";
         font-family: 'tsr-icons-all';
         font-size: em(18);
         position: absolute;
@@ -85,20 +85,20 @@
   .arrow-right:hover,
   .arrow-right.selected {
     h6:after {
-    content: "\e668";
+    content: "\e66a";
     }
    }
   .arrow-down:hover,
   .arrow-down.selected  {
     h6:after {
-    content: "\e669";
+    content: "\e65f";
 
    }
   }
   .arrow-up:hover,
   .arrow-up.selected {
     h6:after {
-    content: "\e66b";
+    content: "\e668";
    }
   }
 }

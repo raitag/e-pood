@@ -259,7 +259,7 @@ text-align: left;
 .ee-comments {
  &:before {
   @extend %format-icon;
-  content: "\e6f3";
+  content: "\e018";
   }
   &:hover:before {
     color: $purple-h;

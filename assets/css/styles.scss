@@ -47,8 +47,6 @@
 /* @include tsr-bootstrap/_type.scss */
 /* @include tsr-bootstrap/_icons.scss */
 /* @include tsr-bootstrap/_badges.scss */
-/* @include tsr-bootstrap/_navbar.scss */
-/* @include tsr-bootstrap/_megamenu.scss */
 /* @include tsr-bootstrap/_responsive-utilities.scss */
 /* @include tsr-bootstrap/_elion.scss */
 /* @include tsr-bootstrap/_header.scss */
@@ -93,7 +91,6 @@
 /* @include _ee-reviews.scss */
 /* @include _ee-2nd-level-general-parts.scss */
 /* @include _ee-productslider.scss */
-/* @include _ee-mainnav.scss */
 /* @include _ee-compare.scss */
 /* @include _ee-cart.scss */
 /* @include _ee-switch.scss */
@@ -101,6 +98,37 @@
 /* @include _ee-select.scss */
 /* @include _ee-hero.scss */
 
+// custom styles for header
+header > div .menu__main .navbar-nav > li > a > span.icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchbox-responsive.navbar-form button.btn-search {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
+.sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
+.sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before {
+  @extend .icon-arrow-right;
+  @extend .icon;
+}
+
+.burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, 
+.sidemenu-toggle:before, 
+header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
+  @extend .icon;
+}
+
+.sidemenu .sidemenu-menu.right .sidemenu .sidemenu-toggle:before, 
+.sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:before {
+  @extend .icon-arrow-left;
+}
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
 @function set-notification-text-color($color) {
@@ -234,19 +262,19 @@ width: 100%;
 display: block;
 }
 
-.navbar-default .user-menu.navbar-nav > li > a:after {
-  background-color: #51246B;
-}
+// .navbar-default .user-menu.navbar-nav > li > a:after {
+//   background-color: #51246B;
+// }
 
-.navbar-default .user-menu.navbar-nav > li > a, 
-.navbar-default .user-menu.navbar-nav > li > a:active, 
-{
-  color: #fff;
-}
+// .navbar-default .user-menu.navbar-nav > li > a, 
+// .navbar-default .user-menu.navbar-nav > li > a:active, 
+// {
+//   color: #fff;
+// }
 
-.navbar-default .navbar-nav > li > a:after {
-  background: $lightgrey-t;
-}
+// .navbar-default .navbar-nav > li > a:after {
+//   background: $lightgrey-t;
+// }
 
 .flashText-ribbon-inner {
   display: block;
@@ -292,18 +320,18 @@ display: block;
 }
  
 // http://pauginer.tumblr.com/post/36614680636/invisible-gradient-technique
-.navbar-default .navbar-brand {
-  display: block;
-  width: 180px;
-  height: 80px; 
-  background: transparent url(../img/branding/elion-logo.png) left center no-repeat;
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
-  background-image: linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
-}
+// .navbar-default .navbar-brand {
+//   display: block;
+//   width: 180px;
+//   height: 80px; 
+//   background: transparent url(../img/branding/elion-logo.png) left center no-repeat;
+//   background-image: -webkit-linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
+//   background-image: linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
+// }
 
-.navbar > .container .navbar-brand {
-  margin-left: 0;
-}
+// .navbar > .container .navbar-brand {
+//   margin-left: 0;
+// }
 
 .ee-thinline-bottom {
   margin-bottom: -1px;
@@ -772,4 +800,23 @@ label.control-label-left {
       padding-right: 0;
     }
   }
+}
+
+.tsr-checkbox {
+  .tsr-checkboxStyled{
+          &:before{
+            font-family: 'tsr-icons-all';
+            width:20px;
+            height:20px;
+            position:absolute;
+            top:22%;
+            left:50%;
+            margin:-8px 0 0 -6px;
+            color:$purple-c;
+            font-size:16px;
+            display:block;
+            
+
+          }
+        } 
 }

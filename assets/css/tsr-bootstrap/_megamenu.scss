@@ -1,425 +1,425 @@
-#collapsibleMainMenu-Pages {
+// #collapsibleMainMenu-Pages {
 
-  > a {
-    @include setAsH4();
-  }
+//   > a {
+//     @include setAsH4();
+//   }
 
 
-  @media (max-width: $screen-xs-max) {
+//   @media (max-width: $screen-xs-max) {
 
-    .dropdown {
-      .dropdown-toggle {
-        &:after {
-          @include setAsBodyText();
-          @include setIconFonts();
-          position: relative;
-          top: 15px;
-          margin-right:10px;
-          content: "\e669";
-          float: right;
-          right: 0px;
-        }
+//     .dropdown {
+//       .dropdown-toggle {
+//         &:after {
+//           @include setAsBodyText();
+//           @include setIconFonts();
+//           position: relative;
+//           top: 15px;
+//           margin-right:10px;
+//           content: "\e669";
+//           float: right;
+//           right: 0px;
+//         }
         
-      }
+//       }
 
-      &.open {
-        .dropdown-toggle {
-          &:after {
-            @include setAsBodyText();
-            @include setIconFonts();
-            position: relative;
-            top: 15px;
-            margin-right:10px;
-            content: "\e66b";
-            float: right;
-            right: 0px;
-          }
+//       &.open {
+//         .dropdown-toggle {
+//           &:after {
+//             @include setAsBodyText();
+//             @include setIconFonts();
+//             position: relative;
+//             top: 15px;
+//             margin-right:10px;
+//             content: "\e66b";
+//             float: right;
+//             right: 0px;
+//           }
           
-        }
-      }
+//         }
+//       }
       
-    }
+//     }
 
-    .menu-large {
-      > a {
-        @include setAsH4();
-      }
+//     .menu-large {
+//       > a {
+//         @include setAsH4();
+//       }
 
-      > a {
-        &:after {
-          @include setAsBodyText();
-          @include setIconFonts();
-          position: relative;
-          top: 15px;
-          margin-right:10px;
-          content: "\e668";
-          float: right;
-          right: 0px;
-        }
-      }
-    }
+//       > a {
+//         &:after {
+//           @include setAsBodyText();
+//           @include setIconFonts();
+//           position: relative;
+//           top: 15px;
+//           margin-right:10px;
+//           content: "\e668";
+//           float: right;
+//           right: 0px;
+//         }
+//       }
+//     }
     
-  }
+//   }
 
-}
+// }
 
-.menu-large {
-  position: static !important;
-}
+// .menu-large {
+//   position: static !important;
+// }
 
-// light background megamenu
-.dropdown-light {
-  .container {
-    background-color: darken($brand-white,6.8%)!important;
-  }
+// // light background megamenu
+// .dropdown-light {
+//   .container {
+//     background-color: darken($brand-white,6.8%)!important;
+//   }
 
-  &.full-width {
-    width: 100%;
+//   &.full-width {
+//     width: 100%;
 
-    .container {
-      width: 100%;
+//     .container {
+//       width: 100%;
 
-      .megamenu {
-        margin:0;
-        padding: 0;
+//       .megamenu {
+//         margin:0;
+//         padding: 0;
 
-        [class*="col-"] {
-          padding: 0;
-        }
-      }
+//         [class*="col-"] {
+//           padding: 0;
+//         }
+//       }
 
-      .close-up-btn-bar {
-        background-color: darken($brand-white,6.8%);
-        border-top: 2px solid darken($brand-white,15%);
-        border-bottom: 1px solid darken($brand-primary,10%);
+//       .close-up-btn-bar {
+//         background-color: darken($brand-white,6.8%);
+//         border-top: 2px solid darken($brand-white,15%);
+//         border-bottom: 1px solid darken($brand-primary,10%);
 
-        &:hover {
-          background-color: $brand-white;
+//         &:hover {
+//           background-color: $brand-white;
 
-          > [class*="icon"] {
-            color:darken($brand-white,15%);
-          }
-        }
-      }
-    }
-  }
+//           > [class*="icon"] {
+//             color:darken($brand-white,15%);
+//           }
+//         }
+//       }
+//     }
+//   }
 
-}
+// }
 
-.megamenu {
-  list-style: none;
-  padding: 10px 0px 10px 0px;
-  width:100%;
+// .megamenu {
+//   list-style: none;
+//   padding: 10px 0px 10px 0px;
+//   width:100%;
 
-  @media (max-width: $screen-sm-max) {
-    margin-left: 0 ;
-    margin-right: 0 ;
-    padding: 0;
+//   @media (max-width: $screen-sm-max) {
+//     margin-left: 0 ;
+//     margin-right: 0 ;
+//     padding: 0;
 
-    > [class*="col-"] {
-      padding: 0;
-      margin: 0;
-    }
-  }
+//     > [class*="col-"] {
+//       padding: 0;
+//       margin: 0;
+//     }
+//   }
   
-  .list-group {
+//   .list-group {
     
-    @media (max-width: $screen-sm-max) {
-      margin-bottom:0;
-    }
+//     @media (max-width: $screen-sm-max) {
+//       margin-bottom:0;
+//     }
 
-    .dropdown-header {
-      float:left;
-      font-size: $font-size-base + 2;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      margin-left: 10px;
-      position: relative;
-      width: 24%;
+//     .dropdown-header {
+//       float:left;
+//       font-size: $font-size-base + 2;
+//       padding-left: 10px;
+//       padding-right: 10px;
+//       padding-top: 5px;
+//       padding-bottom: 5px;
+//       margin-left: 10px;
+//       position: relative;
+//       width: 24%;
 
-      @media (max-width: $screen-xs-max) {
-        width:100%;
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: 0;
-        padding-left:15px;
-        border-bottom: 1px solid darken($brand-primary,10%);
+//       @media (max-width: $screen-xs-max) {
+//         width:100%;
+//         padding-left: 0px;
+//         padding-right: 0px;
+//         margin-left: 0;
+//         padding-left:15px;
+//         border-bottom: 1px solid darken($brand-primary,10%);
 
-        &:hover {
-          background-color: darken($navbar-inverse-bg,7.6%);
-        }
-      }
+//         &:hover {
+//           background-color: darken($navbar-inverse-bg,7.6%);
+//         }
+//       }
 
-      &:hover {
-        background-color: darken($navbar-inverse-bg,7.6%);
-      }
+//       &:hover {
+//         background-color: darken($navbar-inverse-bg,7.6%);
+//       }
 
-      > h6 {
-        margin-top:0px;
-        margin-bottom:0px;
+//       > h6 {
+//         margin-top:0px;
+//         margin-bottom:0px;
         
-        > a {
-          color:$link-color-on-dark-bg;
-          text-decoration: none;
+//         > a {
+//           color:$link-color-on-dark-bg;
+//           text-decoration: none;
 
-          @media (max-width: $screen-xs-max) {
-            &:after {
-              @include setIconFonts();
-              position: relative;
-              top: 33%;
-              margin-right: 14px;
-              font-size: $font-size-base;
-              content: "\e668";
-              float: right;
-            }
-          }
-        }
-      }
+//           @media (max-width: $screen-xs-max) {
+//             &:after {
+//               @include setIconFonts();
+//               position: relative;
+//               top: 33%;
+//               margin-right: 14px;
+//               font-size: $font-size-base;
+//               content: "\e668";
+//               float: right;
+//             }
+//           }
+//         }
+//       }
 
-      // HAS CHILD COLUMNS STYLES
-      &.has-child {
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
+//       // HAS CHILD COLUMNS STYLES
+//       &.has-child {
+//         padding-left: 0;
+//         padding-right: 0;
+//         padding-bottom: 0;
 
-        > h6 {
-          margin-bottom: 5px;
+//         > h6 {
+//           margin-bottom: 5px;
 
-          > a {
-            padding-left: 10px;
-            padding-right: 10px;
+//           > a {
+//             padding-left: 10px;
+//             padding-right: 10px;
 
-            &:after {
-              @include setIconFonts();
-              position: relative;
-              top: 0px;
-              margin-left:10px;
-              font-size: $font-size-base;
-              content: "\e668";
+//             &:after {
+//               @include setIconFonts();
+//               position: relative;
+//               top: 0px;
+//               margin-left:10px;
+//               font-size: $font-size-base;
+//               content: "\e668";
 
-              @media (max-width: $screen-xs-max) {
-                content: "\e669";
-                float: right;
-                top: 3px;
-                right: 10px;
-              }
+//               @media (max-width: $screen-xs-max) {
+//                 content: "\e669";
+//                 float: right;
+//                 top: 3px;
+//                 right: 10px;
+//               }
               
-            }
+//             }
 
-            @media (max-width: $screen-xs-max) {
-              padding-left:0;
-              padding-right:0;
-            }
+//             @media (max-width: $screen-xs-max) {
+//               padding-left:0;
+//               padding-right:0;
+//             }
 
-          }
+//           }
 
-          @media (max-width: $screen-xs-max) {
-            padding-left:25px;
-          }
+//           @media (max-width: $screen-xs-max) {
+//             padding-left:25px;
+//           }
 
-        }
+//         }
 
-        > ul {
-          list-style: none;
-          padding-left: 0px;
-          background-color: $navbar-inverse-bg;
+//         > ul {
+//           list-style: none;
+//           padding-left: 0px;
+//           background-color: $navbar-inverse-bg;
 
-          @media (max-width: $screen-xs-max) {
-            display: none;
-          }
+//           @media (max-width: $screen-xs-max) {
+//             display: none;
+//           }
 
-          > li {
-            &:first-child {
-              @media (max-width: $screen-xs-max) {
-                border-top: 1px solid darken($brand-primary,10%);
-              } 
-            }
-            &:last-child {
-              @media (max-width: $screen-xs-max) {
-                border-bottom: 0px;
-              } 
-            }
-            @media (max-width: $screen-xs-max) {
-              border-bottom: 1px solid darken($brand-primary,10%);
-            }
-            &:hover {
-              background-color: darken($navbar-inverse-bg,12.6%);
-            }
+//           > li {
+//             &:first-child {
+//               @media (max-width: $screen-xs-max) {
+//                 border-top: 1px solid darken($brand-primary,10%);
+//               } 
+//             }
+//             &:last-child {
+//               @media (max-width: $screen-xs-max) {
+//                 border-bottom: 0px;
+//               } 
+//             }
+//             @media (max-width: $screen-xs-max) {
+//               border-bottom: 1px solid darken($brand-primary,10%);
+//             }
+//             &:hover {
+//               background-color: darken($navbar-inverse-bg,12.6%);
+//             }
 
-            > a {
-              font-size: $font-size-base;
-              color: $brand-white;
-              font-weight: normal;
-              text-decoration: none;
-              padding-left: 10px;
-              padding-right: 10px;
-              padding-top: 5px;
-              padding-bottom: 5px;
-              display: block;
+//             > a {
+//               font-size: $font-size-base;
+//               color: $brand-white;
+//               font-weight: normal;
+//               text-decoration: none;
+//               padding-left: 10px;
+//               padding-right: 10px;
+//               padding-top: 5px;
+//               padding-bottom: 5px;
+//               display: block;
 
-              &:after {
-                content:"";
+//               &:after {
+//                 content:"";
 
-                @media (max-width: $screen-xs-max) { 
-                  @include setIconFonts();
-                  position: relative;
-                  float: right;
-                  top: 3px;
-                  right: 10px;
-                  margin-left:10px;
-                  font-size: $font-size-base;
-                  content: "\e668";
-                }
-              }
+//                 @media (max-width: $screen-xs-max) { 
+//                   @include setIconFonts();
+//                   position: relative;
+//                   float: right;
+//                   top: 3px;
+//                   right: 10px;
+//                   margin-left:10px;
+//                   font-size: $font-size-base;
+//                   content: "\e668";
+//                 }
+//               }
 
-              @media (max-width: $screen-xs-max) {
-                padding-left:35px;
-                padding-right:0;
-              }
-            }
+//               @media (max-width: $screen-xs-max) {
+//                 padding-left:35px;
+//                 padding-right:0;
+//               }
+//             }
 
-            > p {
-              padding-left: 10px;
-              padding-right: 10px;
-              color: $brand-white;
-              font-size: $font-size-base;
+//             > p {
+//               padding-left: 10px;
+//               padding-right: 10px;
+//               color: $brand-white;
+//               font-size: $font-size-base;
 
-              > a {
-                text-decoration: none;
-              }
-            }
-          }
+//               > a {
+//                 text-decoration: none;
+//               }
+//             }
+//           }
 
-        }
+//         }
 
-        @media (max-width: $screen-xs-max) {
-          &.open {
-            > ul {
-              display: block;
-            }
-          }
-        }
+//         @media (max-width: $screen-xs-max) {
+//           &.open {
+//             > ul {
+//               display: block;
+//             }
+//           }
+//         }
 
-      }
-      // end HAS CHILD COLUMNS STYLES
+//       }
+//       // end HAS CHILD COLUMNS STYLES
 
-    }
+//     }
 
-    // promotion column
-    &.promotion {
-      min-height: 200px;
-      border-right: 1px solid darken($brand-primary,7%);
-      width: 100%;
+//     // promotion column
+//     &.promotion {
+//       min-height: 200px;
+//       border-right: 1px solid darken($brand-primary,7%);
+//       width: 100%;
 
-      > .dropdown-header {
-        margin: 0;
-        padding-left: 0px;
-        width: 100%;
+//       > .dropdown-header {
+//         margin: 0;
+//         padding-left: 0px;
+//         width: 100%;
 
-        &:hover {
-          background-color:transparent;
-        }
-        > h6 {
-          margin-bottom: 5px;
+//         &:hover {
+//           background-color:transparent;
+//         }
+//         > h6 {
+//           margin-bottom: 5px;
           
-          @media (max-width: $screen-xs-max) {
-            padding:10px 15px;
-          }
+//           @media (max-width: $screen-xs-max) {
+//             padding:10px 15px;
+//           }
 
-          > a {
-            @media (max-width: $screen-xs-max) {
-              display: block;
+//           > a {
+//             @media (max-width: $screen-xs-max) {
+//               display: block;
 
-              &:after {
-                content:"";
-              }
-            }
-          }
-        }
-        > ul {
-          list-style: none;
-          padding: 0;
+//               &:after {
+//                 content:"";
+//               }
+//             }
+//           }
+//         }
+//         > ul {
+//           list-style: none;
+//           padding: 0;
 
-          li {
-            color: $brand-white;
-            > p {
-              padding-top: 5px;
-              padding-bottom: 5px;
+//           li {
+//             color: $brand-white;
+//             > p {
+//               padding-top: 5px;
+//               padding-bottom: 5px;
 
-              @media (max-width: $screen-xs-max) {
-                padding:10px 15px 10px 35px;
-                margin-bottom: 0;
-              }
+//               @media (max-width: $screen-xs-max) {
+//                 padding:10px 15px 10px 35px;
+//                 margin-bottom: 0;
+//               }
 
-            }
-          }
-        }
-      }
+//             }
+//           }
+//         }
+//       }
 
-    }
-    // end promotion column
-  }
+//     }
+//     // end promotion column
+//   }
 
-  &.user-droplayer {
-    .list-group {
-      .has-child {
-        &:hover {
-          background-color:transparent;
-          @media (max-width: $screen-xs-max) {
-            background-color: darken($navbar-inverse-bg,7.6%);
-          }
-        }
+//   &.user-droplayer {
+//     .list-group {
+//       .has-child {
+//         &:hover {
+//           background-color:transparent;
+//           @media (max-width: $screen-xs-max) {
+//             background-color: darken($navbar-inverse-bg,7.6%);
+//           }
+//         }
 
-        h6 {
-          a {
-            &:after {
-              content:"";
-              @media (max-width: $screen-xs-max) {
-                content: "\e669";
-              }
-            }
-          }
-        }
+//         h6 {
+//           a {
+//             &:after {
+//               content:"";
+//               @media (max-width: $screen-xs-max) {
+//                 content: "\e669";
+//               }
+//             }
+//           }
+//         }
 
-        > ul {
-          > li {
-            &:hover {
-              background-color:transparent;
-              @media (max-width: $screen-xs-max) {
-                background-color: darken($navbar-inverse-bg,12.6%);
-              }
-            }
-            > p {
-              color:$brand-white;
+//         > ul {
+//           > li {
+//             &:hover {
+//               background-color:transparent;
+//               @media (max-width: $screen-xs-max) {
+//                 background-color: darken($navbar-inverse-bg,12.6%);
+//               }
+//             }
+//             > p {
+//               color:$brand-white;
 
-              @media (max-width: $screen-xs-max) {
-                padding-bottom: 5px;
-                padding-left: 35px;
-                padding-top: 5px;
-              }
+//               @media (max-width: $screen-xs-max) {
+//                 padding-bottom: 5px;
+//                 padding-left: 35px;
+//                 padding-top: 5px;
+//               }
 
-              > a {
-                color: $brand-white;
-              }
-            }
-          }
-        }
+//               > a {
+//                 color: $brand-white;
+//               }
+//             }
+//           }
+//         }
 
-        &.open {
-          h6 {
-            a {
-              &:after {
-                content:"";
-                @media (max-width: $screen-xs-max) {
-                  content: "\e66b";
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//         &.open {
+//           h6 {
+//             a {
+//               &:after {
+//                 content:"";
+//                 @media (max-width: $screen-xs-max) {
+//                   content: "\e66b";
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
