@@ -801,22 +801,3 @@ label.control-label-left {
     }
   }
 }
-
-.tsr-checkbox {
-  .tsr-checkboxStyled{
-          &:before{
-            font-family: 'tsr-icons-all';
-            width:20px;
-            height:20px;
-            position:absolute;
-            top:22%;
-            left:50%;
-            margin:-8px 0 0 -6px;
-            color:$purple-c;
-            font-size:16px;
-            display:block;
-            
-
-          }
-        } 
-}

@@ -192,15 +192,15 @@ FORMS
 
 			.tsr-checkboxStyled{
 				background:$white;
-				border:2px solid $lightgrey-t;
-				width:20px;
-				height:20px;
+				border:1px solid #ccc;
+				width: 18px;
+				height: 18px;
 				display:block;
 				position:relative;
-
+				border-radius: 2px;
 				float:left;
 				margin: 7px 0 0;
-
+				border-radius: 2px;
 				&:before{
 					display:none;
 				}
@@ -220,8 +220,8 @@ FORMS
 				.tsr-checkboxStyled:active{
 					&:before{
 						font-family: 'tsr-icons-all';
-						width:20px;
-						height:20px;
+						width:18px;
+						height:18px;
 						position:absolute;
 						top:22%;
 						left:50%;
@@ -229,6 +229,7 @@ FORMS
 						color:$purple-c;
 						font-size:16px;
 						display:block;
+						content: "\e6f1";
 						
 
 					}
@@ -237,62 +238,51 @@ FORMS
 			}
 		
 			// Disabled
-			&.disabled{
+		    &.disabled{
+		        color: $dropdown-link-disabled-color;
+		        background-color: transparent !important;
+		        border-color: transparent !important;
+		        &:hover,
+		        &:active {
+		            color: $dropdown-link-disabled-color;
+		        }
+		        .ee-checkboxStyled{
+		            background: #fff;
+		            &:focus,
+		            &:active{
+		                border:1px solid $dropdown-link-disabled-color;
+		                background:$dropdown-link-disabled-color;
+		                &:before{
+		                    display:none;
+		                }
+		            }
+		        } // .tsr-checkboxStyled END
 
+		        &.checked{
+		            .ee-checkboxStyled:before{
+		                color:$dropdown-link-disabled-color;
+		            }
+		        }
 
-				.tsr-checkboxStyled{
-					background:$lightgrey-c;
-					&:focus,
-					&:active{
-						border:1px solid $lightgrey-t;
-						background:$lightgrey-c;
+		    } // .disabled END
 
-						&:before{
-							display:none;
-						}
+		    // Invalid
+		    &.input-validation-error{
+		        color: $orange-c;
+		        .ee-checkboxStyled {
+		            border-color: $orange-c;
+		        }
+		        &.checked{
+		            .ee-checkboxStyled,
+		            .ee-checkboxStyled:active{
+		                color: $orange-c;
+		                &:before{
+		                    color:$orange-c;
+		                }
+		            }   
+		        }
 
-					}
-
-
-				} // .tsr-checkboxStyled END
-
-				&.checked{
-					.tsr-checkboxStyled:before{
-						color:#bbb;
-					}
-				}
-
-			} // .disabled END
-
-			// Invalid
-			&.invalid{
-
-
-				.tsr-checkboxStyled{
-					background:#ffece3;
-					border:1px solid #da552a;
-					&:focus,
-					&:active{
-						border:1px solid #da552a;
-						background:#ffece3;
-
-						&:before{
-							display:none;
-						
-						}
-
-					}
-
-
-				} // .tsr-checkboxStyled END
-
-				&.checked{
-					.tsr-checkboxStyled:before{
-						color:#da552a;
-					}
-				}
-
-			} // .disabled END
+		    } // .invalid END
 
 		}
 
@@ -342,8 +332,8 @@ FORMS
 				@include border-radius(20px);
 				background:$white;
 				border:1px solid $purple-c;
-				width:20px;
-				height:20px;
+				width:18px;
+				height:18px;
 				display:block;
 				position:relative;
 				padding-right:6px;
@@ -368,11 +358,9 @@ FORMS
 					&:before{
 						font-family: 'tsr-icons-all';
 						content: "\e666";
-						width: 10px;
-						height: 10px;
 						position: absolute;
-						top: 50%;
-						left: 50%;
+						top: 62%;
+						left: 57%;
 						margin: -5px 0 0 -5px;
 						font-size: 10px;
 						display: block;
@@ -386,54 +374,44 @@ FORMS
 			// Disabled
 			&.disabled{
 
-				&:before{
-					color:#bbb;
-				}
-
-				&:after{
-					color:$lightgrey-c;
-				}
-
-				&.checked{
-
-					.tsr-radioStyled,
-					.tsr-radioStyled:active{
-						&:before{
-							
-							color:#bbb;
-
-						}
-					}	
-
-				}
+				color: $dropdown-link-disabled-color;
+		        background-color: transparent !important;
+		        border-color: transparent !important;
+		        &:hover,
+		        &:active {
+		            color: $dropdown-link-disabled-color;
+		        }
+		        .ee-radioStyled {
+		            border-color: $dropdown-link-disabled-color;
+		        }
+		        &.checked{
+		            .ee-radioStyled,
+		            .ee-radioStyled:active{
+		                &:before{
+		                    color: $dropdown-link-disabled-color;
+		                }
+		            }   
+		        }
 				
 
 			} // .disabled END
 
 			// Invalid
-			&.invalid{
+			&.input-validation-error{
 
-				&:before{
-					color:#da552a;
-				}
-
-				&:after{
-					color:#ffece3;
-				}
-
-				&.checked{
-
-					.tsr-radioStyled,
-					.tsr-radioStyled:active{
-						&:before{
-							
-							color:#da552a;
-
-						}
-					}	
-
-				}
-
+				color: $orange-c;
+		        .ee-radioStyled {
+		            border-color: $orange-c;
+		        }
+		        &.checked{
+		            .ee-radioStyled,
+		            .ee-radioStyled:active{
+		                color: $orange-c;
+		                &:before{
+		                    color: $orange-c;
+		                }
+		            }   
+		        }
 			} // .invalid END
 
 		}

@@ -1,4 +1,4 @@
-$border-color: #888888 !default;
+$border-color: #ccc !default;
 $highlight-color: $brand-primary; 
 $gutter-width: 1.5rem !default;
 $label-font-size: .8125rem;
@@ -50,7 +50,6 @@ $label-font-size: .8125rem;
   }
 
   label {
-    color: $border-color;
     position: absolute;
     top: 0.4rem;
     left: 0;
@@ -72,6 +71,15 @@ $label-font-size: .8125rem;
     float: right; 
   }
 
+  textarea {
+      width: 100%;
+      height: 3em;
+      background-color: transparent;
+      + label.active {
+          color: $border-color;
+      }
+    }
+
   input[type=text]:focus + label,
   input[type=password]:focus + label,
   input[type=email]:focus + label,
@@ -80,12 +88,6 @@ $label-font-size: .8125rem;
   input[type=number]:focus + label,
   textarea:focus.ee-textarea + label {
     color: $highlight-color;
-  }
-
-  textarea {
-    width: 100%;
-    height: 3rem;
-    background-color: transparent;
   }
 
   input[type=text],
@@ -104,6 +106,7 @@ $label-font-size: .8125rem;
     width: 100%;
     text-indent: 0;
     font-size: $font-size-base;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     border-radius: 0;

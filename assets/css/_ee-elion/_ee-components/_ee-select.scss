@@ -18,10 +18,11 @@ label {
     border: none;
     border-bottom: 1px solid $border-color;
     outline: none;
-    height: 3rem;
-    line-height: 3.5rem;
+    height: 2.1rem;
+    line-height: normal;
     width: 100%;
     font-size: 1rem;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     display: block;
@@ -43,6 +44,9 @@ label {
         border: none;
         border-bottom: 1px solid;
       }
+      + .icon {
+         color: #ccc;
+      }
     }
     &.input-validation-error {
       color: $orange-c;
@@ -56,6 +60,7 @@ label {
       position: absolute;
       right: 0;
       top: 35%;
+      color: $dropdown-link-disabled-color;
     }
 }
 
@@ -65,14 +70,10 @@ select.browser-default { display: block; }
 
 // Disabled styles
 select:disabled {
-  color: #bbb;
-}
-.select-wrapper input.select-dropdown:disabled {
-  color: #bbb;
-  border-bottom: 1px solid #bbb;
+  color: #ccc;
 }
 .select-wrapper i {
-  color: #bbb;
+  color: #ccc;
 }
 .select-dropdown {
   li {
@@ -110,14 +111,14 @@ select:disabled {
   li {
     cursor: pointer;
     color: $text-color;
-
+    font-weight: 500;
     &:hover {
       background-color: rgba(0,0,0, .06);
     }
 
     & > span {
       display: block;
-      padding: 10px;
+      padding: 5px;
       line-height: 2;
       figure {
         float: right;
