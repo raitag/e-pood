@@ -26,7 +26,7 @@ $(document).ready(function () {
     Progress.prototype.update = function(){
         var that = this;
         var tabs = this.$element.find('.progress-tabs');
-        var content = this.$element.find('.progress-content').detach();
+        var content = this.$element.find('.progress-content');
         this.$active = this.$element.find('.progress-active');
         this.tabs.activeIndex = this.$active.index();
 
