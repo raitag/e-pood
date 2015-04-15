@@ -43,7 +43,7 @@ $(function () {
               $curr_select.find('option').eq(i).prop('selected', true);
               // Trigger onchange() event
               $curr_select.trigger('change');
-              $curr_select.siblings('input.select-dropdown').val($(this).text());
+              $curr_select.siblings('div.select-dropdown').text($(this).text());
               if (typeof callback !== 'undefined') callback();
             }
           });
