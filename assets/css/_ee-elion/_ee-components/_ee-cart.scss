@@ -347,7 +347,9 @@
 .wrapping-layers {
   overflow-x: hidden;
   background-color: $lightgrey-c;
-  margin-top: 150px;
+}
+.wrapping-layers-overflow-not-hidden {
+  background-color: $lightgrey-c;
 }
 
 .ee-fullwidth {

@@ -1855,24 +1855,24 @@ var to_$input = $('#input_to').pickatime({
 
 
 // Check if there’s a “from” or “to” time to start with.
-if ( from_picker.get('value') ) {
-  to_picker.set('min', from_picker.get('select'))
-}
-if ( to_picker.get('value') ) {
-  from_picker.set('max', to_picker.get('select') )
-}
+// if ( from_picker.get('value') ) {
+//   to_picker.set('min', from_picker.get('select'))
+// }
+// if ( to_picker.get('value') ) {
+//   from_picker.set('max', to_picker.get('select') )
+// }
 
 // When something is selected, update the “from” and “to” limits.
-from_picker.on('set', function(event) {
-  if ( event.select ) {
-    to_picker.set('min', from_picker.get('select'))
-  }
-})
-to_picker.on('set', function(event) {
-  if ( event.select ) {
-    from_picker.set('max', to_picker.get('select'))
-  }
-})
+// from_picker.on('set', function(event) {
+//   if ( event.select ) {
+//     to_picker.set('min', from_picker.get('select'))
+//   }
+// })
+// to_picker.on('set', function(event) {
+//   if ( event.select ) {
+//     from_picker.set('max', to_picker.get('select'))
+//   }
+// })
 
 
 

@@ -21,10 +21,19 @@
 // ELION HEADQUARTER
 /* @include visa/funcs */
 /* @include visa/main */
-/* @include visa/header */
+/* @include visa/headernavigation */
 /* @include visa/footer */
 /* @include visa/alert */
 /* @include visa/progress */
+/* @include visa/_searchbox-responsive */
+/* @include visa/_side-in-menu */
+/* @include visa/_sidenavigation */
+/* @include visa/side-menu-plugin */
+/* @include visa/sidemenu */
+/* @include visa/sidenavigation */
+/* @include visa/jquery-throttle-debounce.min */
+/* @include visa/jquery.bxslider.min */
+/* @include visa/jquery.slimscroll.min */
 
 // 2nd LEVEL
 /* @include bootstrap-slider */

@@ -63,6 +63,7 @@ $label-font-size: .8125rem;
   label.active {
     font-size: $label-font-size;
     font-weight: normal;
+    color: #999;
     @include transform(translateY(-130%));
   }
 

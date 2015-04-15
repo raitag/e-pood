@@ -2963,7 +2963,9 @@ body {
   margin-bottom: 258px; }
   @media (max-width: 991px) {
     body {
-      margin-bottom: 304px; } }
+      margin-bottom: 304px; }
+      body header + section + section {
+        margin-top: 150px; } }
   @media (max-width: 767px) {
     body {
       margin-bottom: 0; } }
@@ -3878,8 +3880,8 @@ header {
         header > div .menu__main .navbar-nav > li > a {
           padding-bottom: 0;
           padding-top: 22px;
-          padding-left: 5px;
-          padding-right: 5px;
+          padding-left: 10px;
+          padding-right: 10px;
           color: #333333;
           font-size: 14px;
           line-height: 14px; }
@@ -4161,6 +4163,8 @@ header .menu__top .navbar-nav > .active > a:focus {
 /* main navigation on mobile devices */
 /*[class*="screen__xs"]*/
 @media (max-width: 767px) {
+  header > div .menu__top .navbar-brand {
+    padding: 0 0 0 10px; }
   header > div .menu__top .navbar-nav {
     margin: 0; }
     header > div .menu__top .navbar-nav.visible-xs, header > div .menu__top .navbar-nav.navbar-right {
@@ -4203,7 +4207,7 @@ header .menu__top .navbar-nav > .active > a:focus {
     margin-bottom: 0;
     margin-top: 0;
     margin-right: 8px;
-    padding-left: 5px;
+    padding-left: 23px;
     padding-right: 5px;
     float: left; }
     header > div .menu__main .navbar-toggle:hover, header > div .menu__main .navbar-toggle:focus {
@@ -4902,8 +4906,22 @@ header .menu__top .navbar-nav > .active > a:focus {
     padding-top: 15px !important;
     padding-bottom: 0px !important; }
 
-  .menu__main .nav > li:hover:after, .menu__main .nav > .open:after,
-  .menu__main .nav > li:hover:after, .menu__main .nav > .active:after {
+  .menu__main .nav > li:hover:after,
+  .menu__main .nav > .open:after,
+  .menu__main .nav > .active:after {
+    bottom: 0;
+    content: "";
+    position: absolute;
+    top: auto;
+    width: 0;
+    height: 0;
+    left: 40%;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #f6f6f6; }
+
+  .menu__main .nav > .open:after,
+  .menu__main .nav > .open:hover:after {
     bottom: 0;
     content: "";
     position: absolute;
@@ -4915,12 +4933,16 @@ header .menu__top .navbar-nav > .active > a:focus {
     border-right: 8px solid transparent;
     border-bottom: 10px solid #652d86; }
 
+  .menu__main .nav > li.home:hover:after {
+    left: 30%; }
+
   .menu__main .nav > .active {
+    /* &:after {
+       border-left: $triangle-size solid transparent;
+       border-right: $triangle-size solid transparent;
+       border-bottom: $triangle-size + 2 solid #cccccc;
+     }*/
     background-color: transparent; }
-    .menu__main .nav > .active:after {
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-bottom: 10px solid #cccccc; }
     .menu__main .nav > .active > a {
       background-color: transparent;
       font-weight: bold; }
@@ -5010,7 +5032,7 @@ header .menu__top .navbar-nav > .active > a:focus {
           font-size: 0.875em !important;
           position: absolute !important;
           right: 20px;
-          top: 25% !important; }
+          top: 36% !important; }
       .sidemenu .sidemenu-menu.left .sidemenu > .sidemenu-menu.left {
         opacity: 0;
         pointer-events: none; }
@@ -5030,10 +5052,10 @@ header .menu__top .navbar-nav > .active > a:focus {
         position: relative; }
         .sidemenu .sidemenu-menu.right .sidemenu .sidemenu-toggle:before {
           display: block;
-          font-size: 1.5em !important;
+          font-size: 0.875em !important;
           position: absolute !important;
           left: 20px;
-          top: 25% !important; }
+          top: 36% !important; }
       .sidemenu .sidemenu-menu.right .sidemenu > .sidemenu-menu.right div {
         top: 5px;
         text-align: left; }
@@ -5058,7 +5080,7 @@ header .menu__top .navbar-nav > .active > a:focus {
         font-size: 0.875em !important;
         position: absolute !important;
         right: 20px;
-        top: 25% !important; }
+        top: 36% !important; }
       .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:focus {
         box-shadow: 0 0 0;
         border: 0; }
@@ -5078,10 +5100,10 @@ header .menu__top .navbar-nav > .active > a:focus {
       position: relative; }
       .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:before {
         display: block;
-        font-size: 1.5em !important;
+        font-size: 0.875em !important;
         position: absolute !important;
         left: 20px;
-        top: 25% !important; }
+        top: 36% !important; }
       .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:hover {
         background-color: #FFFFFF; }
       .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:focus {
@@ -5133,7 +5155,23 @@ header .menu__top .navbar-nav > .active > a:focus {
   .nav-up .long-link > a, .nav-down .long-link > a {
     padding-top: 0px !important;
     padding-bottom: 0px !important; }
-
+  .nav-up .navbar-collapse .nav li.home a, .nav-down .navbar-collapse .nav li.home a {
+    color: #652d86;
+    font-weight: bold; }
+  .nav-up .navbar-collapse .nav li > a, .nav-down .navbar-collapse .nav li > a {
+    white-space: nowrap;
+    display: block;
+    /*&:before {
+      content: "";
+      display: block;
+      clear: both;
+      background-color: red;//#f6f6f6;
+      position: absolute;
+      right: 0;
+      height: 50px;
+      width: 1px;
+      top: 15px;
+    }*/ }
   .sidemenu-backdrop {
     background-color: #333333;
     opacity: 0.4;
@@ -5143,11 +5181,23 @@ header .menu__top .navbar-nav > .active > a:focus {
     right: 0;
     top: 0;
     z-index: 990; } }
+  @media (min-width: 768px) and (min-width: 1200px) {
+    .nav-up .navbar-collapse .nav li > a br, .nav-down .navbar-collapse .nav li > a br {
+      display: none; } }
+
 /*
 * MOBILE VIEW
 * STYLES
 */
 @media (max-width: 767px) {
+  body header + div {
+    margin-top: 110px; }
+
+  body.noscroll {
+    padding-right: 0; }
+    body.noscroll header > div {
+      padding-right: 0; }
+
   header > div .menu__main > div {
     /* GLOBAL STYLES */
     /* LEFT SIDE MENU STYLES */
@@ -5193,6 +5243,8 @@ header .menu__top .navbar-nav > .active > a:focus {
     header > div .menu__main > div .sidemenu.open > .sidemenu-toggle {
       background-color: #4f2369;
       color: white; }
+      header > div .menu__main > div .sidemenu.open > .sidemenu-toggle:after {
+        font-size: 0.875em; }
     header > div .menu__main > div .sidemenu.open > .sidemenu-menu {
       max-height: 3000px;
       height: auto;
@@ -5237,13 +5289,11 @@ header .menu__top .navbar-nav > .active > a:focus {
             header > div .menu__main > div .navbar-collapse .navbar-nav > li a:hover, header > div .menu__main > div .navbar-collapse .navbar-nav > li a:hover span[class*="icon"] {
               color: white; }
             header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
-              color: #652d86;
-              content: "\e66a";
+              font-size: 0.875em;
               display: block;
-              font-size: 1.5em;
               position: absolute !important;
               right: 10px;
-              top: 25% !important; }
+              top: 36% !important; }
             header > div .menu__main > div .navbar-collapse .navbar-nav > li a span[class*="icon"] {
               font-size: 1.6em; }
           header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu {
@@ -5252,13 +5302,16 @@ header .menu__top .navbar-nav > .active > a:focus {
               color: #652d86;
               float: none; }
               header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu .sidemenu-toggle:before {
-                content: "\e65f"; }
+                content: "\e65f";
+                font-size: 0.875em; }
               header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu .sidemenu-toggle:hover {
                 background-color: #4f2369;
                 color: white; }
             header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu.open > .sidemenu-toggle {
               background-color: #4f2369;
               color: white; }
+              header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu.open > .sidemenu-toggle:before {
+                font-size: 0.875em; }
               header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu.open > .sidemenu-toggle > span[class*="icon"] {
                 color: white; }
             header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu.open .sidemenu-menu ul:last-child {
@@ -5274,7 +5327,7 @@ header .menu__top .navbar-nav > .active > a:focus {
       header > div .menu__main > div .mobile-icons > ul > li {
         display: inline-block; }
         header > div .menu__main > div .mobile-icons > ul > li:last-child {
-          margin-right: 15px; }
+          margin-right: 10px; }
         header > div .menu__main > div .mobile-icons > ul > li > a:hover {
           background-color: transparent;
           color: #652d86; }
@@ -5288,10 +5341,7 @@ header .menu__top .navbar-nav > .active > a:focus {
             color: #73369e;
             background-color: transparent; }
         header > div .menu__main > div .mobile-icons > ul > li.sidemenu.open .sidemenu-toggle {
-          background-color: transparent;
-          /* &:before {
-             content: "\e65f";
-           }*/ }
+          background-color: transparent; }
         header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu {
           background-color: white;
           height: auto;
@@ -5309,35 +5359,19 @@ header .menu__top .navbar-nav > .active > a:focus {
               display: block;
               padding: 10px 10px 10px 10px;
               width: 100%;
-              position: relative;
-              /*&:after {
-                @extend .icon;
-                content: "\e669";
-                right: 10px;
-                display: block;
-                font-size: 1.5em;
-                position: absolute!important;
-                top: $iconTop!important;
-              }*/ }
+              position: relative; }
               header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu .sidemenu .sidemenu-toggle:hover {
                 color: white;
                 background-color: #652d86; }
               header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu .sidemenu .sidemenu-toggle:before {
-                content: "\e65f"; }
+                content: "\e65f";
+                font-size: 0.7em !important;
+                padding-right: 10px; }
             header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu .sidemenu .sidemenu-menu a {
               display: block;
               padding: 10px 10px 10px 10px;
               width: 100%;
-              position: relative;
-              /*&:after {
-                @extend .icon;
-                content: "\e668";
-                right: 10px;
-                display: block;
-                font-size: 1.5em;
-                position: absolute!important;
-                top: $iconTop!important;
-              }*/ }
+              position: relative; }
               header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu .sidemenu .sidemenu-menu a:hover {
                 background-color: #652d86;
                 color: white; }
@@ -5345,7 +5379,8 @@ header .menu__top .navbar-nav > .active > a:focus {
               background-color: #652d86;
               color: white; }
               header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu .sidemenu.open .sidemenu-toggle:before {
-                content: "\e668"; }
+                content: "\e668";
+                font-size: 0.875em; }
 
   .sidemenu-backdrop {
     background-color: #333333;
@@ -5363,6 +5398,101 @@ header .menu__top .navbar-nav > .active > a:focus {
   position: fixed;
   z-index: 992;
   left: 0; }
+
+.sidemenu .nav > li {
+  margin-bottom: 1px; }
+  .sidemenu .nav > li a:after {
+    font-family: 'tsr-icons-all';
+    font-size: 1.125em;
+    float: right; }
+  .sidemenu .nav > li a {
+    border-radius: 4px; }
+  .sidemenu .nav > li > a:hover, .sidemenu .nav > li > a:focus {
+    background-color: #652d86;
+    color: white; }
+    .sidemenu .nav > li > a:hover:after, .sidemenu .nav > li > a:focus:after {
+      content: "\e668"; }
+    .sidemenu .nav > li > a:hover[data-toggle="collapse"]:after, .sidemenu .nav > li > a:hover[class="collapsed"]:after, .sidemenu .nav > li > a:focus[data-toggle="collapse"]:after, .sidemenu .nav > li > a:focus[class="collapsed"]:after {
+      content: "\e669"; }
+    .sidemenu .nav > li > a:hover[class="collapse-show"]:after, .sidemenu .nav > li > a:focus[class="collapse-show"]:after {
+      content: "\e66b"; }
+  .sidemenu .nav > li > a[class="collapse-show"] {
+    background-color: #652d86;
+    color: white; }
+    .sidemenu .nav > li > a[class="collapse-show"]:after {
+      content: "\e66b"; }
+  .sidemenu .nav > li ul {
+    padding: 0; }
+    .sidemenu .nav > li ul li {
+      list-style: none; }
+      .sidemenu .nav > li ul li > a {
+        display: block;
+        position: relative;
+        padding: 10px 15px; }
+        .sidemenu .nav > li ul li > a:hover {
+          background-color: #652d86;
+          color: white;
+          text-decoration: none; }
+          .sidemenu .nav > li ul li > a:hover:after {
+            content: "\e668"; }
+  .sidemenu .nav > li.active > a {
+    background-color: #4f2369;
+    color: white; }
+    .sidemenu .nav > li.active > a:after {
+      content: "\e668"; }
+    .sidemenu .nav > li.active > a[data-toggle="collapse"]:after {
+      content: "\e66b"; }
+    .sidemenu .nav > li.active > a[class="collapse-show"]:after {
+      content: "\e66b"; }
+    .sidemenu .nav > li.active > a[class="collapsed"]:after {
+      content: "\e669"; }
+    .sidemenu .nav > li.active > a:hover, .sidemenu .nav > li.active > a:active, .sidemenu .nav > li.active > a:focus {
+      background-color: #652d86; }
+
+.sub-menu {
+  border-bottom: 1px solid white; }
+  .sub-menu ul {
+    margin: 0; }
+    .sub-menu ul li {
+      margin: 0;
+      position: relative; }
+      .sub-menu ul li > a {
+        line-height: 20px;
+        padding: 20px;
+        display: inline-block; }
+        .sub-menu ul li > a:hover {
+          text-decoration: none; }
+          .sub-menu ul li > a:hover:before {
+            background-color: #4f2369;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: auto;
+            width: 100%; }
+      .sub-menu ul li.active > a:before {
+        background-color: #4f2369;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        top: auto;
+        width: 100%; }
+    .sub-menu ul li:not(:last-child) > a:after {
+      background-color: white;
+      content: "";
+      display: block;
+      height: 20px;
+      margin-top: -10px;
+      position: absolute;
+      right: -3px;
+      top: 50%;
+      width: 1px;
+      z-index: 1; }
 
 .searchbox-responsive {
   position: relative;

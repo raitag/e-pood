@@ -1,187 +1,5 @@
-// Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
-var interval;
-var scrollToTop = 0;
-
-$(document).ready(function() {
-
-    'use strict';
-
-    function headernavigation() {
-        // console.log('headernavigation js loaded');
-        // language dropdown menu
-        $('.menu__top .select-language, .menu__top .select-environment').on('show.bs.dropdown', function(e){
-            var _t = $(e.relatedTarget).find('span');
-            _t.removeClass('icon-arrow-down');
-            _t.addClass('icon-arrow-up');
-        });
-        $('.menu__top .select-language, .menu__top .select-environment').on('hide.bs.dropdown', function(e){
-            var _t = $(e.relatedTarget).find('span');
-            _t.removeClass('icon-arrow-up');
-            _t.addClass('icon-arrow-down');
-        });
-
-    }
-    testScreen();
-    headernavigation();
-});
-
-startCheck();
-
-/* hide / show logic */
-$(window).scroll(function(event){
-    didScroll = true;
-});
-
-function startCheck(){
-    interval = setInterval(function() {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-        }
-    }, 250);
-}
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('body').removeClass('nav-down').removeClass('nav-top').addClass('nav-up');
-    }
-    else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('body').removeClass('nav-up').addClass('nav-down');
-        }
-        if(st < 100){
-            $('body').removeClass('nav-down nav-up').addClass('nav-top');
-        }
-        /*if(st == 0) {
-            $('body').removeClass('nav-down nav-up').addClass('nav-top');
-        }*/
-
-    }
-
-    lastScrollTop = st;
-}
-function calculateMainMenu(){
-    var _brakePoint = $("#menu__main").width() + 20;
-    var _elW = ( $('body').hasClass('nav-top') ? 0 : 5 );
-    $("#menu__main > ul > li:not(:hidden)").each(function(index, el){
-        _elW += $(el).width();
-    });
-    // console.log(_brakePoint ,"<", _elW);
-    if(_brakePoint < _elW) {
-        addHorScroll(_elW);
-    } else {
-        removeHorScroll();
-    }
-}
-function addHorScroll($width){
-    var _el = $("#menu__main > ul:first-child");
-    _el.addClass('hor-scrollable');
-    // console.log( $('.hor-scrollable').width(), "t" );
-    _el.append('<li class="left-nav"><i class="icon-arrow-left"></i></li><li class="right-nav"><i class="icon-arrow-right"></i></li>');
-    $('.hor-scrollable .left-nav').css({ left:10, position:'fixed'});
-    $('.hor-scrollable .right-nav').css({ left:$('.hor-scrollable').width()-10, position:'fixed'});
-}
-function removeHorScroll(){
-    var _el = $("#menu__main > ul:first-child");
-    _el.removeClass('hor-scrollable');
-    _el.find('.left-nav .right-nav').removeClass('.left-nav .right-nav');
-}
-/*$(window).load(function(){
-    $(window).resize( $.throttle( 500, function(){
-        calculateMainMenu();
-    }));
-    $(window).scroll( $.throttle( 500, function(){
-        calculateMainMenu();
-    }));
-
-    calculateMainMenu();
-});*/
-
-function testScreen(){
-    $(window).resize( function(){
-        if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
-            $('body').addClass('burger');
-        } else {
-            $('body').removeClass('burger');
-        }
-        // console.log( 'test:', Modernizr.mq('only screen and (min-width: 901px)'), $(window).width() );
-    });
-
-
-}
-
-/*
-* sidemenu
-*/
-
-$(document).ready(function(){
-  $('.ee-sidenav li  a').click(function(e){
-    if ($(this).attr('class') != 'selected'){
-      $(this).addClass('selected');
-      $('a').not(this).removeClass('selected');
-    }
-    else {
-      $(this).removeClass('selected');
-    }
-    e.preventDefault();
-  });
-});
-
-/*
-* sidenavigation
-*/
-
-$('.sidemenu').on('show.bs.collapse', function (e) {
-  $(e.target).parent().find('a').addClass('collapse-show');
-});
-$('.sidemenu').on('hide.bs.collapse', function (e) {
-  $(e.target).parent().find('a').removeClass('collapse-show');
-});
-
-/*! Copyright (c) 2011 Piotr Rochala (http://rocha.la)
- * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
- * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
- *
- * Version: 1.3.0
- *
- */
-(function(f){jQuery.fn.extend({slimScroll:function(h){var a=f.extend({width:"auto",height:"250px",size:"7px",color:"#000",position:"right",distance:"1px",start:"top",opacity:0.4,alwaysVisible:!1,disableFadeOut:!1,railVisible:!1,railColor:"#333",railOpacity:0.2,railDraggable:!0,railClass:"slimScrollRail",barClass:"slimScrollBar",wrapperClass:"slimScrollDiv",allowPageScroll:!1,wheelStep:20,touchScrollStep:200,borderRadius:"7px",railBorderRadius:"7px"},h);this.each(function(){function r(d){if(s){d=d||
-window.event;var c=0;d.wheelDelta&&(c=-d.wheelDelta/120);d.detail&&(c=d.detail/3);f(d.target||d.srcTarget||d.srcElement).closest("."+a.wrapperClass).is(b.parent())&&m(c,!0);d.preventDefault&&!k&&d.preventDefault();k||(d.returnValue=!1)}}function m(d,f,h){k=!1;var e=d,g=b.outerHeight()-c.outerHeight();f&&(e=parseInt(c.css("top"))+d*parseInt(a.wheelStep)/100*c.outerHeight(),e=Math.min(Math.max(e,0),g),e=0<d?Math.ceil(e):Math.floor(e),c.css({top:e+"px"}));l=parseInt(c.css("top"))/(b.outerHeight()-c.outerHeight());
-e=l*(b[0].scrollHeight-b.outerHeight());h&&(e=d,d=e/b[0].scrollHeight*b.outerHeight(),d=Math.min(Math.max(d,0),g),c.css({top:d+"px"}));b.scrollTop(e);b.trigger("slimscrolling",~~e);v();p()}function C(){window.addEventListener?(this.addEventListener("DOMMouseScroll",r,!1),this.addEventListener("mousewheel",r,!1),this.addEventListener("MozMousePixelScroll",r,!1)):document.attachEvent("onmousewheel",r)}function w(){u=Math.max(b.outerHeight()/b[0].scrollHeight*b.outerHeight(),D);c.css({height:u+"px"});
-var a=u==b.outerHeight()?"none":"block";c.css({display:a})}function v(){w();clearTimeout(A);l==~~l?(k=a.allowPageScroll,B!=l&&b.trigger("slimscroll",0==~~l?"top":"bottom")):k=!1;B=l;u>=b.outerHeight()?k=!0:(c.stop(!0,!0).fadeIn("fast"),a.railVisible&&g.stop(!0,!0).fadeIn("fast"))}function p(){a.alwaysVisible||(A=setTimeout(function(){a.disableFadeOut&&s||(x||y)||(c.fadeOut("slow"),g.fadeOut("slow"))},1E3))}var s,x,y,A,z,u,l,B,D=30,k=!1,b=f(this);if(b.parent().hasClass(a.wrapperClass)){var n=b.scrollTop(),
-c=b.parent().find("."+a.barClass),g=b.parent().find("."+a.railClass);w();if(f.isPlainObject(h)){if("height"in h&&"auto"==h.height){b.parent().css("height","auto");b.css("height","auto");var q=b.parent().parent().height();b.parent().css("height",q);b.css("height",q)}if("scrollTo"in h)n=parseInt(a.scrollTo);else if("scrollBy"in h)n+=parseInt(a.scrollBy);else if("destroy"in h){c.remove();g.remove();b.unwrap();return}m(n,!1,!0)}}else{a.height="auto"==a.height?b.parent().height():a.height;n=f("<div></div>").addClass(a.wrapperClass).css({position:"relative",
-overflow:"hidden",width:a.width,height:a.height});b.css({overflow:"hidden",width:a.width,height:a.height});var g=f("<div></div>").addClass(a.railClass).css({width:a.size,height:"100%",position:"absolute",top:0,display:a.alwaysVisible&&a.railVisible?"block":"none","border-radius":a.railBorderRadius,background:a.railColor,opacity:a.railOpacity,zIndex:90}),c=f("<div></div>").addClass(a.barClass).css({background:a.color,width:a.size,position:"absolute",top:0,opacity:a.opacity,display:a.alwaysVisible?
-"block":"none","border-radius":a.borderRadius,BorderRadius:a.borderRadius,MozBorderRadius:a.borderRadius,WebkitBorderRadius:a.borderRadius,zIndex:99}),q="right"==a.position?{right:a.distance}:{left:a.distance};g.css(q);c.css(q);b.wrap(n);b.parent().append(c);b.parent().append(g);a.railDraggable&&c.bind("mousedown",function(a){var b=f(document);y=!0;t=parseFloat(c.css("top"));pageY=a.pageY;b.bind("mousemove.slimscroll",function(a){currTop=t+a.pageY-pageY;c.css("top",currTop);m(0,c.position().top,!1)});
-b.bind("mouseup.slimscroll",function(a){y=!1;p();b.unbind(".slimscroll")});return!1}).bind("selectstart.slimscroll",function(a){a.stopPropagation();a.preventDefault();return!1});g.hover(function(){v()},function(){p()});c.hover(function(){x=!0},function(){x=!1});b.hover(function(){s=!0;v();p()},function(){s=!1;p()});b.bind("touchstart",function(a,b){a.originalEvent.touches.length&&(z=a.originalEvent.touches[0].pageY)});b.bind("touchmove",function(b){k||b.originalEvent.preventDefault();b.originalEvent.touches.length&&
-(m((z-b.originalEvent.touches[0].pageY)/a.touchScrollStep,!0),z=b.originalEvent.touches[0].pageY)});w();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),m(0,!0)):"top"!==a.start&&(m(f(a.start).position().top,null,!0),a.alwaysVisible||c.hide());C()}});return this}});jQuery.fn.extend({slimscroll:jQuery.fn.slimScroll})})(jQuery);
-
-/*
-* jQuery throttle / debounce - v1.1 - 3/7/2010
-* http://benalman.com/projects/jquery-throttle-debounce-plugin/
-*
-* Copyright (c) 2010 "Cowboy" Ben Alman
-* Dual licensed under the MIT and GPL licenses.
-* http://benalman.com/about/license/
-*/
-(function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
-
 /**
  * Created by Viljar Salu on 28.01.2015.
- * side-menu-plugin
  */
 /* ========================================================================
  * Based on Bootstrap: dropdown.js v3.3.2
@@ -381,11 +199,11 @@ function setSubmenuYPos(el, e) {
             sidemenuMenuTop : el.closest('.sidemenu-menu').position().top,
             paddingTop      : $('.sidemenu-topborder').height()
         };
-        // console.log('obj:', obj );
+        console.log('obj:', obj );
         /* level 4 menu position calculation */
         var _submenuH  = obj.mouseY + obj.submenuH;
         var _area      = obj.viewportH - obj.sidemenuMenuTop;
-        // console.log('area:',_area, '_submenuH:',_submenuH);
+        console.log('area:',_area, '_submenuH:',_submenuH);
         if( _area < _submenuH ) {
             var _posTop = obj.viewportH - obj.submenuH;
             var _p = obj.submenuH - _area;
@@ -393,7 +211,6 @@ function setSubmenuYPos(el, e) {
             //console.log('posTop:', _posTop,'area:', _area, 'mouseY:', obj.mouseY , 'submenuH:', obj.submenuH, ' newTop:', _newTop );
             //obj.submenu.css({top:_posTop}); // height:(_area-obj.paddingTop), overflow:'hidden'
             obj.submenu.css({top:_newTop, height:(_area-5), overflow:'hidden', overflowY:'auto'});
-            obj.submenu.css({top:_newTop});
 
         } else {
             var _newTop = (obj.sidemenuMenuTop + obj.currentEl.top);
@@ -428,7 +245,7 @@ $(window).load(function(){
         });*/
         //.sidemenu-menu .sidemenu-menu,
         $('.sidemenu input, .sidemenu .sidemenu-menu h3').on('click', function(e){
-            // console.log("click into input, do something");
+            console.log("click into input, do something");
             e.preventDefault();
             e.stopPropagation();
         });
@@ -470,7 +287,7 @@ $(window).load(function(){
                 $currentParentEl.addClass('open');
             }
             prevParentElement = $currentParentEl;
-            // console.log("sidemenu", $(e.currentTarget).parent() );
+            console.log("sidemenu", $(e.currentTarget).parent() );
             e.stopPropagation();
             e.preventDefault();
         });
@@ -487,7 +304,7 @@ $(window).load(function(){
                 $currentParentEl.addClass('open');
             }
             prevParentsubElement = $currentParentEl;
-            // console.log("test sidemenu submenu", $(e.currentTarget).parent(), "prev parent element ", prevParentElement );
+            //console.log("test sidemenu submenu", $(e.currentTarget).parent(), "prev parent element ", prevParentElement );
             e.stopPropagation();
             e.preventDefault();
         });

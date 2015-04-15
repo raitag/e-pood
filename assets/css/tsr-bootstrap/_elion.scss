@@ -13,6 +13,9 @@ body {
   margin-bottom: 258px;
   @media (max-width: $screen-sm-max) {
     margin-bottom: 304px;
+    header + section + section {
+      margin-top: 150px;
+    }
   }
   @media (max-width: $screen-xs-max) {
     margin-bottom: 0;

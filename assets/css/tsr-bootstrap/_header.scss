@@ -1,3 +1,9 @@
+$main-menu-width: 100px;
+$main-menu-min-width: 80px;
+$main-menu-max-width: 100px;
+
+$triangle-size: 8px;
+
 $brand__link: #652d86;
 $brand__violet: #652D86;
 $brand__violet_hover: #73369e;
@@ -15,12 +21,6 @@ $iconTop:25%;
 $iconRight:6px;
 $horizontalLineH:5px;
 $verticalSeparatorColor:#f6f6f6;
-
-$main-menu-width: 100px;
-$main-menu-min-width: 80px;
-$main-menu-max-width: 100px;
-
-$triangle-size: 8px;
 
 .container {
   min-width: 320px;
@@ -298,8 +298,8 @@ header {
           > a {
             padding-bottom: 0;
             padding-top: 22px;
-            padding-left:5px;
-            padding-right:5px;
+            padding-left:10px;
+            padding-right:10px;
             color: $mainmenu_link;//$brand__link;
             font-size: $font-size-base - 1;
             line-height: $font-size-base - 1;
@@ -408,6 +408,9 @@ header {
 @media (max-width: 767px) { //$screen-sm
   header > div {
     .menu__top {
+      .navbar-brand {
+        padding: 0 0 0 10px;
+      }
       .navbar-nav {
         margin: 0;
 
@@ -482,7 +485,7 @@ header {
         margin-bottom: 0;
         margin-top: 0;
         margin-right: 8px;
-        padding-left: 5px;
+        padding-left: 23px;
         padding-right: 5px;
         float: left;
 
@@ -721,6 +724,13 @@ header {
     }
   } 
 }
+
+
+
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////
 // submenu
@@ -1660,6 +1670,13 @@ $menu-hover-color:#F6F6F6;
   }
 }
 
+
+
+
+
+
+
+
 /////////////////////////////////////////////////////////////////////////
 // side-in-menu
 /////////////////////////////////////////////////////////////////////////
@@ -1725,8 +1742,9 @@ $menu-hover-color:#F6F6F6;
       padding-top: 15px!important;//15px !important;
       padding-bottom: 0px !important;
   }
-  .menu__main .nav > li:hover, .menu__main .nav > .open,
-  .menu__main .nav > li:hover, .menu__main .nav > .active {
+  .menu__main .nav > li:hover,
+  .menu__main .nav > .open,
+  .menu__main .nav > .active {
       &:after {
         bottom: 0;
         content: "";
@@ -1737,16 +1755,36 @@ $menu-hover-color:#F6F6F6;
         left: 40%;
         border-left: $triangle-size solid transparent;
         border-right: $triangle-size solid transparent;
-        border-bottom: $triangle-size + 2 solid $brand__violet;
+        border-bottom: $triangle-size + 2 solid #f6f6f6;
       }
+  }
+  .menu__main .nav > .open,
+  .menu__main .nav > .open:hover{
+    &:after {
+      bottom: 0;
+      content: "";
+      position: absolute;
+      top: auto;
+      width: 0;
+      height: 0;
+      left: 40%;
+      border-left: $triangle-size solid transparent;
+      border-right: $triangle-size solid transparent;
+      border-bottom: $triangle-size + 2 solid $brand__violet;
+    }
+  }
+  .menu__main .nav > li.home:hover {
+    &:after {
+      left: 30%;
+    }
   }
 
   .menu__main .nav > .active {
-    &:after {
+   /* &:after {
       border-left: $triangle-size solid transparent;
       border-right: $triangle-size solid transparent;
       border-bottom: $triangle-size + 2 solid #cccccc;
-    }
+    }*/
     background-color: transparent;
     > a {
       &:focus,&:hover {
@@ -1887,13 +1925,13 @@ $menu-hover-color:#F6F6F6;
             .sidemenu-toggle {
               position: relative;
               &:before {
-                // @extend .icon;
+                //@extend .icon;
                 @extend .icon-arrow-right;
                 display: block;
                 font-size: 0.875em!important;
                 position: absolute !important;
                 right: $iconRight;
-                top: $iconTop !important;
+                top: $iconTop + 11 !important;
               }
             }
 
@@ -1930,10 +1968,10 @@ $menu-hover-color:#F6F6F6;
                 //@extend .icon;
                 @extend .icon-arrow-left;
                 display: block;
-                font-size: 1.5em !important;
+                font-size:0.875em !important;
                 position: absolute !important;
                 left: $iconRight;
-                top: $iconTop !important;
+                top: $iconTop + 11 !important;
               }
             }
             > .sidemenu-menu {
@@ -1981,7 +2019,7 @@ $menu-hover-color:#F6F6F6;
                     font-size: 0.875em !important;
                     position: absolute !important;
                     right: $iconRight;
-                    top: $iconTop !important;
+                    top: $iconTop + 11 !important;
                   }
                   &:focus {
                     box-shadow: 0 0 0;
@@ -2019,10 +2057,10 @@ $menu-hover-color:#F6F6F6;
                     //@extend .icon;
                     @extend .icon-arrow-left;
                     display: block;
-                    font-size: 1.5em !important;
+                    font-size: 0.875em !important;
                     position: absolute !important;
                     left: $iconRight;
-                    top: $iconTop !important;
+                    top: $iconTop + 11 !important;
                   }
                   &:hover {
                     background-color: #FFFFFF;
@@ -2135,6 +2173,41 @@ $menu-hover-color:#F6F6F6;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
       }
+      .navbar-collapse {
+        .nav {
+          li {
+            &.home {
+              a {
+                color:$link-color;
+                font-weight: bold;
+              }
+            }
+            > a {
+              white-space: nowrap;
+              display: block;
+
+              /*&:before {
+                content: "";
+                display: block;
+                clear: both;
+                background-color: red;//#f6f6f6;
+                position: absolute;
+                right: 0;
+                height: 50px;
+                width: 1px;
+                top: 15px;
+              }*/
+              //border-right: 1px solid red;
+              @media (min-width: 1200px) {
+                br {
+                  display: none;
+                }
+              }
+
+            }
+          }
+        }
+      }
   }
 
   .sidemenu-backdrop {
@@ -2154,6 +2227,15 @@ $menu-hover-color:#F6F6F6;
 * STYLES
 */
 @media (max-width: 767px) {
+  body header + div {
+    margin-top: 110px;
+  }
+  body.noscroll {
+    padding-right: 0;
+    header > div {
+      padding-right: 0;
+    }
+  }
   header > div {
     .menu__main > div {
       /* GLOBAL STYLES */
@@ -2221,6 +2303,7 @@ $menu-hover-color:#F6F6F6;
             color: $white;
             &:after {
               @extend .icon-arrow-down;
+              font-size: 0.875em;
             }
           }
           > .sidemenu-menu {
@@ -2280,15 +2363,12 @@ $menu-hover-color:#F6F6F6;
                 color: $white;
               }
               &:before {
+                font-size: 0.875em;
                 @extend .icon;
-                color:$brand__link;
-                //@extend .icon-arrow-right;
-                content: "\e66a";
                 display: block;
-                font-size: 1.5em;
                 position: absolute!important;
                 right: 10px;
-                top: $iconTop!important;
+                top: $iconTop + 11 !important;
               }
               span[class*="icon"] {
                 font-size: 1.6em;
@@ -2303,6 +2383,7 @@ $menu-hover-color:#F6F6F6;
                 &:before {
                   //@extend .icon-arrow-down;
                   content: "\e65f";
+                  font-size: 0.875em;
                 }
                 &:hover {
                   background-color: $link-hover-color;
@@ -2315,6 +2396,7 @@ $menu-hover-color:#F6F6F6;
                   color: $white;
                   &:before {
                     @extend .icon-arrow-up;
+                    font-size: 0.875em;
                   }
                   > span[class*="icon"] {
                     color: $white;
@@ -2349,7 +2431,7 @@ $menu-hover-color:#F6F6F6;
             display: inline-block;
 
             &:last-child {
-              margin-right: 15px;
+              margin-right: 10px;
             }
 
             > a {
@@ -2381,9 +2463,6 @@ $menu-hover-color:#F6F6F6;
               &.open {
                 .sidemenu-toggle {
                   background-color: transparent;
-                 /* &:before {
-                    content: "\e65f";
-                  }*/
                 }
                 .sidemenu-menu {
 
@@ -2417,16 +2496,9 @@ $menu-hover-color:#F6F6F6;
                     }
                     &:before {
                       content: "\e65f";
+                      font-size: 0.7em!important;
+                      padding-right: 10px;
                     }
-                    /*&:after {
-                      @extend .icon;
-                      content: "\e669";
-                      right: 10px;
-                      display: block;
-                      font-size: 1.5em;
-                      position: absolute!important;
-                      top: $iconTop!important;
-                    }*/
                   }
                   .sidemenu-menu {
                     a {
@@ -2434,15 +2506,6 @@ $menu-hover-color:#F6F6F6;
                       padding: 10px 10px 10px 10px;
                       width: 100%;
                       position: relative;
-                      /*&:after {
-                        @extend .icon;
-                        content: "\e668";
-                        right: 10px;
-                        display: block;
-                        font-size: 1.5em;
-                        position: absolute!important;
-                        top: $iconTop!important;
-                      }*/
                       &:hover {
                         background-color: $brand__violet;
                         color: $white;
@@ -2455,6 +2518,7 @@ $menu-hover-color:#F6F6F6;
                       color: $white;
                       &:before {
                         content: "\e668";
+                        font-size: 0.875em;
 
                       }
                     }
@@ -2488,6 +2552,250 @@ $menu-hover-color:#F6F6F6;
   z-index: 992;
   left: 0;
 }
+
+
+
+
+
+
+
+/////////////////////////////////////////
+// sidenavigation
+/////////////////////////////////////////
+.sidemenu {
+  .nav {
+    > li {
+
+      margin-bottom: 1px;
+
+       a:after {
+
+        font-family: 'tsr-icons-all';
+        font-size: em(18);
+        float:right;
+
+      }
+      a {
+         border-radius: $border-radius-base;
+      }
+      
+
+      > a {
+
+        &:hover, &:focus {
+
+          background-color:$brand-primary;
+          color: $brand-white;
+
+          &:after {
+
+            content: "\e668";
+
+          }
+          
+          &[data-toggle="collapse"],
+          &[class="collapsed"] {
+            &:after {
+
+                content: "\e669";
+
+            }
+          }
+
+          &[class="collapse-show"] {
+
+            &:after {
+
+                content: "\e66b";
+
+            }
+            
+          }
+          
+        }
+
+        &[class="collapse-show"] {
+          background-color:$brand-primary;
+          color: $brand-white;
+
+          &:after {
+
+            content: "\e66b";
+
+          }
+        }
+
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+
+          list-style: none;
+
+          > a {
+
+            display: block;
+            position: relative;
+            padding: 10px 15px;
+
+            &:hover {
+
+              background-color:$brand-primary;
+              color: $brand-white;
+              text-decoration: none;
+
+              &:after {
+
+                content: "\e668";
+
+              }
+
+             }
+          }
+        }
+      }
+
+      // active 
+      &.active {
+
+        > a {
+
+          background-color:darken($brand-primary, 7.6%);
+          color: $brand-white;
+
+          &:after {
+              content: "\e668";
+          }
+          &[data-toggle="collapse"] {
+            &:after {
+
+                content: "\e66b";
+
+            }
+          }
+          &[class="collapse-show"] {
+            
+            &:after {
+
+                content: "\e66b";
+
+            }
+            
+          }
+          &[class="collapsed"] {
+            &:after {
+
+                content: "\e669";
+
+            }
+          }
+          &:hover, &:active, &:focus {
+            background-color:$brand-primary;
+          }
+
+        }
+      }
+    }
+  } 
+}
+
+
+
+
+
+/////////////////////////////////////
+// sidemenu
+/////////////////////////////////////
+.sub-menu {
+
+  border-bottom: 1px solid lighten($gray,50%);
+
+  ul {
+
+    margin: 0;
+
+    li {
+
+      margin: 0;
+      position: relative;
+
+      > a {
+
+        line-height: 20px;
+        padding: 20px;
+        display: inline-block;
+
+        &:hover {
+
+          text-decoration:none;
+
+          &:before {
+            background-color: darken($navbar-inverse-bg,7.6%);
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: auto;
+            width: 100%;
+          }
+
+        }
+      }
+
+      &:first-child{
+        > a {
+          //padding-left: 0;
+        }
+      }
+
+      &.active {
+        
+        > a:before {
+            background-color: darken($navbar-inverse-bg,7.6%);
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: auto;
+            width: 100%;
+        }
+      }
+
+    }
+
+    li:not(:last-child) {
+       
+      > a {
+
+        &:after {
+            background-color: lighten($gray,50%);
+            content: "";
+            display: block;
+            height: 20px;
+            margin-top: -10px;
+            position: absolute;
+            right: -3px;
+            top: 50%;
+            width: 1px;
+            z-index: 1; 
+        }
+
+      }
+
+    }
+  }
+}
+
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////
 // searchbox-responsive
@@ -2651,3 +2959,5 @@ $searchBoxBg:#754292;
   from { width: 270px; opacity: 1; }
   to { width: 0; opacity: 0; }
 }
+
+
