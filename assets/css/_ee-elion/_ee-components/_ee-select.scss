@@ -56,6 +56,52 @@ label {
       }
     }
   }
+  input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    color: $text-color;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    outline: none;
+    height: 2.1rem;
+    line-height: normal;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: none;
+    border-radius: 0;
+    text-indent: 0;
+    &:active,
+    &:focus {
+      border: none;
+      border-bottom: 1px solid;
+    }
+    &.disabled,
+    &[disabled] {
+      color: #bbb;
+      background-color: transparent;
+      border-color: #bbb;
+      &:active,
+      &:focus {
+        border: none;
+        border-bottom: 1px solid;
+      }
+      + .icon {
+         color: #ccc;
+      }
+    }
+    &.input-validation-error {
+      color: $orange-c;
+      border-color: $orange-c;
+      + .icon {
+        color: $orange-c;
+      }
+    }
+  }
   .icon {
       position: absolute;
       right: 0;
