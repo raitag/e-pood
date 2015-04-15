@@ -53,8 +53,17 @@ $(function () {
         // Wrap Elements
         $select.wrap(wrapper);
         // Add Select Display Element
-        var $newSelect = $('<input type="text" class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
-                         + ' data-activates="select-options-' + uniqueID +'" value="'+ label.html() +'"/><i class="icon icon-arrow-down">');
+        var $newSelect = null;
+
+          if ($select.is(':disabled')) {
+              $newSelect = $('<input type="text" class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
+                         + ' data-activates="select-options-' + uniqueID + '" value="' + label.html() + '"/><i class="icon icon-arrow-down">');
+          }
+          else {
+              $newSelect = $('<div class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
+                             + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div><i class="icon icon-arrow-down">');
+          }
+          
         $select.before($newSelect);
         $('body').append(options);
         // Check if section element is disabled
