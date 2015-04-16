@@ -262,8 +262,7 @@
 
 .arrow_box {
   margin-bottom: -1px;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding: 15px;
   position: relative;
   background: #fff;
   border: 1px solid $lightgrey-t;
@@ -345,12 +344,12 @@
 
 // http://bioneos.com/blog/faux-full-width-sections-css
 .wrapping-layers {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: $lightgrey-c;
 }
-.wrapping-layers-overflow-not-hidden {
-  background-color: $lightgrey-c;
-}
+// .wrapping-layers-overflow-not-hidden {
+//   background-color: $lightgrey-c;
+// }
 
 .ee-fullwidth {
 

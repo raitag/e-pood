@@ -8092,7 +8092,7 @@ body {
   @media (max-width: 991px) {
     body {
       margin-bottom: 304px; }
-      body header + section + section {
+      body header + section {
         margin-top: 150px; } }
   @media (max-width: 767px) {
     body {
@@ -22296,8 +22296,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 
 .arrow_box {
   margin-bottom: -1px;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding: 15px;
   position: relative;
   background: #fff;
   border: 1px solid #dbdbdb; }
@@ -22361,10 +22360,6 @@ section.tsr-section-carousel-listing.tsr-slider-init {
     padding-bottom: 5px; }
 
 .wrapping-layers {
-  overflow-x: hidden;
-  background-color: #f6f6f6; }
-
-.wrapping-layers-overflow-not-hidden {
   background-color: #f6f6f6; }
 
 .ee-fullwidth {
@@ -22814,6 +22809,47 @@ label.ee-select-label {
 
 .select-wrapper {
   position: relative; }
+  .select-wrapper div.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    color: #333333;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    outline: none;
+    height: 2.1rem;
+    line-height: 2.1rem;
+    width: 100%;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: none;
+    border-radius: 0;
+    text-indent: 0; }
+    .select-wrapper div.select-dropdown:active, .select-wrapper div.select-dropdown:focus {
+      border: none;
+      border-bottom: 1px solid; }
+    .select-wrapper div.select-dropdown.disabled, .select-wrapper div.select-dropdown[disabled] {
+      color: #bbb;
+      background-color: transparent;
+      border-color: #bbb; }
+      .select-wrapper div.select-dropdown.disabled:active, .select-wrapper div.select-dropdown.disabled:focus, .select-wrapper div.select-dropdown[disabled]:active, .select-wrapper div.select-dropdown[disabled]:focus {
+        border: none;
+        border-bottom: 1px solid; }
+      .select-wrapper div.select-dropdown.disabled + .icon, .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.disabled + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.disabled + a:before,
+      .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown.disabled + .sidemenu-toggle:before,
+      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown.disabled + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown.disabled + i, .select-wrapper div.select-dropdown[disabled] + .icon, .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown[disabled] + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown[disabled] + a:before,
+      .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown[disabled] + .sidemenu-toggle:before,
+      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown[disabled] + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown[disabled] + i {
+        color: #ccc; }
+    .select-wrapper div.select-dropdown.input-validation-error {
+      color: #ff6319;
+      border-color: #ff6319; }
+      .select-wrapper div.select-dropdown.input-validation-error + .icon, .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.input-validation-error + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.input-validation-error + a:before,
+      .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown.input-validation-error + .sidemenu-toggle:before,
+      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown.input-validation-error + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown.input-validation-error + i {
+        color: #ff6319; }
   .select-wrapper input.select-dropdown {
     position: relative;
     cursor: pointer;
@@ -22823,7 +22859,7 @@ label.ee-select-label {
     border-bottom: 1px solid #cccccc;
     outline: none;
     height: 2.1rem;
-    line-height: normal;
+    line-height: 2.1rem;
     width: 100%;
     font-size: 1rem;
     font-weight: 500;

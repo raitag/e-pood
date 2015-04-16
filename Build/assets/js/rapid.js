@@ -4557,7 +4557,7 @@ $(document).ready(function () {
     Progress.prototype.update = function(){
         var that = this;
         var tabs = this.$element.find('.progress-tabs');
-        var content = this.$element.find('.progress-content').detach();
+        var content = this.$element.find('.progress-content');
         this.$active = this.$element.find('.progress-active');
         this.tabs.activeIndex = this.$active.index();
 
@@ -7984,7 +7984,7 @@ $(function () {
               $curr_select.find('option').eq(i).prop('selected', true);
               // Trigger onchange() event
               $curr_select.trigger('change');
-              $curr_select.siblings('input.select-dropdown').val($(this).text());
+              $curr_select.siblings('div.select-dropdown').text($(this).text());
               if (typeof callback !== 'undefined') callback();
             }
           });
@@ -7994,8 +7994,17 @@ $(function () {
         // Wrap Elements
         $select.wrap(wrapper);
         // Add Select Display Element
-        var $newSelect = $('<input type="text" class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
-                         + ' data-activates="select-options-' + uniqueID +'" value="'+ label.html() +'"/><i class="icon icon-arrow-down">');
+        var $newSelect = null;
+
+          if ($select.is(':disabled')) {
+              $newSelect = $('<input type="text" class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
+                         + ' data-activates="select-options-' + uniqueID + '" value="' + label.html() + '"/><i class="icon icon-arrow-down">');
+          }
+          else {
+              $newSelect = $('<div class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
+                             + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div><i class="icon icon-arrow-down">');
+          }
+          
         $select.before($newSelect);
         $('body').append(options);
         // Check if section element is disabled

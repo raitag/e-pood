@@ -2964,7 +2964,7 @@ body {
   @media (max-width: 991px) {
     body {
       margin-bottom: 304px; }
-      body header + section + section {
+      body header + section {
         margin-top: 150px; } }
   @media (max-width: 767px) {
     body {
