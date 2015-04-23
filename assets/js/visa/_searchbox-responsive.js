@@ -1,38 +1,20 @@
 $(function(){
-    var $win = $(window);
-    var $searchbox = $(".searchbox-responsive");// element
-    var _elBtn = $searchbox.find('button');
-    // check where user clicked outside / inside element
-    $win.on("click.Bst", function(event){
-        if ($searchbox.has(event.target).length == 0 && !$searchbox.is(event.target)){
-            _elBtn.closest('form').removeClass('focus');
-        } else {
-            _elBtn.closest('form').addClass('focus');
-        }
+    var $searchbox = $(".searchbox-responsive");
+    $searchbox.find('#search').bind('click', function(){
+        $searchbox.addClass('focus');
     });
 
-    var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-    ];
+    $(document).click(function(e){
+        if ($(e.target).closest(".searchbox-responsive").length == 0) {
+            $searchbox.removeClass('focus');
+        }
+    });
+    /*var _nav = $('header .menu__top .container > .navbar-nav:eq(1) ');
+    var _input = $('.searchbox-responsive');
+    $(window).resize( $.throttle( 500, function(){
+        if( _input.hasClass('focus') ){
+            var _maxX = _nav.width() + _nav.position().left;
+            console.log('keep calculating', _maxX, _input.position().left - 60, _input.find('input').width()+45 );
+        }
+    }));*/
 });

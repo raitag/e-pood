@@ -23,11 +23,12 @@ label {
     width: 100%;
     font-weight: 500;
     margin: 0;
-    padding: 0;
+    padding: 0 15px 0 0;
     display: block;
     box-shadow: none;
     border-radius: 0;
     text-indent: 0;
+    overflow: hidden;
     &:active,
     &:focus {
       border: none;
@@ -46,6 +47,10 @@ label {
       + .icon {
          color: #ccc;
       }
+    }
+    &:after {
+      @extend .icon;
+      content: "\e65f";
     }
     &.input-validation-error {
       color: $orange-c;
@@ -69,11 +74,12 @@ label {
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
-    padding: 0;
+    padding: 0 15px 0 0;
     display: block;
     box-shadow: none;
     border-radius: 0;
     text-indent: 0;
+    overflow: hidden;
     &:active,
     &:focus {
       border: none;
@@ -142,7 +148,7 @@ select:disabled {
   margin: 0px;
   min-width: 100px;
   z-index: 1000;
-  max-height: 70%;
+  max-height: 25%;
   opacity: 0;
   overflow-y: hidden;
 

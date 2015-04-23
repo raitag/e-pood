@@ -87,8 +87,7 @@ FORMS
     border-radius: 3px;
     color: #888888;
     line-height: 1;
-    padding: 14px 0;
-    text-indent: 14px;
+    padding: 14px;
     border: 1px solid #dbdbdb;
     display: block;
     width: 100%;
@@ -7082,7 +7081,7 @@ var, .price {
   font-weight: normal;
   font-style: normal; }
 
-.icon, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .sidemenu-toggle:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
+.icon, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .sidemenu-toggle:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .select-wrapper div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
 .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
 .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before, .ee-filters-list ul.filter li.collapse-trigger i {
   font-family: 'tsr-icons-all';
@@ -7095,10 +7094,6 @@ var, .price {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .icon:empty, .sidemenu-toggle:empty:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li a:empty:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:empty:before,
-  .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:empty:before,
-  .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:empty:before, .ee-filters-list ul.filter li.collapse-trigger i:empty {
-    width: 1em; }
 
 .icon-service-phone:before {
   content: "\e614"; }
@@ -8089,17 +8084,16 @@ body {
   line-height: 1.42857;
   background-color: #f6f6f6;
   margin-bottom: 258px; }
+  body header + section {
+    margin-top: 150px; }
   @media (max-width: 991px) {
     body {
       margin-bottom: 304px; }
       body header + section {
-        margin-top: 150px; } }
+        margin-top: 100px; } }
   @media (max-width: 767px) {
     body {
       margin-bottom: 0; } }
-
-body header + section {
-  margin-top: 150px; }
 
 header {
   display: block;
@@ -8222,8 +8216,7 @@ header {
       header > div .menu__top .searchbox-responsive button {
         color: white;
         min-width: 1%;
-        /*max-width: auto;*/
-        width: auto; }
+        width: 31px; }
       header > div .menu__top .navbar-nav {
         -webkit-transition: opacity 0.3s ease;
         transition: opacity 0.3s ease; }
@@ -8245,7 +8238,6 @@ header {
             box-shadow: 0 0 0;
             border-radius: 0;
             border-left: 1px solid #4b2164;
-            border-right: 1px solid #4b2164;
             border-top: 0;
             border-bottom: 0;
             min-width: 62px;
@@ -8271,8 +8263,8 @@ header {
             color: white;
             font-size: 12px;
             font-weight: normal;
-            padding-top: 0px;
-            padding-bottom: 0px;
+            padding-top: 0;
+            padding-bottom: 0;
             display: table-cell;
             vertical-align: middle;
             height: 50px; }
@@ -8293,7 +8285,7 @@ header {
             header > div .menu__top .navbar-nav > li.dropdown > a > span[class*="icon-arrow"] {
               font-size: 13px;
               position: absolute;
-              top: 23%;
+              top: 24%;
               right: 10px; }
         header > div .menu__top .navbar-nav:not(.navbar-right) > li.dropdown .dropdown-menu {
           min-width: 105px; }
@@ -8311,13 +8303,11 @@ header {
             padding-left: 26px;
             white-space: nowrap; }
     header > div .menu__main {
-      margin-bottom: 0px;
+      margin-bottom: 0;
       z-index: 1;
       border: 0;
       border-radius: 0;
       background-color: white;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
       /* mobile view */ }
       header > div .menu__main .navbar-toggle {
         border-color: #652d86;
@@ -8328,11 +8318,12 @@ header {
         padding-left: 0;
         padding-right: 0; }
       header > div .menu__main .navbar-nav:hover > li > a {
-        opacity: 0.65;
-        -webkit-transition: opacity 0.3s ease;
-        transition: opacity 0.3s ease; }
+        opacity: 0.65; }
       header > div .menu__main .navbar-nav:hover > li:hover > a {
         opacity: 1; }
+      header > div .menu__main .navbar-nav > li > a {
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease; }
       header > div .menu__main .navbar-nav > li {
         min-width: 80px;
         min-height: 100px;
@@ -8398,19 +8389,42 @@ header {
               top: 0;
               -webkit-transition: all 0.4s ease;
               transition: all 0.4s ease; }
+          header > div .menu__main .navbar-nav > li > a.menu-highlight:hover, header > div .menu__main .navbar-nav > li > a.menu-highlight:focus {
+            color: #00b48c; }
+          header > div .menu__main .navbar-nav > li > a.menu-highlight .icon, header > div .menu__main .navbar-nav > li > a.menu-highlight .sidemenu-toggle:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li > a.menu-highlight a:before, header > div .menu__main .navbar-nav > li > a.menu-highlight .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__main .navbar-nav > li > a.menu-highlight div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-nav > li > a.menu-highlight .sidemenu-toggle:before,
+          header > div .menu__main .navbar-nav > li > a.menu-highlight .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
+          .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-nav > li > a.menu-highlight .sidemenu-toggle:before, header > div .menu__main .navbar-nav > li > a.menu-highlight .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-nav > li > a.menu-highlight i {
+            color: #00b48c; }
         header > div .menu__main .navbar-nav > li.open > a,
         header > div .menu__main .navbar-nav > li.open > a:hover,
         header > div .menu__main .navbar-nav > li.open > a:focus {
           background-color: white;
           color: #652d86; }
+        header > div .menu__main .navbar-nav > li.open > a.menu-highlight {
+          color: #009974; }
+          header > div .menu__main .navbar-nav > li.open > a.menu-highlight .icon, header > div .menu__main .navbar-nav > li.open > a.menu-highlight .sidemenu-toggle:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li.open > a.menu-highlight a:before, header > div .menu__main .navbar-nav > li.open > a.menu-highlight .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__main .navbar-nav > li.open > a.menu-highlight div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-nav > li.open > a.menu-highlight .sidemenu-toggle:before,
+          header > div .menu__main .navbar-nav > li.open > a.menu-highlight .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
+          .sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__main .navbar-nav > li.open > a.menu-highlight .sidemenu-toggle:before, header > div .menu__main .navbar-nav > li.open > a.menu-highlight .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-nav > li.open > a.menu-highlight i {
+            color: #009974; }
       header > div .menu__main .navbar-nav.menu__main--additional {
         margin-top: 0; }
-        header > div .menu__main .navbar-nav.menu__main--additional > li {
+        header > div .menu__main .navbar-nav.menu__main--additional > li,
+        header > div .menu__main .navbar-nav.menu__main--additional > li:first-child {
           min-width: 1%;
           text-align: center; }
-          header > div .menu__main .navbar-nav.menu__main--additional > li:before {
-            background-color: transparent; }
-          header > div .menu__main .navbar-nav.menu__main--additional > li > a {
+          header > div .menu__main .navbar-nav.menu__main--additional > li:before,
+          header > div .menu__main .navbar-nav.menu__main--additional > li:first-child:before {
+            background-color: #f6f6f6;
+            clear: both;
+            content: "";
+            display: block;
+            height: 24px;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            width: 1px; }
+          header > div .menu__main .navbar-nav.menu__main--additional > li > a,
+          header > div .menu__main .navbar-nav.menu__main--additional > li:first-child > a {
             padding-left: 10px;
             padding-right: 10px;
             display: block; }
@@ -8695,9 +8709,9 @@ header .menu__top .navbar-nav > .active > a:focus {
       background-color: transparent;
       border-radius: 0;
       box-shadow: 0 0 0; }
-      header > div .menu__main .navbar-toggle:hover .icon, header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, header > div .menu__main > div .navbar-toggle:hover .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:hover a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:hover .sidemenu-toggle:before,
+      header > div .menu__main .navbar-toggle:hover .icon, header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, header > div .menu__main > div .navbar-toggle:hover .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:hover a:before, header > div .menu__main .navbar-toggle:hover .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__main .navbar-toggle:hover div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:hover .sidemenu-toggle:before,
       header > div .menu__main .navbar-toggle:hover .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
-      .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, header > div .menu__main .navbar-toggle:hover .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-toggle:hover i, header > div .menu__main .navbar-toggle:focus .icon, header > div .menu__main .navbar-toggle:focus .sidemenu-toggle:before, header > div .menu__main > div .navbar-toggle:focus .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:focus a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:focus .sidemenu-toggle:before,
+      .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, header > div .menu__main .navbar-toggle:hover .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-toggle:hover i, header > div .menu__main .navbar-toggle:focus .icon, header > div .menu__main .navbar-toggle:focus .sidemenu-toggle:before, header > div .menu__main > div .navbar-toggle:focus .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:focus a:before, header > div .menu__main .navbar-toggle:focus .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__main .navbar-toggle:focus div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:focus .sidemenu-toggle:before,
       header > div .menu__main .navbar-toggle:focus .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-toggle:focus .sidemenu-toggle:before, header > div .menu__main .navbar-toggle:focus .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-toggle:focus i {
         color: #73369e; }
@@ -8705,11 +8719,11 @@ header .menu__top .navbar-nav > .active > a:focus {
       background-color: white;
       color: #652d86;
       border-radius: 0; }
-      header > div .menu__main .navbar-toggle.active > .icon, header > div .menu__main .navbar-toggle.active > .sidemenu-toggle:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle.active > a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle.active > .sidemenu-toggle:before,
+      header > div .menu__main .navbar-toggle.active > .icon, header > div .menu__main .navbar-toggle.active > .sidemenu-toggle:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle.active > a:before, header > div .menu__main .select-wrapper .navbar-toggle.active > div.select-dropdown:after, .select-wrapper header > div .menu__main .navbar-toggle.active > div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle.active > .sidemenu-toggle:before,
       header > div .menu__main .sidemenu .sidemenu-menu.left .sidemenu .navbar-toggle.active > .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-toggle.active > .sidemenu-toggle:before, header > div .menu__main .ee-filters-list ul.filter li.collapse-trigger .navbar-toggle.active > i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-toggle.active > i {
         color: #652d86; }
-    header > div .menu__main .navbar-toggle .icon, header > div .menu__main .navbar-toggle .sidemenu-toggle:before, header > div .menu__main > div .navbar-toggle .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle .sidemenu-toggle:before,
+    header > div .menu__main .navbar-toggle .icon, header > div .menu__main .navbar-toggle .sidemenu-toggle:before, header > div .menu__main > div .navbar-toggle .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle a:before, header > div .menu__main .navbar-toggle .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__main .navbar-toggle div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle .sidemenu-toggle:before,
     header > div .menu__main .navbar-toggle .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
     .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-toggle .sidemenu-toggle:before, header > div .menu__main .navbar-toggle .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__main .navbar-toggle i {
       font-size: 30px;
@@ -8717,7 +8731,7 @@ header .menu__top .navbar-nav > .active > a:focus {
   header > div .menu__main .navbar-collapse,
   header > div .menu__main .navbar-form {
     border-color: #652d86;
-    border-width: 5px;
+    border-width: 3px;
     background-color: white; }
   header > div .menu__main .navbar-nav {
     margin-top: 0;
@@ -8740,6 +8754,8 @@ header .menu__top .navbar-nav > .active > a:focus {
         color: white;
         background-color: #4b2164;
         border-bottom: 1px solid #eeeeee; }
+      header > div .menu__main .navbar-nav > li.open .open .sidemenu-toggle:before {
+        content: "\e668" !important; }
       header > div .menu__main .navbar-nav > li.active > a:after, header > div .menu__main .navbar-nav > li.open > a:after {
         border-bottom: 0;
         border-left: 0;
@@ -8751,9 +8767,17 @@ header .menu__top .navbar-nav > .active > a:focus {
 @media (min-width: 768px) and (max-width: 807px) {
   header > div .menu__main .navbar-nav > li {
     min-width: 90px; } }
+@media screen and (min-width: 768px) {
+  .noscroll, .noscroll > .container {
+    padding-right: 13px; }
+
+  .noscroll > header nav {
+    padding-right: 18px; } }
 .noscroll {
   overflow-x: hidden;
   overflow-y: hidden; }
+  .noscroll::-webkit-scrollbar {
+    -webkit-appearance: none; }
 
 .sidemenu .nav > li {
   margin-bottom: 1px; }
@@ -8805,55 +8829,12 @@ header .menu__top .navbar-nav > .active > a:focus {
     .sidemenu .nav > li.active > a:hover, .sidemenu .nav > li.active > a:active, .sidemenu .nav > li.active > a:focus {
       background-color: #652d86; }
 
-.sub-menu {
-  border-bottom: 1px solid white; }
-  .sub-menu ul {
-    margin: 0; }
-    .sub-menu ul li {
-      margin: 0;
-      position: relative; }
-      .sub-menu ul li > a {
-        line-height: 20px;
-        padding: 20px;
-        display: inline-block; }
-        .sub-menu ul li > a:hover {
-          text-decoration: none; }
-          .sub-menu ul li > a:hover:before {
-            background-color: #4f2369;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 4px;
-            left: 0;
-            position: absolute;
-            top: auto;
-            width: 100%; }
-      .sub-menu ul li.active > a:before {
-        background-color: #4f2369;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 4px;
-        left: 0;
-        position: absolute;
-        top: auto;
-        width: 100%; }
-    .sub-menu ul li:not(:last-child) > a:after {
-      background-color: white;
-      content: "";
-      display: block;
-      height: 20px;
-      margin-top: -10px;
-      position: absolute;
-      right: -3px;
-      top: 50%;
-      width: 1px;
-      z-index: 1; }
-
 .burger {
   /* switch on/off menu */
   /* general header styles */
   /* side menu styles */ }
+  .burger.noscroll, .burger.noscroll > .container, .burger.noscroll > header nav {
+    padding-right: 0; }
   .burger .navbar-toggle {
     display: block; }
   .burger .navbar-header {
@@ -8990,8 +8971,11 @@ header .menu__top .navbar-nav > .active > a:focus {
         .burger header > div .sidemenu .sidemenu-menu.right .sidemenu > .sidemenu-menu.right {
           display: none; }
           .burger header > div .sidemenu .sidemenu-menu.right .sidemenu > .sidemenu-menu.right div {
-            top: 5px;
+            top: 3px;
             text-align: left; }
+            .burger header > div .sidemenu .sidemenu-menu.right .sidemenu > .sidemenu-menu.right div > * {
+              padding: 5px;
+              text-align: right; }
         .burger header > div .sidemenu .sidemenu-menu.right > ul {
           list-style: none;
           padding: 0px;
@@ -9034,15 +9018,16 @@ header .menu__top .navbar-nav > .active > a:focus {
       .burger header > div .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle {
         background-color: #f6f6f6;
         color: #4f2369;
-        position: relative; }
+        position: relative;
+        /*&:hover {
+          background-color: #FFFFFF;
+        }*/ }
         .burger header > div .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:before {
           display: block;
           font-size: 1.5em !important;
           position: absolute !important;
           left: 6px;
           top: 25% !important; }
-        .burger header > div .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:hover {
-          background-color: #FFFFFF; }
         .burger header > div .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:focus {
           box-shadow: 0 0 0;
           border: 0; }
@@ -9085,9 +9070,9 @@ header .menu__top .navbar-nav > .active > a:focus {
         background-color: transparent;
         border-radius: 0;
         box-shadow: 0 0 0; }
-        .burger header > div .menu__main .navbar-toggle:hover .icon, .burger header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-toggle:hover .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:hover a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:hover .sidemenu-toggle:before,
+        .burger header > div .menu__main .navbar-toggle:hover .icon, .burger header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-toggle:hover .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:hover a:before, .burger header > div .menu__main .navbar-toggle:hover .select-wrapper div.select-dropdown:after, .select-wrapper .burger header > div .menu__main .navbar-toggle:hover div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:hover .sidemenu-toggle:before,
         .burger header > div .menu__main .navbar-toggle:hover .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
-        .sidemenu.open > .sidemenu-menu.left .sidemenu.open .burger header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, .burger header > div .menu__main .navbar-toggle:hover .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .burger header > div .menu__main .navbar-toggle:hover i, .burger header > div .menu__main .navbar-toggle:focus .icon, .burger header > div .menu__main .navbar-toggle:focus .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-toggle:focus .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:focus a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:focus .sidemenu-toggle:before,
+        .sidemenu.open > .sidemenu-menu.left .sidemenu.open .burger header > div .menu__main .navbar-toggle:hover .sidemenu-toggle:before, .burger header > div .menu__main .navbar-toggle:hover .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .burger header > div .menu__main .navbar-toggle:hover i, .burger header > div .menu__main .navbar-toggle:focus .icon, .burger header > div .menu__main .navbar-toggle:focus .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-toggle:focus .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle:focus a:before, .burger header > div .menu__main .navbar-toggle:focus .select-wrapper div.select-dropdown:after, .select-wrapper .burger header > div .menu__main .navbar-toggle:focus div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle:focus .sidemenu-toggle:before,
         .burger header > div .menu__main .navbar-toggle:focus .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
         .sidemenu.open > .sidemenu-menu.left .sidemenu.open .burger header > div .menu__main .navbar-toggle:focus .sidemenu-toggle:before, .burger header > div .menu__main .navbar-toggle:focus .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .burger header > div .menu__main .navbar-toggle:focus i {
           color: #73369e; }
@@ -9095,11 +9080,11 @@ header .menu__top .navbar-nav > .active > a:focus {
         background-color: white;
         color: #652d86;
         border-radius: 0; }
-        .burger header > div .menu__main .navbar-toggle.active > .icon, .burger header > div .menu__main .navbar-toggle.active > .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle.active > a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle.active > .sidemenu-toggle:before,
+        .burger header > div .menu__main .navbar-toggle.active > .icon, .burger header > div .menu__main .navbar-toggle.active > .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle.active > a:before, .burger header > div .menu__main .select-wrapper .navbar-toggle.active > div.select-dropdown:after, .select-wrapper .burger header > div .menu__main .navbar-toggle.active > div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle.active > .sidemenu-toggle:before,
         .burger header > div .menu__main .sidemenu.open > .sidemenu-menu.left .sidemenu.open .navbar-toggle.active > .sidemenu-toggle:before,
         .sidemenu.open > .sidemenu-menu.left .sidemenu.open .burger header > div .menu__main .navbar-toggle.active > .sidemenu-toggle:before, .burger header > div .menu__main .ee-filters-list ul.filter li.collapse-trigger .navbar-toggle.active > i, .ee-filters-list ul.filter li.collapse-trigger .burger header > div .menu__main .navbar-toggle.active > i {
           color: #652d86; }
-      .burger header > div .menu__main .navbar-toggle .icon, .burger header > div .menu__main .navbar-toggle .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-toggle .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle a:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle .sidemenu-toggle:before,
+      .burger header > div .menu__main .navbar-toggle .icon, .burger header > div .menu__main .navbar-toggle .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-toggle .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li .navbar-toggle a:before, .burger header > div .menu__main .navbar-toggle .select-wrapper div.select-dropdown:after, .select-wrapper .burger header > div .menu__main .navbar-toggle div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-toggle .sidemenu-toggle:before,
       .burger header > div .menu__main .navbar-toggle .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .burger header > div .menu__main .navbar-toggle .sidemenu-toggle:before, .burger header > div .menu__main .navbar-toggle .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .burger header > div .menu__main .navbar-toggle i {
         font-size: 30px;
@@ -9107,7 +9092,7 @@ header .menu__top .navbar-nav > .active > a:focus {
     .burger header > div .menu__main .navbar-collapse,
     .burger header > div .menu__main .navbar-form {
       border-color: #652d86;
-      border-width: 5px;
+      border-width: 3px;
       background-color: white; }
     .burger header > div .menu__main .navbar-nav {
       margin-top: 0;
@@ -9201,32 +9186,37 @@ header .menu__top .navbar-nav > .active > a:focus {
       opacity: 1; }
     .burger header > div .menu__main > div .navbar-collapse {
       background-color: transparent;
-      left: -100%;
+      left: 0;
       top: 51px;
       position: absolute;
-      width: 50%;
-      /*width: 100%;*/
-      margin-left: -10px;
+      width: 100%;
+      margin-left: 0;
       margin-right: 0;
-      z-index: 991;
-      display: block !important;
-      visibility: visible !important;
-      height: 100% !important;
-      overflow: hidden !important;
       overflow-y: auto !important;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+      box-shadow: 0 0 0;
+      z-index: 0;
+      visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden; }
       .burger header > div .menu__main > div .navbar-collapse.collapse {
         display: block;
-        visibility: visible; }
+        visibility: hidden !important; }
       .burger header > div .menu__main > div .navbar-collapse.in {
-        left: 10px;
-        z-index: 999; }
+        z-index: 991;
+        visibility: visible; }
+        .burger header > div .menu__main > div .navbar-collapse.in .navbar-nav {
+          margin-left: 0;
+          visibility: visible;
+          z-index: 1; }
       .burger header > div .menu__main > div .navbar-collapse .navbar-nav {
-        width: 100%;
+        width: 50%;
         background-color: white;
-        margin: 0;
-        float: none; }
+        margin: 0 0 0 -100%;
+        float: none;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
         .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li {
           margin-left: 0;
           margin-right: 0;
@@ -9284,7 +9274,30 @@ header .menu__top .navbar-nav > .active > a:focus {
       padding: 0;
       margin: 0; }
       .burger header > div .menu__main > div .mobile-icons > ul > li {
-        display: inline-block; }
+        display: inline-block;
+        position: relative; }
+        .burger header > div .menu__main > div .mobile-icons > ul > li:hover:after {
+          bottom: 0px;
+          content: "";
+          position: absolute;
+          top: auto;
+          width: 0;
+          height: 0;
+          left: 35%;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid #f6f6f6; }
+        .burger header > div .menu__main > div .mobile-icons > ul > li.open:after {
+          bottom: -1px;
+          content: "";
+          position: absolute;
+          top: auto;
+          width: 0;
+          height: 0;
+          left: 35%;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid #652d86; }
         .burger header > div .menu__main > div .mobile-icons > ul > li:last-child {
           margin-right: 15px; }
         .burger header > div .menu__main > div .mobile-icons > ul > li > a:hover {
@@ -9314,7 +9327,7 @@ header .menu__top .navbar-nav > .active > a:focus {
           right: 0;
           visibility: visible;
           width: 50%;
-          margin-top: 5px;
+          margin-top: 3px;
           overflow-y: auto;
           z-index: 996; }
           .burger header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu > div {
@@ -9372,15 +9385,8 @@ header .menu__top .navbar-nav > .active > a:focus {
     right: 0;
     top: 101px;
     z-index: 990; }
-
-.noscroll {
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
-  overflow-y: hidden;
-  padding-right: 16px; }
-  .noscroll header > div {
-    padding-right: 16px; }
+  .burger.nav-top .sidemenu-backdrop, .burger.nav-top .sidemenu-topborder {
+    top: 101px !important; }
 
 .sidemenu .sidemenu-menu button {
   margin: 10px !important;
@@ -9412,23 +9418,23 @@ header .menu__top .navbar-nav > .active > a:focus {
     top: auto;
     width: 0;
     height: 0;
-    left: 40%;
+    left: 42%;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 10px solid #f6f6f6; }
+    border-bottom: 8px solid #f6f6f6; }
 
   .menu__main .nav > .open:after,
   .menu__main .nav > .open:hover:after {
-    bottom: 0;
+    bottom: 3px;
     content: "";
     position: absolute;
     top: auto;
     width: 0;
     height: 0;
-    left: 40%;
+    left: 42%;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 10px solid #652d86; }
+    border-bottom: 8px solid #652d86; }
 
   .menu__main .nav > li.home:hover:after {
     left: 30%; }
@@ -9457,12 +9463,14 @@ header .menu__top .navbar-nav > .active > a:focus {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
     .sidemenu .sidemenu-menu h3 {
-      font-weight: 200; }
+      font-weight: 700; }
     .sidemenu .sidemenu-menu ul {
       list-style: none;
       padding: 0; }
     .sidemenu .sidemenu-menu .slimScrollDiv > div {
-      background-color: white; }
+      background-color: white;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+      border-radius: 2px; }
       .sidemenu .sidemenu-menu .slimScrollDiv > div.mute {
         background-color: #f6f6f6; }
         .sidemenu .sidemenu-menu .slimScrollDiv > div.mute li > a:hover {
@@ -9485,7 +9493,8 @@ header .menu__top .navbar-nav > .active > a:focus {
         .sidemenu .sidemenu-menu > div a:active {
           box-shadow: 0 0 0; }
       .sidemenu .sidemenu-menu > div .sidemenu .sidemenu-menu {
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+        border-radius: 2px; }
         .sidemenu .sidemenu-menu > div .sidemenu .sidemenu-menu h3 {
           padding: 15px 20px; }
         .sidemenu .sidemenu-menu > div .sidemenu .sidemenu-menu ul li a {
@@ -9502,8 +9511,7 @@ header .menu__top .navbar-nav > .active > a:focus {
         display: table;
         width: 100%; }
         .sidemenu .sidemenu-menu > div ul > li {
-          display: table-row;
-          height: 2.81em; }
+          display: table-row; }
           .sidemenu .sidemenu-menu > div ul > li:focus {
             box-shadow: 0 0 0;
             border: 0; }
@@ -9554,7 +9562,7 @@ header .menu__top .navbar-nav > .active > a:focus {
           left: 20px;
           top: 36% !important; }
       .sidemenu .sidemenu-menu.right .sidemenu > .sidemenu-menu.right div {
-        top: 5px;
+        top: 3px;
         text-align: left; }
       .sidemenu .sidemenu-menu.right > ul {
         list-style: none;
@@ -9584,7 +9592,8 @@ header .menu__top .navbar-nav > .active > a:focus {
       .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:hover {
         background-color: #FFFFFF; }
     .sidemenu.open > .sidemenu-menu.left .sidemenu.open > .sidemenu-menu {
-      z-index: 9999; }
+      z-index: -1;
+      margin-left: -2px; }
       .sidemenu.open > .sidemenu-menu.left .sidemenu.open > .sidemenu-menu.left {
         background-color: white;
         pointer-events: auto;
@@ -9627,11 +9636,11 @@ header .menu__top .navbar-nav > .active > a:focus {
   .menu__top .sidemenu-topborder {
     display: none; }
 
-  .menu__main .sidemenu .sidemenu-menu,
   .menu__main .sidemenu .sidemenu-backdrop {
     top: 56px; }
   .menu__main .sidemenu .sidemenu-menu {
-    padding-top: 5px; }
+    padding-top: 3px;
+    top: 59px; }
   .menu__main .sidemenu .sidemenu-menu > div .sidemenu .sidemenu-menu ul li button {
     margin: 5px; }
 
@@ -9639,14 +9648,22 @@ header .menu__top .navbar-nav > .active > a:focus {
     * manu__main sidemenu top is different than scrolled top
   */
   .nav-top .sidemenu-topborder {
-    top: 149px; }
-  .nav-top .menu__main .sidemenu .sidemenu-menu,
-  .nav-top .menu__main .sidemenu .sidemenu-backdrop {
-    top: 150px; }
+    top: 99px; }
+  .nav-top .menu__main .sidemenu {
+    /*.sidemenu-topborder,
+    .sidemenu-backdrop {
+      top: 146px;
+    }*/ }
+    .nav-top .menu__main .sidemenu .sidemenu-menu,
+    .nav-top .menu__main .sidemenu .sidemenu-topborder,
+    .nav-top .menu__main .sidemenu .sidemenu-backdrop {
+      top: 146px; }
 
   .nav-up .sidemenu-topborder, .nav-down .sidemenu-topborder {
-    top: 51px; }
-  .nav-up .sidemenu.open > .sidemenu-menu, .nav-down .sidemenu.open > .sidemenu-menu {
+    top: 55px; }
+  .nav-up .sidemenu.open:after, .nav-up .sidemenu:hover:after, .nav-down .sidemenu.open:after, .nav-down .sidemenu:hover:after {
+    bottom: 0 !important; }
+  .nav-up .sidemenu.open > .sidemenu-menu, .nav-up .sidemenu:hover > .sidemenu-menu, .nav-down .sidemenu.open > .sidemenu-menu, .nav-down .sidemenu:hover > .sidemenu-menu {
     border-top: 0;
     padding-top: 0; }
   .nav-up .long-link > a, .nav-down .long-link > a {
@@ -9690,11 +9707,12 @@ header .menu__top .navbar-nav > .active > a:focus {
   body header + div {
     margin-top: 110px; }
 
-  body.noscroll {
-    padding-right: 0; }
-    body.noscroll header > div {
-      padding-right: 0; }
-
+  /*body.noscroll {
+    padding-right: 0;
+    header > div {
+      padding-right: 0;
+    }
+  }*/
   header > div .menu__main > div {
     /* GLOBAL STYLES */
     /* LEFT SIDE MENU STYLES */
@@ -9748,28 +9766,36 @@ header .menu__top .navbar-nav > .active > a:focus {
       opacity: 1; }
     header > div .menu__main > div .navbar-collapse {
       background-color: transparent;
-      left: -100%;
+      left: 0;
       top: 51px;
-      overflow-y: auto;
       position: absolute;
-      width: 83.3%;
-      /*width: 100%;*/
-      margin-left: -10px;
+      width: 100%;
+      margin-left: 0;
       margin-right: 0;
-      z-index: 991;
       overflow-y: auto;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+      box-shadow: 0 0 0;
+      z-index: 0;
+      visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden; }
       header > div .menu__main > div .navbar-collapse.collapse {
         display: block;
-        visibility: visible; }
+        visibility: hidden; }
       header > div .menu__main > div .navbar-collapse.in {
-        left: 10px;
-        z-index: 999; }
+        /*left: 10px;
+        z-index: 999;*/
+        z-index: 991;
+        visibility: visible; }
+        header > div .menu__main > div .navbar-collapse.in .navbar-nav {
+          margin-left: 0; }
       header > div .menu__main > div .navbar-collapse .navbar-nav {
-        width: 100%;
+        width: 88.3%;
         background-color: white;
-        margin: 0; }
+        margin: 0 0 0 -100%;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
         header > div .menu__main > div .navbar-collapse .navbar-nav > li {
           margin-left: 0;
           margin-right: 0;
@@ -9847,7 +9873,7 @@ header .menu__top .navbar-nav > .active > a:focus {
           right: 0;
           visibility: visible;
           width: 88.3%;
-          margin-top: 5px;
+          margin-top: 3px;
           overflow-y: auto;
           z-index: 996; }
           header > div .menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu .sidemenu {
@@ -9891,60 +9917,10 @@ header .menu__top .navbar-nav > .active > a:focus {
 .sidemenu-topborder {
   background-color: #652d86;
   width: 100%;
-  height: 5px;
+  height: 3px;
   position: fixed;
   z-index: 992;
   left: 0; }
-
-.sidemenu .nav > li {
-  margin-bottom: 1px; }
-  .sidemenu .nav > li a:after {
-    font-family: 'tsr-icons-all';
-    font-size: 1.125em;
-    float: right; }
-  .sidemenu .nav > li a {
-    border-radius: 4px; }
-  .sidemenu .nav > li > a:hover, .sidemenu .nav > li > a:focus {
-    background-color: #652d86;
-    color: white; }
-    .sidemenu .nav > li > a:hover:after, .sidemenu .nav > li > a:focus:after {
-      content: "\e668"; }
-    .sidemenu .nav > li > a:hover[data-toggle="collapse"]:after, .sidemenu .nav > li > a:hover[class="collapsed"]:after, .sidemenu .nav > li > a:focus[data-toggle="collapse"]:after, .sidemenu .nav > li > a:focus[class="collapsed"]:after {
-      content: "\e669"; }
-    .sidemenu .nav > li > a:hover[class="collapse-show"]:after, .sidemenu .nav > li > a:focus[class="collapse-show"]:after {
-      content: "\e66b"; }
-  .sidemenu .nav > li > a[class="collapse-show"] {
-    background-color: #652d86;
-    color: white; }
-    .sidemenu .nav > li > a[class="collapse-show"]:after {
-      content: "\e66b"; }
-  .sidemenu .nav > li ul {
-    padding: 0; }
-    .sidemenu .nav > li ul li {
-      list-style: none; }
-      .sidemenu .nav > li ul li > a {
-        display: block;
-        position: relative;
-        padding: 10px 15px; }
-        .sidemenu .nav > li ul li > a:hover {
-          background-color: #652d86;
-          color: white;
-          text-decoration: none; }
-          .sidemenu .nav > li ul li > a:hover:after {
-            content: "\e668"; }
-  .sidemenu .nav > li.active > a {
-    background-color: #4f2369;
-    color: white; }
-    .sidemenu .nav > li.active > a:after {
-      content: "\e668"; }
-    .sidemenu .nav > li.active > a[data-toggle="collapse"]:after {
-      content: "\e66b"; }
-    .sidemenu .nav > li.active > a[class="collapse-show"]:after {
-      content: "\e66b"; }
-    .sidemenu .nav > li.active > a[class="collapsed"]:after {
-      content: "\e669"; }
-    .sidemenu .nav > li.active > a:hover, .sidemenu .nav > li.active > a:active, .sidemenu .nav > li.active > a:focus {
-      background-color: #652d86; }
 
 .sub-menu {
   border-bottom: 1px solid white; }
@@ -9995,33 +9971,41 @@ header .menu__top .navbar-nav > .active > a:focus {
   position: relative;
   margin-bottom: 0;
   margin-top: 7px;
-  margin-right: 15px !important; }
-  .searchbox-responsive.navbar-form > .form-group {
-    /* end / animation css block */ }
-    .searchbox-responsive.navbar-form > .form-group .form-control {
-      box-shadow: 0 0 0; }
-    .searchbox-responsive.navbar-form > .form-group input[type="text"] {
-      font-size: 15px;
-      display: inline-block;
-      border: none;
-      outline: none;
-      color: #f6f6f6;
-      padding: 3px 35px 3px 10px;
-      width: 0px;
-      height: 32px;
-      position: absolute;
-      top: 2px;
-      right: 0;
-      background: none;
-      z-index: 3;
-      cursor: pointer;
-      /* animation css block */
-      -moz-animation-duration: 500ms;
-      -webkit-animation-duration: 500ms;
-      -moz-animation-name: slideout;
-      -webkit-animation-name: slideout; }
-    .searchbox-responsive.navbar-form > .form-group input[placeholder], .searchbox-responsive.navbar-form > .form-group [placeholder], .searchbox-responsive.navbar-form > .form-group *[placeholder] {
-      color: rgba(250, 250, 250, 0.5); }
+  margin-right: 15px !important;
+  width: 185px;
+  /*@media (min-width: 768px) and (max-width: 835px) {
+    width: $searchBoxWidth + 20;
+  }*/ }
+  .searchbox-responsive.navbar-form .form-group .form-control {
+    box-shadow: 0 0 0; }
+    .searchbox-responsive.navbar-form .form-group .form-control::-webkit-input-placeholder {
+      color: #c2b1cd; }
+    .searchbox-responsive.navbar-form .form-group .form-control::-moz-placeholder {
+      color: #c2b1cd; }
+    .searchbox-responsive.navbar-form .form-group .form-control:-moz-placeholder {
+      /* Older versions of Firefox */
+      color: #c2b1cd; }
+    .searchbox-responsive.navbar-form .form-group .form-control:-ms-input-placeholder {
+      color: #c2b1cd; }
+  .searchbox-responsive.navbar-form .form-group input[type="text"] {
+    font-size: 15px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    color: #c2b1cd;
+    padding: 3px 35px 3px 10px;
+    width: 185px;
+    height: 32px;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background: rgba(250, 250, 250, 0.1);
+    z-index: 3;
+    cursor: default;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .searchbox-responsive.navbar-form .form-group input[placeholder], .searchbox-responsive.navbar-form .form-group [placeholder], .searchbox-responsive.navbar-form .form-group *[placeholder] {
+    color: rgba(250, 250, 250, 0.5); }
   .searchbox-responsive.navbar-form button {
     display: inline-block;
     color: white;
@@ -10030,7 +10014,7 @@ header .menu__top .navbar-nav > .active > a:focus {
     position: absolute;
     top: 2px;
     right: 2px;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     width: auto; }
     .searchbox-responsive.navbar-form button.focus {
@@ -10038,101 +10022,12 @@ header .menu__top .navbar-nav > .active > a:focus {
     .searchbox-responsive.navbar-form button > span[class*="icon"] {
       padding: 7px;
       font-size: 17px; }
-  @media (min-width: 900px) {
-    .searchbox-responsive.navbar-form > .form-group input[type="text"] {
-      width: 195px;
-      z-index: 1;
-      background-color: #754292;
-      cursor: text;
-      opacity: 1;
-      /* animation css block */
-      -moz-animation-duration: 500ms;
-      -webkit-animation-duration: 500ms;
-      -moz-animation-name: slidein;
-      -webkit-animation-name: slidein; }
-    .searchbox-responsive.navbar-form button {
-      color: #652d86; } }
-  .searchbox-responsive.navbar-form.focus input[type="text"] {
-    background-color: white;
-    color: #333333;
-    cursor: text;
-    width: 195px;
-    z-index: 1;
-    /* animation css block */
-    -moz-animation-duration: 500ms;
-    -webkit-animation-duration: 500ms;
-    -moz-animation-name: slidein;
-    -webkit-animation-name: slidein; }
+  .searchbox-responsive.navbar-form.focus .form-group input[type="text"] {
+    width: 245px;
+    background-color: #fff;
+    color: #c2b1cd; }
   .searchbox-responsive.navbar-form.focus button {
     color: #652d86; }
-  @media (max-width: 900px) {
-    .searchbox-responsive.navbar-form.focus {
-      right: -8px;
-      position: absolute; }
-      .searchbox-responsive.navbar-form.focus > .form-group input[type="text"] {
-        width: 425px;
-        /* animation css block */
-        -moz-animation-duration: 500ms;
-        -webkit-animation-duration: 500ms;
-        -moz-animation-name: slidein2;
-        -webkit-animation-name: slidein2; } }
-
-/* animation */
-@-moz-keyframes slidein {
-  from {
-    width: 0;
-    opacity: 0; }
-
-  to {
-    width: 195px;
-    opacity: 1; } }
-
-@-webkit-keyframes slidein {
-  from {
-    width: 0;
-    opacity: 0; }
-
-  to {
-    width: 195px;
-    opacity: 1; } }
-
-@-moz-keyframes slidein2 {
-  from {
-    width: 0;
-    opacity: 0; }
-
-  to {
-    width: 425px;
-    opacity: 1; } }
-
-@-webkit-keyframes slidein2 {
-  from {
-    width: 0;
-    opacity: 0; }
-
-  to {
-    width: 425px;
-    opacity: 1; } }
-
-@-moz-keyframes slideout {
-  from {
-    width: 270px;
-    opacity: 1;
-    background-color: white; }
-
-  to {
-    width: 0;
-    opacity: 0;
-    background-color: transparent; } }
-
-@-webkit-keyframes slideout {
-  from {
-    width: 270px;
-    opacity: 1; }
-
-  to {
-    width: 0;
-    opacity: 0; } }
 
 footer {
   padding: 10px 0;
@@ -10161,7 +10056,7 @@ footer {
       footer .footer-section > a:hover, footer .footer-section > a:active, footer .footer-section > a:focus {
         text-decoration: none;
         box-shadow: none; }
-      footer .footer-section > a .icon, footer .footer-section > a .sidemenu-toggle:before, footer .footer-section > a header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section > a a:before,
+      footer .footer-section > a .icon, footer .footer-section > a .sidemenu-toggle:before, footer .footer-section > a header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section > a a:before, footer .footer-section > a .select-wrapper div.select-dropdown:after, .select-wrapper footer .footer-section > a div.select-dropdown:after,
       footer .footer-section > a .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu footer .footer-section > a .sidemenu-toggle:before,
       footer .footer-section > a .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
@@ -10177,14 +10072,14 @@ footer {
       text-decoration: none; }
       footer .footer-section ul.list-inline li a:hover span {
         text-decoration: underline; }
-      footer .footer-section ul.list-inline li a:hover .icon, footer .footer-section ul.list-inline li a:hover .sidemenu-toggle:before, footer .footer-section ul.list-inline header > div .menu__main > div .navbar-collapse .navbar-nav > li a:hover a:before, header > div .menu__main > div .navbar-collapse footer .footer-section ul.list-inline .navbar-nav > li a:hover a:before,
+      footer .footer-section ul.list-inline li a:hover .icon, footer .footer-section ul.list-inline li a:hover .sidemenu-toggle:before, footer .footer-section ul.list-inline header > div .menu__main > div .navbar-collapse .navbar-nav > li a:hover a:before, header > div .menu__main > div .navbar-collapse footer .footer-section ul.list-inline .navbar-nav > li a:hover a:before, footer .footer-section ul.list-inline li a:hover .select-wrapper div.select-dropdown:after, .select-wrapper footer .footer-section ul.list-inline li a:hover div.select-dropdown:after,
       footer .footer-section ul.list-inline li a:hover .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu footer .footer-section ul.list-inline li a:hover .sidemenu-toggle:before, footer .footer-section ul.list-inline .ee-filters-list ul.filter li.collapse-trigger a:hover i, .ee-filters-list ul.filter footer .footer-section ul.list-inline li.collapse-trigger a:hover i {
         text-decoration: none; }
     footer .footer-section li {
       margin-top: 7px;
       padding: 0; }
-    footer .footer-section li .icon, footer .footer-section li .sidemenu-toggle:before, footer .footer-section header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse footer .footer-section .navbar-nav > li a:before,
+    footer .footer-section li .icon, footer .footer-section li .sidemenu-toggle:before, footer .footer-section header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse footer .footer-section .navbar-nav > li a:before, footer .footer-section li .select-wrapper div.select-dropdown:after, .select-wrapper footer .footer-section li div.select-dropdown:after,
     footer .footer-section li .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
     .sidemenu .sidemenu-menu.left .sidemenu footer .footer-section li .sidemenu-toggle:before,
     footer .footer-section li .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
@@ -10194,7 +10089,7 @@ footer {
       opacity: 0.3;
       filter: alpha(opacity=30);
       vertical-align: sub; }
-    footer .footer-section a:hover .icon, footer .footer-section a:hover .sidemenu-toggle:before, footer .footer-section a:hover header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section a:hover a:before,
+    footer .footer-section a:hover .icon, footer .footer-section a:hover .sidemenu-toggle:before, footer .footer-section a:hover header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section a:hover a:before, footer .footer-section a:hover .select-wrapper div.select-dropdown:after, .select-wrapper footer .footer-section a:hover div.select-dropdown:after,
     footer .footer-section a:hover .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
     .sidemenu .sidemenu-menu.left .sidemenu footer .footer-section a:hover .sidemenu-toggle:before, footer .footer-section a:hover .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger footer .footer-section a:hover i {
       opacity: 1;
@@ -10236,7 +10131,7 @@ footer {
         footer .footer-section .collapse,
         footer .footer-section .collapsing {
           height: auto !important; }
-      footer h6 .icon, footer h6 .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before, footer h6 .sidemenu-toggle:before, footer h6 header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before, footer h6 .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu footer h6 .sidemenu-toggle:before,
+      footer h6 .icon, footer h6 .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before, footer h6 .sidemenu-toggle:before, footer h6 header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before, footer h6 .select-wrapper div.select-dropdown:after, .select-wrapper footer h6 div.select-dropdown:after, footer h6 .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu footer h6 .sidemenu-toggle:before,
       footer h6 .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu footer h6 .sidemenu-toggle:before,
       footer h6 .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
@@ -10607,51 +10502,6 @@ textarea {
     color: #e6e6e6; }
   .alert-danger .close-btn:hover {
     color: #f44f00; }
-
-.sub-menu {
-  border-bottom: 1px solid white; }
-  .sub-menu ul {
-    margin: 0; }
-    .sub-menu ul li {
-      margin: 0;
-      position: relative; }
-      .sub-menu ul li > a {
-        line-height: 20px;
-        padding: 20px;
-        display: inline-block; }
-        .sub-menu ul li > a:hover {
-          text-decoration: none; }
-          .sub-menu ul li > a:hover:before {
-            background-color: #4f2369;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 4px;
-            left: 0;
-            position: absolute;
-            top: auto;
-            width: 100%; }
-      .sub-menu ul li.active > a:before {
-        background-color: #4f2369;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 4px;
-        left: 0;
-        position: absolute;
-        top: auto;
-        width: 100%; }
-    .sub-menu ul li:not(:last-child) > a:after {
-      background-color: white;
-      content: "";
-      display: block;
-      height: 20px;
-      margin-top: -10px;
-      position: absolute;
-      right: -3px;
-      top: 50%;
-      width: 1px;
-      z-index: 1; }
 
 .progress-steps .progress-tabs {
   width: 100%; }
@@ -21598,6 +21448,8 @@ section.ee-product-detail {
 .ee-leasing-header {
   padding: 5px 15px;
   border: 1px solid #dbdbdb; }
+  .ee-leasing-header:not(:first-child) {
+    margin-top: -1px; }
   .ee-leasing-header h6 {
     display: inline-block; }
   .ee-leasing-header a {
@@ -21861,7 +21713,7 @@ section.ee-reviewarea {
   line-height: 3;
   font-size: 15px;
   font-weight: normal; }
-  .ee-filterbar .navbar-nav > li > a .icon, .ee-filterbar .navbar-nav > li > a .sidemenu-toggle:before, .ee-filterbar header > div .menu__main > div .navbar-collapse .navbar-nav > li > a a:before, header > div .menu__main > div .navbar-collapse .ee-filterbar .navbar-nav > li > a a:before,
+  .ee-filterbar .navbar-nav > li > a .icon, .ee-filterbar .navbar-nav > li > a .sidemenu-toggle:before, .ee-filterbar header > div .menu__main > div .navbar-collapse .navbar-nav > li > a a:before, header > div .menu__main > div .navbar-collapse .ee-filterbar .navbar-nav > li > a a:before, .ee-filterbar .navbar-nav > li > a .select-wrapper div.select-dropdown:after, .select-wrapper .ee-filterbar .navbar-nav > li > a div.select-dropdown:after,
   .ee-filterbar .navbar-nav > li > a .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
   .sidemenu .sidemenu-menu.left .sidemenu .ee-filterbar .navbar-nav > li > a .sidemenu-toggle:before, .ee-filterbar .navbar-nav > li > a .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .ee-filterbar .navbar-nav > li > a i {
     margin-left: 10px; }
@@ -22157,7 +22009,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   border-bottom: 1px solid #dbdbdb;
   margin-top: 5px;
   padding-bottom: 5px; }
-  .dropdown-menu .cart-item .cart-item-image .icon, .dropdown-menu .cart-item .cart-item-image .sidemenu-toggle:before, .dropdown-menu .cart-item .cart-item-image header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .dropdown-menu .cart-item .cart-item-image a:before,
+  .dropdown-menu .cart-item .cart-item-image .icon, .dropdown-menu .cart-item .cart-item-image .sidemenu-toggle:before, .dropdown-menu .cart-item .cart-item-image header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .dropdown-menu .cart-item .cart-item-image a:before, .dropdown-menu .cart-item .cart-item-image .select-wrapper div.select-dropdown:after, .select-wrapper .dropdown-menu .cart-item .cart-item-image div.select-dropdown:after,
   .dropdown-menu .cart-item .cart-item-image .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
   .sidemenu .sidemenu-menu.left .sidemenu .dropdown-menu .cart-item .cart-item-image .sidemenu-toggle:before, .dropdown-menu .cart-item .cart-item-image .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .dropdown-menu .cart-item .cart-item-image i {
     font-size: 2em; }
@@ -22822,11 +22674,12 @@ label.ee-select-label {
     width: 100%;
     font-weight: 500;
     margin: 0;
-    padding: 0;
+    padding: 0 15px 0 0;
     display: block;
     box-shadow: none;
     border-radius: 0;
-    text-indent: 0; }
+    text-indent: 0;
+    overflow: hidden; }
     .select-wrapper div.select-dropdown:active, .select-wrapper div.select-dropdown:focus {
       border: none;
       border-bottom: 1px solid; }
@@ -22837,16 +22690,18 @@ label.ee-select-label {
       .select-wrapper div.select-dropdown.disabled:active, .select-wrapper div.select-dropdown.disabled:focus, .select-wrapper div.select-dropdown[disabled]:active, .select-wrapper div.select-dropdown[disabled]:focus {
         border: none;
         border-bottom: 1px solid; }
-      .select-wrapper div.select-dropdown.disabled + .icon, .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.disabled + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.disabled + a:before,
+      .select-wrapper div.select-dropdown.disabled + .icon, .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.disabled + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.disabled + a:before, .select-wrapper div.select-dropdown.disabled + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown.disabled + .sidemenu-toggle:before,
-      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown.disabled + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown.disabled + i, .select-wrapper div.select-dropdown[disabled] + .icon, .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown[disabled] + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown[disabled] + a:before,
+      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown.disabled + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown.disabled + i, .select-wrapper div.select-dropdown[disabled] + .icon, .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown[disabled] + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown[disabled] + a:before, .select-wrapper div.select-dropdown[disabled] + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown[disabled] + .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown[disabled] + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown[disabled] + i {
         color: #ccc; }
+    .select-wrapper div.select-dropdown:after {
+      content: "\e65f"; }
     .select-wrapper div.select-dropdown.input-validation-error {
       color: #ff6319;
       border-color: #ff6319; }
-      .select-wrapper div.select-dropdown.input-validation-error + .icon, .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.input-validation-error + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.input-validation-error + a:before,
+      .select-wrapper div.select-dropdown.input-validation-error + .icon, .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.input-validation-error + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.input-validation-error + a:before, .select-wrapper div.select-dropdown.input-validation-error + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown.input-validation-error + .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger div.select-dropdown.input-validation-error + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper div.select-dropdown.input-validation-error + i {
         color: #ff6319; }
@@ -22864,11 +22719,12 @@ label.ee-select-label {
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
-    padding: 0;
+    padding: 0 15px 0 0;
     display: block;
     box-shadow: none;
     border-radius: 0;
-    text-indent: 0; }
+    text-indent: 0;
+    overflow: hidden; }
     .select-wrapper input.select-dropdown:active, .select-wrapper input.select-dropdown:focus {
       border: none;
       border-bottom: 1px solid; }
@@ -22879,20 +22735,20 @@ label.ee-select-label {
       .select-wrapper input.select-dropdown.disabled:active, .select-wrapper input.select-dropdown.disabled:focus, .select-wrapper input.select-dropdown[disabled]:active, .select-wrapper input.select-dropdown[disabled]:focus {
         border: none;
         border-bottom: 1px solid; }
-      .select-wrapper input.select-dropdown.disabled + .icon, .select-wrapper input.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown.disabled + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.disabled + a:before,
+      .select-wrapper input.select-dropdown.disabled + .icon, .select-wrapper input.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown.disabled + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.disabled + a:before, .select-wrapper input.select-dropdown.disabled + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu input.select-dropdown.disabled + .sidemenu-toggle:before,
-      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger input.select-dropdown.disabled + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper input.select-dropdown.disabled + i, .select-wrapper input.select-dropdown[disabled] + .icon, .select-wrapper input.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown[disabled] + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown[disabled] + a:before,
+      .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown.disabled + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger input.select-dropdown.disabled + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper input.select-dropdown.disabled + i, .select-wrapper input.select-dropdown[disabled] + .icon, .select-wrapper input.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown[disabled] + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown[disabled] + a:before, .select-wrapper input.select-dropdown[disabled] + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu input.select-dropdown[disabled] + .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown[disabled] + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger input.select-dropdown[disabled] + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper input.select-dropdown[disabled] + i {
         color: #ccc; }
     .select-wrapper input.select-dropdown.input-validation-error {
       color: #ff6319;
       border-color: #ff6319; }
-      .select-wrapper input.select-dropdown.input-validation-error + .icon, .select-wrapper input.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown.input-validation-error + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.input-validation-error + a:before,
+      .select-wrapper input.select-dropdown.input-validation-error + .icon, .select-wrapper input.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown.input-validation-error + a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.input-validation-error + a:before, .select-wrapper input.select-dropdown.input-validation-error + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu input.select-dropdown.input-validation-error + .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown.input-validation-error + .sidemenu-toggle:before, .select-wrapper .ee-filters-list ul.filter li.collapse-trigger input.select-dropdown.input-validation-error + i, .ee-filters-list ul.filter li.collapse-trigger .select-wrapper input.select-dropdown.input-validation-error + i {
         color: #ff6319; }
-  .select-wrapper .icon, .select-wrapper .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper a:before, .select-wrapper .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper .sidemenu-toggle:before,
+  .select-wrapper .icon, .select-wrapper .sidemenu-toggle:before, .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper a:before, .select-wrapper div.select-dropdown:after, .select-wrapper .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper .sidemenu-toggle:before,
   .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
   .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper .sidemenu-toggle:before,
   .select-wrapper .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
@@ -22930,7 +22786,7 @@ select:disabled {
   margin: 0px;
   min-width: 100px;
   z-index: 1000;
-  max-height: 70%;
+  max-height: 25%;
   opacity: 0;
   overflow-y: hidden;
   will-change: width, height;
@@ -23078,9 +22934,14 @@ header > div .menu__main .sidemenu .sidemenu-menu.left .sidemenu .navbar-nav > l
   color: #fff;
   background-color: transparent;
   border-color: transparent;
-  padding: 0;
+  padding: 7px 0;
   margin: 0;
   border-radius: 0; }
+
+header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:hover,
+header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:focus,
+header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle.active {
+  text-decoration: none; }
 
 .swiffy-wrap {
   position: relative;
@@ -23384,7 +23245,7 @@ h4 {
    width: 60px;
    max-width: 60px; }
 
-footer .social-block .media .icon, footer .social-block .media .sidemenu-toggle:before, footer .social-block .media header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .social-block .media a:before,
+footer .social-block .media .icon, footer .social-block .media .sidemenu-toggle:before, footer .social-block .media header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .social-block .media a:before, footer .social-block .media .select-wrapper div.select-dropdown:after, .select-wrapper footer .social-block .media div.select-dropdown:after,
 footer .social-block .media .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
 .sidemenu .sidemenu-menu.left .sidemenu footer .social-block .media .sidemenu-toggle:before, footer .social-block .media .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger footer .social-block .media i {
   line-height: 26px;
@@ -23442,7 +23303,7 @@ label.control-label-left {
 .rating-input {
   display: inline-block;
   margin-left: 20px; }
-  .rating-input .icon, .rating-input .sidemenu-toggle:before, .rating-input header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .rating-input a:before, .rating-input .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .rating-input .sidemenu-toggle:before,
+  .rating-input .icon, .rating-input .sidemenu-toggle:before, .rating-input header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .rating-input a:before, .rating-input .select-wrapper div.select-dropdown:after, .select-wrapper .rating-input div.select-dropdown:after, .rating-input .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .rating-input .sidemenu-toggle:before,
   .rating-input .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
   .sidemenu .sidemenu-menu.left .sidemenu .rating-input .sidemenu-toggle:before,
   .rating-input .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
@@ -23473,7 +23334,7 @@ label.control-label-left {
   background: #fff;
   border-style: solid;
   border-width: 2px; }
-  .well .icon, .well .sidemenu-toggle:before, .well header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .well a:before, .well .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .well .sidemenu-toggle:before,
+  .well .icon, .well .sidemenu-toggle:before, .well header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .well a:before, .well .select-wrapper div.select-dropdown:after, .select-wrapper .well div.select-dropdown:after, .well .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .well .sidemenu-toggle:before,
   .well .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
   .sidemenu .sidemenu-menu.left .sidemenu .well .sidemenu-toggle:before,
   .well .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
@@ -23576,3 +23437,15 @@ label.control-label-left {
 
 .white-bg {
   background-color: #fff; }
+
+.btn .icon, .btn .sidemenu-toggle:before, .btn header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, .btn .select-wrapper div.select-dropdown:after, .select-wrapper .btn div.select-dropdown:after, .btn .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .btn .sidemenu-toggle:before,
+.btn .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
+.sidemenu .sidemenu-menu.left .sidemenu .btn .sidemenu-toggle:before,
+.btn .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
+.sidemenu.open > .sidemenu-menu.left .sidemenu.open .btn .sidemenu-toggle:before, .btn .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger .btn i {
+  margin-right: 5px; }
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 0;
+  right: 0; }

@@ -1,0 +1,138 @@
+.sidemenu {
+    .nav {
+        > li {
+
+            margin-bottom: 1px;
+
+             a:after {
+
+                font-family: 'tsr-icons-all';
+                font-size: em(18);
+                float:right;
+
+            }
+            a {
+                 border-radius: $border-radius-base;
+            }
+            
+
+            > a {
+
+                &:hover, &:focus {
+
+                    background-color:$brand-primary;
+                    color: $brand-white;
+
+                    &:after {
+
+                        content: "\e668";
+
+                    }
+                    
+                    &[data-toggle="collapse"],
+                    &[class="collapsed"] {
+                        &:after {
+
+                            content: "\e669";
+
+                        }
+                    }
+
+                    &[class="collapse-show"] {
+
+                        &:after {
+
+                            content: "\e66b";
+
+                        }
+                        
+                    }
+                    
+                }
+
+                &[class="collapse-show"] {
+                    background-color:$brand-primary;
+                    color: $brand-white;
+
+                    &:after {
+
+                        content: "\e66b";
+
+                    }
+                }
+
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+
+                    list-style: none;
+
+                    > a {
+
+                        display: block;
+                        position: relative;
+                        padding: 10px 15px;
+
+                        &:hover {
+
+                            background-color:$brand-primary;
+                            color: $brand-white;
+                            text-decoration: none;
+
+                            &:after {
+
+                                content: "\e668";
+
+                            }
+
+                         }
+                    }
+                }
+            }
+
+            // active 
+            &.active {
+
+                > a {
+
+                    background-color:darken($brand-primary, 7.6%);
+                    color: $brand-white;
+
+                    &:after {
+                        content: "\e668";
+                    }
+                    &[data-toggle="collapse"] {
+                        &:after {
+
+                            content: "\e66b";
+
+                        }
+                    }
+                    &[class="collapse-show"] {
+                        
+                        &:after {
+
+                            content: "\e66b";
+
+                        }
+                        
+                    }
+                    &[class="collapsed"] {
+                        &:after {
+
+                            content: "\e669";
+
+                        }
+                    }
+                    &:hover, &:active, &:focus {
+                        background-color:$brand-primary;
+                    }
+
+                }
+            }
+        }
+    } 
+}

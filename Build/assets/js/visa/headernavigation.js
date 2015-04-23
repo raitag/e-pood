@@ -38,7 +38,7 @@ $(window).scroll(function(event){
 
 function startCheck(){
     interval = setInterval(function() {
-        if (didScroll) {
+        if (didScroll && !$('body').hasClass('noscroll') ) {
             hasScrolled();
             didScroll = false;
         }
@@ -74,7 +74,7 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-function calculateMainMenu(){
+/*function calculateMainMenu(){
     var _brakePoint = $("#menu__main").width() + 20;
     var _elW = ( $('body').hasClass('nav-top') ? 0 : 5 );
     $("#menu__main > ul > li:not(:hidden)").each(function(index, el){
@@ -86,20 +86,20 @@ function calculateMainMenu(){
     } else {
         removeHorScroll();
     }
-}
-function addHorScroll($width){
+}*/
+/*function addHorScroll($width){
     var _el = $("#menu__main > ul:first-child");
     _el.addClass('hor-scrollable');
     console.log( $('.hor-scrollable').width(), "t" );
     _el.append('<li class="left-nav"><i class="icon-arrow-left"></i></li><li class="right-nav"><i class="icon-arrow-right"></i></li>');
     $('.hor-scrollable .left-nav').css({ left:10, position:'fixed'});
     $('.hor-scrollable .right-nav').css({ left:$('.hor-scrollable').width()-10, position:'fixed'});
-}
-function removeHorScroll(){
+}*/
+/*function removeHorScroll(){
     var _el = $("#menu__main > ul:first-child");
     _el.removeClass('hor-scrollable');
     _el.find('.left-nav .right-nav').removeClass('.left-nav .right-nav');
-}
+}*/
 /*$(window).load(function(){
     $(window).resize( $.throttle( 500, function(){
         calculateMainMenu();
@@ -112,13 +112,20 @@ function removeHorScroll(){
 });*/
 
 function testScreen(){
+    if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
+        $('body').addClass('burger');
+        //$('body').append('<div style="background: none repeat scroll 0 0 white;border: 1px solid red;padding: 10px;position: absolute;top: 0;z-index: 999999;">TEST</div>');
+    } else {
+        $('body').removeClass('burger');
+    }
     $(window).resize( function(){
         if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
             $('body').addClass('burger');
+            //$('body').append('<div style="background: none repeat scroll 0 0 white;border: 1px solid red;padding: 10px;position: absolute;top: 0;z-index: 999999;">TEST</div>');
         } else {
             $('body').removeClass('burger');
         }
-        console.log( 'test:', Modernizr.mq('only screen and (min-width: 901px)'), $(window).width() );
+        //console.log( 'test:', Modernizr.mq('only screen and (min-width: 901px)'), $(window).width() );
     });
 
 

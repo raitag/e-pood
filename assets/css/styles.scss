@@ -49,11 +49,15 @@
 /* @include tsr-bootstrap/_badges.scss */
 /* @include tsr-bootstrap/_responsive-utilities.scss */
 /* @include tsr-bootstrap/_elion.scss */
-/* @include tsr-bootstrap/_header.scss */
+/* @include tsr-bootstrap/header/_header.scss */
+/* @include tsr-bootstrap/header/_sidenavigation.scss */
+/* @include tsr-bootstrap/header/_burgerize.scss */
+/* @include tsr-bootstrap/header/_side-in-menu.scss */
+/* @include tsr-bootstrap/header/_sidemenu.scss */
+/* @include tsr-bootstrap/header/_searchbox-responsive.scss */
 /* @include tsr-bootstrap/_footer.scss */
 /* @include tsr-bootstrap/_forms.scss */
 /* @include tsr-bootstrap/_alerts.scss */
-/* @include tsr-bootstrap/_submenu.scss */
 /* @include tsr-bootstrap/_progress-steps.scss */
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO BS3
@@ -107,7 +111,7 @@ header > div .menu__main .navbar-nav > li > a > span.icon {
   color: #fff;
   background-color: transparent;
   border-color: transparent;
-  padding: 0;
+  padding: 7px 0;
   margin: 0;
   border-radius: 0;
 }
@@ -128,6 +132,12 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
 .sidemenu .sidemenu-menu.right .sidemenu .sidemenu-toggle:before, 
 .sidemenu.open > .sidemenu-menu.right .sidemenu.open .sidemenu-toggle:before {
   @extend .icon-arrow-left;
+}
+
+header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:hover, 
+header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:focus, 
+header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle.active {
+  text-decoration: none;
 }
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
@@ -858,4 +868,12 @@ label.control-label-left {
 
 .white-bg {
   background-color: #fff;
+}
+
+.btn .icon { margin-right: 5px; }
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

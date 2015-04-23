@@ -1,0 +1,96 @@
+$searchBoxWidth:185px;
+$searchBoxHeight:32px;
+$searchBoxBg:#754292;
+
+.searchbox-responsive {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 7px;
+  margin-right: 15px !important;
+  width: $searchBoxWidth;
+
+  &.navbar-form {
+    .form-group {
+
+      .form-control {
+        box-shadow: 0 0 0;
+        &::-webkit-input-placeholder {
+          color: rgba(194, 177, 205, 1);
+        }
+        &::-moz-placeholder {
+          color: rgba(194, 177, 205, 1);
+        }
+        &:-moz-placeholder {   /* Older versions of Firefox */
+          color: rgba(194, 177, 205, 1);
+        }
+        &:-ms-input-placeholder {
+          color: rgba(194, 177, 205, 1);
+        }
+      }
+      input[type="text"] {
+        font-size: $font-size-base;
+        display: inline-block;
+        border: none;
+        outline: none;
+        color: #c2b1cd; //$gray-light;
+        padding: 3px 35px 3px 10px;
+        width: $searchBoxWidth;
+        height: $searchBoxHeight;
+        position: absolute;
+        top: 2px;
+        right: 0;
+        background: rgba(250, 250, 250, 0.1);
+        z-index: 3;
+        cursor: default;
+        @include transition(all 0.3s ease);
+      }
+      input[placeholder], [placeholder], *[placeholder] {
+        color: rgba(250, 250, 250, 0.5);
+      }
+    }
+
+    button {
+      display: inline-block;
+      color: $white; //$brand__link;
+      float: right;
+      border: none;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      z-index: 3;
+      cursor: pointer;
+      width: auto;
+
+      &.focus {
+        color: $brand__link;
+      }
+
+      > span[class*="icon"] {
+        padding: 7px;
+        font-size: $font-size-base + 2;
+      }
+    }
+
+    &.focus {
+      .form-group {
+
+        .form-control {
+
+        }
+        input[type="text"] {
+          width: $searchBoxWidth + 60;
+          background-color: #fff;
+          color: #c2b1cd;
+        }
+      }
+
+      button {
+        color: $brand__link;
+      }
+    }
+  }
+
+  /*@media (min-width: 768px) and (max-width: 835px) {
+    width: $searchBoxWidth + 20;
+  }*/
+}

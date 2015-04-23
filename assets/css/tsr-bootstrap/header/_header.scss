@@ -1,10 +1,3 @@
-$main-menu-width: 100px;
-$main-menu-min-width: 80px;
-$main-menu-max-width: 100px;
-
-$triangle-size: 8px;
-$brand-success-h:       #009974;//hover
-
 $brand__link: #652d86;
 $brand__violet: #652D86;
 $brand__violet_hover: #73369e;
@@ -179,7 +172,7 @@ header {
               > span[class*="icon-arrow"] {
                 font-size: $font-size-base - 2;
                 position: absolute;
-                top: 23%;
+                top: 24%;
                 right: 10px;
               }
             }
@@ -260,11 +253,15 @@ header {
         &:hover {
           > li > a {
             opacity: 0.65;
-            @include transition(opacity 0.3s ease);
+            //@include transition(opacity 1s ease);
           }
           > li:hover > a {
             opacity: 1;
+            //@include transition(opacity 0.3s ease);
           }
+        }
+        > li > a {
+          @include transition(opacity 0.3s ease);
         }
         > li {
           min-width: $main-menu-min-width;

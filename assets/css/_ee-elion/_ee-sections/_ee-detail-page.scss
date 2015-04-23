@@ -152,6 +152,9 @@ section.ee-product-detail {
 .ee-leasing-header {
   padding: 5px 15px;
   border: 1px solid $lightgrey-t;
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
   h6 {
     display: inline-block;
   }

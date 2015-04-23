@@ -61,7 +61,7 @@ $(function () {
           }
           else {
               $newSelect = $('<div class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
-                             + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div><i class="icon icon-arrow-down">');
+                             + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div>');
           }
           
         $select.before($newSelect);

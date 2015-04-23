@@ -4405,7 +4405,7 @@ $(window).scroll(function(event){
 
 function startCheck(){
     interval = setInterval(function() {
-        if (didScroll) {
+        if (didScroll && !$('body').hasClass('noscroll') ) {
             hasScrolled();
             didScroll = false;
         }
@@ -4441,7 +4441,7 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-function calculateMainMenu(){
+/*function calculateMainMenu(){
     var _brakePoint = $("#menu__main").width() + 20;
     var _elW = ( $('body').hasClass('nav-top') ? 0 : 5 );
     $("#menu__main > ul > li:not(:hidden)").each(function(index, el){
@@ -4453,20 +4453,20 @@ function calculateMainMenu(){
     } else {
         removeHorScroll();
     }
-}
-function addHorScroll($width){
+}*/
+/*function addHorScroll($width){
     var _el = $("#menu__main > ul:first-child");
     _el.addClass('hor-scrollable');
     console.log( $('.hor-scrollable').width(), "t" );
     _el.append('<li class="left-nav"><i class="icon-arrow-left"></i></li><li class="right-nav"><i class="icon-arrow-right"></i></li>');
     $('.hor-scrollable .left-nav').css({ left:10, position:'fixed'});
     $('.hor-scrollable .right-nav').css({ left:$('.hor-scrollable').width()-10, position:'fixed'});
-}
-function removeHorScroll(){
+}*/
+/*function removeHorScroll(){
     var _el = $("#menu__main > ul:first-child");
     _el.removeClass('hor-scrollable');
     _el.find('.left-nav .right-nav').removeClass('.left-nav .right-nav');
-}
+}*/
 /*$(window).load(function(){
     $(window).resize( $.throttle( 500, function(){
         calculateMainMenu();
@@ -4479,13 +4479,20 @@ function removeHorScroll(){
 });*/
 
 function testScreen(){
+    if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
+        $('body').addClass('burger');
+        //$('body').append('<div style="background: none repeat scroll 0 0 white;border: 1px solid red;padding: 10px;position: absolute;top: 0;z-index: 999999;">TEST</div>');
+    } else {
+        $('body').removeClass('burger');
+    }
     $(window).resize( function(){
         if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
             $('body').addClass('burger');
+            //$('body').append('<div style="background: none repeat scroll 0 0 white;border: 1px solid red;padding: 10px;position: absolute;top: 0;z-index: 999999;">TEST</div>');
         } else {
             $('body').removeClass('burger');
         }
-        console.log( 'test:', Modernizr.mq('only screen and (min-width: 901px)'), $(window).width() );
+        //console.log( 'test:', Modernizr.mq('only screen and (min-width: 901px)'), $(window).width() );
     });
 
 
@@ -4670,42 +4677,24 @@ $(document).ready(function () {
 });
 
 $(function(){
-    var $win = $(window);
-    var $searchbox = $(".searchbox-responsive");// element
-    var _elBtn = $searchbox.find('button');
-    // check where user clicked outside / inside element
-    $win.on("click.Bst", function(event){
-        if ($searchbox.has(event.target).length == 0 && !$searchbox.is(event.target)){
-            _elBtn.closest('form').removeClass('focus');
-        } else {
-            _elBtn.closest('form').addClass('focus');
-        }
+    var $searchbox = $(".searchbox-responsive");
+    $searchbox.find('#search').bind('click', function(){
+        $searchbox.addClass('focus');
     });
 
-    var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-    ];
+    $(document).click(function(e){
+        if ($(e.target).closest(".searchbox-responsive").length == 0) {
+            $searchbox.removeClass('focus');
+        }
+    });
+    /*var _nav = $('header .menu__top .container > .navbar-nav:eq(1) ');
+    var _input = $('.searchbox-responsive');
+    $(window).resize( $.throttle( 500, function(){
+        if( _input.hasClass('focus') ){
+            var _maxX = _nav.width() + _nav.position().left;
+            console.log('keep calculating', _maxX, _input.position().left - 60, _input.find('input').width()+45 );
+        }
+    }));*/
 });
 
 /**
@@ -4718,7 +4707,7 @@ $(function(){
     function init() {
         $('ul.nav.navbar-nav').on('click.bs.dropdown', function(e){
             var $a = $(e.target), is_a = $a.is('.is_a');
-            console.log("test", e, $a, is_a);
+            // console.log("test", e, $a, is_a);
             if($a.hasClass('dropdown-toggle')) {
                 $('ul.dropdown-menu', this).toggle(!is_a);
                 $a.toggleClass('is_a', !is_a);
@@ -4773,6 +4762,7 @@ $('#sidemenu').on('hide.bs.collapse', function (e) {
             }
             // horizontal line
             $('<div class="sidemenu-topborder"/>').insertAfter($(this))
+            $('.sidemenu-topborder').css({ width : $('#headernavigation > .container').width()+20, left:$('#headernavigation > .container').position().left });
 
             // drop background
             $('<div class="sidemenu-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
@@ -4936,25 +4926,29 @@ function setSubmenuYPos(el, e) {
             sidemenuMenuTop : el.closest('.sidemenu-menu').position().top,
             paddingTop      : $('.sidemenu-topborder').height()
         };
-        console.log('obj:', obj );
         /* level 4 menu position calculation */
         var _submenuH  = obj.mouseY + obj.submenuH;
         var _area      = obj.viewportH - obj.sidemenuMenuTop;
-        console.log('area:',_area, '_submenuH:',_submenuH);
+
+        /* set IV level menu height */
+        if( obj.submenuH < _area) {
+            console.log('submenu:',obj.submenu,' height:auto');
+            obj.submenu.css({ height:'auto'});
+        } else {
+            console.log('submenu:',obj.submenu,' height:',_area + 5);
+            obj.submenu.css({ height:_area-5});
+        }
+
         if( _area < _submenuH ) {
             var _posTop = obj.viewportH - obj.submenuH;
             var _p = obj.submenuH - _area;
-            var _newTop = _posTop + _p + 5;
-            //console.log('posTop:', _posTop,'area:', _area, 'mouseY:', obj.mouseY , 'submenuH:', obj.submenuH, ' newTop:', _newTop );
-            //obj.submenu.css({top:_posTop}); // height:(_area-obj.paddingTop), overflow:'hidden'
-            obj.submenu.css({top:_newTop, height:(_area-5), overflow:'hidden', overflowY:'auto'});
+            var _newTop = _posTop + _p + ( $('body').hasClass('nav-up') || $('body').hasClass('nav-down') ? 0 : 5 );
+            obj.submenu.css({top:_newTop, overflow:'hidden', overflowY:'auto'});
 
         } else {
             var _newTop = (obj.sidemenuMenuTop + obj.currentEl.top);
-            //console.log(_newTop);
-            el.next().css({top: (_newTop) });//e.clientY, el.offset().top
+            el.next().css({top: (_newTop) });
         }
-
     }
 }
 
@@ -4972,7 +4966,6 @@ $(window).load(function(){
             _curEl.parent().addClass('open');
             addMute(_curEl.parent());
             setSubmenuYPos(_curEl, e);
-
             e.preventDefault();
             e.stopPropagation();
         });
@@ -4992,6 +4985,7 @@ $(window).load(function(){
 
             $('#menu__main').toggleClass('in');
             $('<div class="sidemenu-backdrop"/>').insertAfter( $('#menu__main') );
+
             if( !$('#menu__main').hasClass('in') ){
                 $(bgDrop).remove();
                 $('body').removeClass('noscroll');
@@ -5019,12 +5013,13 @@ $(window).load(function(){
                 } else {
                     prevParentElement.removeClass('open');
                 }
+            } else {
+                $currentParentEl.toggleClass('open');
             }
             if( ( typeof prevParentElement != 'undefined' ) && $currentParentEl[0] != prevParentElement[0] ) {
                 $currentParentEl.addClass('open');
             }
             prevParentElement = $currentParentEl;
-            console.log("sidemenu", $(e.currentTarget).parent() );
             e.stopPropagation();
             e.preventDefault();
         });
@@ -5036,6 +5031,8 @@ $(window).load(function(){
                 } else {
                     prevParentsubElement.removeClass('open');
                 }
+            } else {
+                $currentParentEl.toggleClass('open');
             }
             if( ( typeof prevParentsubElement != 'undefined' ) && $currentParentEl[0] != prevParentsubElement[0] ) {
                 $currentParentEl.addClass('open');
@@ -5106,12 +5103,12 @@ function initElement(){
         _navtop     = ( $('body').hasClass('nav-top') ? 151 : 56 ),
         _maxHeight  = $(window).height() - _navtop;
 
-    $rightSideSubMenu.css({ width:$col3Width, right: mNr + '%' });
+    $rightSideSubMenu.css({ width:$col3Width, right: (mNr+0.4) + '%' });
     $sideMenuLeft.css('max-height',_maxHeight);
     $sideMenuLeftD.css({'max-height':'inherit'});
-    $sideMenuRight.css('max-height',_maxHeight);
+    //$sideMenuRight.css('max-height',_maxHeight);
     $sideMenuRightD.css({'max-height':'inherit'});
-    $sideMenuLeftD.slimScroll().css({ width:$col3Width, left:$sMleft, position:'relative', height:'inherit' });
+    $sideMenuLeftD.slimScroll({display:'none'}).css({ width:$col3Width, left:$sMleft, position:'relative', height:'inherit' });
     $sideMenuRightD.slimScroll({ position:'left'}).css({ width:$col3Width, position:'relative', height:'inherit' });
 
     $sideMenuLeftD.scroll( $.throttle( 500, function(){
@@ -5143,7 +5140,7 @@ function updateScrollingElement(){
         $(e).height('inherit');
         if( $(e).height() > _maxHeight ){
             var _tp = ( $(document).scrollTop() == 0 ? 101 : 0);
-            $(e).parent().height(_maxHeight + _tp);
+            //$(e).parent().height(_maxHeight + _tp);
             $(e).parent().css({ height:(_maxHeight + _tp), oveflow:'hidden', overflowY:'auto'});
         }
     })
@@ -8002,7 +7999,7 @@ $(function () {
           }
           else {
               $newSelect = $('<div class="select-dropdown ' + ($select.attr('class') !== undefined ? $select.attr('class') : '') + '" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '')
-                             + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div><i class="icon icon-arrow-down">');
+                             + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div>');
           }
           
         $select.before($newSelect);

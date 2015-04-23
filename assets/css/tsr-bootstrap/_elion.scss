@@ -11,18 +11,18 @@ body {
   line-height: $line-height-base;
   background-color: #f6f6f6;
   margin-bottom: 258px;
+  header + section {
+    margin-top: 150px;
+  }
   @media (max-width: $screen-sm-max) {
     margin-bottom: 304px;
     header + section {
-      margin-top: 150px;
+      margin-top: 100px;
     }
   }
   @media (max-width: $screen-xs-max) {
     margin-bottom: 0;
   }
-}
-body header + section {
-  margin-top: 150px;
 }
 header{display: block; margin-bottom: -1px;}
 section.content { padding: 0;
