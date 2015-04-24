@@ -4,6 +4,25 @@
 html {
   position: relative;
   min-height: 100%;
+  h1,
+  h2 {
+    font-family: 'HelveticaNeueW01-45Ligh', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  h3 {
+    font-family: 'HelveticaNeueW01-75Bold', 'Helvetica Neue', Arial, sans-serif;
+  }
+  html[lang="ru"] & {
+    font-family: $font-family-sans-serif-cyrillic;
+    h1,
+    h2 {
+      font-family: 'HelveticaNeueW10-45Ligh', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    h3 {
+      font-family: 'HelveticaNeueW10-75Bold', 'Helvetica Neue', Arial, sans-serif;
+    }
+  }
 }
 body {
   min-width: 320px;
@@ -114,4 +133,9 @@ section.content { padding: 0;
 
 .border-right-0 {
   border: 0!important;
+}
+
+b,
+strong {
+  font-weight: 500;
 }

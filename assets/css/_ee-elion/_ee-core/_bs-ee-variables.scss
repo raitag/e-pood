@@ -131,11 +131,11 @@ $link-hover-color:      $purple-h !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-sans-serif:  'HelveticaNeueW01-55Roma', 'Helvetica Neue', Arial, sans-serif;
+$font-family-sans-serif-cyrillic: 'Neue Helvetica W10', 'Neue Helvetica W01', sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          15px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
@@ -154,10 +154,12 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
-$headings-font-weight:    bold !default;
-$headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
+$headings-font-family:    $font-family-base;
+$headings-font-weight-light:    300;
+$headings-font-weight-normal:    normal;
+$headings-font-weight-bold:    bold;
+$headings-line-height:    1.1;
+$headings-color:          inherit;
 
 
 //-- Iconography

@@ -218,10 +218,53 @@ header {
                 }
               }
             }
+            &.active {
+              [data-toggle="login-dropdown"]{
+                background-color:  #f6f6f6;
+                color: $brand__link;
+              }
+              .login-block {
+                display: block;
+              }
+            }
+            [data-toggle="login-dropdown"]{
+              &:active, &:focus {
+                background-color: #f6f6f6;
+                color: $brand__link;
+              }
+            }
+
+            .login-block {
+              display: none;
+              background-color: #f6f6f6;
+              left: 0;
+              position: fixed;
+              right: 0;
+              width: 100%;
+              padding: 20px 10px 10px 10px;
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+
+              .container {
+                position: relative;
+              }
+
+              iframe {
+                border: 0;
+                width: 100%;
+                height: 100%;
+              }
+
+              .icon {
+                color: $brand__link;
+                font-size: 18px;
+                position: absolute;
+                right: 10px;
+              }
+            }
+
           }
         }
       }
-
     }
 
     /* MAIN NAVIGATION */
@@ -264,12 +307,20 @@ header {
           @include transition(opacity 0.3s ease);
         }
         > li {
-          min-width: $main-menu-min-width;
           min-height: $main-menu-width;
+          min-width: $main-menu-min-width;
           max-width: $main-menu-max-width;
           /*max-height: $main-menu-width;*/
           text-align: center;
           padding: 0;
+          @media screen and (min-width: 1024px) {
+            min-width: $main-menu-min-width;
+            max-width: $main-menu-max-width - 10;
+          }
+          @media screen and (min-width: 1200px) {
+            min-width: $main-menu-max-width;
+            max-width: $main-menu-max-width;
+          }
 
           &:first-child {
             display: none;

@@ -11,7 +11,7 @@ var scrollToTop = 0;
     'use strict';
 
     function headernavigation() {
-        console.log('headernavigation js loaded');
+        //console.log('headernavigation js loaded');
         // language dropdown menu
         $('.menu__top .select-language, .menu__top .select-environment').on('show.bs.dropdown', function(e){
             var _t = $(e.relatedTarget).find('span');
@@ -25,6 +25,7 @@ var scrollToTop = 0;
         });
 
     }
+    loginBlockDropdown();
     testScreen();
     headernavigation();
 }());
@@ -35,6 +36,19 @@ startCheck();
 $(window).scroll(function(event){
     didScroll = true;
 });
+
+/* login block dropdown */
+function loginBlockDropdown() {
+    $('[data-toggle="login-dropdown"]').bind('click', function(e){
+        var _curEl = $(e.currentTarget);
+        _curEl.parent().toggleClass('active');
+        e.preventDefault();
+    });
+    $('.login-block [data-toggle="close-dropdown"]').bind('click', function(e){
+        var _curEl = $(e.currentTarget);
+        _curEl.closest('li').removeClass('active');
+    });
+}
 
 function startCheck(){
     interval = setInterval(function() {
