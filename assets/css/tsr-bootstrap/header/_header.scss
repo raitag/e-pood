@@ -34,6 +34,19 @@ header {
   z-index: 99;
 
   @include transition(top 0.3s ease);
+
+  /* emt elion logo */
+  .emt_elion_logo {
+    display: block;
+    text-indent: -9999px;
+    width: 170px;
+    height: 50px;
+    background: url(assets/img/branding/emt_elion_logo.svg);
+    background-size: 180px 50px;
+    background-repeat: no-repeat;
+    background-position: -5px 0;
+  }
+
   .dropdown-menu {
     > li {
       > a {
