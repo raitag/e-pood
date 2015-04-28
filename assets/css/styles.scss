@@ -387,6 +387,10 @@ display: block;
   margin-bottom: 0 !important;
 }
 
+.ee-bottom-5 {
+  margin-bottom: 5px;
+}
+
 .ee-bottom-10 {
   margin-bottom: 10px;
 }
@@ -428,6 +432,20 @@ display: block;
 .ee-no-gutter {
   padding-left: 0;
   padding-right: 0;
+}
+
+@media (max-width: $screen-xs-max) {
+  .mobile-pull-left {
+    float: left !important;
+  }
+}
+
+.ee-left-10 {
+  margin-left: 10px;
+}
+
+.ee-right-10 {
+  margin-right: 10px;
 }
 
 // .input-group {
