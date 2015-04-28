@@ -12,7 +12,7 @@ html {
   h3 {
     font-family: 'HelveticaNeueW01-75Bold', 'Helvetica Neue', Arial, sans-serif;
   }
-  html[lang="ru"] & {
+  &[lang="ru"] {
     font-family: $font-family-sans-serif-cyrillic;
     h1,
     h2 {

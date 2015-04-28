@@ -8082,12 +8082,12 @@ html {
     font-family: 'HelveticaNeueW01-45Ligh', 'Helvetica Neue', Arial, sans-serif; }
   html h3 {
     font-family: 'HelveticaNeueW01-75Bold', 'Helvetica Neue', Arial, sans-serif; }
-  html[lang="ru"] html {
+  html[lang="ru"] {
     font-family: "Neue Helvetica W10", "Neue Helvetica W01", sans-serif; }
-    html[lang="ru"] html h1,
-    html[lang="ru"] html h2 {
+    html[lang="ru"] h1,
+    html[lang="ru"] h2 {
       font-family: 'HelveticaNeueW10-45Ligh', 'Helvetica Neue', Arial, sans-serif; }
-    html[lang="ru"] html h3 {
+    html[lang="ru"] h3 {
       font-family: 'HelveticaNeueW10-75Bold', 'Helvetica Neue', Arial, sans-serif; }
 
 body {
@@ -22612,6 +22612,12 @@ section.tsr-section-carousel-listing.tsr-slider-init {
     .ee-input.ee-input-has-label [placeholder]:focus:-ms-input-placeholder {
       /* IE 10+ */
       color: #333; }
+  .ee-input.datepicker-input .icon-calendar {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    color: #999;
+    cursor: pointer; }
   .ee-input label {
     position: absolute;
     top: 0.4rem;
@@ -23541,3 +23547,6 @@ label.control-label-left {
   position: absolute;
   bottom: 0;
   right: 0; }
+  @media (max-width: 767px) {
+    .bottom-align-text {
+      position: relative; } }

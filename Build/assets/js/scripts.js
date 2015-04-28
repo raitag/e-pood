@@ -67,6 +67,13 @@ $('.js-btn-action').click(function(e) {
   $('.'+step).show().siblings('div.step').hide();
 });
 
+var $input = $('.datepicker').pickadate();
+var picker = $input.data('pickadate');
+$('.js-datepicker').click( function( e ) {
+    e.stopPropagation();
+    e.preventDefault();
+    picker.open();
+});
 
 // counting rules for IE 8-9 as the limit is 4095
 // function countCSSRules() {

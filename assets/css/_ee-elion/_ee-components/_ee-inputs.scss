@@ -49,6 +49,16 @@ $label-font-size: .8125rem;
     }
   }
 
+  &.datepicker-input {
+    .icon-calendar {
+      position: absolute;
+      right: 0;
+      top: 7px;
+      color: #999;
+      cursor: pointer;
+    }
+  }
+
   label {
     position: absolute;
     top: 0.4rem;

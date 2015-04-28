@@ -876,4 +876,7 @@ label.control-label-left {
   position: absolute;
   bottom: 0;
   right: 0;
+  @media (max-width: $screen-xs-max) {
+    position: relative;
+  }
 }
