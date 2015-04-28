@@ -177,14 +177,6 @@ $clr-gray: #c7c2ba;
 
 
           // alignment
-          &:first-child{
-            text-align: left;
-            h4:after{
-              margin-left: 0;
-              margin-right: auto;
-            }
-          }
-
           &:last-child,
           &.last-child{
             text-align: right;
@@ -194,7 +186,14 @@ $clr-gray: #c7c2ba;
               margin-right: 0;
             }
           }
-
+          
+          &:first-child{
+            text-align: left;
+            h4:after{
+              margin-left: 0;
+              margin-right: auto;
+            }
+          }
 
           // colors
           &.progress-active {
