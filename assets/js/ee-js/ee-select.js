@@ -40,6 +40,7 @@ $(function () {
           $(this).click(function () {
             // Check if option element is disabled
             if (!$(this).hasClass('disabled')) {
+              $curr_select.find('option').not(':eq('+i+')').prop('selected', false);
               $curr_select.find('option').eq(i).prop('selected', true);
               // Trigger onchange() event
               $curr_select.trigger('change');
