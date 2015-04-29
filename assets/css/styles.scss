@@ -140,6 +140,10 @@ header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-tog
   text-decoration: none;
 }
 
+.searchbox-responsive.navbar-form.focus button {
+  color: #652d86;
+}
+
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
 @function set-notification-text-color($color) {
   @if (lightness($color) > 50) {

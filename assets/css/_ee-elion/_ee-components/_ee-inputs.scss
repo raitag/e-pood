@@ -158,9 +158,11 @@ $label-font-size: .8125rem;
   input[type="text"][disabled] + label,
   input[type="password"][disabled] + label,
   input[type="search"][disabled] + label {
-    color: #bbb;
+    color: #999;
     border-color: #bbb;
     background-color: transparent;
+    -webkit-text-fill-color: #999;
+    -webkit-opacity: 1;
   }
 
   input,

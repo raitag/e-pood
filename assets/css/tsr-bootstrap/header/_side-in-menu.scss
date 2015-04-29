@@ -66,7 +66,8 @@ $mainMenuIndicatorPos:42%;
         border-left: $triangle-size solid transparent;
         border-right: $triangle-size solid transparent;
         border-bottom: $triangle-size solid red;//#f6f6f6;*/
-        height:18px;
+
+        height:10px;
         width:16px;
         display:block;
         content:'';
@@ -74,11 +75,47 @@ $mainMenuIndicatorPos:42%;
         bottom: 0;
         left: $mainMenuIndicatorPos;
         position: absolute;
-        background: linear-gradient(45deg, transparent 40%, #fff 40%),
-        linear-gradient(-45deg, transparent 40%, #fff 40%),
-        linear-gradient(to bottom, #222, #f6f6f6);
+        background: linear-gradient(45deg, transparent 65%, #fff 65%),
+        linear-gradient(-45deg, transparent 65%, #fff 65%),
+        linear-gradient(to bottom, #999, #f6f6f6);
       }
   }
+  .nav-down .menu__main .nav > li:hover,
+  .nav-down .menu__main .nav > .open,
+  .nav-down .menu__main .nav > .active,
+  .nav-up .menu__main .nav > li:hover,
+  .nav-up .menu__main .nav > .open,
+  .nav-up .menu__main .nav > .active{
+    &:after {
+      left: $mainMenuIndicatorPos;
+    }
+  }
+  .menu__main .nav.menu__main--additional > {
+    li:hover,
+    .open,
+    .active {
+      &:after {
+        left: $mainMenuIndicatorPos - 10;
+      }
+    }
+  }
+  .nav-top .menu__main .nav.menu__main--additional > {
+    li:hover,
+    .open,
+    .active {
+      &:after {
+        left: $mainMenuIndicatorPos;
+      }
+    }
+  }
+  /*.menu__main .nav.menu__main--additional > li:hover,
+  .menu__main .nav.menu__main--additional > .open,
+  .menu__main .nav.menu__main--additional > .active {
+    &:after {
+      left: $mainMenuIndicatorPos;
+    }
+  }*/
+
   .menu__main .nav > .open,
   .menu__main .nav > .open:hover{
     &:after {

@@ -3988,22 +3988,20 @@ header {
     .nav-top header .menu__top .navbar-nav {
       opacity: 1 !important;
       visibility: visible !important; }
-    .nav-top header .menu__main {
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
-      .nav-top header .menu__main .navbar-nav li:first-child {
-        /*opacity: 0;
-        display: none;*/ }
-        .nav-top header .menu__main .navbar-nav li:first-child:before {
-          background-color: transparent; }
-      .nav-top header .menu__main .navbar-nav li > a {
-        /*font-size: $font-size-base;
-        padding: 2px 8px 10px 9px;*/ }
-      .nav-top header .menu__main .navbar-nav li.home {
-        min-width: 67px;
-        width: auto; }
-        .nav-top header .menu__main .navbar-nav li.home > a {
-          padding-left: 0;
-          padding-right: 10px; }
+    .nav-top header .menu__main .navbar-nav li:first-child {
+      /*opacity: 0;
+      display: none;*/ }
+      .nav-top header .menu__main .navbar-nav li:first-child:before {
+        background-color: transparent; }
+    .nav-top header .menu__main .navbar-nav li > a {
+      /*font-size: $font-size-base;
+      padding: 2px 8px 10px 9px;*/ }
+    .nav-top header .menu__main .navbar-nav li.home {
+      min-width: 67px;
+      width: auto; }
+      .nav-top header .menu__main .navbar-nav li.home > a {
+        padding-left: 0;
+        padding-right: 10px; }
     .nav-top header .menu__main--additional-content {
       top: 0;
       background-color: white !important; }
@@ -4278,6 +4276,15 @@ footer {
   padding: 10px 0;
   background-color: #dbdbdb;
   font-size: 14px; }
+  footer .emt_elion_logo {
+    display: block;
+    text-indent: -9999px;
+    width: 170px;
+    height: 50px;
+    background: url(../../img/branding/emt_elion_logo_footer.svg);
+    background-size: 180px 50px;
+    background-repeat: no-repeat;
+    background-position: -5px 0; }
   @media (min-width: 768px) {
     footer {
       width: 100%;
@@ -4523,16 +4530,16 @@ footer {
               margin-left: auto;
               margin-right: auto;
               margin-top: 13px; }
-          .progress-steps .progress-tabs ol li:first-child {
-            text-align: left; }
-            .progress-steps .progress-tabs ol li:first-child h4:after {
-              margin-left: 0;
-              margin-right: auto; }
           .progress-steps .progress-tabs ol li:last-child, .progress-steps .progress-tabs ol li.last-child {
             text-align: right; }
             .progress-steps .progress-tabs ol li:last-child h4:after, .progress-steps .progress-tabs ol li.last-child h4:after {
               margin-left: auto;
               margin-right: 0; }
+          .progress-steps .progress-tabs ol li:first-child {
+            text-align: left; }
+            .progress-steps .progress-tabs ol li:first-child h4:after {
+              margin-left: 0;
+              margin-right: auto; }
           .progress-steps .progress-tabs ol li.progress-active h4 {
             margin-bottom: 18px;
             border-color: #652d86;

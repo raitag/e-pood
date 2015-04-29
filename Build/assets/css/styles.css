@@ -2136,7 +2136,7 @@ hr {
     clear: both; }
   @media (min-width: 768px) {
     .container {
-      width: 750px; } }
+      width: 100%; } }
   @media (min-width: 992px) {
     .container {
       width: 990px; } }
@@ -8346,18 +8346,22 @@ header {
             padding: 20px 10px 10px 10px;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); }
             header > div .menu__top .navbar-nav.navbar-right > li .login-block .container {
-              position: relative; }
+              position: relative;
+              padding-right: 20px !important; }
             header > div .menu__top .navbar-nav.navbar-right > li .login-block iframe {
               border: 0;
               width: 100%;
-              height: 100%; }
+              height: 100%;
+              min-height: 150px;
+              overflow-y: hidden;
+              overflow-x: hidden; }
             header > div .menu__top .navbar-nav.navbar-right > li .login-block .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before, header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block a:before, header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
             header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
             .sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__top .navbar-nav.navbar-right > li .login-block i {
               color: #652d86;
               font-size: 18px;
               position: absolute;
-              right: 10px; }
+              right: 0px; }
     header > div .menu__main {
       margin-bottom: 0;
       z-index: 1;
@@ -8568,22 +8572,20 @@ header {
     .nav-top header .menu__top .navbar-nav {
       opacity: 1 !important;
       visibility: visible !important; }
-    .nav-top header .menu__main {
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
-      .nav-top header .menu__main .navbar-nav li:first-child {
-        /*opacity: 0;
-        display: none;*/ }
-        .nav-top header .menu__main .navbar-nav li:first-child:before {
-          background-color: transparent; }
-      .nav-top header .menu__main .navbar-nav li > a {
-        /*font-size: $font-size-base;
-        padding: 2px 8px 10px 9px;*/ }
-      .nav-top header .menu__main .navbar-nav li.home {
-        min-width: 67px;
-        width: auto; }
-        .nav-top header .menu__main .navbar-nav li.home > a {
-          padding-left: 0;
-          padding-right: 10px; }
+    .nav-top header .menu__main .navbar-nav li:first-child {
+      /*opacity: 0;
+      display: none;*/ }
+      .nav-top header .menu__main .navbar-nav li:first-child:before {
+        background-color: transparent; }
+    .nav-top header .menu__main .navbar-nav li > a {
+      /*font-size: $font-size-base;
+      padding: 2px 8px 10px 9px;*/ }
+    .nav-top header .menu__main .navbar-nav li.home {
+      min-width: 67px;
+      width: auto; }
+      .nav-top header .menu__main .navbar-nav li.home > a {
+        padding-left: 0;
+        padding-right: 10px; }
     .nav-top header .menu__main--additional-content {
       top: 0;
       background-color: white !important; }
@@ -9505,7 +9507,7 @@ header .menu__top .navbar-nav > .active > a:focus {
     border-left: $triangle-size solid transparent;
     border-right: $triangle-size solid transparent;
     border-bottom: $triangle-size solid red;//#f6f6f6;*/
-    height: 18px;
+    height: 10px;
     width: 16px;
     display: block;
     content: '';
@@ -9513,8 +9515,33 @@ header .menu__top .navbar-nav > .active > a:focus {
     bottom: 0;
     left: 42%;
     position: absolute;
-    background: linear-gradient(45deg, transparent 40%, white 40%), linear-gradient(-45deg, transparent 40%, white 40%), linear-gradient(to bottom, #222222, #f6f6f6); }
+    background: linear-gradient(45deg, transparent 65%, white 65%), linear-gradient(-45deg, transparent 65%, white 65%), linear-gradient(to bottom, #999999, #f6f6f6); }
 
+  .nav-down .menu__main .nav > li:hover:after,
+  .nav-down .menu__main .nav > .open:after,
+  .nav-down .menu__main .nav > .active:after,
+  .nav-up .menu__main .nav > li:hover:after,
+  .nav-up .menu__main .nav > .open:after,
+  .nav-up .menu__main .nav > .active:after {
+    left: 42%; }
+
+  .menu__main .nav.menu__main--additional > li:hover:after,
+  .menu__main .nav.menu__main--additional > .open:after,
+  .menu__main .nav.menu__main--additional > .active:after {
+    left: 32%; }
+
+  .nav-top .menu__main .nav.menu__main--additional > li:hover:after,
+  .nav-top .menu__main .nav.menu__main--additional > .open:after,
+  .nav-top .menu__main .nav.menu__main--additional > .active:after {
+    left: 42%; }
+
+  /*.menu__main .nav.menu__main--additional > li:hover,
+  .menu__main .nav.menu__main--additional > .open,
+  .menu__main .nav.menu__main--additional > .active {
+    &:after {
+      left: $mainMenuIndicatorPos;
+    }
+  }*/
   .menu__main .nav > .open:after,
   .menu__main .nav > .open:hover:after {
     bottom: 3px;
@@ -10125,6 +10152,15 @@ footer {
   padding: 10px 0;
   background-color: #dbdbdb;
   font-size: 14px; }
+  footer .emt_elion_logo {
+    display: block;
+    text-indent: -9999px;
+    width: 170px;
+    height: 50px;
+    background: url(../img/branding/emt_elion_logo_footer.svg);
+    background-size: 180px 50px;
+    background-repeat: no-repeat;
+    background-position: -5px 0; }
   @media (min-width: 768px) {
     footer {
       width: 100%;
@@ -10720,16 +10756,16 @@ textarea {
               margin-left: auto;
               margin-right: auto;
               margin-top: 13px; }
-          .progress-steps .progress-tabs ol li:first-child {
-            text-align: left; }
-            .progress-steps .progress-tabs ol li:first-child h4:after {
-              margin-left: 0;
-              margin-right: auto; }
           .progress-steps .progress-tabs ol li:last-child, .progress-steps .progress-tabs ol li.last-child {
             text-align: right; }
             .progress-steps .progress-tabs ol li:last-child h4:after, .progress-steps .progress-tabs ol li.last-child h4:after {
               margin-left: auto;
               margin-right: 0; }
+          .progress-steps .progress-tabs ol li:first-child {
+            text-align: left; }
+            .progress-steps .progress-tabs ol li:first-child h4:after {
+              margin-left: 0;
+              margin-right: auto; }
           .progress-steps .progress-tabs ol li.progress-active h4 {
             margin-bottom: 18px;
             border-color: #652d86;
@@ -22713,9 +22749,11 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   .ee-input input[type="text"][disabled] + label,
   .ee-input input[type="password"][disabled] + label,
   .ee-input input[type="search"][disabled] + label {
-    color: #bbb;
+    color: #999;
     border-color: #bbb;
-    background-color: transparent; }
+    background-color: transparent;
+    -webkit-text-fill-color: #999;
+    -webkit-opacity: 1; }
   .ee-input input.input-validation-error,
   .ee-input textarea.ee-textarea.input-validation-error {
     border-color: #ff6319; }
@@ -23040,6 +23078,9 @@ header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-tog
 header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:focus,
 header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle.active {
   text-decoration: none; }
+
+.searchbox-responsive.navbar-form.focus button {
+  color: #652d86; }
 
 .swiffy-wrap {
   position: relative;

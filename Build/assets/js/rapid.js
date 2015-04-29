@@ -4721,7 +4721,7 @@ $(function(){
     function init() {
         $('ul.nav.navbar-nav').on('click.bs.dropdown', function(e){
             var $a = $(e.target), is_a = $a.is('.is_a');
-            // console.log("test", e, $a, is_a);
+            console.log("test", e, $a, is_a);
             if($a.hasClass('dropdown-toggle')) {
                 $('ul.dropdown-menu', this).toggle(!is_a);
                 $a.toggleClass('is_a', !is_a);
@@ -5109,7 +5109,7 @@ function initElement(){
     $sideMenuLeftD.css({ width:$col3Width, left:$sMleft });
     $leftSideSubMenu.css({ width:$col3Width, left:$sMwidth });
     // right side menu
-    $sideMenuRight.css({ width:$sMwidth + 5 });
+    $sideMenuRight.css({ width:$sMwidth + 1 });
     $sideMenuRightD.css({ width:$col3Width});
 
     var nr          = (( $sMwidth / $windowWidth ) * 100),
@@ -7992,6 +7992,7 @@ $(function () {
           $(this).click(function () {
             // Check if option element is disabled
             if (!$(this).hasClass('disabled')) {
+              $curr_select.find('option').not(':eq('+i+')').prop('selected', false);
               $curr_select.find('option').eq(i).prop('selected', true);
               // Trigger onchange() event
               $curr_select.trigger('change');

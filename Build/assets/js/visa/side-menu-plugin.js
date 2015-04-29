@@ -369,7 +369,7 @@ function initElement(){
     $sideMenuLeftD.css({ width:$col3Width, left:$sMleft });
     $leftSideSubMenu.css({ width:$col3Width, left:$sMwidth });
     // right side menu
-    $sideMenuRight.css({ width:$sMwidth + 5 });
+    $sideMenuRight.css({ width:$sMwidth + 1 });
     $sideMenuRightD.css({ width:$col3Width});
 
     var nr          = (( $sMwidth / $windowWidth ) * 100),

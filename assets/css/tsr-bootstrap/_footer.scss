@@ -6,6 +6,18 @@ footer {
   padding:10px 0;
   background-color: $footer-bg-color;
   font-size: $footer-font-size;
+
+  .emt_elion_logo {
+    display: block;
+    text-indent: -9999px;
+    width: 170px;
+    height: 50px;
+    background: url(../img/branding/emt_elion_logo_footer.svg);
+    background-size: 180px 50px;
+    background-repeat: no-repeat;
+    background-position: -5px 0;
+  }
+
   @media (min-width: $screen-sm-min) {
     width: 100%;
     position: absolute;
