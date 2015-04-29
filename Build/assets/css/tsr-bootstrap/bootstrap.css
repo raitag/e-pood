@@ -4029,7 +4029,7 @@ header {
     .nav-up header .menu__main,
     .nav-down header .menu__main {
       min-height: 35px;
-      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2); }
       .nav-up header .menu__main .navbar-nav > li:first-child,
       .nav-down header .menu__main .navbar-nav > li:first-child {
         min-width: 1%;
