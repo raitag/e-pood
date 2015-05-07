@@ -26,7 +26,6 @@ var scrollToTop = 0;
 
     }
     loginBlockDropdown();
-    testScreen();
     headernavigation();
 }());
 
@@ -43,10 +42,17 @@ function loginBlockDropdown() {
         var _curEl = $(e.currentTarget);
         _curEl.parent().toggleClass('active');
         e.preventDefault();
+        if( $('body').hasClass('noscroll') ) {
+            enableScroll();
+        } else {
+            disableScroll();
+        }
     });
     $('.login-block [data-toggle="close-dropdown"]').bind('click', function(e){
+        e.preventDefault();
         var _curEl = $(e.currentTarget);
         _curEl.closest('li').removeClass('active');
+        enableScroll();
     });
 }
 
@@ -80,67 +86,270 @@ function hasScrolled() {
         if(st < 100){
             $('body').removeClass('nav-down nav-up').addClass('nav-top');
         }
-        /*if(st == 0) {
-            $('body').removeClass('nav-down nav-up').addClass('nav-top');
-        }*/
 
     }
 
     lastScrollTop = st;
 }
-/*function calculateMainMenu(){
-    var _brakePoint = $("#menu__main").width() + 20;
-    var _elW = ( $('body').hasClass('nav-top') ? 0 : 5 );
-    $("#menu__main > ul > li:not(:hidden)").each(function(index, el){
-        _elW += $(el).width();
-    });
-    console.log(_brakePoint ,"<", _elW);
-    if(_brakePoint < _elW) {
-        addHorScroll(_elW);
-    } else {
-        removeHorScroll();
-    }
-}*/
-/*function addHorScroll($width){
-    var _el = $("#menu__main > ul:first-child");
-    _el.addClass('hor-scrollable');
-    console.log( $('.hor-scrollable').width(), "t" );
-    _el.append('<li class="left-nav"><i class="icon-arrow-left"></i></li><li class="right-nav"><i class="icon-arrow-right"></i></li>');
-    $('.hor-scrollable .left-nav').css({ left:10, position:'fixed'});
-    $('.hor-scrollable .right-nav').css({ left:$('.hor-scrollable').width()-10, position:'fixed'});
-}*/
-/*function removeHorScroll(){
-    var _el = $("#menu__main > ul:first-child");
-    _el.removeClass('hor-scrollable');
-    _el.find('.left-nav .right-nav').removeClass('.left-nav .right-nav');
-}*/
-/*$(window).load(function(){
-    $(window).resize( $.throttle( 500, function(){
-        calculateMainMenu();
-    }));
-    $(window).scroll( $.throttle( 500, function(){
-        calculateMainMenu();
-    }));
 
-    calculateMainMenu();
-});*/
-
-function testScreen(){
-    if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
-        $('body').addClass('burger');
-        //$('body').append('<div style="background: none repeat scroll 0 0 white;border: 1px solid red;padding: 10px;position: absolute;top: 0;z-index: 999999;">TEST</div>');
-    } else {
-        $('body').removeClass('burger');
-    }
-    $(window).resize( function(){
-        if( Modernizr.mq('only screen and (min-width:768px) and (max-width: 900px)') ) {
-            $('body').addClass('burger');
-            //$('body').append('<div style="background: none repeat scroll 0 0 white;border: 1px solid red;padding: 10px;position: absolute;top: 0;z-index: 999999;">TEST</div>');
+/* new sidemenu */
+jQuery(document).ready(function($){
+    // first level click
+    $('.header-menu__main .nav > li.sidemenu > a').click(function(event){
+        event.preventDefault();
+        var li = $(this).parent();
+        var ul = $(this).parent().parent().parent().find('ul');
+        if( li.hasClass('sidemenu-open') ) {
+            hideSideMenu();
+        } else if( ul.find('.sidemenu-open').length > 0 ) {
+            switchSideMenu(ul, li);
         } else {
-            $('body').removeClass('burger');
+            showSideMenu(li);
         }
-        //console.log( 'test:', Modernizr.mq('only screen and (min-width: 901px)'), $(window).width() );
     });
-
-
+    $('.header-menu__main .mobile-icons > ul > li > a').click(function(event){
+        event.preventDefault();
+        var li = $(this).parent();
+        var ul = $(this).parent().parent();
+        if( $('.navbar-toggle').hasClass('active') ) {
+            hideMobileMenu();
+            showSideMenu(li);
+        } else {
+            if( li.hasClass('sidemenu-open') ) {
+                hideSideMenu();
+                enableScroll();
+            } else if( ul.find('.sidemenu-open').length > 0 ) {
+                switchSideMenu(ul, li);
+            } else {
+                showSideMenu(li);
+            }
+        }
+    });
+    $('.header-menu__main .mobile-icons > ul > li > .sidemenu-menu ul > li.sidemenu > a').click(function(event){
+        event.preventDefault();
+        var li = $(this).parent();
+        var ul = $(this).parent().parent().parent().find('ul');
+        if( li.hasClass('sidemenu-open') ) {
+            hideOnlySideMenu(li);
+        } else if( ul.find('.sidemenu-open').length > 0 ) {
+            switchSideMenu(ul, li);
+        } else {
+            showSideMenu(li);
+        }
+    });
+    // second level click
+    $('.header-menu__main .nav > li.sidemenu > .sidemenu-menu ul > li.sidemenu > a').click(function(event){
+        event.preventDefault();
+        var li = $(this).parent();
+        var ul = $(this).parent().parent().parent().find('ul');
+        var submenu;
+        var cloneId;
+        if( $(window).width() > 767 ) {
+            if( !$(this).attr('data-submenu')) {
+                cloneId = 'submenu-clone-' + uniqId();
+                submenu = $(this).next().clone().attr('id', cloneId);
+                $(this).attr('data-submenu', cloneId);
+            } else {
+                submenu = $('#' + $(this).attr('data-submenu'));
+                $(this).attr('data-submenu', '');
+            }
+            var overFlowContainer = $(this).parent().find('.sidemenu-menu > div');
+            if( li.hasClass('sidemenu-open') ) {
+                hideSubSideMenu(li, submenu);
+            } else if( ul.find('.sidemenu-open').length > 0 ) {
+                switchSubSideMenu(ul, li, submenu);
+            } else {
+                showSubSideMenu(li, submenu);
+            }
+        } else {
+            if( li.hasClass('sidemenu-open') ) {
+                hideOnlySideMenu(li);
+            } else if( ul.find('.sidemenu-open').length > 0 ) {
+                switchSideMenu(ul, li);
+            } else {
+                showSideMenu(li);
+            }
+        }
+    });
+    $('.navbar-toggle').click(function(event){
+        event.preventDefault();
+        if( !$(this).hasClass('active') ) {
+            if( $('body').hasClass('noscroll') ) {
+                hideSideMenu();
+                showMobileMenu();
+            } else {
+                disableScroll();
+                showMobileMenu();
+            }
+            $(this).addClass('active');
+        } else {
+            enableScroll();
+            hideMobileMenu();
+        }
+    });
+    // close menus on backdrop click
+    $(document).on( 'click', '.sidemenu-backdrop', function(){
+        if( $(window).width() > 767 ) {
+            hideSideMenu();
+        } else {
+            enableScroll();
+            hideMobileMenu();
+            hideSideMenu();
+        }
+    });
+});
+function uniqId() {
+    return Math.round(new Date().getTime() + (Math.random() * 100));
+}
+function disableScroll() {
+    var curScroll = $(window).scrollTop();
+    $('body').addClass('noscroll sidemenu-active');
+    // show backdrop only if no backdrop exists
+    if( $('.sidemenu-backdrop').length < 1 ) {
+        showSideMenuBackDrop();
+        $('body').css('top', -curScroll);
+    }
+}
+function enableScroll() {
+    $('body').removeClass('noscroll sidemenu-active');
+    var bodyScroll = parseInt($('body').css('top'), 10);
+    $(window).scrollTop(-bodyScroll);
+    // hide backdrop
+    hideSideMenuBackDrop();
+}
+function showMobileMenu() {
+    $('#menu__main').addClass('navbar-mobile-open');
+    setTimeout(function(){
+        $('#menu__main').addClass('navbar-mobile-visible');
+    }, 20);
+}
+function hideMobileMenu() {
+    $('#menu__main').removeClass('navbar-mobile-visible');
+    $('.navbar-toggle').removeClass('active');
+    setTimeout(function(){
+        $('#menu__main').removeClass('navbar-mobile-open');
+    }, 200);
+}
+function showSideMenu(li) {
+    // disable scrolling
+    disableScroll();
+    //show sidemenu
+    li.addClass('sidemenu-open');
+    var container = li.find('> .sidemenu-menu');
+    setMenuOverflow(container);
+    setTimeout(function(){
+        li.addClass('sidemenu-visible');
+    }, 10);
+}
+function showSubSideMenu(li, clone) {
+    //show sidemenu
+    // take this sidemenu and append it to container
+    li.closest('.sidemenu-menu').append(clone);
+    li.addClass('sidemenu-open');
+    clone.addClass('sidemenu-menu-open sidemenu-clone');
+    setTimeout(function(){
+        clone.addClass('sidemenu-menu-visible');
+        setSubSideMenuOverflow(li, clone);
+    }, 20);
+}
+function switchSubSideMenu(ul, newLi, clone) {
+    // hide active sidemenus
+    var clones = newLi.closest('.sidemenu-menu').find('.sidemenu-clone');
+    clones.removeClass('sidemenu-menu-visible');
+    ul.find('.sidemenu-open a').attr('data-submenu', '');
+    ul.find('.sidemenu-open').removeClass('sidemenu-open');
+    setTimeout(function(){
+        clones.removeClass('sidemenu-menu-open');
+        clones.remove();
+        showSubSideMenu(newLi, clone);
+        setSubSideMenuOverflow(newLi, clone);
+    }, 200);
+}
+function hideSubSideMenu(li, clone) {
+    li.removeClass('sidemenu-open');
+    clone.removeClass('sidemenu-menu-visible');
+    setTimeout(function(){
+        clone.removeClass('sidemenu-menu-open');
+        clone.remove();
+    }, 200);
+}
+function setSubSideMenuOverflow(li, clone) {
+    var ofc = clone.find('> div');
+    var ofcParent = clone;
+    ofcParent.attr('style', false);
+    ofc.attr('style', false);
+    var headerHeight = $('header').outerHeight() + parseInt($('header').css('top'), 10);
+    var maxHeight = $(window).height() - headerHeight;
+    var minOffsetTop = $(window).height() - maxHeight;
+    var ofcHeight = ofc.outerHeight();
+    if(ofc.outerHeight() > maxHeight) {
+        ofc.outerHeight(maxHeight);
+    }
+    var ofcParentOffsetTop = li.offset().top - headerHeight;
+    // determine if pulling up is necessary
+    if( ( ofcParent.outerHeight() + ofcParentOffsetTop ) > maxHeight ) {
+        var negTop = maxHeight - ofcParent.outerHeight();
+        ofcParent.css('top', negTop);
+    } else {
+        ofcParent.css('top', ofcParentOffsetTop);
+    }
+}
+function setMenuOverflow(item) {
+    var ofc = item.find('> div');
+    ofc.attr('style', false);
+    var headerHeight = $('header').outerHeight() + parseInt($('header').css('top'), 10);
+    var maxHeight = $(window).height() - headerHeight;
+    if(ofc.outerHeight() > maxHeight) {
+        ofc.outerHeight(maxHeight);
+    }
+}
+function hideSubSideMenus() {
+    $('.sidemenu a').attr('data-submenu', '');
+    var clones = $('.sidemenu-clone');
+    clones.removeClass('sidemenu-menu-visible');
+    setTimeout(function(){
+        clones.removeClass('sidemenu-menu-open');
+        clones.remove();
+    }, 200);
+}
+function hideSideMenu() {
+    // enable scrolling
+    if( $(window).width() > 767 ) {
+        enableScroll();
+    }
+    //hide sidemenu
+    $('.sidemenu-open').removeClass('sidemenu-visible active');
+    $('[data-toggle="login-dropdown"]').parent().removeClass('active');
+    setTimeout(function(){
+        $('.sidemenu-open').removeClass('sidemenu-open');
+        hideSubSideMenus();
+    }, 200);
+}
+function hideOnlySideMenu(li) {
+    li.removeClass('sidemenu-visible');
+    setTimeout(function(){
+        li.removeClass('sidemenu-open');
+    }, 200);
+}
+function switchSideMenu(ul, newLi) {
+    // hide active sidemenus
+    ul.find('.sidemenu-open').removeClass('sidemenu-visible active');
+    setTimeout(function(){
+        ul.find('.sidemenu-open').removeClass('sidemenu-open');
+        // show new sidemenu
+        showSideMenu(newLi);
+        hideSubSideMenus();
+    }, 200);
+}
+function showSideMenuBackDrop() {
+    $('body').append('<div class="sidemenu-backdrop" />');
+    setTimeout(function(){
+        $('.sidemenu-backdrop').addClass('sidemenu-backdrop-visible');
+    }, 10);
+}
+function hideSideMenuBackDrop() {
+    $('.sidemenu-backdrop').removeClass('sidemenu-backdrop-visible');
+    setTimeout(function(){
+        $('.sidemenu-backdrop').remove();
+    }, 200);
 }

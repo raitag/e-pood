@@ -49,11 +49,10 @@
 /* @include tsr-bootstrap/_badges.scss */
 /* @include tsr-bootstrap/_responsive-utilities.scss */
 /* @include tsr-bootstrap/_elion.scss */
-/* @include tsr-bootstrap/header/_header.scss */
+/* @include tsr-bootstrap/header/_header-navigation.scss */
 /* @include tsr-bootstrap/header/_sidenavigation.scss */
 /* @include tsr-bootstrap/header/_burgerize.scss */
 /* @include tsr-bootstrap/header/_side-in-menu.scss */
-/* @include tsr-bootstrap/header/_sidemenu.scss */
 /* @include tsr-bootstrap/header/_searchbox-responsive.scss */
 /* @include tsr-bootstrap/_footer.scss */
 /* @include tsr-bootstrap/_forms.scss */
@@ -134,14 +133,23 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
   @extend .icon-arrow-left;
 }
 
-header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:hover, 
-header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle:focus, 
-header > div .menu__main > div .mobile-icons > ul > li.sidemenu > a.sidemenu-toggle.active {
+header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle:hover, 
+header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle:focus, 
+header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle.active {
   text-decoration: none;
 }
 
 .searchbox-responsive.navbar-form.focus button {
-  color: #652d86;
+  color: $brand-primary;
+}
+
+@media (min-width: 768px) {
+  .navbar-form.navbar-right:last-child {
+    margin-right: 0px;
+  }
+  .navbar-right {
+    margin-right: -15px;
+  }
 }
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass

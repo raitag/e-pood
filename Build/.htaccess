@@ -1,0 +1,4 @@
+AuthName "Secure Area"
+AuthType Basic
+AuthUserFile /data/proto/elion/epood/.htpasswd
+require valid-user

@@ -1,17 +1,43 @@
-$searchBoxWidth:185px;
+$searchBoxWidth:185px;// 150px for small devices
 $searchBoxHeight:32px;
 $searchBoxBg:#754292;
 
 .searchbox-responsive {
   position: relative;
-  margin-bottom: 0;
-  margin-top: 7px;
-  margin-right: 15px !important;
+  /*margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 15px !important;*/
+  margin: 0;
+  padding: 0;
   width: $searchBoxWidth;
+  height: 47px;
+  right: 15px;
 
   &.navbar-form {
+    border: 0;
     .form-group {
+     /* position: relative;
+      left: -15px;
+      width: inherit;
+      background-color: red;
+      @include transition(all 0.3s ease);*/
+      display: block;
+      height: inherit;
 
+      .twitter-typeahead {
+        border-radius: 4px;
+        display: block!important;
+        height: $searchBoxHeight;
+        /*background-color: rgba(0,0,0,0.3);*/
+        position: absolute!important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        /*background: rgba(250, 250, 250, 0.1);*/
+
+        /*.tt-input {
+          top: 0;
+        }*/
+      }
       .form-control {
         box-shadow: 0 0 0;
         &::-webkit-input-placeholder {
@@ -36,13 +62,25 @@ $searchBoxBg:#754292;
         padding: 3px 35px 3px 10px;
         width: $searchBoxWidth;
         height: $searchBoxHeight;
-        position: absolute;
-        top: 2px;
+        position: relative;
         right: 0;
-        background: rgba(250, 250, 250, 0.1);
         z-index: 3;
         cursor: default;
-        @include transition(all 0.3s ease);
+        background: rgba(246, 246, 246, 0.1) !important;
+        @include transition(background 0.3s ease);
+
+        /*top: 50% !important;
+        transform: translateY(-50%) !important;*/
+
+        /*@include transition(all 0.3s ease);*/
+
+        /*&.tt-hint{
+          background-color: yellow;
+        }
+        &.tt-input{
+          background-color: blue;
+          background-color: #fff;
+        }*/
       }
       input[placeholder], [placeholder], *[placeholder] {
         color: rgba(250, 250, 250, 0.5);
@@ -55,11 +93,12 @@ $searchBoxBg:#754292;
       float: right;
       border: none;
       position: absolute;
-      top: 2px;
       right: 2px;
       z-index: 3;
       cursor: pointer;
       width: auto;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
 
       &.focus {
         color: $brand__link;
@@ -73,15 +112,20 @@ $searchBoxBg:#754292;
 
     &.focus {
       .form-group {
-
-        .form-control {
-
-        }
-        input[type="text"] {
-          width: $searchBoxWidth + 60;
+        /*left: -75px;*/
+        /*.twitter-typeahead {
           background-color: #fff;
-          color: #c2b1cd;
         }
+        .form-control {
+          right: 0;
+        }*/
+
+        input[type="text"] {
+          /*width: $searchBoxWidth + 60;*/
+          color: #333;
+          background: rgba(246, 246, 246, 1) !important;
+        }
+
       }
 
       button {
@@ -89,8 +133,135 @@ $searchBoxBg:#754292;
       }
     }
   }
+  .tt-menu {
+    background-color: #f6f6f6;
 
-  /*@media (min-width: 768px) and (max-width: 835px) {
-    width: $searchBoxWidth + 20;
-  }*/
+    width: 100%;
+    top: 90% !important;
+
+    .tt-dataset {
+      box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+      margin-top: 10px;
+      > div {
+        &:hover {
+          /*background-color: #fff;*/
+          color: $brand__link;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1px;
+            left: 0;
+            background-color:#fff;
+            z-index: 2;
+          }
+        }
+      }
+      .tt-suggestion {
+        padding: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: table;
+        width: 100%;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 90%;
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: 10px;
+          background-color:darken(#f6f6f6, 10%);
+          z-index: 1;
+        }
+
+        /*&:hover {
+          /!*background-color: #fff;*!/
+          color: $brand__link;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1px;
+            left: 0;
+            background-color:#fff;
+            z-index: 2;
+          }
+        }*/
+
+        img {
+          left: 10px;
+          max-width: 30px;
+          position: absolute;
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+          z-index: 3;
+        }
+        span {
+          display: table-cell;
+          vertical-align: middle;
+          padding-left: 40px;
+          min-height: 32px;
+          position: relative;
+          z-index: 3;
+        }
+      }
+
+      .empty-message {
+        padding: 10px;
+      }
+
+      .tt-footer {
+        position: relative;
+        width: 100%;
+        min-height: 50px;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 90%;
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: 10px;
+          background-color:darken(#f6f6f6, 10%);
+          z-index: 1;
+        }
+
+        a {
+          position: absolute;
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+          left:0;
+          right:0;
+          margin-left:auto;
+          margin-right:auto;
+          text-align: center;
+          z-index: 4;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+  }
+  @media (min-width: 768px) and (max-width: 840px) {
+    &.navbar-form {
+      width: $searchBoxWidth - 35;
+      .form-group {
+        input[type="text"] {
+          width: $searchBoxWidth - 35;
+        }
+      }
+    }
+  }
 }

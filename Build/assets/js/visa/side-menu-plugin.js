@@ -16,6 +16,7 @@
     var backdrop = '.sidemenu-backdrop'
     var backdropBorder = '.sidemenu-topborder'
     var toggle   = '[data-toggle="sidemenu"]'
+    var counter = 0
     var Sidemenu = function (element) {
         $(element).on('click.bs.sidemenu', this.toggle)
     }
@@ -36,10 +37,11 @@
             }
             // horizontal line
             $('<div class="sidemenu-topborder"/>').insertAfter($(this))
-            $('.sidemenu-topborder').css({ width : $('#headernavigation > .container').width()+20, left:$('#headernavigation > .container').position().left });
+            $('.sidemenu-topborder').css({ width : $('#headernavigation > .container').width()+20, left:$('#headernavigation > .container').offset().left });
 
             // drop background
             $('<div class="sidemenu-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
+            var _i = setTimeout(function(){ $(backdrop).addClass('fadein'); clearTimeout(_i); },100)
 
             var relatedTarget = { relatedTarget: this }
             $parent.trigger(e = $.Event('show.bs.sidemenu', relatedTarget))
@@ -93,7 +95,14 @@
         $('body').removeClass('open')
         $('#menu__main').removeClass('in')
         if (e && e.which === 3) return
-        $(backdrop).remove()
+
+        if(typeof e == 'undefined') {
+            $(backdrop).remove()
+        } else {
+            $(backdrop).removeClass('fadein')
+            var _i = setTimeout(function(){ $(backdrop).remove(); clearTimeout(_i); },1000)
+        }
+
         $(backdropBorder).remove()
         $(toggle).each(function () {
             var $this         = $(this)
@@ -113,8 +122,16 @@
     }
 
     function clearAllMenus(e) {
-        //console.log('clearAllMenus');
-        $(backdrop).remove()
+        //console.log(e, ' : clearAllMenus');
+        /*if(typeof e != 'undefined') {
+            $(backdrop).remove()
+            console.log(e , ' u n d e f i n e d clearAllMenus');
+        } else {
+            $(backdrop).removeClass('fadein')
+            var _i = setTimeout(function(){ $(backdrop).remove(); clearTimeout(_i); },1000)
+            console.log(e , ' f a d e o u t clearAllMenus');
+        }*/
+
         $(toggle).each(function (i,el) {
             var $this = $(el);
             var $parent = getParent($(el))
@@ -231,7 +248,7 @@ var breakPoint = 900;
 $(window).load(function(){
     if( $(window).width() > breakPoint ) {
         initElement();
-
+        mainMenuIndicator();
         // click event
         $('.sidemenu .sidemenu > a').click(function(e){
             var _curEl = $(e.target);
@@ -427,3 +444,39 @@ $('#menu__main, .sidemenuWrapper').on('show.bs.sidemenu', function () {
 $('#menu__main, .sidemenuWrapper').on('hide.bs.sidemenu', function () {
     $('body').removeClass('noscroll');
 })
+
+function mainMenuIndicator(){
+    var $el, leftPos, newWidth,
+        $mainNav = $("#menu__main > ul:first-child");
+
+    $mainNav.parent().append("<span id='menu-indicator'></span>");
+    var $magicLine = $("#menu-indicator");
+    $magicLineW = $magicLine.width()/2;
+
+
+        $magicLine
+            /*.width($(".active").width())*/
+            .css("left", (  $mainNav.find('> li.active').length > 0 ? $mainNav.find('> li.active').position().left : 0) )
+            .data("origLeft", $magicLine.position().left)
+            .data("origWidth", $magicLine.width());
+
+    $mainNav.find('> li > a').hover(function() {
+        $el = $(this);
+        leftPos = $el.parent().position().left;
+        newWidth = $el.parent().width();
+        /*$magicLine.stop().animate({
+            left: leftPos,
+            width: newWidth
+        });*/
+        console.log($el);
+        var _nP = leftPos + (newWidth/2) - $magicLineW;
+        $magicLine.css({left:_nP, opacity: 1});
+    }, function() {
+        /*$magicLine.stop().animate({
+            left: $magicLine.data("origLeft")
+            /!*,width: $magicLine.data("origWidth")*!/
+        });*/
+        //$magicLine.css({'left': $magicLine.data("origLeft")});
+        $magicLine.css({opacity:0});
+    });
+}

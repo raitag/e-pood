@@ -1,6 +1,6 @@
 $(function(){
     var $searchbox = $(".searchbox-responsive");
-    $searchbox.find('#search').bind('click', function(){
+        $searchbox.find('#search').bind('click', function(){
         $searchbox.addClass('focus');
     });
 
@@ -9,12 +9,42 @@ $(function(){
             $searchbox.removeClass('focus');
         }
     });
-    /*var _nav = $('header .menu__top .container > .navbar-nav:eq(1) ');
-    var _input = $('.searchbox-responsive');
-    $(window).resize( $.throttle( 500, function(){
-        if( _input.hasClass('focus') ){
-            var _maxX = _nav.width() + _nav.position().left;
-            console.log('keep calculating', _maxX, _input.position().left - 60, _input.find('input').width()+45 );
+
+    /* TYPEAHEAD */
+    var searchResults = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: 'http://twitter.github.io/typeahead.js/data/films/post_1960.json',
+        remote: {
+            url: 'http://twitter.github.io/typeahead.js/data/films/queries/%QUERY.json',
+            wildcard: '%QUERY'
         }
-    }));*/
+    });
+    searchResults.initialize();
+
+    $('[role="search"] .form-control').typeahead(
+        {
+            hint: true,
+            highlight: true,
+            minLength: 1
+        },
+        {
+            name:'search-results',
+            display:'value',
+            source:searchResults,
+            limit:4,
+            templates: {
+                empty: [
+                    '<div class="empty-message">',
+                    'unable to find any results that match the current query',
+                    '</div>'
+                ].join('\n'),
+                suggestion: function(data){
+                    return '<div><img src="/assets/ico/favicon-32x32.png" alt=""/><span>' + data.value + '</span></div>'
+                },
+                footer:'<div class="tt-footer"><a href="#">Vaata koiki <span class="icon icon-arrow-right"></span></a></div>'
+            }
+        }
+    );
+
 });

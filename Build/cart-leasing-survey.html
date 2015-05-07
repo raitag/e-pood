@@ -187,13 +187,13 @@
       </div>
     </nav>
 
-        <nav class="navbar navbar-default menu__main" role="navigation" id="headernavigation">
+        <nav class="header-menu__main" role="navigation" id="headernavigation">
     <h1 class="sr-only">Main menu</h1>
     <div class="container">
 
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header sidemenuWrapper">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu__main">
+            <button type="button" class="navbar-toggle collapsed">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon icon-menu-horizontal"></span>
             </button>
@@ -303,16 +303,16 @@
         </div>
 
         <!-- NEW MAIN MENU -->
-        <div class="collapse navbar-collapse" id="menu__main">
+        <div class="navbar-collapse" id="menu__main">
             <ul class="nav navbar-nav">
                 <li>
                     <a class="navbar-brand" href="#">
                         <span class="icon icon-elion-logo"></span>
                     </a>
                 </li>
-                <li class="long-link sidemenu">
+                <li class="sidemenu">
                     <a href="#" id="phones" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">
-                        <span class="icon icon-home"></span>
+                        <span class="icon icon-mobile"></span>
                         Telefonid
                     </a>
                     <div class="sidemenu-menu left" role="menu" aria-labelledby="phones">
@@ -360,7 +360,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="long-link sidemenu">
+                <li class="sidemenu">
                     <a href="#" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">
                         <span class="icon icon-offers"></span>
                         Arvutid
@@ -448,16 +448,22 @@
                         </div>
                     </div>
                 </li>
-                <li class="long-link">
+                <li>
                     <a href="#">
-                        <span class="icon icon-offers"></span>
-                        TV ja Audio
+                        <span class="icon icon-service-home-controll"></span>
+                        Telerid
                     </a>
                 </li>
-                <li class="long-link">
+                <li>
                     <a href="#">
-                        <span class="icon icon-tv"></span>
-                        Foto
+                        <span class="icon icon-camera"></span>
+                        Kaamerad
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-offers"></span>
+                        Helitehnika
                     </a>
                 </li>
                 <li class="long-link">
@@ -468,7 +474,7 @@
                 </li>
                 <li class="long-link">
                     <a href="#">
-                        <span class="icon icon-offers"></span>
+                        <span class="icon icon-devices-manager"></span>
                         Teenuste Seadmed
                     </a>
                 </li>
@@ -566,7 +572,15 @@
                         <span class="glyphicon glyphicon-search"></span>
                     </a>
                     <div class="sidemenu-menu right" role="menu" aria-labelledby="otsingLabel">
-                        <div><input type="text" placeholder="Search"/></div>
+                        <div class="scrolled-search">
+                            <form class="searchbox-responsive navbar-form form-inline" role="search" autocomplete="on">
+                                <div class="form-group">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" placeholder="Sisesta otsingusõna" name="searh" id="search">
+                                </div>
+                                <button type="button" class="btn btn-search"><span class="icon icon-search"></span></button>
+                            </form>
+                        </div>
                     </div>
                 </li>
                 <li class="sidemenu hide__scroll--top hidden-xs">

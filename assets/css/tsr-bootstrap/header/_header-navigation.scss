@@ -1,0 +1,565 @@
+$brand__link: #652d86;
+$brand__violet: #7b4d96;
+$brand__violet_hover: #73369e;
+$brand__gray: #cccccc;
+$white:#fff;
+$mainmenu_link:#333;
+$menuTop__height:50px;
+
+$slideTo:20%;
+$sidemenuWidth:25%;
+$gray:#ccc;
+$menuBg:#F6F6F6;
+$submenuBg:$white;
+$iconTop:25%;
+$iconRight:6px;
+$horizontalLineH:3px;
+$verticalSeparatorColor:#f6f6f6;
+
+.container {
+  min-width: 320px;
+}
+body{
+  header + div{
+    margin-top: 150px;
+  }
+}
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  @include transition(top 0.3s ease);
+
+  /* emt elion logo */
+  .emt_elion_logo {
+    display: block;
+    text-indent: -9999px;
+    width: 170px;
+    height: 50px;
+    background: url(../ico/emt_elion_logo.svg);
+    background-size: 180px 50px;
+    background-repeat: no-repeat;
+    background-position: -5px 0;
+  }
+
+  .dropdown-menu {
+    > li {
+      > a {
+        &:hover,
+        &:focus {
+          background-color: $brand__violet;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  > div {
+    background-color: #fff;
+
+    /* TOP NAVIGATION */
+    .menu__top {
+      background-color: $brand-primary;
+      border-radius: 0;
+      z-index:2;
+      border: 0;
+      margin-bottom: 0px;
+      min-height: $menuTop__height;//50px;
+      height: $menuTop__height;//50px;
+      body.nav-up &, body.nav-down & {
+        background-color: $brand__violet;
+        .navbar-nav.navbar-right {
+          border-color: $brand__violet;
+        }
+      }
+      .searchbox-responsive {
+        button {
+          color: $white;
+          min-width: 1%;
+          width: 31px;
+        }
+      }
+
+      .navbar-nav {
+        @include transition(opacity 0.3s ease);
+        > li:first-child {
+          border: 0;
+        }
+        > li {
+          border-left: 1px solid darken($brand-primary, 9%);
+
+          &.active {
+            > a {
+              background-color: #fff;
+              color: $brand__link;
+            }
+          }
+
+          &.open {
+            > a {
+              background-color: $brand-primary-a;
+              color: $white;
+
+              &:hover,
+              &:focus {
+                background-color: $brand-primary-a;
+                color: $white;
+              }
+            }
+
+            .dropdown-menu {
+              background-color: $brand-primary-a;
+              box-shadow: 0 0 0;
+              border-radius: 0;
+              border-left: 1px solid darken($brand-primary, 9%);
+              // border-right: 1px solid darken($brand__violet, 9%);
+              border-top: 0;
+              border-bottom: 0;
+              min-width: 62px;
+              height: 100px;
+              padding: 0;
+              right: 0;
+              left: -1px;
+
+
+              > li {
+                height: 50%;
+                width: 100%;
+                display: table;
+
+                a {
+                  color: $white;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  display: table-cell;
+                  vertical-align: middle;
+                  font-size: $font-size-base - 3;
+
+                  &:hover {
+                    background-color: $brand-primary-h;
+                    color: $white;
+                  }
+                }
+              }
+            }
+          }
+
+          > a {
+            color: $white;
+            font-size: $font-size-base - 3;
+            font-weight: normal;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: table-cell;
+            vertical-align: middle;
+            height: $menuTop__height;
+
+            &.active,
+            &:hover,
+            &:focus{
+              background-color: $brand-primary-a;
+              color: $white;
+            }
+
+            > span[class*="icon"] {
+              font-size: $font-size-base + 4;
+              line-height: $font-size-base + 10;
+              display: inline;
+            }
+
+            &.navbar-brand > span {
+              display: table-cell;
+              height: $menuTop__height;
+              vertical-align: middle;
+            }
+            &.navbar-brand {
+              &.active,
+              &:hover,
+              &:focus{
+                background-color: transparent;
+              }
+            }
+
+          }
+
+          &.dropdown {
+            > a {
+              padding-right: 27px;
+              padding-left: 10px;
+
+              > span[class*="icon-arrow"] {
+                font-size: $font-size-base - 2;
+                position: absolute;
+                top: 24%;
+                right: 10px;
+              }
+            }
+          }
+
+        }
+
+        &:not(.navbar-right) {
+          > li {
+            &.dropdown {
+
+              .dropdown-menu {
+                min-width: 105px;
+              }
+            }
+          }
+        }
+
+        &.navbar-right {
+          > li {
+            border-left: 1px solid darken($brand-primary, 9%);
+
+            > a {
+
+              > span [class*="icon-arrow"] {
+                font-size: $font-size-base + 5;
+              }
+            }
+
+            &:last-child {
+
+              > a {
+                span:first-child {
+                  position: absolute;
+                  top: 25%;
+                }
+                span:last-child {
+                  display: block;
+                  max-width: 180px;
+                  overflow: hidden;
+                  padding-left: 26px;
+                  white-space: nowrap;
+                }
+              }
+            }
+            &.active {
+              [data-toggle="login-dropdown"]{
+                background-color:  #f6f6f6;
+                color: $brand__link;
+              }
+              .login-block {
+                display: block;
+              }
+            }
+            [data-toggle="login-dropdown"]{
+              &:active, &:focus {
+                background-color: #f6f6f6;
+                color: $brand__link;
+              }
+            }
+
+            .login-block {
+              display: none;
+              background-color: #f6f6f6;
+              left: 0;
+              position: fixed;
+              right: 0;
+              width: 100%;
+              padding: 20px 10px 10px 10px;
+              box-shadow: 0 0px 2px rgba(0,0,0,0.2);
+
+              .container {
+                position: relative;
+                padding-right:20px!important;
+              }
+
+              iframe {
+                border: 0;
+                width: 100%;
+                height: 100%;
+                min-height: 150px;
+                overflow-y: hidden;
+                overflow-x: hidden;
+              }
+
+              .icon {
+                color: $brand__link;
+                font-size: 18px;
+                position: absolute;
+                right: 0px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@include headernavigationAnimation();
+
+header {
+  .menu__top .navbar-nav > .active {
+    > a,
+    > a:hover,
+    > a:focus {
+      background-color: #fff;
+      color: $brand__link ;
+    }
+  }
+}
+
+/* Mihkel did some epic shiiiit */
+
+.noscroll {
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+}
+/* MAIN NAVIGATION */
+.header-menu__main {
+  z-index:1;
+  background-color: $white;
+  position: relative;
+  top: 0;
+  transition: .3s ease;
+  > .container {
+    position: relative;
+    body.sidemenu-active & {
+      &:after {
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $brand__violet;
+      }
+    }
+  }
+  /* mobile view */
+  .navbar-toggle {
+    border-color: $brand__violet;
+    border:0;
+
+    .icon-bar {
+      background-color: $brand__violet;
+    }
+  }
+
+  .navbar-collapse{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-nav {
+    &:hover {
+      > li > a {
+        opacity: 0.65;
+      }
+      > li > a:hover {
+        opacity: 1;
+      }
+    }
+    > li > a {
+      @include transition(opacity 0.3s ease);
+    }
+    > li {
+      height: 100px;
+      width: 90px;
+      text-align: center;
+      position: static;
+      &:first-child {
+        display: none;
+      }
+      &:last-child > a:before {
+        background-color: transparent;
+      }
+      > a {
+        padding-bottom: 0;
+        padding-top: 22px;
+        padding-left:10px;
+        padding-right:10px;
+        color: $mainmenu_link;
+        font-size: $font-size-base - 1;
+        line-height: $font-size-base - 1;
+        height: 100%;
+        position: relative;
+        &:before{
+          content: "";
+          display: block;
+          clear: both;
+          background-color: $verticalSeparatorColor;
+          position: absolute;
+          right: 0;
+          width: 1px;
+          top: 15px;
+          bottom: 15px;
+          visibility: visible;
+        }
+        &:after {
+          height:10px;
+          width:16px;
+          display:none;
+          content:'';
+          top: auto;
+          bottom: 0;
+          left: 50%;
+          margin-left: -8px;
+          position: absolute;
+          background: linear-gradient(45deg, transparent 65%, #fff 65%),
+          linear-gradient(-45deg, transparent 65%, #fff 65%),
+          linear-gradient(to bottom, rgba(#999, .7) 0%, #f6f6f6 100%);
+          body.nav-up &, body.nav-down & {
+            display: none;
+          }
+        }
+        &:focus {
+          box-shadow: 0 0 0;
+
+          &:before {
+            background-color: transparent;
+          }
+        }
+        &:hover {
+          &:after {
+            display: block;
+          }
+        }
+        &.navbar-brand {
+          padding-top: 27px;
+          display: block;
+
+          &:hover:after {
+            background-color: transparent;
+            border: 0;
+          }
+          &:before {
+            background-color: transparent;
+          }
+
+          > span[class*="icon"] {
+            font-size: $font-size-base + 30;
+            color: $brand__link;
+          }
+        }
+
+        @media (min-width: 768px) {
+          position: relative;
+
+          &:hover,
+          &:focus,
+          &.active {
+            color: $brand-primary-h;
+            background: transparent;
+          }
+        }
+
+        > span {
+          margin-bottom: 5px;
+
+          &.icon {
+            display: block;
+            clear: both;
+            text-align: center;
+            font-size: $font-size-base + 15;
+            padding-bottom: 5px;
+            color: $brand__link;
+            top: 0;
+          }
+        }
+
+        &.menu-highlight{
+          &:hover,
+          &:focus{
+            color: $brand-success;
+
+          }
+          .icon{
+            color: $brand-success;
+          }
+        }
+      }
+      &.sidemenu-visible {
+        > a:after {
+          display: block !important;
+          background: linear-gradient(45deg, transparent 65%, #fff 65%),
+          linear-gradient(-45deg, transparent 65%, #fff 65%),
+          $brand__violet;
+        }
+      }
+      &.sidemenu-open {
+        > a,
+        > a:hover,
+        > a:focus {
+          opacity: 1;
+          background-color: $white;
+          color: $brand__link;
+        }
+        > a.menu-highlight{
+          color: $brand-success-h;
+          .icon{
+            color: $brand-success-h;
+          }
+        }
+      }
+      &.long-link {
+        > a {
+          padding-top: 15px;
+          > span {
+            padding-top: 8px;
+            &.icon {
+              font-size: $font-size-base + 8;
+            }
+          }
+        }
+      }
+      &.active {
+        [data-toggle="login-dropdown"]{
+          background-color:  #f6f6f6;
+          color: $brand__link;
+        }
+        .login-block {
+          display: block;
+        }
+      }
+      [data-toggle="login-dropdown"]{
+        &:active, &:focus {
+          background-color: #f6f6f6;
+          color: $brand__link;
+        }
+      }
+    }
+  }
+  .login-block {
+    display: none;
+    background-color: #f6f6f6;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    padding: 20px 10px 10px 10px;
+    box-shadow: 0 0px 2px rgba(0,0,0,0.2);
+
+    .container {
+      position: relative;
+      padding-right:20px!important;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 150px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .icon {
+      color: $brand__link;
+      font-size: 18px;
+      position: absolute;
+      right: 0px;
+    }
+  }
+}
