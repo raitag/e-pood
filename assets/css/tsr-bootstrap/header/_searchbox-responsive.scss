@@ -1,4 +1,5 @@
-$searchBoxWidth:185px;// 150px for small devices
+$searchBoxWidth: 170px;// 150px for small devices
+$focusedSearchBoxWidth:280px;
 $searchBoxHeight:32px;
 $searchBoxBg:#754292;
 
@@ -32,6 +33,7 @@ $searchBoxBg:#754292;
         position: absolute!important;
         top: 50% !important;
         transform: translateY(-50%) !important;
+        width: $searchBoxWidth;
         /*background: rgba(250, 250, 250, 0.1);*/
 
         /*.tt-input {
@@ -60,7 +62,7 @@ $searchBoxBg:#754292;
         outline: none;
         color: #c2b1cd; //$gray-light;
         padding: 3px 35px 3px 10px;
-        width: $searchBoxWidth;
+        width: inherit;//$searchBoxWidth;
         height: $searchBoxHeight;
         position: relative;
         right: 0;
@@ -131,6 +133,15 @@ $searchBoxBg:#754292;
       button {
         color: $brand__link;
       }
+      @media screen and ( min-width:900px )  {
+        .twitter-typeahead {
+          right: 0;
+          width: $focusedSearchBoxWidth;
+          input[type="text"]{
+            width: inherit;
+          }
+        }
+      }
     }
   }
   .tt-menu {
@@ -170,7 +181,7 @@ $searchBoxBg:#754292;
         &:before {
           content: "";
           display: block;
-          width: 90%;
+          width: 93.5%;
           height: 1px;
           position: absolute;
           top: 0;
@@ -254,12 +265,15 @@ $searchBoxBg:#754292;
     }
 
   }
-  @media (min-width: 768px) and (max-width: 840px) {
+  @media (min-width: 768px) and (max-width: 800px) {
     &.navbar-form {
       width: $searchBoxWidth - 35;
       .form-group {
-        input[type="text"] {
+        .twitter-typeahead {
           width: $searchBoxWidth - 35;
+          input[type="text"] {
+            width: inherit;
+          }
         }
       }
     }

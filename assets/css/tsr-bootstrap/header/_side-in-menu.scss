@@ -200,25 +200,30 @@ $mainMenuIndicatorPos:42%;
 
   .scrolled-search {
   overflow: visible;
-  padding-left:5px;
-  padding-right:5px;
+
   .searchbox-responsive {
     width: 100%;
     left: 0;
     right: 0;
 
     .twitter-typeahead {
-    width: 100%;
+    border-radius: 0!important;
+    width: 100% !important;
+    height: inherit!important;
+
     input[type="text"]{
       width: 100%;
-      border-radius: 0;
-      background: #e6e6e6;
+      height: inherit!important;
+      color: #000;
     }
     .tt-suggestion {
       text-align: left;
     }
     a:hover {
       background-color: transparent;
+    }
+    .empty-message {
+      text-align: center;
     }
     }
 
