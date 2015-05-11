@@ -7400,6 +7400,15 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-
 .icon-start-records:before {
   content: "\e676"; }
 
+.icon-computer:before {
+  content: "\e694"; }
+
+.icon-modem:before {
+  content: "\e695"; }
+
+.icon-watch:before {
+  content: "\e696"; }
+
 .icon-offers:before {
   content: "\e689"; }
 
