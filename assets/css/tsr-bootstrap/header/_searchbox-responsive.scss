@@ -1,13 +1,10 @@
-$searchBoxWidth: 170px;// 150px for small devices
+$searchBoxWidth: 180px;// 150px for small devices
 $focusedSearchBoxWidth:280px;
 $searchBoxHeight:32px;
 $searchBoxBg:#754292;
 
 .searchbox-responsive {
   position: relative;
-  /*margin-bottom: 0;
-  margin-top: 0;
-  margin-right: 15px !important;*/
   margin: 0;
   padding: 0;
   width: $searchBoxWidth;
@@ -17,11 +14,6 @@ $searchBoxBg:#754292;
   &.navbar-form {
     border: 0;
     .form-group {
-     /* position: relative;
-      left: -15px;
-      width: inherit;
-      background-color: red;
-      @include transition(all 0.3s ease);*/
       display: block;
       height: inherit;
 
@@ -29,16 +21,10 @@ $searchBoxBg:#754292;
         border-radius: 4px;
         display: block!important;
         height: $searchBoxHeight;
-        /*background-color: rgba(0,0,0,0.3);*/
         position: absolute!important;
         top: 50% !important;
         transform: translateY(-50%) !important;
         width: $searchBoxWidth;
-        /*background: rgba(250, 250, 250, 0.1);*/
-
-        /*.tt-input {
-          top: 0;
-        }*/
       }
       .form-control {
         box-shadow: 0 0 0;
@@ -56,7 +42,7 @@ $searchBoxBg:#754292;
         }
       }
       input[type="text"] {
-        font-size: $font-size-base;
+        font-size: $font-size-base - 1;
         display: inline-block;
         border: none;
         outline: none;
@@ -70,19 +56,6 @@ $searchBoxBg:#754292;
         cursor: default;
         background: rgba(246, 246, 246, 0.1) !important;
         @include transition(background 0.3s ease);
-
-        /*top: 50% !important;
-        transform: translateY(-50%) !important;*/
-
-        /*@include transition(all 0.3s ease);*/
-
-        /*&.tt-hint{
-          background-color: yellow;
-        }
-        &.tt-input{
-          background-color: blue;
-          background-color: #fff;
-        }*/
       }
       input[placeholder], [placeholder], *[placeholder] {
         color: rgba(250, 250, 250, 0.5);
@@ -91,7 +64,7 @@ $searchBoxBg:#754292;
 
     button {
       display: inline-block;
-      color: $white; //$brand__link;
+      color: $white;
       float: right;
       border: none;
       position: absolute;
@@ -114,16 +87,8 @@ $searchBoxBg:#754292;
 
     &.focus {
       .form-group {
-        /*left: -75px;*/
-        /*.twitter-typeahead {
-          background-color: #fff;
-        }
-        .form-control {
-          right: 0;
-        }*/
 
         input[type="text"] {
-          /*width: $searchBoxWidth + 60;*/
           color: #333;
           background: rgba(246, 246, 246, 1) !important;
         }
@@ -189,23 +154,6 @@ $searchBoxBg:#754292;
           background-color:darken(#f6f6f6, 10%);
           z-index: 1;
         }
-
-        /*&:hover {
-          /!*background-color: #fff;*!/
-          color: $brand__link;
-
-          &:before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 1px;
-            left: 0;
-            background-color:#fff;
-            z-index: 2;
-          }
-        }*/
 
         img {
           left: 10px;

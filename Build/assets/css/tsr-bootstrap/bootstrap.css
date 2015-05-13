@@ -4724,7 +4724,7 @@ header .megamenu .search-item-image,
     background-color: #652d86;
     color: white; }
     .sidemenu .nav > li > a:hover:after, .sidemenu .nav > li > a:focus:after {
-      content: "\e668"; }
+      content: "\e66a"; }
     .sidemenu .nav > li > a:hover[data-toggle="collapse"]:after, .sidemenu .nav > li > a:hover[class="collapsed"]:after, .sidemenu .nav > li > a:focus[data-toggle="collapse"]:after, .sidemenu .nav > li > a:focus[class="collapsed"]:after {
       content: "\e669"; }
     .sidemenu .nav > li > a:hover[class="collapse-show"]:after, .sidemenu .nav > li > a:focus[class="collapse-show"]:after {
@@ -4752,7 +4752,7 @@ header .megamenu .search-item-image,
     background-color: #4f2369;
     color: white; }
     .sidemenu .nav > li.active > a:after {
-      content: "\e668"; }
+      content: "\e66a"; }
     .sidemenu .nav > li.active > a[data-toggle="collapse"]:after {
       content: "\e66b"; }
     .sidemenu .nav > li.active > a[class="collapse-show"]:after {
