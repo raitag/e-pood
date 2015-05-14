@@ -102,6 +102,10 @@
 /* @include _ee-hero.scss */
 
 // custom styles for header
+header .navbar > .container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 header > div .menu__main .navbar-nav > li > a > span.icon {
   margin-left: auto;
   margin-right: auto;

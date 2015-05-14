@@ -9940,7 +9940,7 @@ header .menu__top .navbar-nav > .active > a:focus {
           z-index: 4; }
           .searchbox-responsive .tt-menu .tt-dataset .tt-footer a:hover {
             text-decoration: none; }
-  @media (min-width: 768px) and (max-width: 800px) {
+  @media (min-width: 768px) and (max-width: 810px) {
     .searchbox-responsive.navbar-form {
       width: 145px; }
       .searchbox-responsive.navbar-form .form-group .twitter-typeahead {
@@ -22902,6 +22902,10 @@ select:disabled {
       color: #4f2369; }
     .hero-indicators li.active {
       color: #652d86; }
+
+header .navbar > .container {
+  padding-left: 10px;
+  padding-right: 10px; }
 
 header > div .menu__main .navbar-nav > li > a > span.icon, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-nav > li > a > span.sidemenu-toggle:before,
 header > div .menu__main .sidemenu .sidemenu-menu.left .sidemenu .navbar-nav > li > a > span.sidemenu-toggle:before,
