@@ -4372,13 +4372,13 @@ var delta = 5;
 var navbarHeight = $('header').outerHeight();
 var interval;
 var scrollToTop = 0;
+var clickedEl = null;
 
 (function() {
 
     'use strict';
 
     function headernavigation() {
-        //console.log('headernavigation js loaded');
         // language dropdown menu
         $('.menu__top .select-language, .menu__top .select-environment').on('show.bs.dropdown', function(e){
             var _t = $(e.relatedTarget).find('span');
@@ -4410,11 +4410,17 @@ function loginBlockDropdown() {
         _curEl.parent().parent().find('.active').not(_curEl.parent()).removeClass('active');
         _curEl.parent().toggleClass('active');
         e.preventDefault();
-        if( !_curEl.parent().hasClass('active') ) {
-            enableScroll();
+        if( $('body').hasClass('noscroll') ) {
+
+            if( clickedEl.is($(e.currentTarget)) ){
+                enableScroll();
+            } else {
+                $('#menu__main li').removeClass('sidemenu-open sidemenu-visible');
+            }
         } else {
             disableScroll();
         }
+        clickedEl = $(e.currentTarget);
     });
     $('.login-block [data-toggle="close-dropdown"]').bind('click', function(e){
         e.preventDefault();
@@ -4464,6 +4470,7 @@ function hasScrolled() {
 jQuery(document).ready(function($){
     // first level click
     $('.header-menu__main .nav > li.sidemenu > a').click(function(event){
+        clickedEl = $(event.currentTarget);
         event.preventDefault();
         var li = $(this).parent();
         var ul = $(this).parent().parent().parent().find('ul');
@@ -4494,6 +4501,7 @@ jQuery(document).ready(function($){
         }
     });
     $('.header-menu__main .mobile-icons > ul > li > .sidemenu-menu ul > li.sidemenu > a').click(function(event){
+        clickedEl = $(event.currentTarget);
         event.preventDefault();
         var li = $(this).parent();
         var ul = $(this).parent().parent().parent().find('ul');
@@ -4507,6 +4515,7 @@ jQuery(document).ready(function($){
     });
     // second level click
     $('.header-menu__main .nav > li.sidemenu > .sidemenu-menu ul > li.sidemenu > a').click(function(event){
+        clickedEl = $(event.currentTarget);
         event.preventDefault();
         var li = $(this).parent();
         var ul = $(this).parent().parent().parent().find('ul');
@@ -4540,6 +4549,7 @@ jQuery(document).ready(function($){
         }
     });
     $('.navbar-toggle').click(function(event){
+        clickedEl = $(event.currentTarget);
         event.preventDefault();
         if( !$(this).hasClass('active') ) {
             if( $('body').hasClass('noscroll') ) {
@@ -4556,7 +4566,8 @@ jQuery(document).ready(function($){
         }
     });
     // close menus on backdrop click
-    $(document).on( 'click', '.sidemenu-backdrop', function(){
+    $(document).on( 'click', '.sidemenu-backdrop', function(e){
+        clickedEl = $(e.currentTarget);
         if( $(window).width() > 767 ) {
             hideSideMenu();
         } else {

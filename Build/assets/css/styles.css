@@ -8363,8 +8363,8 @@ header {
             position: fixed;
             right: 0;
             width: 100%;
-            padding: 20px 10px 10px 10px;
-            box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2); }
+            padding: 0px 0px 10px 0px;
+            box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.2); }
             header > div .menu__top .navbar-nav.navbar-right > li .login-block .container {
               position: relative;
               padding-right: 20px !important; }
@@ -8372,7 +8372,7 @@ header {
               border: 0;
               width: 100%;
               height: 100%;
-              min-height: 150px;
+              min-height: 450px;
               overflow-y: hidden;
               overflow-x: hidden; }
             header > div .menu__top .navbar-nav.navbar-right > li .login-block .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
@@ -8384,7 +8384,8 @@ header {
               color: #652d86;
               font-size: 18px;
               position: absolute;
-              right: 0px; }
+              right: -6px;
+              top: 30px; }
 
 @media (max-width: 815px) {
   .nav-up header {
@@ -22920,20 +22921,30 @@ header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle
 .searchbox-responsive.navbar-form.focus button {
   color: #652d86; }
 
-header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown div.select-dropdown:after,
-header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
-.sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .sidemenu-toggle:before,
-header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .sidemenu-toggle:before,
-header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block .cart-dropdown a:before,
-header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown i {
-  position: relative;
-  color: #fff;
-  font-size: 15px; }
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
+.sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
+header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block a:before,
+header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__top .navbar-nav.navbar-right > li .login-block i {
+  top: 10px; }
+
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown {
+  padding-top: 20px; }
+  header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .select-wrapper .btn > div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > div.select-dropdown:after,
+  header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > .sidemenu-toggle:before,
+  header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > a:before,
+  header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .ee-filters-list ul.filter li.collapse-trigger .btn > i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > i {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    right: 0;
+    top: 0; }
 
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
-    margin-right: 0px; }
-
+    margin-right: 0px; } }
+@media (min-width: 768px) and (max-width: 991px) {
   .navbar-right {
     margin-right: -15px; } }
 .swiffy-wrap {

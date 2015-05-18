@@ -147,16 +147,26 @@ header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle
   color: $brand-primary;
 }
 
-header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .icon {
-  position: relative;
-  color: #fff;
-  font-size: 15px;
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .icon {
+  top: 10px;
+}
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown {
+  padding-top: 20px;
+  .btn > .icon {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px;
   }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   .navbar-right {
     margin-right: -15px;
   }
