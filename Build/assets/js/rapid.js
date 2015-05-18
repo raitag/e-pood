@@ -8330,6 +8330,10 @@ $(function(){
         }
     );
 
+    $('[role="search"] .form-control').bind('typeahead:select', function(ev, suggestion) {
+      console.log('Selection: ' + suggestion);
+    });
+
     // $('[role="search"] .form-control').wrap('<div class="twitter-typeahead"></div>');
 
 });

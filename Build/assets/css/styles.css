@@ -22941,12 +22941,28 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdow
     right: 0;
     top: 0; }
 
+.sidemenu .sidemenu-menu.cart-menu {
+  width: 100%; }
+  .sidemenu .sidemenu-menu.cart-menu button {
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    width: 100% !important; }
+  .sidemenu .sidemenu-menu.cart-menu h3 {
+    text-align: left;
+    margin-top: 21px;
+    margin-bottom: 10.5px;
+    padding: 0; }
+
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-right {
     margin-right: -15px; } }
+[data-toggle="close-dropdown"] {
+  z-index: 1; }
+
 .swiffy-wrap {
   position: relative;
   width: 100%;

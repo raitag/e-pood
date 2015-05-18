@@ -161,6 +161,26 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdow
   }
 }
 
+.sidemenu {
+  .sidemenu-menu {
+    &.cart-menu {
+      width: 100%;
+      button {
+        margin: 0 !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        width: 100% !important;
+      }
+      h3 {
+        text-align: left;
+        margin-top: 21px;
+        margin-bottom: 10.5px;
+        padding: 0;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px;
@@ -170,6 +190,10 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdow
   .navbar-right {
     margin-right: -15px;
   }
+}
+
+[data-toggle="close-dropdown"] {
+  z-index: 1;
 }
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass

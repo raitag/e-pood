@@ -766,9 +766,162 @@
                     <a href="#" id="ostukorvLabel" class="sidemenu-toggle" data-target="#" data-toggle="sidemenu">
                         <span class="icon icon-buy"></span>
                     </a>
-                    <div class="sidemenu-menu right" role="menu" aria-labelledby="ostukorvLabel">
-                        <div>
-                            <h3>Ostukorv levelil 2</h3>
+                    <div class="sidemenu-menu right cart-menu" role="menu" aria-labelledby="ostukorvLabel">
+                        <div class="container">
+                            <div class="jsHeaderShoppingCartContent cart-dropdown">
+                                <div class="step jsInfoPanels"></div>
+
+                                <div class="step js-overview-cart">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3>
+                                                <span>Sul on ostukorvis 1 asi
+                                                    
+                                                </span>
+                                            </h3>
+                                            <div class="row cart">
+                                                <div class="cart-items">
+                                                    <div id="content-placeholder-cart-dropdown"></div>
+                                                    
+                                                    <div class="col-md-12 cart-item">
+                                                        <div class="row">
+                                                            <div class="col-xs-2 col-sm-1 cart-item-image ee-middle-table ee-top-10">
+                                                                
+                                                                <img class="img-responsive" alt="mobiiltelefon Sony Xperia Z1 Compact (must)" src="#">
+                                                                
+                                                            </div>
+
+                                                            <div class="col-xs-10 col-sm-6 ee-middle-table">
+                                                                <h5 class="ee-truncate">
+                                                                    mobiiltelefon Sony Xperia Z1 Compact (must)
+                                                                </h5>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 text-right ee-middle-table">
+                                                                <div class="row">
+                                                                    <div class="col-xs-5 col-sm-5 ee-middle-table">
+                                                                        <div class="form-group">
+                                                                            <label class="control-label ee-top-10 ee-top-0-xs text-center">Kogus: <strong>1</strong> </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-7 col-sm-7 ee-middle-table">
+                                                                        <p class="tsr-product-price ee-product-price-md">Hind:  299,00 €</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="visible-xs">
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 ee-bottom-20 ee-top-30">
+                                            
+                                            <div class="row hidden-xs">
+                                                <div class="col-md-12 col-sm-5 pull-right">
+                                                    <button class="btn btn-primary btn-block jsSendCart js-btn-action js-StopPropagation" data-view="js-send-cart"><span class="icon icon-email"></span>&nbsp;Saada</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row hidden-xs">
+                                                <div class="col-md-12 col-sm-5 pull-right ee-top-20 ee-top-0-xs">
+                                                    <button class="btn btn-primary btn-block js-btn-action js-StopPropagation" data-view="js-save-cart"><span class="icon icon-save"></span>&nbsp;Salvesta</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row visible-xs">
+                                                
+                                                <div class="col-xs-6">
+                                                    <button class="btn btn-link btn-block js-btn-action visible-xs js-StopPropagation" data-view="js-send-cart"><span class="icon icon-email"></span>&nbsp;Saada</button>
+                                                </div>
+                                                
+                                                <div class="col-xs-6">
+                                                    <button class="btn btn-link btn-block js-btn-action visible-xs js-StopPropagation" data-view="js-save-cart"><span class="icon icon-save"></span>&nbsp;Salvesta</button>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row ee-bottom-20">
+                                                <div class="col-md-12 col-sm-5 col-xs-12 pull-right ee-top-20 ee-top-0-xs">
+                                                    <button class="btn btn-default btn-block ee-btn-buy" onclick="location.href='/Store/checkout'">Jätka ostmist</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step js-send-cart" style="display: none;">
+                                    <div class="row megamenu">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <h3>Ostukorvi e-postiga saatmine</h3>
+                                            <form action="" class="form-horizontal">
+                                                <div class="tsr-forms">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" for="receiver">Saaja e-posti aadress:</label>
+                                                        <div class="col-sm-9 col-md-6">
+                                                            <input type="text" id="receiver" placeholder="E-posti aadress">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" for="sender">Saatja nimi:</label>
+                                                        <div class="col-sm-9 col-md-6">
+                                                            <input type="text" id="sender" placeholder="Saatja nimi">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" for="send-cart-message">Sõnumi sisu:</label>
+                                                        <div class="col-sm-9 col-md-6">
+                                                            <textarea class="form-control" id="send-cart-message" name="message" placeholder="Sõnumi sisu" rows="5"></textarea>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </form>
+                                            <hr class="hidden-xs">
+                                            <div class="row ee-bottom-20">
+                                                <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+                                                    <button class="btn btn-link btn-block js-btn-action js-StopPropagation" data-view="js-overview-cart">Tagasi</button>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <button data-xhref="/Store/checkout/Cart/SendShoppingCart" class="btn btn-default btn-block ee-btn-buy pull-right jsSend js-StopPropagation">Saada</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step js-save-cart" style="display: none;">
+                                    <div class="row megamenu">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <h3>Ostukorvi salvestamine</h3>
+                                            <form action="" class="form-horizontal">
+                                                <div class="tsr-forms">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label" for="receiver-name">Ostukorvi nimi:</label>
+                                                        <div class="col-sm-9 col-md-6">
+                                                            <input type="text" id="receiver-name" placeholder="Ostukorvi nimi">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <hr class="hidden-xs">
+                                            <div class="row ee-bottom-20">
+                                                <div class="col-sm-2 col-sm-offset-6 text-right ee-top-10">
+                                                    <button class="btn btn-link btn-block js-btn-action js-StopPropagation" data-view="js-overview-cart">Tagasi</button>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <button data-xhref="/Store/checkout/Cart/SaveShoppingCart" class="btn btn-default btn-block ee-btn-buy pull-right jsSave js-StopPropagation">Salvesta</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script type="text/javascript"> BindHeaderShoppingCartEvents();</script>
+
+                            </div>
                         </div>
                     </div>
                 </li>
