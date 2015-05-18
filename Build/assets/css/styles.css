@@ -9432,6 +9432,8 @@ header .menu__top .navbar-nav > .active > a:focus {
           color: #000;
           background: #f6f6f6 !important;
           box-shadow: none; }
+        .sidemenu-menu .scrolled-search .searchbox-responsive .twitter-typeahead .tt-hint {
+          display: none; }
         .sidemenu-menu .scrolled-search .searchbox-responsive .twitter-typeahead .tt-suggestion {
           text-align: left; }
         .sidemenu-menu .scrolled-search .searchbox-responsive .twitter-typeahead a:hover {
@@ -9446,35 +9448,39 @@ header .menu__top .navbar-nav > .active > a:focus {
         right: 20px; }
         .sidemenu-menu .scrolled-search .searchbox-responsive button span {
           color: #652d86; }
-  .sidemenu-menu .mobile-search .searchbox-responsive {
-    width: 100%;
-    left: 0;
-    right: 0;
-    height: 66px; }
-    .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead {
-      border-radius: 0 !important;
-      width: 100% !important;
-      height: auto !important;
-      padding: 20px; }
-      .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead input[type="text"] {
-        width: 100%;
-        color: #000;
-        background: #f6f6f6 !important;
-        box-shadow: none; }
-      .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead .tt-suggestion {
-        text-align: left; }
-      .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead a:hover {
-        background-color: transparent; }
-      .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead .empty-message {
-        text-align: center; }
-    .sidemenu-menu .mobile-search .searchbox-responsive button {
-      color: white !important;
-      min-width: 1% !important;
-      width: 32px !important;
-      margin: 0 !important;
-      right: 20px; }
-      .sidemenu-menu .mobile-search .searchbox-responsive button span {
-        color: #652d86; }
+  .sidemenu-menu .mobile-search {
+    overflow: visible; }
+    .sidemenu-menu .mobile-search .searchbox-responsive {
+      width: 100%;
+      left: 0;
+      right: 0;
+      height: 66px; }
+      .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead {
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px; }
+        .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead .tt-hint {
+          display: none; }
+        .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead input[type="text"] {
+          width: 100%;
+          color: #000;
+          background: #f6f6f6 !important;
+          box-shadow: none; }
+        .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead .tt-suggestion {
+          text-align: left; }
+        .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead a:hover {
+          background-color: transparent; }
+        .sidemenu-menu .mobile-search .searchbox-responsive .twitter-typeahead .empty-message {
+          text-align: center; }
+      .sidemenu-menu .mobile-search .searchbox-responsive button {
+        color: white !important;
+        min-width: 1% !important;
+        width: 32px !important;
+        margin: 0 !important;
+        right: 20px; }
+        .sidemenu-menu .mobile-search .searchbox-responsive button span {
+          color: #652d86; }
 
 .sidemenu-open > .sidemenu-menu {
   opacity: 0;
@@ -22085,16 +22091,6 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .ee-shopping .tsr-radioStyled {
   margin-right: 10px; }
 
-.navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown {
-  background-color: #f6f6f6; }
-  .navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown .container {
-    background-color: #f6f6f6;
-    color: #333333; }
-  .navbar-inverse .navbar-nav .dropdown-menu.cart-dropdown .close-up-btn-bar {
-    background-color: #f6f6f6;
-    border-top-color: #dbdbdb;
-    color: #642887; }
-
 .arrow_box {
   margin-bottom: -1px;
   padding: 15px;
@@ -22929,6 +22925,16 @@ header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle
 
 .searchbox-responsive.navbar-form.focus button {
   color: #652d86; }
+
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .select-wrapper div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown div.select-dropdown:after,
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
+.sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .sidemenu-toggle:before,
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .sidemenu-toggle:before,
+header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block .cart-dropdown a:before,
+header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .ee-filters-list ul.filter li.collapse-trigger i, .ee-filters-list ul.filter li.collapse-trigger header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown i {
+  position: relative;
+  color: #fff;
+  font-size: 15px; }
 
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {

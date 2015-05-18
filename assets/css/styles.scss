@@ -147,6 +147,12 @@ header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle
   color: $brand-primary;
 }
 
+header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .icon {
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+}
+
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px;

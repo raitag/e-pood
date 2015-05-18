@@ -40,9 +40,10 @@ $(window).scroll(function(event){
 function loginBlockDropdown() {
     $('[data-toggle="login-dropdown"]').bind('click', function(e){
         var _curEl = $(e.currentTarget);
+        _curEl.parent().parent().find('.active').not(_curEl.parent()).removeClass('active');
         _curEl.parent().toggleClass('active');
         e.preventDefault();
-        if( $('body').hasClass('noscroll') ) {
+        if( !_curEl.parent().hasClass('active') ) {
             enableScroll();
         } else {
             disableScroll();

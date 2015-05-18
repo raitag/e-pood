@@ -219,6 +219,10 @@ $mainMenuIndicatorPos:42%;
       background: #f6f6f6 !important;
       box-shadow: none;
     }
+    .tt-hint {
+      display: none;
+    }
+  
     .tt-suggestion {
       text-align: left;
     }
@@ -245,6 +249,7 @@ $mainMenuIndicatorPos:42%;
   }
 
   .mobile-search {
+    overflow: visible;
     .searchbox-responsive {
       width: 100%;
       left: 0;
@@ -256,6 +261,10 @@ $mainMenuIndicatorPos:42%;
         width: 100% !important;
         height: auto !important;
         padding: 20px;
+
+        .tt-hint {
+          display: none;
+        }
 
         input[type="text"]{
           width: 100%;
