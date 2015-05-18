@@ -158,12 +158,12 @@ header {
             vertical-align: middle;
             height: $menuTop__height;
 
-            &.active,
-            &:hover,
-            &:focus{
-              background-color: $brand-primary-a;
-              color: $white;
-            }
+            // &.active,
+            // &:hover,
+            // &:focus{
+            //   background-color: $brand-primary-a;
+            //   color: $white;
+            // }
 
             > span[class*="icon"] {
               font-size: $font-size-base + 4;
@@ -249,12 +249,12 @@ header {
                 display: block;
               }
             }
-            [data-toggle="login-dropdown"]{
-              &:active, &:focus {
-                background-color: #f6f6f6;
-                color: $brand__link;
-              }
-            }
+            // [data-toggle="login-dropdown"]{
+            //   &:active, &:focus {
+            //     background-color: #f6f6f6;
+            //     color: $brand__link;
+            //   }
+            // }
 
             .login-block {
               display: none;
