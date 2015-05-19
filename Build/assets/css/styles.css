@@ -22502,7 +22502,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   .ee-input input[type=date]:focus + label,
   .ee-input input[type=tel]:focus + label,
   .ee-input input[type=number]:focus + label,
-  .ee-input textarea:focus.ee-textarea + label {
+  .ee-input textarea:focus + label {
     color: #652d86; }
   .ee-input input[type=text],
   .ee-input input[type=password],
@@ -22510,7 +22510,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   .ee-input input[type=date],
   .ee-input input[type=tel],
   .ee-input input[type=number],
-  .ee-input textarea.ee-textarea {
+  .ee-input textarea {
     border: none;
     border-bottom: 1px solid #cccccc;
     background-color: transparent;
@@ -22538,19 +22538,19 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   .ee-input input[type=date]:focus,
   .ee-input input[type=tel]:focus,
   .ee-input input[type=number]:focus,
-  .ee-input textarea:focus.ee-textarea,
+  .ee-input textarea:focus,
   .ee-input input[type=text]:active,
   .ee-input input[type=password]:active,
   .ee-input input[type=email]:active,
   .ee-input input[type=date]:active,
   .ee-input input[type=tel]:active,
   .ee-input input[type=number]:active,
-  .ee-input textarea:active.ee-textarea {
+  .ee-input textarea:active {
     border: 0;
     border-bottom: 1px solid #652d86;
     -webkit-box-shadow: 0 1px 0 0 #652d86;
     box-shadow: 0 1px 0 0 #652d86; }
-  .ee-input textarea.ee-textarea {
+  .ee-input textarea {
     overflow-y: hidden;
     /* prevents scroll bar flash */
     padding: .5em 0;
@@ -22568,26 +22568,26 @@ section.tsr-section-carousel-listing.tsr-slider-init {
     -webkit-text-fill-color: #999;
     -webkit-opacity: 1; }
   .ee-input input.input-validation-error,
-  .ee-input textarea.ee-textarea.input-validation-error {
+  .ee-input textarea.input-validation-error {
     border-color: #ff6319; }
     .ee-input input.input-validation-error + label,
-    .ee-input textarea.ee-textarea.input-validation-error + label {
+    .ee-input textarea.input-validation-error + label {
       color: #ff6319; }
       .ee-input input.input-validation-error + label + span,
-      .ee-input textarea.ee-textarea.input-validation-error + label + span {
+      .ee-input textarea.input-validation-error + label + span {
         color: #ff6319; }
     .ee-input input.input-validation-error:focus + label,
-    .ee-input textarea.ee-textarea.input-validation-error:focus + label {
+    .ee-input textarea.input-validation-error:focus + label {
       color: #ff6319; }
     .ee-input input.input-validation-error + span,
-    .ee-input textarea.ee-textarea.input-validation-error + span {
+    .ee-input textarea.input-validation-error + span {
       color: #ff6319;
       float: right; }
       .ee-input input.input-validation-error + span + label,
-      .ee-input textarea.ee-textarea.input-validation-error + span + label {
+      .ee-input textarea.input-validation-error + span + label {
         color: #ff6319; }
     .ee-input input.input-validation-error:focus,
-    .ee-input textarea.ee-textarea.input-validation-error:focus {
+    .ee-input textarea.input-validation-error:focus {
       border-color: #ff6319;
       -webkit-box-shadow: 0 1px 0 0 #ff6319;
       box-shadow: 0 1px 0 0 #ff6319; }
@@ -22954,12 +22954,33 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdow
     margin-bottom: 10.5px;
     padding: 0; }
 
+header > div .menu__top .navbar-nav > li.open .dropdown-menu {
+  height: auto; }
+
+header > div .menu__top .navbar-nav > li.open .dropdown-menu > li a {
+  padding: 15px 10px; }
+
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-right {
     margin-right: -15px; } }
+@media (max-width: 767px) {
+  header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu.cart-dropdown {
+    bottom: auto;
+    width: 100%; }
+    header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu.cart-dropdown h3 {
+      padding: 0;
+      margin-top: 21px;
+      margin-bottom: 10.5px; }
+    header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu.cart-dropdown button {
+      margin: 10px 0 !important;
+      max-width: 100% !important;
+      min-width: 100% !important;
+      width: 100% !important; }
+    header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu.cart-dropdown .ee-middle-table .ee-product-price-md {
+      margin-top: 0; } }
 [data-toggle="close-dropdown"] {
   z-index: 1; }
 
