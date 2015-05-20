@@ -8126,71 +8126,76 @@ var nativeSplit=String.prototype.split,compliantExecNpcg=void 0===/()??/.exec(""
 // APP SPECIFIC SCRIPTS
 $(document).ready(function() {
 
-  BindSlideToggle();
-  cloneRightSideMainMenu();
+    BindSlideToggle();
+    cloneRightSideMainMenu();
 
-// COLLAPSE TABS
-// https://github.com/okendoken/bootstrap-tabcollapse
-$('#TabsResponsive').tabCollapse();
+    // COLLAPSE TABS
+    // https://github.com/okendoken/bootstrap-tabcollapse
+    $('#TabsResponsive').tabCollapse();
 
-  // FILTER COLOR CHANGE
-  $('#content-placeholder-filter > div > ul > li > a').click(function(e){
-    if ($(this).attr('class') != 'disabled'){
-      $(this).addClass('disabled');
-      $('a').not(this).removeClass('disabled');
-    }
-    else {
-      $(this).removeClass('disabled');
-    }
-    e.preventDefault();
-  });
+    // FILTER COLOR CHANGE
+    $('#content-placeholder-filter > div > ul > li > a').click(function(e){
+        if ($(this).attr('class') != 'disabled'){
+            $(this).addClass('disabled');
+            $('a').not(this).removeClass('disabled');
+        }
+        else {
+            $(this).removeClass('disabled');
+        }
+        e.preventDefault();
+    });
 
-  $('.dropdown-menu').find('form').click(function (e) {
-    e.stopPropagation();
-  });
+    $('.dropdown-menu').find('form').click(function (e) {
+        e.stopPropagation();
+    });
 
-  $(".jsShowMoreCategories").unbind("click").click(function () {
-   if ($(this).hasClass("moretext")) {
-    $(".jsShowMoreCategories span").html($(this).data("lesstext"));
-    $(this).removeClass("moretext");
-  } else {
-   $(".jsShowMoreCategories span").html($(this).data("moretext"));
-   $(this).addClass("moretext");
- }
-});
+    $(".jsShowMoreCategories").unbind("click").click(function () {
+        if ($(this).hasClass("moretext")) {
+            $(".jsShowMoreCategories span").html($(this).data("lesstext"));
+            $(this).removeClass("moretext");
+        } else {
+            $(".jsShowMoreCategories span").html($(this).data("moretext"));
+            $(this).addClass("moretext");
+        }
+    });
+
+    $('.collapse-trigger').each(function () {
+        var $this = $(this);
+        $this.text($this.hasClass('collapsed') ? $this.data('moretext') : $this.data('lesstext'));
+    })
 
 }); // end document ready
 
 function BindSlideToggle() {
- $('.js-slidetoggle').click(function (e) {
-    $(this).parents().next('.js-togglable').slideToggle('slow');
-    e.preventDefault();
- });
+    $('.js-slidetoggle').click(function (e) {
+         $(this).parents().next('.js-togglable').slideToggle('slow');
+         e.preventDefault();
+    });
 }
 
 
 function cloneRightSideMainMenu(){
-  $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
-  $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone(true,true) );
-  $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+    $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
+    $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone(true,true) );
+    $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
 
-  var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
+    var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
 }
 
 function collapseInOneForDetail(){
-  $('.js-linkicon a').on('click',function(e){
-    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  });
+    $('.js-linkicon a').on('click',function(e){
+        if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
 }
 
 // change cart dropdown layers
 $('.js-btn-action').click(function(e) {
-  e.preventDefault();
-  var step = $(this).data('view');
-  $('.'+step).show().siblings('div.step').hide();
+    e.preventDefault();
+    var step = $(this).data('view');
+    $('.'+step).show().siblings('div.step').hide();
 });
 
 var $input = $('.datepicker').pickadate();
@@ -8199,6 +8204,15 @@ $('.js-datepicker').click( function( e ) {
     e.stopPropagation();
     e.preventDefault();
     picker.open();
+});
+
+$('.collapse-trigger').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $collapse = $this.closest('.filter').find('.collapse');
+    $this.toggleClass('collapsed');
+    $collapse.collapse('toggle');
+    $this.text($this.hasClass('collapsed') ? $this.data('moretext') : $this.data('lesstext'));
 });
 
 // counting rules for IE 8-9 as the limit is 4095

@@ -32,8 +32,8 @@
   bottom: 0;
 }
 .slider.slider-horizontal .slider-handle {
-  margin-left: -15px;
-  margin-top: -13px;
+  margin-left: 0px;
+  margin-top: -9px;
 }
 
 .slider.slider-vertical {
@@ -114,8 +114,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
   border: 2px solid $purple-c;
 }
@@ -123,10 +123,9 @@
 .slider-handle:before {
   content: "\e713";
   color: $gray;
-  padding-left: 5px;
-  line-height: 1.5;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  padding-left: 2px;
+  font-size: .8em;
+  @include transition(all 0.3s ease);
 }
 
 .slider-handle:active:before, .slider-handle:hover:before {
@@ -137,4 +136,7 @@
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
+}
+.slider-values {
+  color: #999;
 }

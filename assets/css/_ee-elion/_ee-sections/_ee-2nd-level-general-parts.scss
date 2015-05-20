@@ -41,7 +41,6 @@
   }
   ul {
     margin-bottom: 0;
-    display: inline-block;
   }
   .list-inline {
     > li {
@@ -109,6 +108,13 @@
     opacity: 0;
     padding: 10px;
 
+  }
+
+  .dropdown {
+    .icon {
+      font-size: .8em;
+      margin-left: 5px;
+    }
   }
 }
 
