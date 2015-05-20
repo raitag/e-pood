@@ -2906,17 +2906,25 @@ html {
   position: relative;
   min-height: 100%; }
   html h1,
-  html h2 {
-    font-family: 'HelveticaNeueW01-45Ligh', 'Helvetica Neue', Arial, sans-serif; }
-  html h3 {
-    font-family: 'HelveticaNeueW01-75Bold', 'Helvetica Neue', Arial, sans-serif; }
-  html[lang="ru"] {
+  html h2,
+  html .h1,
+  html .h2 {
+    font-family: 'Neue Helvetica W01_n3', 'Neue Helvetica W01', sans-serif;
+    font-weight: 300; }
+  html h3,
+  html .h3 {
+    font-family: 'Neue Helvetica W01_n7', 'Neue Helvetica W01', sans-serif; }
+  html[lang="ru"] body {
     font-family: "Neue Helvetica W10", "Neue Helvetica W01", sans-serif; }
-    html[lang="ru"] h1,
-    html[lang="ru"] h2 {
-      font-family: 'HelveticaNeueW10-45Ligh', 'Helvetica Neue', Arial, sans-serif; }
-    html[lang="ru"] h3 {
-      font-family: 'HelveticaNeueW10-75Bold', 'Helvetica Neue', Arial, sans-serif; }
+  html[lang="ru"] h1,
+  html[lang="ru"] h2,
+  html[lang="ru"] .h1,
+  html[lang="ru"] .h2 {
+    font-family: 'Neue Helvetica W10_n3', 'Neue Helvetica W10', sans-serif;
+    font-weight: 300; }
+  html[lang="ru"] h3,
+  html[lang="ru"] .h3 {
+    font-family: 'Neue Helvetica W10_n7', 'Neue Helvetica W10', sans-serif; }
 
 body {
   min-width: 320px;
@@ -2928,12 +2936,12 @@ body {
     margin-top: 150px; }
   @media (max-width: 991px) {
     body {
-      margin-bottom: 304px; }
-      body header + section {
-        margin-top: 100px; } }
+      margin-bottom: 304px; } }
   @media (max-width: 767px) {
     body {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+      body header + section {
+        margin-top: 100px; } }
 
 header {
   display: block;
@@ -3332,11 +3340,11 @@ strong {
 .icon-start-records:before {
   content: "\e676"; }
 
-.icon-computer:before {
-  content: "\e694"; }
-
 .icon-modem:before {
   content: "\e695"; }
+
+.icon-computer:before {
+  content: "\e694"; }
 
 .icon-watch:before {
   content: "\e696"; }

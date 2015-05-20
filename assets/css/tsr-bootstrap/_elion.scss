@@ -5,22 +5,32 @@ html {
   position: relative;
   min-height: 100%;
   h1,
-  h2 {
-    font-family: 'HelveticaNeueW01-45Ligh', 'Helvetica Neue', Arial, sans-serif;
+  h2,
+  .h1,
+  .h2 {
+    font-family: 'Neue Helvetica W01_n3', 'Neue Helvetica W01', sans-serif;
+    font-weight: 300;
   }
 
-  h3 {
-    font-family: 'HelveticaNeueW01-75Bold', 'Helvetica Neue', Arial, sans-serif;
+  h3,
+  .h3 {
+    font-family: 'Neue Helvetica W01_n7', 'Neue Helvetica W01', sans-serif;
   }
   &[lang="ru"] {
-    font-family: $font-family-sans-serif-cyrillic;
+    body {
+      font-family: $font-family-sans-serif-cyrillic;
+    }
     h1,
-    h2 {
-      font-family: 'HelveticaNeueW10-45Ligh', 'Helvetica Neue', Arial, sans-serif;
+    h2,
+    .h1,
+    .h2 {
+      font-family: 'Neue Helvetica W10_n3', 'Neue Helvetica W10', sans-serif;
+      font-weight: 300;
     }
 
-    h3 {
-      font-family: 'HelveticaNeueW10-75Bold', 'Helvetica Neue', Arial, sans-serif;
+    h3,
+    .h3 {
+      font-family: 'Neue Helvetica W10_n7', 'Neue Helvetica W10', sans-serif;
     }
   }
 }
@@ -35,12 +45,12 @@ body {
   }
   @media (max-width: $screen-sm-max) {
     margin-bottom: 304px;
-    header + section {
-      margin-top: 100px;
-    }
   }
   @media (max-width: $screen-xs-max) {
     margin-bottom: 0;
+    header + section {
+      margin-top: 100px;
+    }
   }
 }
 header{display: block; margin-bottom: -1px;}

@@ -211,3 +211,241 @@ $label-font-size: .8125rem;
     }
   }
 }
+
+//////// Input Checkbox
+
+
+
+  .tsr-checkbox{
+      cursor:pointer;
+
+      input[type='checkbox']{
+        display:none;
+      }
+
+      .tsr-checkboxStyled{
+        background:$white;
+        border:1px solid #ccc;
+        width: 18px;
+        height: 18px;
+        display:block;
+        position:relative;
+        border-radius: 2px;
+        float:left;
+        margin: 2px 0 0;
+        border-radius: 2px;
+        line-height: 1.4;
+        &:before{
+          display:none;
+        }
+
+      } 
+
+
+      &:focus .tsr-checkboxStyled,
+      &:active .tsr-checkboxStyled{
+        outline:none;
+      }
+
+      // Checked
+      &.checked{
+
+        .tsr-checkboxStyled,
+        .tsr-checkboxStyled:active{
+          &:before{
+            font-family: 'tsr-icons-all';
+            width:18px;
+            height:18px;
+            position:absolute;
+            top:22%;
+            left:50%;
+            margin:-8px 0 0 -6px;
+            color:$purple-c;
+            font-size:16px;
+            display:block;
+            content: "\e6f1";
+            
+
+          }
+        } 
+
+      }
+    
+      // Disabled
+        &.disabled{
+            color: $dropdown-link-disabled-color;
+            background-color: transparent !important;
+            border-color: transparent !important;
+            &:hover,
+            &:active {
+                color: $dropdown-link-disabled-color;
+            }
+            .ee-checkboxStyled{
+                background: #fff;
+                &:focus,
+                &:active{
+                    border:1px solid $dropdown-link-disabled-color;
+                    background:$dropdown-link-disabled-color;
+                    &:before{
+                        display:none;
+                    }
+                }
+            } // .tsr-checkboxStyled END
+
+            &.checked{
+                .ee-checkboxStyled:before{
+                    color:$dropdown-link-disabled-color;
+                }
+            }
+
+        } // .disabled END
+
+        // Invalid
+        &.input-validation-error{
+            color: $orange-c;
+            .ee-checkboxStyled {
+                border-color: $orange-c;
+            }
+            &.checked{
+                .ee-checkboxStyled,
+                .ee-checkboxStyled:active{
+                    color: $orange-c;
+                    &:before{
+                        color:$orange-c;
+                    }
+                }   
+            }
+
+        } // .invalid END
+
+    }
+
+
+
+
+//////// Input Radio 
+
+  .tsr-radio{
+      cursor:pointer;
+      position:relative;
+
+      // &:before{
+      //  font-family: 'tsr-icons-all';
+      //  content: "\e666";
+      //  width:20px;
+      //  height:20px;
+      //  position:absolute;
+      //  top:-5px;
+      //  left:0;
+      //  margin:0;
+      //  font-size:20px;
+      //  display:block;
+      //  color: $lightgrey-t;
+      // }
+
+      // &:after{
+      //  font-family: 'tsr-icons-all';
+      //  content: "\e666";
+      //  width:18px;
+      //  height:18px;
+      //  position:absolute;
+      //  top:-3px;
+      //  left:1px;
+      //  margin:0;
+      //  font-size:18px;
+      //  display:block;
+      //  color:#fff;
+      // }
+
+
+      input[type='radio']{
+        display:none;
+      }
+
+      .tsr-radioStyled{
+        @include border-radius(20px);
+        background:$white;
+        border:1px solid $purple-c;
+        width:18px;
+        height:18px;
+        display:block;
+        position:relative;
+        padding-right:6px;
+        float:left;
+        line-height:1;
+
+
+
+      } 
+
+
+      &:focus .tsr-radioStyled,
+      &:active .tsr-radioStyled{
+        outline:none;
+      }
+
+      // Checked
+      &.checked{
+
+        .tsr-radioStyled,
+        .tsr-radioStyled:active{
+          &:before{
+            font-family: 'tsr-icons-all';
+            content: "\e666";
+            position: absolute;
+            top: 62%;
+            left: 57%;
+            margin: -5px 0 0 -5px;
+            font-size: 10px;
+            display: block;
+            color: $purple-c;
+            z-index:1;
+          }
+        } 
+
+      }
+    
+      // Disabled
+      &.disabled{
+
+        color: $dropdown-link-disabled-color;
+            background-color: transparent !important;
+            border-color: transparent !important;
+            &:hover,
+            &:active {
+                color: $dropdown-link-disabled-color;
+            }
+            .ee-radioStyled {
+                border-color: $dropdown-link-disabled-color;
+            }
+            &.checked{
+                .ee-radioStyled,
+                .ee-radioStyled:active{
+                    &:before{
+                        color: $dropdown-link-disabled-color;
+                    }
+                }   
+            }
+        
+
+      } // .disabled END
+
+      // Invalid
+      &.input-validation-error{
+
+        color: $orange-c;
+            .ee-radioStyled {
+                border-color: $orange-c;
+            }
+            &.checked{
+                .ee-radioStyled,
+                .ee-radioStyled:active{
+                    color: $orange-c;
+                    &:before{
+                        color: $orange-c;
+                    }
+                }   
+            }
+      } // .invalid END
+
+    }

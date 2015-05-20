@@ -5,6 +5,9 @@
 /* @include _bs-ee-variables.scss */ 
 /* @include _mixins.scss */
 
+// Fonts
+//**********************************
+/* @include _neue-helvetica.scss */
 
 // TELIA SONERA
 //**********************************
@@ -51,11 +54,9 @@
 /* @include tsr-bootstrap/_elion.scss */
 /* @include tsr-bootstrap/header/_header-navigation.scss */
 /* @include tsr-bootstrap/header/_sidenavigation.scss */
-/* @include tsr-bootstrap/header/_burgerize.scss */
 /* @include tsr-bootstrap/header/_side-in-menu.scss */
 /* @include tsr-bootstrap/header/_searchbox-responsive.scss */
 /* @include tsr-bootstrap/_footer.scss */
-/* @include tsr-bootstrap/_forms.scss */
 /* @include tsr-bootstrap/_alerts.scss */
 /* @include tsr-bootstrap/_progress-steps.scss */
 
@@ -81,7 +82,6 @@
 //**********************************
 /* @include _ee-typography.scss */
 /* @include _ee-tacticalElements.scss */
-/* @include _ee-communication-primary.scss */
 /* @include _ee-buttonsAndLinks.scss */
 /* @include _ee-sidemenu.scss */
 /* @include _ee-product.scss */
@@ -149,6 +149,7 @@ header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle
 
 header > div .menu__top .navbar-nav.navbar-right > li .login-block .icon {
   top: 10px;
+  right: 10px;
 }
 header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown {
   padding-top: 20px;
@@ -186,6 +187,20 @@ header > div .menu__top .navbar-nav > li.open .dropdown-menu {
 }
 header > div .menu__top .navbar-nav > li.open .dropdown-menu > li a {
   padding: 15px 10px;
+}
+
+.container > .searchbox-responsive.navbar-form .form-group {
+  border-radius: 4px;
+  display: block !important;
+  height: 32px;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 180px;
+}
+
+header {
+  .btn .icon { margin-right: 5px; }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -726,16 +741,6 @@ footer .social-block .media .icon {
 }
 
 .tsr-forms {
-  input {
-      width: 13px;
-      height: 13px;
-      padding: 0;
-      margin:0;
-      vertical-align: bottom;
-      position: relative;
-      top: -1px;
-      *overflow: hidden;
-  }
   label {
     font-weight: normal;
     display: block; 
@@ -972,8 +977,6 @@ label.control-label-left {
   background-color: #fff;
 }
 
-.btn .icon { margin-right: 5px; }
-
 .bottom-align-text {
   position: absolute;
   bottom: 0;
@@ -985,4 +988,20 @@ label.control-label-left {
 
 .navbar-collapse {
   max-height: none;
+}
+
+.tsr-btn-view-all {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  background: #f6f6f6;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  @media (max-width: $screen-xs-max) {
+    text-align: left;
+  }
 }
