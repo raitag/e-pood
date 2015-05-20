@@ -47,6 +47,6 @@ $(function(){
     //     }
     // );
 
-    $('[role="search"] .form-control').wrap('<div class="twitter-typeahead"></div>');
+    // $('[role="search"] .form-control').wrap('<div class="twitter-typeahead"></div>');
 
 });
