@@ -117,7 +117,7 @@ $triangle-size: 8px;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               #f6f6f6;
 //** Global text color on `<body>`.
 $text-color:            #333 !default;
 
@@ -843,7 +843,7 @@ $badge-border-radius:         10px !default;
 //
 //##
 
-$breadcrumb-padding-vertical:   20px !default; 
+$breadcrumb-padding-vertical:   14px !default; 
 $breadcrumb-padding-horizontal: 0px !default;
 //** Breadcrumb background color
 $breadcrumb-bg:                 $lightgrey-h !default;

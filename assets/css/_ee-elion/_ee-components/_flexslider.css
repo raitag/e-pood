@@ -81,7 +81,7 @@ html[xmlns] .slides {display: block;}
                 font-family: "tsr-icons-all";
                 font-size: 25px;
                 display: inline-block;
-                content: '\e66a';
+                content: "\e669";
                 padding: 0 6px;
                 position: relative;
                 z-index: 20;
@@ -97,7 +97,7 @@ html[xmlns] .slides {display: block;}
 }
 
 .flex-direction-nav a.flex-next:before {
-                content: '\e668';
+                content: "\e66a";
 }
 
 .flexslider:hover .flex-prev {
@@ -121,15 +121,6 @@ html[xmlns] .slides {display: block;}
                 cursor: default;
 }
 
-.flex-direction-nav a:before {
-                font-family: "tsr-icons-all";
-                font-size: 25px;
-                display: inline-block;
-                content: '\e66a';
-                padding: 0 6px;
-                position: relative;
-                z-index: 20;
-}
 
 
 

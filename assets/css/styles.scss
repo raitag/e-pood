@@ -219,6 +219,9 @@ header {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px;
   }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
 }
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   .navbar-right {
@@ -931,6 +934,10 @@ label.control-label-left {
 }
 
 .ee-filters-list {
+  >div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   ul.filter {
     margin: 5px 0 0 0;
     padding-left: 0;
@@ -1010,6 +1017,7 @@ label.control-label-left {
           float: right;
           margin-top: 5px;
           color: $brand-primary;
+          @include transition(all 0.3s ease-out);
         }
         &.collapsed {
           &:after {
@@ -1056,4 +1064,8 @@ label.control-label-left {
 
 .navbar-default {
   background: transparent;
+}
+
+.tab-content {
+  background: $body-bg;
 }

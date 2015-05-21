@@ -1223,7 +1223,7 @@ body {
   font-size: 15px;
   line-height: 1.42857;
   color: #333333;
-  background-color: white; }
+  background-color: #f6f6f6; }
 
 input,
 button,
@@ -5033,7 +5033,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #dddddd; }
   .table .table {
-    background-color: white; }
+    background-color: #f6f6f6; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -7306,12 +7306,37 @@ body {
     margin-top: 150px; }
   @media (max-width: 991px) {
     body {
-      margin-bottom: 304px; } }
+      margin-bottom: 304px; }
+      body header + .ee-breadcrumbs + section,
+      body header + .ee-breadcrumbs + div {
+        margin-top: 200px; } }
   @media (max-width: 767px) {
     body {
       margin-bottom: 0; }
-      body header + section {
+      body header + section,
+      body header + div,
+      body header + .ee-breadcrumbs + section,
+      body header + .ee-breadcrumbs + div {
         margin-top: 100px; } }
+  body header > div > .navbar-default {
+    display: none; }
+  body.admin-login header + section,
+  body.admin-login header + div {
+    margin-top: 200px; }
+  body.admin-login header > div > .navbar-default {
+    display: block; }
+  @media (max-width: 991px) {
+    body.admin-login header + .ee-breadcrumbs + section {
+      margin-top: 200px; } }
+  @media (max-width: 767px) {
+    body.admin-login header + section,
+    body.admin-login header + div,
+    body.admin-login header + .ee-breadcrumbs + section,
+    body.admin-login header + .ee-breadcrumbs + div {
+      margin-top: 150px; }
+    body.admin-login header > div .header-menu__main > div .navbar-collapse,
+    body.admin-login header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu {
+      top: 155px; } }
 
 header {
   display: block;
@@ -9110,7 +9135,7 @@ footer {
             width: 8.02778%; } }
 
 .breadcrumb {
-  padding: 20px 0px;
+  padding: 14px 0px;
   margin-bottom: 0;
   list-style: none;
   background-color: transparent;
@@ -9266,7 +9291,7 @@ html[xmlns] .slides {display: block;}
                 font-family: "tsr-icons-all";
                 font-size: 25px;
                 display: inline-block;
-                content: '\e66a';
+                content: "\e669";
                 padding: 0 6px;
                 position: relative;
                 z-index: 20;
@@ -9282,7 +9307,7 @@ html[xmlns] .slides {display: block;}
 }
 
 .flex-direction-nav a.flex-next:before {
-                content: '\e668';
+                content: "\e66a";
 }
 
 .flexslider:hover .flex-prev {
@@ -9306,15 +9331,6 @@ html[xmlns] .slides {display: block;}
                 cursor: default;
 }
 
-.flex-direction-nav a:before {
-                font-family: "tsr-icons-all";
-                font-size: 25px;
-                display: inline-block;
-                content: '\e66a';
-                padding: 0 6px;
-                position: relative;
-                z-index: 20;
-}
 
 
 
@@ -19416,9 +19432,6 @@ section.tsr-section-productAndService-listing {
   height: auto;
   padding: 0;
   margin-bottom: -1px; }
-  @media (max-width: 767px) {
-    .ee-frontlinks {
-      padding-top: 100px; } }
   @media (min-width: 992px) {
     .ee-frontlinks {
       border-top: none; } }
@@ -19756,9 +19769,6 @@ section.ee-tab-to-accordioncontent {
 section.ee-product-detail {
   padding-bottom: 30px;
   background-color: #fff; }
-  @media (max-width: 767px) {
-    section.ee-product-detail {
-      padding-top: 100px; } }
   section.ee-product-detail .dropdown-menu {
     top: auto; }
   section.ee-product-detail .ee-comparebar.detail {
@@ -19766,7 +19776,7 @@ section.ee-product-detail {
     margin-top: 10px; }
     @media (min-width: 992px) {
       section.ee-product-detail .ee-comparebar.detail {
-        margin-top: -47px;
+        margin-top: -40px;
         margin-bottom: 20px; } }
   section.ee-product-detail h1 {
     line-height: 0.5;
@@ -20028,9 +20038,8 @@ section.ee-reviewarea {
 .minimal-header {
   background: #f6f6f6; }
   .minimal-header .breadcrumb {
-    padding-bottom: 0;
-    width: 100%;
-    padding-right: 0; }
+    padding: 0 15px;
+    width: 100%; }
   .minimal-header h1 {
     margin-top: 5px;
     margin-bottom: 10px;
@@ -20988,7 +20997,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
     width: 100%;
     text-indent: 0;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0;
     padding: 0;
     border-radius: 0;
@@ -21202,7 +21211,7 @@ label.ee-select-label {
     height: 2.1rem;
     line-height: 2.1rem;
     width: 100%;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0;
     padding: 0 15px 0 0;
     display: block;
@@ -21468,7 +21477,7 @@ select:disabled {
     font-size: 14px;
     -webkit-transition: color 0.3s ease-out;
     transition: color 0.3s ease-out;
-    background-color: white \9;
+    background-color: #f6f6f6 \9;
     background-color: rgba(246, 246, 246, 0); }
     .hero-indicators li:hover {
       color: #4f2369; }
@@ -21571,6 +21580,9 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, 
 
 @media (min-width: 768px) {
   .navbar-form.navbar-right:last-child {
+    margin-right: 0px; }
+
+  .navbar-nav.navbar-right:last-child {
     margin-right: 0px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-right {
@@ -22063,6 +22075,9 @@ label.control-label-left {
     .ee-overview-prices .col-xs-7 {
       padding-right: 0; } }
 
+.ee-filters-list > div {
+  margin-top: 10px;
+  margin-bottom: 10px; }
 .ee-filters-list ul.filter {
   margin: 5px 0 0 0;
   padding-left: 0;
@@ -22134,7 +22149,9 @@ label.control-label-left {
         font-size: .9em;
         float: right;
         margin-top: 5px;
-        color: #652d86; }
+        color: #652d86;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out; }
       .ee-filters-list ul.filter .collapse-trigger.header.collapsed:after {
         content: "\e668"; }
 
@@ -22169,3 +22186,6 @@ label.control-label-left {
 
 .navbar-default {
   background: transparent; }
+
+.tab-content {
+  background: #f6f6f6; }

@@ -1,9 +1,6 @@
 section.ee-product-detail {
   padding-bottom: 30px;
   background-color: #fff;
-  @media (max-width: $screen-xs-max) {
-    padding-top: 100px;
-  }
 
   .dropdown-menu {
     top: auto;
@@ -12,7 +9,7 @@ section.ee-product-detail {
     min-height: 40px;
     margin-top: 10px;
     @include media-min($screen-md) {
-      margin-top: -47px;
+      margin-top: -40px;
       margin-bottom: 20px;
     }
   }
