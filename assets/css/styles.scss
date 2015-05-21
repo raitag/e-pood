@@ -937,7 +937,10 @@ label.control-label-left {
     list-style: none;
     border-bottom: 1px solid #dbdbdb;
     li {
-      padding: 0 0 5px 0;
+      padding: 0 0 2px 0;
+      &:last-child {
+        padding-bottom: 5px;
+      }
       &.header {
         color: $text-color;
         font-weight: 600;
@@ -946,7 +949,6 @@ label.control-label-left {
           .icon {
             font-size: .9em;
             color: $brand-primary;
-            margin-left: 5px;
           }
           &:hover,
           &:focus {
@@ -967,15 +969,6 @@ label.control-label-left {
           padding-top: 0;
         }
       }
-      &.collapse-trigger {
-        text-align: right;
-        cursor: pointer;
-        color: $brand-primary;
-        &:hover {
-          text-decoration: underline;
-          color: $brand-primary-a;
-        }
-      }
       label {
         cursor: pointer;
         span {
@@ -990,6 +983,39 @@ label.control-label-left {
       .control-label-left {
         font-weight: normal;
         padding-top: 0;
+      }
+      ul {
+        padding-left: 0;
+        list-style: none;
+      }
+    }
+    .collapse-trigger {
+      text-align: right;
+      cursor: pointer;
+      display: block;
+      &.header {
+        text-align: left;
+        color: $brand-primary;
+        &:hover {
+          text-decoration: none;
+          color: $brand-primary-a;
+        }
+        a {
+          color: $brand-primary;
+        }
+        &:after {
+          @extend .icon;
+          content: "\e65f";
+          font-size: .9em;
+          float: right;
+          margin-top: 5px;
+          color: $brand-primary;
+        }
+        &.collapsed {
+          &:after {
+            content: "\e668";
+          }
+        }
       }
     }
   }

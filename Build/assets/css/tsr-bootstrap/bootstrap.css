@@ -3052,6 +3052,9 @@ strong {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-service-box:before {
+  content: "\e697"; }
+
 .icon-service-phone:before {
   content: "\e614"; }
 
@@ -3084,6 +3087,12 @@ strong {
 
 .icon-business-service:before {
   content: "\e6f2"; }
+
+.icon-mystore:before {
+  content: "\e699"; }
+
+.icon-builder:before {
+  content: "\e698"; }
 
 .icon-parental-guide:before {
   content: "\e62f"; }

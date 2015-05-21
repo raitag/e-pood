@@ -6251,7 +6251,7 @@ var, .price {
 .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
 .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
 .sidemenu-toggle:before,
-header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
+header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .ee-filters-list ul.filter .collapse-trigger.header:after {
   font-family: 'tsr-icons-all';
   speak: none;
   font-style: normal;
@@ -6262,6 +6262,9 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-service-box:before {
+  content: "\e697"; }
 
 .icon-service-phone:before {
   content: "\e614"; }
@@ -6295,6 +6298,12 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before {
 
 .icon-business-service:before {
   content: "\e6f2"; }
+
+.icon-mystore:before {
+  content: "\e699"; }
+
+.icon-builder:before {
+  content: "\e698"; }
 
 .icon-parental-guide:before {
   content: "\e62f"; }
@@ -7554,7 +7563,7 @@ header {
             .sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
             header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
             header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block a:before,
-            header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block a:before {
+            header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .menu__top .navbar-nav.navbar-right > li .login-block .collapse-trigger.header:after {
               color: #652d86;
               font-size: 18px;
               position: absolute;
@@ -7763,7 +7772,7 @@ header .menu__top .navbar-nav > .active > a:focus {
         .header-menu__main .navbar-nav > li > a > span.icon,
         .header-menu__main .sidemenu .sidemenu-menu.left .sidemenu .navbar-nav > li > a > span.sidemenu-toggle:before,
         .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main .navbar-nav > li > a > span.sidemenu-toggle:before,
-        .header-menu__main .navbar-nav > li > a > span.sidemenu-toggle:before {
+        .header-menu__main .navbar-nav > li > a > span.sidemenu-toggle:before, .header-menu__main .ee-filters-list ul.filter .navbar-nav > li > a > span.collapse-trigger.header:after, .ee-filters-list ul.filter .header-menu__main .navbar-nav > li > a > span.collapse-trigger.header:after {
           display: block;
           clear: both;
           text-align: center;
@@ -7778,7 +7787,7 @@ header .menu__top .navbar-nav > .active > a:focus {
       .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main .navbar-nav > li > a.menu-highlight .sidemenu-toggle:before,
       .header-menu__main .navbar-nav > li > a.menu-highlight .sidemenu-toggle:before,
       .header-menu__main header > div .menu__main > div .navbar-collapse .navbar-nav > li > a.menu-highlight a:before,
-      header > div .menu__main > div .navbar-collapse .header-menu__main .navbar-nav > li > a.menu-highlight a:before {
+      header > div .menu__main > div .navbar-collapse .header-menu__main .navbar-nav > li > a.menu-highlight a:before, .header-menu__main .navbar-nav > li > a.menu-highlight .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .header-menu__main .navbar-nav > li > a.menu-highlight .collapse-trigger.header:after {
         color: #00b48c; }
     .header-menu__main .navbar-nav > li.sidemenu-visible > a:after {
       display: block !important;
@@ -7796,7 +7805,7 @@ header .menu__top .navbar-nav > .active > a:focus {
       .sidemenu.open > .sidemenu-menu.left .sidemenu.open .header-menu__main .navbar-nav > li.sidemenu-open > a.menu-highlight .sidemenu-toggle:before,
       .header-menu__main .navbar-nav > li.sidemenu-open > a.menu-highlight .sidemenu-toggle:before,
       .header-menu__main header > div .menu__main > div .navbar-collapse .navbar-nav > li.sidemenu-open > a.menu-highlight a:before,
-      header > div .menu__main > div .navbar-collapse .header-menu__main .navbar-nav > li.sidemenu-open > a.menu-highlight a:before {
+      header > div .menu__main > div .navbar-collapse .header-menu__main .navbar-nav > li.sidemenu-open > a.menu-highlight a:before, .header-menu__main .navbar-nav > li.sidemenu-open > a.menu-highlight .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .header-menu__main .navbar-nav > li.sidemenu-open > a.menu-highlight .collapse-trigger.header:after {
         color: #009974; }
     .header-menu__main .navbar-nav > li.long-link > a {
       padding-top: 15px; }
@@ -7805,7 +7814,7 @@ header .menu__top .navbar-nav > .active > a:focus {
         .header-menu__main .navbar-nav > li.long-link > a > span.icon,
         .header-menu__main .sidemenu .sidemenu-menu.left .sidemenu .navbar-nav > li.long-link > a > span.sidemenu-toggle:before,
         .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main .navbar-nav > li.long-link > a > span.sidemenu-toggle:before,
-        .header-menu__main .navbar-nav > li.long-link > a > span.sidemenu-toggle:before {
+        .header-menu__main .navbar-nav > li.long-link > a > span.sidemenu-toggle:before, .header-menu__main .ee-filters-list ul.filter .navbar-nav > li.long-link > a > span.collapse-trigger.header:after, .ee-filters-list ul.filter .header-menu__main .navbar-nav > li.long-link > a > span.collapse-trigger.header:after {
           font-size: 23px; }
     .header-menu__main .navbar-nav > li.active [data-toggle="login-dropdown"] {
       background-color: #f6f6f6;
@@ -7839,7 +7848,7 @@ header .menu__top .navbar-nav > .active > a:focus {
     .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main .login-block .sidemenu-toggle:before,
     .header-menu__main .login-block .sidemenu-toggle:before,
     .header-menu__main .login-block header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-    header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main .login-block a:before {
+    header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main .login-block a:before, .header-menu__main .login-block .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .header-menu__main .login-block .collapse-trigger.header:after {
       color: #652d86;
       font-size: 18px;
       position: absolute;
@@ -8181,19 +8190,19 @@ header .menu__top .navbar-nav > .active > a:focus {
         .sidemenu .sidemenu-menu.left .sidemenu header > div .header-menu__main > div .navbar-toggle:hover .sidemenu-toggle:before,
         header > div .header-menu__main > div .navbar-toggle:hover .sidemenu-toggle:before,
         header > div .header-menu__main > div .navbar-toggle:hover .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-        header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .navbar-toggle:hover a:before, header > div .header-menu__main > div .navbar-toggle:focus .icon, header > div .header-menu__main > div .navbar-toggle:focus .select-wrapper div.select-dropdown:after, .select-wrapper header > div .header-menu__main > div .navbar-toggle:focus div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main > div .navbar-toggle:focus .sidemenu-toggle:before,
+        header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .navbar-toggle:hover a:before, header > div .header-menu__main > div .navbar-toggle:hover .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .header-menu__main > div .navbar-toggle:hover .collapse-trigger.header:after, header > div .header-menu__main > div .navbar-toggle:focus .icon, header > div .header-menu__main > div .navbar-toggle:focus .select-wrapper div.select-dropdown:after, .select-wrapper header > div .header-menu__main > div .navbar-toggle:focus div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main > div .navbar-toggle:focus .sidemenu-toggle:before,
         header > div .header-menu__main > div .navbar-toggle:focus .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
         .sidemenu .sidemenu-menu.left .sidemenu header > div .header-menu__main > div .navbar-toggle:focus .sidemenu-toggle:before,
         header > div .header-menu__main > div .navbar-toggle:focus .sidemenu-toggle:before,
         header > div .header-menu__main > div .navbar-toggle:focus .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-        header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .navbar-toggle:focus a:before {
+        header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .navbar-toggle:focus a:before, header > div .header-menu__main > div .navbar-toggle:focus .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .header-menu__main > div .navbar-toggle:focus .collapse-trigger.header:after {
           color: #73369e; }
       header > div .header-menu__main > div .navbar-toggle .icon, header > div .header-menu__main > div .navbar-toggle .select-wrapper div.select-dropdown:after, .select-wrapper header > div .header-menu__main > div .navbar-toggle div.select-dropdown:after, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .header-menu__main > div .navbar-toggle .sidemenu-toggle:before,
       header > div .header-menu__main > div .navbar-toggle .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu header > div .header-menu__main > div .navbar-toggle .sidemenu-toggle:before,
       header > div .header-menu__main > div .navbar-toggle .sidemenu-toggle:before,
       header > div .header-menu__main > div .navbar-toggle .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .navbar-toggle a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .navbar-toggle a:before, header > div .header-menu__main > div .navbar-toggle .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .header-menu__main > div .navbar-toggle .collapse-trigger.header:after {
         font-size: 30px;
         color: #652d86; }
     header > div .header-menu__main > div .navbar-collapse {
@@ -8324,7 +8333,7 @@ header .menu__top .navbar-nav > .active > a:focus {
         .sidemenu .sidemenu-menu.left .sidemenu header > div .header-menu__main > div .mobile-icons > ul > li > a .sidemenu-toggle:before,
         header > div .header-menu__main > div .mobile-icons > ul > li > a .sidemenu-toggle:before,
         header > div .header-menu__main > div .mobile-icons > ul > li > a .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-        header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .mobile-icons > ul > li > a a:before {
+        header > div .menu__main > div .navbar-collapse .navbar-nav > li .header-menu__main > div .mobile-icons > ul > li > a a:before, header > div .header-menu__main > div .mobile-icons > ul > li > a .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .header-menu__main > div .mobile-icons > ul > li > a .collapse-trigger.header:after {
           font-size: 25px;
           color: #652d86; }
         header > div .header-menu__main > div .mobile-icons > ul > li > .sidemenu-toggle {
@@ -8596,7 +8605,7 @@ footer {
       .sidemenu.open > .sidemenu-menu.left .sidemenu.open footer .footer-section > a .sidemenu-toggle:before,
       footer .footer-section > a .sidemenu-toggle:before,
       footer .footer-section > a header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section > a a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section > a a:before, footer .footer-section > a .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter footer .footer-section > a .collapse-trigger.header:after {
         color: #999; }
     footer .footer-section h6 {
       font-size: 14px;
@@ -8613,7 +8622,7 @@ footer {
       .sidemenu .sidemenu-menu.left .sidemenu footer .footer-section ul.list-inline li a:hover .sidemenu-toggle:before,
       footer .footer-section ul.list-inline li a:hover .sidemenu-toggle:before,
       footer .footer-section ul.list-inline header > div .menu__main > div .navbar-collapse .navbar-nav > li a:hover a:before,
-      header > div .menu__main > div .navbar-collapse footer .footer-section ul.list-inline .navbar-nav > li a:hover a:before {
+      header > div .menu__main > div .navbar-collapse footer .footer-section ul.list-inline .navbar-nav > li a:hover a:before, footer .footer-section ul.list-inline li a:hover .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter footer .footer-section ul.list-inline li a:hover .collapse-trigger.header:after {
         text-decoration: none; }
     footer .footer-section li {
       margin-top: 7px;
@@ -8625,7 +8634,7 @@ footer {
     .sidemenu.open > .sidemenu-menu.left .sidemenu.open footer .footer-section li .sidemenu-toggle:before,
     footer .footer-section li .sidemenu-toggle:before,
     footer .footer-section header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-    header > div .menu__main > div .navbar-collapse footer .footer-section .navbar-nav > li a:before {
+    header > div .menu__main > div .navbar-collapse footer .footer-section .navbar-nav > li a:before, footer .footer-section li .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter footer .footer-section li .collapse-trigger.header:after {
       font-size: 22px;
       margin-right: 10px;
       opacity: 0.3;
@@ -8636,7 +8645,7 @@ footer {
     .sidemenu .sidemenu-menu.left .sidemenu footer .footer-section a:hover .sidemenu-toggle:before,
     footer .footer-section a:hover .sidemenu-toggle:before,
     footer .footer-section a:hover header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-    header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section a:hover a:before {
+    header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .footer-section a:hover a:before, footer .footer-section a:hover .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter footer .footer-section a:hover .collapse-trigger.header:after {
       opacity: 1;
       filter: alpha(opacity=100); }
     footer .footer-section .small {
@@ -8683,7 +8692,7 @@ footer {
       .sidemenu.open > .sidemenu-menu.left .sidemenu.open footer h6 .sidemenu-toggle:before, footer h6 .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before, .burger header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before,
       footer h6 .sidemenu-toggle:before,
       footer h6 header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li footer h6 a:before, footer h6 .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter footer h6 .collapse-trigger.header:after {
         display: none; }
       footer > div > .row {
         display: -webkit-box;
@@ -20104,7 +20113,7 @@ section.ee-reviewarea {
 .sidemenu .sidemenu-menu.left .sidemenu .ee-comparebar .dropdown .sidemenu-toggle:before,
 .ee-comparebar .dropdown .sidemenu-toggle:before,
 .ee-comparebar .dropdown header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-comparebar .dropdown a:before {
+header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-comparebar .dropdown a:before, .ee-comparebar .dropdown .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .ee-comparebar .dropdown .collapse-trigger.header:after {
   font-size: .8em;
   margin-left: 5px; }
 
@@ -20120,7 +20129,7 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-comparebar 
   .sidemenu .sidemenu-menu.left .sidemenu .ee-filterbar .navbar-nav > li > a .sidemenu-toggle:before,
   .ee-filterbar .navbar-nav > li > a .sidemenu-toggle:before,
   .ee-filterbar header > div .menu__main > div .navbar-collapse .navbar-nav > li > a a:before,
-  header > div .menu__main > div .navbar-collapse .ee-filterbar .navbar-nav > li > a a:before {
+  header > div .menu__main > div .navbar-collapse .ee-filterbar .navbar-nav > li > a a:before, .ee-filterbar .navbar-nav > li > a .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .ee-filterbar .navbar-nav > li > a .collapse-trigger.header:after {
     margin-left: 10px; }
   .ee-filterbar .navbar-nav > li > a .collapse.in {
     background-color: #fff; }
@@ -20420,7 +20429,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   .sidemenu .sidemenu-menu.left .sidemenu .dropdown-menu .cart-item .cart-item-image .sidemenu-toggle:before,
   .dropdown-menu .cart-item .cart-item-image .sidemenu-toggle:before,
   .dropdown-menu .cart-item .cart-item-image header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-  header > div .menu__main > div .navbar-collapse .navbar-nav > li .dropdown-menu .cart-item .cart-item-image a:before {
+  header > div .menu__main > div .navbar-collapse .navbar-nav > li .dropdown-menu .cart-item .cart-item-image a:before, .dropdown-menu .cart-item .cart-item-image .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .dropdown-menu .cart-item .cart-item-image .collapse-trigger.header:after {
     font-size: 2em; }
 
 @media (min-width: 768px) {
@@ -20765,7 +20774,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   .collapsibleMainMenu-Basket .cart-item-image span.icon,
   .collapsibleMainMenu-Basket .cart-item-image .sidemenu .sidemenu-menu.left .sidemenu span.sidemenu-toggle:before,
   .sidemenu .sidemenu-menu.left .sidemenu .collapsibleMainMenu-Basket .cart-item-image span.sidemenu-toggle:before,
-  .collapsibleMainMenu-Basket .cart-item-image span.sidemenu-toggle:before {
+  .collapsibleMainMenu-Basket .cart-item-image span.sidemenu-toggle:before, .collapsibleMainMenu-Basket .cart-item-image .ee-filters-list ul.filter span.collapse-trigger.header:after, .ee-filters-list ul.filter .collapsibleMainMenu-Basket .cart-item-image span.collapse-trigger.header:after {
     font-size: 2em; }
 
 .input-group-addon:last-child,
@@ -21216,12 +21225,12 @@ label.ee-select-label {
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before,
       .select-wrapper div.select-dropdown.disabled + .sidemenu-toggle:before,
       .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.disabled + a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.disabled + a:before, .select-wrapper div.select-dropdown[disabled] + .icon, .select-wrapper div.select-dropdown[disabled] + div.select-dropdown:after,
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.disabled + a:before, .select-wrapper .ee-filters-list ul.filter div.select-dropdown.disabled + .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper div.select-dropdown.disabled + .collapse-trigger.header:after, .select-wrapper div.select-dropdown[disabled] + .icon, .select-wrapper div.select-dropdown[disabled] + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu div.select-dropdown[disabled] + .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before,
       .select-wrapper div.select-dropdown[disabled] + .sidemenu-toggle:before,
       .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown[disabled] + a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown[disabled] + a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown[disabled] + a:before, .select-wrapper .ee-filters-list ul.filter div.select-dropdown[disabled] + .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper div.select-dropdown[disabled] + .collapse-trigger.header:after {
         color: #ccc; }
     .select-wrapper div.select-dropdown:after {
       content: "\e65f"; }
@@ -21233,7 +21242,7 @@ label.ee-select-label {
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before,
       .select-wrapper div.select-dropdown.input-validation-error + .sidemenu-toggle:before,
       .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li div.select-dropdown.input-validation-error + a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.input-validation-error + a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper div.select-dropdown.input-validation-error + a:before, .select-wrapper .ee-filters-list ul.filter div.select-dropdown.input-validation-error + .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper div.select-dropdown.input-validation-error + .collapse-trigger.header:after {
         color: #ff6319; }
   .select-wrapper input.select-dropdown {
     position: relative;
@@ -21270,12 +21279,12 @@ label.ee-select-label {
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown.disabled + .sidemenu-toggle:before,
       .select-wrapper input.select-dropdown.disabled + .sidemenu-toggle:before,
       .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown.disabled + a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.disabled + a:before, .select-wrapper input.select-dropdown[disabled] + .icon, .select-wrapper input.select-dropdown[disabled] + div.select-dropdown:after,
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.disabled + a:before, .select-wrapper .ee-filters-list ul.filter input.select-dropdown.disabled + .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper input.select-dropdown.disabled + .collapse-trigger.header:after, .select-wrapper input.select-dropdown[disabled] + .icon, .select-wrapper input.select-dropdown[disabled] + div.select-dropdown:after,
       .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu input.select-dropdown[disabled] + .sidemenu-toggle:before,
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown[disabled] + .sidemenu-toggle:before,
       .select-wrapper input.select-dropdown[disabled] + .sidemenu-toggle:before,
       .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown[disabled] + a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown[disabled] + a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown[disabled] + a:before, .select-wrapper .ee-filters-list ul.filter input.select-dropdown[disabled] + .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper input.select-dropdown[disabled] + .collapse-trigger.header:after {
         color: #ccc; }
     .select-wrapper input.select-dropdown.input-validation-error {
       color: #ff6319;
@@ -21285,7 +21294,7 @@ label.ee-select-label {
       .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper input.select-dropdown.input-validation-error + .sidemenu-toggle:before,
       .select-wrapper input.select-dropdown.input-validation-error + .sidemenu-toggle:before,
       .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li input.select-dropdown.input-validation-error + a:before,
-      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.input-validation-error + a:before {
+      header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper input.select-dropdown.input-validation-error + a:before, .select-wrapper .ee-filters-list ul.filter input.select-dropdown.input-validation-error + .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper input.select-dropdown.input-validation-error + .collapse-trigger.header:after {
         color: #ff6319; }
   .select-wrapper .icon, .select-wrapper div.select-dropdown:after, .select-wrapper .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .select-wrapper .sidemenu-toggle:before,
   .select-wrapper .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-toggle:before,
@@ -21294,7 +21303,7 @@ label.ee-select-label {
   .sidemenu.open > .sidemenu-menu.left .sidemenu.open .select-wrapper .sidemenu-toggle:before,
   .select-wrapper .sidemenu-toggle:before,
   .select-wrapper header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-  header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper a:before {
+  header > div .menu__main > div .navbar-collapse .navbar-nav > li .select-wrapper a:before, .select-wrapper .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .select-wrapper .collapse-trigger.header:after {
     position: absolute;
     right: 0;
     top: 35%;
@@ -21473,7 +21482,7 @@ header .navbar > .container {
 header > div .menu__main .navbar-nav > li > a > span.icon, .burger header > div .sidemenu .sidemenu-menu.left .sidemenu .menu__main .navbar-nav > li > a > span.sidemenu-toggle:before,
 header > div .menu__main .sidemenu .sidemenu-menu.left .sidemenu .navbar-nav > li > a > span.sidemenu-toggle:before,
 .sidemenu .sidemenu-menu.left .sidemenu header > div .menu__main .navbar-nav > li > a > span.sidemenu-toggle:before,
-header > div .menu__main .navbar-nav > li > a > span.sidemenu-toggle:before {
+header > div .menu__main .navbar-nav > li > a > span.sidemenu-toggle:before, header > div .menu__main .ee-filters-list ul.filter .navbar-nav > li > a > span.collapse-trigger.header:after, .ee-filters-list ul.filter header > div .menu__main .navbar-nav > li > a > span.collapse-trigger.header:after {
   margin-left: auto;
   margin-right: auto; }
 
@@ -21501,7 +21510,7 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu.ope
 .sidemenu.open > .sidemenu-menu.left .sidemenu.open header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
 header > div .menu__top .navbar-nav.navbar-right > li .login-block .sidemenu-toggle:before,
 header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block a:before,
-header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block a:before {
+header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .menu__top .navbar-nav.navbar-right > li .login-block .collapse-trigger.header:after {
   top: 10px;
   right: 10px; }
 
@@ -21510,7 +21519,7 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdow
   header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > .icon, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .select-wrapper .btn > div.select-dropdown:after, .select-wrapper header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > div.select-dropdown:after,
   header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > .sidemenu-toggle:before,
   header > div .menu__top .menu__main > div .navbar-collapse .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > a:before,
-  header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > a:before {
+  header > div .menu__main > div .navbar-collapse .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > a:before, header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .ee-filters-list ul.filter .btn > .collapse-trigger.header:after, .ee-filters-list ul.filter header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdown .btn > .collapse-trigger.header:after {
     position: relative;
     color: #fff;
     font-size: 15px;
@@ -21543,7 +21552,7 @@ header .btn .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle
 .sidemenu.open > .sidemenu-menu.left .sidemenu.open header .btn .sidemenu-toggle:before,
 header .btn .sidemenu-toggle:before,
 header > div .btn .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before {
+header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, header .btn .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter header .btn .collapse-trigger.header:after {
   margin-right: 5px; }
 
 .icon-no-border.icon-with-badge .badge {
@@ -21903,7 +21912,7 @@ footer .social-block .media .sidemenu .sidemenu-menu.left .sidemenu .sidemenu-to
 .sidemenu .sidemenu-menu.left .sidemenu footer .social-block .media .sidemenu-toggle:before,
 footer .social-block .media .sidemenu-toggle:before,
 footer .social-block .media header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .social-block .media a:before {
+header > div .menu__main > div .navbar-collapse .navbar-nav > li footer .social-block .media a:before, footer .social-block .media .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter footer .social-block .media .collapse-trigger.header:after {
   line-height: 26px;
   text-align: center; }
 
@@ -21957,7 +21966,7 @@ label.control-label-left {
   .sidemenu.open > .sidemenu-menu.left .sidemenu.open .rating-input .sidemenu-toggle:before,
   .rating-input .sidemenu-toggle:before,
   .rating-input header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-  header > div .menu__main > div .navbar-collapse .navbar-nav > li .rating-input a:before {
+  header > div .menu__main > div .navbar-collapse .navbar-nav > li .rating-input a:before, .rating-input .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .rating-input .collapse-trigger.header:after {
     color: #642887;
     font-size: 18px;
     margin-right: 2px; }
@@ -21991,7 +22000,7 @@ label.control-label-left {
   .sidemenu.open > .sidemenu-menu.left .sidemenu.open .well .sidemenu-toggle:before,
   .well .sidemenu-toggle:before,
   .well header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-  header > div .menu__main > div .navbar-collapse .navbar-nav > li .well a:before {
+  header > div .menu__main > div .navbar-collapse .navbar-nav > li .well a:before, .well .ee-filters-list ul.filter .collapse-trigger.header:after, .ee-filters-list ul.filter .well .collapse-trigger.header:after {
     font-size: 120%;
     padding-right: 25px;
     vertical-align: top;
@@ -22060,7 +22069,9 @@ label.control-label-left {
   list-style: none;
   border-bottom: 1px solid #dbdbdb; }
   .ee-filters-list ul.filter li {
-    padding: 0 0 5px 0; }
+    padding: 0 0 2px 0; }
+    .ee-filters-list ul.filter li:last-child {
+      padding-bottom: 5px; }
     .ee-filters-list ul.filter li.header {
       color: #333333;
       font-weight: 600; }
@@ -22071,10 +22082,9 @@ label.control-label-left {
         .sidemenu .sidemenu-menu.left .sidemenu .ee-filters-list ul.filter li.header a .sidemenu-toggle:before,
         .ee-filters-list ul.filter li.header a .sidemenu-toggle:before,
         .ee-filters-list ul.filter li.header a header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-        header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-filters-list ul.filter li.header a a:before {
+        header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-filters-list ul.filter li.header a a:before, .ee-filters-list ul.filter li.header a .collapse-trigger.header:after {
           font-size: .9em;
-          color: #652d86;
-          margin-left: 5px; }
+          color: #652d86; }
         .ee-filters-list ul.filter li.header a:hover, .ee-filters-list ul.filter li.header a:focus {
           text-decoration: none; }
           .ee-filters-list ul.filter li.header a:hover span, .ee-filters-list ul.filter li.header a:focus span {
@@ -22084,24 +22094,17 @@ label.control-label-left {
           .sidemenu.open > .sidemenu-menu.left .sidemenu.open .ee-filters-list ul.filter li.header a:hover .sidemenu-toggle:before,
           .ee-filters-list ul.filter li.header a:hover .sidemenu-toggle:before,
           .ee-filters-list ul.filter li.header a:hover header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-          header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-filters-list ul.filter li.header a:hover a:before, .ee-filters-list ul.filter li.header a:focus .icon, .ee-filters-list ul.filter li.header a:focus .select-wrapper div.select-dropdown:after, .select-wrapper .ee-filters-list ul.filter li.header a:focus div.select-dropdown:after,
+          header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-filters-list ul.filter li.header a:hover a:before, .ee-filters-list ul.filter li.header a:hover .collapse-trigger.header:after, .ee-filters-list ul.filter li.header a:focus .icon, .ee-filters-list ul.filter li.header a:focus .select-wrapper div.select-dropdown:after, .select-wrapper .ee-filters-list ul.filter li.header a:focus div.select-dropdown:after,
           .ee-filters-list ul.filter li.header a:focus .sidemenu.open > .sidemenu-menu.left .sidemenu.open .sidemenu-toggle:before,
           .sidemenu.open > .sidemenu-menu.left .sidemenu.open .ee-filters-list ul.filter li.header a:focus .sidemenu-toggle:before,
           .ee-filters-list ul.filter li.header a:focus .sidemenu-toggle:before,
           .ee-filters-list ul.filter li.header a:focus header > div .menu__main > div .navbar-collapse .navbar-nav > li a:before,
-          header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-filters-list ul.filter li.header a:focus a:before {
+          header > div .menu__main > div .navbar-collapse .navbar-nav > li .ee-filters-list ul.filter li.header a:focus a:before, .ee-filters-list ul.filter li.header a:focus .collapse-trigger.header:after {
             color: #4e256b;
             text-decoration: none; }
     .ee-filters-list ul.filter li .collapse > li:first-child,
     .ee-filters-list ul.filter li .collapsing > li:first-child {
       padding-top: 0; }
-    .ee-filters-list ul.filter li.collapse-trigger {
-      text-align: right;
-      cursor: pointer;
-      color: #652d86; }
-      .ee-filters-list ul.filter li.collapse-trigger:hover {
-        text-decoration: underline;
-        color: #4e256b; }
     .ee-filters-list ul.filter li label {
       cursor: pointer; }
       .ee-filters-list ul.filter li label span {
@@ -22111,6 +22114,29 @@ label.control-label-left {
     .ee-filters-list ul.filter li .control-label-left {
       font-weight: normal;
       padding-top: 0; }
+    .ee-filters-list ul.filter li ul {
+      padding-left: 0;
+      list-style: none; }
+  .ee-filters-list ul.filter .collapse-trigger {
+    text-align: right;
+    cursor: pointer;
+    display: block; }
+    .ee-filters-list ul.filter .collapse-trigger.header {
+      text-align: left;
+      color: #652d86; }
+      .ee-filters-list ul.filter .collapse-trigger.header:hover {
+        text-decoration: none;
+        color: #4e256b; }
+      .ee-filters-list ul.filter .collapse-trigger.header a {
+        color: #652d86; }
+      .ee-filters-list ul.filter .collapse-trigger.header:after {
+        content: "\e65f";
+        font-size: .9em;
+        float: right;
+        margin-top: 5px;
+        color: #652d86; }
+      .ee-filters-list ul.filter .collapse-trigger.header.collapsed:after {
+        content: "\e668"; }
 
 .white-bg {
   background-color: #fff; }
