@@ -14,10 +14,7 @@
   position: relative;
 }
 .slider.slider-horizontal {
-  width: 95% !important;
-  height: 30px;
-  margin-top: -10px;
-  padding-bottom: 45px;
+  width: 92%;
 }
 .slider.slider-horizontal .slider-track {
   height: 3px;
@@ -123,8 +120,8 @@
 .slider-handle:before {
   content: "\e713";
   color: $gray;
-  padding-left: 2px;
-  font-size: .8em;
+  padding-left: 3px;
+  font-size: .7em;
   @include transition(all 0.3s ease);
 }
 

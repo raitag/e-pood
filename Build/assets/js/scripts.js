@@ -25,10 +25,10 @@ $(document).ready(function() {
 
     $(".jsShowMoreCategories").unbind("click").click(function () {
         if ($(this).hasClass("moretext")) {
-            $(".jsShowMoreCategories span").html($(this).data("lesstext"));
+            $(this).find("span").html($(this).data("lesstext"));
             $(this).removeClass("moretext");
         } else {
-            $(".jsShowMoreCategories span").html($(this).data("moretext"));
+            $(this).find("span").html($(this).data("moretext"));
             $(this).addClass("moretext");
         }
     });
