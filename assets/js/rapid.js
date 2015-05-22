@@ -53,6 +53,7 @@
 /* @include ee-inputs */
 /* @include ee-select */
 /* @include summernote.min */
+/* @include ee-filter */
 
 // DATEPICKER
 /* @include pickadate-picker */

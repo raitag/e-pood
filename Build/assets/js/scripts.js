@@ -33,11 +33,6 @@ $(document).ready(function() {
         }
     });
 
-    $('.collapse-trigger').each(function () {
-        var $this = $(this);
-        $this.text($this.hasClass('collapsed') ? $this.data('moretext') : $this.data('lesstext'));
-    })
-
 }); // end document ready
 
 function BindSlideToggle() {
@@ -78,15 +73,6 @@ $('.js-datepicker').click( function( e ) {
     e.stopPropagation();
     e.preventDefault();
     picker.open();
-});
-
-$('.collapse-trigger').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
-    var $collapse = $this.closest('.filter').find('.collapse');
-    $this.toggleClass('collapsed');
-    $collapse.collapse('toggle');
-    $this.text($this.hasClass('collapsed') ? $this.data('moretext') : $this.data('lesstext'));
 });
 
 // counting rules for IE 8-9 as the limit is 4095

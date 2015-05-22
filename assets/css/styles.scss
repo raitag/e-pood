@@ -215,6 +215,11 @@ header {
   }
 }
 
+.noscroll {
+  overflow: hidden;
+  position: static;
+}
+
 @media (min-width: $screen-sm-min) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px;
@@ -250,6 +255,15 @@ header {
     .ee-middle-table .ee-product-price-md {
       margin-top: 0;
     }
+  }
+  header > div .header-menu__main > div .mobile-icons > ul > li:last-child {
+    margin-right: 0px;
+  }
+  header > div .menu__top .navbar-nav > li > a.navbar-brand {
+    padding: 0 15px;
+  }
+  header > div .header-menu__main > div .navbar-collapse .navbar-nav li a span[class*="icon"] {
+    width: 1.3em;
   }
 }
 
@@ -937,95 +951,145 @@ label.control-label-left {
   }
 }
 
-.ee-filters-list {
-  >div {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  ul.filter {
-    margin: 5px 0 0 0;
-    padding-left: 0;
-    list-style: none;
-    border-bottom: 1px solid #dbdbdb;
-    li {
-      padding: 0 0 2px 0;
-      &:last-child {
-        padding-bottom: 5px;
-      }
-      &.header {
-        color: $text-color;
-        font-weight: 600;
-        a {
-          color: $text-color;
-          .icon {
-            font-size: .9em;
-            color: $brand-primary;
-          }
-          &:hover,
-          &:focus {
-            text-decoration: none;
-            span {
-              text-decoration: underline;
-            }
-            .icon {
-              color: $brand-primary-a;
-              text-decoration: none;
-            } 
-          }
-        }
-      }
-      .collapse,
-      .collapsing {
-        > li:first-child {
-          padding-top: 0;
-        }
-      }
-      label {
+.ee-filters {
+  .filters-collapse-trigger {
+    color: $text-color;
+    h2 {
+      margin-top: 10px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $text-color;
+      cursor: default;
+    }
+    @media (max-width: $screen-xs-max) {
+      color: $brand-primary;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $brand-primary-a;
         cursor: pointer;
-        span {
-          color: #999;
-        }
-      }
-      .tsr-checkbox {
-        .tsr-checkboxStyled {
-          margin-top: 2px;
-        }
-      }
-      .control-label-left {
+      } 
+      &:after {
+        font-family: 'tsr-icons-all';
+        speak: none;
+        font-style: normal;
         font-weight: normal;
-        padding-top: 0;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        content: "\e6e3";
+        position: absolute;
+        right: 10px;
+        top: 11px;
+        font-size: 1.9em;
       }
-      ul {
-        padding-left: 0;
-        list-style: none;
+      &.collapsed {
+        &:after {
+          content: "\e6de";
+        }
       }
     }
-    .collapse-trigger {
-      text-align: right;
-      cursor: pointer;
-      display: block;
-      &.header {
-        text-align: left;
-        color: $brand-primary;
-        &:hover {
-          text-decoration: none;
-          color: $brand-primary-a;
+  }
+  .ee-filters-list {
+    >div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    ul.filter {
+      margin: 5px 0 0 0;
+      padding-left: 0;
+      list-style: none;
+      border-bottom: 1px solid #dbdbdb;
+      &:first-child {
+        margin-top: 0;
+      }
+      li {
+        padding: 0 0 2px 0;
+        &:last-child {
+          padding-bottom: 0px;
         }
-        a {
+        &.header {
+          color: $text-color;
+          font-weight: 600;
+          word-wrap: break-word;
+          a {
+            color: $text-color;
+            .icon {
+              font-size: .9em;
+              color: $brand-primary;
+            }
+            &:hover,
+            &:focus {
+              text-decoration: none;
+              span {
+                text-decoration: underline;
+              }
+              .icon {
+                color: $brand-primary-a;
+                text-decoration: none;
+              } 
+            }
+          }
+        }
+        .collapse,
+        .collapsing {
+          > li:first-child {
+            padding-top: 0;
+          }
+        }
+        label {
+          cursor: pointer;
+          span {
+            color: #999;
+          }
+        }
+        .tsr-checkbox {
+          .tsr-checkboxStyled {
+            margin-top: 2px;
+          }
+        }
+        .control-label-left {
+          font-weight: normal;
+          padding-top: 0;
+        }
+        ul {
+          padding-left: 0;
+          list-style: none;
+        }
+      }
+      > li:last-child {
+        padding-bottom: 5px;
+      }
+      .collapse-trigger {
+        text-align: right;
+        cursor: pointer;
+        display: block;
+        &.header {
+          text-align: left;
           color: $brand-primary;
-        }
-        &:after {
-          @extend .icon;
-          content: "\e65f";
-          font-size: .9em;
-          float: right;
-          margin-top: 5px;
-          color: $brand-primary;
-          @include transition(all 0.3s ease-out);
-        }
-        &.collapsed {
+          &:hover {
+            text-decoration: none;
+            color: $brand-primary-a;
+          }
+          a {
+            color: $brand-primary;
+          }
           &:after {
-            content: "\e668";
+            @extend .icon;
+            content: "\e65f";
+            font-size: .9em;
+            float: right;
+            margin-top: 5px;
+            color: $brand-primary;
+            @include transition(all 0.3s ease-out);
+          }
+          &.collapsed {
+            &:after {
+              content: "\e668";
+            }
           }
         }
       }

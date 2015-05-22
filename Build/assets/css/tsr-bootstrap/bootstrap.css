@@ -2946,7 +2946,8 @@ body {
       body header + section,
       body header + div,
       body header + .ee-breadcrumbs + section,
-      body header + .ee-breadcrumbs + div {
+      body header + .ee-breadcrumbs + div,
+      body header + div + section {
         margin-top: 100px; } }
   body header > div > .navbar-default {
     display: none; }
@@ -2955,6 +2956,8 @@ body {
     margin-top: 200px; }
   body.admin-login header > div > .navbar-default {
     display: block; }
+  body.admin-login .ee-breadcrumbs {
+    margin-top: 200px; }
   @media (max-width: 991px) {
     body.admin-login header + .ee-breadcrumbs + section {
       margin-top: 200px; } }
@@ -2964,8 +2967,7 @@ body {
     body.admin-login header + .ee-breadcrumbs + section,
     body.admin-login header + .ee-breadcrumbs + div {
       margin-top: 150px; }
-    body.admin-login header > div .header-menu__main > div .navbar-collapse,
-    body.admin-login header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu {
+    body.admin-login header > div .header-menu__main > div .navbar-collapse {
       top: 155px; } }
 
 header {

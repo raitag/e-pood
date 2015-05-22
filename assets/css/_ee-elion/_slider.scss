@@ -15,6 +15,9 @@
 }
 .slider.slider-horizontal {
   width: 92%;
+  @media (max-width: $screen-xs-max) {
+    width: 95%;
+  }
 }
 .slider.slider-horizontal .slider-track {
   height: 3px;

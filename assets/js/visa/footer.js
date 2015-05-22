@@ -8,7 +8,7 @@ $(window).resize(function () {
 
 function footer() {
     $footer = $('footer');
-    if(Modernizr.mq('only screen and (max-width: 719px)')) {
+    if(Modernizr.mq('only screen and (max-width: 767px)')) {
         $footer.find('.collapse').removeClass('in');
         $footer.find('[data-toggle="collapse"]').addClass('collapsed');
     } else {

@@ -55,7 +55,8 @@ body {
     header + section,
     header + div,
     header + .ee-breadcrumbs + section,
-    header + .ee-breadcrumbs + div {
+    header + .ee-breadcrumbs + div,
+    header + div + section {
       margin-top: 100px;
     }
   }
@@ -71,6 +72,9 @@ body {
     header > div > .navbar-default {
       display: block;
     }
+    .ee-breadcrumbs {
+      margin-top: 200px;
+    }
     @media (max-width: $screen-sm-max) {
       header + .ee-breadcrumbs + section {
         margin-top: 200px;
@@ -83,8 +87,7 @@ body {
       header + .ee-breadcrumbs + div {
         margin-top: 150px;
       }
-      header > div .header-menu__main > div .navbar-collapse,
-      header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu {
+      header > div .header-menu__main > div .navbar-collapse {
         top: 155px;
       }
     }
