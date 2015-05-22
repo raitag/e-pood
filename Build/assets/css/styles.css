@@ -21583,7 +21583,10 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, 
     margin-right: 0px; }
 
   .navbar-nav.navbar-right:last-child {
-    margin-right: 0px; } }
+    margin-right: 0px; }
+
+  .nav-top.nav-down header .hide__scroll--top {
+    position: static !important; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-right {
     margin-right: -15px; } }

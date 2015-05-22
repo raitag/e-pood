@@ -222,6 +222,9 @@ header {
   .navbar-nav.navbar-right:last-child {
     margin-right: 0px;
   }
+  .nav-top.nav-down header .hide__scroll--top {
+    position: static !important;
+  }
 }
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   .navbar-right {
@@ -253,6 +256,7 @@ header {
 [data-toggle="close-dropdown"] {
   z-index: 1;
 }
+
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
 @function set-notification-text-color($color) {
