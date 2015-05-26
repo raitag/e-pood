@@ -270,7 +270,27 @@ header {
 [data-toggle="close-dropdown"] {
   z-index: 1;
 }
-
+@media (min-width: 850px) and (max-width: 930px) {
+  .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 849px) {
+  .header-menu__main .navbar-nav > li {
+    width: 82px;
+    > a {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
+    padding-right: 5px;
+  }
+  .nav-up header .header-menu__main .menu__main--additional > li > a, .nav-down header .header-menu__main .menu__main--additional > li > a {
+    width: 30px;
+  }
+}
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
 @function set-notification-text-color($color) {
@@ -964,7 +984,7 @@ label.control-label-left {
       color: $text-color;
       cursor: default;
     }
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       color: $brand-primary;
       &:hover,
       &:active,

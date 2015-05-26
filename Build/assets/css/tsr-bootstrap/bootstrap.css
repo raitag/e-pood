@@ -2939,7 +2939,7 @@ body {
       margin-bottom: 304px; }
       body header + .ee-breadcrumbs + section,
       body header + .ee-breadcrumbs + div {
-        margin-top: 200px; } }
+        margin-top: 150px; } }
   @media (max-width: 767px) {
     body {
       margin-bottom: 0; }

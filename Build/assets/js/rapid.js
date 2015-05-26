@@ -4565,6 +4565,7 @@ jQuery(document).ready(function($){
             hideMobileMenu();
         }
     });
+    setActiveMenuItem();
     // close menus on backdrop click
     $(document).on( 'click', '.sidemenu-backdrop', function(e){
         clickedEl = $(e.currentTarget);
@@ -4732,6 +4733,25 @@ function hideSideMenuBackDrop() {
         $('.sidemenu-backdrop').remove();
     }, 200);
 }
+function setActiveMenuItem() {
+    var path = window.location.pathname;
+    var arr = path.split('/');
+    var hasMatch = false;
+    $('#menu__main > ul > li').each(function(){
+        var slug = $(this).attr('data-url');
+        if( arr.indexOf(slug) != -1 ) {
+            $(this).addClass('current-active');
+            hasMatch = true;
+        }
+    });
+    if( !hasMatch ) {
+        var last = arr[arr.length - 1];
+        if( last == 'era' || last == 'ari' ) {
+            $('#menu__main > ul > li[data-url="avaleht"]').addClass('current-active');
+        }
+    }
+}
+
 
 (function() {
     footer();
@@ -8126,7 +8146,7 @@ function filters() {
     });
 
     var $filters = $('.ee-filters');
-    if(Modernizr.mq('only screen and (max-width: 767px)')) {
+    if(Modernizr.mq('only screen and (max-width: 991px)')) {
         $filters.find('.filter > li > .collapse').removeClass('in');
         $filters.find('.ee-filters-list').removeClass('in');
         $filters.find('.filter > .collapse-trigger').removeClass('collapsed');
@@ -8140,9 +8160,9 @@ function filters() {
 }
 
 $('.filters-collapse-trigger').on('click', function(e){
-  if(Modernizr.mq('only screen and (min-width: 768px)')) {
-    e.stopPropagation();
-  }    
+    if(Modernizr.mq('only screen and (min-width: 991px)')) {
+        e.stopPropagation();
+    }    
 });
 
 

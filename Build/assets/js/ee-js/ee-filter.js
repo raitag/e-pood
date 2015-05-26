@@ -32,7 +32,7 @@ function filters() {
     });
 
     var $filters = $('.ee-filters');
-    if(Modernizr.mq('only screen and (max-width: 767px)')) {
+    if(Modernizr.mq('only screen and (max-width: 991px)')) {
         $filters.find('.filter > li > .collapse').removeClass('in');
         $filters.find('.ee-filters-list').removeClass('in');
         $filters.find('.filter > .collapse-trigger').removeClass('collapsed');
@@ -46,7 +46,7 @@ function filters() {
 }
 
 $('.filters-collapse-trigger').on('click', function(e){
-  if(Modernizr.mq('only screen and (min-width: 768px)')) {
-    e.stopPropagation();
-  }    
+    if(Modernizr.mq('only screen and (min-width: 991px)')) {
+        e.stopPropagation();
+    }    
 });

@@ -8,7 +8,7 @@ $searchBoxBg:#754292;
   margin: 0;
   padding: 0;
   width: $searchBoxWidth;
-  height: 47px;
+  height: 50px;
   right: 15px;
 
   &.navbar-form {
@@ -87,14 +87,16 @@ $searchBoxBg:#754292;
 
     &.focus {
       .form-group {
-
+        width: 290px;
+            background: $brand-primary;
+            position: absolute;
+            right: 0;
         input[type="text"] {
           color: #333;
           background: rgba(246, 246, 246, 1) !important;
         }
 
       }
-
       button {
         color: $brand__link;
       }
@@ -213,14 +215,33 @@ $searchBoxBg:#754292;
     }
 
   }
-  @media (min-width: 768px) and (max-width: 810px) {
+  @media (min-width: 768px) and (max-width: 940px) {
     &.navbar-form {
-      width: $searchBoxWidth - 35;
+      width: 40px;
       .form-group {
         .twitter-typeahead {
-          width: $searchBoxWidth - 35;
+          width: 40px;
+          right: 0;
           input[type="text"] {
             width: inherit;
+            padding-right: 30px;
+            background-color: transparent !important;
+          }
+        }
+      }
+      .btn-search {
+        pointer-events: none;
+        right: 4px;
+      }
+      &.focus {
+        .btn-search {
+            pointer-events: auto;
+        }
+        .twitter-typeahead {
+          width: 280px;
+          input[type="text"] {
+            padding-right: 35px;
+            background: #f6f6f6 !important;
           }
         }
       }
