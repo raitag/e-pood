@@ -37,15 +37,6 @@
       font-weight: 400;
       word-wrap:break-word;
       padding-right: 15px;
-      &:after {
-        content: "\e66a";
-        font-family: 'tsr-icons-all';
-        font-size: em(18);
-        position: absolute;
-        right: 10px;
-        bottom: 35%;
-        color: #fff;
-      }
     }
   }
 
@@ -69,15 +60,6 @@
     border-radius: $border-radius-base;
     h6 {
     color: #fff;
-      &:after {
-        content: "\e66a";
-        font-family: 'tsr-icons-all';
-        font-size: em(18);
-        position: absolute;
-        right: 10px;
-        bottom: 35%;
-        color: #fff;
-      }
     }
   }
 

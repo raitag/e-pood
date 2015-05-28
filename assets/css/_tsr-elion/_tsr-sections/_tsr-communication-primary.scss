@@ -353,13 +353,13 @@ a:hover{
 			font-family: "tsr-icons-all"; 
 			font-size: 25px; 
 			display: inline-block; 
-			content: '\e66a'; 
+			content: "\e669"; 
 			padding:0 6px; 
 			position:relative; 
 			z-index:20;
 		 }
 		 &.tsr-next:before  { 
-		 	content: '\e668'; 
+		 	content: '\e66a'; 
 		 }
 		 &:after {
 	 		font-family: "tsr-icons-all";

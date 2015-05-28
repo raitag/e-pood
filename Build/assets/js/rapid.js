@@ -4261,6 +4261,7 @@ TSR - CAROUSEL LISTING
   })
 
   function arrowPosition ($indicators) {
+    if(!$indicators.length) return false;
     var $activeIndicator = $indicators.find('.active');
     var leftPos = $activeIndicator.offset().left;
     var arrowPos = leftPos + $activeIndicator.width() / 2;
@@ -4413,7 +4414,7 @@ $(window).scroll(function(event){
 
 /* login block dropdown */
 function loginBlockDropdown() {
-    $('[data-toggle="login-dropdown"]').bind('click', function(e){
+    $('[data-toggle="login-dropdown"]').unbind("click").bind('click', function(e){
         var _curEl = $(e.currentTarget);
         _curEl.parent().parent().find('.active').not(_curEl.parent()).removeClass('active');
         _curEl.parent().toggleClass('active');

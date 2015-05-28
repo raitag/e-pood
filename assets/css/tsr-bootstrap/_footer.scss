@@ -2,6 +2,11 @@ $footer-font-size:              14px;
 $footer-bg-color:               #dbdbdb;
 $footer-border-color:           #ccc;
 
+@media (min-width: $screen-sm-min) {
+  .noscroll footer {
+    position: fixed;
+  }
+}
 footer {
   padding:10px 0;
   background-color: $footer-bg-color;

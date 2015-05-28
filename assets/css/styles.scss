@@ -217,15 +217,21 @@ header {
 
 .noscroll {
   overflow: hidden;
-  position: static;
 }
 
 .header-menu__main .navbar-nav > li {
   width: 100px;
 }
 
-.sidemenu-menu {
-  width: 290px;
+// .sidemenu-menu {
+//   width: 290px;
+// }
+
+.searchbox-responsive.navbar-form.focus .form-group {
+  width: 300px;
+  @media (max-width: $screen-xs-max) {
+    width: 280px;
+  }
 }
 
 @media (min-width: $screen-sm-min) {

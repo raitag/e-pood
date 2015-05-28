@@ -4176,6 +4176,9 @@ header .menu__top .navbar-nav > .active > a:focus {
   .noscroll::-webkit-scrollbar {
     -webkit-appearance: none; }
 
+@media (min-width: 768px) {
+  .noscroll footer {
+    position: fixed; } }
 footer {
   padding: 10px 0;
   background-color: #dbdbdb;

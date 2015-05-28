@@ -245,6 +245,7 @@
   })
 
   function arrowPosition ($indicators) {
+    if(!$indicators.length) return false;
     var $activeIndicator = $indicators.find('.active');
     var leftPos = $activeIndicator.offset().left;
     var arrowPos = leftPos + $activeIndicator.width() / 2;
