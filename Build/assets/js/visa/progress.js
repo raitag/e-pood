@@ -46,9 +46,8 @@ $(document).ready(function () {
             }
         }
 
-        var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
-        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
-        if(!jQuery.browser.mobile && !isAndroid && !isiDevice){
+        var device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if(!jQuery.browser.mobile && !device && !window.ActiveXObject) {
             $(window).resize(function() {
                 placeContent();
             });

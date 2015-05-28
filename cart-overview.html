@@ -1,15 +1,18 @@
 
 <!-- @include _header.html -->
-<!-- <div class="alert full-size alert-info" id="success1">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Elioni kliendile on paljud tooted soodsamad - </span>
-            <a href="#">logi e-poodi sisse</a>.
-        </div>
-        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div> -->
+<div class="alert full-size flyover alert-success shoppingCartSuccess jsRolldownMessageSuccess in top" style="cursor: pointer;">
+  <div class="container">
+  <span class="icon icon-buy"></span>
+  <div>
+  <span><strong>Toode lisati ostukorvi.</strong></span>
+  <a class="read-more jsRolldownMessageRedirectUrl" href="/store/checkout" onclick="_gaq.push(['_trackEvent', 'UX', 'Ostu Flow', 'Link Suundu Ostukorvi']);">
+  <span class="icon icon-arrow-right"></span>
+  Suundu ostukorvi
+  </a>
+  </div>
+  <a href="#" class="icon icon-x close-btn jsRolldownMessageClose"></a>
+  </div>
+</div>
 <!-- @include _mainnav.html -->
 <!-- $title Ostukorv-1 -->
 <!-- $pagejs js-cart -->

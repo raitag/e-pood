@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     BindSlideToggle();
     cloneRightSideMainMenu();
+    SetContentMarginTop();
 
     // COLLAPSE TABS
     // https://github.com/okendoken/bootstrap-tabcollapse
@@ -74,6 +75,22 @@ $('.js-datepicker').click( function( e ) {
     e.preventDefault();
     picker.open();
 });
+
+$(window).resize(function () {
+    SetContentMarginTop();
+});
+
+function SetContentMarginTop() {
+    var hHeight = $('header').height();
+    var wWidth = $(window).width();
+    if (wWidth < 992) {
+        $('.ee-breadcrumbs.hidden-xs.hidden-sm.hidden-print+div.container').css('margin-top', hHeight + 'px');
+        $('.container.visible-print').removeAttr('style');
+    } else {
+        $('.container.visible-print').next().css('margin-top', hHeight + 'px');
+        $('.ee-breadcrumbs.hidden-xs.hidden-sm.hidden-print+div.container').removeAttr('style');
+    }
+}
 
 // counting rules for IE 8-9 as the limit is 4095
 // function countCSSRules() {

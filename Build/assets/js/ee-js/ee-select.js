@@ -65,6 +65,32 @@ $(function () {
                              + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div>');
           }
           
+          var isScrolling = false;
+          var isScrollingStarted = false;
+          var timeoutScrolling;
+
+	      if (/MSIE |Trident\/|Edge\//i.test(navigator.userAgent)) {
+		      options
+			      .on("mouseup", function() {
+				      var blur = isScrolling && !isScrollingStarted;
+				      isScrolling = false;
+
+				      if (blur) $newSelect.blur();
+			      })
+			      .on("mousedown", function() {
+				      isScrolling = true;
+			      })
+			      .scroll(function() {
+				      isScrolling = true;
+				      isScrollingStarted = true;
+				      clearTimeout(timeoutScrolling);
+				      timeoutScrolling = setTimeout(function() {
+					      isScrollingStarted = false;
+					      $newSelect.focus();
+				      }, 250);
+			      });
+	      }
+	      
         $select.before($newSelect);
         $('body').append(options);
         // Check if section element is disabled
@@ -73,17 +99,23 @@ $(function () {
         }
         $select.addClass('initialized');
 
-        $newSelect.on('focus', function(){
-          $(this).trigger('open');
-          label = $(this).val();
-          selectedOption = options.find('li').filter(function() {
-            return $(this).text().toLowerCase() === label.toLowerCase();
-          })[0];
-          activateOption(options, selectedOption);
+        $newSelect.on('focus', function () {
+
+  	       if (isScrolling) {
+  	        	isScrolling = false;
+  	        	return;
+  	       }
+  	       
+            $(this).trigger('open');
+            label = $(this).val();
+            selectedOption = options.find('li').filter(function() {
+              return $(this).text().toLowerCase() === label.toLowerCase();
+            })[0];
+            activateOption(options, selectedOption);
         });
 
-        $newSelect.on('blur', function(){
-          $(this).trigger('close');
+        $newSelect.on('blur', function () {
+		        if (!isScrolling)  $(this).trigger('close');
         });
 
         // Make option as selected and scroll to selected position

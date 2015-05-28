@@ -33,10 +33,7 @@
       .on('mouseenter.bs.hero', $.proxy(this.pause, this))
       .on('mouseleave.bs.hero', $.proxy(this.cycle, this))
 
-    var $activeIndicator = this.$indicators.find('.active');
-    var leftPos = $activeIndicator.offset().left;
-    var arrowPos = leftPos + $activeIndicator.width() / 2;
-    this.$indicators.find('.arrow').css('left', arrowPos + 'px');
+    arrowPosition(this.$indicators);
   }
 
   Hero.VERSION  = '3.3.2'
@@ -245,6 +242,17 @@
       var $hero = $(this)
       Plugin.call($hero, $hero.data())
     })
+  })
+
+  function arrowPosition ($indicators) {
+    var $activeIndicator = $indicators.find('.active');
+    var leftPos = $activeIndicator.offset().left;
+    var arrowPos = leftPos + $activeIndicator.width() / 2;
+    $indicators.find('.arrow').css('left', arrowPos + 'px');
+  }
+
+  $(window).on('resize', function () {
+    arrowPosition($('.hero-indicators'));
   })
 
 }(jQuery);

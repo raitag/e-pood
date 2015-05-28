@@ -220,6 +220,14 @@ header {
   position: static;
 }
 
+.header-menu__main .navbar-nav > li {
+  width: 100px;
+}
+
+.sidemenu-menu {
+  width: 290px;
+}
+
 @media (min-width: $screen-sm-min) {
   .navbar-form.navbar-right:last-child {
     margin-right: 0px;
@@ -270,18 +278,19 @@ header {
 [data-toggle="close-dropdown"] {
   z-index: 1;
 }
-@media (min-width: 850px) and (max-width: 930px) {
+@media (min-width: 850px) and (max-width: 935px) {
   .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
     padding-right: 5px;
     padding-left: 5px;
   }
 }
-@media (min-width: 768px) and (max-width: 849px) {
+@media (min-width: 768px) and (max-width: 935px) {
   .header-menu__main .navbar-nav > li {
     width: 82px;
     > a {
       padding-left: 0;
       padding-right: 0;
+      font-size: 13px;
     }
   }
   .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
@@ -290,6 +299,10 @@ header {
   .nav-up header .header-menu__main .menu__main--additional > li > a, .nav-down header .header-menu__main .menu__main--additional > li > a {
     width: 30px;
   }
+}
+
+.sub-menu ul li > p {
+  padding-bottom: 0;
 }
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
@@ -1156,4 +1169,8 @@ label.control-label-left {
 
 .tab-content {
   background: $body-bg;
+}
+
+.shoppingcart-header{
+  min-width:55px;
 }

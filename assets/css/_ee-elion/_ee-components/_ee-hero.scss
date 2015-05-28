@@ -4,6 +4,7 @@
 
 .hero-banner  {
   position: relative;
+  height: auto !important;
 }
 
 // Wrapper for the slide container and indicators
@@ -116,7 +117,7 @@
     position: absolute;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 9px solid $brand-primary;
+    border-top: 9px solid $purple-h;
     left: 50%;
     top: 0;
     margin-left: -8px;
@@ -127,7 +128,7 @@
     position: relative;
     cursor: pointer;
     margin: 12px 20px;
-    font-weight: 500;
+    font-weight: bold;
     color: #999;
     font-size: 14px;
     @include transition(color 0.3s ease-out);

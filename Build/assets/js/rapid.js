@@ -4049,10 +4049,7 @@ TSR - CAROUSEL LISTING
       .on('mouseenter.bs.hero', $.proxy(this.pause, this))
       .on('mouseleave.bs.hero', $.proxy(this.cycle, this))
 
-    var $activeIndicator = this.$indicators.find('.active');
-    var leftPos = $activeIndicator.offset().left;
-    var arrowPos = leftPos + $activeIndicator.width() / 2;
-    this.$indicators.find('.arrow').css('left', arrowPos + 'px');
+    arrowPosition(this.$indicators);
   }
 
   Hero.VERSION  = '3.3.2'
@@ -4261,6 +4258,17 @@ TSR - CAROUSEL LISTING
       var $hero = $(this)
       Plugin.call($hero, $hero.data())
     })
+  })
+
+  function arrowPosition ($indicators) {
+    var $activeIndicator = $indicators.find('.active');
+    var leftPos = $activeIndicator.offset().left;
+    var arrowPos = leftPos + $activeIndicator.width() / 2;
+    $indicators.find('.arrow').css('left', arrowPos + 'px');
+  }
+
+  $(window).on('resize', function () {
+    arrowPosition($('.hero-indicators'));
   })
 
 }(jQuery);
@@ -4840,9 +4848,8 @@ $(document).ready(function () {
             }
         }
 
-        var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
-        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
-        if(!jQuery.browser.mobile && !isAndroid && !isiDevice){
+        var device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if(!jQuery.browser.mobile && !device && !window.ActiveXObject) {
             $(window).resize(function() {
                 placeContent();
             });
@@ -7814,6 +7821,32 @@ $(function () {
                              + ' data-activates="select-options-' + uniqueID + '">' + label.html() + '</div>');
           }
           
+          var isScrolling = false;
+          var isScrollingStarted = false;
+          var timeoutScrolling;
+
+	      if (/MSIE |Trident\/|Edge\//i.test(navigator.userAgent)) {
+		      options
+			      .on("mouseup", function() {
+				      var blur = isScrolling && !isScrollingStarted;
+				      isScrolling = false;
+
+				      if (blur) $newSelect.blur();
+			      })
+			      .on("mousedown", function() {
+				      isScrolling = true;
+			      })
+			      .scroll(function() {
+				      isScrolling = true;
+				      isScrollingStarted = true;
+				      clearTimeout(timeoutScrolling);
+				      timeoutScrolling = setTimeout(function() {
+					      isScrollingStarted = false;
+					      $newSelect.focus();
+				      }, 250);
+			      });
+	      }
+	      
         $select.before($newSelect);
         $('body').append(options);
         // Check if section element is disabled
@@ -7822,17 +7855,23 @@ $(function () {
         }
         $select.addClass('initialized');
 
-        $newSelect.on('focus', function(){
-          $(this).trigger('open');
-          label = $(this).val();
-          selectedOption = options.find('li').filter(function() {
-            return $(this).text().toLowerCase() === label.toLowerCase();
-          })[0];
-          activateOption(options, selectedOption);
+        $newSelect.on('focus', function () {
+
+  	       if (isScrolling) {
+  	        	isScrolling = false;
+  	        	return;
+  	       }
+  	       
+            $(this).trigger('open');
+            label = $(this).val();
+            selectedOption = options.find('li').filter(function() {
+              return $(this).text().toLowerCase() === label.toLowerCase();
+            })[0];
+            activateOption(options, selectedOption);
         });
 
-        $newSelect.on('blur', function(){
-          $(this).trigger('close');
+        $newSelect.on('blur', function () {
+		        if (!isScrolling)  $(this).trigger('close');
         });
 
         // Make option as selected and scroll to selected position
@@ -8201,6 +8240,7 @@ $(document).ready(function() {
 
     BindSlideToggle();
     cloneRightSideMainMenu();
+    SetContentMarginTop();
 
     // COLLAPSE TABS
     // https://github.com/okendoken/bootstrap-tabcollapse
@@ -8273,6 +8313,22 @@ $('.js-datepicker').click( function( e ) {
     e.preventDefault();
     picker.open();
 });
+
+$(window).resize(function () {
+    SetContentMarginTop();
+});
+
+function SetContentMarginTop() {
+    var hHeight = $('header').height();
+    var wWidth = $(window).width();
+    if (wWidth < 992) {
+        $('.ee-breadcrumbs.hidden-xs.hidden-sm.hidden-print+div.container').css('margin-top', hHeight + 'px');
+        $('.container.visible-print').removeAttr('style');
+    } else {
+        $('.container.visible-print').next().css('margin-top', hHeight + 'px');
+        $('.ee-breadcrumbs.hidden-xs.hidden-sm.hidden-print+div.container').removeAttr('style');
+    }
+}
 
 // counting rules for IE 8-9 as the limit is 4095
 // function countCSSRules() {
