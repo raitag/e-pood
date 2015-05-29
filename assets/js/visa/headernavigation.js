@@ -27,7 +27,7 @@ $(window).on('load', function() {
     }
     loginBlockDropdown();
     headernavigation();
-};
+});
 
 startCheck();
 
