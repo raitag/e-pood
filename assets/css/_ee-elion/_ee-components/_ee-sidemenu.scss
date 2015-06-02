@@ -10,11 +10,7 @@
   }
 
   > li {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    & .firstlevel:hover {
+    &.firstlevel:hover {
       color: #fff;
       background: $link-hover-color;
       border-radius: $border-radius-base;
@@ -28,6 +24,7 @@
       width: 100%;
       padding: 5px 14px;
       border-bottom: 1px solid $gray;
+      position: relative;
     }
 
     &:hover h6,
@@ -37,6 +34,15 @@
       font-weight: 400;
       word-wrap:break-word;
       padding-right: 15px;
+      &:after {
+        content: "\e66a";
+        font-family: 'tsr-icons-all';
+        font-size: 1.2em;
+        position: absolute;
+        right: 10px;
+        bottom: 35%;
+        color: $body-bg;
+      }
     }
   }
 

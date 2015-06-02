@@ -209,7 +209,7 @@ header {
               > span[class*="icon-arrow"] {
                 font-size: $font-size-base - 2;
                 position: absolute;
-                top: 24%;
+                top: 11px;
                 right: 10px;
               }
             }
@@ -244,7 +244,7 @@ header {
               > a {
                 span:first-child {
                   position: absolute;
-                  top: 25%;
+                  top: 11px;
                 }
                 span:last-child {
                   display: block;

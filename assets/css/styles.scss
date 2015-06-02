@@ -279,6 +279,13 @@ header {
   header > div .header-menu__main > div .navbar-collapse .navbar-nav li a span[class*="icon"] {
     width: 1.3em;
   }
+
+  .nav-down header>div .header-menu__main>div .mobile-icons>ul>li.sidemenu>.sidemenu-menu {
+    bottom: 35px;
+  }
+  header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu-visible > .sidemenu-menu {
+    bottom: 35px;
+  }
 }
 
 [data-toggle="close-dropdown"] {
