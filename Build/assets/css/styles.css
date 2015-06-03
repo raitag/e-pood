@@ -7758,7 +7758,7 @@ section.content {
 
 b,
 strong {
-  font-weight: 500; }
+  font-weight: 600; }
 
 .container {
   min-width: 320px; }
@@ -8799,6 +8799,8 @@ header .menu__top .navbar-nav > .active > a:focus {
         height: 32px;
         position: absolute !important;
         top: 50% !important;
+        -webkit-transform: translateY(-50%) !important;
+        -ms-transform: translateY(-50%) !important;
         transform: translateY(-50%) !important;
         width: 180px; }
       .searchbox-responsive.navbar-form .form-group .form-control {
@@ -8841,6 +8843,8 @@ header .menu__top .navbar-nav > .active > a:focus {
       cursor: pointer;
       width: auto;
       top: 50% !important;
+      -webkit-transform: translateY(-50%) !important;
+      -ms-transform: translateY(-50%) !important;
       transform: translateY(-50%) !important; }
       .searchbox-responsive.navbar-form button.focus {
         color: #652d86; }
