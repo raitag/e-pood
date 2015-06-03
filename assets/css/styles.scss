@@ -209,23 +209,16 @@ header {
     left: 25px;
     top: 6px;
     border:0px !important;
+    position: absolute;
   }
   .header-menu__main .navbar-nav.navbar-right > li.long-link > a > span {
     padding-top: 0;
   }
 }
 
-.noscroll {
-  overflow: hidden;
-}
-
 .header-menu__main .navbar-nav > li {
   width: 100px;
 }
-
-// .sidemenu-menu {
-//   width: 290px;
-// }
 
 .searchbox-responsive.navbar-form.focus .form-group {
   width: 300px;
@@ -311,6 +304,12 @@ header {
   }
   .nav-up header .header-menu__main .menu__main--additional > li > a, .nav-down header .header-menu__main .menu__main--additional > li > a {
     width: 30px;
+  }
+  .nav-down,
+  .nav-up {
+    header .header-menu__main .menu__main--additional > li > a > span.shoppingCartBadgeProductCount {
+      left: 13px;
+    }
   }
 }
 

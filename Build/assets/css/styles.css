@@ -8336,6 +8336,8 @@ header .menu__top .navbar-nav > .active > a:focus {
   .sidemenu-menu .sidemenu.sidemenu-open > a {
     background: #f6f6f6; }
   .sidemenu-menu .sidemenu.sidemenu-visible .sidemenu-menu {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0); }
   .sidemenu-menu ul {
     list-style: none;
@@ -8486,12 +8488,18 @@ header .menu__top .navbar-nav > .active > a:focus {
 .sidemenu-menu.sidemenu-menu-open {
   opacity: 0;
   display: block;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
   z-index: -1; }
 .sidemenu-menu.sidemenu-menu-visible {
   opacity: 1;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%); }
 .sidemenu-menu.right.sidemenu-menu-visible {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%); }
 
 .nav-up .navbar-collapse .nav li > a br, .nav-down .navbar-collapse .nav li > a br {
@@ -8601,6 +8609,8 @@ header .menu__top .navbar-nav > .active > a:focus {
       box-shadow: none;
       z-index: 0;
       border-top: 0;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
       transform: translateX(-100%);
       opacity: 0;
       transition: .3s ease; }
@@ -8610,6 +8620,8 @@ header .menu__top .navbar-nav > .active > a:focus {
         display: block; }
       header > div .header-menu__main > div .navbar-collapse.navbar-mobile-visible {
         opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0); }
       header > div .header-menu__main > div .navbar-collapse .navbar-nav {
         margin: 0; }
@@ -8732,6 +8744,8 @@ header .menu__top .navbar-nav > .active > a:focus {
           width: 280px;
           overflow: auto;
           opacity: 0;
+          -webkit-transform: translateX(100%);
+          -ms-transform: translateX(100%);
           transform: translateX(100%); }
           .nav-down header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu > .sidemenu-menu {
             top: 55px; }
@@ -8775,6 +8789,8 @@ header .menu__top .navbar-nav > .active > a:focus {
           display: block; }
         header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu-visible > .sidemenu-menu {
           opacity: 1;
+          -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
           transform: translateX(0); } }
 /* only show the icon part of the logo when viewport is extra narrow */
 @media (max-width: 340px) {
@@ -8909,6 +8925,8 @@ header .menu__top .navbar-nav > .active > a:focus {
           position: absolute;
           top: 50% !important;
           transform: translateY(-50%) !important;
+          -webkit-transform: translateY(-50%) !important;
+          -ms-transform: translateY(-50%) !important;
           z-index: 3; }
         .searchbox-responsive .tt-menu .tt-dataset .tt-suggestion span {
           display: table-cell;
@@ -8936,6 +8954,8 @@ header .menu__top .navbar-nav > .active > a:focus {
         .searchbox-responsive .tt-menu .tt-dataset .tt-footer a {
           position: absolute;
           top: 50% !important;
+          -webkit-transform: translateY(-50%) !important;
+          -ms-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;
           left: 0;
           right: 0;
@@ -21950,13 +21970,11 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, 
   font-size: 12px !important;
   left: 25px;
   top: 6px;
-  border: 0px !important; }
+  border: 0px !important;
+  position: absolute; }
 .nav-down .header-menu__main .navbar-nav.navbar-right > li.long-link > a > span,
 .nav-up .header-menu__main .navbar-nav.navbar-right > li.long-link > a > span {
   padding-top: 0; }
-
-.noscroll {
-  overflow: hidden; }
 
 .header-menu__main .navbar-nav > li {
   width: 100px; }
@@ -22028,7 +22046,11 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, 
     padding-right: 5px; }
 
   .nav-up header .header-menu__main .menu__main--additional > li > a, .nav-down header .header-menu__main .menu__main--additional > li > a {
-    width: 30px; } }
+    width: 30px; }
+
+  .nav-down header .header-menu__main .menu__main--additional > li > a > span.shoppingCartBadgeProductCount,
+  .nav-up header .header-menu__main .menu__main--additional > li > a > span.shoppingCartBadgeProductCount {
+    left: 13px; } }
 .sub-menu ul li > p {
   padding-bottom: 0; }
 

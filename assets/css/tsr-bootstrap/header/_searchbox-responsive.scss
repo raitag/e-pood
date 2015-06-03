@@ -167,6 +167,8 @@ $searchBoxBg:#754292;
           position: absolute;
           top: 50% !important;
           transform: translateY(-50%) !important;
+          -webkit-transform: translateY(-50%) !important;
+          -ms-transform: translateY(-50%) !important;
           z-index: 3;
         }
         span {
@@ -203,6 +205,8 @@ $searchBoxBg:#754292;
         a {
           position: absolute;
           top: 50% !important;
+          -webkit-transform: translateY(-50%) !important;
+          -ms-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;
           left:0;
           right:0;
