@@ -92,9 +92,7 @@ $mainMenuIndicatorPos:42%;
     }
     &.sidemenu-visible {
       .sidemenu-menu {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
+        @include translate(0, 0);
       }
     }
   }
@@ -221,10 +219,6 @@ $mainMenuIndicatorPos:42%;
       background: #f6f6f6 !important;
       box-shadow: none;
     }
-    .tt-hint {
-      display: none;
-    }
-  
     .tt-suggestion {
       text-align: left;
     }
@@ -251,7 +245,6 @@ $mainMenuIndicatorPos:42%;
   }
 
   .mobile-search {
-    overflow: visible;
     .searchbox-responsive {
       width: 100%;
       left: 0;
@@ -263,10 +256,6 @@ $mainMenuIndicatorPos:42%;
         width: 100% !important;
         height: auto !important;
         padding: 20px;
-
-        .tt-hint {
-          display: none;
-        }
 
         input[type="text"]{
           width: 100%;
@@ -321,21 +310,15 @@ $mainMenuIndicatorPos:42%;
   &.sidemenu-menu-open {
     opacity: 0;
     display: block;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    @include translate(0, 0);
     z-index: -1;
   }
   &.sidemenu-menu-visible {
     opacity: 1;
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
+    @include translate(100%, 0);
   }
   &.right.sidemenu-menu-visible {
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
+    @include translate(100%, 0);
   }
 }
 .nav-up, .nav-down {
@@ -476,9 +459,7 @@ $mainMenuIndicatorPos:42%;
         box-shadow: none;
         z-index: 0;
         border-top: 0;
-        -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        transform: translateX(-100%);
+        @include translate(-100%, 0);
         opacity: 0;
         transition: .3s ease;
         .nav-down & {
@@ -489,9 +470,7 @@ $mainMenuIndicatorPos:42%;
         }
         &.navbar-mobile-visible {
           opacity: 1;
-          -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
-          transform: translateX(0);
+          @include translate(0, 0);
         }
         .navbar-nav {
           margin: 0;
@@ -652,11 +631,10 @@ $mainMenuIndicatorPos:42%;
                 right: 0;
                 display: none;
                 width: 280px;
-                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                overflow-y: scroll;
                 opacity: 0;
-                -webkit-transform: translateX(100%);
-                -ms-transform: translateX(100%);
-                transform: translateX(100%);
+                @include translate(100%, 0);
                 .nav-down & {
                   top: 55px;
                 }
@@ -721,15 +699,18 @@ $mainMenuIndicatorPos:42%;
             &.sidemenu-visible {
               > .sidemenu-menu {
                 opacity: 1;
-                -webkit-transform: translateX(0);
-                -ms-transform: translateX(0);
-                transform: translateX(0);
+                @include translate(0, 0);
               }
             }
           }
         }
       }
     }
+  }
+}
+.sidemenu-menu[aria-labelledby="accaountLabel"] {
+  iframe {
+    border: 0;
   }
 }
 /* only show the icon part of the logo when viewport is extra narrow */

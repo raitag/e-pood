@@ -92,11 +92,22 @@
               }
               > .navbar-brand {
                 padding-top: 6px;
-                > span[class*="icon"] {
+                  /*> span[class*="icon"] {
                   font-size: $font-size-base + 10;
                   width: 25px;
                   display: inline-block;
                   overflow: hidden;
+                }*/
+                  .emt_elion_logo{
+                  background: url(../ico/emt_elion_logo_footer.svg);
+                  background-size: 180px 50px;
+                  background-repeat: no-repeat;
+                  background-position: -20px 0;
+                  display: inline-block;
+                  height: 50px;
+                  margin-top: -12px;
+                  overflow: hidden;
+                  width: 25px;
                 }
               }
               &:not(:first-child) {

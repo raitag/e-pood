@@ -2966,9 +2966,7 @@ body {
     body.admin-login header + div,
     body.admin-login header + .ee-breadcrumbs + section,
     body.admin-login header + .ee-breadcrumbs + div {
-      margin-top: 150px; }
-    body.admin-login header > div .header-menu__main > div .navbar-collapse {
-      top: 155px; } }
+      margin-top: 150px; } }
 
 header {
   display: block;

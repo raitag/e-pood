@@ -210,6 +210,16 @@ jQuery(document).ready(function($){
             hideSideMenu();
         }
     });
+
+    var shoppingCartBadgeCount = $('#mainHeaderShoppingCartBadgeCount').find('.shoppingCartBadgeProductCount').html();
+    $(".shoppingCartBadgeProductCount").each(function (index, element) {
+        if (shoppingCartBadgeCount > 0) {
+            $(element).html(shoppingCartBadgeCount);
+        } else {
+            $(".jsShoppingCartScrollableLink").parent("li").hide();
+            $(".jsShoppingCartHeaderMobileLink").parent("li").hide();
+        }
+    });
 });
 function uniqId() {
     return Math.round(new Date().getTime() + (Math.random() * 100));
@@ -296,6 +306,7 @@ function setSubSideMenuOverflow(li, clone) {
     var minOffsetTop = $(window).height() - maxHeight;
     var ofcHeight = ofc.outerHeight();
     if(ofc.outerHeight() > maxHeight) {
+        maxHeight = maxHeight - 35;
         ofc.outerHeight(maxHeight);
     }
     var ofcParentOffsetTop = li.offset().top - headerHeight;
@@ -313,6 +324,7 @@ function setMenuOverflow(item) {
     var headerHeight = $('header').outerHeight() + parseInt($('header').css('top'), 10);
     var maxHeight = $(window).height() - headerHeight;
     if(ofc.outerHeight() > maxHeight) {
+        maxHeight = maxHeight - 35;
         ofc.outerHeight(maxHeight);
     }
 }

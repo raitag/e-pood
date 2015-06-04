@@ -39,7 +39,7 @@ header {
     text-indent: -9999px;
     width: 170px;
     height: 50px;
-    background: url(../ico/emt_elion_logo.svg);
+    background: url(../img/branding/emt_elion_logo.svg);
     background-size: 180px 50px;
     background-repeat: no-repeat;
     background-position: -5px 0;
@@ -165,6 +165,7 @@ header {
               padding-right: 15px;
               padding-left: 15px;
             }
+
             // &.active,
             // &:hover,
             // &:focus{
@@ -172,7 +173,7 @@ header {
             //   color: $white;
             // }
 
-            > span[class*="icon"] {
+              > span[class*="icon"] {
               font-size: $font-size-base + 4;
               line-height: $font-size-base + 10;
               display: inline;
@@ -209,7 +210,7 @@ header {
               > span[class*="icon-arrow"] {
                 font-size: $font-size-base - 2;
                 position: absolute;
-                top: 11px;
+                top: 12px;
                 right: 10px;
               }
             }
@@ -244,7 +245,7 @@ header {
               > a {
                 span:first-child {
                   position: absolute;
-                  top: 11px;
+                  top: 12px;
                 }
                 span:last-child {
                   display: block;
@@ -272,7 +273,7 @@ header {
             //   }
             // }
 
-            .login-block {
+            /*.login-block {
               display: none;
               background-color: #f6f6f6;
               left: 0;
@@ -292,7 +293,7 @@ header {
                 border: 0;
                 width: 100%;
                 height: 100%;
-                min-height: 450px;
+                min-height: 420px;
                 overflow-y: hidden;
                 overflow-x: hidden;
               }
@@ -304,7 +305,7 @@ header {
                 right: -6px;
                   top: 30px;
               }
-            }
+            }*/
 
           }
         }
@@ -439,11 +440,6 @@ header {
             background-color: transparent;
           }
         }
-        &:hover {
-          &:after {
-            display: block;
-          }
-        }
         &.navbar-brand {
           padding-top: 27px;
           display: block;
@@ -456,10 +452,10 @@ header {
             background-color: transparent;
           }
 
-          > span[class*="icon"] {
+            /*> span[class*="icon"] {
             font-size: $font-size-base + 30;
             color: $brand__link;
-          }
+          }*/
         }
 
         @media (min-width: 768px) {
@@ -507,7 +503,7 @@ header {
             background: linear-gradient(45deg, transparent 65%, #fff 65%),
             linear-gradient(-45deg, transparent 65%, #fff 65%),
             linear-gradient(to bottom, rgba(#999, .7) 0%, #f6f6f6 100%);
-            body.nav-up &, body.nav-down & {
+            body.nav-up &, body.nav-down &, body.sidemenu-active & {
               display: none;
             }
           }
@@ -564,7 +560,7 @@ header {
       }
     }
   }
-  .login-block {
+  /*.login-block {
     display: none;
     background-color: #f6f6f6;
     left: 0;
@@ -594,5 +590,38 @@ header {
       position: absolute;
       right: 0px;
     }
+  }*/
+}
+.login-block {
+  display: none;
+  background-color: #f6f6f6;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  //box-shadow: 0 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 7px 7px -5px rgba(0,0,0,0.2);
+
+  .container {
+    position: relative;
+    padding-right:20px!important;
+  }
+
+  iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .icon {
+    color: $brand__link;
+    font-size: 18px;
+    position: absolute;
+    right: -6px;
+    top: 30px;
   }
 }

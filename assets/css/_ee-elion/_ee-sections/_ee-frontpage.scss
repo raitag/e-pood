@@ -36,6 +36,9 @@
   .row.collapse {
     margin-top: -20px;
   }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 100px;
+  }
 }
 
 .ee-product-list-front {
