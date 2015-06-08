@@ -159,7 +159,6 @@ header > div .menu__top .navbar-nav.navbar-right > li .login-block .cart-dropdow
   padding-top: 20px;
   .btn > .icon {
     position: relative;
-    color: #fff;
     font-size: 15px;
     right: 0;
     top: 0;
@@ -266,9 +265,6 @@ header {
   header > div .header-menu__main > div .mobile-icons > ul > li:last-child {
     margin-right: 0px;
   }
-  header > div .menu__top .navbar-nav > li > a.navbar-brand {
-    padding: 0 15px;
-  }
   header > div .header-menu__main > div .navbar-collapse .navbar-nav li a span[class*="icon"] {
     width: 1.3em;
   }
@@ -278,6 +274,7 @@ header {
   }
   header > div .header-menu__main > div .mobile-icons > ul > li.sidemenu-visible > .sidemenu-menu {
     bottom: 35px;
+    overflow-y: auto;
   }
 }
 
@@ -1190,3 +1187,8 @@ label.control-label-left {
 .admin-info-holder {
   padding-top: 20px;
 }
+
+// css for black texts
+// *:not(a):not(.btn):not(.icon):not(.ee-product-price-md) {
+//   color: #000 !important;
+// }
