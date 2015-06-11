@@ -10,38 +10,27 @@
   }
 
   > li {
-    &.firstlevel:hover {
-      color: #fff;
-      background: $link-hover-color;
-      border-radius: $border-radius-base;
-      a {
-        color: #fff;
-      }
-    }
     a {
       display: block;
       text-decoration: none;
       width: 100%;
-      padding: 5px 14px;
-      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid #e6e6e6;
       position: relative;
     }
 
-    &:hover h6,
     h6 {
-      font-size: 16px;
-      line-height: 16px;
-      font-weight: 400;
+      font-size: $font-size-base;
+      font-weight: 700;
       word-wrap:break-word;
-      padding-right: 15px;
-      &:after {
-        content: "\e66a";
-        font-family: 'tsr-icons-all';
-        font-size: 1.2em;
-        position: absolute;
-        right: 10px;
-        bottom: 35%;
-        color: $body-bg;
+    }
+    &:hover {
+      h6 {
+        color: #000;
+          &:after {
+            content: "\e66a";
+            font-family: 'tsr-icons-all';
+            float: right;
+        }
       }
     }
   }
@@ -62,32 +51,14 @@
 
 // change to whatever is your active state menu element name
   .selected {
-    background: $brand-primary;
-    border-radius: $border-radius-base;
     h6 {
-    color: #fff;
+      color: #000;
+      &:after {
+        content: "\e66a";
+        font-family: 'tsr-icons-all';
+        float: right;
+      }
     }
-  }
-
-// additional forced classes. add to a element to take effect
-  .arrow-right:hover,
-  .arrow-right.selected {
-    h6:after {
-    content: "\e66a";
-    }
-   }
-  .arrow-down:hover,
-  .arrow-down.selected  {
-    h6:after {
-    content: "\e65f";
-
-   }
-  }
-  .arrow-up:hover,
-  .arrow-up.selected {
-    h6:after {
-    content: "\e668";
-   }
   }
 }
 

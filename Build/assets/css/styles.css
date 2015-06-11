@@ -19546,7 +19546,7 @@ body {
   z-index: 5; }
   .ee-up:before {
     color: inherit;
-    content: "\e66b"; }
+    content: "\e668"; }
 
 .ee-right {
   position: fixed;
@@ -19555,7 +19555,7 @@ body {
   z-index: 5; }
   .ee-right:before {
     color: inherit;
-    content: "\e668"; }
+    content: "\e66a"; }
 
 .ee-left {
   position: fixed;
@@ -19564,7 +19564,7 @@ body {
   z-index: 5; }
   .ee-left:before {
     color: inherit;
-    content: "\e66a"; }
+    content: "\e669"; }
 
 .ee-plus-round:before {
   content: "\e6de"; }
@@ -19640,35 +19640,22 @@ body {
   .ee-sidenav ul {
     padding: 0;
     list-style-type: none; }
-  .ee-sidenav > li.firstlevel:hover {
-    color: #fff;
-    background: #4f2369;
-    border-radius: 4px; }
-    .ee-sidenav > li.firstlevel:hover a {
-      color: #fff; }
   .ee-sidenav > li a {
     display: block;
     text-decoration: none;
     width: 100%;
-    padding: 5px 14px;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #e6e6e6;
     position: relative; }
-  .ee-sidenav > li:hover h6,
   .ee-sidenav > li h6 {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    word-wrap: break-word;
-    padding-right: 15px; }
-    .ee-sidenav > li:hover h6:after,
-    .ee-sidenav > li h6:after {
+    font-size: 15px;
+    font-weight: 700;
+    word-wrap: break-word; }
+  .ee-sidenav > li:hover h6 {
+    color: #000; }
+    .ee-sidenav > li:hover h6:after {
       content: "\e66a";
       font-family: 'tsr-icons-all';
-      font-size: 1.2em;
-      position: absolute;
-      right: 10px;
-      bottom: 35%;
-      color: #f6f6f6; }
+      float: right; }
   .ee-sidenav > li > ul > li a {
     padding-left: 30px;
     border-bottom: none; }
@@ -19677,20 +19664,12 @@ body {
     border-radius: 4px; }
     .ee-sidenav > li > ul > li:hover h6 {
       color: #fff; }
-  .ee-sidenav .selected {
-    background: #652d86;
-    border-radius: 4px; }
-    .ee-sidenav .selected h6 {
-      color: #fff; }
-  .ee-sidenav .arrow-right:hover h6:after,
-  .ee-sidenav .arrow-right.selected h6:after {
-    content: "\e66a"; }
-  .ee-sidenav .arrow-down:hover h6:after,
-  .ee-sidenav .arrow-down.selected h6:after {
-    content: "\e65f"; }
-  .ee-sidenav .arrow-up:hover h6:after,
-  .ee-sidenav .arrow-up.selected h6:after {
-    content: "\e668"; }
+  .ee-sidenav .selected h6 {
+    color: #000; }
+    .ee-sidenav .selected h6:after {
+      content: "\e66a";
+      font-family: 'tsr-icons-all';
+      float: right; }
 
 section.tsr-section-productAndService-listing {
   padding: 0;
@@ -22085,17 +22064,20 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, 
 [data-toggle="close-dropdown"] {
   z-index: 1; }
 
-@media (min-width: 850px) and (max-width: 935px) {
+@media (min-width: 850px) and (max-width: 950px) {
   .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
     padding-right: 5px;
     padding-left: 5px; } }
-@media (min-width: 768px) and (max-width: 935px) {
+@media (min-width: 768px) and (max-width: 950px) {
   .header-menu__main .navbar-nav > li {
     width: 82px; }
     .header-menu__main .navbar-nav > li > a {
       padding-left: 0;
       padding-right: 0;
       font-size: 13px; }
+
+  .header-menu__main .navbar-nav.navbar-right > li {
+    width: 74px; }
 
   .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
     padding-right: 5px; }
@@ -22108,6 +22090,9 @@ header > div .menu__main > div .navbar-collapse .navbar-nav > li .btn a:before, 
     left: 13px; } }
 .sub-menu ul li > p {
   padding-bottom: 0; }
+
+.sidemenu-menu > div {
+  overflow: visible; }
 
 .swiffy-wrap {
   position: relative;

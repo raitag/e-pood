@@ -281,13 +281,13 @@ header {
 [data-toggle="close-dropdown"] {
   z-index: 1;
 }
-@media (min-width: 850px) and (max-width: 935px) {
+@media (min-width: 850px) and (max-width: 950px) {
   .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
     padding-right: 5px;
     padding-left: 5px;
   }
 }
-@media (min-width: 768px) and (max-width: 935px) {
+@media (min-width: 768px) and (max-width: 950px) {
   .header-menu__main .navbar-nav > li {
     width: 82px;
     > a {
@@ -295,6 +295,9 @@ header {
       padding-right: 0;
       font-size: 13px;
     }
+  }
+  .header-menu__main .navbar-nav.navbar-right > li {
+    width: 74px;
   }
   .nav-up header .header-menu__main .navbar-nav > li > a, .nav-down header .header-menu__main .navbar-nav > li > a {
     padding-right: 5px;
@@ -312,6 +315,10 @@ header {
 
 .sub-menu ul li > p {
   padding-bottom: 0;
+}
+
+.sidemenu-menu>div {
+  overflow: visible;
 }
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
