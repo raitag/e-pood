@@ -16,6 +16,16 @@
       width: 100%;
       border-bottom: 1px solid #e6e6e6;
       position: relative;
+      &:hover {
+        h6 {
+          color: #000;
+          &:after {
+            content: "\e66a";
+            font-family: 'tsr-icons-all';
+            float: right;
+          }
+        }
+      }
     }
 
     h6 {
@@ -23,33 +33,20 @@
       font-weight: 700;
       word-wrap:break-word;
     }
-    &:hover {
-      h6 {
-        color: #000;
-          &:after {
-            content: "\e66a";
-            font-family: 'tsr-icons-all';
-            float: right;
-        }
-      }
-    }
   }
 
   > li > ul > li {
-      a {
+    a {
       padding-left: 30px;
       border-bottom: none;
     }
     &:hover {
-      background: $link-hover-color;
-      border-radius: $border-radius-base;
-    h6 {
-      color: #fff;
+      h6 {
+        color: #000;
       }
     }
   } 
 
-// change to whatever is your active state menu element name
   .selected {
     h6 {
       color: #000;

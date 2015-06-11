@@ -2932,45 +2932,23 @@ body {
   line-height: 1.42857;
   background-color: white;
   margin-bottom: 258px; }
-  body header + section {
-    margin-top: 150px; }
   @media (max-width: 991px) {
     body {
-      margin-bottom: 304px; }
-      body header + .ee-breadcrumbs + section,
-      body header + .ee-breadcrumbs + div {
-        margin-top: 150px; } }
+      margin-bottom: 304px; } }
   @media (max-width: 767px) {
     body {
       margin-bottom: 0; }
-      body header + section,
-      body header + div,
-      body header + .ee-breadcrumbs + section,
-      body header + .ee-breadcrumbs + div,
-      body header + div + section {
+      body header + div {
         margin-top: 100px; } }
   body header > div > .navbar-default {
     display: none; }
-  body.admin-login header + section,
   body.admin-login header + div {
     margin-top: 200px; }
   body.admin-login header > div > .navbar-default {
     display: block; }
-  body.admin-login .ee-breadcrumbs {
-    margin-top: 200px; }
-  @media (max-width: 991px) {
-    body.admin-login header + .ee-breadcrumbs + section {
-      margin-top: 200px; } }
   @media (max-width: 767px) {
-    body.admin-login header + section,
-    body.admin-login header + div,
-    body.admin-login header + .ee-breadcrumbs + section,
-    body.admin-login header + .ee-breadcrumbs + div {
+    body.admin-login header + div {
       margin-top: 150px; } }
-
-header {
-  display: block;
-  margin-bottom: -1px; }
 
 section.content {
   padding: 0; }
