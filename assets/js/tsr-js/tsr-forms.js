@@ -70,6 +70,8 @@ tsrForms.tsrCheckbox = function ($wrapper) {
    var label = elem.parent();
    var elem_id = elem.attr('id');
 
+if (label.hasClass("tsr-checkbox")) return;
+
    if (elem.is(':checked')) {
     label.addClass('checked');
    }
