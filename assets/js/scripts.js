@@ -82,15 +82,10 @@ $(window).resize(function () {
 
 function SetContentMarginTop() {
     var hHeight = $('header').height();
-    var wWidth = $(window).width();
-    if (wWidth < 992) {
-        $('.ee-breadcrumbs.hidden-xs.hidden-sm.hidden-print+div.container').css('margin-top', hHeight + 'px');
-        $('.container.visible-print').removeAttr('style');
-    } else {
-        $('.container.visible-print').next().css('margin-top', hHeight + 'px');
-        $('.ee-breadcrumbs.hidden-xs.hidden-sm.hidden-print+div.container').removeAttr('style');
-    }
+    $('header+div').css('margin-top', hHeight + 'px');
+   
 }
+
 
 // counting rules for IE 8-9 as the limit is 4095
 // function countCSSRules() {
